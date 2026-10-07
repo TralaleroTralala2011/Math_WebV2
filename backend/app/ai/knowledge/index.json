@@ -1,0 +1,801 @@
+{
+  "10": [
+    {
+      "id": "menh_de_tap_hop",
+      "name": "Mệnh đề và tập hợp",
+      "subtopics": [
+        "mệnh đề",
+        "tập hợp",
+        "khoảng",
+        "hợp giao hiệu"
+      ]
+    },
+    {
+      "id": "bat_phuong_trinh",
+      "name": "Bất phương trình và hệ bất phương trình",
+      "subtopics": [
+        "bậc nhất",
+        "bậc hai",
+        "hệ bất phương trình"
+      ]
+    },
+    {
+      "id": "he_thuc_luong",
+      "name": "Hệ thức lượng trong tam giác",
+      "subtopics": [
+        "sin cos",
+        "định lý cos",
+        "diện tích",
+        "đường tròn ngoại tiếp"
+      ]
+    },
+    {
+      "id": "vector",
+      "name": "Vectơ",
+      "subtopics": [
+        "tổng hiệu",
+        "tọa độ",
+        "tích vô hướng",
+        "trung điểm"
+      ]
+    },
+    {
+      "id": "ham_so_bac_hai",
+      "name": "Hàm số bậc hai và parabol",
+      "subtopics": [
+        "đỉnh",
+        "trục đối xứng",
+        "giao trục",
+        "tham số"
+      ]
+    },
+    {
+      "id": "phuong_trinh_he",
+      "name": "Phương trình và hệ phương trình",
+      "subtopics": [
+        "bậc nhất",
+        "bậc hai",
+        "hệ hai ẩn",
+        "biện luận"
+      ]
+    },
+    {
+      "id": "quy_tac_dem",
+      "name": "Quy tắc đếm",
+      "subtopics": [
+        "quy tắc cộng",
+        "quy tắc nhân",
+        "sơ đồ cây"
+      ]
+    },
+    {
+      "id": "hoan_vi_chinh_hop_to_hop",
+      "name": "Hoán vị, chỉnh hợp, tổ hợp",
+      "subtopics": [
+        "hoán vị",
+        "chỉnh hợp",
+        "tổ hợp",
+        "nhị thức Newton"
+      ]
+    },
+    {
+      "id": "xac_suat",
+      "name": "Xác suất",
+      "subtopics": [
+        "không gian mẫu",
+        "biến cố",
+        "xác suất cổ điển",
+        "xác suất có điều kiện"
+      ]
+    },
+    {
+      "id": "thong_ke",
+      "name": "Thống kê",
+      "subtopics": [
+        "trung bình",
+        "trung vị",
+        "mốt",
+        "phương sai",
+        "độ lệch chuẩn"
+      ]
+    },
+    {
+      "id": "menh_de",
+      "name": "Mệnh đề",
+      "subtopics": [
+        "mệnh đề",
+        "phủ định",
+        "kéo theo",
+        "tương đương"
+      ]
+    },
+    {
+      "id": "tap_hop",
+      "name": "Tập hợp và các phép toán",
+      "subtopics": [
+        "hợp",
+        "giao",
+        "hiệu",
+        "phần bù",
+        "khoảng"
+      ]
+    },
+    {
+      "id": "he_bat_phuong_trinh",
+      "name": "Hệ bất phương trình",
+      "subtopics": [
+        "bậc nhất",
+        "bậc hai",
+        "miền nghiệm"
+      ]
+    },
+    {
+      "id": "ham_so",
+      "name": "Hàm số",
+      "subtopics": [
+        "tập xác định",
+        "biến thiên",
+        "đồ thị"
+      ]
+    },
+    {
+      "id": "ham_so_bac_nhat",
+      "name": "Hàm số bậc nhất",
+      "subtopics": [
+        "hệ số góc",
+        "đồ thị",
+        "tương giao"
+      ]
+    },
+    {
+      "id": "phuong_trinh",
+      "name": "Phương trình",
+      "subtopics": [
+        "bậc nhất",
+        "bậc hai",
+        "biện luận"
+      ]
+    },
+    {
+      "id": "he_phuong_trinh",
+      "name": "Hệ phương trình",
+      "subtopics": [
+        "hai ẩn",
+        "thế",
+        "cộng đại số",
+        "biện luận"
+      ]
+    },
+    {
+      "id": "he_thuc_luong_tam_giac",
+      "name": "Hệ thức lượng trong tam giác",
+      "subtopics": [
+        "sin",
+        "cos",
+        "diện tích",
+        "đường tròn ngoại tiếp"
+      ]
+    },
+    {
+      "id": "toa_do_phang",
+      "name": "Tọa độ trong mặt phẳng",
+      "subtopics": [
+        "điểm",
+        "vectơ",
+        "trung điểm",
+        "khoảng cách"
+      ]
+    },
+    {
+      "id": "duong_thang",
+      "name": "Đường thẳng",
+      "subtopics": [
+        "phương trình",
+        "góc",
+        "khoảng cách"
+      ]
+    },
+    {
+      "id": "duong_tron",
+      "name": "Đường tròn",
+      "subtopics": [
+        "phương trình",
+        "tiếp tuyến",
+        "vị trí tương đối"
+      ]
+    },
+    {
+      "id": "nhi_thuc_newton",
+      "name": "Nhị thức Newton",
+      "subtopics": [
+        "khai triển",
+        "hệ số",
+        "số hạng"
+      ]
+    },
+    {
+      "id": "hinh_hoc_10",
+      "name": "Hình học phẳng",
+      "subtopics": [
+        "tam giác",
+        "tứ giác",
+        "đường tròn",
+        "quỹ tích"
+      ]
+    },
+    {
+      "id": "bai_toan_thuc_te_10",
+      "name": "Bài toán thực tế Toán 10",
+      "subtopics": [
+        "tối ưu",
+        "mô hình hóa",
+        "đo đạc"
+      ]
+    }
+  ],
+  "11": [
+    {
+      "id": "ham_so_luong_giac",
+      "name": "Hàm số lượng giác",
+      "subtopics": [
+        "sin",
+        "cos",
+        "tan",
+        "đồ thị",
+        "tập xác định"
+      ]
+    },
+    {
+      "id": "phuong_trinh_luong_giac",
+      "name": "Phương trình lượng giác",
+      "subtopics": [
+        "cơ bản",
+        "đồng nhất",
+        "đặt ẩn phụ",
+        "tham số"
+      ]
+    },
+    {
+      "id": "day_so",
+      "name": "Dãy số",
+      "subtopics": [
+        "số hạng",
+        "công thức tổng quát",
+        "truy hồi"
+      ]
+    },
+    {
+      "id": "cap_so_cong",
+      "name": "Cấp số cộng",
+      "subtopics": [
+        "công sai",
+        "số hạng",
+        "tổng"
+      ]
+    },
+    {
+      "id": "cap_so_nhan",
+      "name": "Cấp số nhân",
+      "subtopics": [
+        "công bội",
+        "số hạng",
+        "tổng"
+      ]
+    },
+    {
+      "id": "gioi_han",
+      "name": "Giới hạn",
+      "subtopics": [
+        "dãy số",
+        "hàm số",
+        "vô cực",
+        "liên tục"
+      ]
+    },
+    {
+      "id": "dao_ham",
+      "name": "Đạo hàm",
+      "subtopics": [
+        "quy tắc",
+        "hàm hợp",
+        "tiếp tuyến",
+        "cực trị"
+      ]
+    },
+    {
+      "id": "hinh_khong_gian",
+      "name": "Quan hệ song song và vuông góc trong không gian",
+      "subtopics": [
+        "đường thẳng",
+        "mặt phẳng",
+        "góc",
+        "khoảng cách"
+      ]
+    },
+    {
+      "id": "xac_suat_11",
+      "name": "Xác suất",
+      "subtopics": [
+        "biến cố độc lập",
+        "hợp biến cố",
+        "điều kiện"
+      ]
+    },
+    {
+      "id": "gia_tri_luong_giac",
+      "name": "Giá trị lượng giác",
+      "subtopics": [
+        "sin",
+        "cos",
+        "tan",
+        "cung góc"
+      ]
+    },
+    {
+      "id": "cong_thuc_luong_giac",
+      "name": "Công thức lượng giác",
+      "subtopics": [
+        "cộng",
+        "nhân đôi",
+        "hạ bậc",
+        "biến đổi"
+      ]
+    },
+    {
+      "id": "ham_so_luong_giac_day_du",
+      "name": "Hàm số lượng giác",
+      "subtopics": [
+        "đồ thị",
+        "chu kỳ",
+        "tập xác định",
+        "giá trị lớn nhất"
+      ]
+    },
+    {
+      "id": "phuong_trinh_luong_giac_day_du",
+      "name": "Phương trình lượng giác",
+      "subtopics": [
+        "cơ bản",
+        "đồng nhất",
+        "đặt ẩn phụ",
+        "tham số"
+      ]
+    },
+    {
+      "id": "day_so_tong_quat",
+      "name": "Dãy số",
+      "subtopics": [
+        "công thức tổng quát",
+        "truy hồi",
+        "đơn điệu"
+      ]
+    },
+    {
+      "id": "gioi_han_ham_so",
+      "name": "Giới hạn hàm số",
+      "subtopics": [
+        "vô cực",
+        "hữu hạn",
+        "liên tục"
+      ]
+    },
+    {
+      "id": "ham_so_lien_tuc",
+      "name": "Hàm số liên tục",
+      "subtopics": [
+        "liên tục tại điểm",
+        "trên khoảng",
+        "giá trị trung gian"
+      ]
+    },
+    {
+      "id": "dao_ham_quy_tac",
+      "name": "Quy tắc đạo hàm",
+      "subtopics": [
+        "tổng",
+        "tích",
+        "thương",
+        "hàm hợp"
+      ]
+    },
+    {
+      "id": "ung_dung_dao_ham_11",
+      "name": "Ứng dụng đạo hàm",
+      "subtopics": [
+        "tiếp tuyến",
+        "đơn điệu",
+        "cực trị"
+      ]
+    },
+    {
+      "id": "song_song_khong_gian",
+      "name": "Quan hệ song song trong không gian",
+      "subtopics": [
+        "đường thẳng",
+        "mặt phẳng",
+        "thiết diện"
+      ]
+    },
+    {
+      "id": "vuong_goc_khong_gian",
+      "name": "Quan hệ vuông góc trong không gian",
+      "subtopics": [
+        "đường thẳng",
+        "mặt phẳng",
+        "hình chiếu"
+      ]
+    },
+    {
+      "id": "goc_khoang_cach_11",
+      "name": "Góc và khoảng cách trong không gian",
+      "subtopics": [
+        "góc",
+        "khoảng cách",
+        "hình chiếu"
+      ]
+    },
+    {
+      "id": "thong_ke_11",
+      "name": "Thống kê Toán 11",
+      "subtopics": [
+        "mẫu số liệu",
+        "độ phân tán",
+        "tứ phân vị"
+      ]
+    },
+    {
+      "id": "bai_toan_thuc_te_11",
+      "name": "Bài toán thực tế Toán 11",
+      "subtopics": [
+        "tăng trưởng",
+        "lãi suất",
+        "mô hình"
+      ]
+    },
+    {
+      "id": "to_hop_xac_suat_nang_cao_11",
+      "name": "Tổ hợp và xác suất nâng cao",
+      "subtopics": [
+        "đếm nâng cao",
+        "xác suất",
+        "điều kiện"
+      ]
+    },
+    {
+      "id": "bien_co_doc_lap_11",
+      "name": "Biến cố độc lập và xác suất có điều kiện",
+      "subtopics": [
+        "độc lập",
+        "xác suất có điều kiện",
+        "công thức"
+      ]
+    },
+    {
+      "id": "day_so_truy_hoi_11",
+      "name": "Dãy số truy hồi",
+      "subtopics": [
+        "truy hồi",
+        "số hạng",
+        "quy luật"
+      ]
+    },
+    {
+      "id": "quy_nap_toan_hoc_11",
+      "name": "Quy nạp toán học",
+      "subtopics": [
+        "mệnh đề",
+        "quy nạp",
+        "chứng minh"
+      ]
+    },
+    {
+      "id": "phep_bien_hinh_11",
+      "name": "Phép biến hình trong mặt phẳng",
+      "subtopics": [
+        "phép tịnh tiến",
+        "phép quay",
+        "đối xứng"
+      ]
+    },
+    {
+      "id": "thiet_dien_hinh_khong_gian_11",
+      "name": "Thiết diện hình không gian",
+      "subtopics": [
+        "thiết diện",
+        "hình chóp",
+        "mặt phẳng"
+      ]
+    },
+    {
+      "id": "bai_toan_thuc_te_tong_hop_11",
+      "name": "Bài toán thực tế tổng hợp Toán 11",
+      "subtopics": [
+        "mô hình hóa",
+        "hàm số",
+        "xác suất"
+      ]
+    }
+  ],
+  "12": [
+    {
+      "id": "ung_dung_dao_ham",
+      "name": "Ứng dụng đạo hàm",
+      "subtopics": [
+        "đồng biến nghịch biến",
+        "cực trị",
+        "GTLN GTNN",
+        "tiệm cận",
+        "tham số"
+      ]
+    },
+    {
+      "id": "khao_sat_ham_so",
+      "name": "Khảo sát và vẽ đồ thị hàm số",
+      "subtopics": [
+        "tập xác định",
+        "biến thiên",
+        "tiệm cận",
+        "giao điểm"
+      ]
+    },
+    {
+      "id": "nguyen_ham_tich_phan",
+      "name": "Nguyên hàm và tích phân",
+      "subtopics": [
+        "nguyên hàm cơ bản",
+        "đổi biến",
+        "từng phần",
+        "diện tích"
+      ]
+    },
+    {
+      "id": "so_phuc",
+      "name": "Số phức",
+      "subtopics": [
+        "dạng đại số",
+        "môđun",
+        "liên hợp",
+        "phương trình"
+      ]
+    },
+    {
+      "id": "hinh_hoc_khong_gian",
+      "name": "Hình học không gian",
+      "subtopics": [
+        "thể tích",
+        "góc",
+        "khoảng cách",
+        "mặt cầu"
+      ]
+    },
+    {
+      "id": "toa_do_khong_gian",
+      "name": "Tọa độ trong không gian",
+      "subtopics": [
+        "Oxyz",
+        "mặt phẳng",
+        "đường thẳng",
+        "mặt cầu"
+      ]
+    },
+    {
+      "id": "xac_suat_12",
+      "name": "Xác suất và biến ngẫu nhiên",
+      "subtopics": [
+        "xác suất có điều kiện",
+        "độc lập",
+        "kỳ vọng"
+      ]
+    },
+    {
+      "id": "thong_ke_12",
+      "name": "Các số đặc trưng đo xu thế và độ phân tán",
+      "subtopics": [
+        "trung bình",
+        "trung vị",
+        "tứ phân vị",
+        "phương sai"
+      ]
+    },
+    {
+      "id": "tinh_don_dieu",
+      "name": "Tính đơn điệu",
+      "subtopics": [
+        "đồng biến",
+        "nghịch biến",
+        "tham số"
+      ]
+    },
+    {
+      "id": "cuc_tri",
+      "name": "Cực trị",
+      "subtopics": [
+        "điểm cực trị",
+        "tham số",
+        "đồ thị"
+      ]
+    },
+    {
+      "id": "gtln_gtnn",
+      "name": "Giá trị lớn nhất và nhỏ nhất",
+      "subtopics": [
+        "đoạn",
+        "khoảng",
+        "ứng dụng"
+      ]
+    },
+    {
+      "id": "tiep_tuyen",
+      "name": "Tiếp tuyến",
+      "subtopics": [
+        "hệ số góc",
+        "tiếp xúc",
+        "tham số"
+      ]
+    },
+    {
+      "id": "tien_can",
+      "name": "Tiệm cận",
+      "subtopics": [
+        "đứng",
+        "ngang",
+        "xiên"
+      ]
+    },
+    {
+      "id": "tuong_giao",
+      "name": "Tương giao đồ thị",
+      "subtopics": [
+        "số giao điểm",
+        "tham số",
+        "biện luận"
+      ]
+    },
+    {
+      "id": "ham_mu",
+      "name": "Hàm số mũ",
+      "subtopics": [
+        "đồ thị",
+        "đơn điệu",
+        "giá trị"
+      ]
+    },
+    {
+      "id": "ham_logarit",
+      "name": "Hàm số logarit",
+      "subtopics": [
+        "đồ thị",
+        "tập xác định",
+        "đơn điệu"
+      ]
+    },
+    {
+      "id": "pt_mu",
+      "name": "Phương trình mũ",
+      "subtopics": [
+        "cơ bản",
+        "đặt ẩn phụ",
+        "tham số"
+      ]
+    },
+    {
+      "id": "pt_logarit",
+      "name": "Phương trình logarit",
+      "subtopics": [
+        "điều kiện",
+        "biến đổi",
+        "tham số"
+      ]
+    },
+    {
+      "id": "bpt_mu",
+      "name": "Bất phương trình mũ",
+      "subtopics": [
+        "đơn điệu",
+        "đặt ẩn phụ",
+        "tham số"
+      ]
+    },
+    {
+      "id": "bpt_logarit",
+      "name": "Bất phương trình logarit",
+      "subtopics": [
+        "điều kiện",
+        "đơn điệu",
+        "tham số"
+      ]
+    },
+    {
+      "id": "ung_dung_tich_phan",
+      "name": "Ứng dụng tích phân",
+      "subtopics": [
+        "diện tích",
+        "thể tích",
+        "quãng đường"
+      ]
+    },
+    {
+      "id": "bieu_dien_so_phuc",
+      "name": "Biểu diễn số phức",
+      "subtopics": [
+        "mặt phẳng phức",
+        "môđun",
+        "liên hợp"
+      ]
+    },
+    {
+      "id": "pt_so_phuc",
+      "name": "Phương trình số phức",
+      "subtopics": [
+        "bậc hai",
+        "liên hợp",
+        "tham số"
+      ]
+    },
+    {
+      "id": "mat_phang_oxyz",
+      "name": "Mặt phẳng trong Oxyz",
+      "subtopics": [
+        "phương trình",
+        "vị trí tương đối",
+        "khoảng cách"
+      ]
+    },
+    {
+      "id": "duong_thang_oxyz",
+      "name": "Đường thẳng trong Oxyz",
+      "subtopics": [
+        "tham số",
+        "vị trí tương đối",
+        "góc"
+      ]
+    },
+    {
+      "id": "mat_cau",
+      "name": "Mặt cầu",
+      "subtopics": [
+        "phương trình",
+        "tiếp xúc",
+        "giao tuyến"
+      ]
+    },
+    {
+      "id": "goc_khoang_cach_oxyz",
+      "name": "Góc và khoảng cách Oxyz",
+      "subtopics": [
+        "góc",
+        "đường vuông góc",
+        "khoảng cách"
+      ]
+    },
+    {
+      "id": "the_tich_khong_gian",
+      "name": "Thể tích hình học không gian",
+      "subtopics": [
+        "lăng trụ",
+        "chóp",
+        "mặt cầu"
+      ]
+    },
+    {
+      "id": "tong_hop_thpt",
+      "name": "Bài toán tổng hợp THPT",
+      "subtopics": [
+        "đại số",
+        "giải tích",
+        "hình học",
+        "xác suất"
+      ]
+    },
+    {
+      "id": "bai_toan_thuc_te_12",
+      "name": "Bài toán thực tế Toán 12",
+      "subtopics": [
+        "tối ưu",
+        "tăng trưởng",
+        "chuyển động",
+        "kinh tế"
+      ]
+    }
+  ]
+}

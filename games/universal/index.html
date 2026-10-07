@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MATH WEB • Game Toán</title>
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+<main class="shell">
+  <header class="hero">
+    <div class="eyebrow">MATH WEB • XƯỞNG GAME</div>
+    <h1 id="title">🎮 Thử thách Toán</h1>
+    <p id="subtitle">Đang tải câu hỏi...</p>
+    <div class="hud">
+      <div><span>❤️ HP</span><b id="hp">100</b></div>
+      <div><span>🔥 Combo</span><b id="combo">0</b></div>
+      <div><span>🏆 Điểm</span><b id="score">0</b></div>
+      <div><span>⏱️</span><b id="timer">20</b></div>
+    </div>
+  </header>
+
+  <section class="arena" id="arena">
+    <div class="progress"><div id="progressBar"></div></div>
+    <div class="question-meta"><span id="questionNo">Câu 1</span><span id="difficulty">NỀN TẢNG</span></div>
+    <h2 id="question">Đang chuẩn bị...</h2>
+    <div id="options" class="options"></div>
+    <div id="feedback" class="feedback"></div>
+    <button id="next" class="next" hidden>Câu tiếp theo →</button>
+  </section>
+
+  <section class="result" id="result" hidden>
+    <div class="result-icon">🏆</div>
+    <h2 id="resultTitle">Hoàn thành!</h2>
+    <p id="resultText"></p>
+    <button onclick="location.href='../..//practise.html'">← Về kiến thức</button>
+    <button onclick="location.reload()">🔄 Chơi lại</button>
+  </section>
+</main>
+<script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,1727 @@
+/* =========================================================
+   MATH WEB
+   PRACTICE PAGE
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.practice-page {
+    min-height: 100vh;
+    padding-top: 76px;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    padding: 0 6%;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.navbar .logo-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(56, 217, 255, 0.5);
+    border-radius: 11px;
+
+    color: var(--cyan);
+
+    font-size: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(56, 217, 255, 0.12),
+            rgba(169, 112, 255, 0.12)
+        );
+
+    box-shadow:
+        0 0 18px rgba(56, 217, 255, 0.14);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.practice-hero {
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        70px
+        6%
+        45px;
+
+    overflow: hidden;
+
+    border-bottom:
+        1px solid
+        rgba(255, 255, 255, 0.06);
+}
+
+.practice-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    top: -220px;
+    left: -150px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(56, 217, 255, 0.11),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+.practice-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -220px;
+    top: -230px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(169, 112, 255, 0.12),
+            transparent 68%
+        );
+
+    pointer-events: none;
+}
+
+.practice-hero-content {
+    position: relative;
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.practice-badge {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 18px;
+
+    padding: 7px 13px;
+
+    border:
+        1px solid
+        rgba(56, 217, 255, 0.2);
+
+    border-radius: 999px;
+
+    background:
+        rgba(56, 217, 255, 0.055);
+
+    color: #91a8c7;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+.badge-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--cyan);
+
+    box-shadow:
+        0 0 10px var(--cyan);
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.practice-hero h1 {
+    margin: 0;
+
+    font-size:
+        clamp(38px, 5vw, 62px);
+
+    line-height: 1.05;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+}
+
+.practice-hero h1 span {
+    color: var(--cyan);
+
+    text-shadow:
+        0 0 25px
+        rgba(56, 217, 255, 0.18);
+}
+
+.practice-hero-content > p {
+    max-width: 650px;
+
+    margin-top: 20px;
+
+    color: var(--text-soft);
+
+    font-size: 14px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   KNOWLEDGE SECTION
+========================================================= */
+
+.knowledge-section {
+    position: relative;
+
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    padding:
+        45px
+        6%
+        80px;
+}
+
+
+/* =========================================================
+   TASKBAR
+========================================================= */
+
+.practice-taskbar {
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        auto;
+
+    gap: 20px;
+
+    margin-bottom: 38px;
+
+    padding: 17px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.09);
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(16, 23, 41, 0.95),
+            rgba(11, 16, 32, 0.88)
+        );
+
+    box-shadow:
+        0 18px 50px
+        rgba(0, 0, 0, 0.22),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.035);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+.taskbar-left {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 0;
+}
+
+.taskbar-icon {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(56, 217, 255, 0.22);
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(56, 217, 255, 0.13),
+            rgba(91, 140, 255, 0.07)
+        );
+
+    font-size: 21px;
+
+    box-shadow:
+        0 0 22px
+        rgba(56, 217, 255, 0.07);
+}
+
+.taskbar-info {
+    min-width: 0;
+}
+
+.taskbar-info small {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #65728a;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+.taskbar-info strong {
+    display: block;
+
+    overflow: hidden;
+
+    color: #eef7ff;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+.taskbar-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+}
+
+.taskbar-chip {
+    height: 42px;
+
+    padding: 0 14px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 12px;
+
+    color: #9baac0;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.taskbar-chip strong {
+    color: white;
+
+    font-size: 12px;
+}
+
+.taskbar-chip.cyan {
+    border-color:
+        rgba(56, 217, 255, 0.18);
+
+    color: var(--cyan);
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.section-top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.section-label {
+    margin: 0 0 7px;
+
+    color: var(--cyan);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+.section-top h2 {
+    margin: 0;
+
+    color: var(--white);
+
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.knowledge-counter {
+    min-width: 100px;
+
+    padding: 11px 16px;
+
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+
+    gap: 7px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+.knowledge-counter span {
+    color: var(--cyan);
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.knowledge-counter small {
+    color: #718098;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   KNOWLEDGE GRID
+========================================================= */
+
+.knowledge-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+
+    gap: 17px;
+}
+
+
+/* =========================================================
+   KNOWLEDGE CARD
+========================================================= */
+
+.knowledge-card {
+    position: relative;
+
+    min-height: 145px;
+
+    padding: 15px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 23, 41, 0.96),
+            rgba(10, 15, 29, 0.92)
+        );
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.knowledge-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    top: -90px;
+    right: -70px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(56, 217, 255, 0.12),
+            transparent 68%
+        );
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+}
+
+.knowledge-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+
+    bottom: 0;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(56, 217, 255, 0.3),
+            transparent
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.3s ease;
+}
+
+.knowledge-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(56, 217, 255, 0.27);
+
+    box-shadow:
+        0 18px 45px
+        rgba(0, 0, 0, 0.28),
+
+        0 0 30px
+        rgba(56, 217, 255, 0.07);
+}
+
+.knowledge-card:hover::before {
+    transform: scale(1.3);
+
+    opacity: 1;
+}
+
+.knowledge-card:hover::after {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.knowledge-card-top {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 2;
+}
+
+.knowledge-number {
+    color: #53627b;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.knowledge-grade-badge {
+    position: relative;
+    z-index: 2;
+    padding: 3px 7px;
+    border-radius: 999px;
+    background: rgba(255,255,255,.05);
+    color: #9aa8bd;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.knowledge-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(56, 217, 255, 0.16);
+
+    border-radius: 13px;
+
+    background:
+        rgba(56, 217, 255, 0.055);
+
+    font-size: 20px;
+}
+
+.knowledge-card h3 {
+    position: relative;
+
+    margin: 10px 0 5px;
+
+    z-index: 2;
+
+    color: #f3f8ff;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.knowledge-card p {
+    position: relative;
+
+    min-height: 32px;
+
+    margin: 0;
+
+    z-index: 2;
+
+    color: #8291aa;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+.knowledge-card-bottom {
+    position: relative;
+
+    margin-top: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 2;
+}
+
+.knowledge-games {
+    color: #65748d;
+
+    font-size: 10px;
+}
+
+.knowledge-enter {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    color: var(--cyan);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.knowledge-card:hover .knowledge-enter {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.practice-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(2, 5, 12, 0.78);
+
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+
+    z-index: 2000;
+}
+
+.practice-overlay.show,
+.practice-overlay.active {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+/* =========================================================
+   POPUP
+========================================================= */
+
+.knowledge-popup {
+    position: fixed;
+
+    left: 50%;
+    top: 50%;
+
+    width:
+        min(
+            680px,
+            calc(100% - 30px)
+        );
+
+    max-height:
+        calc(100vh - 40px);
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    border:
+        1px solid
+        rgba(56, 217, 255, 0.16);
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(16, 23, 41, 0.98),
+            rgba(7, 11, 23, 0.99)
+        );
+
+    box-shadow:
+        0 35px 100px
+        rgba(0, 0, 0, 0.65),
+
+        0 0 45px
+        rgba(56, 217, 255, 0.07);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translate(-50%, -47%)
+        scale(0.96);
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+
+    z-index: 2100;
+}
+
+.knowledge-popup.show,
+.knowledge-popup.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+}
+
+
+/* =========================================================
+   POPUP CLOSE
+========================================================= */
+
+.popup-close {
+    position: absolute;
+
+    top: 17px;
+    right: 17px;
+
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 11px;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    color: #9ba8bc;
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.popup-close:hover {
+    color: white;
+
+    border-color:
+        rgba(255, 80, 110, 0.4);
+
+    background:
+        rgba(255, 80, 110, 0.08);
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   POPUP HEADER
+========================================================= */
+
+.popup-header {
+    display: flex;
+    align-items: center;
+
+    gap: 17px;
+
+    padding-right: 45px;
+}
+
+.popup-number {
+    width: 56px;
+    height: 56px;
+
+    flex: 0 0 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(56, 217, 255, 0.25);
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(56, 217, 255, 0.12),
+            rgba(169, 112, 255, 0.08)
+        );
+
+    color: var(--cyan);
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.popup-category {
+    color: var(--cyan);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.popup-heading h2 {
+    margin-top: 3px;
+
+    color: white;
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   POPUP INFO
+========================================================= */
+
+.popup-info {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin-top: 26px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+.info-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        rgba(56, 217, 255, 0.07);
+
+    font-size: 15px;
+}
+
+.info-label {
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #64738c;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.info-item strong {
+    color: #e8f2ff;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   POPUP DESCRIPTION
+========================================================= */
+
+.popup-description {
+    margin-top: 17px;
+
+    padding: 15px 17px;
+
+    border-left:
+        2px solid
+        rgba(56, 217, 255, 0.55);
+
+    border-radius:
+        3px
+        10px
+        10px
+        3px;
+
+    background:
+        rgba(56, 217, 255, 0.035);
+}
+
+.popup-description p {
+    margin: 0;
+
+    color: #8c9bb1;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+.popup-divider {
+    height: 1px;
+
+    margin: 24px 0;
+
+    background:
+        rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================================================
+   GAME SELECT HEADER
+========================================================= */
+
+.game-select-header {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.game-select-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(169, 112, 255, 0.2);
+
+    border-radius: 11px;
+
+    background:
+        rgba(169, 112, 255, 0.07);
+}
+
+.game-select-small {
+    color: #8068a5;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.3px;
+}
+
+.game-select-header h3 {
+    margin-top: 2px;
+
+    color: #edf4ff;
+
+    font-size: 13px;
+}
+
+.game-list {
+    display: grid;
+
+    gap: 10px;
+}
+
+
+/* =========================================================
+   GAME BUTTON
+========================================================= */
+
+.game-button {
+    position: relative;
+
+    width: 100%;
+    min-height: 72px;
+
+    padding: 13px 16px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(18, 27, 48, 0.96),
+            rgba(10, 16, 31, 0.96)
+        );
+
+    color: white;
+
+    font-family: inherit;
+    font-size: inherit;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 6px 18px
+        rgba(0, 0, 0, 0.18);
+
+    transform: translateY(0);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* =========================================================
+   GAME BUTTON LIGHT SWEEP
+========================================================= */
+
+.game-button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 90%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.08),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition:
+        left 0.55s ease;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   GAME BUTTON GLOW
+========================================================= */
+
+.game-button::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: inherit;
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(56, 217, 255, 0.10),
+            transparent 45%
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.25s ease;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   GAME BUTTON HOVER
+========================================================= */
+
+.game-button:hover {
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(56, 217, 255, 0.35);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(21, 35, 61, 0.98),
+            rgba(11, 18, 36, 0.98)
+        );
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 0, 0, 0.3),
+
+        0 0 22px
+        rgba(56, 217, 255, 0.10);
+}
+
+.game-button:hover::before {
+    left: 130%;
+}
+
+.game-button:hover::after {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   GAME BUTTON CLICK
+========================================================= */
+
+.game-button:active {
+    transform:
+        translateY(1px)
+        scale(0.985);
+
+    box-shadow:
+        0 4px 12px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   GAME ICON
+========================================================= */
+
+.game-number {
+    position: relative;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(255,255,255,.055);
+    color: #8fa2bd;
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.game-button:hover .game-number {
+    color: #eaf7ff;
+    background: rgba(56,217,255,.10);
+}
+
+.game-icon {
+    position: relative;
+
+    width: 43px;
+    height: 43px;
+
+    flex: 0 0 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(56, 217, 255, 0.18);
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(56, 217, 255, 0.10),
+            rgba(169, 112, 255, 0.08)
+        );
+
+    font-size: 19px;
+
+    box-shadow:
+        0 0 15px
+        rgba(56, 217, 255, 0.04);
+
+    z-index: 2;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.game-button:hover .game-icon {
+    transform:
+        translateY(-1px)
+        scale(1.08);
+
+    border-color:
+        rgba(56, 217, 255, 0.38);
+
+    box-shadow:
+        0 0 20px
+        rgba(56, 217, 255, 0.13);
+}
+
+
+/* =========================================================
+   GAME NAME
+========================================================= */
+
+.game-name {
+    position: relative;
+
+    flex: 1;
+
+    color: #eef6ff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    line-height: 1.4;
+
+    z-index: 2;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.game-button:hover .game-name {
+    color: white;
+
+    transform:
+        translateX(2px);
+}
+
+
+/* =========================================================
+   GAME START
+========================================================= */
+
+.game-start {
+    position: relative;
+
+    flex: 0 0 auto;
+
+    color: var(--cyan);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.8px;
+
+    white-space: nowrap;
+
+    opacity: 0.72;
+
+    z-index: 2;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.game-button:hover .game-start {
+    opacity: 1;
+
+    transform:
+        translateX(5px);
+}
+
+
+/* =========================================================
+   GAME BUTTON FOCUS
+========================================================= */
+
+.game-button:focus-visible {
+    outline: none;
+
+    border-color:
+        rgba(56, 217, 255, 0.55);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(56, 217, 255, 0.10),
+
+        0 0 25px
+        rgba(56, 217, 255, 0.10);
+}
+
+
+/* =========================================================
+   AI PRACTICE BUTTON
+========================================================= */
+
+.mathweb-ai-practice-button {
+    border-color:
+        rgba(56, 217, 255, 0.16);
+}
+
+.mathweb-ai-practice-button .game-icon {
+    border-color:
+        rgba(56, 217, 255, 0.28);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(56, 217, 255, 0.14),
+            rgba(91, 140, 255, 0.09)
+        );
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.practice-footer {
+    padding:
+        30px 6%;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.07);
+}
+
+.footer-inner {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.practice-footer .footer-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.practice-footer .footer-logo span {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(56, 217, 255, 0.4);
+
+    border-radius: 9px;
+
+    color: var(--cyan);
+}
+
+.practice-footer p {
+    margin: 0;
+
+    color: #64738a;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .knowledge-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .practice-taskbar {
+        grid-template-columns: 1fr;
+    }
+
+    .taskbar-actions {
+        justify-content: flex-start;
+    }
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .practice-hero {
+        padding:
+            55px 5% 38px;
+    }
+
+    .knowledge-section {
+        padding:
+            35px 5% 60px;
+    }
+
+    .knowledge-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-top {
+        align-items: flex-start;
+    }
+
+    .section-top h2 {
+        font-size: 24px;
+    }
+
+    .practice-taskbar {
+        padding: 13px;
+    }
+
+    .taskbar-actions {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .taskbar-chip {
+        justify-content: center;
+    }
+
+    .popup-info {
+        grid-template-columns: 1fr;
+    }
+
+    .knowledge-popup {
+        padding: 23px;
+
+        border-radius: 20px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .game-button {
+        min-height: 66px;
+
+        padding:
+            11px 13px;
+
+        gap: 11px;
+    }
+
+    .game-icon {
+        width: 39px;
+        height: 39px;
+
+        flex-basis: 39px;
+
+        font-size: 17px;
+    }
+
+    .game-name {
+        font-size: 12px;
+    }
+
+    .game-start {
+        font-size: 8px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+
+    .practice-hero h1 {
+        font-size: 38px;
+    }
+
+    .practice-taskbar {
+        border-radius: 16px;
+    }
+
+    .taskbar-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .knowledge-counter {
+        min-width: 85px;
+    }
+
+    .knowledge-popup {
+        width:
+            calc(100% - 20px);
+
+        max-height:
+            calc(100vh - 20px);
+
+        padding: 20px;
+    }
+
+    .popup-header {
+        gap: 12px;
+    }
+
+    .popup-number {
+        width: 48px;
+        height: 48px;
+
+        flex-basis: 48px;
+
+        border-radius: 13px;
+
+        font-size: 15px;
+    }
+
+    .popup-heading h2 {
+        font-size: 21px;
+    }
+
+    .game-button {
+        min-height: 62px;
+    }
+
+    .game-start {
+        display: none;
+    }
+}
+
+@media (max-width: 1250px) {
+    .knowledge-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 980px) {
+    .knowledge-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 700px) {
+    .knowledge-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .knowledge-card { min-height: 132px; padding: 12px; }
+}
+
+@media (max-width: 450px) {
+    .knowledge-grid { grid-template-columns: 1fr; }
+}
+
+
+/* MATHWEB_KNOWLEDGE_GRADE_LEVEL_LAYOUT */
+.knowledge-grid > .knowledge-grade-section { grid-column: 1 / -1; }
+.knowledge-grade-section { width: 100%; margin: 0 0 30px; }
+.knowledge-grade-header { display:flex; align-items:center; justify-content:space-between; gap:16px; margin: 8px 0 14px; padding: 16px 18px; border:1px solid rgba(255,255,255,.08); border-radius:18px; background:linear-gradient(135deg,rgba(19,31,53,.96),rgba(11,18,34,.94)); }
+.knowledge-grade-header h2 { margin:0; font-size:22px; font-weight:900; letter-spacing:.3px; }
+.knowledge-grade-header > span { color:#8290a8; font-size:12px; font-weight:800; }
+.knowledge-level-section { margin: 0 0 22px; padding: 14px; border-radius:18px; border:1px solid rgba(255,255,255,.06); background:rgba(255,255,255,.018); }
+.knowledge-level-header { display:flex; align-items:center; justify-content:space-between; gap:16px; margin:0 0 13px; }
+.knowledge-level-header h3 { margin:0; font-size:15px; font-weight:900; }
+.knowledge-level-header p { margin:4px 0 0; color:#738199; font-size:11px; }
+.knowledge-level-count { flex:0 0 auto; padding:6px 10px; border-radius:999px; font-size:10px; font-weight:800; color:#8ea0b9; background:rgba(255,255,255,.05); }
+.knowledge-level-grid { grid-template-columns:repeat(5,minmax(0,1fr)); gap:12px; }
+.knowledge-level-section.level-foundation { border-color:rgba(65,190,137,.18); }
+.knowledge-level-section.level-foundation .knowledge-level-header h3 { color:#68d6a5; }
+.knowledge-level-section.level-medium { border-color:rgba(75,145,255,.18); }
+.knowledge-level-section.level-medium .knowledge-level-header h3 { color:#75aaff; }
+.knowledge-level-section.level-advanced { border-color:rgba(151,105,255,.18); }
+.knowledge-level-section.level-advanced .knowledge-level-header h3 { color:#ad8aff; }
+@media (max-width:1250px){ .knowledge-level-grid{grid-template-columns:repeat(4,minmax(0,1fr));} }
+@media (max-width:980px){ .knowledge-level-grid{grid-template-columns:repeat(3,minmax(0,1fr));} }
+@media (max-width:700px){ .knowledge-level-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;} .knowledge-grade-header{padding:13px 14px}.knowledge-grade-header h2{font-size:18px}.knowledge-level-section{padding:11px}.knowledge-level-header{align-items:flex-start}.knowledge-level-count{display:none;} }
+@media (max-width:450px){ .knowledge-level-grid{grid-template-columns:1fr;} }

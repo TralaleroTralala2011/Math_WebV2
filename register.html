@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Đăng ký | MATHWEB</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/log-regist.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <span class="logo-icon">
+                ∑
+            </span>
+
+            <span class="logo-text">
+                MATH<span>WEB</span>
+            </span>
+
+        </a>
+
+
+        <nav class="nav-menu">
+
+            <a
+                href="index.html"
+                class="nav-link"
+            >
+                Trang chủ
+            </a>
+
+            <a
+                href="practice.html"
+                class="nav-link protected-practice-link"
+            >
+                Luyện tập
+            </a>
+
+            <a
+                href="login.html"
+                class="nav-link"
+                id="loginNavLink"
+            >
+                Đăng nhập
+            </a>
+
+            <a
+                href="register.html"
+                class="nav-button active"
+                id="registerNavLink"
+            >
+                Đăng ký
+            </a>
+
+
+            <div class="notification-wrapper">
+
+                <button
+                    id="notificationButton"
+                    class="notification-button"
+                    type="button"
+                    aria-label="Thông báo"
+                >
+                    🔔
+
+                    <span
+                        id="notificationBadge"
+                        class="notification-badge"
+                    ></span>
+                </button>
+
+
+                <div
+                    id="notificationPanel"
+                    class="notification-panel"
+                >
+
+                    <div class="notification-header">
+
+                        <div class="notification-title">
+                            Thông báo
+                        </div>
+
+                        <button
+                            id="readAllNotifications"
+                            class="notification-read-all"
+                            type="button"
+                        >
+                            Đọc tất cả
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        id="notificationList"
+                        class="notification-list"
+                    ></div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+        >
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- REGISTER -->
+    <main class="register-page">
+
+        <section class="register-card">
+
+            <a
+                href="index.html"
+                class="register-close"
+                aria-label="Đóng"
+            >
+                ×
+            </a>
+
+
+            <div class="register-header">
+
+                <h1>Đăng ký</h1>
+
+                <p>
+                    Tạo tài khoản và bắt đầu học toán
+                </p>
+
+            </div>
+
+
+            <form
+                id="registerForm"
+                class="register-form"
+            >
+
+                <div class="form-group">
+
+                    <label for="registerUsername">
+                        Tên tài khoản
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerUsername"
+                        name="username"
+                        placeholder="Nhập tên tài khoản"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="registerPassword">
+                        Mật khẩu
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerPassword"
+                        name="password"
+                        placeholder="Nhập mật khẩu"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="registerConfirmPassword">
+                        Nhập lại mật khẩu
+                    </label>
+
+                    <input
+                        type="password"
+                        id="registerConfirmPassword"
+                        name="confirmPassword"
+                        placeholder="Nhập lại mật khẩu"
+                        autocomplete="new-password"
+                        required
+                    >
+
+                </div>
+
+
+                <div id="authMessage"></div>
+
+
+                <button
+                    type="submit"
+                    class="register-submit"
+                >
+                    Tạo tài khoản
+                </button>
+
+            </form>
+
+
+            <div class="register-footer">
+
+                Đã có tài khoản?
+
+                <a href="login.html">
+                    Đăng nhập
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+</html>

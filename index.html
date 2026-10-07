@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>MATH WEB | Ôn luyện Toán</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/home.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/notification.css"
+    >
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a
+        href="index.html"
+        class="logo"
+    >
+
+        <div class="logo-icon">
+            ∑
+        </div>
+
+        <div class="logo-text">
+            MATH<span>_WEB</span>
+        </div>
+
+    </a>
+
+
+    <nav class="nav-menu">
+
+        <a
+            href="index.html"
+            class="nav-link"
+        >
+            Trang chủ
+        </a>
+
+
+        <a
+            href="practise.html"
+            class="nav-link protected-practice-link"
+        >
+            Luyện tập
+        </a>
+
+
+        <a
+            href="battle.html"
+            class="nav-link protected-battle-link"
+            id="battleNavLink"
+        >
+            Đấu online
+        </a>
+
+
+
+        <a
+            href="account.html"
+            class="nav-link protected-account-link"
+            id="accountNavLink"
+        >
+            Tài khoản
+        </a>
+
+
+        <div class="notification-wrapper">
+
+            <button
+                id="notificationButton"
+                class="notification-button"
+                type="button"
+                aria-label="Thông báo"
+            >
+
+                🔔
+
+                <span
+                    id="notificationBadge"
+                    class="notification-badge"
+                ></span>
+
+            </button>
+
+
+            <div
+                id="notificationPanel"
+                class="notification-panel"
+            >
+
+                <div class="notification-header">
+
+                    <div class="notification-title">
+                        Thông báo
+                    </div>
+
+                    <button
+                        id="readAllNotifications"
+                        class="notification-read-all"
+                        type="button"
+                    >
+                        Đọc tất cả
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="notificationList"
+                    class="notification-list"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <button
+        class="mobile-menu-button"
+        id="mobileMenuButton"
+        type="button"
+    >
+        ☰
+    </button>
+
+</header>
+
+
+    
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+
+                    <span class="badge-dot"></span>
+
+                    NỀN TẢNG ÔN LUYỆN TOÁN
+
+                </div>
+
+
+                <h1>
+                    Học Toán
+                    <span>thú vị hơn</span>
+                </h1>
+
+
+                <p class="hero-subtitle">
+                    Học • Luyện tập • Thử thách
+                </p>
+
+
+                <p class="hero-description">
+                    MATH WEB là nền tảng giúp học sinh ôn lại kiến thức
+                    Toán thông qua những bài luyện tập và trò chơi ngắn,
+                    trực quan và thú vị.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="practise.html"
+                        class="primary-button protected-practice-link"
+                    >
+                        <span>BẮT ĐẦU HỌC</span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+                    </a>
+
+
+                    <a
+                        href="#about"
+                        class="secondary-button"
+                    >
+                        Tìm hiểu thêm
+                    </a>
+
+                </div>
+
+
+                <div class="hero-stats">
+
+                    <div class="stat">
+
+                        <strong>∞</strong>
+
+                        <span>
+                            Kiến thức
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-line"></div>
+
+
+                    <div class="stat">
+
+                        <strong>🎮</strong>
+
+                        <span>
+                            Trò chơi
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat-line"></div>
+
+
+                    <div class="stat">
+
+                        <strong>🏆</strong>
+
+                        <span>
+                            Thử thách
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-visual">
+
+                <div class="glow-circle glow-one"></div>
+
+                <div class="glow-circle glow-two"></div>
+
+
+                <div class="math-card card-back">
+
+                    <div class="card-symbol">
+                        π
+                    </div>
+
+                    <div class="card-line short"></div>
+
+                    <div class="card-line"></div>
+
+                    <div class="card-line medium"></div>
+
+                </div>
+
+
+                <div class="math-card main-card">
+
+                    <div class="card-top">
+
+                        <span class="small-label">
+                            MATH WEB
+                        </span>
+
+                        <span class="card-number">
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <div class="equation">
+                        x² + 2x + 1
+                    </div>
+
+
+                    <div class="equation-answer">
+                        = (x + 1)²
+                    </div>
+
+
+                    <div class="card-divider"></div>
+
+
+                    <div class="card-bottom">
+
+                        <span>
+                            KIẾN THỨC
+                        </span>
+
+                        <span class="check">
+                            ✓
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card floating-card-one">
+
+                    <span class="floating-icon">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Chính xác!
+                        </strong>
+
+                        <small>
+                            +20 XP
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="floating-card floating-card-two">
+
+                    <span class="floating-icon purple">
+                        ★
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            LEVEL UP
+                        </strong>
+
+                        <small>
+                            Tiếp tục nào!
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section
+            class="about-section"
+            id="about"
+        >
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    MATH WEB
+                </span>
+
+
+                <h2>
+                    Học theo cách
+                    <span>của bạn</span>
+                </h2>
+
+
+                <p>
+                    Không chỉ học công thức. Hãy luyện tập, thử thách
+                    bản thân và từng bước chinh phục Toán học.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon blue">
+                        📚
+                    </div>
+
+                    <h3>
+                        Ôn kiến thức
+                    </h3>
+
+                    <p>
+                        Hệ thống kiến thức được chia thành từng chủ đề
+                        để dễ dàng tìm và ôn lại.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon purple">
+                        🎮
+                    </div>
+
+                    <h3>
+                        Học qua game
+                    </h3>
+
+                    <p>
+                        Mỗi chủ đề có những trò chơi riêng giúp việc
+                        luyện tập trở nên thú vị hơn.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon pink">
+                        🏆
+                    </div>
+
+                    <h3>
+                        Chinh phục thử thách
+                    </h3>
+
+                    <p>
+                        Hoàn thành bài luyện tập, tích lũy XP và mở khóa
+                        những thành tích mới.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="start-section">
+
+            <div class="start-box">
+
+                <div class="start-decoration decoration-one"></div>
+
+                <div class="start-decoration decoration-two"></div>
+
+
+                <div class="start-content">
+
+                    <span class="section-label">
+                        SẴN SÀNG CHƯA?
+                    </span>
+
+
+                    <h2>
+                        Bắt đầu hành trình
+                        <span>chinh phục Toán</span>
+                    </h2>
+
+
+                    <p>
+                        Chọn một chủ đề và bắt đầu luyện tập ngay.
+                    </p>
+
+
+                    <a
+                        href="practise.html"
+                        class="primary-button protected-practice-link"
+                    >
+                        <span>
+                            ĐẾN KHU LUYỆN TẬP
+                        </span>
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+
+            <span class="logo-icon">
+                ∑
+            </span>
+
+            MATH<span>WEB</span>
+
+        </div>
+
+
+        <p>
+            Học Toán • Luyện tập • Thử thách
+        </p>
+
+
+        <span class="copyright">
+            © 2026 MATH WEB
+        </span>
+
+    </footer>
+
+
+    <script src="js/main.js"></script>
+
+    <script src="js/notification.js"></script>
+
+
+</body>
+
+</html>

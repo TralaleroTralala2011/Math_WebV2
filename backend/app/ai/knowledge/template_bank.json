@@ -1,0 +1,1773 @@
+{
+  "version": "4.0-composer-bank",
+  "games": {
+    "Bốc bi": {
+      "topic": "Xác suất",
+      "families": [
+        "một lần rút",
+        "nhiều lần rút",
+        "có hoàn lại",
+        "không hoàn lại",
+        "ít nhất một",
+        "đúng k lần",
+        "xác suất có điều kiện",
+        "bài toán ngược"
+      ],
+      "contexts": [
+        "hộp bi",
+        "túi thẻ",
+        "ảo thuật gia",
+        "hộp quà",
+        "rút thăm",
+        "trò chơi may rủi"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Xúc xắc": {
+      "topic": "Xác suất",
+      "families": [
+        "một xúc xắc",
+        "hai xúc xắc",
+        "tổng",
+        "tích",
+        "nhiều lần gieo",
+        "ít nhất một lần",
+        "điều kiện",
+        "bài toán ngược"
+      ],
+      "contexts": [
+        "ván đấu",
+        "trò chơi điểm số",
+        "casino mô phỏng",
+        "cuộc thi",
+        "bàn cờ",
+        "thử thách may mắn"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Chọn tình huống": {
+      "topic": "Xác suất",
+      "families": [
+        "chọn người",
+        "chọn sản phẩm",
+        "vé thưởng",
+        "khảo sát",
+        "kiểm tra chất lượng",
+        "xác suất có điều kiện",
+        "biến cố hợp",
+        "biến cố đối"
+      ],
+      "contexts": [
+        "trường học",
+        "cửa hàng",
+        "nhà máy",
+        "sự kiện",
+        "đội tuyển",
+        "khảo sát cộng đồng"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Chọn đội": {
+      "topic": "Tổ hợp",
+      "families": [
+        "chọn đội",
+        "đội có thành viên bắt buộc",
+        "đội có thành viên loại trừ",
+        "chia nhóm",
+        "đếm lựa chọn",
+        "bài ngược",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "lớp học",
+        "giải đấu",
+        "câu lạc bộ",
+        "dự án",
+        "đội thể thao",
+        "cuộc thi"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Ghép lựa chọn": {
+      "topic": "Tổ hợp",
+      "families": [
+        "quy tắc nhân",
+        "nhiều lựa chọn",
+        "mã sản phẩm",
+        "thực đơn",
+        "trang phục",
+        "lựa chọn có điều kiện",
+        "bài ngược",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "cửa hàng",
+        "nhà hàng",
+        "ứng dụng",
+        "sự kiện",
+        "thiết kế sản phẩm",
+        "đặt hàng"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Săn tổ hợp": {
+      "topic": "Tổ hợp",
+      "families": [
+        "chọn k từ n",
+        "có điều kiện",
+        "không có điều kiện",
+        "đếm phần bù",
+        "chia trường hợp",
+        "bài ngược",
+        "suy luận",
+        "thực tế"
+      ],
+      "contexts": [
+        "đội thi",
+        "ban tổ chức",
+        "nhóm nghiên cứu",
+        "vé",
+        "thẻ nhiệm vụ",
+        "câu lạc bộ"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Xếp vị trí": {
+      "topic": "Chỉnh hợp",
+      "families": [
+        "xếp k vị trí",
+        "chọn rồi xếp",
+        "vị trí bắt buộc",
+        "vị trí cấm",
+        "xếp vòng",
+        "bài ngược",
+        "nhiều bước",
+        "thực tế"
+      ],
+      "contexts": [
+        "sân khấu",
+        "hàng ghế",
+        "bảng xếp hạng",
+        "đội hình",
+        "mã khóa",
+        "cuộc thi"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Mật mã": {
+      "topic": "Chỉnh hợp",
+      "families": [
+        "mã không lặp",
+        "mã được lặp",
+        "mã chữ số",
+        "mã có điều kiện",
+        "mã bắt đầu bằng",
+        "mã kết thúc bằng",
+        "bài ngược",
+        "xác suất mã"
+      ],
+      "contexts": [
+        "khóa điện tử",
+        "két sắt",
+        "tài khoản",
+        "phòng bí mật",
+        "trò chơi phiêu lưu",
+        "hệ thống bảo mật"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Sắp thứ tự": {
+      "topic": "Chỉnh hợp",
+      "families": [
+        "hoán vị",
+        "xếp hàng",
+        "xếp sách",
+        "xếp vật phẩm",
+        "vị trí cố định",
+        "vật giống nhau",
+        "bài ngược",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "thư viện",
+        "cuộc thi",
+        "đội hình",
+        "kệ hàng",
+        "lịch trình",
+        "triển lãm"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Bắt điểm": {
+      "topic": "Hàm số",
+      "families": [
+        "tọa độ điểm",
+        "tính giá trị hàm",
+        "điểm thuộc đồ thị",
+        "tham số",
+        "đọc tọa độ",
+        "bài ngược",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "bản đồ",
+        "game tọa độ",
+        "GPS mô phỏng",
+        "đường chạy",
+        "màn hình game",
+        "robot"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Tìm giao điểm": {
+      "topic": "Hàm số",
+      "families": [
+        "giao hai đồ thị",
+        "giải phương trình giao",
+        "giao trục",
+        "tham số giao điểm",
+        "số giao điểm",
+        "bài ngược",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "đường đi",
+        "hai tuyến xe",
+        "đồ thị chuyển động",
+        "bản đồ",
+        "robot",
+        "đường đua"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Đồ thị bí ẩn": {
+      "topic": "Hàm số",
+      "families": [
+        "đỉnh parabol",
+        "trục đối xứng",
+        "giao trục",
+        "đọc đồ thị",
+        "tìm hàm từ điểm",
+        "tham số",
+        "bài ngược",
+        "thực tế"
+      ],
+      "contexts": [
+        "màn hình radar",
+        "quỹ đạo",
+        "cầu vòm",
+        "đường bay",
+        "game",
+        "thiết kế"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Điều tra": {
+      "topic": "Hệ phương trình",
+      "families": [
+        "tổng hiệu",
+        "hai ẩn",
+        "bài toán tuổi",
+        "mua bán",
+        "chuyển động",
+        "năng suất",
+        "bài ngược",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "điều tra lớp học",
+        "cửa hàng",
+        "gia đình",
+        "giao thông",
+        "nhà máy",
+        "cuộc thi"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Tìm giá trị": {
+      "topic": "Hệ phương trình",
+      "families": [
+        "giải hệ",
+        "tìm x",
+        "tìm y",
+        "tìm biểu thức",
+        "tham số",
+        "suy luận",
+        "bài ngược",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "phòng thí nghiệm",
+        "mật mã",
+        "bảng dữ liệu",
+        "trò chơi",
+        "kho báu",
+        "nhiệm vụ"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Ghép đáp án": {
+      "topic": "Hệ phương trình",
+      "families": [
+        "chọn nghiệm",
+        "kiểm tra nghiệm",
+        "ghép hệ với nghiệm",
+        "biện luận",
+        "điều kiện",
+        "suy luận",
+        "bài ngược",
+        "thực tế"
+      ],
+      "contexts": [
+        "thử thách",
+        "mở khóa",
+        "điều tra",
+        "trò chơi",
+        "kho báu",
+        "bảng điều khiển"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Săn nghiệm": {
+      "topic": "Phương trình bậc hai",
+      "families": [
+        "nghiệm",
+        "delta",
+        "viète",
+        "tham số",
+        "nghiệm nguyên",
+        "nghiệm kép",
+        "bài ngược",
+        "thực tế"
+      ],
+      "contexts": [
+        "mật mã",
+        "kho báu",
+        "nhiệm vụ",
+        "quỹ đạo",
+        "thi đấu",
+        "thiết kế"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Ghép nghiệm": {
+      "topic": "Phương trình bậc hai",
+      "families": [
+        "tổng nghiệm",
+        "tích nghiệm",
+        "viète",
+        "ghép phương trình",
+        "tham số",
+        "suy luận",
+        "bài ngược",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "mở khóa",
+        "điều tra",
+        "bảng dữ liệu",
+        "trò chơi",
+        "kho báu",
+        "thử thách"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Mở khóa": {
+      "topic": "Phương trình bậc hai",
+      "families": [
+        "delta",
+        "số nghiệm",
+        "điều kiện có nghiệm",
+        "tham số",
+        "nghiệm nguyên",
+        "biện luận",
+        "bài ngược",
+        "thực tế"
+      ],
+      "contexts": [
+        "két sắt",
+        "cửa khóa",
+        "mật mã",
+        "phòng bí mật",
+        "game",
+        "nhiệm vụ"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Vùng an toàn": {
+      "topic": "Bất phương trình",
+      "families": [
+        "miền nghiệm",
+        "điểm kiểm tra",
+        "bất phương trình bậc nhất",
+        "bậc hai",
+        "điều kiện an toàn",
+        "khoảng",
+        "bài ngược",
+        "thực tế"
+      ],
+      "contexts": [
+        "vùng an toàn",
+        "tốc độ",
+        "ngân sách",
+        "nhiệt độ",
+        "khoảng cách",
+        "game"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Chọn khoảng": {
+      "topic": "Bất phương trình",
+      "families": [
+        "chọn khoảng nghiệm",
+        "hợp giao khoảng",
+        "bậc hai",
+        "điều kiện",
+        "tham số",
+        "biểu diễn trục số",
+        "bài ngược",
+        "thực tế"
+      ],
+      "contexts": [
+        "bản đồ",
+        "vùng hoạt động",
+        "điều kiện game",
+        "khoảng nhiệt độ",
+        "tốc độ",
+        "khoảng cách"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Vượt rào": {
+      "topic": "Bất phương trình",
+      "families": [
+        "ngưỡng",
+        "điều kiện vượt",
+        "bậc nhất",
+        "bậc hai",
+        "nhiều điều kiện",
+        "tối ưu ngưỡng",
+        "bài ngược",
+        "thực tế"
+      ],
+      "contexts": [
+        "cuộc đua",
+        "rào chắn",
+        "điểm số",
+        "tốc độ",
+        "chi phí",
+        "nhiệm vụ"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Tìm quy luật": {
+      "topic": "Dãy số",
+      "families": [
+        "tìm số hạng",
+        "quy luật cộng",
+        "quy luật nhân",
+        "truy hồi",
+        "đan xen",
+        "bài ngược",
+        "suy luận",
+        "thực tế"
+      ],
+      "contexts": [
+        "mã số",
+        "chuỗi đèn",
+        "robot",
+        "trò chơi",
+        "lịch trình",
+        "mẫu thiết kế"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Điền số": {
+      "topic": "Dãy số",
+      "families": [
+        "điền số hạng",
+        "tìm số thiếu",
+        "truy hồi",
+        "cấp số",
+        "quy luật",
+        "bài ngược",
+        "suy luận",
+        "thực tế"
+      ],
+      "contexts": [
+        "bảng điểm",
+        "mã khóa",
+        "lịch trình",
+        "game",
+        "dữ liệu",
+        "nhiệm vụ"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Đường đua dãy số": {
+      "topic": "Dãy số",
+      "families": [
+        "tăng tốc theo dãy",
+        "cấp số cộng",
+        "cấp số nhân",
+        "số hạng xa",
+        "tổng",
+        "quy luật",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "đường đua",
+        "xe đua",
+        "robot",
+        "game",
+        "điểm số",
+        "thử thách"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Truy tìm số": {
+      "topic": "Chia hết",
+      "families": [
+        "dấu hiệu chia hết",
+        "ước bội",
+        "tìm số",
+        "chữ số chưa biết",
+        "số nguyên tố",
+        "bài ngược",
+        "suy luận",
+        "thực tế"
+      ],
+      "contexts": [
+        "mật mã",
+        "vé số",
+        "kho báu",
+        "mã hàng",
+        "trò chơi",
+        "nhiệm vụ"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Chọn số": {
+      "topic": "Chia hết",
+      "families": [
+        "chọn số chia hết",
+        "bội chung",
+        "ước chung",
+        "chia hết nhiều số",
+        "chữ số",
+        "bài ngược",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "danh sách số",
+        "kho hàng",
+        "mã sản phẩm",
+        "game",
+        "thẻ nhiệm vụ",
+        "bảng điểm"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Phá khóa": {
+      "topic": "Chia hết",
+      "families": [
+        "tìm chữ số",
+        "dấu hiệu chia hết",
+        "ước",
+        "bội",
+        "điều kiện số",
+        "bài ngược",
+        "suy luận",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "két sắt",
+        "mật mã",
+        "cửa khóa",
+        "phòng bí mật",
+        "game",
+        "nhiệm vụ"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Bốc số": {
+      "topic": "Chia dư",
+      "families": [
+        "số dư",
+        "đồng dư",
+        "chia có dư",
+        "tìm số",
+        "bài ngược",
+        "chu kỳ",
+        "suy luận",
+        "thực tế"
+      ],
+      "contexts": [
+        "rút thẻ số",
+        "vé",
+        "game",
+        "mã hàng",
+        "lịch",
+        "nhiệm vụ"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Săn số dư": {
+      "topic": "Chia dư",
+      "families": [
+        "tìm số dư",
+        "lũy thừa modulo",
+        "chu kỳ",
+        "chia dư liên tiếp",
+        "bài ngược",
+        "suy luận",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "mật mã",
+        "đồng hồ",
+        "lịch",
+        "game",
+        "két sắt",
+        "mã hóa"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Thử thách modulo": {
+      "topic": "Chia dư",
+      "families": [
+        "đồng dư",
+        "lũy thừa",
+        "chu kỳ",
+        "hệ thức modulo",
+        "tìm x",
+        "bài ngược",
+        "suy luận",
+        "thực tế"
+      ],
+      "contexts": [
+        "mã hóa",
+        "két sắt",
+        "game",
+        "robot",
+        "nhiệm vụ",
+        "bảo mật"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Săn căn": {
+      "topic": "Căn thức",
+      "families": [
+        "nhận biết căn",
+        "điều kiện xác định",
+        "giá trị căn",
+        "so sánh",
+        "bài ngược",
+        "thực tế",
+        "suy luận",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "đo độ dài",
+        "bản đồ",
+        "thiết kế",
+        "game",
+        "khoảng cách",
+        "vật lý"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Rút gọn nhanh": {
+      "topic": "Căn thức",
+      "families": [
+        "rút gọn căn",
+        "trục căn",
+        "đồng dạng căn",
+        "biến đổi",
+        "điều kiện",
+        "bài ngược",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "thiết kế",
+        "đo lường",
+        "bản đồ",
+        "game",
+        "kỹ thuật",
+        "xây dựng"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Mở khóa căn thức": {
+      "topic": "Căn thức",
+      "families": [
+        "điều kiện xác định",
+        "rút gọn",
+        "tìm x",
+        "so sánh",
+        "biến đổi",
+        "bài ngược",
+        "suy luận",
+        "thực tế"
+      ],
+      "contexts": [
+        "két sắt",
+        "bản đồ",
+        "nhiệm vụ",
+        "game",
+        "thiết kế",
+        "thử thách"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Phá biểu thức": {
+      "topic": "Hằng đẳng thức",
+      "families": [
+        "nhận dạng hằng đẳng thức",
+        "khai triển",
+        "phân tích",
+        "tính nhanh",
+        "bài ngược",
+        "suy luận",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "tính nhanh",
+        "thiết kế",
+        "game",
+        "mật mã",
+        "bảng số",
+        "nhiệm vụ"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Ghép công thức": {
+      "topic": "Hằng đẳng thức",
+      "families": [
+        "ghép công thức",
+        "nhận dạng",
+        "tìm thành phần thiếu",
+        "biến đổi",
+        "bài ngược",
+        "suy luận",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "mở khóa",
+        "thẻ công thức",
+        "game",
+        "mật mã",
+        "nhiệm vụ",
+        "thử thách"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Công thức bí ẩn": {
+      "topic": "Hằng đẳng thức",
+      "families": [
+        "tìm biểu thức ẩn",
+        "suy luận",
+        "hằng đẳng thức",
+        "tham số",
+        "tính nhanh",
+        "bài ngược",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "mật mã",
+        "kho báu",
+        "game",
+        "thử thách",
+        "thiết kế",
+        "nhiệm vụ"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Rút gọn": {
+      "topic": "Phân thức đại số",
+      "families": [
+        "rút gọn",
+        "điều kiện xác định",
+        "phân tích nhân tử",
+        "quy đồng",
+        "bài ngược",
+        "thực tế",
+        "suy luận",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "đơn giá",
+        "tốc độ",
+        "năng suất",
+        "game",
+        "kỹ thuật",
+        "bảng dữ liệu"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Tìm điều kiện": {
+      "topic": "Phân thức đại số",
+      "families": [
+        "điều kiện xác định",
+        "mẫu khác 0",
+        "tham số",
+        "tập xác định",
+        "bài ngược",
+        "suy luận",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "thiết kế",
+        "đo lường",
+        "game",
+        "bảng dữ liệu",
+        "nhiệm vụ",
+        "kỹ thuật"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Phân thức tốc độ": {
+      "topic": "Phân thức đại số",
+      "families": [
+        "tốc độ",
+        "năng suất",
+        "đơn giá",
+        "tỉ lệ",
+        "phân thức",
+        "bài ngược",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "giao thông",
+        "sản xuất",
+        "mua bán",
+        "game",
+        "công việc",
+        "đời sống"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Tìm góc": {
+      "topic": "Hình học",
+      "families": [
+        "góc tam giác",
+        "góc tạo bởi đường thẳng",
+        "sin cos",
+        "định lý",
+        "suy luận",
+        "bài ngược",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "bản đồ",
+        "kiến trúc",
+        "mái nhà",
+        "camera",
+        "đường đi",
+        "thiết kế"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Săn độ dài": {
+      "topic": "Hình học",
+      "families": [
+        "độ dài cạnh",
+        "Pythagore",
+        "sin cos",
+        "khoảng cách",
+        "diện tích",
+        "bài ngược",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "xây dựng",
+        "đo đạc",
+        "bản đồ",
+        "kiến trúc",
+        "game",
+        "kỹ thuật"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Bản đồ hình học": {
+      "topic": "Hình học",
+      "families": [
+        "tọa độ",
+        "khoảng cách",
+        "đường đi",
+        "tam giác",
+        "góc",
+        "tối ưu khoảng cách",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "bản đồ",
+        "GPS",
+        "thành phố",
+        "game",
+        "robot",
+        "đường đi"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Đọc biểu đồ": {
+      "topic": "Thống kê",
+      "families": [
+        "đọc biểu đồ",
+        "trung bình",
+        "tần số",
+        "tỉ lệ",
+        "so sánh",
+        "suy luận",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "khảo sát",
+        "thể thao",
+        "điểm số",
+        "thời tiết",
+        "bán hàng",
+        "mạng xã hội"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Săn số liệu": {
+      "topic": "Thống kê",
+      "families": [
+        "tìm số liệu thiếu",
+        "trung bình",
+        "trung vị",
+        "mốt",
+        "phương sai",
+        "bài ngược",
+        "thực tế",
+        "nhiều bước"
+      ],
+      "contexts": [
+        "bảng điểm",
+        "khảo sát",
+        "thể thao",
+        "doanh số",
+        "dữ liệu",
+        "thí nghiệm"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    },
+    "Thử thách thống kê": {
+      "topic": "Thống kê",
+      "families": [
+        "trung bình",
+        "trung vị",
+        "tứ phân vị",
+        "phương sai",
+        "độ lệch chuẩn",
+        "so sánh",
+        "thực tế",
+        "bài ngược"
+      ],
+      "contexts": [
+        "khảo sát",
+        "thể thao",
+        "điểm thi",
+        "sản xuất",
+        "thí nghiệm",
+        "dữ liệu"
+      ],
+      "question_styles": [
+        "knowledge",
+        "calculation",
+        "reasoning",
+        "reverse",
+        "application",
+        "scenario",
+        "multi_step",
+        "real_life",
+        "theory_check",
+        "mistake_check"
+      ],
+      "rules": [
+        "Không dùng cấu trúc của game khác",
+        "Dữ kiện phải đủ để giải",
+        "Đáp án phải được kiểm chứng",
+        "Ưu tiên cấu trúc chưa dùng gần đây"
+      ]
+    }
+  },
+  "style_catalog": [
+    "knowledge",
+    "calculation",
+    "reasoning",
+    "reverse",
+    "application",
+    "scenario",
+    "multi_step",
+    "real_life",
+    "theory_check",
+    "mistake_check"
+  ],
+  "game_count": 45
+}
