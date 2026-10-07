@@ -1,3 +1,4 @@
+import os
 import sqlite3
 
 from datetime import datetime, timezone
@@ -10,7 +11,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 
-DATABASE_PATH = BASE_DIR / "mathweb.db"
+DATABASE_PATH = Path(os.getenv("MATHWEB_DB_PATH", str(BASE_DIR / "mathweb.db"))).expanduser()
 
 
 # =========================================================
