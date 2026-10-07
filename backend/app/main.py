@@ -54,7 +54,7 @@ app.add_middleware(
     # với bất kỳ port nào.
     allow_origin_regex=(
         r"^https?://"
-        r"(localhost|127\.0\.0\.1|192\.168\.1\.3)"
+        r"(localhost|127\.0\.0\.1|192\.168\.1\.3|tralalerotralala2011\.github\.io)"
         r"(:\d+)?$"
     ),
 

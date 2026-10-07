@@ -1,5 +1,5 @@
 (() => {
-  const API = location.origin.startsWith('http') && location.port === '5500' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  const API = location.origin.startsWith('http') && location.port === '5500' ? window.MATHWEB_API_URL || "http://127.0.0.1:8000" : window.MATHWEB_API_URL || "http://127.0.0.1:8000";
   const p = new URLSearchParams(location.search);
   const topic = p.get('topic') || 'menh_de';
   const grade = Number(p.get('grade') || 10);

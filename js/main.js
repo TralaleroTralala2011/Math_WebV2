@@ -3,7 +3,7 @@
    Frontend global controller
 ========================================================= */
 
-const MAIN_API_URL = "http://127.0.0.1:8000";
+const MAIN_API_URL = window.MATHWEB_API_URL || "http://127.0.0.1:8000";
 
 const AUTH_TOKEN_KEY = "mathweb_token";
 const AUTH_USER_KEY = "mathweb_user";

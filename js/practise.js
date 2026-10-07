@@ -14,7 +14,7 @@
 
     const API_BASE =
         window.MATHWEB_API_BASE ||
-        "http://127.0.0.1:8000";
+        window.MATHWEB_API_URL || "http://127.0.0.1:8000";
 
     const AI_API =
         API_BASE + "/api/ai";

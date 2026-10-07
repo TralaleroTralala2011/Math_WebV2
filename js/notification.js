@@ -5,7 +5,7 @@
 
 const NOTIFICATION_API_URL =
     window.MATHWEB_API_URL ||
-    "http://127.0.0.1:8000";
+    window.MATHWEB_API_URL || "http://127.0.0.1:8000";
 
 
 /* =========================================================

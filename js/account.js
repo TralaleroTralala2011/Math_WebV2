@@ -1,6 +1,6 @@
 const API_URL =
-    window.MATH_WEB_API_URL ||
-    "http://127.0.0.1:8000";
+    window.MATHWEB_API_URL ||
+    window.MATHWEB_API_URL || "http://127.0.0.1:8000";
 
 const API_TIMEOUT_MS = 10000;
 const MAX_PLAYER_ID_LENGTH = 30;
