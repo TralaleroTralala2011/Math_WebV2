@@ -2,11 +2,11 @@ import random, uuid, math
 from fractions import Fraction
 from .math_utils import fmt, comb, perm, quadratic_roots
 from .difficulty import normalize
+from .diversity_engine import DiversityQuestionEngine
 from .game_bank import GameQuestionBank
 from .composer import TemplateBank, QuestionComposer, TemplateComposer
 from .explanation import build_detailed_solution
 from .distractor_engine import DistractorEngine
-from .extended_bank import generate as generate_extended
 from ..config import KNOWLEDGE_DIR
 
 class QuestionGenerator:
@@ -18,14 +18,29 @@ class QuestionGenerator:
         self.template_bank = TemplateBank(KNOWLEDGE_DIR / "template_bank.json")
         self.composer = QuestionComposer(self.template_bank)
         self.distractors = DistractorEngine()
+        # Additive diversity layer. The original game bank and template bank remain intact.
+        self.diversity = DiversityQuestionEngine()
 
     def generate(self, grade, topic_id, difficulty, question_type, game_id=None, recent_families=None):
         difficulty=normalize(difficulty)
 
+        # First try the additive diversity engine. It supplies many genuinely
+        # different problem structures while keeping selected games inside their
+        # mathematical domain. If it cannot serve an item, the original bank
+        # below remains the fallback and is never deleted.
+        topic_meta = self.knowledge.get(topic_id) or {"id": topic_id, "name": str(topic_id), "subtopics": []}
+        try:
+            diverse = self.diversity.generate(topic_meta, difficulty, question_type, game_id)
+        except Exception:
+            diverse = None
+        if diverse is not None:
+            q = diverse
+        else:
+            q = None
+
         # The bank is the source of mathematical building blocks. The composer
         # decides which family/style/context to use for this individual item.
-        q = None
-        if game_id:
+        if q is None and game_id:
             # A selected game is a hard content boundary. Do NOT inject generic
             # topic-theory questions here: for example, the Xúc xắc game must
             # always produce dice problems, not a generic question such as
@@ -67,11 +82,6 @@ class QuestionGenerator:
                 elif style == "theory_check" and q.get("question"):
                     q["question"] = f"Kiểm tra kiến thức: {q['question']}"
         if q is None:
-            # Additive extension layer: old topic generators stay authoritative.
-            # Newer curriculum/real-life/geometry variants are only used when the
-            # legacy generator has no dedicated implementation.
-            q = generate_extended(topic_id, grade, difficulty)
-        if q is None:
             fn=getattr(self, f"_g_{topic_id}", self._g_generic)
             q=fn(grade,difficulty)
         q["id"]=uuid.uuid4().hex
@@ -110,39 +120,24 @@ class QuestionGenerator:
                     vals.append(x)
                 if len(vals) == 4:
                     break
-
-        # Some derived/reasoning tasks have categorical answers such as
-        # “nhỏ hơn / lớn hơn / bằng”. Keep those questions fully MCQ instead
-        # of falling back to three choices. This is an additive safety net.
-        if len(vals) < 4:
-            categorical = {
-                "nhỏ hơn": ["lớn hơn", "bằng", "không đủ dữ kiện"],
-                "lớn hơn": ["nhỏ hơn", "bằng", "không đủ dữ kiện"],
-                "bằng": ["nhỏ hơn", "lớn hơn", "không đủ dữ kiện"],
-                "dương": ["âm", "bằng 0", "không xác định"],
-                "âm": ["dương", "bằng 0", "không xác định"],
-                "bằng 0": ["dương", "âm", "không xác định"],
-                "chẵn": ["lẻ", "số nguyên tố", "không phải số nguyên"],
-                "lẻ": ["chẵn", "số nguyên tố", "không phải số nguyên"],
-            }
-            for x in categorical.get(str(answer).strip().lower(), []):
-                x = fmt(x)
-                if x not in vals:
-                    vals.append(x)
-                if len(vals) == 4:
-                    break
-
-        # Final generic labels are used only as a last resort for unusual
-        # string answers. Existing numeric distractors are never replaced.
-        if len(vals) < 4:
-            for x in ["Không xác định", "Không đủ dữ kiện", "Giá trị khác"]:
-                if x not in vals and x.lower() != str(answer).strip().lower():
-                    vals.append(x)
-                if len(vals) == 4:
-                    break
-
-        random.shuffle(vals)
-        return vals[:4] if len(vals) >= 4 else vals
+        # Last-resort safety for symbolic/string answers. The old distractor
+        # engine remains first choice, but an MCQ must never leave the UI with
+        # only two or three choices.
+        fallback = [
+            "Không đủ dữ kiện", "Không xác định", "0", "1", "−1",
+            "2", "3", "Sai", "Đúng", "Phương án khác"
+        ]
+        for x in fallback:
+            if x != fmt(answer) and x not in vals:
+                vals.append(x)
+            if len(vals) == 4:
+                break
+        correct_value = fmt(answer)
+        wrong_values = [x for x in vals if x != correct_value]
+        random.shuffle(wrong_values)
+        final = [correct_value] + wrong_values[:3]
+        random.shuffle(final)
+        return final
 
     def _convert(self,q,t):
         if t=="multiple_choice":

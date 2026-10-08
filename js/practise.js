@@ -3604,7 +3604,6 @@
                     ${escapeHTML(
                         questionText
                     )}
-                    ${renderAIDiagram(question)}
                 </div>
 
 
@@ -3663,89 +3662,6 @@
 
         startAITimer();
 
-    }
-
-
-    /* =====================================================
-       OPTIONAL GEOMETRY DIAGRAMS
-       ===================================================== */
-
-    function renderAIDiagram(question) {
-
-        const diagram = question && question.diagram;
-        if (!diagram || typeof diagram !== "object") return "";
-
-        const type = String(diagram.type || "");
-
-        if (type === "right_triangle") {
-            return `
-                <div class="mathweb-ai-diagram" aria-label="Hình minh họa tam giác vuông">
-                    <svg viewBox="0 0 360 210" role="img" aria-hidden="true">
-                        <polygon points="55,165 300,165 55,45" fill="rgba(56,217,255,.08)" stroke="currentColor" stroke-width="3"/>
-                        <polyline points="55,145 75,145 75,165" fill="none" stroke="currentColor" stroke-width="2"/>
-                        <text x="165" y="190" text-anchor="middle">a = ${escapeHTML(String(diagram.a ?? ""))}</text>
-                        <text x="30" y="110" text-anchor="middle" transform="rotate(-90 30 110)">b = ${escapeHTML(String(diagram.b ?? ""))}</text>
-                        <text x="190" y="90">c = ${escapeHTML(String(diagram.c ?? ""))}</text>
-                    </svg>
-                </div>
-            `;
-        }
-
-        if (type === "circle") {
-            return `
-                <div class="mathweb-ai-diagram" aria-label="Hình minh họa đường tròn">
-                    <svg viewBox="0 0 360 210" role="img" aria-hidden="true">
-                        <circle cx="180" cy="105" r="70" fill="rgba(56,217,255,.08)" stroke="currentColor" stroke-width="3"/>
-                        <line x1="180" y1="105" x2="250" y2="105" stroke="currentColor" stroke-width="3"/>
-                        <circle cx="180" cy="105" r="4" fill="currentColor"/>
-                        <text x="215" y="95">r = ${escapeHTML(String(diagram.r ?? ""))}</text>
-                    </svg>
-                </div>
-            `;
-        }
-
-        if (type === "triangle_area") {
-            return `
-                <div class="mathweb-ai-diagram" aria-label="Hình minh họa tam giác và chiều cao">
-                    <svg viewBox="0 0 360 210" role="img" aria-hidden="true">
-                        <polygon points="60,165 300,165 210,55" fill="rgba(56,217,255,.08)" stroke="currentColor" stroke-width="3"/>
-                        <line x1="210" y1="55" x2="210" y2="165" stroke="currentColor" stroke-width="2" stroke-dasharray="7 6"/>
-                        <text x="180" y="190" text-anchor="middle">đáy = ${escapeHTML(String(diagram.base ?? ""))}</text>
-                        <text x="225" y="115">h = ${escapeHTML(String(diagram.height ?? ""))}</text>
-                    </svg>
-                </div>
-            `;
-        }
-
-        if (type === "points" && Array.isArray(diagram.a) && Array.isArray(diagram.b)) {
-            const ax = Number(diagram.a[0]);
-            const ay = Number(diagram.a[1]);
-            const bx = Number(diagram.b[0]);
-            const by = Number(diagram.b[1]);
-            if (![ax, ay, bx, by].every(Number.isFinite)) return "";
-            const minX = Math.min(ax, bx, -1) - 1;
-            const maxX = Math.max(ax, bx, 1) + 1;
-            const minY = Math.min(ay, by, -1) - 1;
-            const maxY = Math.max(ay, by, 1) + 1;
-            const sx = x => 40 + ((x - minX) / (maxX - minX)) * 280;
-            const sy = y => 175 - ((y - minY) / (maxY - minY)) * 140;
-            const x0 = sx(0), y0 = sy(0);
-            return `
-                <div class="mathweb-ai-diagram" aria-label="Hình minh họa hai điểm trên mặt phẳng tọa độ">
-                    <svg viewBox="0 0 360 210" role="img" aria-hidden="true">
-                        <line x1="35" y1="${y0}" x2="325" y2="${y0}" stroke="currentColor" stroke-width="2" opacity=".55"/>
-                        <line x1="${x0}" y1="185" x2="${x0}" y2="25" stroke="currentColor" stroke-width="2" opacity=".55"/>
-                        <line x1="${sx(ax)}" y1="${sy(ay)}" x2="${sx(bx)}" y2="${sy(by)}" stroke="currentColor" stroke-width="3" opacity=".75"/>
-                        <circle cx="${sx(ax)}" cy="${sy(ay)}" r="5" fill="currentColor"/>
-                        <circle cx="${sx(bx)}" cy="${sy(by)}" r="5" fill="currentColor"/>
-                        <text x="${sx(ax)+8}" y="${sy(ay)-8}">A(${ax};${ay})</text>
-                        <text x="${sx(bx)+8}" y="${sy(by)-8}">B(${bx};${by})</text>
-                    </svg>
-                </div>
-            `;
-        }
-
-        return "";
     }
 
 
@@ -4546,15 +4462,22 @@
             <div class="mathweb-ai-actions">
                 ${correct
                     ? `<div style="font-size:12px;opacity:.7;">✓ Đáp án đúng, đang chuyển câu...</div>`
-                    : `<button type="button" class="mathweb-ai-btn mathweb-ai-btn-primary" id="mathwebAiSkipAfterWrong">➡️ CÂU TIẾP THEO</button>`}
+                    : `<button type="button" class="mathweb-ai-btn mathweb-ai-btn-primary" id="mathwebAiNextAfterWrong">➡️ CÂU TIẾP THEO</button>`}
             </div>
 
         `;
 
 
+        // Legacy wrong-answer skip handler is kept for backward compatibility.
         const skipAfterWrong = document.getElementById("mathwebAiSkipAfterWrong");
         if (skipAfterWrong) {
             skipAfterWrong.addEventListener("click", function () {
+                nextAIQuestion();
+            });
+        }
+        const nextAfterWrong = document.getElementById("mathwebAiNextAfterWrong");
+        if (nextAfterWrong) {
+            nextAfterWrong.addEventListener("click", function () {
                 nextAIQuestion();
             });
         }

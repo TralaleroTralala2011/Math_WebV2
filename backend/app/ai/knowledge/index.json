@@ -8,7 +8,8 @@
         "tập hợp",
         "khoảng",
         "hợp giao hiệu"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "bat_phuong_trinh",
@@ -27,7 +28,8 @@
         "định lý cos",
         "diện tích",
         "đường tròn ngoại tiếp"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "vector",
@@ -37,7 +39,8 @@
         "tọa độ",
         "tích vô hướng",
         "trung điểm"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "ham_so_bac_hai",
@@ -47,7 +50,8 @@
         "trục đối xứng",
         "giao trục",
         "tham số"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "phuong_trinh_he",
@@ -66,7 +70,8 @@
         "quy tắc cộng",
         "quy tắc nhân",
         "sơ đồ cây"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "hoan_vi_chinh_hop_to_hop",
@@ -107,7 +112,8 @@
         "phủ định",
         "kéo theo",
         "tương đương"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "tap_hop",
@@ -118,7 +124,8 @@
         "hiệu",
         "phần bù",
         "khoảng"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "he_bat_phuong_trinh",
@@ -127,7 +134,8 @@
         "bậc nhất",
         "bậc hai",
         "miền nghiệm"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "ham_so",
@@ -145,7 +153,8 @@
         "hệ số góc",
         "đồ thị",
         "tương giao"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "phuong_trinh",
@@ -154,7 +163,8 @@
         "bậc nhất",
         "bậc hai",
         "biện luận"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "he_phuong_trinh",
@@ -164,7 +174,8 @@
         "thế",
         "cộng đại số",
         "biện luận"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "he_thuc_luong_tam_giac",
@@ -174,7 +185,8 @@
         "cos",
         "diện tích",
         "đường tròn ngoại tiếp"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "toa_do_phang",
@@ -184,7 +196,8 @@
         "vectơ",
         "trung điểm",
         "khoảng cách"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "duong_thang",
@@ -193,7 +206,8 @@
         "phương trình",
         "góc",
         "khoảng cách"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "duong_tron",
@@ -202,7 +216,8 @@
         "phương trình",
         "tiếp tuyến",
         "vị trí tương đối"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "nhi_thuc_newton",
@@ -211,7 +226,8 @@
         "khai triển",
         "hệ số",
         "số hạng"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "hinh_hoc_10",
@@ -230,7 +246,163 @@
         "tối ưu",
         "mô hình hóa",
         "đo đạc"
-      ]
+      ],
+      "level_key": "advanced"
+    },
+    {
+      "id": "REMAINDER",
+      "name": "Chia dư",
+      "subtopics": [
+        "phép chia có dư",
+        "đồng dư",
+        "số dư lũy thừa"
+      ],
+      "level_key": "foundation"
+    },
+    {
+      "id": "DIVISIBILITY",
+      "name": "Chia hết",
+      "subtopics": [
+        "dấu hiệu chia hết",
+        "ước bội",
+        "phân tích số"
+      ],
+      "level_key": "foundation"
+    },
+    {
+      "id": "FUNCTION",
+      "name": "Hàm số",
+      "subtopics": [
+        "tập xác định",
+        "giá trị hàm số",
+        "đồ thị"
+      ],
+      "level_key": "foundation"
+    },
+    {
+      "id": "SYSTEM_EQUATION",
+      "name": "Hệ phương trình",
+      "subtopics": [
+        "hệ hai ẩn",
+        "thế",
+        "cộng đại số",
+        "biện luận"
+      ],
+      "level_key": "foundation"
+    },
+    {
+      "id": "STATISTICS",
+      "name": "Thống kê",
+      "subtopics": [
+        "trung bình",
+        "trung vị",
+        "mốt",
+        "phương sai"
+      ],
+      "level_key": "foundation"
+    },
+    {
+      "id": "PROBABILITY",
+      "name": "Xác suất",
+      "subtopics": [
+        "không gian mẫu",
+        "biến cố",
+        "xác suất cổ điển",
+        "xác suất thực nghiệm"
+      ],
+      "level_key": "foundation"
+    },
+    {
+      "id": "RADICAL",
+      "name": "Căn thức",
+      "subtopics": [
+        "điều kiện xác định",
+        "rút gọn",
+        "trục căn thức"
+      ],
+      "level_key": "medium"
+    },
+    {
+      "id": "SEQUENCE",
+      "name": "Dãy số",
+      "subtopics": [
+        "số hạng",
+        "quy luật",
+        "công thức tổng quát"
+      ],
+      "level_key": "medium"
+    },
+    {
+      "id": "GEOMETRY",
+      "name": "Hình học",
+      "subtopics": [
+        "tam giác",
+        "đường tròn",
+        "góc",
+        "độ dài"
+      ],
+      "level_key": "medium"
+    },
+    {
+      "id": "QUADRATIC_EQUATION",
+      "name": "Phương trình bậc hai",
+      "subtopics": [
+        "nghiệm",
+        "biệt thức",
+        "Viète",
+        "tham số"
+      ],
+      "level_key": "medium"
+    },
+    {
+      "id": "COMBINATION",
+      "name": "Tổ hợp",
+      "subtopics": [
+        "tổ hợp",
+        "chọn nhóm",
+        "đếm"
+      ],
+      "level_key": "medium"
+    },
+    {
+      "id": "INEQUALITY",
+      "name": "Bất phương trình",
+      "subtopics": [
+        "bậc nhất",
+        "bậc hai",
+        "hệ bất phương trình"
+      ],
+      "level_key": "advanced"
+    },
+    {
+      "id": "PERMUTATION",
+      "name": "Chỉnh hợp",
+      "subtopics": [
+        "hoán vị",
+        "chỉnh hợp",
+        "xếp vị trí"
+      ],
+      "level_key": "advanced"
+    },
+    {
+      "id": "IDENTITIES",
+      "name": "Hằng đẳng thức",
+      "subtopics": [
+        "hằng đẳng thức",
+        "khai triển",
+        "phân tích"
+      ],
+      "level_key": "advanced"
+    },
+    {
+      "id": "ALGEBRAIC_FRACTION",
+      "name": "Phân thức đại số",
+      "subtopics": [
+        "điều kiện xác định",
+        "rút gọn",
+        "quy đồng"
+      ],
+      "level_key": "advanced"
     }
   ],
   "11": [
@@ -243,7 +415,8 @@
         "tan",
         "đồ thị",
         "tập xác định"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "phuong_trinh_luong_giac",
@@ -253,7 +426,8 @@
         "đồng nhất",
         "đặt ẩn phụ",
         "tham số"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "day_so",
@@ -262,7 +436,8 @@
         "số hạng",
         "công thức tổng quát",
         "truy hồi"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "cap_so_cong",
@@ -271,7 +446,8 @@
         "công sai",
         "số hạng",
         "tổng"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "cap_so_nhan",
@@ -280,7 +456,8 @@
         "công bội",
         "số hạng",
         "tổng"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "gioi_han",
@@ -290,7 +467,8 @@
         "hàm số",
         "vô cực",
         "liên tục"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "dao_ham",
@@ -300,7 +478,8 @@
         "hàm hợp",
         "tiếp tuyến",
         "cực trị"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "hinh_khong_gian",
@@ -310,7 +489,8 @@
         "mặt phẳng",
         "góc",
         "khoảng cách"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "xac_suat_11",
@@ -319,7 +499,8 @@
         "biến cố độc lập",
         "hợp biến cố",
         "điều kiện"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "gia_tri_luong_giac",
@@ -329,7 +510,8 @@
         "cos",
         "tan",
         "cung góc"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "cong_thuc_luong_giac",
@@ -339,7 +521,8 @@
         "nhân đôi",
         "hạ bậc",
         "biến đổi"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "ham_so_luong_giac_day_du",
@@ -349,7 +532,8 @@
         "chu kỳ",
         "tập xác định",
         "giá trị lớn nhất"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "phuong_trinh_luong_giac_day_du",
@@ -359,7 +543,8 @@
         "đồng nhất",
         "đặt ẩn phụ",
         "tham số"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "day_so_tong_quat",
@@ -368,7 +553,8 @@
         "công thức tổng quát",
         "truy hồi",
         "đơn điệu"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "gioi_han_ham_so",
@@ -377,7 +563,8 @@
         "vô cực",
         "hữu hạn",
         "liên tục"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "ham_so_lien_tuc",
@@ -386,7 +573,8 @@
         "liên tục tại điểm",
         "trên khoảng",
         "giá trị trung gian"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "dao_ham_quy_tac",
@@ -396,7 +584,8 @@
         "tích",
         "thương",
         "hàm hợp"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "ung_dung_dao_ham_11",
@@ -405,7 +594,8 @@
         "tiếp tuyến",
         "đơn điệu",
         "cực trị"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "song_song_khong_gian",
@@ -414,7 +604,8 @@
         "đường thẳng",
         "mặt phẳng",
         "thiết diện"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "vuong_goc_khong_gian",
@@ -423,7 +614,8 @@
         "đường thẳng",
         "mặt phẳng",
         "hình chiếu"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "goc_khoang_cach_11",
@@ -432,7 +624,8 @@
         "góc",
         "khoảng cách",
         "hình chiếu"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "thong_ke_11",
@@ -441,7 +634,8 @@
         "mẫu số liệu",
         "độ phân tán",
         "tứ phân vị"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "bai_toan_thuc_te_11",
@@ -450,7 +644,8 @@
         "tăng trưởng",
         "lãi suất",
         "mô hình"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "to_hop_xac_suat_nang_cao_11",
@@ -459,7 +654,8 @@
         "đếm nâng cao",
         "xác suất",
         "điều kiện"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "bien_co_doc_lap_11",
@@ -468,7 +664,8 @@
         "độc lập",
         "xác suất có điều kiện",
         "công thức"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "day_so_truy_hoi_11",
@@ -477,7 +674,8 @@
         "truy hồi",
         "số hạng",
         "quy luật"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "quy_nap_toan_hoc_11",
@@ -486,7 +684,8 @@
         "mệnh đề",
         "quy nạp",
         "chứng minh"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "phep_bien_hinh_11",
@@ -495,7 +694,8 @@
         "phép tịnh tiến",
         "phép quay",
         "đối xứng"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "thiet_dien_hinh_khong_gian_11",
@@ -504,7 +704,8 @@
         "thiết diện",
         "hình chóp",
         "mặt phẳng"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "bai_toan_thuc_te_tong_hop_11",
@@ -513,7 +714,8 @@
         "mô hình hóa",
         "hàm số",
         "xác suất"
-      ]
+      ],
+      "level_key": "advanced"
     }
   ],
   "12": [
@@ -526,7 +728,8 @@
         "GTLN GTNN",
         "tiệm cận",
         "tham số"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "khao_sat_ham_so",
@@ -536,7 +739,8 @@
         "biến thiên",
         "tiệm cận",
         "giao điểm"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "nguyen_ham_tich_phan",
@@ -546,7 +750,8 @@
         "đổi biến",
         "từng phần",
         "diện tích"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "so_phuc",
@@ -556,7 +761,8 @@
         "môđun",
         "liên hợp",
         "phương trình"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "hinh_hoc_khong_gian",
@@ -566,7 +772,8 @@
         "góc",
         "khoảng cách",
         "mặt cầu"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "toa_do_khong_gian",
@@ -576,7 +783,8 @@
         "mặt phẳng",
         "đường thẳng",
         "mặt cầu"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "xac_suat_12",
@@ -585,7 +793,8 @@
         "xác suất có điều kiện",
         "độc lập",
         "kỳ vọng"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "thong_ke_12",
@@ -595,7 +804,8 @@
         "trung vị",
         "tứ phân vị",
         "phương sai"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "tinh_don_dieu",
@@ -604,7 +814,8 @@
         "đồng biến",
         "nghịch biến",
         "tham số"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "cuc_tri",
@@ -613,7 +824,8 @@
         "điểm cực trị",
         "tham số",
         "đồ thị"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "gtln_gtnn",
@@ -622,7 +834,8 @@
         "đoạn",
         "khoảng",
         "ứng dụng"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "tiep_tuyen",
@@ -631,7 +844,8 @@
         "hệ số góc",
         "tiếp xúc",
         "tham số"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "tien_can",
@@ -640,7 +854,8 @@
         "đứng",
         "ngang",
         "xiên"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "tuong_giao",
@@ -649,7 +864,8 @@
         "số giao điểm",
         "tham số",
         "biện luận"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "ham_mu",
@@ -658,7 +874,8 @@
         "đồ thị",
         "đơn điệu",
         "giá trị"
-      ]
+      ],
+      "level_key": "foundation"
     },
     {
       "id": "ham_logarit",
@@ -667,7 +884,8 @@
         "đồ thị",
         "tập xác định",
         "đơn điệu"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "pt_mu",
@@ -676,7 +894,8 @@
         "cơ bản",
         "đặt ẩn phụ",
         "tham số"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "pt_logarit",
@@ -685,7 +904,8 @@
         "điều kiện",
         "biến đổi",
         "tham số"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "bpt_mu",
@@ -694,7 +914,8 @@
         "đơn điệu",
         "đặt ẩn phụ",
         "tham số"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "bpt_logarit",
@@ -703,7 +924,8 @@
         "điều kiện",
         "đơn điệu",
         "tham số"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "ung_dung_tich_phan",
@@ -712,7 +934,8 @@
         "diện tích",
         "thể tích",
         "quãng đường"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "bieu_dien_so_phuc",
@@ -721,7 +944,8 @@
         "mặt phẳng phức",
         "môđun",
         "liên hợp"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "pt_so_phuc",
@@ -730,7 +954,8 @@
         "bậc hai",
         "liên hợp",
         "tham số"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "mat_phang_oxyz",
@@ -739,7 +964,8 @@
         "phương trình",
         "vị trí tương đối",
         "khoảng cách"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "duong_thang_oxyz",
@@ -748,7 +974,8 @@
         "tham số",
         "vị trí tương đối",
         "góc"
-      ]
+      ],
+      "level_key": "medium"
     },
     {
       "id": "mat_cau",
@@ -757,7 +984,8 @@
         "phương trình",
         "tiếp xúc",
         "giao tuyến"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "goc_khoang_cach_oxyz",
@@ -766,7 +994,8 @@
         "góc",
         "đường vuông góc",
         "khoảng cách"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "the_tich_khong_gian",
@@ -775,7 +1004,8 @@
         "lăng trụ",
         "chóp",
         "mặt cầu"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "tong_hop_thpt",
@@ -785,7 +1015,8 @@
         "giải tích",
         "hình học",
         "xác suất"
-      ]
+      ],
+      "level_key": "advanced"
     },
     {
       "id": "bai_toan_thuc_te_12",
@@ -795,7 +1026,8 @@
         "tăng trưởng",
         "chuyển động",
         "kinh tế"
-      ]
+      ],
+      "level_key": "advanced"
     }
   ]
 }

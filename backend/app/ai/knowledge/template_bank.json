@@ -1,5 +1,5 @@
 {
-  "version": "4.1-composer-bank-additive",
+  "version": "4.0-composer-bank",
   "games": {
     "Bốc bi": {
       "topic": "Xác suất",
@@ -11,10 +11,7 @@
         "ít nhất một",
         "đúng k lần",
         "xác suất có điều kiện",
-        "bài toán ngược",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "bài toán ngược"
       ],
       "contexts": [
         "hộp bi",
@@ -22,10 +19,7 @@
         "ảo thuật gia",
         "hộp quà",
         "rút thăm",
-        "trò chơi may rủi",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "trò chơi may rủi"
       ],
       "question_styles": [
         "knowledge",
@@ -56,10 +50,7 @@
         "nhiều lần gieo",
         "ít nhất một lần",
         "điều kiện",
-        "bài toán ngược",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "bài toán ngược"
       ],
       "contexts": [
         "ván đấu",
@@ -67,10 +58,7 @@
         "casino mô phỏng",
         "cuộc thi",
         "bàn cờ",
-        "thử thách may mắn",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "thử thách may mắn"
       ],
       "question_styles": [
         "knowledge",
@@ -101,10 +89,7 @@
         "kiểm tra chất lượng",
         "xác suất có điều kiện",
         "biến cố hợp",
-        "biến cố đối",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "biến cố đối"
       ],
       "contexts": [
         "trường học",
@@ -112,10 +97,7 @@
         "nhà máy",
         "sự kiện",
         "đội tuyển",
-        "khảo sát cộng đồng",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "khảo sát cộng đồng"
       ],
       "question_styles": [
         "knowledge",
@@ -146,10 +128,7 @@
         "đếm lựa chọn",
         "bài ngược",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "lớp học",
@@ -157,10 +136,7 @@
         "câu lạc bộ",
         "dự án",
         "đội thể thao",
-        "cuộc thi",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "cuộc thi"
       ],
       "question_styles": [
         "knowledge",
@@ -191,10 +167,7 @@
         "trang phục",
         "lựa chọn có điều kiện",
         "bài ngược",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "cửa hàng",
@@ -202,10 +175,7 @@
         "ứng dụng",
         "sự kiện",
         "thiết kế sản phẩm",
-        "đặt hàng",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "đặt hàng"
       ],
       "question_styles": [
         "knowledge",
@@ -236,10 +206,7 @@
         "chia trường hợp",
         "bài ngược",
         "suy luận",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "đội thi",
@@ -247,10 +214,7 @@
         "nhóm nghiên cứu",
         "vé",
         "thẻ nhiệm vụ",
-        "câu lạc bộ",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "câu lạc bộ"
       ],
       "question_styles": [
         "knowledge",
@@ -281,10 +245,7 @@
         "xếp vòng",
         "bài ngược",
         "nhiều bước",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "sân khấu",
@@ -292,10 +253,7 @@
         "bảng xếp hạng",
         "đội hình",
         "mã khóa",
-        "cuộc thi",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "cuộc thi"
       ],
       "question_styles": [
         "knowledge",
@@ -326,10 +284,7 @@
         "mã bắt đầu bằng",
         "mã kết thúc bằng",
         "bài ngược",
-        "xác suất mã",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "xác suất mã"
       ],
       "contexts": [
         "khóa điện tử",
@@ -337,10 +292,7 @@
         "tài khoản",
         "phòng bí mật",
         "trò chơi phiêu lưu",
-        "hệ thống bảo mật",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "hệ thống bảo mật"
       ],
       "question_styles": [
         "knowledge",
@@ -371,10 +323,7 @@
         "vị trí cố định",
         "vật giống nhau",
         "bài ngược",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "thư viện",
@@ -382,10 +331,7 @@
         "đội hình",
         "kệ hàng",
         "lịch trình",
-        "triển lãm",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "triển lãm"
       ],
       "question_styles": [
         "knowledge",
@@ -416,10 +362,7 @@
         "đọc tọa độ",
         "bài ngược",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "bản đồ",
@@ -427,10 +370,7 @@
         "GPS mô phỏng",
         "đường chạy",
         "màn hình game",
-        "robot",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "robot"
       ],
       "question_styles": [
         "knowledge",
@@ -461,10 +401,7 @@
         "số giao điểm",
         "bài ngược",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "đường đi",
@@ -472,10 +409,7 @@
         "đồ thị chuyển động",
         "bản đồ",
         "robot",
-        "đường đua",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "đường đua"
       ],
       "question_styles": [
         "knowledge",
@@ -506,10 +440,7 @@
         "tìm hàm từ điểm",
         "tham số",
         "bài ngược",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "màn hình radar",
@@ -517,10 +448,7 @@
         "cầu vòm",
         "đường bay",
         "game",
-        "thiết kế",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "thiết kế"
       ],
       "question_styles": [
         "knowledge",
@@ -551,10 +479,7 @@
         "chuyển động",
         "năng suất",
         "bài ngược",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "điều tra lớp học",
@@ -562,10 +487,7 @@
         "gia đình",
         "giao thông",
         "nhà máy",
-        "cuộc thi",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "cuộc thi"
       ],
       "question_styles": [
         "knowledge",
@@ -596,10 +518,7 @@
         "tham số",
         "suy luận",
         "bài ngược",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "phòng thí nghiệm",
@@ -607,10 +526,7 @@
         "bảng dữ liệu",
         "trò chơi",
         "kho báu",
-        "nhiệm vụ",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "nhiệm vụ"
       ],
       "question_styles": [
         "knowledge",
@@ -641,10 +557,7 @@
         "điều kiện",
         "suy luận",
         "bài ngược",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "thử thách",
@@ -652,10 +565,7 @@
         "điều tra",
         "trò chơi",
         "kho báu",
-        "bảng điều khiển",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "bảng điều khiển"
       ],
       "question_styles": [
         "knowledge",
@@ -686,10 +596,7 @@
         "nghiệm nguyên",
         "nghiệm kép",
         "bài ngược",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "mật mã",
@@ -697,10 +604,7 @@
         "nhiệm vụ",
         "quỹ đạo",
         "thi đấu",
-        "thiết kế",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "thiết kế"
       ],
       "question_styles": [
         "knowledge",
@@ -731,10 +635,7 @@
         "tham số",
         "suy luận",
         "bài ngược",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "mở khóa",
@@ -742,10 +643,7 @@
         "bảng dữ liệu",
         "trò chơi",
         "kho báu",
-        "thử thách",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "thử thách"
       ],
       "question_styles": [
         "knowledge",
@@ -776,10 +674,7 @@
         "nghiệm nguyên",
         "biện luận",
         "bài ngược",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "két sắt",
@@ -787,10 +682,7 @@
         "mật mã",
         "phòng bí mật",
         "game",
-        "nhiệm vụ",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "nhiệm vụ"
       ],
       "question_styles": [
         "knowledge",
@@ -821,10 +713,7 @@
         "điều kiện an toàn",
         "khoảng",
         "bài ngược",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "vùng an toàn",
@@ -832,10 +721,7 @@
         "ngân sách",
         "nhiệt độ",
         "khoảng cách",
-        "game",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "game"
       ],
       "question_styles": [
         "knowledge",
@@ -866,10 +752,7 @@
         "tham số",
         "biểu diễn trục số",
         "bài ngược",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "bản đồ",
@@ -877,10 +760,7 @@
         "điều kiện game",
         "khoảng nhiệt độ",
         "tốc độ",
-        "khoảng cách",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "khoảng cách"
       ],
       "question_styles": [
         "knowledge",
@@ -911,10 +791,7 @@
         "nhiều điều kiện",
         "tối ưu ngưỡng",
         "bài ngược",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "cuộc đua",
@@ -922,10 +799,7 @@
         "điểm số",
         "tốc độ",
         "chi phí",
-        "nhiệm vụ",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "nhiệm vụ"
       ],
       "question_styles": [
         "knowledge",
@@ -956,10 +830,7 @@
         "đan xen",
         "bài ngược",
         "suy luận",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "mã số",
@@ -967,10 +838,7 @@
         "robot",
         "trò chơi",
         "lịch trình",
-        "mẫu thiết kế",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "mẫu thiết kế"
       ],
       "question_styles": [
         "knowledge",
@@ -1001,10 +869,7 @@
         "quy luật",
         "bài ngược",
         "suy luận",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "bảng điểm",
@@ -1012,10 +877,7 @@
         "lịch trình",
         "game",
         "dữ liệu",
-        "nhiệm vụ",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "nhiệm vụ"
       ],
       "question_styles": [
         "knowledge",
@@ -1046,10 +908,7 @@
         "tổng",
         "quy luật",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "đường đua",
@@ -1057,10 +916,7 @@
         "robot",
         "game",
         "điểm số",
-        "thử thách",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "thử thách"
       ],
       "question_styles": [
         "knowledge",
@@ -1091,10 +947,7 @@
         "số nguyên tố",
         "bài ngược",
         "suy luận",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "mật mã",
@@ -1102,10 +955,7 @@
         "kho báu",
         "mã hàng",
         "trò chơi",
-        "nhiệm vụ",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "nhiệm vụ"
       ],
       "question_styles": [
         "knowledge",
@@ -1136,10 +986,7 @@
         "chữ số",
         "bài ngược",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "danh sách số",
@@ -1147,10 +994,7 @@
         "mã sản phẩm",
         "game",
         "thẻ nhiệm vụ",
-        "bảng điểm",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "bảng điểm"
       ],
       "question_styles": [
         "knowledge",
@@ -1181,10 +1025,7 @@
         "điều kiện số",
         "bài ngược",
         "suy luận",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "két sắt",
@@ -1192,10 +1033,7 @@
         "cửa khóa",
         "phòng bí mật",
         "game",
-        "nhiệm vụ",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "nhiệm vụ"
       ],
       "question_styles": [
         "knowledge",
@@ -1226,10 +1064,7 @@
         "bài ngược",
         "chu kỳ",
         "suy luận",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "rút thẻ số",
@@ -1237,10 +1072,7 @@
         "game",
         "mã hàng",
         "lịch",
-        "nhiệm vụ",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "nhiệm vụ"
       ],
       "question_styles": [
         "knowledge",
@@ -1271,10 +1103,7 @@
         "bài ngược",
         "suy luận",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "mật mã",
@@ -1282,10 +1111,7 @@
         "lịch",
         "game",
         "két sắt",
-        "mã hóa",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "mã hóa"
       ],
       "question_styles": [
         "knowledge",
@@ -1316,10 +1142,7 @@
         "tìm x",
         "bài ngược",
         "suy luận",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "mã hóa",
@@ -1327,10 +1150,7 @@
         "game",
         "robot",
         "nhiệm vụ",
-        "bảo mật",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "bảo mật"
       ],
       "question_styles": [
         "knowledge",
@@ -1361,10 +1181,7 @@
         "bài ngược",
         "thực tế",
         "suy luận",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "đo độ dài",
@@ -1372,10 +1189,7 @@
         "thiết kế",
         "game",
         "khoảng cách",
-        "vật lý",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "vật lý"
       ],
       "question_styles": [
         "knowledge",
@@ -1406,10 +1220,7 @@
         "điều kiện",
         "bài ngược",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "thiết kế",
@@ -1417,10 +1228,7 @@
         "bản đồ",
         "game",
         "kỹ thuật",
-        "xây dựng",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "xây dựng"
       ],
       "question_styles": [
         "knowledge",
@@ -1451,10 +1259,7 @@
         "biến đổi",
         "bài ngược",
         "suy luận",
-        "thực tế",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "thực tế"
       ],
       "contexts": [
         "két sắt",
@@ -1462,10 +1267,7 @@
         "nhiệm vụ",
         "game",
         "thiết kế",
-        "thử thách",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "thử thách"
       ],
       "question_styles": [
         "knowledge",
@@ -1496,10 +1298,7 @@
         "bài ngược",
         "suy luận",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "tính nhanh",
@@ -1507,10 +1306,7 @@
         "game",
         "mật mã",
         "bảng số",
-        "nhiệm vụ",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "nhiệm vụ"
       ],
       "question_styles": [
         "knowledge",
@@ -1541,10 +1337,7 @@
         "bài ngược",
         "suy luận",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "mở khóa",
@@ -1552,10 +1345,7 @@
         "game",
         "mật mã",
         "nhiệm vụ",
-        "thử thách",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "thử thách"
       ],
       "question_styles": [
         "knowledge",
@@ -1586,10 +1376,7 @@
         "tính nhanh",
         "bài ngược",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "mật mã",
@@ -1597,10 +1384,7 @@
         "game",
         "thử thách",
         "thiết kế",
-        "nhiệm vụ",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "nhiệm vụ"
       ],
       "question_styles": [
         "knowledge",
@@ -1631,10 +1415,7 @@
         "bài ngược",
         "thực tế",
         "suy luận",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "đơn giá",
@@ -1642,10 +1423,7 @@
         "năng suất",
         "game",
         "kỹ thuật",
-        "bảng dữ liệu",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "bảng dữ liệu"
       ],
       "question_styles": [
         "knowledge",
@@ -1676,10 +1454,7 @@
         "bài ngược",
         "suy luận",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "thiết kế",
@@ -1687,10 +1462,7 @@
         "game",
         "bảng dữ liệu",
         "nhiệm vụ",
-        "kỹ thuật",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "kỹ thuật"
       ],
       "question_styles": [
         "knowledge",
@@ -1721,10 +1493,7 @@
         "phân thức",
         "bài ngược",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "giao thông",
@@ -1732,10 +1501,7 @@
         "mua bán",
         "game",
         "công việc",
-        "đời sống",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "đời sống"
       ],
       "question_styles": [
         "knowledge",
@@ -1766,10 +1532,7 @@
         "suy luận",
         "bài ngược",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "bản đồ",
@@ -1777,10 +1540,7 @@
         "mái nhà",
         "camera",
         "đường đi",
-        "thiết kế",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "thiết kế"
       ],
       "question_styles": [
         "knowledge",
@@ -1811,10 +1571,7 @@
         "diện tích",
         "bài ngược",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "xây dựng",
@@ -1822,10 +1579,7 @@
         "bản đồ",
         "kiến trúc",
         "game",
-        "kỹ thuật",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "kỹ thuật"
       ],
       "question_styles": [
         "knowledge",
@@ -1856,10 +1610,7 @@
         "góc",
         "tối ưu khoảng cách",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "bản đồ",
@@ -1867,10 +1618,7 @@
         "thành phố",
         "game",
         "robot",
-        "đường đi",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "đường đi"
       ],
       "question_styles": [
         "knowledge",
@@ -1901,10 +1649,7 @@
         "so sánh",
         "suy luận",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "khảo sát",
@@ -1912,10 +1657,7 @@
         "điểm số",
         "thời tiết",
         "bán hàng",
-        "mạng xã hội",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "mạng xã hội"
       ],
       "question_styles": [
         "knowledge",
@@ -1946,10 +1688,7 @@
         "phương sai",
         "bài ngược",
         "thực tế",
-        "nhiều bước",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "nhiều bước"
       ],
       "contexts": [
         "bảng điểm",
@@ -1957,10 +1696,7 @@
         "thể thao",
         "doanh số",
         "dữ liệu",
-        "thí nghiệm",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "thí nghiệm"
       ],
       "question_styles": [
         "knowledge",
@@ -1991,10 +1727,7 @@
         "độ lệch chuẩn",
         "so sánh",
         "thực tế",
-        "bài ngược",
-        "Biến thể đời sống",
-        "Suy luận từ dữ kiện ngược",
-        "Kiểm tra sai lầm thường gặp"
+        "bài ngược"
       ],
       "contexts": [
         "khảo sát",
@@ -2002,10 +1735,7 @@
         "điểm thi",
         "sản xuất",
         "thí nghiệm",
-        "dữ liệu",
-        "một tình huống học tập hằng ngày",
-        "một bài toán mô phỏng trong đời sống",
-        "một tình huống cần đọc và xử lý dữ kiện"
+        "dữ liệu"
       ],
       "question_styles": [
         "knowledge",

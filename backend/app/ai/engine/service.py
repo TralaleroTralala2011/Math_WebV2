@@ -52,6 +52,8 @@ class AIQuestionService:
                     continue
                 if strict and q.get("structure_fingerprint") in seen_structures:
                     continue
+                if strict and variation in seen_variations:
+                    continue
 
                 self.store.put(q)
                 if game_id:
@@ -70,7 +72,7 @@ class AIQuestionService:
         # numbers. It makes repeated "same question, different numbers" much
         # harder to slip into one practice set.
         return "|".join(str(q.get(k, "")) for k in (
-            "game_id", "template_family", "generation_style", "context"
+            "game_id", "template_family", "generation_style", "reasoning_mode", "context", "diversity_key"
         ))
 
     def generate_set(self,grade,topics,count,difficulty="medium",question_type="multiple_choice",history=None,game_id=None):

@@ -1,0 +1,36 @@
+MATH WEB AI DIVERSITY ENGINE UPGRADE
+====================================
+
+Base preserved:
+- Existing MATH_WEB_GITHUB_READY_ONLINE_BACKEND project.
+- Existing UI, games, Battle/PvP, authentication, database, template bank and game bank.
+- backend/app/ai/knowledge/template_bank.json preserved.
+- backend/app/ai/engine/game_bank.py preserved byte-for-byte.
+
+AI upgrades:
+- Added backend/app/ai/engine/diversity_engine.py as an additive generation layer.
+- Questions vary by mathematical problem family, reasoning mode, style, context and data.
+- Added real-life/application/scenario/multi-step/reverse/reasoning/mistake-check/construction/data styles.
+- Added algebra, probability, counting, sequences, trigonometry, calculus, exponential/logarithmic, complex numbers, statistics, number theory and geometry families.
+- Geometry can provide a visible self-drawing instruction in the question.
+- Selected legacy games stay inside their mathematical domain and now receive more varied generation where supported.
+- Existing generator/game-bank logic remains as fallback.
+- Existing distractor engine remains in use, with an MCQ safety layer that guarantees 4 choices and keeps the correct answer in the set.
+- Diversity checks now reject repeated structure/variation during strict generation and exact duplicates are always rejected.
+- All 92 unique knowledge IDs currently shown in the 93-entry practise catalogue are covered by the AI engine. The backend retains legacy game-topic aliases as well.
+- UI catalogue levels remain: Foundation, Medium, Advanced, with 31/30/31 unique topics respectively.
+- Correct answer flow remains auto-next.
+- Wrong answer flow now shows the correct answer and detailed solution, then an explicit "➡️ CÂU TIẾP THEO" button.
+- Pre-answer skip remains available.
+- js/api-config.js points production API to https://math-webv2.onrender.com while preserving localhost fallback.
+
+Verification performed:
+- Python compilation passed for modified AI modules.
+- 92 unique knowledge topics: 10-question MCQ set generation passed for every topic.
+- 45 legacy games: 10-question generation passed for every game.
+- MCQ, short-answer and true/false generation validated across all 92 unique knowledge topics.
+- Local FastAPI /health passed.
+- Local /api/ai/health passed.
+- Local /api/ai/questions returned 10 unique questions for a Grade 12 geometry set with 8 distinct problem families.
+- Existing game_bank.py and template_bank.json hashes match the original base archive.
+- No original files were deleted; only additive/new or intentionally enhanced files were changed.

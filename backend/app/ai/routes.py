@@ -31,7 +31,7 @@ class BattleCreateRequest(BaseModel):
     player2_topics:list[str]=Field(min_length=1,max_length=MAX_TOPICS)
 
 @router.get("/health")
-def health(): return {"ok":True,"service":"ai-question-engine","version":"4.0-template-composer"}
+def health(): return {"ok":True,"service":"ai-question-engine","version":"5.0-diversity-engine"}
 
 @router.get("/knowledge")
 def knowledge(grade:int|None=None): return service.topics(grade)
