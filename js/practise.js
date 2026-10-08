@@ -2516,6 +2516,19 @@
                 white-space: pre-wrap;
             }
 
+            .mathweb-ai-diagram-wrap {
+                margin: 14px auto 4px;
+                width: min(100%, 360px);
+                text-align: center;
+                opacity: .95;
+            }
+
+            .mathweb-ai-diagram {
+                width: 100%;
+                max-height: 190px;
+                color: currentColor;
+            }
+
             .mathweb-ai-result {
                 text-align: center;
                 padding: 18px 5px;
@@ -3606,6 +3619,7 @@
                     )}
                 </div>
 
+                ${renderAIDiagram(question?.diagram)}
 
                 <div
                     id="mathwebAiAnswerArea"
@@ -3690,6 +3704,80 @@
             "Câu hỏi"
         );
 
+    }
+
+
+    /* =====================================================
+       RENDER OPTIONAL GEOMETRY DIAGRAM
+       ===================================================== */
+
+    function renderAIDiagram(diagram) {
+        if (!diagram || !diagram.type) return "";
+
+        const label = function (value) {
+            return escapeHTML(String(value ?? ""));
+        };
+
+        const common = 'class="mathweb-ai-diagram" viewBox="0 0 360 190" role="img" aria-label="Hình minh họa"';
+
+        if (diagram.type === "triangle") {
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <polygon points="70,150 290,150 190,35" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <text x="58" y="168" font-size="16">${label(diagram.labels?.[0] || "A")}</text>
+                        <text x="292" y="168" font-size="16">${label(diagram.labels?.[1] || "B")}</text>
+                        <text x="194" y="27" font-size="16">${label(diagram.labels?.[2] || "C")}</text>
+                    </svg>
+                </div>`;
+        }
+
+        if (diagram.type === "circle") {
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <circle cx="180" cy="95" r="62" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <line x1="180" y1="95" x2="242" y2="95" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="180" cy="95" r="4" fill="currentColor"/>
+                        <text x="168" y="88" font-size="16">${label(diagram.labels?.[0] || "O")}</text>
+                        <text x="208" y="87" font-size="14">R</text>
+                    </svg>
+                </div>`;
+        }
+
+        if (diagram.type === "coordinate") {
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <line x1="35" y1="150" x2="325" y2="150" stroke="currentColor" stroke-width="2"/>
+                        <line x1="65" y1="175" x2="65" y2="20" stroke="currentColor" stroke-width="2"/>
+                        <line x1="110" y1="125" x2="250" y2="55" stroke="currentColor" stroke-width="3"/>
+                        <circle cx="110" cy="125" r="5" fill="currentColor"/>
+                        <circle cx="250" cy="55" r="5" fill="currentColor"/>
+                        <text x="98" y="145" font-size="16">${label(diagram.labels?.[0] || "A")}</text>
+                        <text x="258" y="50" font-size="16">${label(diagram.labels?.[1] || "B")}</text>
+                        <text x="316" y="143" font-size="14">x</text>
+                        <text x="72" y="28" font-size="14">y</text>
+                    </svg>
+                </div>`;
+        }
+
+        if (diagram.type === "box") {
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <polygon points="95,70 220,70 270,100 145,100" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <polygon points="95,70 145,100 145,160 95,130" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <polygon points="145,100 270,100 270,160 145,160" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <text x="82" y="65" font-size="14">${label(diagram.labels?.[0] || "A")}</text>
+                        <text x="224" y="65" font-size="14">${label(diagram.labels?.[1] || "B")}</text>
+                        <text x="275" y="98" font-size="14">${label(diagram.labels?.[2] || "C")}</text>
+                        <text x="137" y="177" font-size="14">${label(diagram.labels?.[3] || "D")}</text>
+                    </svg>
+                </div>`;
+        }
+
+        return "";
     }
 
 
@@ -4462,15 +4550,15 @@
             <div class="mathweb-ai-actions">
                 ${correct
                     ? `<div style="font-size:12px;opacity:.7;">✓ Đáp án đúng, đang chuyển câu...</div>`
-                    : `<button type="button" class="mathweb-ai-btn mathweb-ai-btn-primary" id="mathwebAiSkipAfterWrong">⏭️ Bỏ qua</button>`}
+                    : `<button type="button" class="mathweb-ai-btn mathweb-ai-btn-primary" id="mathwebAiNextAfterWrong">➡️ CÂU TIẾP THEO</button>`}
             </div>
 
         `;
 
 
-        const skipAfterWrong = document.getElementById("mathwebAiSkipAfterWrong");
-        if (skipAfterWrong) {
-            skipAfterWrong.addEventListener("click", function () {
+        const nextAfterWrong = document.getElementById("mathwebAiNextAfterWrong");
+        if (nextAfterWrong) {
+            nextAfterWrong.addEventListener("click", function () {
                 nextAIQuestion();
             });
         }
