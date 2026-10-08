@@ -842,10 +842,83 @@ def _generic_theory(topic_name, subtopics, d):
     )
 
 
+def _remainder(d):
+    m = random.choice([3, 4, 5, 6, 7, 8, 9])
+    r = random.randint(0, m - 1)
+    k = random.randint(3, 8)
+    n = k * m + r
+    return _base(
+        f"Chia {n} cho {m}, số dư là bao nhiêu?", r,
+        f"{n}={k}·{m}+{r}, với 0≤{r}<{m}, nên số dư là {r}.",
+        [(r + 1) % m, (r - 1) % m, m - r if r else 1],
+        "Viết số bị chia dưới dạng thương nhân số chia cộng số dư.",
+        archetype="remainder", generation_style="calculation", template_family="phép chia có dư"
+    )
+
+
+def _divisibility(d):
+    divisor = random.choice([3, 4, 5, 6, 8, 9, 10])
+    base = random.randint(10, 99)
+    number = base * divisor
+    return _base(
+        f"Trong các số sau, số nào chắc chắn chia hết cho {divisor}? Xét số {number}.", number,
+        f"{number}={number//divisor}·{divisor}, nên {number} chia hết cho {divisor}.",
+        [number + 1, number + 2, number - 1],
+        "Kiểm tra xem số đã cho có thể viết thành tích của số chia và một số nguyên hay không.",
+        archetype="divisibility", generation_style="calculation", template_family="dấu hiệu chia hết"
+    )
+
+
+def _radical(d):
+    a = random.randint(2, 9)
+    k = random.choice([2, 3, 4, 5])
+    value = a * a * k
+    ans = f"{a}√{k}"
+    return _base(
+        f"Rút gọn √{value}.", ans,
+        f"{value}={a}²·{k}, nên √{value}={a}√{k}.",
+        [f"{k}√{a}", f"{a}√{value}", str(a * k)],
+        "Tách dưới dấu căn thành một bình phương hoàn chỉnh nhân với phần còn lại.",
+        archetype="radical_simplify", generation_style="calculation", template_family="rút gọn căn thức"
+    )
+
+
+def _identity(d):
+    a = random.randint(2, 9)
+    b = random.randint(1, 7)
+    ans = a*a + 2*a*b + b*b
+    return _base(
+        f"Tính nhanh {a}²+2·{a}·{b}+{b}².", ans,
+        f"Nhận ra (a+b)²: ({a}+{b})²={ans}.",
+        [a*a + b*b, (a+b)*2, a*a + 2*b],
+        "Nhận dạng dạng bình phương của một tổng.",
+        archetype="identity", generation_style="calculation", template_family="hằng đẳng thức"
+    )
+
+
+def _algebraic_fraction(d):
+    a = random.randint(2, 8)
+    b = random.randint(1, 5)
+    x = random.randint(2, 9)
+    ans = f"{a}/{b}"
+    return _base(
+        f"Với x={x}, tính phân thức {a}x/{b}x.", ans,
+        f"Vì x={x}≠0 nên {a}x/({b}x)={a}/{b}.",
+        [f"{a*x}/{b}", f"{a}/{b*x}", f"{a+b}/{x}"],
+        "Kiểm tra điều kiện mẫu khác 0 rồi rút gọn nhân tử chung x.",
+        archetype="algebraic_fraction", generation_style="calculation", template_family="rút gọn phân thức"
+    )
+
+
 # Topic groups.  A topic may have several archetypes, so each generation can
 # choose a different structure even when the topic stays fixed.
 GROUPS = {
     "algebra": {"builders":[_linear_equation,_linear_reverse,_error_check]},
+    "remainder": {"builders":[_remainder]},
+    "divisibility": {"builders":[_divisibility]},
+    "radical": {"builders":[_radical]},
+    "identity": {"builders":[_identity]},
+    "algebraic_fraction": {"builders":[_algebraic_fraction]},
     "quadratic": {"builders":[_quadratic_factor,_quadratic_parameter,_quadratic_vertex]},
     "system": {"builders":[_system_construct,_error_check]},
     "inequality": {"builders":[_inequality,_error_check]},
@@ -883,6 +956,14 @@ TOPIC_GROUP = {}
 def _register(group, *ids):
     for tid in ids: TOPIC_GROUP[tid]=group
 
+_register("remainder", "chia_du")
+_register("divisibility", "chia_het")
+_register("radical", "can_thuc")
+_register("identity", "hang_dang_thuc")
+_register("algebraic_fraction", "phan_thuc_dai_so")
+_register("quadratic", "phuong_trinh_bac_hai")
+_register("counting", "to_hop", "chinh_hop")
+_register("inequality", "bat_phuong_trinh")
 _register("set", "menh_de_tap_hop", "menh_de", "tap_hop")
 _register("inequality", "bat_phuong_trinh", "he_bat_phuong_trinh")
 _register("exponential_inequality", "bpt_mu")
@@ -892,7 +973,7 @@ _register("quadratic", "ham_so_bac_hai", "phuong_trinh", "cuc_tri", "gtln_gtnn")
 _register("counting", "quy_tac_dem", "hoan_vi_chinh_hop_to_hop", "to_hop_xac_suat_nang_cao_11")
 _register("probability", "xac_suat", "xac_suat_11", "xac_suat_12", "bien_co_doc_lap_11")
 _register("statistics", "thong_ke", "thong_ke_11", "thong_ke_12")
-_register("sequence", "day_so", "cap_so_cong", "cap_so_nhan", "day_so_tong_quat", "day_so_truy_hoi_11")
+_register("sequence", "day_so", "day_so_10", "cap_so_cong", "cap_so_nhan", "day_so_tong_quat", "day_so_truy_hoi_11")
 _register("function", "ham_so", "ham_so_bac_nhat")
 _register("coordinate", "vector", "toa_do_phang", "duong_thang", "mat_phang_oxyz", "duong_thang_oxyz")
 _register("trig", "he_thuc_luong", "he_thuc_luong_tam_giac", "gia_tri_luong_giac", "cong_thuc_luong_giac", "phuong_trinh_luong_giac", "phuong_trinh_luong_giac_day_du", "ham_so_luong_giac", "ham_so_luong_giac_day_du")

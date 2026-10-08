@@ -231,6 +231,69 @@
         "mô hình hóa",
         "đo đạc"
       ]
+    },
+    {
+      "id": "chia_du",
+      "name": "Chia dư",
+      "subtopics": [
+        "Chia dư"
+      ]
+    },
+    {
+      "id": "chia_het",
+      "name": "Chia hết",
+      "subtopics": [
+        "Chia hết"
+      ]
+    },
+    {
+      "id": "can_thuc",
+      "name": "Căn thức",
+      "subtopics": [
+        "Căn thức"
+      ]
+    },
+    {
+      "id": "day_so_10",
+      "name": "Dãy số",
+      "subtopics": [
+        "Dãy số"
+      ]
+    },
+    {
+      "id": "phuong_trinh_bac_hai",
+      "name": "Phương trình bậc hai",
+      "subtopics": [
+        "Phương trình bậc hai"
+      ]
+    },
+    {
+      "id": "to_hop",
+      "name": "Tổ hợp",
+      "subtopics": [
+        "Tổ hợp"
+      ]
+    },
+    {
+      "id": "chinh_hop",
+      "name": "Chỉnh hợp",
+      "subtopics": [
+        "Chỉnh hợp"
+      ]
+    },
+    {
+      "id": "hang_dang_thuc",
+      "name": "Hằng đẳng thức",
+      "subtopics": [
+        "Hằng đẳng thức"
+      ]
+    },
+    {
+      "id": "phan_thuc_dai_so",
+      "name": "Phân thức đại số",
+      "subtopics": [
+        "Phân thức đại số"
+      ]
     }
   ],
   "11": [

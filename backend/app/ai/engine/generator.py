@@ -86,7 +86,8 @@ class QuestionGenerator:
         q["topic"]=topic_id
         q["difficulty"]=difficulty
         q["question_type"]=question_type
-        q["knowledge_name"]=self.knowledge.get(topic_id)["name"]
+        topic_info = self.knowledge.get(topic_id) or {}
+        q["knowledge_name"] = topic_info.get("name") or q.get("knowledge_name") or topic_id
         q["game_id"]=game_id or q.get("game_id", "")
 
         # Every generated item carries a student-facing, step-by-step solution.
