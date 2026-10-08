@@ -2,6 +2,7 @@ import time, random, uuid
 from ..config import MAX_COUNT, MAX_TOPICS, QUESTION_TTL_SECONDS
 from .knowledge_service import KnowledgeService
 from .generator import QuestionGenerator
+from .problem_generator import ProblemGenerator
 from .validator import validate, ValidationError, fingerprint
 from .difficulty import normalize
 from .adaptive import next_difficulty
@@ -26,6 +27,8 @@ class AIQuestionService:
     def __init__(self):
         self.knowledge=KnowledgeService()
         self.generator=QuestionGenerator(self.knowledge)
+        # Additive problem layer. The legacy QuestionGenerator remains untouched.
+        self.problem_generator=ProblemGenerator(self.knowledge, self.generator)
         self.store=QuestionStore()
         self.recent_families={}
 
@@ -52,8 +55,6 @@ class AIQuestionService:
                     continue
                 if strict and q.get("structure_fingerprint") in seen_structures:
                     continue
-                if strict and variation in seen_variations:
-                    continue
 
                 self.store.put(q)
                 if game_id:
@@ -72,7 +73,7 @@ class AIQuestionService:
         # numbers. It makes repeated "same question, different numbers" much
         # harder to slip into one practice set.
         return "|".join(str(q.get(k, "")) for k in (
-            "game_id", "template_family", "generation_style", "reasoning_mode", "context", "diversity_key"
+            "game_id", "template_family", "generation_style", "context"
         ))
 
     def generate_set(self,grade,topics,count,difficulty="medium",question_type="multiple_choice",history=None,game_id=None):
@@ -103,6 +104,63 @@ class AIQuestionService:
             seen.add(q["fingerprint"]); seen_structures.add(q.get("structure_fingerprint")); seen_variations.add(q["variation_key"]); out.append(q)
             if q.get("template_family"): recent_families.append(q["template_family"])
         return {"set_id":uuid.uuid4().hex,"grade":grade,"topics":topics,"difficulty":current,"count":len(out),"game_id":game_id,"questions":out}
+
+
+    def generate_problem_set(self,grade,topics,count,difficulty="medium",problem_parts=4,history=None,game_id=None):
+        if count<1 or count>MAX_COUNT: raise ValueError("count out of range")
+        topics=self.knowledge.normalize_topics(grade,topics)
+        if not topics: raise ValueError("No valid topics")
+        current=next_difficulty(history,normalize(difficulty)) if history else normalize(difficulty)
+        problems=[]
+        flat=[]
+        seen_titles=set()
+        for i in range(count):
+            topic=topics[i % len(topics)]
+            problem=None
+            for _ in range(40):
+                candidate=self.problem_generator.generate(grade,topic,current,problem_parts,"mixed",game_id)
+                signature=(candidate.get("archetype"), candidate.get("title"), candidate.get("context"))
+                if signature not in seen_titles:
+                    problem=candidate
+                    seen_titles.add(signature)
+                    break
+            if problem is None:
+                problem=self.problem_generator.generate(grade,topic,current,problem_parts,"mixed",game_id)
+            problem_id=problem["id"]
+            stored_parts=[]
+            for part in problem.get("parts",[]):
+                q=dict(part)
+                q["problem_id"]=problem_id
+                q["problem_title"]=problem.get("title","")
+                q["problem_context"]=problem.get("context","")
+                q["problem_data"]=problem.get("data",{})
+                q["problem_archetype"]=problem.get("archetype","")
+                q["knowledge_name"]=self.knowledge.get(topic)["name"]
+                q["grade"]=grade
+                q["topic"]=topic
+                q["difficulty"]=current
+                q["game_id"]=game_id or ""
+                q["fingerprint"]=fingerprint(str(q.get("problem_context", "")) + " | " + str(q.get("question", "")))
+                q["structure_fingerprint"]=fingerprint(str(q.get("problem_archetype", "")) + " | " + str(q.get("part", "")) + " | " + str(q.get("question", "")))
+                self.store.put(q)
+                stored_parts.append(q)
+                flat.append(q)
+            problem["parts"]=stored_parts
+            problems.append(problem)
+        return {
+            "set_id":uuid.uuid4().hex,
+            "mode":"problem",
+            "problem_mode":True,
+            "grade":grade,
+            "topics":topics,
+            "difficulty":current,
+            "count":len(problems),
+            "problem_count":len(problems),
+            "question_count":len(flat),
+            "game_id":game_id,
+            "problems":problems,
+            "questions":flat,
+        }
 
     def answer(self,qid,user_answer):
         q=self.store.get(qid)

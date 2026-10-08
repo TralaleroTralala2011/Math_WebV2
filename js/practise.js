@@ -1300,7 +1300,9 @@
         grade: DEFAULT_GRADE,
         difficulty: DEFAULT_DIFFICULTY,
         question_type: DEFAULT_QUESTION_TYPE,
-        count: DEFAULT_COUNT
+        count: DEFAULT_COUNT,
+        problem_mode: false,
+        problem_parts: 4
     };
 
 
@@ -2516,6 +2518,19 @@
                 white-space: pre-wrap;
             }
 
+            .mathweb-ai-diagram-wrap {
+                margin: 14px auto 4px;
+                width: min(100%, 360px);
+                text-align: center;
+                opacity: .95;
+            }
+
+            .mathweb-ai-diagram {
+                width: 100%;
+                max-height: 190px;
+                color: currentColor;
+            }
+
             .mathweb-ai-result {
                 text-align: center;
                 padding: 18px 5px;
@@ -2817,6 +2832,43 @@
 
                     <div class="mathweb-ai-field">
 
+                        <label for="mathwebAiProblemMode">
+                            Kiểu luyện tập
+                        </label>
+
+                        <select id="mathwebAiProblemMode">
+
+                            <option value="false" selected>
+                                Câu hỏi riêng lẻ
+                            </option>
+
+                            <option value="true">
+                                🧩 Bài toán thực tế nhiều phần
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="mathweb-ai-field" id="mathwebAiProblemPartsField" style="display:none;">
+
+                        <label for="mathwebAiProblemParts">
+                            Số phần / bài
+                        </label>
+
+                        <select id="mathwebAiProblemParts">
+                            <option value="3">3 phần</option>
+                            <option value="4" selected>4 phần</option>
+                            <option value="5">5 phần</option>
+                            <option value="6">6 phần</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="mathweb-ai-field">
+
                         <label for="mathwebAiCount">
                             Số câu
                         </label>
@@ -2929,6 +2981,28 @@
         }
 
 
+        const problemMode =
+            document.getElementById("mathwebAiProblemMode");
+        const problemPartsField =
+            document.getElementById("mathwebAiProblemPartsField");
+        const problemParts =
+            document.getElementById("mathwebAiProblemParts");
+
+        if (problemMode) {
+            problemMode.value = aiCurrentSettings.problem_mode ? "true" : "false";
+            const syncProblemMode = function () {
+                const enabled = problemMode.value === "true";
+                if (problemPartsField) problemPartsField.style.display = enabled ? "" : "none";
+                aiCurrentSettings.problem_mode = enabled;
+            };
+            problemMode.addEventListener("change", syncProblemMode);
+            syncProblemMode();
+        }
+        if (problemParts) {
+            problemParts.value = String(aiCurrentSettings.problem_parts || 4);
+        }
+
+
         document
             .getElementById(
                 "mathwebAiStart"
@@ -3017,6 +3091,14 @@
                 DEFAULT_COUNT
             );
 
+        const problemMode =
+            document.getElementById("mathwebAiProblemMode")?.value === "true";
+
+        const problemParts =
+            Number(
+                document.getElementById("mathwebAiProblemParts")?.value || 4
+            );
+
 
         if (!currentKnowledge) {
             showAIError("Chưa xác định được chủ đề luyện tập.");
@@ -3064,7 +3146,9 @@
             grade: grade,
             difficulty: difficulty,
             question_type: questionType,
-            count: count
+            count: count,
+            problem_mode: problemMode,
+            problem_parts: problemParts
         };
 
 
@@ -3106,7 +3190,9 @@
                             count: count,
                             difficulty: difficulty,
                             question_type: questionType,
-                            history: history
+                            history: history,
+                            problem_mode: problemMode,
+                            problem_parts: problemParts
                         })
                     }
                 );
@@ -3506,6 +3592,13 @@
                 question
             );
 
+        const problemTitle =
+            question?.problem_title || "";
+        const problemContext =
+            question?.problem_context || "";
+        const problemPart =
+            question?.part || "";
+
         const type =
             getQuestionType(
                 question
@@ -3600,12 +3693,20 @@
                 </div>
 
 
+                ${problemTitle ? `
+                    <div style="margin-bottom:12px;padding:12px 14px;border-radius:14px;background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.16);">
+                        <div style="font-weight:800;margin-bottom:5px;">🧩 ${escapeHTML(problemTitle)}${problemPart ? ` · Phần ${escapeHTML(problemPart)}` : ""}</div>
+                        <div style="font-size:13px;line-height:1.65;opacity:.84;">${escapeHTML(problemContext)}</div>
+                    </div>
+                ` : ""}
+
                 <div class="mathweb-ai-question">
                     ${escapeHTML(
                         questionText
                     )}
                 </div>
 
+                ${renderAIDiagram(question?.diagram)}
 
                 <div
                     id="mathwebAiAnswerArea"
@@ -3690,6 +3791,128 @@
             "Câu hỏi"
         );
 
+    }
+
+
+    /* =====================================================
+       RENDER OPTIONAL GEOMETRY DIAGRAM
+       ===================================================== */
+
+    function renderAIDiagram(diagram) {
+        if (!diagram || !diagram.type) return "";
+
+        const label = function (value) {
+            return escapeHTML(String(value ?? ""));
+        };
+
+        if (diagram.type === "geometry" && diagram.points) {
+            const points = diagram.points || {};
+            const entries = Object.entries(points);
+            if (!entries.length) return "";
+            const xs = entries.map(e => Number(e[1]?.[0] || 0));
+            const ys = entries.map(e => Number(e[1]?.[1] || 0));
+            const minX = Math.min(...xs), maxX = Math.max(...xs);
+            const minY = Math.min(...ys), maxY = Math.max(...ys);
+            const spanX = Math.max(1, maxX - minX);
+            const spanY = Math.max(1, maxY - minY);
+            const pad = 38;
+            const sx = (360 - pad * 2) / spanX;
+            const sy = (190 - pad * 2) / spanY;
+            const scale = Math.min(sx, sy);
+            const ox = (360 - spanX * scale) / 2;
+            const oy = (190 - spanY * scale) / 2;
+            const project = function (xy) {
+                return [ox + (Number(xy[0]) - minX) * scale, 190 - oy - (Number(xy[1]) - minY) * scale];
+            };
+            const svgLines = [];
+            if (diagram.axes) {
+                svgLines.push(`<line x1="20" y1="${190/2}" x2="340" y2="${190/2}" stroke="currentColor" stroke-width="1.5" opacity=".45"/>`);
+                svgLines.push(`<line x1="180" y1="15" x2="180" y2="175" stroke="currentColor" stroke-width="1.5" opacity=".45"/>`);
+            }
+            (diagram.segments || []).forEach(seg => {
+                const a = project(points[seg[0]]), b = project(points[seg[1]]);
+                svgLines.push(`<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="currentColor" stroke-width="3"/>`);
+            });
+            entries.forEach(([name, xy]) => {
+                const p = project(xy);
+                svgLines.push(`<circle cx="${p[0]}" cy="${p[1]}" r="4" fill="currentColor"/>`);
+                svgLines.push(`<text x="${p[0] + 7}" y="${p[1] - 7}" font-size="15" font-weight="700">${label(name)}</text>`);
+            });
+            if (diagram.measurements) {
+                diagram.measurements.forEach(m => {
+                    if (!points[m.from] || !points[m.to]) return;
+                    const a = project(points[m.from]), b = project(points[m.to]);
+                    const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2;
+                    svgLines.push(`<text x="${mx + 5}" y="${my - 5}" font-size="13">${label(m.text)}</text>`);
+                });
+            }
+            if (diagram.right_angle && points[diagram.right_angle]) {
+                const p = project(points[diagram.right_angle]);
+                svgLines.push(`<path d="M ${p[0] + 8} ${p[1]} L ${p[0] + 8} ${p[1] - 8} L ${p[0]} ${p[1] - 8}" fill="none" stroke="currentColor" stroke-width="2"/>`);
+            }
+            return `<div class="mathweb-ai-diagram-wrap"><svg class="mathweb-ai-diagram" viewBox="0 0 360 190" role="img" aria-label="Hình minh họa chính xác theo dữ kiện">${svgLines.join("")}</svg><div style="font-size:11px;opacity:.6;margin-top:4px;">${label(diagram.caption || "Hình minh họa theo dữ kiện")}</div></div>`;
+        }
+
+        const common = 'class="mathweb-ai-diagram" viewBox="0 0 360 190" role="img" aria-label="Hình minh họa"';
+
+        if (diagram.type === "triangle") {
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <polygon points="70,150 290,150 190,35" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <text x="58" y="168" font-size="16">${label(diagram.labels?.[0] || "A")}</text>
+                        <text x="292" y="168" font-size="16">${label(diagram.labels?.[1] || "B")}</text>
+                        <text x="194" y="27" font-size="16">${label(diagram.labels?.[2] || "C")}</text>
+                    </svg>
+                </div>`;
+        }
+
+        if (diagram.type === "circle") {
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <circle cx="180" cy="95" r="62" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <line x1="180" y1="95" x2="242" y2="95" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="180" cy="95" r="4" fill="currentColor"/>
+                        <text x="168" y="88" font-size="16">${label(diagram.labels?.[0] || "O")}</text>
+                        <text x="208" y="87" font-size="14">R</text>
+                    </svg>
+                </div>`;
+        }
+
+        if (diagram.type === "coordinate") {
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <line x1="35" y1="150" x2="325" y2="150" stroke="currentColor" stroke-width="2"/>
+                        <line x1="65" y1="175" x2="65" y2="20" stroke="currentColor" stroke-width="2"/>
+                        <line x1="110" y1="125" x2="250" y2="55" stroke="currentColor" stroke-width="3"/>
+                        <circle cx="110" cy="125" r="5" fill="currentColor"/>
+                        <circle cx="250" cy="55" r="5" fill="currentColor"/>
+                        <text x="98" y="145" font-size="16">${label(diagram.labels?.[0] || "A")}</text>
+                        <text x="258" y="50" font-size="16">${label(diagram.labels?.[1] || "B")}</text>
+                        <text x="316" y="143" font-size="14">x</text>
+                        <text x="72" y="28" font-size="14">y</text>
+                    </svg>
+                </div>`;
+        }
+
+        if (diagram.type === "box") {
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <polygon points="95,70 220,70 270,100 145,100" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <polygon points="95,70 145,100 145,160 95,130" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <polygon points="145,100 270,100 270,160 145,160" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <text x="82" y="65" font-size="14">${label(diagram.labels?.[0] || "A")}</text>
+                        <text x="224" y="65" font-size="14">${label(diagram.labels?.[1] || "B")}</text>
+                        <text x="275" y="98" font-size="14">${label(diagram.labels?.[2] || "C")}</text>
+                        <text x="137" y="177" font-size="14">${label(diagram.labels?.[3] || "D")}</text>
+                    </svg>
+                </div>`;
+        }
+
+        return "";
     }
 
 
@@ -4468,13 +4691,6 @@
         `;
 
 
-        // Legacy wrong-answer skip handler is kept for backward compatibility.
-        const skipAfterWrong = document.getElementById("mathwebAiSkipAfterWrong");
-        if (skipAfterWrong) {
-            skipAfterWrong.addEventListener("click", function () {
-                nextAIQuestion();
-            });
-        }
         const nextAfterWrong = document.getElementById("mathwebAiNextAfterWrong");
         if (nextAfterWrong) {
             nextAfterWrong.addEventListener("click", function () {

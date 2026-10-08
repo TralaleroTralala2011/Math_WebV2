@@ -15,6 +15,8 @@ class QuestionRequest(BaseModel):
     question_type:str="multiple_choice"
     history:list[dict]=Field(default_factory=list)
     game_id:str|None=None
+    problem_mode:bool=False
+    problem_parts:int=Field(default=4,ge=2,le=6)
 
 class AnswerRequest(BaseModel):
     answer: object
@@ -31,7 +33,7 @@ class BattleCreateRequest(BaseModel):
     player2_topics:list[str]=Field(min_length=1,max_length=MAX_TOPICS)
 
 @router.get("/health")
-def health(): return {"ok":True,"service":"ai-question-engine","version":"5.0-diversity-engine"}
+def health(): return {"ok":True,"service":"ai-question-engine","version":"5.0-additive-problem-generator"}
 
 @router.get("/knowledge")
 def knowledge(grade:int|None=None): return service.topics(grade)
@@ -44,13 +46,24 @@ def knowledge_detail(topic_id:str):
 
 @router.post("/questions")
 def questions(req:QuestionRequest):
-    try: return service.generate_set(req.grade,req.topics,req.count,req.difficulty,req.question_type,req.history,req.game_id)
+    try:
+        if req.problem_mode:
+            return service.generate_problem_set(req.grade,req.topics,req.count,req.difficulty,req.problem_parts,req.history,req.game_id)
+        return service.generate_set(req.grade,req.topics,req.count,req.difficulty,req.question_type,req.history,req.game_id)
+    except (ValueError,RuntimeError) as e: raise HTTPException(400,str(e))
+
+@router.post("/problems")
+def problems(req:QuestionRequest):
+    try: return service.generate_problem_set(req.grade,req.topics,req.count,req.difficulty,req.problem_parts,req.history,req.game_id)
     except (ValueError,RuntimeError) as e: raise HTTPException(400,str(e))
 
 @router.post("/practice/session")
 def practice_session(req:QuestionRequest):
     try:
-        result=service.generate_set(req.grade,req.topics,req.count,req.difficulty,req.question_type,req.history,req.game_id)
+        if req.problem_mode:
+            result=service.generate_problem_set(req.grade,req.topics,req.count,req.difficulty,req.problem_parts,req.history,req.game_id)
+        else:
+            result=service.generate_set(req.grade,req.topics,req.count,req.difficulty,req.question_type,req.history,req.game_id)
         result["mode"]="practice"
         return result
     except (ValueError,RuntimeError) as e: raise HTTPException(400,str(e))

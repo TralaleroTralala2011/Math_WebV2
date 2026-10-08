@@ -1,0 +1,26 @@
+{
+  "version": "1.0",
+  "description": "Kho cấu trúc bài toán thực tế và bài toán nhiều phần. Đây là archetype, không phải kho đề sao chép.",
+  "archetypes": [
+    {"id":"missing_data","parts":["read_data","recover","calculate","reason","conclude"]},
+    {"id":"reverse_result","parts":["identify_unknown","derive_constraint","solve_reverse","verify"]},
+    {"id":"multi_stage_real_life","parts":["read_context","model","calculate","compare","conclude"]},
+    {"id":"experiment_to_model","parts":["sample_space","event","calculate","empirical_check","conclude"]},
+    {"id":"data_table_analysis","parts":["read_table","mean_or_total","compare","interpret"]},
+    {"id":"compare_plans","parts":["cost_model","calculate","compare","recommend"]},
+    {"id":"hidden_condition","parts":["identify_condition","form_equation","solve","check_domain"]},
+    {"id":"error_hunt","parts":["judge_step","locate_error","repair","verify"]},
+    {"id":"parameter_change","parts":["baseline","change_parameter","recalculate","generalize"]},
+    {"id":"optimization","parts":["define_variable","build_model","optimize","interpret"]},
+    {"id":"schedule","parts":["timeline","equation","solve","check"]},
+    {"id":"production","parts":["read_rates","system","solve","interpret"]},
+    {"id":"geometry_measurement","parts":["identify_shape","length_or_angle","area_or_volume","application"]},
+    {"id":"coordinate_map","parts":["read_coordinates","distance","midpoint_or_equation","area"]},
+    {"id":"probability_experiment","parts":["sample_space","event","probability","complement","reason"]},
+    {"id":"counting_design","parts":["model_choices","count","restriction","probability_or_total"]},
+    {"id":"sequence_growth","parts":["first_data","find_rule","future_value","reverse"]},
+    {"id":"function_model","parts":["data_to_function","evaluate","extreme_or_intersection","interpret"]},
+    {"id":"statistics_survey","parts":["table","mean","median_or_mode","dispersion","conclude"]},
+    {"id":"mixed_topics","parts":["model","algebra","geometry_or_statistics","reason","extension"]}
+  ]
+}
