@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Quản lý tài khoản, XP, cấp độ, thống kê, bạn bè và lịch sử hoạt động trên MATH WEB."
+    >
+
+    <meta
+        name="theme-color"
+        content="#020617"
+    >
+
+    <title>Tài khoản | MATH WEB</title>
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <!--
+        KHÔNG load chat.css ở trang Account.
+
+        chat.css có CSS toàn cục cho html/body như:
+            height: 100%;
+            overflow: hidden;
+
+        Điều này có thể khóa scroll của Account.
+        Chat chỉ cần chat.css ở chat.html.
+    -->
+
+    <link
+        rel="stylesheet"
+        href="css/account.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/notification.css"
+    >
+
+
+    <!-- =====================================================
+         FONT
+    ====================================================== -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         ACCOUNT PAGE ADDITIONAL STYLE
+    ====================================================== -->
+
+    <style>
+
+        /* =================================================
+           ACCOUNT DOCUMENT SCROLL
+        ================================================= */
+
+        html.account-document {
+
+            width: 100%;
+
+            min-height: 100%;
+
+            height: auto !important;
+
+            overflow-x: hidden !important;
+
+            overflow-y: auto !important;
+
+            scroll-behavior: smooth;
+        }
+
+
+        body.account-body {
+
+            width: 100%;
+
+            min-height: 100vh;
+
+            height: auto !important;
+
+            overflow-x: hidden !important;
+
+            overflow-y: auto !important;
+        }
+
+
+        .account-page {
+
+            width: 100%;
+
+            min-height: calc(100vh - 80px);
+
+            height: auto !important;
+
+            overflow: visible !important;
+        }
+
+
+        .account-container {
+
+            width: 100%;
+
+            height: auto !important;
+
+            min-height: 0;
+
+            overflow: visible !important;
+        }
+
+
+        button,
+        input {
+
+            font-family: inherit;
+        }
+
+
+        button:focus-visible,
+        input:focus-visible,
+        a:focus-visible {
+
+            outline: 2px solid #38bdf8;
+
+            outline-offset: 3px;
+        }
+
+
+        /* =================================================
+           ACCOUNT LOADING STATE
+        ================================================= */
+
+        .account-loading-state {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            margin-bottom: 18px;
+
+            padding: 12px 15px;
+
+            border:
+                1px solid
+                rgba(56, 189, 248, 0.12);
+
+            border-radius: 14px;
+
+            background:
+                rgba(15, 23, 42, 0.55);
+
+            color: #94a3b8;
+
+            font-size: 13px;
+
+            transition:
+                opacity 0.25s ease,
+                transform 0.25s ease;
+        }
+
+
+        .account-loading-state.hidden {
+
+            display: none;
+        }
+
+
+        .account-loading-dot {
+
+            width: 8px;
+
+            height: 8px;
+
+            flex: 0 0 8px;
+
+            border-radius: 50%;
+
+            background: #38bdf8;
+
+            box-shadow:
+                0 0 12px
+                rgba(56, 189, 248, 0.7);
+
+            animation:
+                accountPulse 1s ease-in-out infinite;
+        }
+
+
+        @keyframes accountPulse {
+
+            0%,
+            100% {
+
+                opacity: 0.35;
+
+                transform: scale(0.85);
+            }
+
+            50% {
+
+                opacity: 1;
+
+                transform: scale(1);
+            }
+        }
+
+
+        /* =================================================
+           ACCOUNT ERROR STATE
+        ================================================= */
+
+        .account-error-state {
+
+            display: none;
+
+            margin-bottom: 18px;
+
+            padding: 13px 16px;
+
+            border:
+                1px solid
+                rgba(248, 113, 113, 0.2);
+
+            border-radius: 14px;
+
+            background:
+                rgba(127, 29, 29, 0.16);
+
+            color: #fca5a5;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+
+        .account-error-state.show {
+
+            display: block;
+        }
+
+
+        /* =================================================
+           ACCOUNT USER INFO
+        ================================================= */
+
+        .account-user-info {
+
+            min-width: 0;
+        }
+
+
+        .account-user-text {
+
+            min-width: 0;
+        }
+
+
+        #accountUsername {
+
+            overflow-wrap: anywhere;
+        }
+
+
+        #accountPlayerId {
+
+            overflow-wrap: anywhere;
+        }
+
+
+        /* =================================================
+           STAT CARD
+        ================================================= */
+
+        .account-stat-card {
+
+            transition:
+                transform 0.2s ease,
+                border-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        .account-stat-card:hover {
+
+            transform: translateY(-2px);
+
+            border-color:
+                rgba(56, 189, 248, 0.25);
+
+            box-shadow:
+                0 10px 30px
+                rgba(2, 6, 23, 0.2);
+        }
+
+
+        .account-stat-card strong {
+
+            font-variant-numeric:
+                tabular-nums;
+        }
+
+
+        /* =================================================
+           LEVEL SECTION
+        ================================================= */
+
+        .level-section {
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .level-section::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 180px;
+
+            height: 180px;
+
+            right: -90px;
+
+            top: -90px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(56, 189, 248, 0.05);
+
+            pointer-events: none;
+        }
+
+
+        .level-top {
+
+            position: relative;
+
+            z-index: 1;
+        }
+
+
+        .xp-bar {
+
+            position: relative;
+
+            z-index: 1;
+        }
+
+
+        .xp-fill {
+
+            min-width: 0;
+
+            transition:
+                width 0.45s ease;
+        }
+
+
+        .xp-text {
+
+            position: relative;
+
+            z-index: 1;
+
+            font-variant-numeric:
+                tabular-nums;
+        }
+
+
+        #accountXP {
+
+            font-variant-numeric:
+                tabular-nums;
+
+            white-space: nowrap;
+        }
+
+
+        /* =================================================
+           FRIEND SECTION
+        ================================================= */
+
+        .friend-search {
+
+            display: flex;
+
+            align-items: stretch;
+
+            gap: 10px;
+        }
+
+
+        .friend-search input {
+
+            min-width: 0;
+
+            flex: 1;
+        }
+
+
+        .friend-search input::placeholder {
+
+            color:
+                rgba(148, 163, 184, 0.65);
+        }
+
+
+        .friend-search-result {
+
+            min-height: 0;
+        }
+
+
+        .friend-search-result:empty {
+
+            display: none;
+        }
+
+
+        .friend-item,
+        .friend-result-card {
+
+            cursor: pointer;
+
+            transition:
+                transform 0.18s ease,
+                border-color 0.18s ease;
+        }
+
+
+        .friend-item:hover,
+        .friend-result-card:hover {
+
+            transform: translateY(-1px);
+        }
+
+
+        /* =================================================
+           FRIEND COUNT
+        ================================================= */
+
+        .friend-count {
+
+            font-variant-numeric:
+                tabular-nums;
+        }
+
+
+        /* =================================================
+           HISTORY
+        ================================================= */
+
+        .history-list {
+
+            min-height: 40px;
+        }
+
+
+        /* =================================================
+           BUTTON
+        ================================================= */
+
+        .account-button {
+
+            cursor: pointer;
+
+            user-select: none;
+        }
+
+
+        .account-button:disabled {
+
+            cursor: not-allowed;
+
+            opacity: 0.55;
+
+            transform: none;
+        }
+
+
+        /* =================================================
+           PROFILE POPUP
+        ================================================= */
+
+        .profile-popup-overlay {
+
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 9999;
+
+            display: none;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 20px;
+
+            background:
+                rgba(2, 6, 23, 0.78);
+
+            backdrop-filter:
+                blur(8px);
+
+            -webkit-backdrop-filter:
+                blur(8px);
+        }
+
+
+        .profile-popup-overlay.show {
+
+            display: flex;
+        }
+
+
+        .profile-popup {
+
+            position: relative;
+
+            width: 100%;
+
+            max-width: 460px;
+
+            max-height: 90vh;
+
+            overflow-y: auto;
+
+            padding: 28px;
+
+            border:
+                1px solid
+                rgba(56, 189, 248, 0.35);
+
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(15, 23, 42, 0.98),
+                    rgba(8, 15, 35, 0.98)
+                );
+
+            box-shadow:
+                0 0 45px
+                rgba(56, 189, 248, 0.16);
+
+            color: #eaf4ff;
+
+            animation:
+                profilePopupIn 0.2s ease;
+        }
+
+
+        @keyframes profilePopupIn {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(8px)
+                    scale(0.98);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+        }
+
+
+        .profile-popup-close {
+
+            position: absolute;
+
+            top: 14px;
+
+            right: 14px;
+
+            width: 36px;
+
+            height: 36px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255, 255, 255, 0.08);
+
+            color: #dbeafe;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            transition:
+                0.2s ease;
+        }
+
+
+        .profile-popup-close:hover {
+
+            background:
+                rgba(239, 68, 68, 0.25);
+
+            transform:
+                rotate(8deg);
+        }
+
+
+        .profile-popup-loading {
+
+            min-height: 260px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-direction: column;
+
+            gap: 14px;
+
+            color: #94a3b8;
+
+            text-align: center;
+        }
+
+
+        .profile-loading-spinner {
+
+            width: 42px;
+
+            height: 42px;
+
+            border:
+                3px solid
+                rgba(56, 189, 248, 0.18);
+
+            border-top-color:
+                #38bdf8;
+
+            border-radius: 50%;
+
+            animation:
+                profileSpin 0.8s linear infinite;
+        }
+
+
+        @keyframes profileSpin {
+
+            to {
+
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /* =================================================
+           PROFILE MAIN
+        ================================================= */
+
+        .profile-main {
+
+            text-align: center;
+
+            padding:
+                8px 0 24px;
+        }
+
+
+        .profile-avatar {
+
+            width: 82px;
+
+            height: 82px;
+
+            margin:
+                0 auto 14px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border:
+                1px solid
+                rgba(56, 189, 248, 0.4);
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #172554,
+                    #0f172a
+                );
+
+            font-size: 38px;
+
+            box-shadow:
+                0 0 28px
+                rgba(56, 189, 248, 0.16);
+        }
+
+
+        .profile-name {
+
+            margin: 0;
+
+            font-size: 25px;
+
+            font-weight: 800;
+
+            color: #f8fafc;
+
+            word-break: break-word;
+        }
+
+
+        .profile-player-id {
+
+            margin-top: 5px;
+
+            color: #7dd3fc;
+
+            font-size: 13px;
+
+            word-break: break-word;
+        }
+
+
+        .profile-status {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+            margin-top: 10px;
+
+            padding:
+                5px 11px;
+
+            border-radius: 999px;
+
+            background:
+                rgba(255, 255, 255, 0.05);
+
+            font-size: 12px;
+        }
+
+
+        .profile-status.online {
+
+            color: #4ade80;
+        }
+
+
+        .profile-status.offline {
+
+            color: #94a3b8;
+        }
+
+
+        /* =================================================
+           PROFILE LEVEL
+        ================================================= */
+
+        .profile-level-box {
+
+            margin-bottom: 20px;
+
+            padding: 17px;
+
+            border:
+                1px solid
+                rgba(56, 189, 248, 0.16);
+
+            border-radius: 17px;
+
+            background:
+                rgba(15, 23, 42, 0.72);
+        }
+
+
+        .profile-level-top {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 10px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .profile-level {
+
+            font-size: 18px;
+
+            font-weight: 800;
+
+            color: #f8fafc;
+        }
+
+
+        .profile-xp-text {
+
+            font-size: 13px;
+
+            color: #94a3b8;
+
+            font-variant-numeric:
+                tabular-nums;
+        }
+
+
+        .profile-xp-bar {
+
+            width: 100%;
+
+            height: 9px;
+
+            overflow: hidden;
+
+            border-radius: 999px;
+
+            background:
+                rgba(255, 255, 255, 0.08);
+        }
+
+
+        .profile-xp-fill {
+
+            width: 0%;
+
+            height: 100%;
+
+            border-radius: inherit;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #38bdf8,
+                    #818cf8
+                );
+
+            transition:
+                width 0.45s ease;
+        }
+
+
+        .profile-xp-percent {
+
+            margin-top: 7px;
+
+            text-align: right;
+
+            font-size: 11px;
+
+            color: #64748b;
+        }
+
+
+        /* =================================================
+           PROFILE STATS
+        ================================================= */
+
+        .profile-stats-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 10px;
+        }
+
+
+        .profile-stat {
+
+            padding: 14px;
+
+            border:
+                1px solid
+                rgba(148, 163, 184, 0.12);
+
+            border-radius: 15px;
+
+            background:
+                rgba(15, 23, 42, 0.65);
+        }
+
+
+        .profile-stat-label {
+
+            display: block;
+
+            margin-bottom: 4px;
+
+            font-size: 11px;
+
+            color: #64748b;
+        }
+
+
+        .profile-stat-value {
+
+            display: block;
+
+            font-size: 19px;
+
+            font-weight: 800;
+
+            color: #eaf4ff;
+
+            font-variant-numeric:
+                tabular-nums;
+        }
+
+
+        /* =================================================
+           PROFILE ERROR
+        ================================================= */
+
+        .profile-error {
+
+            min-height: 220px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-direction: column;
+
+            gap: 10px;
+
+            color: #fca5a5;
+
+            text-align: center;
+
+            padding: 20px;
+        }
+
+
+        /* =================================================
+           MOBILE
+        ================================================= */
+
+        @media (max-width: 700px) {
+
+            .friend-search {
+
+                flex-direction: column;
+            }
+
+
+            .friend-search .account-button {
+
+                width: 100%;
+            }
+
+        }
+
+
+        @media (max-width: 520px) {
+
+            .profile-popup-overlay {
+
+                padding: 12px;
+            }
+
+
+            .profile-popup {
+
+                padding:
+                    22px 17px;
+
+                border-radius: 20px;
+            }
+
+
+            .profile-name {
+
+                font-size: 22px;
+            }
+
+
+            .profile-stats-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 8px;
+            }
+
+
+            .profile-stat {
+
+                padding: 11px;
+            }
+
+
+            .profile-stat-value {
+
+                font-size: 17px;
+            }
+
+
+            #accountUsername {
+
+                font-size: 24px;
+            }
+
+        }
+
+
+        @media (max-width: 360px) {
+
+            .profile-stats-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .profile-level-top {
+
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+        }
+
+
+        /* =================================================
+           REDUCED MOTION
+        ================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            html.account-document {
+
+                scroll-behavior: auto !important;
+            }
+
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body class="account-body">
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<header class="navbar">
+
+    <a
+        href="index.html"
+        class="logo"
+        aria-label="MATH WEB - Trang chủ"
+    >
+
+        <div
+            class="logo-icon"
+            aria-hidden="true"
+        >
+            ∑
+        </div>
+
+        <div class="logo-text">
+            MATH<span>_WEB</span>
+        </div>
+
+    </a>
+
+
+    <nav
+        class="nav-menu"
+        aria-label="Điều hướng chính"
+    >
+
+        <a
+            href="index.html"
+            class="nav-link"
+        >
+            Trang chủ
+        </a>
+
+
+        <a
+            href="practice.html"
+            class="nav-link protected-practice-link"
+        >
+            Luyện tập
+        </a>
+
+
+        <a
+            href="battle.html"
+            class="nav-link"
+        >
+            Đấu online
+        </a>
+
+
+        <a
+            href="account.html"
+            class="nav-link active"
+            aria-current="page"
+        >
+            Tài khoản
+        </a>
+
+
+        <!-- =================================================
+             NOTIFICATION
+        ================================================== -->
+
+        <div class="notification-wrapper">
+
+            <button
+                id="notificationButton"
+                class="notification-button"
+                type="button"
+                aria-label="Thông báo"
+                aria-expanded="false"
+                aria-controls="notificationPanel"
+            >
+
+                🔔
+
+                <span
+                    id="notificationBadge"
+                    class="notification-badge"
+                    aria-hidden="true"
+                ></span>
+
+            </button>
+
+
+            <div
+                id="notificationPanel"
+                class="notification-panel"
+                aria-hidden="true"
+            >
+
+                <div class="notification-header">
+
+                    <div class="notification-title">
+                        Thông báo
+                    </div>
+
+
+                    <button
+                        id="readAllNotifications"
+                        class="notification-read-all"
+                        type="button"
+                    >
+                        Đọc tất cả
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="notificationList"
+                    class="notification-list"
+                    aria-live="polite"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <button
+        class="mobile-menu-button"
+        id="mobileMenuButton"
+        type="button"
+        aria-label="Mở menu"
+        aria-expanded="false"
+    >
+        ☰
+    </button>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN ACCOUNT
+========================================================= -->
+
+<main
+    class="account-page"
+    id="accountPage"
+>
+
+    <div class="account-container">
+
+
+        <!-- =================================================
+             LOADING
+        ================================================== -->
+
+        <div
+            id="accountLoadingState"
+            class="account-loading-state"
+            role="status"
+            aria-live="polite"
+        >
+
+            <span
+                class="account-loading-dot"
+                aria-hidden="true"
+            ></span>
+
+            <span>
+                Đang tải thông tin tài khoản...
+            </span>
+
+        </div>
+
+
+        <!-- =================================================
+             ERROR
+        ================================================== -->
+
+        <div
+            id="accountErrorState"
+            class="account-error-state"
+            role="alert"
+            aria-live="assertive"
+        >
+            Không thể tải thông tin tài khoản. Vui lòng thử lại.
+        </div>
+
+
+
+        <!-- =================================================
+             ACCOUNT HEADER
+        ================================================= -->
+
+        <section
+            class="account-header"
+            aria-labelledby="accountUsername"
+        >
+
+            <div class="account-user-info">
+
+                <div
+                    class="account-badge"
+                    aria-hidden="true"
+                >
+                    👤
+                </div>
+
+
+                <div class="account-user-text">
+
+                    <h1 id="accountUsername">
+                        Đang tải...
+                    </h1>
+
+
+                    <p id="accountPlayerId">
+                        ID: đang tải...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 STATISTICS
+            ================================================== -->
+
+            <section
+                class="account-grid"
+                aria-label="Thống kê tài khoản"
+            >
+
+                <div class="account-stat-card">
+
+                    <span
+                        class="stat-icon"
+                        aria-hidden="true"
+                    >
+                        🎮
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Tổng trận
+                        </small>
+
+                        <strong
+                            id="totalGames"
+                            data-stat="total-games"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="account-stat-card">
+
+                    <span
+                        class="stat-icon"
+                        aria-hidden="true"
+                    >
+                        ✅
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Câu đúng
+                        </small>
+
+                        <strong
+                            id="totalCorrect"
+                            data-stat="total-correct"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="account-stat-card">
+
+                    <span
+                        class="stat-icon"
+                        aria-hidden="true"
+                    >
+                        ❌
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Câu sai
+                        </small>
+
+                        <strong
+                            id="totalWrong"
+                            data-stat="total-wrong"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="account-stat-card">
+
+                    <span
+                        class="stat-icon"
+                        aria-hidden="true"
+                    >
+                        ⏭️
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Câu bỏ
+                        </small>
+
+                        <strong
+                            id="totalBlank"
+                            data-stat="total-blank"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="account-stat-card">
+
+                    <span
+                        class="stat-icon"
+                        aria-hidden="true"
+                    >
+                        ⭐
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Tổng điểm
+                        </small>
+
+                        <strong
+                            id="totalScore"
+                            data-stat="total-score"
+                        >
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LEVEL / XP
+        ================================================== -->
+
+        <section
+            class="level-section"
+            aria-labelledby="accountLevel"
+        >
+
+            <div class="level-top">
+
+                <div>
+
+                    <span class="level-label">
+                        Cấp độ
+                    </span>
+
+
+                    <strong
+                        id="accountLevel"
+                        aria-label="Cấp độ hiện tại"
+                    >
+                        LV.0
+                    </strong>
+
+                </div>
+
+
+                <div
+                    id="accountXP"
+                    aria-label="Kinh nghiệm hiện tại"
+                >
+                    0 XP
+                </div>
+
+            </div>
+
+
+            <div
+                class="xp-bar"
+                role="progressbar"
+                aria-label="Tiến trình XP"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+            >
+
+                <div
+                    id="xpFill"
+                    class="xp-fill"
+                ></div>
+
+            </div>
+
+
+            <div
+                id="xpText"
+                class="xp-text"
+            >
+                0 / 100 XP
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FRIENDS
+        ================================================== -->
+
+        <section
+            class="friends-section"
+            aria-labelledby="friendsTitle"
+        >
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2 id="friendsTitle">
+                        Bạn bè
+                    </h2>
+
+                    <p>
+                        Quản lý bạn bè và lời mời kết bạn
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="friend-search">
+
+                <input
+                    type="text"
+                    id="friendPlayerId"
+                    placeholder="Nhập Player ID..."
+                    maxlength="20"
+                    autocomplete="off"
+                    aria-label="Player ID cần tìm"
+                >
+
+
+                <button
+                    id="searchFriendButton"
+                    type="button"
+                    class="account-button"
+                >
+                    🔍 Tìm kiếm
+                </button>
+
+            </div>
+
+
+            <div
+                id="friendSearchResult"
+                class="friend-search-result"
+                aria-live="polite"
+            ></div>
+
+
+
+            <div class="friend-columns">
+
+
+                <div class="friend-panel">
+
+                    <div class="friend-panel-title">
+
+                        <div>
+
+                            <h3>
+                                Danh sách bạn bè
+                            </h3>
+
+
+                            <span
+                                id="friendCount"
+                                class="friend-count"
+                            >
+                                0 bạn
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="friendList"
+                        class="friend-list"
+                        aria-live="polite"
+                    ></div>
+
+                </div>
+
+
+
+                <div class="friend-panel">
+
+                    <div class="friend-panel-title">
+
+                        <div>
+
+                            <h3>
+                                Lời mời kết bạn
+                            </h3>
+
+
+                            <span
+                                id="requestCount"
+                                class="friend-count"
+                            >
+                                0 lời mời
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="friendRequests"
+                        class="friend-list"
+                        aria-live="polite"
+                    ></div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ACTIVITY HISTORY
+        ================================================== -->
+
+        <section
+            class="history-section"
+            aria-labelledby="historyTitle"
+        >
+
+            <div class="section-title">
+
+                <div>
+
+                    <h2 id="historyTitle">
+                        Lịch sử hoạt động
+                    </h2>
+
+
+                    <p>
+                        Các trận đấu và hoạt động gần đây
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="historyList"
+                class="history-list"
+                aria-live="polite"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ACCOUNT ACTIONS
+        ================================================= -->
+
+        <section
+            class="account-actions"
+            aria-label="Thao tác tài khoản"
+        >
+
+            <button
+                id="logoutButton"
+                type="button"
+                class="account-button"
+            >
+                🚪 Đăng xuất
+            </button>
+
+        </section>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================================
+     PROFILE POPUP
+========================================================= -->
+
+<div
+    id="profilePopupOverlay"
+    class="profile-popup-overlay"
+    aria-hidden="true"
+>
+
+    <div
+        id="profilePopup"
+        class="profile-popup"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="profilePopupName"
+    >
+
+        <button
+            id="profilePopupClose"
+            class="profile-popup-close"
+            type="button"
+            aria-label="Đóng hồ sơ"
+        >
+            ✕
+        </button>
+
+
+        <div
+            id="profilePopupContent"
+            class="profile-popup-loading"
+        >
+
+            <div
+                class="profile-loading-spinner"
+                aria-hidden="true"
+            ></div>
+
+
+            <span>
+                Đang tải hồ sơ...
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+    /*
+     * Đánh dấu đây là trang Account.
+     * Dùng class thay cho :has() để việc override
+     * CSS ổn định hơn trên các trình duyệt.
+     */
+
+    document.documentElement.classList.add("account-document");
+
+</script>
+
+
+<script src="js/main.js"></script>
+
+<script src="js/notification.js"></script>
+
+<script src="js/presence.js"></script>
+
+<script src="js/account.js"></script>
+
+
+</body>
+
+</html>

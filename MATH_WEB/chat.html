@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Chat | MATH_WEB</title>
+
+
+    <!-- FONT -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/notification.css">
+    <link rel="stylesheet" href="css/chat.css">
+
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVBAR
+         ========================================= -->
+
+    <header class="navbar">
+
+
+        <!-- LOGO -->
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <div class="logo-icon">
+                ∑
+            </div>
+
+
+            <div class="logo-text">
+                MATH<span>_WEB</span>
+            </div>
+
+        </a>
+
+
+        <!-- MENU -->
+
+        <nav class="nav-menu">
+
+
+            <!-- TRANG CHỦ -->
+
+            <a
+                href="index.html"
+                class="nav-link"
+            >
+                Trang chủ
+            </a>
+
+
+            <!-- LUYỆN TẬP -->
+
+            <a
+                href="practice.html"
+                class="nav-link protected-practice-link"
+            >
+                Luyện tập
+            </a>
+
+
+            <!-- ĐẤU ONLINE -->
+
+            <a
+                href="battle.html"
+                class="nav-link protected-battle-link"
+            >
+                Đấu online
+            </a>
+
+
+            <!-- TÀI KHOẢN -->
+
+            <a
+                href="account.html"
+                class="nav-link protected-account-link"
+            >
+                Tài khoản
+            </a>
+
+
+            <!-- =================================
+                 THÔNG BÁO
+                 ================================= -->
+
+            <div class="notification-wrapper">
+
+
+                <button
+                    id="notificationButton"
+                    class="notification-button"
+                    type="button"
+                    aria-label="Thông báo"
+                >
+
+                    🔔
+
+
+                    <span
+                        id="notificationBadge"
+                        class="notification-badge"
+                    ></span>
+
+                </button>
+
+
+                <!-- PANEL THÔNG BÁO -->
+
+                <div
+                    id="notificationPanel"
+                    class="notification-panel"
+                >
+
+
+                    <div class="notification-header">
+
+
+                        <div class="notification-title">
+                            Thông báo
+                        </div>
+
+
+                        <button
+                            id="readAllNotifications"
+                            class="notification-read-all"
+                            type="button"
+                        >
+                            Đọc tất cả
+                        </button>
+
+
+                    </div>
+
+
+                    <div
+                        id="notificationList"
+                        class="notification-list"
+                    ></div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </nav>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="mobile-menu-button"
+            id="mobileMenuButton"
+            type="button"
+        >
+            ☰
+        </button>
+
+
+    </header>
+
+
+
+    <!-- =========================================
+         CHAT PAGE
+         ========================================= -->
+
+    <main class="chat-page">
+
+
+        <section class="chat-app">
+
+
+            <!-- =================================
+                 DANH SÁCH BẠN BÈ
+                 ================================= -->
+
+            <aside class="chat-sidebar">
+
+
+                <!-- HEADER DANH SÁCH -->
+
+                <div class="chat-sidebar-header">
+
+
+                    <div>
+
+                        <h1>
+                            Chat
+                        </h1>
+
+
+                        <p
+                            id="friendCountText"
+                        >
+                            Bạn bè
+                        </p>
+
+                    </div>
+
+
+                    <!-- REFRESH -->
+
+                    <button
+                        id="refreshFriendsButton"
+                        class="chat-refresh-button"
+                        type="button"
+                        aria-label="Làm mới danh sách bạn bè"
+                        title="Làm mới"
+                    >
+                        ↻
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     TÌM KIẾM BẠN
+                     ================================= -->
+
+                <div class="chat-search-box">
+
+
+                    <span>
+                        ⌕
+                    </span>
+
+
+                    <input
+                        id="friendSearchInput"
+                        type="text"
+                        placeholder="Tìm bạn bè..."
+                        autocomplete="off"
+                    >
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     DANH SÁCH BẠN
+                     ================================= -->
+
+                <div
+                    id="friendList"
+                    class="friend-list"
+                >
+
+
+                    <div class="chat-loading">
+
+                        Đang tải danh sách bạn bè...
+
+                    </div>
+
+
+                </div>
+
+
+            </aside>
+
+
+
+            <!-- =================================
+                 KHUNG CUỘC TRÒ CHUYỆN
+                 ================================= -->
+
+            <section class="conversation">
+
+
+                <!-- =================================
+                     CHƯA CHỌN BẠN
+                     ================================= -->
+
+                <div
+                    id="emptyConversation"
+                    class="empty-conversation"
+                >
+
+
+                    <div class="empty-chat-icon">
+                        💬
+                    </div>
+
+
+                    <h2>
+                        Chọn một người để trò chuyện
+                    </h2>
+
+
+                    <p>
+                        Chọn bạn bè ở bên trái để bắt đầu nhắn tin.
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- =================================
+                     CUỘC TRÒ CHUYỆN
+                     ================================= -->
+
+                <div
+                    id="conversationContent"
+                    class="conversation-content"
+                    hidden
+                >
+
+
+                    <!-- HEADER NGƯỜI ĐANG CHAT -->
+
+                    <div class="conversation-header">
+
+
+                        <!-- NÚT QUAY LẠI MOBILE -->
+
+                        <button
+                            id="mobileBackButton"
+                            class="mobile-back-button"
+                            type="button"
+                            aria-label="Quay lại"
+                        >
+                            ←
+                        </button>
+
+
+                        <!-- AVATAR -->
+
+                        <div
+                            id="conversationAvatar"
+                            class="conversation-avatar"
+                        >
+                            👤
+                        </div>
+
+
+                        <!-- THÔNG TIN -->
+
+                        <div class="conversation-user-info">
+
+
+                            <div
+                                id="conversationName"
+                                class="conversation-name"
+                            >
+                                Người dùng
+                            </div>
+
+
+                            <div
+                                id="conversationStatus"
+                                class="conversation-status"
+                            >
+                                Offline
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         DANH SÁCH TIN NHẮN
+                         ================================= -->
+
+                    <div
+                        id="messageList"
+                        class="message-list"
+                    ></div>
+
+
+
+                    <!-- =================================
+                         THÔNG BÁO ĐANG GÕ
+                         ================================= -->
+
+                    <div
+                        id="typingNotice"
+                        class="typing-notice"
+                    ></div>
+
+
+
+                    <!-- =================================
+                         NHẬP TIN NHẮN
+                         ================================= -->
+
+                    <form
+                        id="messageForm"
+                        class="message-form"
+                    >
+
+
+                        <textarea
+                            id="messageInput"
+                            rows="1"
+                            maxlength="1000"
+                            placeholder="Nhập tin nhắn..."
+                            autocomplete="off"
+                        ></textarea>
+
+
+                        <button
+                            id="sendMessageButton"
+                            type="submit"
+                            class="send-message-button"
+                        >
+                            Gửi
+                        </button>
+
+
+                    </form>
+
+
+
+                    <!-- GIỚI HẠN KÝ TỰ -->
+
+                    <div class="message-limit">
+
+                        Tối đa 1000 ký tự
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
+
+
+
+    <script src="js/main.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/presence.js"></script>
+    <script src="js/chat.js"></script>
+
+
+</body>
+
+</html>
