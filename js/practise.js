@@ -2516,19 +2516,6 @@
                 white-space: pre-wrap;
             }
 
-            .mathweb-ai-diagram-wrap {
-                margin: 14px auto 4px;
-                width: min(100%, 360px);
-                text-align: center;
-                opacity: .95;
-            }
-
-            .mathweb-ai-diagram {
-                width: 100%;
-                max-height: 190px;
-                color: currentColor;
-            }
-
             .mathweb-ai-result {
                 text-align: center;
                 padding: 18px 5px;
@@ -3617,9 +3604,9 @@
                     ${escapeHTML(
                         questionText
                     )}
+                    ${renderAIDiagram(question)}
                 </div>
 
-                ${renderAIDiagram(question?.diagram)}
 
                 <div
                     id="mathwebAiAnswerArea"
@@ -3680,6 +3667,89 @@
 
 
     /* =====================================================
+       OPTIONAL GEOMETRY DIAGRAMS
+       ===================================================== */
+
+    function renderAIDiagram(question) {
+
+        const diagram = question && question.diagram;
+        if (!diagram || typeof diagram !== "object") return "";
+
+        const type = String(diagram.type || "");
+
+        if (type === "right_triangle") {
+            return `
+                <div class="mathweb-ai-diagram" aria-label="Hình minh họa tam giác vuông">
+                    <svg viewBox="0 0 360 210" role="img" aria-hidden="true">
+                        <polygon points="55,165 300,165 55,45" fill="rgba(56,217,255,.08)" stroke="currentColor" stroke-width="3"/>
+                        <polyline points="55,145 75,145 75,165" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <text x="165" y="190" text-anchor="middle">a = ${escapeHTML(String(diagram.a ?? ""))}</text>
+                        <text x="30" y="110" text-anchor="middle" transform="rotate(-90 30 110)">b = ${escapeHTML(String(diagram.b ?? ""))}</text>
+                        <text x="190" y="90">c = ${escapeHTML(String(diagram.c ?? ""))}</text>
+                    </svg>
+                </div>
+            `;
+        }
+
+        if (type === "circle") {
+            return `
+                <div class="mathweb-ai-diagram" aria-label="Hình minh họa đường tròn">
+                    <svg viewBox="0 0 360 210" role="img" aria-hidden="true">
+                        <circle cx="180" cy="105" r="70" fill="rgba(56,217,255,.08)" stroke="currentColor" stroke-width="3"/>
+                        <line x1="180" y1="105" x2="250" y2="105" stroke="currentColor" stroke-width="3"/>
+                        <circle cx="180" cy="105" r="4" fill="currentColor"/>
+                        <text x="215" y="95">r = ${escapeHTML(String(diagram.r ?? ""))}</text>
+                    </svg>
+                </div>
+            `;
+        }
+
+        if (type === "triangle_area") {
+            return `
+                <div class="mathweb-ai-diagram" aria-label="Hình minh họa tam giác và chiều cao">
+                    <svg viewBox="0 0 360 210" role="img" aria-hidden="true">
+                        <polygon points="60,165 300,165 210,55" fill="rgba(56,217,255,.08)" stroke="currentColor" stroke-width="3"/>
+                        <line x1="210" y1="55" x2="210" y2="165" stroke="currentColor" stroke-width="2" stroke-dasharray="7 6"/>
+                        <text x="180" y="190" text-anchor="middle">đáy = ${escapeHTML(String(diagram.base ?? ""))}</text>
+                        <text x="225" y="115">h = ${escapeHTML(String(diagram.height ?? ""))}</text>
+                    </svg>
+                </div>
+            `;
+        }
+
+        if (type === "points" && Array.isArray(diagram.a) && Array.isArray(diagram.b)) {
+            const ax = Number(diagram.a[0]);
+            const ay = Number(diagram.a[1]);
+            const bx = Number(diagram.b[0]);
+            const by = Number(diagram.b[1]);
+            if (![ax, ay, bx, by].every(Number.isFinite)) return "";
+            const minX = Math.min(ax, bx, -1) - 1;
+            const maxX = Math.max(ax, bx, 1) + 1;
+            const minY = Math.min(ay, by, -1) - 1;
+            const maxY = Math.max(ay, by, 1) + 1;
+            const sx = x => 40 + ((x - minX) / (maxX - minX)) * 280;
+            const sy = y => 175 - ((y - minY) / (maxY - minY)) * 140;
+            const x0 = sx(0), y0 = sy(0);
+            return `
+                <div class="mathweb-ai-diagram" aria-label="Hình minh họa hai điểm trên mặt phẳng tọa độ">
+                    <svg viewBox="0 0 360 210" role="img" aria-hidden="true">
+                        <line x1="35" y1="${y0}" x2="325" y2="${y0}" stroke="currentColor" stroke-width="2" opacity=".55"/>
+                        <line x1="${x0}" y1="185" x2="${x0}" y2="25" stroke="currentColor" stroke-width="2" opacity=".55"/>
+                        <line x1="${sx(ax)}" y1="${sy(ay)}" x2="${sx(bx)}" y2="${sy(by)}" stroke="currentColor" stroke-width="3" opacity=".75"/>
+                        <circle cx="${sx(ax)}" cy="${sy(ay)}" r="5" fill="currentColor"/>
+                        <circle cx="${sx(bx)}" cy="${sy(by)}" r="5" fill="currentColor"/>
+                        <text x="${sx(ax)+8}" y="${sy(ay)-8}">A(${ax};${ay})</text>
+                        <text x="${sx(bx)+8}" y="${sy(by)-8}">B(${bx};${by})</text>
+                    </svg>
+                </div>
+            `;
+        }
+
+        return "";
+    }
+
+
+    /* =====================================================
        TYPE LABEL
        ===================================================== */
 
@@ -3704,80 +3774,6 @@
             "Câu hỏi"
         );
 
-    }
-
-
-    /* =====================================================
-       RENDER OPTIONAL GEOMETRY DIAGRAM
-       ===================================================== */
-
-    function renderAIDiagram(diagram) {
-        if (!diagram || !diagram.type) return "";
-
-        const label = function (value) {
-            return escapeHTML(String(value ?? ""));
-        };
-
-        const common = 'class="mathweb-ai-diagram" viewBox="0 0 360 190" role="img" aria-label="Hình minh họa"';
-
-        if (diagram.type === "triangle") {
-            return `
-                <div class="mathweb-ai-diagram-wrap">
-                    <svg ${common}>
-                        <polygon points="70,150 290,150 190,35" fill="none" stroke="currentColor" stroke-width="3"/>
-                        <text x="58" y="168" font-size="16">${label(diagram.labels?.[0] || "A")}</text>
-                        <text x="292" y="168" font-size="16">${label(diagram.labels?.[1] || "B")}</text>
-                        <text x="194" y="27" font-size="16">${label(diagram.labels?.[2] || "C")}</text>
-                    </svg>
-                </div>`;
-        }
-
-        if (diagram.type === "circle") {
-            return `
-                <div class="mathweb-ai-diagram-wrap">
-                    <svg ${common}>
-                        <circle cx="180" cy="95" r="62" fill="none" stroke="currentColor" stroke-width="3"/>
-                        <line x1="180" y1="95" x2="242" y2="95" stroke="currentColor" stroke-width="2"/>
-                        <circle cx="180" cy="95" r="4" fill="currentColor"/>
-                        <text x="168" y="88" font-size="16">${label(diagram.labels?.[0] || "O")}</text>
-                        <text x="208" y="87" font-size="14">R</text>
-                    </svg>
-                </div>`;
-        }
-
-        if (diagram.type === "coordinate") {
-            return `
-                <div class="mathweb-ai-diagram-wrap">
-                    <svg ${common}>
-                        <line x1="35" y1="150" x2="325" y2="150" stroke="currentColor" stroke-width="2"/>
-                        <line x1="65" y1="175" x2="65" y2="20" stroke="currentColor" stroke-width="2"/>
-                        <line x1="110" y1="125" x2="250" y2="55" stroke="currentColor" stroke-width="3"/>
-                        <circle cx="110" cy="125" r="5" fill="currentColor"/>
-                        <circle cx="250" cy="55" r="5" fill="currentColor"/>
-                        <text x="98" y="145" font-size="16">${label(diagram.labels?.[0] || "A")}</text>
-                        <text x="258" y="50" font-size="16">${label(diagram.labels?.[1] || "B")}</text>
-                        <text x="316" y="143" font-size="14">x</text>
-                        <text x="72" y="28" font-size="14">y</text>
-                    </svg>
-                </div>`;
-        }
-
-        if (diagram.type === "box") {
-            return `
-                <div class="mathweb-ai-diagram-wrap">
-                    <svg ${common}>
-                        <polygon points="95,70 220,70 270,100 145,100" fill="none" stroke="currentColor" stroke-width="3"/>
-                        <polygon points="95,70 145,100 145,160 95,130" fill="none" stroke="currentColor" stroke-width="3"/>
-                        <polygon points="145,100 270,100 270,160 145,160" fill="none" stroke="currentColor" stroke-width="3"/>
-                        <text x="82" y="65" font-size="14">${label(diagram.labels?.[0] || "A")}</text>
-                        <text x="224" y="65" font-size="14">${label(diagram.labels?.[1] || "B")}</text>
-                        <text x="275" y="98" font-size="14">${label(diagram.labels?.[2] || "C")}</text>
-                        <text x="137" y="177" font-size="14">${label(diagram.labels?.[3] || "D")}</text>
-                    </svg>
-                </div>`;
-        }
-
-        return "";
     }
 
 
@@ -4550,15 +4546,15 @@
             <div class="mathweb-ai-actions">
                 ${correct
                     ? `<div style="font-size:12px;opacity:.7;">✓ Đáp án đúng, đang chuyển câu...</div>`
-                    : `<button type="button" class="mathweb-ai-btn mathweb-ai-btn-primary" id="mathwebAiNextAfterWrong">➡️ CÂU TIẾP THEO</button>`}
+                    : `<button type="button" class="mathweb-ai-btn mathweb-ai-btn-primary" id="mathwebAiSkipAfterWrong">➡️ CÂU TIẾP THEO</button>`}
             </div>
 
         `;
 
 
-        const nextAfterWrong = document.getElementById("mathwebAiNextAfterWrong");
-        if (nextAfterWrong) {
-            nextAfterWrong.addEventListener("click", function () {
+        const skipAfterWrong = document.getElementById("mathwebAiSkipAfterWrong");
+        if (skipAfterWrong) {
+            skipAfterWrong.addEventListener("click", function () {
                 nextAIQuestion();
             });
         }

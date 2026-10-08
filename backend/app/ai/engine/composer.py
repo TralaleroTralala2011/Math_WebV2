@@ -200,7 +200,7 @@ class QuestionComposer:
                 'question': base + f". So sánh kết quả với {k}: kết quả ... {k}.",
                 'answer': ans,
                 'solution': f"Kết quả là {v.numerator}, nên {v.numerator} {('<' if ans=='nhỏ hơn' else '>' if ans=='lớn hơn' else '=')} {k}.",
-                'distractors':[x for x in ['nhỏ hơn','lớn hơn','bằng'] if x!=ans] + ['không thể kết luận'],
+                'distractors':[x for x in ['nhỏ hơn','lớn hơn','bằng'] if x!=ans],
                 'hint':'Lấy kết quả của bài toán và so sánh trực tiếp với số đã cho.'
             }
         return None

@@ -6,22 +6,8 @@ from .game_bank import GameQuestionBank
 from .composer import TemplateBank, QuestionComposer, TemplateComposer
 from .explanation import build_detailed_solution
 from .distractor_engine import DistractorEngine
+from .extended_bank import generate as generate_extended
 from ..config import KNOWLEDGE_DIR
-from .topic_expansion import generate as generate_expanded_topic, real_life as generate_real_life, geometry_diagram
-
-def normalize_math_text(text):
-    """Make generated expressions read like classroom-written mathematics."""
-    import re
-    s = str(text or "")
-    s = re.sub(r"\b1\s*\(x", "(x", s)
-    s = re.sub(r"\b1x\b", "x", s)
-    s = re.sub(r"\bx\s*([+-])\s*0\b", "x", s)
-    s = re.sub(r"\b([+-])\s*-\s*(\d+)", lambda m: ("- " if m.group(1) == "+" else "+ ") + m.group(2), s)
-    s = re.sub(r"\+\s*-", "- ", s)
-    s = re.sub(r"(?<![A-Za-z])0x\b", "0", s)
-    s = re.sub(r"\s+", " ", s).strip()
-    return s
-
 
 class QuestionGenerator:
     """Deterministic mathematical generator. LLM is not required for correctness."""
@@ -81,21 +67,10 @@ class QuestionGenerator:
                 elif style == "theory_check" and q.get("question"):
                     q["question"] = f"Kiểm tra kiến thức: {q['question']}"
         if q is None:
-            # First use the expanded curriculum generators. This prevents
-            # unsupported topics from falling back to an unrelated generic
-            # counting question.
-            q = generate_expanded_topic(topic_id, difficulty)
-
-        # Genuine application problems are mixed into ordinary topic practice.
-        # Harder levels get them more often, while the selected game remains a
-        # hard content boundary and therefore is never replaced here.
-        if not game_id:
-            real_life_rate = {"easy": 0.12, "medium": 0.30, "hard": 0.48, "expert": 0.58}.get(difficulty, 0.30)
-            if random.random() < real_life_rate:
-                applied = generate_real_life(topic_id, difficulty)
-                if applied is not None:
-                    q = applied
-
+            # Additive extension layer: old topic generators stay authoritative.
+            # Newer curriculum/real-life/geometry variants are only used when the
+            # legacy generator has no dedicated implementation.
+            q = generate_extended(topic_id, grade, difficulty)
         if q is None:
             fn=getattr(self, f"_g_{topic_id}", self._g_generic)
             q=fn(grade,difficulty)
@@ -116,37 +91,8 @@ class QuestionGenerator:
             topic=q.get("knowledge_name", ""),
             game_id=game_id,
         )
-
-        # Structured diagrams are rendered safely by the frontend.  They are
-        # attached only to geometry/spatial topics and never contain HTML.
-        if not q.get("diagram") and (
-            "hình" in str(q.get("knowledge_name", "")).lower()
-            or "hinh" in str(q.get("knowledge_name", "")).lower()
-            or topic_id in {
-                "he_thuc_luong", "he_thuc_luong_tam_giac", "toa_do_phang",
-                "duong_tron", "hinh_hoc_10", "hinh_khong_gian",
-                "hinh_hoc_khong_gian", "song_song_khong_gian",
-                "vuong_goc_khong_gian", "goc_khoang_cach_11",
-                "thiet_dien_hinh_khong_gian_11", "toa_do_khong_gian",
-                "mat_phang_oxyz", "duong_thang_oxyz", "mat_cau",
-                "goc_khoang_cach_oxyz", "the_tich_khong_gian"
-            }
-        ):
-            diagram = geometry_diagram(topic_id, q.get("question", ""), q.get("answer"))
-            if diagram:
-                q["diagram"] = diagram
-
         q["explanation"] = q["solution"]
-        q["question"] = normalize_math_text(q.get("question", ""))
-        q["solution"] = normalize_math_text(q.get("solution", ""))
-        q["explanation"] = q["solution"]
-        converted = self._convert(q,question_type)
-        for key in ("question", "answer", "solution", "explanation"):
-            if key in converted and converted[key] is not None:
-                converted[key] = normalize_math_text(converted[key])
-        if isinstance(converted.get("options"), list):
-            converted["options"] = [normalize_math_text(x) for x in converted["options"]]
-        return converted
+        return self._convert(q,question_type)
 
     def _base(self, question, answer, solution, options=None, hint=""):
         return {"question":question,"answer":answer,"solution":solution,"options":options or [],"hint":hint}
@@ -164,6 +110,37 @@ class QuestionGenerator:
                     vals.append(x)
                 if len(vals) == 4:
                     break
+
+        # Some derived/reasoning tasks have categorical answers such as
+        # “nhỏ hơn / lớn hơn / bằng”. Keep those questions fully MCQ instead
+        # of falling back to three choices. This is an additive safety net.
+        if len(vals) < 4:
+            categorical = {
+                "nhỏ hơn": ["lớn hơn", "bằng", "không đủ dữ kiện"],
+                "lớn hơn": ["nhỏ hơn", "bằng", "không đủ dữ kiện"],
+                "bằng": ["nhỏ hơn", "lớn hơn", "không đủ dữ kiện"],
+                "dương": ["âm", "bằng 0", "không xác định"],
+                "âm": ["dương", "bằng 0", "không xác định"],
+                "bằng 0": ["dương", "âm", "không xác định"],
+                "chẵn": ["lẻ", "số nguyên tố", "không phải số nguyên"],
+                "lẻ": ["chẵn", "số nguyên tố", "không phải số nguyên"],
+            }
+            for x in categorical.get(str(answer).strip().lower(), []):
+                x = fmt(x)
+                if x not in vals:
+                    vals.append(x)
+                if len(vals) == 4:
+                    break
+
+        # Final generic labels are used only as a last resort for unusual
+        # string answers. Existing numeric distractors are never replaced.
+        if len(vals) < 4:
+            for x in ["Không xác định", "Không đủ dữ kiện", "Giá trị khác"]:
+                if x not in vals and x.lower() != str(answer).strip().lower():
+                    vals.append(x)
+                if len(vals) == 4:
+                    break
+
         random.shuffle(vals)
         return vals[:4] if len(vals) >= 4 else vals
 
@@ -320,13 +297,8 @@ class QuestionGenerator:
 
     def _g_hinh_hoc_khong_gian(self,g,d):
         r=random.randint(2,8)
-        ans=Fraction(4*r**3,3)
-        wrong = [
-            f"{fmt(Fraction(4*r*r,3))}π",
-            f"{r**3}π",
-            f"{fmt(Fraction(2*r*r,3))}π",
-        ]
-        return self._base(f"Một khối cầu có bán kính {r}. Thể tích theo π là bao nhiêu?",f"{fmt(ans)}π",f"V=4/3·πr³=4/3·π·{r}³={fmt(ans)}π.",wrong)
+        ans=4*r**3/3
+        return self._base(f"Một khối cầu có bán kính {r}. Thể tích theo π là bao nhiêu?",f"{fmt(Fraction(4*r**3,3))}π",f"V=4/3·πr³=4/3·π·{r}³={fmt(Fraction(4*r**3,3))}π.",[f"{fmt(Fraction(4*r*r,3))}π",f"{fmt(Fraction(2*r**3,3))}π",f"{r**3}π"])
 
     def _g_xac_suat_11(self,g,d): return self._g_xac_suat(g,d)
     def _g_xac_suat_12(self,g,d): return self._g_xac_suat(g,d)
