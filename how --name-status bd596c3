@@ -1,0 +1,18 @@
+[33mbd596c3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Update MATH_WEB
+ AI_PROBLEM_GENERATOR_UPGRADE.md                    |  59 [32m++[m
+ AI_SUPER_BANK_UPGRADE.md                           |  42 [32m+[m
+ DEPLOY_BACKEND.md                                  |   2 [32m+[m[31m-[m
+ backend/app/ai/engine/composer.py                  |   2 [32m+[m[31m-[m
+ backend/app/ai/engine/generator.py                 | 111 [32m++[m[31m-[m
+ backend/app/ai/engine/geometry_diagrams.py         |  69 [32m++[m
+ backend/app/ai/engine/problem_bank.py              |  32 [32m+[m
+ backend/app/ai/engine/problem_generator.py         | 315 [32m+++++++[m
+ backend/app/ai/engine/service.py                   |  64 [32m+[m[31m-[m
+ backend/app/ai/engine/super_bank.py                | 952 [32m+++++++++++++++++++++[m
+ backend/app/ai/knowledge/index.json                | 386 [32m++[m[31m-------[m
+ backend/app/ai/knowledge/problem_bank_catalog.json |  26 [32m+[m
+ backend/app/ai/knowledge/super_bank_catalog.json   | 353 [32m++++++++[m
+ backend/app/ai/routes.py                           |  19 [32m+[m[31m-[m
+ js/api-config.js                                   |  60 [32m+[m[31m-[m
+ js/practise.js                                     | 236 [32m++++[m[31m-[m
+ 16 files changed, 2313 insertions(+), 415 deletions(-)
