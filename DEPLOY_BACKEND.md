@@ -18,7 +18,7 @@ Health check:
 `/health`
 
 Expected API URL:
-`https://math-webv2.onrender.com`
+`https://math-web-api-tralalerotralala2011.onrender.com`
 
 ## Database note
 

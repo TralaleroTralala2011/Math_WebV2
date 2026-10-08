@@ -1,4 +1,4 @@
-﻿const API_URL = window.MATHWEB_API_URL || window.MATH_WEB_API_URL || window.MATH_WEB_API_BASE || "https://math-webv2.onrender.com";
+const API_URL = window.MATHWEB_API_URL || "http://127.0.0.1:8000";
 
 
 /* =========================================================
@@ -97,7 +97,7 @@ function saveLoginData(
     ) {
 
         throw new Error(
-            "Dá»¯ liá»‡u Ä‘Äƒng nháº­p khÃ´ng há»£p lá»‡."
+            "Dữ liệu đăng nhập không hợp lệ."
         );
     }
 
@@ -111,7 +111,7 @@ function saveLoginData(
     if (!token) {
 
         throw new Error(
-            "MÃ¡y chá»§ khÃ´ng tráº£ vá» token Ä‘Äƒng nháº­p."
+            "Máy chủ không trả về token đăng nhập."
         );
     }
 
@@ -122,7 +122,7 @@ function saveLoginData(
     ) {
 
         throw new Error(
-            "Token Ä‘Äƒng nháº­p khÃ´ng há»£p lá»‡."
+            "Token đăng nhập không hợp lệ."
         );
     }
 
@@ -247,7 +247,7 @@ function getUser() {
     } catch (error) {
 
         console.warn(
-            "Dá»¯ liá»‡u user trong localStorage khÃ´ng há»£p lá»‡."
+            "Dữ liệu user trong localStorage không hợp lệ."
         );
 
 
@@ -385,7 +385,7 @@ function validateUsername(
 
     if (!value) {
 
-        return "Vui lÃ²ng nháº­p tÃªn tÃ i khoáº£n.";
+        return "Vui lòng nhập tên tài khoản.";
     }
 
 
@@ -394,7 +394,7 @@ function validateUsername(
         MIN_USERNAME_LENGTH
     ) {
 
-        return `TÃªn tÃ i khoáº£n pháº£i cÃ³ Ã­t nháº¥t ${MIN_USERNAME_LENGTH} kÃ½ tá»±.`;
+        return `Tên tài khoản phải có ít nhất ${MIN_USERNAME_LENGTH} ký tự.`;
     }
 
 
@@ -403,7 +403,7 @@ function validateUsername(
         MAX_USERNAME_LENGTH
     ) {
 
-        return `TÃªn tÃ i khoáº£n khÃ´ng Ä‘Æ°á»£c vÆ°á»£t quÃ¡ ${MAX_USERNAME_LENGTH} kÃ½ tá»±.`;
+        return `Tên tài khoản không được vượt quá ${MAX_USERNAME_LENGTH} ký tự.`;
     }
 
 
@@ -424,13 +424,13 @@ function validatePassword(
         "string"
     ) {
 
-        return "Vui lÃ²ng nháº­p máº­t kháº©u.";
+        return "Vui lòng nhập mật khẩu.";
     }
 
 
     if (!password) {
 
-        return "Vui lÃ²ng nháº­p máº­t kháº©u.";
+        return "Vui lòng nhập mật khẩu.";
     }
 
 
@@ -439,7 +439,7 @@ function validatePassword(
         MIN_PASSWORD_LENGTH
     ) {
 
-        return `Máº­t kháº©u pháº£i cÃ³ Ã­t nháº¥t ${MIN_PASSWORD_LENGTH} kÃ½ tá»±.`;
+        return `Mật khẩu phải có ít nhất ${MIN_PASSWORD_LENGTH} ký tự.`;
     }
 
 
@@ -448,7 +448,7 @@ function validatePassword(
         MAX_PASSWORD_LENGTH
     ) {
 
-        return `Máº­t kháº©u khÃ´ng Ä‘Æ°á»£c vÆ°á»£t quÃ¡ ${MAX_PASSWORD_LENGTH} kÃ½ tá»±.`;
+        return `Mật khẩu không được vượt quá ${MAX_PASSWORD_LENGTH} ký tự.`;
     }
 
 
@@ -585,7 +585,7 @@ function getAPIErrorMessage(
 
     return (
         fallback ||
-        "ÄÃ£ xáº£y ra lá»—i."
+        "Đã xảy ra lỗi."
     );
 }
 
@@ -682,7 +682,7 @@ async function fetchWithTimeout(
 
 
             throw new Error(
-                "Káº¿t ná»‘i mÃ¡y chá»§ quÃ¡ lÃ¢u. Vui lÃ²ng thá»­ láº¡i."
+                "Kết nối máy chủ quá lâu. Vui lòng thử lại."
             );
         }
 
@@ -693,7 +693,7 @@ async function fetchWithTimeout(
         ) {
 
             throw new Error(
-                "KhÃ´ng thá»ƒ káº¿t ná»‘i Ä‘áº¿n MATH WEB API. HÃ£y kiá»ƒm tra server."
+                "Không thể kết nối đến MATH WEB API. Hãy kiểm tra server."
             );
         }
 
@@ -823,7 +823,7 @@ async function registerUser(
         throw new Error(
             getAPIErrorMessage(
                 data,
-                "ÄÄƒng kÃ½ tháº¥t báº¡i."
+                "Đăng ký thất bại."
             )
         );
     }
@@ -930,7 +930,7 @@ async function loginUser(
         throw new Error(
             getAPIErrorMessage(
                 data,
-                "ÄÄƒng nháº­p tháº¥t báº¡i."
+                "Đăng nhập thất bại."
             )
         );
     }
@@ -988,7 +988,7 @@ async function getCurrentUser() {
     } catch (error) {
 
         console.error(
-            "Kiá»ƒm tra session:",
+            "Kiểm tra session:",
             error
         );
 
@@ -1039,7 +1039,7 @@ async function getCurrentUser() {
     ) {
 
         console.error(
-            "API /api/auth/me khÃ´ng tráº£ vá» user há»£p lá»‡."
+            "API /api/auth/me không trả về user hợp lệ."
         );
 
 
@@ -1142,7 +1142,7 @@ async function restoreLoginSession() {
 
 
         /*
-         * ChÆ°a tá»«ng Ä‘Äƒng nháº­p.
+         * Chưa từng đăng nhập.
          */
 
         if (!token) {
@@ -1152,7 +1152,7 @@ async function restoreLoginSession() {
 
 
         /*
-         * Kiá»ƒm tra token vá»›i server.
+         * Kiểm tra token với server.
          */
 
         const user =
@@ -1160,14 +1160,14 @@ async function restoreLoginSession() {
 
 
         /*
-         * Token há»£p lá»‡.
+         * Token hợp lệ.
          */
 
         if (user) {
 
             /*
-             * Chá»‰ chuyá»ƒn hÆ°á»›ng náº¿u
-             * ngÆ°á»i dÃ¹ng Ä‘ang á»Ÿ login/register.
+             * Chỉ chuyển hướng nếu
+             * người dùng đang ở login/register.
              */
 
             if (
@@ -1183,9 +1183,9 @@ async function restoreLoginSession() {
 
 
         /*
-         * Náº¿u server xÃ¡c nháº­n token
-         * khÃ´ng há»£p lá»‡ thÃ¬ getCurrentUser()
-         * Ä‘Ã£ xÃ³a auth data.
+         * Nếu server xác nhận token
+         * không hợp lệ thì getCurrentUser()
+         * đã xóa auth data.
          */
 
     } finally {
@@ -1371,14 +1371,14 @@ function setupLoginForm() {
                 setButtonLoading(
                     button,
                     true,
-                    "ÄANG ÄÄ‚NG NHáº¬P...",
-                    "ÄÄ‚NG NHáº¬P"
+                    "ĐANG ĐĂNG NHẬP...",
+                    "ĐĂNG NHẬP"
                 );
 
 
                 showMessage(
                     message,
-                    "Äang kiá»ƒm tra tÃ i khoáº£n...",
+                    "Đang kiểm tra tài khoản...",
                     "loading"
                 );
 
@@ -1391,7 +1391,7 @@ function setupLoginForm() {
 
                 showMessage(
                     message,
-                    "ÄÄƒng nháº­p thÃ nh cÃ´ng!",
+                    "Đăng nhập thành công!",
                     "success"
                 );
 
@@ -1408,7 +1408,7 @@ function setupLoginForm() {
             } catch (error) {
 
                 console.error(
-                    "ÄÄƒng nháº­p:",
+                    "Đăng nhập:",
                     error
                 );
 
@@ -1416,7 +1416,7 @@ function setupLoginForm() {
                 showMessage(
                     message,
                     error.message ||
-                    "ÄÄƒng nháº­p tháº¥t báº¡i.",
+                    "Đăng nhập thất bại.",
                     "error"
                 );
 
@@ -1425,7 +1425,7 @@ function setupLoginForm() {
                     button,
                     false,
                     "",
-                    "ÄÄ‚NG NHáº¬P"
+                    "ĐĂNG NHẬP"
                 );
 
 
@@ -1575,7 +1575,7 @@ function setupRegisterForm() {
 
                 showMessage(
                     message,
-                    "Máº­t kháº©u nháº­p láº¡i khÃ´ng khá»›p.",
+                    "Mật khẩu nhập lại không khớp.",
                     "error"
                 );
 
@@ -1601,14 +1601,14 @@ function setupRegisterForm() {
                 setButtonLoading(
                     button,
                     true,
-                    "ÄANG Táº O TÃ€I KHOáº¢N...",
-                    "Táº O TÃ€I KHOáº¢N"
+                    "ĐANG TẠO TÀI KHOẢN...",
+                    "TẠO TÀI KHOẢN"
                 );
 
 
                 showMessage(
                     message,
-                    "Äang táº¡o tÃ i khoáº£n...",
+                    "Đang tạo tài khoản...",
                     "loading"
                 );
 
@@ -1621,7 +1621,7 @@ function setupRegisterForm() {
 
                 showMessage(
                     message,
-                    "Táº¡o tÃ i khoáº£n thÃ nh cÃ´ng!",
+                    "Tạo tài khoản thành công!",
                     "success"
                 );
 
@@ -1638,7 +1638,7 @@ function setupRegisterForm() {
             } catch (error) {
 
                 console.error(
-                    "ÄÄƒng kÃ½:",
+                    "Đăng ký:",
                     error
                 );
 
@@ -1646,7 +1646,7 @@ function setupRegisterForm() {
                 showMessage(
                     message,
                     error.message ||
-                    "ÄÄƒng kÃ½ tháº¥t báº¡i.",
+                    "Đăng ký thất bại.",
                     "error"
                 );
 
@@ -1655,7 +1655,7 @@ function setupRegisterForm() {
                     button,
                     false,
                     "",
-                    "Táº O TÃ€I KHOáº¢N"
+                    "TẠO TÀI KHOẢN"
                 );
 
 

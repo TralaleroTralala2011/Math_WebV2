@@ -3,6 +3,7 @@ from pydantic import BaseModel, Field
 from .config import MAX_COUNT, MAX_TOPICS
 from .engine.service import AIQuestionService
 from .engine.battle import battle_manager
+from .engine.super_bank import SUPER_BANK_STATS
 
 router=APIRouter(prefix="/api/ai",tags=["AI Question Engine"])
 service=AIQuestionService()
@@ -33,7 +34,11 @@ class BattleCreateRequest(BaseModel):
     player2_topics:list[str]=Field(min_length=1,max_length=MAX_TOPICS)
 
 @router.get("/health")
-def health(): return {"ok":True,"service":"ai-question-engine","version":"5.0-additive-problem-generator"}
+def health(): return {"ok":True,"service":"ai-question-engine","version":"6.0-super-bank-plus-problem-generator"}
+
+@router.get("/bank/stats")
+def bank_stats():
+    return {"legacy": "preserved", "super_bank": SUPER_BANK_STATS, "problem_archetypes": "20+ reusable structures"}
 
 @router.get("/knowledge")
 def knowledge(grade:int|None=None): return service.topics(grade)

@@ -43,7 +43,10 @@ class ProblemGenerator:
         problem["archetype_name"] = BY_ID.get(archetype, {}).get("name", archetype)
         problem["problem_mode"] = True
         problem["game_id"] = game_id or ""
-        parts = problem.get("parts", [])[: max(2, min(6, int(requested_parts or 4)))]
+        wanted = max(2, min(6, int(requested_parts or 4)))
+        parts = list(problem.get("parts", []))[:wanted]
+        while len(parts) < wanted:
+            parts.append(self._make_extension_part(problem, parts, len(parts)))
         problem["parts"] = parts
         problem["part_count"] = len(parts)
         problem["question"] = problem.get("title", "Bài toán thực tế")
@@ -68,6 +71,40 @@ class ProblemGenerator:
         if difficulty in {"hard", "expert"}:
             return random.choice(["reverse_result", "hidden_condition", "parameter_change", "error_hunt", "mixed_topics"])
         return random.choice(["multi_stage_real_life", "missing_data", "compare_plans", "schedule"])
+
+    def _make_extension_part(self, problem, parts, index):
+        """Add a genuinely useful extension when the requested part count exceeds a builder's base count."""
+        label = chr(97 + index)
+        archetype = problem.get("archetype", "")
+        last = parts[-1] if parts else {}
+        if archetype == "probability_experiment":
+            text = "Dựa trên kết quả vừa tìm, xác suất biến cố đối của biến cố vừa xét là bao nhiêu?"
+            try:
+                v = Fraction(str(last.get("answer", "0")))
+                answer = _fmt(1 - v)
+            except Exception:
+                answer = "1 - P"
+            solution = f"Dùng công thức biến cố đối: P(Ā)=1-P(A), nên kết quả là {answer}."
+            return self._part(label, text, answer, solution, "short_answer")
+        if archetype in {"geometry_measurement", "coordinate_map"}:
+            text = "Nêu một phép kiểm tra nhanh để xác nhận kết quả hình học vừa tính phù hợp với các dữ kiện của hình."
+            answer = "Thay các độ dài hoặc tọa độ đã tính vào quan hệ hình học ban đầu và kiểm tra hai vế bằng nhau."
+            solution = "Kiểm tra lại bằng định lý hoặc công thức đã dùng, rồi đối chiếu với toàn bộ dữ kiện của hình."
+            return self._part(label, text, answer, solution, "short_answer", diagram=problem.get("diagram"))
+        if archetype in {"production", "missing_data", "schedule"}:
+            text = "Nếu một đại lượng trong dữ kiện thay đổi nhưng các điều kiện còn lại giữ nguyên, cần làm gì trước khi tính lại?"
+            answer = "Lập lại mô hình hoặc phương trình theo dữ kiện mới rồi kiểm tra điều kiện."
+            solution = "Không thay số máy móc vào kết quả cũ; trước hết cập nhật mô hình, sau đó giải và kiểm tra điều kiện."
+            return self._part(label, text, answer, solution, "short_answer")
+        if archetype in {"function_model", "optimization", "sequence_growth", "counting_design"}:
+            text = "Nếu thay đổi một tham số của mô hình, kết quả có cần được tính lại không? Hãy nêu cách làm."
+            answer = "Có; xác định lại mô hình với tham số mới rồi tính và kiểm tra điều kiện."
+            solution = "Tham số mới có thể làm thay đổi kết quả, vì vậy cần cập nhật biểu thức hoặc quy tắc rồi tính lại."
+            return self._part(label, text, answer, solution, "short_answer")
+        text = "Hãy kiểm tra kết quả của phần trước bằng cách đối chiếu với ít nhất một dữ kiện ban đầu."
+        answer = "Thay kết quả vào dữ kiện liên quan và kiểm tra điều kiện ban đầu được thỏa mãn."
+        solution = "Một kết quả hợp lệ phải thỏa mãn dữ kiện hoặc quan hệ đã nêu trong đề; thay ngược để kiểm tra."
+        return self._part(label, text, answer, solution, "short_answer", diagram=problem.get("diagram"))
 
     def _part(self, label, text, answer, solution, ptype="short_answer", distractors=None, diagram=None):
         item = {

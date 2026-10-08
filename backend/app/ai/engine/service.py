@@ -27,18 +27,19 @@ class AIQuestionService:
     def __init__(self):
         self.knowledge=KnowledgeService()
         self.generator=QuestionGenerator(self.knowledge)
-        # Additive problem layer. The legacy QuestionGenerator remains untouched.
+        # Additive multi-part problem layer. The legacy/super-bank engine remains the source for normal questions.
         self.problem_generator=ProblemGenerator(self.knowledge, self.generator)
         self.store=QuestionStore()
         self.recent_families={}
 
     def topics(self,grade=None): return self.knowledge.list_topics(grade)
 
-    def generate_one(self,grade,topic_id,difficulty="medium",question_type="multiple_choice",seen=None,game_id=None,recent_families=None,seen_structures=None,seen_variations=None):
+    def generate_one(self,grade,topic_id,difficulty="medium",question_type="multiple_choice",seen=None,game_id=None,recent_families=None,seen_structures=None,seen_variations=None,seen_archetypes=None):
         if self.knowledge.get(topic_id) is None: raise ValueError("Unknown topic")
         seen=set(seen or set())
         seen_structures=set(seen_structures or set())
         seen_variations=set(seen_variations or set())
+        seen_archetypes=set(seen_archetypes or set())
         last=None
         recent_families = list(recent_families or self.recent_families.get(game_id, []))
 
@@ -54,6 +55,10 @@ class AIQuestionService:
                 if q["fingerprint"] in seen:
                     continue
                 if strict and q.get("structure_fingerprint") in seen_structures:
+                    continue
+                # Within one generated set, avoid repeating the same named
+                # mathematical archetype whenever enough alternatives exist.
+                if strict and q.get("archetype") and q.get("archetype") in seen_archetypes:
                     continue
 
                 self.store.put(q)
@@ -73,7 +78,7 @@ class AIQuestionService:
         # numbers. It makes repeated "same question, different numbers" much
         # harder to slip into one practice set.
         return "|".join(str(q.get(k, "")) for k in (
-            "game_id", "template_family", "generation_style", "context"
+            "game_id", "template_family", "generation_style", "context", "archetype", "topic_group"
         ))
 
     def generate_set(self,grade,topics,count,difficulty="medium",question_type="multiple_choice",history=None,game_id=None):
@@ -84,6 +89,7 @@ class AIQuestionService:
         out=[]; seen=set()
         seen_structures=set()
         seen_variations=set()
+        seen_archetypes=set()
         recent_families=[]
         for item in (history or []):
             if isinstance(item, dict):
@@ -91,6 +97,7 @@ class AIQuestionService:
                 if item.get("fingerprint"): seen.add(item["fingerprint"])
                 if item.get("template_family"): recent_families.append(item["template_family"])
                 if item.get("variation_key"): seen_variations.add(item["variation_key"])
+                if item.get("archetype"): seen_archetypes.add(item["archetype"])
         for i in range(count):
             # Shuffle topic order once so selected topics do not always appear
             # in the exact same repeating sequence.
@@ -99,9 +106,11 @@ class AIQuestionService:
             topic=topic_order[i%len(topic_order)] if len(topic_order)>1 else topic_order[0]
             level=current
             if count>=8 and i>=count*0.65: level={"easy":"medium","medium":"hard","hard":"expert","expert":"expert"}[current]
-            q=self.generate_one(grade,topic,level,question_type,seen,game_id,recent_families[-10:],seen_structures,seen_variations)
+            q=self.generate_one(grade,topic,level,question_type,seen,game_id,recent_families[-10:],seen_structures,seen_variations,seen_archetypes)
             q["variation_key"]=self._variation_key(q)
-            seen.add(q["fingerprint"]); seen_structures.add(q.get("structure_fingerprint")); seen_variations.add(q["variation_key"]); out.append(q)
+            seen.add(q["fingerprint"]); seen_structures.add(q.get("structure_fingerprint")); seen_variations.add(q["variation_key"]);
+            if q.get("archetype"): seen_archetypes.add(q["archetype"])
+            out.append(q)
             if q.get("template_family"): recent_families.append(q["template_family"])
         return {"set_id":uuid.uuid4().hex,"grade":grade,"topics":topics,"difficulty":current,"count":len(out),"game_id":game_id,"questions":out}
 
@@ -119,7 +128,7 @@ class AIQuestionService:
             problem=None
             for _ in range(40):
                 candidate=self.problem_generator.generate(grade,topic,current,problem_parts,"mixed",game_id)
-                signature=(candidate.get("archetype"), candidate.get("title"), candidate.get("context"))
+                signature=(candidate.get("archetype"),candidate.get("title"),candidate.get("context"))
                 if signature not in seen_titles:
                     problem=candidate
                     seen_titles.add(signature)
