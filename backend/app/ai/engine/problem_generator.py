@@ -28,6 +28,34 @@ class ProblemGenerator:
         self.knowledge = knowledge
         self.question_generator = question_generator
 
+    @staticmethod
+    def validate_problem(problem):
+        """Validate the complete problem before any part is sent to the client."""
+        errors = []
+        if not isinstance(problem, dict) or not problem.get("title") or not problem.get("context"):
+            errors.append("missing title/context")
+        parts = problem.get("parts", []) if isinstance(problem, dict) else []
+        if not isinstance(parts, list) or not 2 <= len(parts) <= 6:
+            errors.append("part count must be between 2 and 6")
+            parts = []
+        labels = [str(p.get("part", "")) for p in parts]
+        if len(set(labels)) != len(labels):
+            errors.append("duplicate part labels")
+        for i, part in enumerate(parts):
+            if not part.get("question") or part.get("answer") is None or not part.get("solution"):
+                errors.append(f"part {i+1} is missing question/answer/solution")
+            qtype = part.get("question_type")
+            if qtype not in {"multiple_choice", "short_answer", "true_false"}:
+                errors.append(f"part {i+1} has unsupported question type")
+            if qtype == "multiple_choice":
+                opts = part.get("options", [])
+                values = [str(o.get("value")) for o in opts if isinstance(o, dict)]
+                if len(opts) != 4 or len(values) != 4 or len(set(values)) != 4:
+                    errors.append(f"part {i+1} must have four unique choices")
+                if str(part.get("answer")) not in values:
+                    errors.append(f"part {i+1} answer key is not one of the choices")
+        return errors
+
     def generate(self, grade, topic_id, difficulty="medium", requested_parts=4, question_type="mixed", game_id=None):
         difficulty = str(difficulty or "medium").lower()
         archetype = self._choose_archetype(topic_id, difficulty)
@@ -50,35 +78,54 @@ class ProblemGenerator:
         problem["parts"] = parts
         problem["part_count"] = len(parts)
         problem["question"] = problem.get("title", "Bài toán thực tế")
+        errors = self.validate_problem(problem)
+        if errors:
+            raise ValueError("Invalid generated problem: " + "; ".join(errors))
         return problem
 
     def _choose_archetype(self, topic_id, difficulty):
+        """Choose a coherent problem family that matches the selected curriculum topic.
+
+        Avoid the old generic fallback that stitched unrelated standalone questions
+        under one story. Every returned family has a shared data model.
+        """
         t = str(topic_id).lower()
-        if "xac_suat" in t or "prob" in t:
-            return random.choice(["probability_experiment", "experiment_to_model", "missing_data"])
-        if "thong_ke" in t or "statistics" in t:
-            return random.choice(["statistics_survey", "data_table_analysis", "missing_data"])
-        if any(k in t for k in ("hinh", "he_thuc_luong", "duong_tron", "toa_do", "mat_phang", "the_tich", "goc_khoang")):
-            return random.choice(["geometry_measurement", "coordinate_map", "optimization"])
-        if any(k in t for k in ("to_hop", "hoan_vi", "chinh_hop", "quy_tac_dem")):
-            return random.choice(["counting_design", "compare_plans", "probability_experiment"])
-        if "day_so" in t or "cap_so" in t:
+        if "bien_co_doc_lap" in t:
+            return "probability_selection"
+        if any(k in t for k in ("xac_suat", "probability", "xac-suat", "to_hop_xac_suat")):
+            return random.choice(["probability_selection", "probability_experiment"])
+        if any(k in t for k in ("thong_ke", "statistics", "du_lieu")):
+            return random.choice(["statistics_survey", "data_table_analysis"])
+        # Counting terms must be checked before geometry: e.g. "chinh_hop"
+        # contains the character sequence "hinh" but is not a geometry topic.
+        if any(k in t for k in ("to_hop", "hoan_vi", "chinh_hop", "quy_tac_dem", "dem")):
+            return "counting_design"
+        if any(k in t for k in ("hinh", "he_thuc_luong", "duong_tron", "toa_do", "mat_phang", "the_tich", "goc_khoang", "vector", "khong_gian")):
+            return random.choice(["geometry_measurement", "coordinate_map"])
+        if any(k in t for k in ("day_so", "cap_so", "sequence")):
             return "sequence_growth"
-        if "ham_so" in t or "dao_ham" in t or "tich_phan" in t:
-            return random.choice(["function_model", "optimization", "parameter_change"])
-        if "phuong_trinh" in t or "he_" in t or "bat_phuong_trinh" in t:
-            return random.choice(["production", "schedule", "missing_data", "hidden_condition"])
+        if any(k in t for k in ("ham_so", "dao_ham", "tich_phan", "parabol", "function")):
+            return random.choice(["function_model", "optimization"])
+        if any(k in t for k in ("phuong_trinh", "he_", "bat_phuong_trinh", "equation", "inequality")):
+            return random.choice(["production", "missing_data", "schedule"])
         if difficulty in {"hard", "expert"}:
-            return random.choice(["reverse_result", "hidden_condition", "parameter_change", "error_hunt", "mixed_topics"])
-        return random.choice(["multi_stage_real_life", "missing_data", "compare_plans", "schedule"])
+            return random.choice(["compare_plans", "optimization", "missing_data", "function_model"])
+        return random.choice(["compare_plans", "missing_data", "schedule", "production"])
 
     def _make_extension_part(self, problem, parts, index):
         """Add a genuinely useful extension when the requested part count exceeds a builder's base count."""
         label = chr(97 + index)
         archetype = problem.get("archetype", "")
         last = parts[-1] if parts else {}
-        if archetype == "probability_experiment":
-            text = "Dựa trên kết quả vừa tìm, xác suất biến cố đối của biến cố vừa xét là bao nhiêu?"
+        if archetype in {"probability_experiment", "probability_selection"}:
+            if index >= 5:
+                text = "Dựa vào hai biến cố đối vừa xét, tổng xác suất của chúng bằng bao nhiêu?"
+                return self._part(label, text, "1", "Hai biến cố đối có tổng xác suất bằng 1.", "short_answer")
+            text = (
+                "Trong cùng điều kiện ở phần d, tính xác suất để biến cố đối của biến cố vừa xét xảy ra."
+                if archetype == "probability_selection"
+                else "Dựa trên kết quả vừa tìm, xác suất biến cố đối của biến cố vừa xét là bao nhiêu?"
+            )
             try:
                 v = Fraction(str(last.get("answer", "0")))
                 answer = _fmt(1 - v)
@@ -120,12 +167,34 @@ class ProblemGenerator:
         if diagram:
             item["diagram"] = diagram
         if ptype == "multiple_choice":
-            raw = [answer] + list(distractors or [])
-            item["options"] = list(dict.fromkeys([_fmt(x) for x in raw]))[:4]
-            while len(item["options"]) < 4:
-                candidate = _fmt(answer) + f" ({len(item['options'])})"
-                if candidate not in item["options"]:
-                    item["options"].append(candidate)
+            correct = _fmt(answer)
+            raw = [correct] + [_fmt(x) for x in (distractors or [])]
+            labels = []
+            for candidate in raw:
+                if candidate not in labels:
+                    labels.append(candidate)
+            # Keep the correct value exactly once and use the same value sent by
+            # the frontend as the server-side answer key.
+            labels = [correct] + [x for x in labels if x != correct]
+            # Fill missing distractors with meaningful numeric near-misses rather
+            # than UI-looking placeholders such as "Phương án 4".
+            if len(labels) < 4:
+                try:
+                    from fractions import Fraction
+                    base = Fraction(str(correct))
+                    candidates = [_fmt(base + 1), _fmt(base - 1), _fmt(base * 2), _fmt(base / 2), _fmt(base + Fraction(1, 2))]
+                except Exception:
+                    candidates = []
+                if not candidates:
+                    candidates = ["Không đủ dữ kiện", "Không thỏa điều kiện", "Không xác định"]
+                for candidate in candidates:
+                    if candidate not in labels:
+                        labels.append(candidate)
+                    if len(labels) == 4:
+                        break
+            labels = labels[:4]
+            random.shuffle(labels)
+            item["options"] = [{"value": x, "label": x} for x in labels]
         return item
 
     def _wrap(self, title, context, parts, data=None, diagram=None):
@@ -157,6 +226,49 @@ class ProblemGenerator:
             self._part("e", "Nếu gọi C là biến cố đối của B, P(C) bằng bao nhiêu?", _fmt(1 - p_sum), f"P(C)=1-P(B)=1-{_fmt(p_sum)}={_fmt(1-p_sum)}.", "short_answer"),
         ]
         return self._wrap("Bài toán xác suất nhiều bước", context, parts)
+
+    def _build_probability_selection(self, grade, topic, difficulty):
+        """One textbook-style real-life scenario with dependent subquestions."""
+        from math import comb
+        a_count = random.randint(6, 9)
+        b_count = random.randint(4, 7)
+        chosen = random.choice([3, 4])
+        total_students = a_count + b_count
+        total_groups = comb(total_students, chosen)
+        all_a = comb(a_count, chosen) if a_count >= chosen else 0
+        both_classes = total_groups - comb(a_count, chosen) - comb(b_count, chosen)
+        # Conditional probability: given at least one B student, exactly chosen-1 are A.
+        condition_total = total_groups - all_a
+        exact_a = comb(a_count, chosen - 1) * comb(b_count, 1)
+        conditional = Fraction(exact_a, condition_total) if condition_total else Fraction(0, 1)
+        context = (
+            f"Một trường THPT tổ chức hội thao với {total_students} học sinh, gồm "
+            f"{a_count} học sinh lớp 11A và {b_count} học sinh lớp 11B. "
+            f"Ban tổ chức chọn ngẫu nhiên {chosen} học sinh để tham gia một hoạt động. "
+            "Giả sử mọi nhóm học sinh có cùng khả năng được chọn."
+        )
+        parts = [
+            self._part("a", f"Có bao nhiêu cách chọn {chosen} học sinh từ toàn bộ nhóm?", total_groups,
+                       f"Có {total_students} học sinh và không xét thứ tự, nên số cách là C({total_students},{chosen})={total_groups}.",
+                       "short_answer"),
+            self._part("b", f"Tính xác suất để cả {chosen} học sinh đều thuộc lớp 11A.",
+                       _fmt(Fraction(all_a, total_groups)),
+                       f"Số nhóm toàn lớp 11A là C({a_count},{chosen})={all_a}; do đó P={all_a}/{total_groups}={_fmt(Fraction(all_a,total_groups))}.",
+                       "multiple_choice", [_fmt(Fraction(comb(a_count, chosen-1), total_groups)), _fmt(Fraction(comb(b_count, chosen), total_groups)), _fmt(Fraction(a_count, total_students))]),
+            self._part("c", "Tính xác suất để nhóm được chọn có học sinh của cả hai lớp.",
+                       _fmt(Fraction(both_classes, total_groups)),
+                       f"Loại nhóm chỉ thuộc 11A và chỉ thuộc 11B: {total_groups}-C({a_count},{chosen})-C({b_count},{chosen})={both_classes}; xác suất là {both_classes}/{total_groups}={_fmt(Fraction(both_classes,total_groups))}.",
+                       "short_answer"),
+            self._part("d", f"Biết nhóm được chọn có ít nhất một học sinh lớp 11B. Tính xác suất để nhóm có đúng {chosen-1} học sinh lớp 11A.",
+                       _fmt(conditional),
+                       f"Không gian điều kiện có {total_groups}-{all_a}={condition_total} nhóm. Số nhóm có đúng {chosen-1} học sinh 11A và 1 học sinh 11B là C({a_count},{chosen-1})·C({b_count},1)={exact_a}; xác suất có điều kiện là {exact_a}/{condition_total}={_fmt(conditional)}.",
+                       "short_answer"),
+        ]
+        return self._wrap("Bài toán thực tế: chọn học sinh và xác suất", context, parts,
+                          {"class_11a": a_count, "class_11b": b_count, "group_size": chosen,
+                           "total_groups": total_groups, "all_a_groups": all_a,
+                           "both_classes_groups": both_classes, "conditional_favorable": exact_a,
+                           "conditional_total": condition_total})
 
     def _build_missing_data(self, grade, topic, difficulty):
         x, y = random.randint(2, 9), random.randint(3, 12)
@@ -329,20 +441,18 @@ class ProblemGenerator:
         return self._wrap("Bài toán so sánh phương án thực tế", context, parts)
 
     def _build_multi_stage_real_life(self, grade, topic, difficulty):
-        # Generic real-world shell.  The mathematical core is delegated to the
-        # legacy generator so the old bank remains a source of verified content.
-        generated = []
-        for idx, ptype in enumerate(["multiple_choice", "short_answer", "short_answer", "multiple_choice"]):
-            q = self.question_generator.generate(grade, topic, difficulty, ptype)
-            q = dict(q)
-            q["part"] = chr(97 + idx)
-            generated.append(q)
-        name = self.knowledge.get(topic).get("name", topic)
-        context = f"Một tình huống thực tế được mô hình hóa bằng kiến thức {name}. Dữ kiện được cho theo từng bước để người học phải kết nối kết quả giữa các phần."
-        parts = []
-        for q in generated:
-            parts.append(self._part(q["part"], q["question"], q["answer"], q.get("solution", ""), q.get("question_type", "short_answer"), q.get("options", []), q.get("diagram")))
-        return self._wrap(f"Bài toán vận dụng: {name}", context, parts)
+        # Safe coherent fallback: select one complete model, never concatenate
+        # unrelated legacy questions under a made-up common context.
+        t = str(topic).lower()
+        if any(k in t for k in ("xac_suat", "prob")):
+            return self._build_probability_selection(grade, topic, difficulty)
+        if any(k in t for k in ("thong_ke", "statistics", "du_lieu")):
+            return self._build_statistics_survey(grade, topic, difficulty)
+        if any(k in t for k in ("hinh", "toa_do", "vector", "duong_tron")):
+            return self._build_coordinate_map(grade, topic, difficulty)
+        if any(k in t for k in ("ham_so", "parabol", "dao_ham", "tich_phan")):
+            return self._build_function_model(grade, topic, difficulty)
+        return self._build_missing_data(grade, topic, difficulty)
 
     _build_experiment_to_model = _build_probability_experiment
     _build_data_table_analysis = _build_statistics_survey

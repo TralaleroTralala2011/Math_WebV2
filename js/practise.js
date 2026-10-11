@@ -3065,6 +3065,8 @@
             const syncProblemMode = function () {
                 const enabled = problemMode.value === "true";
                 if (problemPartsField) problemPartsField.style.display = enabled ? "" : "none";
+                const countLabel = document.querySelector('label[for="mathwebAiCount"]');
+                if (countLabel) countLabel.textContent = enabled ? "Số bài toán" : "Số câu";
                 aiCurrentSettings.problem_mode = enabled;
             };
             problemMode.addEventListener("change", syncProblemMode);
@@ -3225,7 +3227,9 @@
 
 
         renderAILoading(
-            "AI đang tạo bộ câu hỏi..."
+            problemMode
+                ? "AI đang xây dựng các bài toán nhiều phần..."
+                : "AI đang tạo bộ câu hỏi..."
         );
 
 
