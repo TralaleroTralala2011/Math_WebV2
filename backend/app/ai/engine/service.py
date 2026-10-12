@@ -7,6 +7,9 @@ from .validator import validate, ValidationError, fingerprint
 from .difficulty import normalize
 from .adaptive import next_difficulty
 from .feedback import feedback
+from .explanation import build_detailed_solution
+from .topic_expansion import geometry_diagram
+from .question_history import QuestionHistory
 
 class QuestionStore:
     def __init__(self): self.items={}
@@ -31,6 +34,8 @@ class AIQuestionService:
         self.problem_generator=ProblemGenerator(self.knowledge, self.generator)
         self.store=QuestionStore()
         self.recent_families={}
+        # Persistent ledger prevents exact repeats across separate practice sets and restarts.
+        self.question_history = QuestionHistory()
 
     def topics(self,grade=None): return self.knowledge.list_topics(grade)
 
@@ -40,6 +45,11 @@ class AIQuestionService:
         seen_structures=set(seen_structures or set())
         seen_variations=set(seen_variations or set())
         seen_archetypes=set(seen_archetypes or set())
+        # Recent archetypes are avoided first, while exact fingerprints are blocked
+        # across sessions by the persistent ledger.
+        seen_archetypes.update(self.question_history.recent_archetypes(topic_id, limit=8))
+        seen_structures.update(self.question_history.recent_structures(topic_id, limit=10))
+        seen_variations.update(self.question_history.recent_variations(topic_id, limit=10))
         last=None
         recent_families = list(recent_families or self.recent_families.get(game_id, []))
 
@@ -52,16 +62,20 @@ class AIQuestionService:
                 except ValidationError as e: last=e; continue
 
                 variation = self._variation_key(q)
-                if q["fingerprint"] in seen:
+                if q["fingerprint"] in seen or self.question_history.question_seen(q.get("question", "")):
                     continue
                 if strict and q.get("structure_fingerprint") in seen_structures:
+                    continue
+                if strict and variation in seen_variations:
                     continue
                 # Within one generated set, avoid repeating the same named
                 # mathematical archetype whenever enough alternatives exist.
                 if strict and q.get("archetype") and q.get("archetype") in seen_archetypes:
                     continue
 
+                q["variation_key"] = variation
                 self.store.put(q)
+                self.question_history.record_question(q)
                 if game_id:
                     bucket=self.recent_families.setdefault(game_id, [])
                     family=q.get("template_family")
@@ -83,6 +97,8 @@ class AIQuestionService:
 
     def generate_set(self,grade,topics,count,difficulty="medium",question_type="multiple_choice",history=None,game_id=None):
         if count<1 or count>MAX_COUNT: raise ValueError("count out of range")
+        if question_type not in {"multiple_choice", "short_answer", "true_false", "mixed"}:
+            raise ValueError("Unsupported question type")
         topics=self.knowledge.normalize_topics(grade,topics)
         if not topics: raise ValueError("No valid topics")
         current=next_difficulty(history,normalize(difficulty)) if history else normalize(difficulty)
@@ -91,6 +107,8 @@ class AIQuestionService:
         seen_variations=set()
         seen_archetypes=set()
         recent_families=[]
+        mixed_types=["multiple_choice", "short_answer", "true_false"]
+        random.shuffle(mixed_types)
         for item in (history or []):
             if isinstance(item, dict):
                 if item.get("structure_fingerprint"): seen_structures.add(item["structure_fingerprint"])
@@ -106,8 +124,13 @@ class AIQuestionService:
             topic=topic_order[i%len(topic_order)] if len(topic_order)>1 else topic_order[0]
             level=current
             if count>=8 and i>=count*0.65: level={"easy":"medium","medium":"hard","hard":"expert","expert":"expert"}[current]
-            q=self.generate_one(grade,topic,level,question_type,seen,game_id,recent_families[-10:],seen_structures,seen_variations,seen_archetypes)
+            item_type = mixed_types[i % len(mixed_types)] if question_type == "mixed" else question_type
+            q=self.generate_one(grade,topic,level,item_type,seen,game_id,recent_families[-10:],seen_structures,seen_variations,seen_archetypes)
             q["variation_key"]=self._variation_key(q)
+            # Provide a structured, browser-rendered diagram for geometry questions.
+            diagram = geometry_diagram(topic, q.get("question", ""), q.get("answer", ""))
+            if diagram:
+                q["diagram"] = diagram
             seen.add(q["fingerprint"]); seen_structures.add(q.get("structure_fingerprint")); seen_variations.add(q["variation_key"]);
             if q.get("archetype"): seen_archetypes.add(q["archetype"])
             out.append(q)
@@ -129,12 +152,15 @@ class AIQuestionService:
             for _ in range(40):
                 candidate=self.problem_generator.generate(grade,topic,current,problem_parts,"mixed",game_id)
                 signature=(candidate.get("archetype"),candidate.get("title"),candidate.get("context"))
-                if signature not in seen_titles:
+                persistent_signature = " | ".join(str(x or "") for x in signature)
+                if signature not in seen_titles and not self.question_history.problem_seen(persistent_signature):
                     problem=candidate
                     seen_titles.add(signature)
                     break
             if problem is None:
-                problem=self.problem_generator.generate(grade,topic,current,problem_parts,"mixed",game_id)
+                # Never silently return a repeated scenario after exhausting retries.
+                raise RuntimeError("Could not generate a new unique problem after repeated attempts; try another topic or difficulty.")
+            self.question_history.record_problem(topic, grade, current, str(problem.get("archetype", "")), " | ".join(str(problem.get(k, "") or "") for k in ("archetype", "title", "context")))
             problem_id=problem["id"]
             stored_parts=[]
             for part in problem.get("parts",[]):
@@ -175,14 +201,19 @@ class AIQuestionService:
         q=self.store.get(qid)
         if not q: raise KeyError("question_expired_or_not_found")
         correct=self._check(q,user_answer)
+        raw_solution = q.get("solution", q.get("explanation", ""))
+        detailed_solution = build_detailed_solution(
+            q.get("question", ""), raw_solution, q.get("answer"),
+            q.get("topic", ""), q.get("game_id")
+        )
         return {
             "question_id": qid,
             "correct": correct,
             "feedback": feedback(correct),
-            # Always return the solution, including when the student is correct.
+            # Always return a student-friendly, stepwise solution after answering.
             "correct_answer": q["answer"],
-            "solution": q.get("solution", q.get("explanation", "")),
-            "explanation": q.get("explanation", q.get("solution", "")),
+            "solution": detailed_solution,
+            "explanation": detailed_solution,
         }
 
     def _check(self,q,user_answer):

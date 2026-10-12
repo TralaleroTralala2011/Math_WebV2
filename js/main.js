@@ -953,7 +953,7 @@ function goToPractice() {
     ) {
 
         window.location.href =
-            "practice.html";
+            "practise.html";
 
     } else {
 
@@ -1084,7 +1084,7 @@ const currentPage =
 ========================================================= */
 
 if (
-    currentPage === "practice.html"
+    (currentPage === "practise.html" || currentPage === "practice.html")
 ) {
 
     if (

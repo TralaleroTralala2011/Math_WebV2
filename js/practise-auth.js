@@ -12,7 +12,7 @@
 
 })();/* =========================================================
    MATH WEB - PRACTICE AUTH
-   Protect practice.html with backend authentication
+   Protect the practise page with backend authentication
 ========================================================= */
 
 (function () {
@@ -46,7 +46,7 @@
 
 
     const PRACTICE_PAGE =
-        "practice.html";
+        "practise.html";
 
 
     const REQUEST_TIMEOUT =
@@ -475,7 +475,7 @@
     async function authenticatePracticePage() {
 
         /*
-           Chỉ bảo vệ practice.html.
+           Chỉ bảo vệ trang practise.
         */
 
         const currentPage =
@@ -483,8 +483,8 @@
 
 
         if (
-            currentPage !==
-            PRACTICE_PAGE
+            currentPage !== PRACTICE_PAGE &&
+            currentPage !== "practice.html"
         ) {
 
             return;

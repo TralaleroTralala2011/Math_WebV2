@@ -1,6 +1,25 @@
-MATH WEB FINAL 100P + UNIVERSAL GAME STANDARD
-Version: 6.1-universal-game-standard
+MATH WEB UNIFIED COMPLETE
+Version: 6.2-unified-gameplay-ai
 - 92 knowledge topics
-- 3 universal games per topic
-- Legacy game HTML preserved as reference
-- AI topic aliases normalized
+- 3 separate HTML games per topic (276 individual game pages)
+- Mixed AI question types: multiple choice, short answer, true/false
+- Rotating internal difficulty; no in-game easy/medium/hard selector
+- Progress scoring: correct +5, wrong -1, minimum 0, completion at 100
+- Manual review pause after answers with detailed solution feedback
+- Structured geometry diagram rendering
+- Animated completion celebration and persistent per-game local records
+- Existing authentication, battle, chat, account, friends, notifications, and navigation retained
+
+AI question-engine additive update (2026-10):
+- Persistent exact-question fingerprint ledger backed by SQLite.
+- Recent archetypes are deprioritized per topic to improve variety.
+- Optional mixed question mode rotates multiple-choice, short-answer and true/false.
+- Multi-part scenario history blocks repeated scenario signatures.
+- Existing UI and game pages retained.
+
+Geometry AI curriculum expansion (2026-10):
+- Added original geometry archetypes for grades 10, 11, and 12.
+- Differentiated foundational, intermediate, and advanced geometry tasks.
+- Expanded triangles, vectors, coordinate geometry, circles, transformations, spatial relations, Oxyz, spheres, distances, and solid volumes.
+- Added geometry curriculum coverage catalog and regression tests.
+- Existing HTML/CSS and all user-facing interfaces remain unchanged.

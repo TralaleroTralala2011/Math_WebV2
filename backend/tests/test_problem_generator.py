@@ -1,14 +1,28 @@
 """Regression tests for MATH WEB's additive multi-part problem mode."""
 import unittest
+import os
+import tempfile
 from math import comb
 
 from app.ai.engine.service import AIQuestionService
+from app.ai.engine.question_history import QuestionHistory
 
 
 class ProblemGeneratorTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
+        cls._old_db_path = os.environ.get("MATHWEB_DB_PATH")
+        cls._temp_dir = tempfile.TemporaryDirectory(prefix="mathweb-ai-tests-")
+        os.environ["MATHWEB_DB_PATH"] = os.path.join(cls._temp_dir.name, "test.db")
         cls.service = AIQuestionService()
+
+    @classmethod
+    def tearDownClass(cls):
+        if cls._old_db_path is None:
+            os.environ.pop("MATHWEB_DB_PATH", None)
+        else:
+            os.environ["MATHWEB_DB_PATH"] = cls._old_db_path
+        cls._temp_dir.cleanup()
 
     def test_curriculum_topics_generate_complete_problems(self):
         count = 0
@@ -52,6 +66,34 @@ class ProblemGeneratorTests(unittest.TestCase):
             problem = self.service.problem_generator.generate(11, "xac_suat_11", "medium", count)
             self.assertEqual(len(problem["parts"]), count)
             self.assertEqual([p["part"] for p in problem["parts"]], list("abcdef")[:count])
+
+    def test_mixed_question_set_contains_multiple_answer_modes(self):
+        result = self.service.generate_set(11, ["xac_suat_11"], 9, "medium", "mixed")
+        kinds = {q["question_type"] for q in result["questions"]}
+        self.assertEqual(kinds, {"multiple_choice", "short_answer", "true_false"})
+
+    def test_exact_question_history_persists_and_blocks_repeats(self):
+        history = QuestionHistory()
+        item = {
+            "question": "Cho f(x)=x^2. Tính f(3).",
+            "topic": "ham_so",
+            "grade": 10,
+            "difficulty": "easy",
+            "structure_fingerprint": "test-structure",
+            "archetype": "function_evaluate",
+        }
+        self.assertFalse(history.question_seen(item["question"]))
+        history.record_question(item)
+        self.assertTrue(history.question_seen(item["question"]))
+        # A fresh history object represents a new request / service instance.
+        self.assertTrue(QuestionHistory().question_seen(item["question"]))
+
+    def test_problem_history_blocks_repeated_scenario_signature(self):
+        history = QuestionHistory()
+        signature = "probability_selection | Bài toán xác suất | Một lớp có 10 học sinh."
+        self.assertFalse(history.problem_seen(signature))
+        history.record_problem("xac_suat_11", 11, "medium", "probability_selection", signature)
+        self.assertTrue(QuestionHistory().problem_seen(signature))
 
     def test_multiple_choice_server_accepts_displayed_correct_value(self):
         problem = self.service.problem_generator.generate(11, "xac_suat_11", "medium", 4)

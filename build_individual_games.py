@@ -112,7 +112,7 @@ for k in knowledge:
         t=re.sub(r'<p class="desc">.*?</p>', f'<p class="desc">Game <b>{html.escape(game_title)}</b> theo kiến thức <b>{html.escape(k["name"])}</b>, giữ nguyên giao diện và cơ chế của game gốc.</p>', t, count=1, flags=re.S)
         # Fix relative links for depth games/knowledge/<slug>/file.html
         t=t.replace('src="../../js/api-config.js"','src="../../../js/api-config.js"')
-        t=t.replace('href="../../practice.html"','href="../../../practise.html"')
+        t=t.replace('href="../../../practise.html"','href="../../../practise.html"')
         # Replace GAME metadata exactly. Re-find the marker after all prior text/path edits.
         engine=cfg.get('engine', family)
         newcfg={'title':game_title,'topic':k['name'],'topicId':k['id'],'grade':k['grade'],'difficulty':level_name(k),'engine':engine,'sourceTemplate':src_rel,'knowledgeId':k['id']}

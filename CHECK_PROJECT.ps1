@@ -1,8 +1,17 @@
 $ErrorActionPreference = 'Stop'
 Write-Host '=== MATH WEB PREFLIGHT ===' -ForegroundColor Cyan
 if (-not (Test-Path '.\backend\app\main.py')) { throw 'Missing backend/app/main.py' }
+if (-not (Test-Path '.\backend\requirements.txt')) { throw 'Missing backend/requirements.txt' }
 if (-not (Test-Path '.\practise.html')) { throw 'Missing practise.html' }
 if (-not (Test-Path '.\js\api-config.js')) { throw 'Missing js/api-config.js' }
+$gamePages = Get-ChildItem '.\games\knowledge' -Recurse -Filter '*.html'
+if ($gamePages.Count -ne 276) { throw "Expected 276 individual knowledge game pages, found $($gamePages.Count)" }
+$legacySelectors = Select-String -Path ($gamePages.FullName) -Pattern '<div class="levels">' -SimpleMatch -ErrorAction SilentlyContinue
+if ($legacySelectors) { throw 'A game page still contains the old difficulty selector.' }
+foreach ($gamePage in $gamePages) {
+  $content = Get-Content $gamePage.FullName -Raw
+  if ($content -notmatch 'id="nextQuestion"' -or $content -notmatch 'id="diagram"' -or $content -notmatch 'id="problemContext"') { throw "Unified game controls missing in $($gamePage.FullName)" }
+}
 if (-not (Test-Path '.\backend\app\ai\engine\problem_generator.py')) { throw 'Missing problem generator' }
 if (-not (Test-Path '.\backend\app\ai\engine\geometry_diagrams.py')) { throw 'Missing geometry generator' }
 $py = Get-Command python -ErrorAction SilentlyContinue

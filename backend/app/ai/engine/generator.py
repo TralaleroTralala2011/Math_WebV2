@@ -8,6 +8,7 @@ from .explanation import build_detailed_solution
 from .distractor_engine import DistractorEngine
 from .extended_bank import generate as generate_extended
 from .super_bank import generate as generate_super
+from .geometry_curriculum import generate as generate_geometry_curriculum
 from ..config import KNOWLEDGE_DIR
 
 class QuestionGenerator:
@@ -67,6 +68,19 @@ class QuestionGenerator:
                     q["question"] = f"Sau khi phân tích dữ kiện, {q['question'][0].lower() + q['question'][1:]}"
                 elif style == "theory_check" and q.get("question"):
                     q["question"] = f"Kiểm tra kiến thức: {q['question']}"
+        if q is None:
+            # Geometry uses a grade-aware, three-tier curriculum bank first.
+            # This is additive and leaves the legacy UI, game banks and other topics untouched.
+            q = generate_geometry_curriculum(grade, topic_id, difficulty)
+            # Prefer a different geometry archetype when the current set has used one recently.
+            # This is a bounded retry; persistent exact-question history remains the final guard.
+            if q is not None and recent_families:
+                for _ in range(5):
+                    if q.get("archetype") not in recent_families:
+                        break
+                    candidate = generate_geometry_curriculum(grade, topic_id, difficulty)
+                    if candidate is not None:
+                        q = candidate
         if q is None:
             # SUPER BANK is the new structure-first layer.  It is additive: the
             # original generator, game bank and template bank remain intact.

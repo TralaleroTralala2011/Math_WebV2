@@ -3,7 +3,7 @@ setlocal
 cd /d "%~dp0"
 
 echo ========================================
-echo MATH WEB FINAL 100P - GITHUB UPDATE
+echo MATH WEB UNIFIED COMPLETE - GITHUB UPDATE
 echo ========================================
 
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0CHECK_PROJECT.ps1"
@@ -39,7 +39,7 @@ if not errorlevel 1 (
   exit /b 0
 )
 
-git commit -m "Upgrade MATH WEB AI problem generator"
+git commit -m "Upgrade unified gameplay and AI question engine"
 if errorlevel 1 goto :fail
 
 git push origin main
