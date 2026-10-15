@@ -45,6 +45,26 @@ class ProblemGeneratorTests(unittest.TestCase):
                 count += 1
         self.assertGreaterEqual(count, 80)
 
+    def test_circle_boss_problems_cover_inscribed_rectangle_and_triangle(self):
+        seen = set()
+        for _ in range(12):
+            problem = self.service.problem_generator.generate(10, "duong_tron", "hard", 4, game_id="duong_tron_Tiep_tuyen_stage3")
+            self.assertEqual(problem["archetype"], "circle_geometry_challenge")
+            self.assertEqual(len(problem["parts"]), 4)
+            self.assertTrue(problem["context"])
+            self.assertTrue(problem.get("diagram"))
+            for part in problem["parts"]:
+                self.assertTrue(part["question"])
+                self.assertTrue(part["solution"])
+                self.assertIsNotNone(part["answer"])
+                if part["question_type"] == "multiple_choice":
+                    values = [str(option["value"]) for option in part["options"]]
+                    self.assertEqual(len(values), 4)
+                    self.assertEqual(len(set(values)), 4)
+                    self.assertIn(str(part["answer"]), values)
+            seen.add("rectangle" if "chữ nhật" in problem["title"].lower() else "triangle")
+        self.assertEqual(seen, {"rectangle", "triangle"})
+
     def test_probability_selection_counts(self):
         for _ in range(100):
             problem = self.service.problem_generator._build_probability_selection(11, "xac_suat_11", "medium")

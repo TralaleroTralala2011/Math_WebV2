@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import os
 import sqlite3
+import threading
 import time
 from contextlib import contextmanager
 from pathlib import Path
@@ -14,12 +15,30 @@ from pathlib import Path
 from .validator import fingerprint
 
 
+_SCHEMA_LOCK = threading.Lock()
+_SCHEMA_READY: set[str] = set()
+
+
 def _database_path() -> Path:
+    """Use a dedicated SQLite file so AI history writes never lock matchmaking.
+
+    Matchmaking intentionally holds a short transaction while it claims queue
+    entries. Writing the AI anti-repeat ledger to the same SQLite file from
+    inside that flow caused ``database is locked`` when the second player joined.
+    The separate ledger remains persistent across restarts and can be relocated
+    independently for deployments with persistent disks.
+    """
+    explicit = os.getenv("MATHWEB_AI_HISTORY_DB_PATH")
+    if explicit:
+        return Path(explicit).expanduser()
+
     configured = os.getenv("MATHWEB_DB_PATH")
     if configured:
-        return Path(configured).expanduser()
-    # backend/app/ai/engine/question_history.py -> backend/database/mathweb.db
-    return Path(__file__).resolve().parents[3] / "database" / "mathweb.db"
+        main_path = Path(configured).expanduser()
+        return main_path.with_name(f"{main_path.stem}_ai_history.sqlite3")
+
+    # backend/app/ai/engine/question_history.py -> backend/database/
+    return Path(__file__).resolve().parents[3] / "database" / "mathweb_ai_history.sqlite3"
 
 
 class QuestionHistory:
@@ -31,24 +50,38 @@ class QuestionHistory:
         path.parent.mkdir(parents=True, exist_ok=True)
         conn = sqlite3.connect(str(path), timeout=10)
         conn.execute("PRAGMA busy_timeout=10000")
-        conn.execute("""
-            CREATE TABLE IF NOT EXISTS ai_question_history (
-                fingerprint TEXT PRIMARY KEY,
-                topic TEXT NOT NULL DEFAULT '',
-                grade INTEGER NOT NULL DEFAULT 0,
-                difficulty TEXT NOT NULL DEFAULT '',
-                structure_fingerprint TEXT NOT NULL DEFAULT '',
-                variation_key TEXT NOT NULL DEFAULT '',
-                archetype TEXT NOT NULL DEFAULT '',
-                kind TEXT NOT NULL DEFAULT 'question',
-                created_at REAL NOT NULL
-            )
-        """)
-        columns = {row[1] for row in conn.execute("PRAGMA table_info(ai_question_history)").fetchall()}
-        if "variation_key" not in columns:
-            conn.execute("ALTER TABLE ai_question_history ADD COLUMN variation_key TEXT NOT NULL DEFAULT ''")
-        conn.execute("CREATE INDEX IF NOT EXISTS idx_ai_history_topic_time ON ai_question_history(topic, created_at DESC)")
-        conn.execute("CREATE INDEX IF NOT EXISTS idx_ai_history_kind_time ON ai_question_history(kind, created_at DESC)")
+
+        # Schema DDL is done once per database path per process, not on every
+        # question-history read/write. This reduces SQLite schema-lock pressure
+        # when multiple players request questions concurrently.
+        key = str(path.resolve())
+        if key not in _SCHEMA_READY:
+            with _SCHEMA_LOCK:
+                if key not in _SCHEMA_READY:
+                    try:
+                        conn.execute("""
+                            CREATE TABLE IF NOT EXISTS ai_question_history (
+                                fingerprint TEXT PRIMARY KEY,
+                                topic TEXT NOT NULL DEFAULT '',
+                                grade INTEGER NOT NULL DEFAULT 0,
+                                difficulty TEXT NOT NULL DEFAULT '',
+                                structure_fingerprint TEXT NOT NULL DEFAULT '',
+                                variation_key TEXT NOT NULL DEFAULT '',
+                                archetype TEXT NOT NULL DEFAULT '',
+                                kind TEXT NOT NULL DEFAULT 'question',
+                                created_at REAL NOT NULL
+                            )
+                        """)
+                        columns = {row[1] for row in conn.execute("PRAGMA table_info(ai_question_history)").fetchall()}
+                        if "variation_key" not in columns:
+                            conn.execute("ALTER TABLE ai_question_history ADD COLUMN variation_key TEXT NOT NULL DEFAULT ''")
+                        conn.execute("CREATE INDEX IF NOT EXISTS idx_ai_history_topic_time ON ai_question_history(topic, created_at DESC)")
+                        conn.execute("CREATE INDEX IF NOT EXISTS idx_ai_history_kind_time ON ai_question_history(kind, created_at DESC)")
+                        conn.commit()
+                        _SCHEMA_READY.add(key)
+                    except Exception:
+                        conn.close()
+                        raise
         return conn
 
     @contextmanager

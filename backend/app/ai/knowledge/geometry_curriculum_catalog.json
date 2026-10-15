@@ -2,27 +2,243 @@
   "version": "1.0-geometry-curriculum-bank",
   "purpose": "Curriculum-aligned original geometry question archetypes. The bank describes skills and levels, not copied textbook questions.",
   "difficulty_levels": {
-    "easy": {"label_vi": "Cơ bản", "target": "Nhận biết khái niệm, áp dụng trực tiếp một công thức, đọc hình hoặc thay số."},
-    "medium": {"label_vi": "Trung cấp", "target": "Kết hợp hai bước, chọn công thức phù hợp, giải thích quan hệ hình học hoặc mô hình hóa tình huống."},
-    "hard": {"label_vi": "Nâng cao", "target": "Bài toán đảo, tham số, phối hợp nhiều kiến thức, suy luận không gian hoặc bài toán thực tế nhiều bước."}
+    "easy": {
+      "label_vi": "Cơ bản",
+      "target": "Nhận biết khái niệm, áp dụng trực tiếp một công thức, đọc hình hoặc thay số."
+    },
+    "medium": {
+      "label_vi": "Trung cấp",
+      "target": "Kết hợp hai bước, chọn công thức phù hợp, giải thích quan hệ hình học hoặc mô hình hóa tình huống."
+    },
+    "hard": {
+      "label_vi": "Nâng cao",
+      "target": "Bài toán đảo, tham số, phối hợp nhiều kiến thức, suy luận không gian hoặc bài toán thực tế nhiều bước."
+    }
   },
   "grades": {
     "10": [
-      {"topic": "Hệ thức lượng trong tam giác", "skills": ["Pythagore", "định lý côsin", "định lý sin", "diện tích tam giác", "giải tam giác", "đo đạc thực tế"]},
-      {"topic": "Vectơ phẳng", "skills": ["tọa độ vectơ", "cộng trừ vectơ", "độ dài", "trung điểm", "tích vô hướng", "điều kiện thẳng hàng"]},
-      {"topic": "Tọa độ và đường thẳng", "skills": ["khoảng cách điểm-đường", "hệ số góc", "phương trình đường thẳng", "đường tròn", "tiếp tuyến", "conic cơ bản"]}
+      {
+        "topic": "Hệ thức lượng trong tam giác",
+        "skills": [
+          "Pythagore",
+          "định lý côsin",
+          "định lý sin",
+          "diện tích tam giác",
+          "giải tam giác",
+          "đo đạc thực tế",
+          "tam giác nội tiếp đường tròn",
+          "tam giác vuông khi một cạnh là đường kính"
+        ]
+      },
+      {
+        "topic": "Vectơ phẳng",
+        "skills": [
+          "tọa độ vectơ",
+          "cộng trừ vectơ",
+          "độ dài",
+          "trung điểm",
+          "tích vô hướng",
+          "điều kiện thẳng hàng"
+        ]
+      },
+      {
+        "topic": "Tọa độ và đường thẳng",
+        "skills": [
+          "khoảng cách điểm-đường",
+          "hệ số góc",
+          "phương trình đường thẳng",
+          "đường tròn",
+          "tiếp tuyến",
+          "conic cơ bản",
+          "hình chữ nhật nội tiếp đường tròn",
+          "đường chéo hình chữ nhật là đường kính",
+          "tam giác nội tiếp đường tròn",
+          "định lý Thales",
+          "tối ưu diện tích hình chữ nhật nội tiếp"
+        ]
+      },
+      {
+        "topic": "Hình học cơ bản: góc, cạnh và diện tích",
+        "skills": [
+          "góc tam giác",
+          "chu vi",
+          "diện tích",
+          "đường cao"
+        ]
+      },
+      {
+        "topic": "Tam giác và tứ giác cơ bản",
+        "skills": [
+          "tam giác cân",
+          "hình chữ nhật",
+          "hình thang",
+          "trung tuyến",
+          "đường cao"
+        ]
+      },
+      {
+        "topic": "Đường tròn và các góc cơ bản",
+        "skills": [
+          "bán kính",
+          "dây cung",
+          "góc nội tiếp",
+          "góc ở tâm",
+          "định lý Thales"
+        ]
+      },
+      {
+        "topic": "Hệ thức lượng vận dụng",
+        "skills": [
+          "Pythagore",
+          "định lý sin",
+          "định lý cos",
+          "đường cao"
+        ]
+      },
+      {
+        "topic": "Tọa độ và đường thẳng trong mặt phẳng",
+        "skills": [
+          "tọa độ điểm",
+          "độ dài đoạn thẳng",
+          "phương trình đường thẳng",
+          "đường tròn"
+        ]
+      },
+      {
+        "topic": "Chứng minh hình học và bài toán tổng hợp",
+        "skills": [
+          "tam giác đồng dạng",
+          "trung tuyến",
+          "phân giác",
+          "chứng minh hình học"
+        ]
+      }
     ],
     "11": [
-      {"topic": "Phép biến hình", "skills": ["tịnh tiến", "đối xứng trục", "quay", "ảnh của điểm", "hợp phép biến hình"]},
-      {"topic": "Quan hệ song song và vuông góc trong không gian", "skills": ["đường thẳng-mặt phẳng", "hai mặt phẳng", "góc", "khoảng cách", "hình lập phương", "lập luận giao tuyến"]},
-      {"topic": "Thiết diện hình không gian", "skills": ["mặt phẳng cắt hình chóp", "điểm chung", "giao tuyến", "nhận diện thiết diện"]}
+      {
+        "topic": "Phép biến hình",
+        "skills": [
+          "tịnh tiến",
+          "đối xứng trục",
+          "quay",
+          "ảnh của điểm",
+          "hợp phép biến hình"
+        ]
+      },
+      {
+        "topic": "Quan hệ song song và vuông góc trong không gian",
+        "skills": [
+          "đường thẳng-mặt phẳng",
+          "hai mặt phẳng",
+          "góc",
+          "khoảng cách",
+          "hình lập phương",
+          "lập luận giao tuyến"
+        ]
+      },
+      {
+        "topic": "Thiết diện hình không gian",
+        "skills": [
+          "mặt phẳng cắt hình chóp",
+          "điểm chung",
+          "giao tuyến",
+          "nhận diện thiết diện"
+        ]
+      },
+      {
+        "topic": "Phép biến hình cơ bản",
+        "skills": [
+          "tịnh tiến",
+          "đối xứng",
+          "phép quay",
+          "vị tự"
+        ]
+      },
+      {
+        "topic": "Nhận biết hình học không gian",
+        "skills": [
+          "hình chóp",
+          "lăng trụ",
+          "song song",
+          "vuông góc"
+        ]
+      }
     ],
     "12": [
-      {"topic": "Tọa độ trong không gian Oxyz", "skills": ["vectơ 3D", "phương trình đường thẳng", "phương trình mặt phẳng", "khoảng cách", "góc giữa vectơ"]},
-      {"topic": "Mặt cầu", "skills": ["tâm và bán kính", "phương trình mặt cầu", "vị trí tương đối", "khoảng cách trong không gian"]},
-      {"topic": "Thể tích và hình khối", "skills": ["hình chóp", "hình trụ", "hình nón", "khối cầu", "diện tích mặt cầu", "bài toán đo lường"]}
+      {
+        "topic": "Tọa độ trong không gian Oxyz",
+        "skills": [
+          "vectơ 3D",
+          "phương trình đường thẳng",
+          "phương trình mặt phẳng",
+          "khoảng cách",
+          "góc giữa vectơ"
+        ]
+      },
+      {
+        "topic": "Mặt cầu",
+        "skills": [
+          "tâm và bán kính",
+          "phương trình mặt cầu",
+          "vị trí tương đối",
+          "khoảng cách trong không gian"
+        ]
+      },
+      {
+        "topic": "Thể tích và hình khối",
+        "skills": [
+          "hình chóp",
+          "hình trụ",
+          "hình nón",
+          "khối cầu",
+          "diện tích mặt cầu",
+          "bài toán đo lường"
+        ]
+      },
+      {
+        "topic": "Hình khối và thể tích cơ bản",
+        "skills": [
+          "lăng trụ",
+          "hình chóp",
+          "hình trụ",
+          "mặt cầu",
+          "thể tích"
+        ]
+      },
+      {
+        "topic": "Vận dụng tọa độ Oxyz",
+        "skills": [
+          "khoảng cách Oxyz",
+          "góc",
+          "mặt phẳng",
+          "đường thẳng",
+          "mặt cầu"
+        ]
+      }
     ]
   },
-  "question_design": ["câu nhận biết", "bài tính trực tiếp", "bài toán ngược", "đúng-sai có giải thích", "tự luận ngắn", "bài nhiều bước", "bài toán thực tế", "phân tích sai lầm", "đọc và suy luận từ hình"],
-  "quality_rules": ["Tạo đề mới theo archetype và dữ kiện được sinh, không chép nguyên văn sách có bản quyền.", "Mỗi câu phải có đáp án và lời giải kiểm tra được.", "Cấp độ nâng cao phải tăng yêu cầu suy luận, không chỉ tăng số lớn.", "Cần kiểm tra trùng lặp cả nội dung chuẩn hóa và cấu trúc gần đây.", "Không sinh chủ đề ngoài phạm vi kiến thức được chọn mà không báo rõ."]
+  "question_design": [
+    "câu nhận biết",
+    "bài tính trực tiếp",
+    "bài toán ngược",
+    "đúng-sai có giải thích",
+    "tự luận ngắn",
+    "bài nhiều bước",
+    "bài toán thực tế",
+    "phân tích sai lầm",
+    "đọc và suy luận từ hình",
+    "hình chữ nhật nội tiếp đường tròn và bài toán đường chéo",
+    "tam giác nội tiếp đường tròn và định lý Thales",
+    "bài toán tối ưu diện tích hình chữ nhật nội tiếp đường tròn"
+  ],
+  "quality_rules": [
+    "Tạo đề mới theo archetype và dữ kiện được sinh, không chép nguyên văn sách có bản quyền.",
+    "Mỗi câu phải có đáp án và lời giải kiểm tra được.",
+    "Cấp độ nâng cao phải tăng yêu cầu suy luận, không chỉ tăng số lớn.",
+    "Cần kiểm tra trùng lặp cả nội dung chuẩn hóa và cấu trúc gần đây.",
+    "Không sinh chủ đề ngoài phạm vi kiến thức được chọn mà không báo rõ.",
+    "Với bài hình chữ nhật nội tiếp đường tròn, kiểm tra đường chéo bằng đường kính và dữ kiện có tương thích.",
+    "Với tam giác nội tiếp đường tròn, chỉ dùng định lý góc vuông khi cạnh được nêu là đường kính.",
+    "Bài toán tối ưu phải có lập luận về điều kiện đạt dấu bằng, không chỉ nêu công thức."
+  ]
 }

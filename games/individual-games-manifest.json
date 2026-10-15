@@ -4,7 +4,7 @@
     "level": "foundation",
     "knowledge_id": "REMAINDER",
     "knowledge": "Chia dư",
-    "game": "Bốc số",
+    "game": "Chia dư • Bốc số",
     "icon": "🎱",
     "path": "games/knowledge/remainder/1-boc-so.html",
     "source_template": "games/remainder/draw.html"
@@ -14,7 +14,7 @@
     "level": "foundation",
     "knowledge_id": "REMAINDER",
     "knowledge": "Chia dư",
-    "game": "Săn số dư",
+    "game": "Chia dư • Săn số dư",
     "icon": "🔎",
     "path": "games/knowledge/remainder/2-san-so-du.html",
     "source_template": "games/remainder/hunt.html"
@@ -24,7 +24,7 @@
     "level": "foundation",
     "knowledge_id": "REMAINDER",
     "knowledge": "Chia dư",
-    "game": "Thử thách modulo",
+    "game": "Chia dư • Thử thách modulo",
     "icon": "%",
     "path": "games/knowledge/remainder/3-thu-thach-modulo.html",
     "source_template": "games/remainder/modulo.html"
@@ -34,7 +34,7 @@
     "level": "foundation",
     "knowledge_id": "DIVISIBILITY",
     "knowledge": "Chia hết",
-    "game": "Truy tìm số",
+    "game": "Chia hết • Truy tìm số",
     "icon": "🔎",
     "path": "games/knowledge/divisibility/1-truy-tim-so.html",
     "source_template": "games/divisibility/find.html"
@@ -44,7 +44,7 @@
     "level": "foundation",
     "knowledge_id": "DIVISIBILITY",
     "knowledge": "Chia hết",
-    "game": "Chọn số",
+    "game": "Chia hết • Chọn số",
     "icon": "🎯",
     "path": "games/knowledge/divisibility/2-chon-so.html",
     "source_template": "games/divisibility/select.html"
@@ -54,7 +54,7 @@
     "level": "foundation",
     "knowledge_id": "DIVISIBILITY",
     "knowledge": "Chia hết",
-    "game": "Phá khóa",
+    "game": "Chia hết • Phá khóa",
     "icon": "🔐",
     "path": "games/knowledge/divisibility/3-pha-khoa.html",
     "source_template": "games/divisibility/unlock.html"
@@ -64,7 +64,7 @@
     "level": "foundation",
     "knowledge_id": "FUNCTION",
     "knowledge": "Hàm số",
-    "game": "Bắt điểm",
+    "game": "Hàm số • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/function/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -74,7 +74,7 @@
     "level": "foundation",
     "knowledge_id": "FUNCTION",
     "knowledge": "Hàm số",
-    "game": "Tìm giao điểm",
+    "game": "Hàm số • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/function/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -84,7 +84,7 @@
     "level": "foundation",
     "knowledge_id": "FUNCTION",
     "knowledge": "Hàm số",
-    "game": "Đồ thị bí ẩn",
+    "game": "Hàm số • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/function/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -94,7 +94,7 @@
     "level": "foundation",
     "knowledge_id": "ham_so_bac_nhat",
     "knowledge": "Hàm số bậc nhất",
-    "game": "Bắt điểm",
+    "game": "Hàm số bậc nhất • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/ham-so-bac-nhat/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -104,7 +104,7 @@
     "level": "foundation",
     "knowledge_id": "ham_so_bac_nhat",
     "knowledge": "Hàm số bậc nhất",
-    "game": "Tìm giao điểm",
+    "game": "Hàm số bậc nhất • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/ham-so-bac-nhat/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -114,7 +114,7 @@
     "level": "foundation",
     "knowledge_id": "ham_so_bac_nhat",
     "knowledge": "Hàm số bậc nhất",
-    "game": "Đồ thị bí ẩn",
+    "game": "Hàm số bậc nhất • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/ham-so-bac-nhat/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -124,7 +124,7 @@
     "level": "foundation",
     "knowledge_id": "he_phuong_trinh",
     "knowledge": "Hệ phương trình",
-    "game": "Điều tra",
+    "game": "Hệ phương trình [he_phuong_trinh] • Điều tra",
     "icon": "🕵️",
     "path": "games/knowledge/he-phuong-trinh/1-ieu-tra.html",
     "source_template": "games/system-equation/investigation.html"
@@ -134,7 +134,7 @@
     "level": "foundation",
     "knowledge_id": "he_phuong_trinh",
     "knowledge": "Hệ phương trình",
-    "game": "Tìm giá trị",
+    "game": "Hệ phương trình [he_phuong_trinh] • Tìm giá trị",
     "icon": "🔢",
     "path": "games/knowledge/he-phuong-trinh/2-tim-gia-tri.html",
     "source_template": "games/system-equation/value.html"
@@ -144,7 +144,7 @@
     "level": "foundation",
     "knowledge_id": "he_phuong_trinh",
     "knowledge": "Hệ phương trình",
-    "game": "Ghép đáp án",
+    "game": "Hệ phương trình [he_phuong_trinh] • Ghép đáp án",
     "icon": "🧩",
     "path": "games/knowledge/he-phuong-trinh/3-ghep-ap-an.html",
     "source_template": "games/system-equation/match.html"
@@ -154,7 +154,7 @@
     "level": "foundation",
     "knowledge_id": "SYSTEM_EQUATION",
     "knowledge": "Hệ phương trình",
-    "game": "Điều tra",
+    "game": "Hệ phương trình [SYSTEM_EQUATION] • Điều tra",
     "icon": "🕵️",
     "path": "games/knowledge/system-equation/1-ieu-tra.html",
     "source_template": "games/system-equation/investigation.html"
@@ -164,7 +164,7 @@
     "level": "foundation",
     "knowledge_id": "SYSTEM_EQUATION",
     "knowledge": "Hệ phương trình",
-    "game": "Tìm giá trị",
+    "game": "Hệ phương trình [SYSTEM_EQUATION] • Tìm giá trị",
     "icon": "🔢",
     "path": "games/knowledge/system-equation/2-tim-gia-tri.html",
     "source_template": "games/system-equation/value.html"
@@ -174,7 +174,7 @@
     "level": "foundation",
     "knowledge_id": "SYSTEM_EQUATION",
     "knowledge": "Hệ phương trình",
-    "game": "Ghép đáp án",
+    "game": "Hệ phương trình [SYSTEM_EQUATION] • Ghép đáp án",
     "icon": "🧩",
     "path": "games/knowledge/system-equation/3-ghep-ap-an.html",
     "source_template": "games/system-equation/match.html"
@@ -184,7 +184,7 @@
     "level": "foundation",
     "knowledge_id": "menh_de",
     "knowledge": "Mệnh đề",
-    "game": "Bắt điểm",
+    "game": "Mệnh đề • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/menh-de/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -194,7 +194,7 @@
     "level": "foundation",
     "knowledge_id": "menh_de",
     "knowledge": "Mệnh đề",
-    "game": "Tìm giao điểm",
+    "game": "Mệnh đề • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/menh-de/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -204,7 +204,7 @@
     "level": "foundation",
     "knowledge_id": "menh_de",
     "knowledge": "Mệnh đề",
-    "game": "Đồ thị bí ẩn",
+    "game": "Mệnh đề • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/menh-de/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -214,7 +214,7 @@
     "level": "foundation",
     "knowledge_id": "STATISTICS",
     "knowledge": "Thống kê",
-    "game": "Đọc biểu đồ",
+    "game": "Thống kê • Đọc biểu đồ",
     "icon": "📊",
     "path": "games/knowledge/statistics/1-oc-bieu-o.html",
     "source_template": "games/statistics/chart.html"
@@ -224,7 +224,7 @@
     "level": "foundation",
     "knowledge_id": "STATISTICS",
     "knowledge": "Thống kê",
-    "game": "Săn số liệu",
+    "game": "Thống kê • Săn số liệu",
     "icon": "🔎",
     "path": "games/knowledge/statistics/2-san-so-lieu.html",
     "source_template": "games/statistics/data.html"
@@ -234,7 +234,7 @@
     "level": "foundation",
     "knowledge_id": "STATISTICS",
     "knowledge": "Thống kê",
-    "game": "Thử thách thống kê",
+    "game": "Thống kê • Thử thách thống kê",
     "icon": "🏆",
     "path": "games/knowledge/statistics/3-thu-thach-thong-ke.html",
     "source_template": "games/statistics/challenge.html"
@@ -244,7 +244,7 @@
     "level": "foundation",
     "knowledge_id": "tap_hop",
     "knowledge": "Tập hợp và các phép toán",
-    "game": "Bắt điểm",
+    "game": "Tập hợp và các phép toán • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/tap-hop/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -254,7 +254,7 @@
     "level": "foundation",
     "knowledge_id": "tap_hop",
     "knowledge": "Tập hợp và các phép toán",
-    "game": "Tìm giao điểm",
+    "game": "Tập hợp và các phép toán • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/tap-hop/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -264,7 +264,7 @@
     "level": "foundation",
     "knowledge_id": "tap_hop",
     "knowledge": "Tập hợp và các phép toán",
-    "game": "Đồ thị bí ẩn",
+    "game": "Tập hợp và các phép toán • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/tap-hop/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -274,7 +274,7 @@
     "level": "foundation",
     "knowledge_id": "vector",
     "knowledge": "Vectơ",
-    "game": "Bắt điểm",
+    "game": "Vectơ • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/vector/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -284,7 +284,7 @@
     "level": "foundation",
     "knowledge_id": "vector",
     "knowledge": "Vectơ",
-    "game": "Tìm giao điểm",
+    "game": "Vectơ • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/vector/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -294,7 +294,7 @@
     "level": "foundation",
     "knowledge_id": "vector",
     "knowledge": "Vectơ",
-    "game": "Đồ thị bí ẩn",
+    "game": "Vectơ • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/vector/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -304,7 +304,7 @@
     "level": "foundation",
     "knowledge_id": "PROBABILITY",
     "knowledge": "Xác suất",
-    "game": "Bốc bi",
+    "game": "Xác suất [PROBABILITY] • Bốc bi",
     "icon": "🔮",
     "path": "games/knowledge/probability/1-boc-bi.html",
     "source_template": "games/probability/marble.html"
@@ -314,7 +314,7 @@
     "level": "foundation",
     "knowledge_id": "PROBABILITY",
     "knowledge": "Xác suất",
-    "game": "Xúc xắc",
+    "game": "Xác suất [PROBABILITY] • Xúc xắc",
     "icon": "🎲",
     "path": "games/knowledge/probability/2-xuc-xac.html",
     "source_template": "games/probability/dice.html"
@@ -324,7 +324,7 @@
     "level": "foundation",
     "knowledge_id": "PROBABILITY",
     "knowledge": "Xác suất",
-    "game": "Chọn tình huống",
+    "game": "Xác suất [PROBABILITY] • Chọn tình huống",
     "icon": "🎯",
     "path": "games/knowledge/probability/3-chon-tinh-huong.html",
     "source_template": "games/probability/situation.html"
@@ -334,7 +334,7 @@
     "level": "medium",
     "knowledge_id": "RADICAL",
     "knowledge": "Căn thức",
-    "game": "Săn căn",
+    "game": "Căn thức • Săn căn",
     "icon": "√",
     "path": "games/knowledge/radical/1-san-can.html",
     "source_template": "games/radical/hunt.html"
@@ -344,7 +344,7 @@
     "level": "medium",
     "knowledge_id": "RADICAL",
     "knowledge": "Căn thức",
-    "game": "Rút gọn nhanh",
+    "game": "Căn thức • Rút gọn nhanh",
     "icon": "⚡",
     "path": "games/knowledge/radical/2-rut-gon-nhanh.html",
     "source_template": "games/radical/simplify.html"
@@ -354,7 +354,7 @@
     "level": "medium",
     "knowledge_id": "RADICAL",
     "knowledge": "Căn thức",
-    "game": "Mở khóa căn thức",
+    "game": "Căn thức • Mở khóa căn thức",
     "icon": "🔓",
     "path": "games/knowledge/radical/3-mo-khoa-can-thuc.html",
     "source_template": "games/radical/unlock.html"
@@ -364,7 +364,7 @@
     "level": "medium",
     "knowledge_id": "SEQUENCE",
     "knowledge": "Dãy số",
-    "game": "Tìm quy luật",
+    "game": "Dãy số [SEQUENCE] • Tìm quy luật",
     "icon": "🔍",
     "path": "games/knowledge/sequence/1-tim-quy-luat.html",
     "source_template": "games/sequence/rule.html"
@@ -374,7 +374,7 @@
     "level": "medium",
     "knowledge_id": "SEQUENCE",
     "knowledge": "Dãy số",
-    "game": "Điền số",
+    "game": "Dãy số [SEQUENCE] • Điền số",
     "icon": "🔢",
     "path": "games/knowledge/sequence/2-ien-so.html",
     "source_template": "games/sequence/fill.html"
@@ -384,7 +384,7 @@
     "level": "medium",
     "knowledge_id": "SEQUENCE",
     "knowledge": "Dãy số",
-    "game": "Đường đua dãy số",
+    "game": "Dãy số [SEQUENCE] • Đường đua dãy số",
     "icon": "🏁",
     "path": "games/knowledge/sequence/3-uong-ua-day-so.html",
     "source_template": "games/sequence/race.html"
@@ -394,7 +394,7 @@
     "level": "medium",
     "knowledge_id": "GEOMETRY",
     "knowledge": "Hình học",
-    "game": "Tìm góc",
+    "game": "Hình học • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/geometry/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -404,7 +404,7 @@
     "level": "medium",
     "knowledge_id": "GEOMETRY",
     "knowledge": "Hình học",
-    "game": "Săn độ dài",
+    "game": "Hình học • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/geometry/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -414,7 +414,7 @@
     "level": "medium",
     "knowledge_id": "GEOMETRY",
     "knowledge": "Hình học",
-    "game": "Bản đồ hình học",
+    "game": "Hình học • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/geometry/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -424,7 +424,7 @@
     "level": "medium",
     "knowledge_id": "menh_de_tap_hop",
     "knowledge": "Mệnh đề và tập hợp",
-    "game": "Bắt điểm",
+    "game": "Mệnh đề và tập hợp • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/menh-de-tap-hop/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -434,7 +434,7 @@
     "level": "medium",
     "knowledge_id": "menh_de_tap_hop",
     "knowledge": "Mệnh đề và tập hợp",
-    "game": "Tìm giao điểm",
+    "game": "Mệnh đề và tập hợp • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/menh-de-tap-hop/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -444,7 +444,7 @@
     "level": "medium",
     "knowledge_id": "menh_de_tap_hop",
     "knowledge": "Mệnh đề và tập hợp",
-    "game": "Đồ thị bí ẩn",
+    "game": "Mệnh đề và tập hợp • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/menh-de-tap-hop/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -454,7 +454,7 @@
     "level": "medium",
     "knowledge_id": "phuong_trinh",
     "knowledge": "Phương trình",
-    "game": "Bắt điểm",
+    "game": "Phương trình • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/phuong-trinh/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -464,7 +464,7 @@
     "level": "medium",
     "knowledge_id": "phuong_trinh",
     "knowledge": "Phương trình",
-    "game": "Tìm giao điểm",
+    "game": "Phương trình • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/phuong-trinh/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -474,7 +474,7 @@
     "level": "medium",
     "knowledge_id": "phuong_trinh",
     "knowledge": "Phương trình",
-    "game": "Đồ thị bí ẩn",
+    "game": "Phương trình • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/phuong-trinh/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -484,7 +484,7 @@
     "level": "medium",
     "knowledge_id": "QUADRATIC_EQUATION",
     "knowledge": "Phương trình bậc hai",
-    "game": "Săn nghiệm",
+    "game": "Phương trình bậc hai • Săn nghiệm",
     "icon": "🎯",
     "path": "games/knowledge/quadratic-equation/1-san-nghiem.html",
     "source_template": "games/quadratic-equation/root.html"
@@ -494,7 +494,7 @@
     "level": "medium",
     "knowledge_id": "QUADRATIC_EQUATION",
     "knowledge": "Phương trình bậc hai",
-    "game": "Ghép nghiệm",
+    "game": "Phương trình bậc hai • Ghép nghiệm",
     "icon": "🧩",
     "path": "games/knowledge/quadratic-equation/2-ghep-nghiem.html",
     "source_template": "games/quadratic-equation/match.html"
@@ -504,7 +504,7 @@
     "level": "medium",
     "knowledge_id": "QUADRATIC_EQUATION",
     "knowledge": "Phương trình bậc hai",
-    "game": "Mở khóa",
+    "game": "Phương trình bậc hai • Mở khóa",
     "icon": "🔓",
     "path": "games/knowledge/quadratic-equation/3-mo-khoa.html",
     "source_template": "games/quadratic-equation/unlock.html"
@@ -514,7 +514,7 @@
     "level": "medium",
     "knowledge_id": "toa_do_phang",
     "knowledge": "Tọa độ trong mặt phẳng",
-    "game": "Tìm góc",
+    "game": "Tọa độ trong mặt phẳng • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/toa-do-phang/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -524,7 +524,7 @@
     "level": "medium",
     "knowledge_id": "toa_do_phang",
     "knowledge": "Tọa độ trong mặt phẳng",
-    "game": "Săn độ dài",
+    "game": "Tọa độ trong mặt phẳng • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/toa-do-phang/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -534,7 +534,7 @@
     "level": "medium",
     "knowledge_id": "toa_do_phang",
     "knowledge": "Tọa độ trong mặt phẳng",
-    "game": "Bản đồ hình học",
+    "game": "Tọa độ trong mặt phẳng • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/toa-do-phang/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -544,7 +544,7 @@
     "level": "medium",
     "knowledge_id": "COMBINATION",
     "knowledge": "Tổ hợp",
-    "game": "Chọn đội",
+    "game": "Tổ hợp • Chọn đội",
     "icon": "👥",
     "path": "games/knowledge/combination/1-chon-oi.html",
     "source_template": "games/combination/team.html"
@@ -554,7 +554,7 @@
     "level": "medium",
     "knowledge_id": "COMBINATION",
     "knowledge": "Tổ hợp",
-    "game": "Ghép lựa chọn",
+    "game": "Tổ hợp • Ghép lựa chọn",
     "icon": "🧩",
     "path": "games/knowledge/combination/2-ghep-lua-chon.html",
     "source_template": "games/combination/choice.html"
@@ -564,7 +564,7 @@
     "level": "medium",
     "knowledge_id": "COMBINATION",
     "knowledge": "Tổ hợp",
-    "game": "Săn tổ hợp",
+    "game": "Tổ hợp • Săn tổ hợp",
     "icon": "🔎",
     "path": "games/knowledge/combination/3-san-to-hop.html",
     "source_template": "games/combination/hunt.html"
@@ -574,7 +574,7 @@
     "level": "medium",
     "knowledge_id": "duong_thang",
     "knowledge": "Đường thẳng",
-    "game": "Bắt điểm",
+    "game": "Đường thẳng • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/duong-thang/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -584,7 +584,7 @@
     "level": "medium",
     "knowledge_id": "duong_thang",
     "knowledge": "Đường thẳng",
-    "game": "Tìm giao điểm",
+    "game": "Đường thẳng • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/duong-thang/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -594,7 +594,7 @@
     "level": "medium",
     "knowledge_id": "duong_thang",
     "knowledge": "Đường thẳng",
-    "game": "Đồ thị bí ẩn",
+    "game": "Đường thẳng • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/duong-thang/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -604,9 +604,9 @@
     "level": "medium",
     "knowledge_id": "duong_tron",
     "knowledge": "Đường tròn",
-    "game": "Tìm góc",
+    "game": "Đường tròn • Góc nội tiếp bí ẩn",
     "icon": "📐",
-    "path": "games/knowledge/duong-tron/1-tim-goc.html",
+    "path": "games/knowledge/duong-tron/1-goc-noi-tiep-bi-an.html",
     "source_template": "games/geometry/angle.html"
   },
   {
@@ -614,9 +614,9 @@
     "level": "medium",
     "knowledge_id": "duong_tron",
     "knowledge": "Đường tròn",
-    "game": "Săn độ dài",
+    "game": "Đường tròn • Truy tìm bán kính",
     "icon": "📏",
-    "path": "games/knowledge/duong-tron/2-san-o-dai.html",
+    "path": "games/knowledge/duong-tron/2-truy-tim-ban-kinh.html",
     "source_template": "games/geometry/length.html"
   },
   {
@@ -624,9 +624,9 @@
     "level": "medium",
     "knowledge_id": "duong_tron",
     "knowledge": "Đường tròn",
-    "game": "Bản đồ hình học",
+    "game": "Đường tròn • Tiếp tuyến thử thách",
     "icon": "🗺️",
-    "path": "games/knowledge/duong-tron/3-ban-o-hinh-hoc.html",
+    "path": "games/knowledge/duong-tron/3-tiep-tuyen-thu-thach.html",
     "source_template": "games/geometry/map.html"
   },
   {
@@ -634,7 +634,7 @@
     "level": "advanced",
     "knowledge_id": "bai_toan_thuc_te_10",
     "knowledge": "Bài toán thực tế Toán 10",
-    "game": "Bắt điểm",
+    "game": "Bài toán thực tế Toán 10 • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/bai-toan-thuc-te-10/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -644,7 +644,7 @@
     "level": "advanced",
     "knowledge_id": "bai_toan_thuc_te_10",
     "knowledge": "Bài toán thực tế Toán 10",
-    "game": "Tìm giao điểm",
+    "game": "Bài toán thực tế Toán 10 • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/bai-toan-thuc-te-10/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -654,7 +654,7 @@
     "level": "advanced",
     "knowledge_id": "bai_toan_thuc_te_10",
     "knowledge": "Bài toán thực tế Toán 10",
-    "game": "Đồ thị bí ẩn",
+    "game": "Bài toán thực tế Toán 10 • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/bai-toan-thuc-te-10/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -664,7 +664,7 @@
     "level": "advanced",
     "knowledge_id": "INEQUALITY",
     "knowledge": "Bất phương trình",
-    "game": "Vùng an toàn",
+    "game": "Bất phương trình • Vùng an toàn",
     "icon": "🛡️",
     "path": "games/knowledge/inequality/1-vung-an-toan.html",
     "source_template": "games/inequality/safe-zone.html"
@@ -674,7 +674,7 @@
     "level": "advanced",
     "knowledge_id": "INEQUALITY",
     "knowledge": "Bất phương trình",
-    "game": "Chọn khoảng",
+    "game": "Bất phương trình • Chọn khoảng",
     "icon": "📏",
     "path": "games/knowledge/inequality/2-chon-khoang.html",
     "source_template": "games/inequality/interval.html"
@@ -684,7 +684,7 @@
     "level": "advanced",
     "knowledge_id": "INEQUALITY",
     "knowledge": "Bất phương trình",
-    "game": "Vượt rào",
+    "game": "Bất phương trình • Vượt rào",
     "icon": "🚧",
     "path": "games/knowledge/inequality/3-vuot-rao.html",
     "source_template": "games/inequality/barrier.html"
@@ -694,7 +694,7 @@
     "level": "advanced",
     "knowledge_id": "PERMUTATION",
     "knowledge": "Chỉnh hợp",
-    "game": "Xếp vị trí",
+    "game": "Chỉnh hợp • Xếp vị trí",
     "icon": "📍",
     "path": "games/knowledge/permutation/1-xep-vi-tri.html",
     "source_template": "games/permutation/position.html"
@@ -704,7 +704,7 @@
     "level": "advanced",
     "knowledge_id": "PERMUTATION",
     "knowledge": "Chỉnh hợp",
-    "game": "Mật mã",
+    "game": "Chỉnh hợp • Mật mã",
     "icon": "🔐",
     "path": "games/knowledge/permutation/2-mat-ma.html",
     "source_template": "games/permutation/code.html"
@@ -714,7 +714,7 @@
     "level": "advanced",
     "knowledge_id": "PERMUTATION",
     "knowledge": "Chỉnh hợp",
-    "game": "Sắp thứ tự",
+    "game": "Chỉnh hợp • Sắp thứ tự",
     "icon": "📋",
     "path": "games/knowledge/permutation/3-sap-thu-tu.html",
     "source_template": "games/permutation/order.html"
@@ -724,7 +724,7 @@
     "level": "advanced",
     "knowledge_id": "ham_so_bac_hai",
     "knowledge": "Hàm số bậc hai và parabol",
-    "game": "Bắt điểm",
+    "game": "Hàm số bậc hai và parabol • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/ham-so-bac-hai/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -734,7 +734,7 @@
     "level": "advanced",
     "knowledge_id": "ham_so_bac_hai",
     "knowledge": "Hàm số bậc hai và parabol",
-    "game": "Tìm giao điểm",
+    "game": "Hàm số bậc hai và parabol • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/ham-so-bac-hai/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -744,7 +744,7 @@
     "level": "advanced",
     "knowledge_id": "ham_so_bac_hai",
     "knowledge": "Hàm số bậc hai và parabol",
-    "game": "Đồ thị bí ẩn",
+    "game": "Hàm số bậc hai và parabol • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/ham-so-bac-hai/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -754,7 +754,7 @@
     "level": "advanced",
     "knowledge_id": "IDENTITIES",
     "knowledge": "Hằng đẳng thức",
-    "game": "Ghép công thức",
+    "game": "Hằng đẳng thức • Ghép công thức",
     "icon": "🧩",
     "path": "games/knowledge/identities/1-ghep-cong-thuc.html",
     "source_template": "games/identities/match.html"
@@ -764,7 +764,7 @@
     "level": "advanced",
     "knowledge_id": "IDENTITIES",
     "knowledge": "Hằng đẳng thức",
-    "game": "Phá biểu thức",
+    "game": "Hằng đẳng thức • Phá biểu thức",
     "icon": "💥",
     "path": "games/knowledge/identities/2-pha-bieu-thuc.html",
     "source_template": "games/identities/break.html"
@@ -774,7 +774,7 @@
     "level": "advanced",
     "knowledge_id": "IDENTITIES",
     "knowledge": "Hằng đẳng thức",
-    "game": "Công thức bí ẩn",
+    "game": "Hằng đẳng thức • Công thức bí ẩn",
     "icon": "❓",
     "path": "games/knowledge/identities/3-cong-thuc-bi-an.html",
     "source_template": "games/identities/mystery.html"
@@ -784,7 +784,7 @@
     "level": "advanced",
     "knowledge_id": "he_bat_phuong_trinh",
     "knowledge": "Hệ bất phương trình",
-    "game": "Vùng an toàn",
+    "game": "Hệ bất phương trình • Vùng an toàn",
     "icon": "🛡️",
     "path": "games/knowledge/he-bat-phuong-trinh/1-vung-an-toan.html",
     "source_template": "games/inequality/safe-zone.html"
@@ -794,7 +794,7 @@
     "level": "advanced",
     "knowledge_id": "he_bat_phuong_trinh",
     "knowledge": "Hệ bất phương trình",
-    "game": "Chọn khoảng",
+    "game": "Hệ bất phương trình • Chọn khoảng",
     "icon": "📏",
     "path": "games/knowledge/he-bat-phuong-trinh/2-chon-khoang.html",
     "source_template": "games/inequality/interval.html"
@@ -804,7 +804,7 @@
     "level": "advanced",
     "knowledge_id": "he_bat_phuong_trinh",
     "knowledge": "Hệ bất phương trình",
-    "game": "Vượt rào",
+    "game": "Hệ bất phương trình • Vượt rào",
     "icon": "🚧",
     "path": "games/knowledge/he-bat-phuong-trinh/3-vuot-rao.html",
     "source_template": "games/inequality/barrier.html"
@@ -814,9 +814,9 @@
     "level": "advanced",
     "knowledge_id": "he_thuc_luong",
     "knowledge": "Hệ thức lượng trong tam giác",
-    "game": "Tìm góc",
+    "game": "Hệ thức lượng trong tam giác [he_thuc_luong] • Giải mã góc",
     "icon": "📐",
-    "path": "games/knowledge/he-thuc-luong/1-tim-goc.html",
+    "path": "games/knowledge/he-thuc-luong/1-giai-ma-goc.html",
     "source_template": "games/geometry/angle.html"
   },
   {
@@ -824,9 +824,9 @@
     "level": "advanced",
     "knowledge_id": "he_thuc_luong",
     "knowledge": "Hệ thức lượng trong tam giác",
-    "game": "Săn độ dài",
+    "game": "Hệ thức lượng trong tam giác [he_thuc_luong] • Săn cạnh tam giác",
     "icon": "📏",
-    "path": "games/knowledge/he-thuc-luong/2-san-o-dai.html",
+    "path": "games/knowledge/he-thuc-luong/2-san-canh-tam-giac.html",
     "source_template": "games/geometry/length.html"
   },
   {
@@ -834,9 +834,9 @@
     "level": "advanced",
     "knowledge_id": "he_thuc_luong",
     "knowledge": "Hệ thức lượng trong tam giác",
-    "game": "Bản đồ hình học",
+    "game": "Hệ thức lượng trong tam giác [he_thuc_luong] • Ứng dụng tam giác",
     "icon": "🗺️",
-    "path": "games/knowledge/he-thuc-luong/3-ban-o-hinh-hoc.html",
+    "path": "games/knowledge/he-thuc-luong/3-ung-dung-tam-giac.html",
     "source_template": "games/geometry/map.html"
   },
   {
@@ -844,9 +844,9 @@
     "level": "advanced",
     "knowledge_id": "he_thuc_luong_tam_giac",
     "knowledge": "Hệ thức lượng trong tam giác",
-    "game": "Tìm góc",
+    "game": "Hệ thức lượng trong tam giác [he_thuc_luong_tam_giac] • Giải mã góc",
     "icon": "📐",
-    "path": "games/knowledge/he-thuc-luong-tam-giac/1-tim-goc.html",
+    "path": "games/knowledge/he-thuc-luong-tam-giac/1-giai-ma-goc.html",
     "source_template": "games/geometry/angle.html"
   },
   {
@@ -854,9 +854,9 @@
     "level": "advanced",
     "knowledge_id": "he_thuc_luong_tam_giac",
     "knowledge": "Hệ thức lượng trong tam giác",
-    "game": "Săn độ dài",
+    "game": "Hệ thức lượng trong tam giác [he_thuc_luong_tam_giac] • Săn cạnh tam giác",
     "icon": "📏",
-    "path": "games/knowledge/he-thuc-luong-tam-giac/2-san-o-dai.html",
+    "path": "games/knowledge/he-thuc-luong-tam-giac/2-san-canh-tam-giac.html",
     "source_template": "games/geometry/length.html"
   },
   {
@@ -864,9 +864,9 @@
     "level": "advanced",
     "knowledge_id": "he_thuc_luong_tam_giac",
     "knowledge": "Hệ thức lượng trong tam giác",
-    "game": "Bản đồ hình học",
+    "game": "Hệ thức lượng trong tam giác [he_thuc_luong_tam_giac] • Ứng dụng tam giác",
     "icon": "🗺️",
-    "path": "games/knowledge/he-thuc-luong-tam-giac/3-ban-o-hinh-hoc.html",
+    "path": "games/knowledge/he-thuc-luong-tam-giac/3-ung-dung-tam-giac.html",
     "source_template": "games/geometry/map.html"
   },
   {
@@ -874,7 +874,7 @@
     "level": "advanced",
     "knowledge_id": "nhi_thuc_newton",
     "knowledge": "Nhị thức Newton",
-    "game": "Chọn đội",
+    "game": "Nhị thức Newton • Chọn đội",
     "icon": "👥",
     "path": "games/knowledge/nhi-thuc-newton/1-chon-oi.html",
     "source_template": "games/combination/team.html"
@@ -884,7 +884,7 @@
     "level": "advanced",
     "knowledge_id": "nhi_thuc_newton",
     "knowledge": "Nhị thức Newton",
-    "game": "Ghép lựa chọn",
+    "game": "Nhị thức Newton • Ghép lựa chọn",
     "icon": "🧩",
     "path": "games/knowledge/nhi-thuc-newton/2-ghep-lua-chon.html",
     "source_template": "games/combination/choice.html"
@@ -894,7 +894,7 @@
     "level": "advanced",
     "knowledge_id": "nhi_thuc_newton",
     "knowledge": "Nhị thức Newton",
-    "game": "Săn tổ hợp",
+    "game": "Nhị thức Newton • Săn tổ hợp",
     "icon": "🔎",
     "path": "games/knowledge/nhi-thuc-newton/3-san-to-hop.html",
     "source_template": "games/combination/hunt.html"
@@ -904,7 +904,7 @@
     "level": "advanced",
     "knowledge_id": "ALGEBRAIC_FRACTION",
     "knowledge": "Phân thức đại số",
-    "game": "Rút gọn",
+    "game": "Phân thức đại số • Rút gọn",
     "icon": "➗",
     "path": "games/knowledge/algebraic-fraction/1-rut-gon.html",
     "source_template": "games/algebraic-fraction/simplify.html"
@@ -914,7 +914,7 @@
     "level": "advanced",
     "knowledge_id": "ALGEBRAIC_FRACTION",
     "knowledge": "Phân thức đại số",
-    "game": "Tìm điều kiện",
+    "game": "Phân thức đại số • Tìm điều kiện",
     "icon": "🔎",
     "path": "games/knowledge/algebraic-fraction/2-tim-ieu-kien.html",
     "source_template": "games/algebraic-fraction/condition.html"
@@ -924,7 +924,7 @@
     "level": "advanced",
     "knowledge_id": "ALGEBRAIC_FRACTION",
     "knowledge": "Phân thức đại số",
-    "game": "Phân thức tốc độ",
+    "game": "Phân thức đại số • Phân thức tốc độ",
     "icon": "⚡",
     "path": "games/knowledge/algebraic-fraction/3-phan-thuc-toc-o.html",
     "source_template": "games/algebraic-fraction/speed.html"
@@ -934,7 +934,7 @@
     "level": "advanced",
     "knowledge_id": "quy_tac_dem",
     "knowledge": "Quy tắc đếm",
-    "game": "Chọn đội",
+    "game": "Quy tắc đếm • Chọn đội",
     "icon": "👥",
     "path": "games/knowledge/quy-tac-dem/1-chon-oi.html",
     "source_template": "games/combination/team.html"
@@ -944,7 +944,7 @@
     "level": "advanced",
     "knowledge_id": "quy_tac_dem",
     "knowledge": "Quy tắc đếm",
-    "game": "Ghép lựa chọn",
+    "game": "Quy tắc đếm • Ghép lựa chọn",
     "icon": "🧩",
     "path": "games/knowledge/quy-tac-dem/2-ghep-lua-chon.html",
     "source_template": "games/combination/choice.html"
@@ -954,7 +954,7 @@
     "level": "advanced",
     "knowledge_id": "quy_tac_dem",
     "knowledge": "Quy tắc đếm",
-    "game": "Săn tổ hợp",
+    "game": "Quy tắc đếm • Săn tổ hợp",
     "icon": "🔎",
     "path": "games/knowledge/quy-tac-dem/3-san-to-hop.html",
     "source_template": "games/combination/hunt.html"
@@ -964,7 +964,7 @@
     "level": "foundation",
     "knowledge_id": "cong_thuc_luong_giac",
     "knowledge": "Công thức lượng giác",
-    "game": "Bắt điểm",
+    "game": "Công thức lượng giác • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/cong-thuc-luong-giac/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -974,7 +974,7 @@
     "level": "foundation",
     "knowledge_id": "cong_thuc_luong_giac",
     "knowledge": "Công thức lượng giác",
-    "game": "Tìm giao điểm",
+    "game": "Công thức lượng giác • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/cong-thuc-luong-giac/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -984,7 +984,7 @@
     "level": "foundation",
     "knowledge_id": "cong_thuc_luong_giac",
     "knowledge": "Công thức lượng giác",
-    "game": "Đồ thị bí ẩn",
+    "game": "Công thức lượng giác • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/cong-thuc-luong-giac/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -994,7 +994,7 @@
     "level": "foundation",
     "knowledge_id": "cap_so_cong",
     "knowledge": "Cấp số cộng",
-    "game": "Tìm quy luật",
+    "game": "Cấp số cộng • Tìm quy luật",
     "icon": "🔍",
     "path": "games/knowledge/cap-so-cong/1-tim-quy-luat.html",
     "source_template": "games/sequence/rule.html"
@@ -1004,7 +1004,7 @@
     "level": "foundation",
     "knowledge_id": "cap_so_cong",
     "knowledge": "Cấp số cộng",
-    "game": "Điền số",
+    "game": "Cấp số cộng • Điền số",
     "icon": "🔢",
     "path": "games/knowledge/cap-so-cong/2-ien-so.html",
     "source_template": "games/sequence/fill.html"
@@ -1014,7 +1014,7 @@
     "level": "foundation",
     "knowledge_id": "cap_so_cong",
     "knowledge": "Cấp số cộng",
-    "game": "Đường đua dãy số",
+    "game": "Cấp số cộng • Đường đua dãy số",
     "icon": "🏁",
     "path": "games/knowledge/cap-so-cong/3-uong-ua-day-so.html",
     "source_template": "games/sequence/race.html"
@@ -1024,7 +1024,7 @@
     "level": "foundation",
     "knowledge_id": "cap_so_nhan",
     "knowledge": "Cấp số nhân",
-    "game": "Tìm quy luật",
+    "game": "Cấp số nhân • Tìm quy luật",
     "icon": "🔍",
     "path": "games/knowledge/cap-so-nhan/1-tim-quy-luat.html",
     "source_template": "games/sequence/rule.html"
@@ -1034,7 +1034,7 @@
     "level": "foundation",
     "knowledge_id": "cap_so_nhan",
     "knowledge": "Cấp số nhân",
-    "game": "Điền số",
+    "game": "Cấp số nhân • Điền số",
     "icon": "🔢",
     "path": "games/knowledge/cap-so-nhan/2-ien-so.html",
     "source_template": "games/sequence/fill.html"
@@ -1044,7 +1044,7 @@
     "level": "foundation",
     "knowledge_id": "cap_so_nhan",
     "knowledge": "Cấp số nhân",
-    "game": "Đường đua dãy số",
+    "game": "Cấp số nhân • Đường đua dãy số",
     "icon": "🏁",
     "path": "games/knowledge/cap-so-nhan/3-uong-ua-day-so.html",
     "source_template": "games/sequence/race.html"
@@ -1054,7 +1054,7 @@
     "level": "foundation",
     "knowledge_id": "day_so",
     "knowledge": "Dãy số",
-    "game": "Tìm quy luật",
+    "game": "Dãy số [day_so] • Tìm quy luật",
     "icon": "🔍",
     "path": "games/knowledge/day-so/1-tim-quy-luat.html",
     "source_template": "games/sequence/rule.html"
@@ -1064,7 +1064,7 @@
     "level": "foundation",
     "knowledge_id": "day_so",
     "knowledge": "Dãy số",
-    "game": "Điền số",
+    "game": "Dãy số [day_so] • Điền số",
     "icon": "🔢",
     "path": "games/knowledge/day-so/2-ien-so.html",
     "source_template": "games/sequence/fill.html"
@@ -1074,7 +1074,7 @@
     "level": "foundation",
     "knowledge_id": "day_so",
     "knowledge": "Dãy số",
-    "game": "Đường đua dãy số",
+    "game": "Dãy số [day_so] • Đường đua dãy số",
     "icon": "🏁",
     "path": "games/knowledge/day-so/3-uong-ua-day-so.html",
     "source_template": "games/sequence/race.html"
@@ -1084,7 +1084,7 @@
     "level": "foundation",
     "knowledge_id": "gia_tri_luong_giac",
     "knowledge": "Giá trị lượng giác",
-    "game": "Bắt điểm",
+    "game": "Giá trị lượng giác • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/gia-tri-luong-giac/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1094,7 +1094,7 @@
     "level": "foundation",
     "knowledge_id": "gia_tri_luong_giac",
     "knowledge": "Giá trị lượng giác",
-    "game": "Tìm giao điểm",
+    "game": "Giá trị lượng giác • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/gia-tri-luong-giac/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1104,7 +1104,7 @@
     "level": "foundation",
     "knowledge_id": "gia_tri_luong_giac",
     "knowledge": "Giá trị lượng giác",
-    "game": "Đồ thị bí ẩn",
+    "game": "Giá trị lượng giác • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/gia-tri-luong-giac/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1114,7 +1114,7 @@
     "level": "foundation",
     "knowledge_id": "gioi_han",
     "knowledge": "Giới hạn",
-    "game": "Bắt điểm",
+    "game": "Giới hạn • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/gioi-han/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1124,7 +1124,7 @@
     "level": "foundation",
     "knowledge_id": "gioi_han",
     "knowledge": "Giới hạn",
-    "game": "Tìm giao điểm",
+    "game": "Giới hạn • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/gioi-han/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1134,7 +1134,7 @@
     "level": "foundation",
     "knowledge_id": "gioi_han",
     "knowledge": "Giới hạn",
-    "game": "Đồ thị bí ẩn",
+    "game": "Giới hạn • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/gioi-han/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1144,7 +1144,7 @@
     "level": "foundation",
     "knowledge_id": "ham_so_luong_giac",
     "knowledge": "Hàm số lượng giác",
-    "game": "Bắt điểm",
+    "game": "Hàm số lượng giác [ham_so_luong_giac] • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/ham-so-luong-giac/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1154,7 +1154,7 @@
     "level": "foundation",
     "knowledge_id": "ham_so_luong_giac",
     "knowledge": "Hàm số lượng giác",
-    "game": "Tìm giao điểm",
+    "game": "Hàm số lượng giác [ham_so_luong_giac] • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/ham-so-luong-giac/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1164,7 +1164,7 @@
     "level": "foundation",
     "knowledge_id": "ham_so_luong_giac",
     "knowledge": "Hàm số lượng giác",
-    "game": "Đồ thị bí ẩn",
+    "game": "Hàm số lượng giác [ham_so_luong_giac] • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/ham-so-luong-giac/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1174,7 +1174,7 @@
     "level": "foundation",
     "knowledge_id": "thong_ke_11",
     "knowledge": "Thống kê Toán 11",
-    "game": "Đọc biểu đồ",
+    "game": "Thống kê Toán 11 • Đọc biểu đồ",
     "icon": "📊",
     "path": "games/knowledge/thong-ke-11/1-oc-bieu-o.html",
     "source_template": "games/statistics/chart.html"
@@ -1184,7 +1184,7 @@
     "level": "foundation",
     "knowledge_id": "thong_ke_11",
     "knowledge": "Thống kê Toán 11",
-    "game": "Săn số liệu",
+    "game": "Thống kê Toán 11 • Săn số liệu",
     "icon": "🔎",
     "path": "games/knowledge/thong-ke-11/2-san-so-lieu.html",
     "source_template": "games/statistics/data.html"
@@ -1194,7 +1194,7 @@
     "level": "foundation",
     "knowledge_id": "thong_ke_11",
     "knowledge": "Thống kê Toán 11",
-    "game": "Thử thách thống kê",
+    "game": "Thống kê Toán 11 • Thử thách thống kê",
     "icon": "🏆",
     "path": "games/knowledge/thong-ke-11/3-thu-thach-thong-ke.html",
     "source_template": "games/statistics/challenge.html"
@@ -1204,7 +1204,7 @@
     "level": "foundation",
     "knowledge_id": "xac_suat_11",
     "knowledge": "Xác suất",
-    "game": "Bốc bi",
+    "game": "Xác suất [xac_suat_11] • Bốc bi",
     "icon": "🔮",
     "path": "games/knowledge/xac-suat-11/1-boc-bi.html",
     "source_template": "games/probability/marble.html"
@@ -1214,7 +1214,7 @@
     "level": "foundation",
     "knowledge_id": "xac_suat_11",
     "knowledge": "Xác suất",
-    "game": "Xúc xắc",
+    "game": "Xác suất [xac_suat_11] • Xúc xắc",
     "icon": "🎲",
     "path": "games/knowledge/xac-suat-11/2-xuc-xac.html",
     "source_template": "games/probability/dice.html"
@@ -1224,7 +1224,7 @@
     "level": "foundation",
     "knowledge_id": "xac_suat_11",
     "knowledge": "Xác suất",
-    "game": "Chọn tình huống",
+    "game": "Xác suất [xac_suat_11] • Chọn tình huống",
     "icon": "🎯",
     "path": "games/knowledge/xac-suat-11/3-chon-tinh-huong.html",
     "source_template": "games/probability/situation.html"
@@ -1234,7 +1234,7 @@
     "level": "foundation",
     "knowledge_id": "dao_ham",
     "knowledge": "Đạo hàm",
-    "game": "Bắt điểm",
+    "game": "Đạo hàm • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/dao-ham/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1244,7 +1244,7 @@
     "level": "foundation",
     "knowledge_id": "dao_ham",
     "knowledge": "Đạo hàm",
-    "game": "Tìm giao điểm",
+    "game": "Đạo hàm • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/dao-ham/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1254,7 +1254,7 @@
     "level": "foundation",
     "knowledge_id": "dao_ham",
     "knowledge": "Đạo hàm",
-    "game": "Đồ thị bí ẩn",
+    "game": "Đạo hàm • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/dao-ham/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1264,7 +1264,7 @@
     "level": "medium",
     "knowledge_id": "bai_toan_thuc_te_11",
     "knowledge": "Bài toán thực tế Toán 11",
-    "game": "Bắt điểm",
+    "game": "Bài toán thực tế Toán 11 • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/bai-toan-thuc-te-11/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1274,7 +1274,7 @@
     "level": "medium",
     "knowledge_id": "bai_toan_thuc_te_11",
     "knowledge": "Bài toán thực tế Toán 11",
-    "game": "Tìm giao điểm",
+    "game": "Bài toán thực tế Toán 11 • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/bai-toan-thuc-te-11/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1284,7 +1284,7 @@
     "level": "medium",
     "knowledge_id": "bai_toan_thuc_te_11",
     "knowledge": "Bài toán thực tế Toán 11",
-    "game": "Đồ thị bí ẩn",
+    "game": "Bài toán thực tế Toán 11 • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/bai-toan-thuc-te-11/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1294,7 +1294,7 @@
     "level": "medium",
     "knowledge_id": "day_so_tong_quat",
     "knowledge": "Dãy số",
-    "game": "Tìm quy luật",
+    "game": "Dãy số [day_so_tong_quat] • Tìm quy luật",
     "icon": "🔍",
     "path": "games/knowledge/day-so-tong-quat/1-tim-quy-luat.html",
     "source_template": "games/sequence/rule.html"
@@ -1304,7 +1304,7 @@
     "level": "medium",
     "knowledge_id": "day_so_tong_quat",
     "knowledge": "Dãy số",
-    "game": "Điền số",
+    "game": "Dãy số [day_so_tong_quat] • Điền số",
     "icon": "🔢",
     "path": "games/knowledge/day-so-tong-quat/2-ien-so.html",
     "source_template": "games/sequence/fill.html"
@@ -1314,7 +1314,7 @@
     "level": "medium",
     "knowledge_id": "day_so_tong_quat",
     "knowledge": "Dãy số",
-    "game": "Đường đua dãy số",
+    "game": "Dãy số [day_so_tong_quat] • Đường đua dãy số",
     "icon": "🏁",
     "path": "games/knowledge/day-so-tong-quat/3-uong-ua-day-so.html",
     "source_template": "games/sequence/race.html"
@@ -1324,7 +1324,7 @@
     "level": "medium",
     "knowledge_id": "gioi_han_ham_so",
     "knowledge": "Giới hạn hàm số",
-    "game": "Bắt điểm",
+    "game": "Giới hạn hàm số • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/gioi-han-ham-so/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1334,7 +1334,7 @@
     "level": "medium",
     "knowledge_id": "gioi_han_ham_so",
     "knowledge": "Giới hạn hàm số",
-    "game": "Tìm giao điểm",
+    "game": "Giới hạn hàm số • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/gioi-han-ham-so/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1344,7 +1344,7 @@
     "level": "medium",
     "knowledge_id": "gioi_han_ham_so",
     "knowledge": "Giới hạn hàm số",
-    "game": "Đồ thị bí ẩn",
+    "game": "Giới hạn hàm số • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/gioi-han-ham-so/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1354,7 +1354,7 @@
     "level": "medium",
     "knowledge_id": "goc_khoang_cach_11",
     "knowledge": "Góc và khoảng cách trong không gian",
-    "game": "Tìm góc",
+    "game": "Góc và khoảng cách trong không gian • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/goc-khoang-cach-11/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -1364,7 +1364,7 @@
     "level": "medium",
     "knowledge_id": "goc_khoang_cach_11",
     "knowledge": "Góc và khoảng cách trong không gian",
-    "game": "Săn độ dài",
+    "game": "Góc và khoảng cách trong không gian • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/goc-khoang-cach-11/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -1374,7 +1374,7 @@
     "level": "medium",
     "knowledge_id": "goc_khoang_cach_11",
     "knowledge": "Góc và khoảng cách trong không gian",
-    "game": "Bản đồ hình học",
+    "game": "Góc và khoảng cách trong không gian • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/goc-khoang-cach-11/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -1384,7 +1384,7 @@
     "level": "medium",
     "knowledge_id": "ham_so_lien_tuc",
     "knowledge": "Hàm số liên tục",
-    "game": "Bắt điểm",
+    "game": "Hàm số liên tục • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/ham-so-lien-tuc/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1394,7 +1394,7 @@
     "level": "medium",
     "knowledge_id": "ham_so_lien_tuc",
     "knowledge": "Hàm số liên tục",
-    "game": "Tìm giao điểm",
+    "game": "Hàm số liên tục • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/ham-so-lien-tuc/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1404,7 +1404,7 @@
     "level": "medium",
     "knowledge_id": "ham_so_lien_tuc",
     "knowledge": "Hàm số liên tục",
-    "game": "Đồ thị bí ẩn",
+    "game": "Hàm số liên tục • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/ham-so-lien-tuc/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1414,7 +1414,7 @@
     "level": "medium",
     "knowledge_id": "phuong_trinh_luong_giac",
     "knowledge": "Phương trình lượng giác",
-    "game": "Bắt điểm",
+    "game": "Phương trình lượng giác [phuong_trinh_luong_giac] • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/phuong-trinh-luong-giac/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1424,7 +1424,7 @@
     "level": "medium",
     "knowledge_id": "phuong_trinh_luong_giac",
     "knowledge": "Phương trình lượng giác",
-    "game": "Tìm giao điểm",
+    "game": "Phương trình lượng giác [phuong_trinh_luong_giac] • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/phuong-trinh-luong-giac/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1434,7 +1434,7 @@
     "level": "medium",
     "knowledge_id": "phuong_trinh_luong_giac",
     "knowledge": "Phương trình lượng giác",
-    "game": "Đồ thị bí ẩn",
+    "game": "Phương trình lượng giác [phuong_trinh_luong_giac] • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/phuong-trinh-luong-giac/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1444,7 +1444,7 @@
     "level": "medium",
     "knowledge_id": "song_song_khong_gian",
     "knowledge": "Quan hệ song song trong không gian",
-    "game": "Tìm góc",
+    "game": "Quan hệ song song trong không gian • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/song-song-khong-gian/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -1454,7 +1454,7 @@
     "level": "medium",
     "knowledge_id": "song_song_khong_gian",
     "knowledge": "Quan hệ song song trong không gian",
-    "game": "Săn độ dài",
+    "game": "Quan hệ song song trong không gian • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/song-song-khong-gian/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -1464,7 +1464,7 @@
     "level": "medium",
     "knowledge_id": "song_song_khong_gian",
     "knowledge": "Quan hệ song song trong không gian",
-    "game": "Bản đồ hình học",
+    "game": "Quan hệ song song trong không gian • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/song-song-khong-gian/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -1474,7 +1474,7 @@
     "level": "medium",
     "knowledge_id": "vuong_goc_khong_gian",
     "knowledge": "Quan hệ vuông góc trong không gian",
-    "game": "Tìm góc",
+    "game": "Quan hệ vuông góc trong không gian • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/vuong-goc-khong-gian/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -1484,7 +1484,7 @@
     "level": "medium",
     "knowledge_id": "vuong_goc_khong_gian",
     "knowledge": "Quan hệ vuông góc trong không gian",
-    "game": "Săn độ dài",
+    "game": "Quan hệ vuông góc trong không gian • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/vuong-goc-khong-gian/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -1494,7 +1494,7 @@
     "level": "medium",
     "knowledge_id": "vuong_goc_khong_gian",
     "knowledge": "Quan hệ vuông góc trong không gian",
-    "game": "Bản đồ hình học",
+    "game": "Quan hệ vuông góc trong không gian • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/vuong-goc-khong-gian/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -1504,7 +1504,7 @@
     "level": "medium",
     "knowledge_id": "dao_ham_quy_tac",
     "knowledge": "Quy tắc đạo hàm",
-    "game": "Bắt điểm",
+    "game": "Quy tắc đạo hàm • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/dao-ham-quy-tac/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1514,7 +1514,7 @@
     "level": "medium",
     "knowledge_id": "dao_ham_quy_tac",
     "knowledge": "Quy tắc đạo hàm",
-    "game": "Tìm giao điểm",
+    "game": "Quy tắc đạo hàm • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/dao-ham-quy-tac/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1524,7 +1524,7 @@
     "level": "medium",
     "knowledge_id": "dao_ham_quy_tac",
     "knowledge": "Quy tắc đạo hàm",
-    "game": "Đồ thị bí ẩn",
+    "game": "Quy tắc đạo hàm • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/dao-ham-quy-tac/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1534,7 +1534,7 @@
     "level": "medium",
     "knowledge_id": "ung_dung_dao_ham_11",
     "knowledge": "Ứng dụng đạo hàm",
-    "game": "Bắt điểm",
+    "game": "Ứng dụng đạo hàm [ung_dung_dao_ham_11] • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/ung-dung-dao-ham-11/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1544,7 +1544,7 @@
     "level": "medium",
     "knowledge_id": "ung_dung_dao_ham_11",
     "knowledge": "Ứng dụng đạo hàm",
-    "game": "Tìm giao điểm",
+    "game": "Ứng dụng đạo hàm [ung_dung_dao_ham_11] • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/ung-dung-dao-ham-11/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1554,7 +1554,7 @@
     "level": "medium",
     "knowledge_id": "ung_dung_dao_ham_11",
     "knowledge": "Ứng dụng đạo hàm",
-    "game": "Đồ thị bí ẩn",
+    "game": "Ứng dụng đạo hàm [ung_dung_dao_ham_11] • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/ung-dung-dao-ham-11/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1564,7 +1564,7 @@
     "level": "advanced",
     "knowledge_id": "bien_co_doc_lap_11",
     "knowledge": "Biến cố độc lập và xác suất có điều kiện",
-    "game": "Bốc bi",
+    "game": "Biến cố độc lập và xác suất có điều kiện • Bốc bi",
     "icon": "🔮",
     "path": "games/knowledge/bien-co-doc-lap-11/1-boc-bi.html",
     "source_template": "games/probability/marble.html"
@@ -1574,7 +1574,7 @@
     "level": "advanced",
     "knowledge_id": "bien_co_doc_lap_11",
     "knowledge": "Biến cố độc lập và xác suất có điều kiện",
-    "game": "Xúc xắc",
+    "game": "Biến cố độc lập và xác suất có điều kiện • Xúc xắc",
     "icon": "🎲",
     "path": "games/knowledge/bien-co-doc-lap-11/2-xuc-xac.html",
     "source_template": "games/probability/dice.html"
@@ -1584,7 +1584,7 @@
     "level": "advanced",
     "knowledge_id": "bien_co_doc_lap_11",
     "knowledge": "Biến cố độc lập và xác suất có điều kiện",
-    "game": "Chọn tình huống",
+    "game": "Biến cố độc lập và xác suất có điều kiện • Chọn tình huống",
     "icon": "🎯",
     "path": "games/knowledge/bien-co-doc-lap-11/3-chon-tinh-huong.html",
     "source_template": "games/probability/situation.html"
@@ -1594,7 +1594,7 @@
     "level": "advanced",
     "knowledge_id": "bai_toan_thuc_te_tong_hop_11",
     "knowledge": "Bài toán thực tế tổng hợp Toán 11",
-    "game": "Bắt điểm",
+    "game": "Bài toán thực tế tổng hợp Toán 11 • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/bai-toan-thuc-te-tong-hop-11/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1604,7 +1604,7 @@
     "level": "advanced",
     "knowledge_id": "bai_toan_thuc_te_tong_hop_11",
     "knowledge": "Bài toán thực tế tổng hợp Toán 11",
-    "game": "Tìm giao điểm",
+    "game": "Bài toán thực tế tổng hợp Toán 11 • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/bai-toan-thuc-te-tong-hop-11/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1614,7 +1614,7 @@
     "level": "advanced",
     "knowledge_id": "bai_toan_thuc_te_tong_hop_11",
     "knowledge": "Bài toán thực tế tổng hợp Toán 11",
-    "game": "Đồ thị bí ẩn",
+    "game": "Bài toán thực tế tổng hợp Toán 11 • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/bai-toan-thuc-te-tong-hop-11/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1624,7 +1624,7 @@
     "level": "advanced",
     "knowledge_id": "day_so_truy_hoi_11",
     "knowledge": "Dãy số truy hồi",
-    "game": "Tìm quy luật",
+    "game": "Dãy số truy hồi • Tìm quy luật",
     "icon": "🔍",
     "path": "games/knowledge/day-so-truy-hoi-11/1-tim-quy-luat.html",
     "source_template": "games/sequence/rule.html"
@@ -1634,7 +1634,7 @@
     "level": "advanced",
     "knowledge_id": "day_so_truy_hoi_11",
     "knowledge": "Dãy số truy hồi",
-    "game": "Điền số",
+    "game": "Dãy số truy hồi • Điền số",
     "icon": "🔢",
     "path": "games/knowledge/day-so-truy-hoi-11/2-ien-so.html",
     "source_template": "games/sequence/fill.html"
@@ -1644,7 +1644,7 @@
     "level": "advanced",
     "knowledge_id": "day_so_truy_hoi_11",
     "knowledge": "Dãy số truy hồi",
-    "game": "Đường đua dãy số",
+    "game": "Dãy số truy hồi • Đường đua dãy số",
     "icon": "🏁",
     "path": "games/knowledge/day-so-truy-hoi-11/3-uong-ua-day-so.html",
     "source_template": "games/sequence/race.html"
@@ -1654,7 +1654,7 @@
     "level": "advanced",
     "knowledge_id": "ham_so_luong_giac_day_du",
     "knowledge": "Hàm số lượng giác",
-    "game": "Bắt điểm",
+    "game": "Hàm số lượng giác [ham_so_luong_giac_day_du] • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/ham-so-luong-giac-day-du/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1664,7 +1664,7 @@
     "level": "advanced",
     "knowledge_id": "ham_so_luong_giac_day_du",
     "knowledge": "Hàm số lượng giác",
-    "game": "Tìm giao điểm",
+    "game": "Hàm số lượng giác [ham_so_luong_giac_day_du] • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/ham-so-luong-giac-day-du/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1674,7 +1674,7 @@
     "level": "advanced",
     "knowledge_id": "ham_so_luong_giac_day_du",
     "knowledge": "Hàm số lượng giác",
-    "game": "Đồ thị bí ẩn",
+    "game": "Hàm số lượng giác [ham_so_luong_giac_day_du] • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/ham-so-luong-giac-day-du/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1684,7 +1684,7 @@
     "level": "advanced",
     "knowledge_id": "phep_bien_hinh_11",
     "knowledge": "Phép biến hình trong mặt phẳng",
-    "game": "Tìm góc",
+    "game": "Phép biến hình trong mặt phẳng • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/phep-bien-hinh-11/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -1694,7 +1694,7 @@
     "level": "advanced",
     "knowledge_id": "phep_bien_hinh_11",
     "knowledge": "Phép biến hình trong mặt phẳng",
-    "game": "Săn độ dài",
+    "game": "Phép biến hình trong mặt phẳng • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/phep-bien-hinh-11/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -1704,7 +1704,7 @@
     "level": "advanced",
     "knowledge_id": "phep_bien_hinh_11",
     "knowledge": "Phép biến hình trong mặt phẳng",
-    "game": "Bản đồ hình học",
+    "game": "Phép biến hình trong mặt phẳng • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/phep-bien-hinh-11/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -1714,7 +1714,7 @@
     "level": "advanced",
     "knowledge_id": "phuong_trinh_luong_giac_day_du",
     "knowledge": "Phương trình lượng giác",
-    "game": "Bắt điểm",
+    "game": "Phương trình lượng giác [phuong_trinh_luong_giac_day_du] • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/phuong-trinh-luong-giac-day-du/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1724,7 +1724,7 @@
     "level": "advanced",
     "knowledge_id": "phuong_trinh_luong_giac_day_du",
     "knowledge": "Phương trình lượng giác",
-    "game": "Tìm giao điểm",
+    "game": "Phương trình lượng giác [phuong_trinh_luong_giac_day_du] • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/phuong-trinh-luong-giac-day-du/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1734,7 +1734,7 @@
     "level": "advanced",
     "knowledge_id": "phuong_trinh_luong_giac_day_du",
     "knowledge": "Phương trình lượng giác",
-    "game": "Đồ thị bí ẩn",
+    "game": "Phương trình lượng giác [phuong_trinh_luong_giac_day_du] • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/phuong-trinh-luong-giac-day-du/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1744,7 +1744,7 @@
     "level": "advanced",
     "knowledge_id": "hinh_khong_gian",
     "knowledge": "Quan hệ song song và vuông góc trong không gian",
-    "game": "Tìm góc",
+    "game": "Quan hệ song song và vuông góc trong không gian • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/hinh-khong-gian/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -1754,7 +1754,7 @@
     "level": "advanced",
     "knowledge_id": "hinh_khong_gian",
     "knowledge": "Quan hệ song song và vuông góc trong không gian",
-    "game": "Săn độ dài",
+    "game": "Quan hệ song song và vuông góc trong không gian • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/hinh-khong-gian/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -1764,7 +1764,7 @@
     "level": "advanced",
     "knowledge_id": "hinh_khong_gian",
     "knowledge": "Quan hệ song song và vuông góc trong không gian",
-    "game": "Bản đồ hình học",
+    "game": "Quan hệ song song và vuông góc trong không gian • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/hinh-khong-gian/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -1774,7 +1774,7 @@
     "level": "advanced",
     "knowledge_id": "quy_nap_toan_hoc_11",
     "knowledge": "Quy nạp toán học",
-    "game": "Tìm quy luật",
+    "game": "Quy nạp toán học • Tìm quy luật",
     "icon": "🔍",
     "path": "games/knowledge/quy-nap-toan-hoc-11/1-tim-quy-luat.html",
     "source_template": "games/sequence/rule.html"
@@ -1784,7 +1784,7 @@
     "level": "advanced",
     "knowledge_id": "quy_nap_toan_hoc_11",
     "knowledge": "Quy nạp toán học",
-    "game": "Điền số",
+    "game": "Quy nạp toán học • Điền số",
     "icon": "🔢",
     "path": "games/knowledge/quy-nap-toan-hoc-11/2-ien-so.html",
     "source_template": "games/sequence/fill.html"
@@ -1794,7 +1794,7 @@
     "level": "advanced",
     "knowledge_id": "quy_nap_toan_hoc_11",
     "knowledge": "Quy nạp toán học",
-    "game": "Đường đua dãy số",
+    "game": "Quy nạp toán học • Đường đua dãy số",
     "icon": "🏁",
     "path": "games/knowledge/quy-nap-toan-hoc-11/3-uong-ua-day-so.html",
     "source_template": "games/sequence/race.html"
@@ -1804,7 +1804,7 @@
     "level": "advanced",
     "knowledge_id": "thiet_dien_hinh_khong_gian_11",
     "knowledge": "Thiết diện hình không gian",
-    "game": "Tìm góc",
+    "game": "Thiết diện hình không gian • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/thiet-dien-hinh-khong-gian-11/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -1814,7 +1814,7 @@
     "level": "advanced",
     "knowledge_id": "thiet_dien_hinh_khong_gian_11",
     "knowledge": "Thiết diện hình không gian",
-    "game": "Săn độ dài",
+    "game": "Thiết diện hình không gian • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/thiet-dien-hinh-khong-gian-11/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -1824,7 +1824,7 @@
     "level": "advanced",
     "knowledge_id": "thiet_dien_hinh_khong_gian_11",
     "knowledge": "Thiết diện hình không gian",
-    "game": "Bản đồ hình học",
+    "game": "Thiết diện hình không gian • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/thiet-dien-hinh-khong-gian-11/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -1834,7 +1834,7 @@
     "level": "advanced",
     "knowledge_id": "to_hop_xac_suat_nang_cao_11",
     "knowledge": "Tổ hợp và xác suất nâng cao",
-    "game": "Bốc bi",
+    "game": "Tổ hợp và xác suất nâng cao • Bốc bi",
     "icon": "🔮",
     "path": "games/knowledge/to-hop-xac-suat-nang-cao-11/1-boc-bi.html",
     "source_template": "games/probability/marble.html"
@@ -1844,7 +1844,7 @@
     "level": "advanced",
     "knowledge_id": "to_hop_xac_suat_nang_cao_11",
     "knowledge": "Tổ hợp và xác suất nâng cao",
-    "game": "Xúc xắc",
+    "game": "Tổ hợp và xác suất nâng cao • Xúc xắc",
     "icon": "🎲",
     "path": "games/knowledge/to-hop-xac-suat-nang-cao-11/2-xuc-xac.html",
     "source_template": "games/probability/dice.html"
@@ -1854,7 +1854,7 @@
     "level": "advanced",
     "knowledge_id": "to_hop_xac_suat_nang_cao_11",
     "knowledge": "Tổ hợp và xác suất nâng cao",
-    "game": "Chọn tình huống",
+    "game": "Tổ hợp và xác suất nâng cao • Chọn tình huống",
     "icon": "🎯",
     "path": "games/knowledge/to-hop-xac-suat-nang-cao-11/3-chon-tinh-huong.html",
     "source_template": "games/probability/situation.html"
@@ -1864,7 +1864,7 @@
     "level": "foundation",
     "knowledge_id": "thong_ke_12",
     "knowledge": "Các số đặc trưng đo xu thế và độ phân tán",
-    "game": "Đọc biểu đồ",
+    "game": "Các số đặc trưng đo xu thế và độ phân tán • Đọc biểu đồ",
     "icon": "📊",
     "path": "games/knowledge/thong-ke-12/1-oc-bieu-o.html",
     "source_template": "games/statistics/chart.html"
@@ -1874,7 +1874,7 @@
     "level": "foundation",
     "knowledge_id": "thong_ke_12",
     "knowledge": "Các số đặc trưng đo xu thế và độ phân tán",
-    "game": "Săn số liệu",
+    "game": "Các số đặc trưng đo xu thế và độ phân tán • Săn số liệu",
     "icon": "🔎",
     "path": "games/knowledge/thong-ke-12/2-san-so-lieu.html",
     "source_template": "games/statistics/data.html"
@@ -1884,7 +1884,7 @@
     "level": "foundation",
     "knowledge_id": "thong_ke_12",
     "knowledge": "Các số đặc trưng đo xu thế và độ phân tán",
-    "game": "Thử thách thống kê",
+    "game": "Các số đặc trưng đo xu thế và độ phân tán • Thử thách thống kê",
     "icon": "🏆",
     "path": "games/knowledge/thong-ke-12/3-thu-thach-thong-ke.html",
     "source_template": "games/statistics/challenge.html"
@@ -1894,7 +1894,7 @@
     "level": "foundation",
     "knowledge_id": "cuc_tri",
     "knowledge": "Cực trị",
-    "game": "Bắt điểm",
+    "game": "Cực trị • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/cuc-tri/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1904,7 +1904,7 @@
     "level": "foundation",
     "knowledge_id": "cuc_tri",
     "knowledge": "Cực trị",
-    "game": "Tìm giao điểm",
+    "game": "Cực trị • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/cuc-tri/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1914,7 +1914,7 @@
     "level": "foundation",
     "knowledge_id": "cuc_tri",
     "knowledge": "Cực trị",
-    "game": "Đồ thị bí ẩn",
+    "game": "Cực trị • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/cuc-tri/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1924,7 +1924,7 @@
     "level": "foundation",
     "knowledge_id": "gtln_gtnn",
     "knowledge": "Giá trị lớn nhất và nhỏ nhất",
-    "game": "Bắt điểm",
+    "game": "Giá trị lớn nhất và nhỏ nhất • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/gtln-gtnn/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1934,7 +1934,7 @@
     "level": "foundation",
     "knowledge_id": "gtln_gtnn",
     "knowledge": "Giá trị lớn nhất và nhỏ nhất",
-    "game": "Tìm giao điểm",
+    "game": "Giá trị lớn nhất và nhỏ nhất • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/gtln-gtnn/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1944,7 +1944,7 @@
     "level": "foundation",
     "knowledge_id": "gtln_gtnn",
     "knowledge": "Giá trị lớn nhất và nhỏ nhất",
-    "game": "Đồ thị bí ẩn",
+    "game": "Giá trị lớn nhất và nhỏ nhất • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/gtln-gtnn/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1954,7 +1954,7 @@
     "level": "foundation",
     "knowledge_id": "ham_logarit",
     "knowledge": "Hàm số logarit",
-    "game": "Bắt điểm",
+    "game": "Hàm số logarit • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/ham-logarit/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1964,7 +1964,7 @@
     "level": "foundation",
     "knowledge_id": "ham_logarit",
     "knowledge": "Hàm số logarit",
-    "game": "Tìm giao điểm",
+    "game": "Hàm số logarit • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/ham-logarit/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -1974,7 +1974,7 @@
     "level": "foundation",
     "knowledge_id": "ham_logarit",
     "knowledge": "Hàm số logarit",
-    "game": "Đồ thị bí ẩn",
+    "game": "Hàm số logarit • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/ham-logarit/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -1984,7 +1984,7 @@
     "level": "foundation",
     "knowledge_id": "ham_mu",
     "knowledge": "Hàm số mũ",
-    "game": "Bắt điểm",
+    "game": "Hàm số mũ • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/ham-mu/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -1994,7 +1994,7 @@
     "level": "foundation",
     "knowledge_id": "ham_mu",
     "knowledge": "Hàm số mũ",
-    "game": "Tìm giao điểm",
+    "game": "Hàm số mũ • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/ham-mu/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2004,7 +2004,7 @@
     "level": "foundation",
     "knowledge_id": "ham_mu",
     "knowledge": "Hàm số mũ",
-    "game": "Đồ thị bí ẩn",
+    "game": "Hàm số mũ • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/ham-mu/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2014,7 +2014,7 @@
     "level": "foundation",
     "knowledge_id": "hinh_hoc_khong_gian",
     "knowledge": "Hình học không gian",
-    "game": "Tìm góc",
+    "game": "Hình học không gian • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/hinh-hoc-khong-gian/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -2024,7 +2024,7 @@
     "level": "foundation",
     "knowledge_id": "hinh_hoc_khong_gian",
     "knowledge": "Hình học không gian",
-    "game": "Săn độ dài",
+    "game": "Hình học không gian • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/hinh-hoc-khong-gian/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -2034,7 +2034,7 @@
     "level": "foundation",
     "knowledge_id": "hinh_hoc_khong_gian",
     "knowledge": "Hình học không gian",
-    "game": "Bản đồ hình học",
+    "game": "Hình học không gian • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/hinh-hoc-khong-gian/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -2044,7 +2044,7 @@
     "level": "foundation",
     "knowledge_id": "so_phuc",
     "knowledge": "Số phức",
-    "game": "Bắt điểm",
+    "game": "Số phức • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/so-phuc/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2054,7 +2054,7 @@
     "level": "foundation",
     "knowledge_id": "so_phuc",
     "knowledge": "Số phức",
-    "game": "Tìm giao điểm",
+    "game": "Số phức • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/so-phuc/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2064,7 +2064,7 @@
     "level": "foundation",
     "knowledge_id": "so_phuc",
     "knowledge": "Số phức",
-    "game": "Đồ thị bí ẩn",
+    "game": "Số phức • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/so-phuc/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2074,7 +2074,7 @@
     "level": "foundation",
     "knowledge_id": "tinh_don_dieu",
     "knowledge": "Tính đơn điệu",
-    "game": "Bắt điểm",
+    "game": "Tính đơn điệu • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/tinh-don-dieu/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2084,7 +2084,7 @@
     "level": "foundation",
     "knowledge_id": "tinh_don_dieu",
     "knowledge": "Tính đơn điệu",
-    "game": "Tìm giao điểm",
+    "game": "Tính đơn điệu • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/tinh-don-dieu/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2094,7 +2094,7 @@
     "level": "foundation",
     "knowledge_id": "tinh_don_dieu",
     "knowledge": "Tính đơn điệu",
-    "game": "Đồ thị bí ẩn",
+    "game": "Tính đơn điệu • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/tinh-don-dieu/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2104,7 +2104,7 @@
     "level": "foundation",
     "knowledge_id": "toa_do_khong_gian",
     "knowledge": "Tọa độ trong không gian",
-    "game": "Tìm góc",
+    "game": "Tọa độ trong không gian • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/toa-do-khong-gian/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -2114,7 +2114,7 @@
     "level": "foundation",
     "knowledge_id": "toa_do_khong_gian",
     "knowledge": "Tọa độ trong không gian",
-    "game": "Săn độ dài",
+    "game": "Tọa độ trong không gian • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/toa-do-khong-gian/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -2124,7 +2124,7 @@
     "level": "foundation",
     "knowledge_id": "toa_do_khong_gian",
     "knowledge": "Tọa độ trong không gian",
-    "game": "Bản đồ hình học",
+    "game": "Tọa độ trong không gian • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/toa-do-khong-gian/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -2134,7 +2134,7 @@
     "level": "foundation",
     "knowledge_id": "xac_suat_12",
     "knowledge": "Xác suất và biến ngẫu nhiên",
-    "game": "Bốc bi",
+    "game": "Xác suất và biến ngẫu nhiên • Bốc bi",
     "icon": "🔮",
     "path": "games/knowledge/xac-suat-12/1-boc-bi.html",
     "source_template": "games/probability/marble.html"
@@ -2144,7 +2144,7 @@
     "level": "foundation",
     "knowledge_id": "xac_suat_12",
     "knowledge": "Xác suất và biến ngẫu nhiên",
-    "game": "Xúc xắc",
+    "game": "Xác suất và biến ngẫu nhiên • Xúc xắc",
     "icon": "🎲",
     "path": "games/knowledge/xac-suat-12/2-xuc-xac.html",
     "source_template": "games/probability/dice.html"
@@ -2154,7 +2154,7 @@
     "level": "foundation",
     "knowledge_id": "xac_suat_12",
     "knowledge": "Xác suất và biến ngẫu nhiên",
-    "game": "Chọn tình huống",
+    "game": "Xác suất và biến ngẫu nhiên • Chọn tình huống",
     "icon": "🎯",
     "path": "games/knowledge/xac-suat-12/3-chon-tinh-huong.html",
     "source_template": "games/probability/situation.html"
@@ -2164,7 +2164,7 @@
     "level": "medium",
     "knowledge_id": "bieu_dien_so_phuc",
     "knowledge": "Biểu diễn số phức",
-    "game": "Bắt điểm",
+    "game": "Biểu diễn số phức • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/bieu-dien-so-phuc/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2174,7 +2174,7 @@
     "level": "medium",
     "knowledge_id": "bieu_dien_so_phuc",
     "knowledge": "Biểu diễn số phức",
-    "game": "Tìm giao điểm",
+    "game": "Biểu diễn số phức • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/bieu-dien-so-phuc/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2184,7 +2184,7 @@
     "level": "medium",
     "knowledge_id": "bieu_dien_so_phuc",
     "knowledge": "Biểu diễn số phức",
-    "game": "Đồ thị bí ẩn",
+    "game": "Biểu diễn số phức • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/bieu-dien-so-phuc/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2194,7 +2194,7 @@
     "level": "medium",
     "knowledge_id": "khao_sat_ham_so",
     "knowledge": "Khảo sát và vẽ đồ thị hàm số",
-    "game": "Bắt điểm",
+    "game": "Khảo sát và vẽ đồ thị hàm số • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/khao-sat-ham-so/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2204,7 +2204,7 @@
     "level": "medium",
     "knowledge_id": "khao_sat_ham_so",
     "knowledge": "Khảo sát và vẽ đồ thị hàm số",
-    "game": "Tìm giao điểm",
+    "game": "Khảo sát và vẽ đồ thị hàm số • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/khao-sat-ham-so/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2214,7 +2214,7 @@
     "level": "medium",
     "knowledge_id": "khao_sat_ham_so",
     "knowledge": "Khảo sát và vẽ đồ thị hàm số",
-    "game": "Đồ thị bí ẩn",
+    "game": "Khảo sát và vẽ đồ thị hàm số • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/khao-sat-ham-so/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2224,7 +2224,7 @@
     "level": "medium",
     "knowledge_id": "mat_phang_oxyz",
     "knowledge": "Mặt phẳng trong Oxyz",
-    "game": "Tìm góc",
+    "game": "Mặt phẳng trong Oxyz • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/mat-phang-oxyz/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -2234,7 +2234,7 @@
     "level": "medium",
     "knowledge_id": "mat_phang_oxyz",
     "knowledge": "Mặt phẳng trong Oxyz",
-    "game": "Săn độ dài",
+    "game": "Mặt phẳng trong Oxyz • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/mat-phang-oxyz/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -2244,7 +2244,7 @@
     "level": "medium",
     "knowledge_id": "mat_phang_oxyz",
     "knowledge": "Mặt phẳng trong Oxyz",
-    "game": "Bản đồ hình học",
+    "game": "Mặt phẳng trong Oxyz • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/mat-phang-oxyz/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -2254,7 +2254,7 @@
     "level": "medium",
     "knowledge_id": "nguyen_ham_tich_phan",
     "knowledge": "Nguyên hàm và tích phân",
-    "game": "Bắt điểm",
+    "game": "Nguyên hàm và tích phân • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/nguyen-ham-tich-phan/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2264,7 +2264,7 @@
     "level": "medium",
     "knowledge_id": "nguyen_ham_tich_phan",
     "knowledge": "Nguyên hàm và tích phân",
-    "game": "Tìm giao điểm",
+    "game": "Nguyên hàm và tích phân • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/nguyen-ham-tich-phan/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2274,7 +2274,7 @@
     "level": "medium",
     "knowledge_id": "nguyen_ham_tich_phan",
     "knowledge": "Nguyên hàm và tích phân",
-    "game": "Đồ thị bí ẩn",
+    "game": "Nguyên hàm và tích phân • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/nguyen-ham-tich-phan/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2284,7 +2284,7 @@
     "level": "medium",
     "knowledge_id": "pt_logarit",
     "knowledge": "Phương trình logarit",
-    "game": "Bắt điểm",
+    "game": "Phương trình logarit • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/pt-logarit/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2294,7 +2294,7 @@
     "level": "medium",
     "knowledge_id": "pt_logarit",
     "knowledge": "Phương trình logarit",
-    "game": "Tìm giao điểm",
+    "game": "Phương trình logarit • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/pt-logarit/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2304,7 +2304,7 @@
     "level": "medium",
     "knowledge_id": "pt_logarit",
     "knowledge": "Phương trình logarit",
-    "game": "Đồ thị bí ẩn",
+    "game": "Phương trình logarit • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/pt-logarit/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2314,7 +2314,7 @@
     "level": "medium",
     "knowledge_id": "pt_mu",
     "knowledge": "Phương trình mũ",
-    "game": "Bắt điểm",
+    "game": "Phương trình mũ • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/pt-mu/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2324,7 +2324,7 @@
     "level": "medium",
     "knowledge_id": "pt_mu",
     "knowledge": "Phương trình mũ",
-    "game": "Tìm giao điểm",
+    "game": "Phương trình mũ • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/pt-mu/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2334,7 +2334,7 @@
     "level": "medium",
     "knowledge_id": "pt_mu",
     "knowledge": "Phương trình mũ",
-    "game": "Đồ thị bí ẩn",
+    "game": "Phương trình mũ • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/pt-mu/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2344,7 +2344,7 @@
     "level": "medium",
     "knowledge_id": "tiep_tuyen",
     "knowledge": "Tiếp tuyến",
-    "game": "Bắt điểm",
+    "game": "Tiếp tuyến • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/tiep-tuyen/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2354,7 +2354,7 @@
     "level": "medium",
     "knowledge_id": "tiep_tuyen",
     "knowledge": "Tiếp tuyến",
-    "game": "Tìm giao điểm",
+    "game": "Tiếp tuyến • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/tiep-tuyen/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2364,7 +2364,7 @@
     "level": "medium",
     "knowledge_id": "tiep_tuyen",
     "knowledge": "Tiếp tuyến",
-    "game": "Đồ thị bí ẩn",
+    "game": "Tiếp tuyến • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/tiep-tuyen/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2374,7 +2374,7 @@
     "level": "medium",
     "knowledge_id": "tien_can",
     "knowledge": "Tiệm cận",
-    "game": "Bắt điểm",
+    "game": "Tiệm cận • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/tien-can/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2384,7 +2384,7 @@
     "level": "medium",
     "knowledge_id": "tien_can",
     "knowledge": "Tiệm cận",
-    "game": "Tìm giao điểm",
+    "game": "Tiệm cận • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/tien-can/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2394,7 +2394,7 @@
     "level": "medium",
     "knowledge_id": "tien_can",
     "knowledge": "Tiệm cận",
-    "game": "Đồ thị bí ẩn",
+    "game": "Tiệm cận • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/tien-can/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2404,7 +2404,7 @@
     "level": "medium",
     "knowledge_id": "duong_thang_oxyz",
     "knowledge": "Đường thẳng trong Oxyz",
-    "game": "Bắt điểm",
+    "game": "Đường thẳng trong Oxyz • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/duong-thang-oxyz/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2414,7 +2414,7 @@
     "level": "medium",
     "knowledge_id": "duong_thang_oxyz",
     "knowledge": "Đường thẳng trong Oxyz",
-    "game": "Tìm giao điểm",
+    "game": "Đường thẳng trong Oxyz • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/duong-thang-oxyz/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2424,7 +2424,7 @@
     "level": "medium",
     "knowledge_id": "duong_thang_oxyz",
     "knowledge": "Đường thẳng trong Oxyz",
-    "game": "Đồ thị bí ẩn",
+    "game": "Đường thẳng trong Oxyz • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/duong-thang-oxyz/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2434,7 +2434,7 @@
     "level": "medium",
     "knowledge_id": "ung_dung_dao_ham",
     "knowledge": "Ứng dụng đạo hàm",
-    "game": "Bắt điểm",
+    "game": "Ứng dụng đạo hàm [ung_dung_dao_ham] • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/ung-dung-dao-ham/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2444,7 +2444,7 @@
     "level": "medium",
     "knowledge_id": "ung_dung_dao_ham",
     "knowledge": "Ứng dụng đạo hàm",
-    "game": "Tìm giao điểm",
+    "game": "Ứng dụng đạo hàm [ung_dung_dao_ham] • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/ung-dung-dao-ham/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2454,7 +2454,7 @@
     "level": "medium",
     "knowledge_id": "ung_dung_dao_ham",
     "knowledge": "Ứng dụng đạo hàm",
-    "game": "Đồ thị bí ẩn",
+    "game": "Ứng dụng đạo hàm [ung_dung_dao_ham] • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/ung-dung-dao-ham/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2464,7 +2464,7 @@
     "level": "advanced",
     "knowledge_id": "bai_toan_thuc_te_12",
     "knowledge": "Bài toán thực tế Toán 12",
-    "game": "Bắt điểm",
+    "game": "Bài toán thực tế Toán 12 • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/bai-toan-thuc-te-12/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2474,7 +2474,7 @@
     "level": "advanced",
     "knowledge_id": "bai_toan_thuc_te_12",
     "knowledge": "Bài toán thực tế Toán 12",
-    "game": "Tìm giao điểm",
+    "game": "Bài toán thực tế Toán 12 • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/bai-toan-thuc-te-12/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2484,7 +2484,7 @@
     "level": "advanced",
     "knowledge_id": "bai_toan_thuc_te_12",
     "knowledge": "Bài toán thực tế Toán 12",
-    "game": "Đồ thị bí ẩn",
+    "game": "Bài toán thực tế Toán 12 • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/bai-toan-thuc-te-12/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2494,7 +2494,7 @@
     "level": "advanced",
     "knowledge_id": "tong_hop_thpt",
     "knowledge": "Bài toán tổng hợp THPT",
-    "game": "Bắt điểm",
+    "game": "Bài toán tổng hợp THPT • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/tong-hop-thpt/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2504,7 +2504,7 @@
     "level": "advanced",
     "knowledge_id": "tong_hop_thpt",
     "knowledge": "Bài toán tổng hợp THPT",
-    "game": "Tìm giao điểm",
+    "game": "Bài toán tổng hợp THPT • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/tong-hop-thpt/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2514,7 +2514,7 @@
     "level": "advanced",
     "knowledge_id": "tong_hop_thpt",
     "knowledge": "Bài toán tổng hợp THPT",
-    "game": "Đồ thị bí ẩn",
+    "game": "Bài toán tổng hợp THPT • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/tong-hop-thpt/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2524,7 +2524,7 @@
     "level": "advanced",
     "knowledge_id": "bpt_logarit",
     "knowledge": "Bất phương trình logarit",
-    "game": "Bắt điểm",
+    "game": "Bất phương trình logarit • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/bpt-logarit/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2534,7 +2534,7 @@
     "level": "advanced",
     "knowledge_id": "bpt_logarit",
     "knowledge": "Bất phương trình logarit",
-    "game": "Tìm giao điểm",
+    "game": "Bất phương trình logarit • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/bpt-logarit/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2544,7 +2544,7 @@
     "level": "advanced",
     "knowledge_id": "bpt_logarit",
     "knowledge": "Bất phương trình logarit",
-    "game": "Đồ thị bí ẩn",
+    "game": "Bất phương trình logarit • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/bpt-logarit/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2554,7 +2554,7 @@
     "level": "advanced",
     "knowledge_id": "bpt_mu",
     "knowledge": "Bất phương trình mũ",
-    "game": "Bắt điểm",
+    "game": "Bất phương trình mũ • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/bpt-mu/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2564,7 +2564,7 @@
     "level": "advanced",
     "knowledge_id": "bpt_mu",
     "knowledge": "Bất phương trình mũ",
-    "game": "Tìm giao điểm",
+    "game": "Bất phương trình mũ • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/bpt-mu/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2574,7 +2574,7 @@
     "level": "advanced",
     "knowledge_id": "bpt_mu",
     "knowledge": "Bất phương trình mũ",
-    "game": "Đồ thị bí ẩn",
+    "game": "Bất phương trình mũ • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/bpt-mu/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2584,7 +2584,7 @@
     "level": "advanced",
     "knowledge_id": "goc_khoang_cach_oxyz",
     "knowledge": "Góc và khoảng cách Oxyz",
-    "game": "Tìm góc",
+    "game": "Góc và khoảng cách Oxyz • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/goc-khoang-cach-oxyz/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -2594,7 +2594,7 @@
     "level": "advanced",
     "knowledge_id": "goc_khoang_cach_oxyz",
     "knowledge": "Góc và khoảng cách Oxyz",
-    "game": "Săn độ dài",
+    "game": "Góc và khoảng cách Oxyz • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/goc-khoang-cach-oxyz/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -2604,7 +2604,7 @@
     "level": "advanced",
     "knowledge_id": "goc_khoang_cach_oxyz",
     "knowledge": "Góc và khoảng cách Oxyz",
-    "game": "Bản đồ hình học",
+    "game": "Góc và khoảng cách Oxyz • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/goc-khoang-cach-oxyz/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -2614,7 +2614,7 @@
     "level": "advanced",
     "knowledge_id": "mat_cau",
     "knowledge": "Mặt cầu",
-    "game": "Tìm góc",
+    "game": "Mặt cầu • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/mat-cau/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -2624,7 +2624,7 @@
     "level": "advanced",
     "knowledge_id": "mat_cau",
     "knowledge": "Mặt cầu",
-    "game": "Săn độ dài",
+    "game": "Mặt cầu • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/mat-cau/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -2634,7 +2634,7 @@
     "level": "advanced",
     "knowledge_id": "mat_cau",
     "knowledge": "Mặt cầu",
-    "game": "Bản đồ hình học",
+    "game": "Mặt cầu • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/mat-cau/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -2644,7 +2644,7 @@
     "level": "advanced",
     "knowledge_id": "pt_so_phuc",
     "knowledge": "Phương trình số phức",
-    "game": "Bắt điểm",
+    "game": "Phương trình số phức • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/pt-so-phuc/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2654,7 +2654,7 @@
     "level": "advanced",
     "knowledge_id": "pt_so_phuc",
     "knowledge": "Phương trình số phức",
-    "game": "Tìm giao điểm",
+    "game": "Phương trình số phức • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/pt-so-phuc/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2664,7 +2664,7 @@
     "level": "advanced",
     "knowledge_id": "pt_so_phuc",
     "knowledge": "Phương trình số phức",
-    "game": "Đồ thị bí ẩn",
+    "game": "Phương trình số phức • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/pt-so-phuc/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
@@ -2674,7 +2674,7 @@
     "level": "advanced",
     "knowledge_id": "the_tich_khong_gian",
     "knowledge": "Thể tích hình học không gian",
-    "game": "Tìm góc",
+    "game": "Thể tích hình học không gian • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/the-tich-khong-gian/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -2684,7 +2684,7 @@
     "level": "advanced",
     "knowledge_id": "the_tich_khong_gian",
     "knowledge": "Thể tích hình học không gian",
-    "game": "Săn độ dài",
+    "game": "Thể tích hình học không gian • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/the-tich-khong-gian/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -2694,7 +2694,7 @@
     "level": "advanced",
     "knowledge_id": "the_tich_khong_gian",
     "knowledge": "Thể tích hình học không gian",
-    "game": "Bản đồ hình học",
+    "game": "Thể tích hình học không gian • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/the-tich-khong-gian/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -2704,7 +2704,7 @@
     "level": "advanced",
     "knowledge_id": "tuong_giao",
     "knowledge": "Tương giao đồ thị",
-    "game": "Tìm góc",
+    "game": "Tương giao đồ thị • Tìm góc",
     "icon": "📐",
     "path": "games/knowledge/tuong-giao/1-tim-goc.html",
     "source_template": "games/geometry/angle.html"
@@ -2714,7 +2714,7 @@
     "level": "advanced",
     "knowledge_id": "tuong_giao",
     "knowledge": "Tương giao đồ thị",
-    "game": "Săn độ dài",
+    "game": "Tương giao đồ thị • Săn độ dài",
     "icon": "📏",
     "path": "games/knowledge/tuong-giao/2-san-o-dai.html",
     "source_template": "games/geometry/length.html"
@@ -2724,7 +2724,7 @@
     "level": "advanced",
     "knowledge_id": "tuong_giao",
     "knowledge": "Tương giao đồ thị",
-    "game": "Bản đồ hình học",
+    "game": "Tương giao đồ thị • Bản đồ hình học",
     "icon": "🗺️",
     "path": "games/knowledge/tuong-giao/3-ban-o-hinh-hoc.html",
     "source_template": "games/geometry/map.html"
@@ -2734,7 +2734,7 @@
     "level": "advanced",
     "knowledge_id": "ung_dung_tich_phan",
     "knowledge": "Ứng dụng tích phân",
-    "game": "Bắt điểm",
+    "game": "Ứng dụng tích phân • Bắt điểm",
     "icon": "🎯",
     "path": "games/knowledge/ung-dung-tich-phan/1-bat-iem.html",
     "source_template": "games/function/point.html"
@@ -2744,7 +2744,7 @@
     "level": "advanced",
     "knowledge_id": "ung_dung_tich_phan",
     "knowledge": "Ứng dụng tích phân",
-    "game": "Tìm giao điểm",
+    "game": "Ứng dụng tích phân • Tìm giao điểm",
     "icon": "✖️",
     "path": "games/knowledge/ung-dung-tich-phan/2-tim-giao-iem.html",
     "source_template": "games/function/intersection.html"
@@ -2754,9 +2754,309 @@
     "level": "advanced",
     "knowledge_id": "ung_dung_tich_phan",
     "knowledge": "Ứng dụng tích phân",
-    "game": "Đồ thị bí ẩn",
+    "game": "Ứng dụng tích phân • Đồ thị bí ẩn",
     "icon": "📈",
     "path": "games/knowledge/ung-dung-tich-phan/3-o-thi-bi-an.html",
     "source_template": "games/function/graph.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "hinh_hoc_co_ban_10",
+    "knowledge": "Hình học cơ bản: góc, cạnh và diện tích",
+    "game": "Hình học cơ bản: góc, cạnh và diện tích • Khám phá",
+    "icon": "🔎",
+    "path": "games/knowledge/hinh-hoc-co-ban-10/1-kham-pha.html",
+    "source_template": "games/knowledge/duong-tron/1-goc-noi-tiep-bi-an.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "hinh_hoc_co_ban_10",
+    "knowledge": "Hình học cơ bản: góc, cạnh và diện tích",
+    "game": "Hình học cơ bản: góc, cạnh và diện tích • Nhiệm vụ",
+    "icon": "🧩",
+    "path": "games/knowledge/hinh-hoc-co-ban-10/2-nhiem-vu.html",
+    "source_template": "games/knowledge/duong-tron/2-truy-tim-ban-kinh.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "hinh_hoc_co_ban_10",
+    "knowledge": "Hình học cơ bản: góc, cạnh và diện tích",
+    "game": "Hình học cơ bản: góc, cạnh và diện tích • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/hinh-hoc-co-ban-10/3-trum-cuoi.html",
+    "source_template": "games/knowledge/duong-tron/3-tiep-tuyen-thu-thach.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "tam_giac_tu_giac_10",
+    "knowledge": "Tam giác và tứ giác cơ bản",
+    "game": "Tam giác và tứ giác cơ bản • Khám phá",
+    "icon": "🔎",
+    "path": "games/knowledge/tam-giac-tu-giac-10/1-kham-pha.html",
+    "source_template": "games/knowledge/duong-tron/1-goc-noi-tiep-bi-an.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "tam_giac_tu_giac_10",
+    "knowledge": "Tam giác và tứ giác cơ bản",
+    "game": "Tam giác và tứ giác cơ bản • Nhiệm vụ",
+    "icon": "🧩",
+    "path": "games/knowledge/tam-giac-tu-giac-10/2-nhiem-vu.html",
+    "source_template": "games/knowledge/duong-tron/2-truy-tim-ban-kinh.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "tam_giac_tu_giac_10",
+    "knowledge": "Tam giác và tứ giác cơ bản",
+    "game": "Tam giác và tứ giác cơ bản • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/tam-giac-tu-giac-10/3-trum-cuoi.html",
+    "source_template": "games/knowledge/duong-tron/3-tiep-tuyen-thu-thach.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "duong_tron_co_ban_10",
+    "knowledge": "Đường tròn và các góc cơ bản",
+    "game": "Đường tròn và các góc cơ bản • Khám phá",
+    "icon": "🔎",
+    "path": "games/knowledge/duong-tron-co-ban-10/1-kham-pha.html",
+    "source_template": "games/knowledge/duong-tron/1-goc-noi-tiep-bi-an.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "duong_tron_co_ban_10",
+    "knowledge": "Đường tròn và các góc cơ bản",
+    "game": "Đường tròn và các góc cơ bản • Nhiệm vụ",
+    "icon": "🧩",
+    "path": "games/knowledge/duong-tron-co-ban-10/2-nhiem-vu.html",
+    "source_template": "games/knowledge/duong-tron/2-truy-tim-ban-kinh.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "duong_tron_co_ban_10",
+    "knowledge": "Đường tròn và các góc cơ bản",
+    "game": "Đường tròn và các góc cơ bản • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/duong-tron-co-ban-10/3-trum-cuoi.html",
+    "source_template": "games/knowledge/duong-tron/3-tiep-tuyen-thu-thach.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "he_thuc_luong_van_dung_10",
+    "knowledge": "Hệ thức lượng trong tam giác",
+    "game": "Hệ thức lượng trong tam giác [he_thuc_luong_van_dung_10] • Khám phá",
+    "icon": "🔎",
+    "path": "games/knowledge/he-thuc-luong-van-dung-10/1-kham-pha.html",
+    "source_template": "games/knowledge/duong-tron/1-goc-noi-tiep-bi-an.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "he_thuc_luong_van_dung_10",
+    "knowledge": "Hệ thức lượng trong tam giác",
+    "game": "Hệ thức lượng trong tam giác [he_thuc_luong_van_dung_10] • Nhiệm vụ",
+    "icon": "🧩",
+    "path": "games/knowledge/he-thuc-luong-van-dung-10/2-nhiem-vu.html",
+    "source_template": "games/knowledge/duong-tron/2-truy-tim-ban-kinh.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "he_thuc_luong_van_dung_10",
+    "knowledge": "Hệ thức lượng trong tam giác",
+    "game": "Hệ thức lượng trong tam giác [he_thuc_luong_van_dung_10] • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/he-thuc-luong-van-dung-10/3-trum-cuoi.html",
+    "source_template": "games/knowledge/duong-tron/3-tiep-tuyen-thu-thach.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "toa_do_hinh_hoc_10",
+    "knowledge": "Tọa độ và đường thẳng trong mặt phẳng",
+    "game": "Tọa độ và đường thẳng trong mặt phẳng • Khám phá",
+    "icon": "🔎",
+    "path": "games/knowledge/toa-do-hinh-hoc-10/1-kham-pha.html",
+    "source_template": "games/knowledge/duong-tron/1-goc-noi-tiep-bi-an.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "toa_do_hinh_hoc_10",
+    "knowledge": "Tọa độ và đường thẳng trong mặt phẳng",
+    "game": "Tọa độ và đường thẳng trong mặt phẳng • Nhiệm vụ",
+    "icon": "🧩",
+    "path": "games/knowledge/toa-do-hinh-hoc-10/2-nhiem-vu.html",
+    "source_template": "games/knowledge/duong-tron/2-truy-tim-ban-kinh.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "toa_do_hinh_hoc_10",
+    "knowledge": "Tọa độ và đường thẳng trong mặt phẳng",
+    "game": "Tọa độ và đường thẳng trong mặt phẳng • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/toa-do-hinh-hoc-10/3-trum-cuoi.html",
+    "source_template": "games/knowledge/duong-tron/3-tiep-tuyen-thu-thach.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "chung_minh_hinh_hoc_10",
+    "knowledge": "Chứng minh hình học và bài toán tổng hợp",
+    "game": "Chứng minh hình học và bài toán tổng hợp • Khám phá",
+    "icon": "🔎",
+    "path": "games/knowledge/chung-minh-hinh-hoc-10/1-kham-pha.html",
+    "source_template": "games/knowledge/duong-tron/1-goc-noi-tiep-bi-an.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "chung_minh_hinh_hoc_10",
+    "knowledge": "Chứng minh hình học và bài toán tổng hợp",
+    "game": "Chứng minh hình học và bài toán tổng hợp • Nhiệm vụ",
+    "icon": "🧩",
+    "path": "games/knowledge/chung-minh-hinh-hoc-10/2-nhiem-vu.html",
+    "source_template": "games/knowledge/duong-tron/2-truy-tim-ban-kinh.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "chung_minh_hinh_hoc_10",
+    "knowledge": "Chứng minh hình học và bài toán tổng hợp",
+    "game": "Chứng minh hình học và bài toán tổng hợp • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/chung-minh-hinh-hoc-10/3-trum-cuoi.html",
+    "source_template": "games/knowledge/duong-tron/3-tiep-tuyen-thu-thach.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "phep_bien_hinh_co_ban_11",
+    "knowledge": "Phép biến hình cơ bản",
+    "game": "Phép biến hình cơ bản • Khám phá",
+    "icon": "🔎",
+    "path": "games/knowledge/phep-bien-hinh-co-ban-11/1-kham-pha.html",
+    "source_template": "games/knowledge/duong-tron/1-goc-noi-tiep-bi-an.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "phep_bien_hinh_co_ban_11",
+    "knowledge": "Phép biến hình cơ bản",
+    "game": "Phép biến hình cơ bản • Nhiệm vụ",
+    "icon": "🧩",
+    "path": "games/knowledge/phep-bien-hinh-co-ban-11/2-nhiem-vu.html",
+    "source_template": "games/knowledge/duong-tron/2-truy-tim-ban-kinh.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "phep_bien_hinh_co_ban_11",
+    "knowledge": "Phép biến hình cơ bản",
+    "game": "Phép biến hình cơ bản • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/phep-bien-hinh-co-ban-11/3-trum-cuoi.html",
+    "source_template": "games/knowledge/duong-tron/3-tiep-tuyen-thu-thach.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "nhan_biet_hinh_khong_gian_11",
+    "knowledge": "Nhận biết hình học không gian",
+    "game": "Nhận biết hình học không gian • Khám phá",
+    "icon": "🔎",
+    "path": "games/knowledge/nhan-biet-hinh-khong-gian-11/1-kham-pha.html",
+    "source_template": "games/knowledge/duong-tron/1-goc-noi-tiep-bi-an.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "nhan_biet_hinh_khong_gian_11",
+    "knowledge": "Nhận biết hình học không gian",
+    "game": "Nhận biết hình học không gian • Nhiệm vụ",
+    "icon": "🧩",
+    "path": "games/knowledge/nhan-biet-hinh-khong-gian-11/2-nhiem-vu.html",
+    "source_template": "games/knowledge/duong-tron/2-truy-tim-ban-kinh.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "nhan_biet_hinh_khong_gian_11",
+    "knowledge": "Nhận biết hình học không gian",
+    "game": "Nhận biết hình học không gian • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/nhan-biet-hinh-khong-gian-11/3-trum-cuoi.html",
+    "source_template": "games/knowledge/duong-tron/3-tiep-tuyen-thu-thach.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "hinh_khoi_va_the_tich_co_ban_12",
+    "knowledge": "Hình khối và thể tích cơ bản",
+    "game": "Hình khối và thể tích cơ bản • Khám phá",
+    "icon": "🔎",
+    "path": "games/knowledge/hinh-khoi-va-the-tich-co-ban-12/1-kham-pha.html",
+    "source_template": "games/knowledge/duong-tron/1-goc-noi-tiep-bi-an.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "hinh_khoi_va_the_tich_co_ban_12",
+    "knowledge": "Hình khối và thể tích cơ bản",
+    "game": "Hình khối và thể tích cơ bản • Nhiệm vụ",
+    "icon": "🧩",
+    "path": "games/knowledge/hinh-khoi-va-the-tich-co-ban-12/2-nhiem-vu.html",
+    "source_template": "games/knowledge/duong-tron/2-truy-tim-ban-kinh.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "hinh_khoi_va_the_tich_co_ban_12",
+    "knowledge": "Hình khối và thể tích cơ bản",
+    "game": "Hình khối và thể tích cơ bản • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/hinh-khoi-va-the-tich-co-ban-12/3-trum-cuoi.html",
+    "source_template": "games/knowledge/duong-tron/3-tiep-tuyen-thu-thach.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "hinh_hoc_oxyz_van_dung_12",
+    "knowledge": "Vận dụng tọa độ Oxyz",
+    "game": "Vận dụng tọa độ Oxyz • Khám phá",
+    "icon": "🔎",
+    "path": "games/knowledge/hinh-hoc-oxyz-van-dung-12/1-kham-pha.html",
+    "source_template": "games/knowledge/duong-tron/1-goc-noi-tiep-bi-an.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "hinh_hoc_oxyz_van_dung_12",
+    "knowledge": "Vận dụng tọa độ Oxyz",
+    "game": "Vận dụng tọa độ Oxyz • Nhiệm vụ",
+    "icon": "🧩",
+    "path": "games/knowledge/hinh-hoc-oxyz-van-dung-12/2-nhiem-vu.html",
+    "source_template": "games/knowledge/duong-tron/2-truy-tim-ban-kinh.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "hinh_hoc_oxyz_van_dung_12",
+    "knowledge": "Vận dụng tọa độ Oxyz",
+    "game": "Vận dụng tọa độ Oxyz • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/hinh-hoc-oxyz-van-dung-12/3-trum-cuoi.html",
+    "source_template": "games/knowledge/duong-tron/3-tiep-tuyen-thu-thach.html"
   }
 ]

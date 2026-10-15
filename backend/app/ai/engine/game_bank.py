@@ -75,8 +75,10 @@ class GameQuestionBank:
             return None
         return fn(difficulty)
 
-    def base(self, question, answer, solution, distractors=(), hint=""):
-        return self.g._base(question, answer, solution, list(distractors), hint)
+    def base(self, question, answer, solution, distractors=(), hint="", **meta):
+        item = self.g._base(question, answer, solution, list(distractors), hint)
+        item.update(meta)
+        return item
 
     def mc(self, answer, *wrong):
         return [answer, *wrong]
@@ -191,18 +193,77 @@ class GameQuestionBank:
 
     # ---------- HỆ PHƯƠNG TRÌNH ----------
     def _system_data(self):
-        x=random.randint(2,10); y=random.randint(1,9); return x,y,x+y,x-y
+        x=random.randint(-6,10); y=random.randint(-5,9); return x,y,x+y,x-y
+
+    def _system_coefficients(self):
+        x=random.randint(-6,9); y=random.randint(-5,8)
+        a,b,c,d=random.choice([(1,2,2,-1),(2,1,-1,3),(3,-1,1,2),(1,-2,3,1),(2,3,1,-1),(4,1,-2,3)])
+        if a*d-b*c == 0:
+            d += 1
+        return x,y,a,b,c,d,a*x+b*y,c*x+d*y
+
     def system_investigation(self,d):
-        x,y,s,dv=self._system_data()
-        return self.base(f"Một cuộc điều tra cho biết hai số có tổng {s} và hiệu {dv}. Hai số đó là gì?", f"({x};{y})", f"x+y={s}, x-y={dv} nên 2x={s+dv}, x={x}, y={y}.", [f"({y};{x})",f"({x+1};{y})",f"({x};{y+1})"])
+        modes = {"easy": ["numbers"], "medium": ["numbers", "ages", "clubs"], "hard": ["ages", "tickets", "clubs", "score"]}
+        mode=random.choice(modes.get(d, ["numbers", "ages", "tickets", "clubs", "score"]))
+        if mode == "numbers":
+            x,y,s,dv=self._system_data()
+            return self.base(f"Hồ sơ điều tra ghi hai số có tổng {s} và hiệu (số thứ nhất trừ số thứ hai) bằng {dv}. Tìm hai số theo thứ tự đó.",f"({x}; {y})",f"Gọi hai số là x,y. Ta có x+y={s}, x−y={dv}. Cộng hai phương trình: 2x={s+dv}, nên x={x}; y={y}.",[f"({y}; {x})",f"({x+1}; {y})",f"({x}; {y+1})"],"Đặt hai ẩn theo đúng thứ tự rồi lập hệ từ tổng và hiệu.",archetype="investigation_sum_difference",template_family="điều tra tổng hiệu",generation_style="elimination",context="hai số")
+        if mode == "ages":
+            younger=random.randint(8,22); gap=random.randint(2,15); older=younger+gap; total=younger+older
+            return self.base(f"Hồ sơ ghi tổng tuổi của hai anh em là {total}, anh hơn em {gap} tuổi. Gọi x là tuổi anh, y là tuổi em. Chọn nghiệm (x;y).",f"({older}; {younger})",f"x+y={total}, x−y={gap}. Cộng hai phương trình: 2x={total+gap}, x={older}; y={younger}.",[f"({younger}; {older})",f"({older+1}; {younger-1})",f"({total}; {gap})"],"Tổng tuổi tạo phương trình cộng, hiệu tuổi tạo phương trình trừ.",archetype="investigation_ages",template_family="bài toán tuổi",generation_style="real_life_multi_step",context="tuổi hai anh em")
+        if mode == "tickets":
+            a,b=random.randint(12,35),random.randint(5,18)
+            while a == b: b=random.randint(5,18)
+            n=random.randint(10,28); x=random.randint(1,n-1); y=n-x; total=a*x+b*y
+            return self.base(f"Một buổi biểu diễn bán {n} vé gồm vé người lớn giá {a} nghìn và vé học sinh giá {b} nghìn, thu {total} nghìn. Gọi x,y lần lượt là số vé người lớn và vé học sinh. Tìm (x;y).",f"({x}; {y})",f"x+y={n}; {a}x+{b}y={total}. Thay y={n}−x vào phương trình tiền vé: ({a-b})x={total-b*n}, suy ra x={x}, y={y}.",[f"({y}; {x})",f"({x+1}; {y-1})",f"({n}; 0)"],"Dùng tổng số vé và tổng tiền để lập hệ hai ẩn.",archetype="investigation_ticket_sales",template_family="điều tra doanh thu",generation_style="real_life_multi_step",context="bán vé")
+        if mode == "clubs":
+            x=random.randint(6,18); y=random.randint(5,16); a=x+y; b=2*x+y
+            return self.base(f"Hai câu lạc bộ A và B có tổng cộng {a} thành viên. Nếu tính gấp đôi số thành viên câu lạc bộ A rồi cộng số thành viên B thì được {b}. Mỗi câu lạc bộ có bao nhiêu thành viên?",f"A={x}, B={y}",f"Đặt x,y là số thành viên A,B. x+y={a}; 2x+y={b}. Lấy phương trình hai trừ phương trình một được x={x}; do đó y={y}.",[f"A={y}, B={x}",f"A={x+1}, B={y-1}",f"A={a}, B={b}"],"Khử y bằng cách lấy phương trình có 2x trừ phương trình có x.",archetype="investigation_clubs",template_family="đếm thành viên",generation_style="elimination",context="câu lạc bộ")
+        x,y,a,b,c,d,u,v=self._system_coefficients()
+        return self.base(f"Bảng điểm của hai đội thỏa hệ {a}x{b:+d}y={u}; {c}x{d:+d}y={v}. Cặp điểm (x;y) nào phù hợp?",f"({x}; {y})",f"Thay x={x}, y={y} vào hệ được {a*x+b*y}={u} và {c*x+d*y}={v}; cặp điểm thỏa mãn cả hai phương trình.",[f"({x+1}; {y})",f"({x}; {y+1})",f"({y}; {x})"],"Một nghiệm phải làm đúng đồng thời cả hai phương trình.",archetype="investigation_score_system",template_family="đối chiếu dữ liệu",generation_style="verification",context="bảng điểm")
 
     def system_value(self,d):
-        x,y,s,dv=self._system_data(); target=random.choice([x,y,x+y,x-y])
-        return self.base(f"Giải hệ x+y={s}; x-y={dv}. Giá trị cần tìm là {('x' if target==x else 'y') }.", target, f"Cộng hai phương trình được 2x={s+dv}, suy ra x={x}; rồi y={y}.", [target+1,target-1,target+2])
+        modes = {"easy": ["sum_difference"], "medium": ["sum_difference", "coefficients", "scaled_system"], "hard": ["coefficients", "word_problem", "scaled_system", "expression"]}
+        mode=random.choice(modes.get(d, ["sum_difference", "coefficients", "word_problem", "scaled_system", "expression"]))
+        if mode == "sum_difference":
+            x,y,s,dv=self._system_data(); target=random.choice(["x","y","x+y","x-y"])
+            value={"x":x,"y":y,"x+y":x+y,"x-y":x-y}[target]
+            return self.base(f"Tìm giá trị {target} từ hệ x+y={s}; x−y={dv}.",value,f"Cộng hai phương trình: 2x={s+dv}, x={x}; từ x+y={s} suy ra y={y}. Do đó {target}={value}.",[value+1,value-1,value+2],"Giải hệ trước, sau đó tính biểu thức được yêu cầu.",archetype="system_requested_expression",template_family="tìm biểu thức từ hệ",generation_style="multi_step",context="tìm giá trị")
+        x,y,a,b,c,e,u,v=self._system_coefficients()
+        if mode == "word_problem":
+            p,q=random.randint(10,30),random.randint(5,18)
+            while p==q: q=random.randint(5,18)
+            n=random.randint(10,24); xx=random.randint(1,n-1); yy=n-xx; total=p*xx+q*yy
+            return self.base(f"Một cửa hàng bán {n} món gồm bút giá {p} nghìn và vở giá {q} nghìn, tổng thu {total} nghìn. Cần tìm số bút x. Hỏi x bằng bao nhiêu?",xx,f"Đặt x là số bút, y là số vở. x+y={n}; {p}x+{q}y={total}. Thế y={n}−x, suy ra ({p-q})x={total-q*n}, nên x={xx}.",[xx+1,max(0,xx-1),yy],"Đặt ẩn cho số lượng từng món, rồi thế từ phương trình tổng số lượng.",archetype="system_value_word_problem",template_family="tìm ẩn từ bài toán thực tế",generation_style="real_life_multi_step",context="mua bán")
+        if mode == "scaled_system":
+            return self.base(f"Tìm x từ hệ 2({a}x{b:+d}y)={2*u}; {c}x{e:+d}y={v}.",x,f"Rút gọn phương trình đầu thành {a}x{b:+d}y={u}. Giải hệ được x={x}, y={y}; vậy giá trị cần tìm là x={x}.",[x+1,x-1,y],"Rút gọn phương trình có ngoặc trước khi giải hệ.",archetype="system_value_scaled",template_family="hệ cần rút gọn",generation_style="algebraic_manipulation",context="rút gọn hệ")
+        if mode == "expression":
+            expression=random.choice(["x+y","2x−y","x−2y"])
+            value={"x+y":x+y,"2x−y":2*x-y,"x−2y":x-2*y}[expression]
+            return self.base(f"Không cần tìm riêng từng ẩn trước: từ hệ {a}x{b:+d}y={u}; {c}x{e:+d}y={v}, hãy xác định {expression}.",value,f"Giải hệ hoặc kết hợp tuyến tính hai phương trình để tìm x={x}, y={y}. Khi đó {expression}={value}.",[value+1,value-1,x+y],"Có thể giải hệ rồi thay vào biểu thức, hoặc tổ hợp hai phương trình.",archetype="system_linear_expression",template_family="biểu thức tuyến tính từ hệ",generation_style="reasoning",context="biểu thức")
+        target=random.choice(["x","y"]); value=x if target=="x" else y
+        return self.base(f"Giải hệ {a}x{b:+d}y={u}; {c}x{e:+d}y={v}. Giá trị {target} là bao nhiêu?",value,f"Giải hệ bằng phương pháp thế hoặc cộng đại số thu được x={x}, y={y}; do đó {target}={value}.",[value+1,value-1,-value],"Khử một ẩn trước rồi thế ngược lại.",archetype="system_value_coefficients",template_family="tìm ẩn hệ hệ số bất kỳ",generation_style="elimination",context="tìm ẩn")
 
     def system_match(self,d):
-        x,y,s,dv=self._system_data()
-        return self.base(f"Hệ x+y={s}; x-y={dv} có nghiệm nào dưới đây?", f"({x};{y})", f"Cộng hai phương trình: 2x={s+dv}, nên x={x}, y={y}.", [f"({y};{x})",f"({x+1};{y})",f"({x};{y-1})"])
+        modes = {"easy": ["pair"], "medium": ["pair", "coefficients", "check"], "hard": ["check", "scaled", "coefficients", "context"]}
+        mode=random.choice(modes.get(d, ["pair", "check", "scaled", "coefficients", "context"]))
+        x,y,a,b,c,e,u,v=self._system_coefficients()
+        if mode == "check":
+            px,py=random.choice([(x,y),(x+1,y),(x,y+1),(y,x)])
+            valid=(a*px+b*py==u and c*px+e*py==v)
+            answer="Đúng" if valid else "Sai"
+            return self.base(f"Một bạn nói rằng ({px};{py}) là nghiệm của hệ {a}x{b:+d}y={u}; {c}x{e:+d}y={v}. Nhận định đúng hay sai?",answer,f"Thay cặp vào hai phương trình: nhận được {a*px+b*py} và {c*px+e*py}, cần lần lượt bằng {u} và {v}. Vì vậy nhận định là {answer.lower()}.",["Sai" if valid else "Đúng","Chỉ đúng phương trình đầu","Không đủ dữ kiện"],"Kiểm tra cặp số trong cả hai phương trình.",archetype="system_match_check",template_family="kiểm tra cặp nghiệm",generation_style="error_diagnosis",context="kiểm tra nghiệm")
+        if mode == "scaled":
+            return self.base(f"Ghép hệ với nghiệm: {2*a}x{2*b:+d}y={2*u}; {c}x{e:+d}y={v}.",f"({x}; {y})",f"Chia phương trình đầu cho 2 được {a}x{b:+d}y={u}. Giải cùng phương trình thứ hai thu được x={x}, y={y}.",[f"({x+1}; {y})",f"({x}; {y+1})",f"({y}; {x})"],"Rút gọn hệ số rồi giải hệ.",archetype="system_match_scaled",template_family="ghép hệ tương đương",generation_style="algebraic_manipulation",context="hệ rút gọn")
+        if mode == "context":
+            n=random.randint(12,30); first=random.randint(1,n-1); second=n-first; p,q=random.randint(8,25),random.randint(5,18)
+            while p==q: q=random.randint(5,18)
+            total=p*first+q*second
+            return self.base(f"Ghép tình huống với nghiệm: có {n} vé gồm vé loại A giá {p} nghìn, loại B giá {q} nghìn; tổng thu {total} nghìn. Gọi x,y là số vé A,B. Nghiệm hệ là gì?",f"({first}; {second})",f"x+y={n}; {p}x+{q}y={total}. Giải hệ thu được x={first}, y={second}.",[f"({second}; {first})",f"({first+1}; {second-1})",f"({n};0)"],"Đối chiếu cả tổng số vé và tổng tiền.",archetype="system_match_context",template_family="ghép mô hình thực tế",generation_style="real_life_multi_step",context="bán vé")
+        if mode == "coefficients":
+            return self.base(f"Hệ {a}x{b:+d}y={u}; {c}x{e:+d}y={v} tương ứng với cặp nghiệm nào?",f"({x}; {y})",f"Thay x={x}, y={y}: {a*x+b*y}={u} và {c*x+e*y}={v}; cả hai phương trình đều đúng.",[f"({x+1}; {y})",f"({x}; {y+1})",f"({-x}; {y})"],"Thử cặp nghiệm vào cả hai phương trình.",archetype="system_match_coefficients",template_family="ghép nghiệm hệ số bất kỳ",generation_style="verification",context="ghép nghiệm")
+        # Keep the game's matching objective, but vary the equations instead of repeating x+y and x-y.
+        return self.base(f"Hệ {a}x{b:+d}y={u}; {c}x{e:+d}y={v} có nghiệm nào dưới đây?",f"({x};{y})",f"Giải hệ hoặc thử từng cặp. Cặp ({x};{y}) cho hai vế trái lần lượt là {u} và {v}, nên đó là nghiệm.",[f"({y};{x})",f"({x+1};{y})",f"({x};{y-1})"],"Nghiệm hệ phải thỏa mãn đồng thời hai phương trình.",archetype="system_match_pair",template_family="ghép cặp nghiệm",generation_style="verification",context="ghép nghiệm")
 
     # ---------- PHƯƠNG TRÌNH BẬC HAI ----------
     def _quadratic(self):
@@ -492,6 +553,76 @@ def _install_variants():
         data=[random.randint(4,16) for _ in range(5)]; mean=Fraction(sum(data),5); total=sum(data)
         return self.base(f"Mẫu số liệu {data}. Nếu thêm một giá trị bằng trung bình hiện tại, trung bình mới là?",_fmt_fraction(mean),f"Thêm đúng giá trị trung bình không làm thay đổi trung bình: vẫn là {_fmt_fraction(mean)}.",[str(mean+1),str(mean-1),str(total+1)])
 
+    # Advanced algebra archetypes: raise the reasoning demand, not just the numbers.
+    # Each builder derives its answer from the same generated data and includes a checkable solution.
+    def point_parameter_v(self,d):
+        slope=random.choice([-3,-2,-1,1,2,3]); x0=random.randint(-4,4); y0=random.randint(-5,5)
+        parameter=y0-slope*x0
+        return self.base(f"Tìm tham số m để điểm P({x0}; {y0}) thuộc đường thẳng y={slope}x+m.", parameter,
+            f"Thay tọa độ P vào phương trình: {y0}={slope}·{x0}+m. Suy ra m={y0}−({slope}·{x0})={parameter}.", [parameter+1,parameter-1,-parameter])
+
+    def intersection_pair_v(self,d):
+        x=random.randint(-5,5); y=random.randint(-6,6)
+        m1=random.choice([-3,-2,-1,1,2,3]); m2=random.choice([v for v in [-3,-2,-1,1,2,3] if v!=m1])
+        b1=y-m1*x; b2=y-m2*x
+        return self.base(f"Tìm giao điểm của hai đường thẳng y={m1}x {_sign(b1)} và y={m2}x {_sign(b2)}.", f"({x}; {y})",
+            f"Cho hai biểu thức bằng nhau: ({m1}−{m2})x={b2-b1}, nên x={x}. Thay vào đường thẳng thứ nhất được y={y}. Giao điểm là ({x}; {y}).",
+            [f"({x+1}; {y})",f"({x}; {y+1})",f"({-x}; {y})"])
+
+    def quadratic_structure_v(self,d):
+        r1=random.randint(-6,2); r2=random.randint(r1+1,7); a=random.choice([1,2,3])
+        b=-a*(r1+r2); c=a*r1*r2
+        return self.base(f"Không khai triển toàn bộ: phân tích {a}x² {_sign(b)}x {_sign(c)} thành nhân tử rồi nêu nghiệm.",
+            f"x={r1} hoặc x={r2}",
+            f"Ta có {a}x² {_sign(b)}x {_sign(c)}={a}(x−({r1}))(x−({r2})). Tích bằng 0 nên x={r1} hoặc x={r2}.",
+            [f"x={-r1} hoặc x={-r2}",f"x={r1+r2}",f"x={r1*r2}"])
+
+    def quadratic_discriminant_v(self,d):
+        a=random.choice([1,2,3]); r=random.randint(-5,5); k=random.choice([-3,-2,0,2,3])
+        b=-2*a*r; c=a*r*r+k
+        delta=b*b-4*a*c
+        nature="vô nghiệm thực" if delta<0 else ("có nghiệm kép" if delta==0 else "có hai nghiệm thực phân biệt")
+        distractors=[x for x in ["vô nghiệm thực", "có nghiệm kép", "có hai nghiệm thực phân biệt", "không đủ dữ kiện"] if x!=nature][:3]
+        return self.base(f"Không cần giải phương trình {a}x² {_sign(b)}x {_sign(c)}=0, hãy xác định số nghiệm thực.", nature,
+            f"Δ=({b})²−4·{a}·({c})={delta}. Vì Δ {'< 0' if delta<0 else '= 0' if delta==0 else '> 0'}, phương trình {nature}.", distractors)
+
+    def inequality_compound_v(self,d):
+        a=random.choice([1,2,3,4]); left=random.randint(-7,2); right=left+random.randint(3,8); shift=-a*left
+        upper=a*right+shift
+        return self.base(f"Giải bất phương trình kép 0 ≤ {a}x+({shift}) ≤ {upper}.",
+            f"{left} ≤ x ≤ {right}",
+            f"Tách thành 0≤{a}x+({shift}) và {a}x+({shift})≤{upper}. Chia cho {a}>0 rồi cô lập x, thu được {left}≤x≤{right}.",
+            [f"x≤{left} hoặc x≥{right}",f"{left+1}≤x≤{right-1}","mọi số thực"])
+
+    def sequence_sum_v(self,d):
+        a1=random.randint(-8,10); diff=random.choice([-4,-3,-2,2,3,4]); n=random.randint(6,15)
+        an=a1+(n-1)*diff; total=n*(a1+an)//2
+        return self.base(f"Một cấp số cộng có a₁={a1}, công sai d={diff}. Biết cần cộng {n} số hạng đầu, hãy tính Sₙ.", total,
+            f"aₙ=a₁+(n−1)d={a1}+({n}−1)·({diff})={an}. Sₙ=n(a₁+aₙ)/2={n}({a1}+{an})/2={total}.",
+            [total+diff,total-diff,n*an,a1+an])
+
+    def fraction_domain_simplify_v(self,d):
+        a=random.choice([2,3,4,5]); b=random.choice([1,2,3,4]); c=random.choice([-4,-3,-2,2,3,4])
+        reduced = _fmt_fraction(a, b)
+        return self.base(f"Rút gọn ( {a}x²−{a*c}x )/( {b}x²−{b*c}x ), đồng thời nêu điều kiện xác định.",
+            f"{reduced}; x ≠ 0, x ≠ {c}",
+            f"Phân tích tử thành {a}x(x−{c}), mẫu thành {b}x(x−{c}). Phân thức ban đầu xác định khi x≠0 và x≠{c}; trên miền đó rút gọn còn {reduced}.",
+            [f"{reduced}; x ≠ {c}",f"{a+b}; x ≠ 0",f"{reduced}; mọi x"])
+
+    def radical_equation_v(self,d):
+        n=random.randint(2,12); root=n*n
+        return self.base(f"Giải phương trình √({root}+2x+1)={n+1}.", n,
+            f"Bình phương hai vế (hai vế không âm): {root}+2x+1={(n+1)**2}. Suy ra 2x={2*n}, nên x={n}. Thay x={n} vào vế trái được √({root}+{2*n}+1)={n+1}.",
+            [n+1,n-1,-n])
+
+    advanced={
+      'Bắt điểm':point_parameter_v, 'Tìm giao điểm':intersection_pair_v,
+      'Đồ thị bí ẩn':quadratic_structure_v, 'Săn nghiệm':quadratic_structure_v,
+      'Ghép nghiệm':quadratic_discriminant_v, 'Mở khóa':quadratic_discriminant_v,
+      'Vùng an toàn':inequality_compound_v, 'Đường đua dãy số':sequence_sum_v,
+      'Tìm điều kiện':fraction_domain_simplify_v,
+    }
+
     variants={
       'Bốc bi':marble_v,'Chọn đội':team_v,'Ghép lựa chọn':choice_v,'Săn tổ hợp':hunt_v,
       'Xếp vị trí':position_v,'Mật mã':code_v,'Sắp thứ tự':order_v,
@@ -509,15 +640,20 @@ def _install_variants():
       'Đọc biểu đồ':chart_v,'Săn số liệu':data_v,'Thử thách thống kê':challenge_v,
     }
     B._variants=variants
+    B._advanced=advanced
     old_generate=B.generate
     def generate(self,game_id,grade,difficulty):
         fn=self._builders.get(game_id)
         if not fn: return None
         # Every game has a primary structure plus a second, game-specific structure.
         # Probability games already contain several native variants, so retain their richer mix.
+        if difficulty in {"hard", "expert", "hell"} and game_id in getattr(self, "_advanced", {}):
+            # Nâng cao chuyển sang cấu trúc suy luận khác, thay vì chỉ tăng số liệu.
+            if random.random() < {"hard": 0.62, "expert": 0.82, "hell": 0.90}.get(difficulty, 0.62):
+                return self._advanced[game_id](self, difficulty)
         if game_id in self._variants:
-            # 3 mức độ: Dễ ưu tiên cấu trúc nền, Khá cân bằng, Khó ưu tiên
-            # biến thể nâng cao để đề có nhiều bước và điều kiện hơn.
+            # 3 mức độ: Nền tảng ưu tiên thao tác cốt lõi, Trung cấp cân bằng,
+            # Nâng cao ưu tiên cấu trúc suy luận nhiều bước.
             rates = {"easy": 0.20, "medium": 0.52, "hard": 0.82}
             rate = rates.get(difficulty, 0.52)
             if game_id in {"Bốc bi", "Xúc xắc", "Chọn tình huống"}:

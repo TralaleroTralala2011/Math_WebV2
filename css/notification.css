@@ -64,15 +64,16 @@
 }
 
 .notification-panel {
-    position: absolute;
+    position: fixed;
+    top: 9px;
+    right: 9px;
 
-    top: calc(100% + 12px);
-    right: 0;
-
-    width: 360px;
+    width: min(20vw, 390px);
+    min-width: 280px;
     max-width: calc(100vw - 30px);
 
-    max-height: 500px;
+    height: calc(100dvh - 18px);
+    max-height: none;
 
     overflow: hidden;
 
@@ -139,7 +140,8 @@
 }
 
 .notification-list {
-    max-height: 430px;
+    height: calc(100% - 62px);
+    max-height: none;
 
     overflow-y: auto;
 }
@@ -230,3 +232,14 @@
     }
 }
 
+
+/* Desktop: narrow, full-height notification rail. Mobile: standalone topic-style sheet. */
+@media (max-width: 700px) {
+    .notification-panel {
+        top: 10px; right: 10px; bottom: 10px; left: 10px;
+        width: auto; min-width: 0; max-width: none;
+        height: auto; max-height: none;
+        border-radius: 20px;
+    }
+    .notification-list { height: calc(100% - 62px); }
+}

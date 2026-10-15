@@ -9,6 +9,7 @@ from .distractor_engine import DistractorEngine
 from .extended_bank import generate as generate_extended
 from .super_bank import generate as generate_super
 from .geometry_curriculum import generate as generate_geometry_curriculum
+from .geometry_diagrams import validate_geometry_diagram
 from ..config import KNOWLEDGE_DIR
 
 class QuestionGenerator:
@@ -71,14 +72,14 @@ class QuestionGenerator:
         if q is None:
             # Geometry uses a grade-aware, three-tier curriculum bank first.
             # This is additive and leaves the legacy UI, game banks and other topics untouched.
-            q = generate_geometry_curriculum(grade, topic_id, difficulty)
+            q = generate_geometry_curriculum(grade, topic_id, difficulty, game_id)
             # Prefer a different geometry archetype when the current set has used one recently.
             # This is a bounded retry; persistent exact-question history remains the final guard.
             if q is not None and recent_families:
                 for _ in range(5):
                     if q.get("archetype") not in recent_families:
                         break
-                    candidate = generate_geometry_curriculum(grade, topic_id, difficulty)
+                    candidate = generate_geometry_curriculum(grade, topic_id, difficulty, game_id)
                     if candidate is not None:
                         q = candidate
         if q is None:
@@ -95,6 +96,17 @@ class QuestionGenerator:
         if q is None:
             fn=getattr(self, f"_g_{topic_id}", self._g_generic)
             q=fn(grade,difficulty)
+        # Final safety gate: never send a malformed geometric illustration to the UI.
+        # Geometry-bank builders validate at creation time; this catches diagrams from
+        # any legacy/additive bank before the question leaves the generator.
+        diagram = q.get("diagram")
+        if diagram:
+            diagram_errors = validate_geometry_diagram(diagram)
+            if diagram_errors:
+                q.pop("diagram", None)
+                q["diagram_suppressed"] = True
+                q["diagram_validation_errors"] = diagram_errors
+
         q["id"]=uuid.uuid4().hex
         q["grade"]=grade
         q["topic"]=topic_id
@@ -179,7 +191,7 @@ class QuestionGenerator:
         try:
             n=float(Fraction(str(ans)))
             wrong=[n+1,n-1,n+2]
-            statements=[f"Kết quả cần tìm bằng {fmt(ans)}.",f"Nếu tăng đáp án lên 1 thì được {fmt(n+1)}.",f"Đáp án bằng {fmt(n+2)}.",f"Đáp án nhỏ hơn {fmt(n+3)}."]
+            statements=[f"Kết quả cần tìm bằng {fmt(ans)}.",f"Đáp án lớn hơn {fmt(n+1)}.",f"Đáp án bằng {fmt(n+2)}.",f"Đáp án nhỏ hơn {fmt(n+3)}."]
             truth=[True,False,False,True]
         except Exception:
             statements=[f"Đáp án là {ans}.","Mệnh đề thứ hai được suy ra trực tiếp từ đề.","Đáp án bằng một giá trị khác.","Cách giải trên không cần dùng dữ kiện đề bài."]
@@ -192,7 +204,7 @@ class QuestionGenerator:
     def _g_ham_so_bac_hai(self,g,d):
         a=random.choice([1,2,3,-1,-2])
         h=random.randint(-5,5); k=random.randint(-8,8)
-        x=random.randint(-6,6) if d in ("hard","expert") else random.randint(-4,4)
+        x=random.randint(-6,6) if d in ("hard","expert","hell") else random.randint(-4,4)
         y=a*(x-h)**2+k
         question=f"Cho hàm số y={a}(x-{h})²+{k}. Tính f({x})."
         sol=f"f({x})={a}({x}-{h})²+{k}={y}."

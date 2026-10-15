@@ -83,7 +83,22 @@ GitHub Pages chỉ phục vụ frontend tĩnh. Đăng nhập, AI, database, matc
 - Thanh tiến độ tính từ 0 đến 100: đúng +5, sai −1, không âm; đạt 100 thì hiện màn chúc mừng hoạt họa.
 - Sau khi trả lời, trò chơi dừng để người học đọc đáp án và lời giải; phải bấm **Đọc xong, câu tiếp theo** mới tiếp tục.
 - Bộ câu hỏi trộn trắc nghiệm, trả lời ngắn và nhận định đúng/sai khi API hỗ trợ.
-- Câu hỏi hình học hiển thị hình SVG theo dữ liệu hình học mà backend trả về; bài toán nhiều ý có thể dùng chung dữ kiện và hình.
+- Câu hỏi hình học hiển thị nhiều loại hình SVG như tam giác, tứ giác, hình thang, hình thoi, đường tròn có dây/tiếp tuyến, hình chóp và mặt phẳng tọa độ. Hình minh họa được ghi chú khi không theo tỉ lệ.
+- Ngân hàng hệ phương trình có bài giải hệ trực tiếp, tổng-hiệu, hệ hệ số khác nhau, hệ cần rút gọn, tìm biểu thức từ hệ, kiểm tra nghiệm và bài toán thực tế. Ba game hệ phương trình hiện có cũng dùng các cấu trúc khác nhau theo cấp độ.
+- Chủ đề Hình học phẳng lớp 10 có 18 họ bài nguyên bản từ nền tảng đến nâng cao, trong đó mức nâng cao bổ sung định lý phân giác, tiếp tuyến-cát tuyến, tích hai dây và suy luận chứng minh.
 - Thành tích từng trò chơi được lưu trong trình duyệt. Đây là lưu cục bộ, không tự đồng bộ giữa các thiết bị.
 
 Xem `UNIFIED_FEATURES_2026-10.md` và `LOCAL_RUN.md` để biết chi tiết. Trên Windows, có thể chạy nhanh bằng `START_BACKEND.bat` và `START_FRONTEND.bat`.
+
+
+## Kiểm thử và chẩn đoán
+
+Sau khi cài backend, có thể cài thêm công cụ kiểm thử và chạy regression tests:
+
+```powershell
+cd backend
+python -m pip install -r requirements-dev.txt
+python -m pytest -q
+```
+
+Nếu trình duyệt báo CORS khi ghép trận, trước tiên kiểm tra `http://127.0.0.1:8000/health` và khởi động backend đúng thư mục bằng `START_BACKEND.bat`. Một lỗi backend 500 có thể bị trình duyệt hiển thị thành lỗi CORS, vì vậy hãy xem cả cửa sổ terminal backend. Xem `AUDIT_FIX_REPORT.md` để biết các sửa lỗi và phạm vi kiểm thử của bản này.

@@ -456,20 +456,193 @@ def generate(topic_id: str, difficulty: str = "medium"):
 
 
 def geometry_diagram(topic_id: str, question: str, answer: str | int | float):
-    """Return a small structured diagram descriptor for the frontend.
+    """Return a varied, browser-rendered diagram suited to the problem family.
 
-    The browser renders the SVG itself, so the backend never injects arbitrary
-    HTML into the page.
+    Diagrams are explicitly illustrative when the question does not provide all
+    dimensions. This avoids reusing one triangle for every geometry topic.
     """
+    import re
     low = f"{topic_id} {question}".lower()
-    if any(k in low for k in ("tam giác", "tam giac", "pythagore", "cos", "góc", "goc")):
-        return {"type": "triangle", "labels": ["A", "B", "C"]}
-    if "đường tròn" in low or "duong tron" in low or "mặt cầu" in low or "khối cầu" in low or "khoi cau" in low:
-        return {"type": "circle", "labels": ["O"]}
-    if "tọa độ" in low or "tọa do" in low or "oxyz" in low:
-        return {"type": "coordinate", "labels": ["A", "B"]}
-    if "hình hộp" in low or "hinh hop" in low or "hình chóp" in low:
-        return {"type": "box", "labels": ["A", "B", "C", "D"]}
+    # Function/coordinate-graph questions get a real sampled plot when the
+    # equation is available, instead of a generic triangle placeholder.
+    graph_ids = {"ham_so_bac_nhat", "ham_so_bac_hai", "do_thi_ham_so", "do_thi", "ham_so", "dao_ham", "cuc_tri", "ung_dung_dao_ham", "gioi_han_ham_so", "duong_thang", "toa_do_hinh_hoc_10"}
+    graph_words = ("đồ thị", "do thi", "parabol", "tọa độ", "toa do", "hàm số y=", "ham so y=", "đường thẳng có hệ số góc", "he so goc", "mặt phẳng tọa độ")
+    if topic_id in graph_ids or any(word in low for word in graph_words):
+        from .geometry_diagrams import line_graph, quadratic_graph, trigonometric_graph, ellipse_graph, hyperbola_graph, exponential_graph, logarithmic_graph, graph_diagram
+        normalized = low.replace("²", "^2").replace("−", "-").replace("×", "*")
+        # A line described by slope and a named point must be plotted on Cartesian
+        # axes with that exact point, not replaced by a generic slanted segment.
+        slope_match = re.search(r"(?:hệ số góc|he so goc|slope)\s*(?:bằng|la|=|:)?\s*(-?\d+(?:[.,]\d+)?)", normalized)
+        point_match = re.search(r"\b([a-z])\s*\(\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)", normalized)
+        if slope_match and point_match:
+            slope = float(slope_match.group(1).replace(",", "."))
+            px = float(point_match.group(2).replace(",", "."))
+            py = float(point_match.group(3).replace(",", "."))
+            intercept = py - slope * px
+            xspan = max(5, abs(px) + 3)
+            yvals = [slope * x + intercept for x in (-xspan, xspan)] + [py]
+            yspan = max(5, *(abs(v) for v in yvals))
+            diagram = line_graph(slope, intercept, (-xspan, xspan), (-yspan-1, yspan+1), label=f"d: y={slope:g}x{intercept:+g}")
+            diagram["marked_points"] = [{"x": px, "y": py, "label": f"{point_match.group(1).upper()}({px:g}; {py:g})"}]
+            diagram["caption"] = f"Mặt phẳng tọa độ và đường thẳng qua {point_match.group(1).upper()}({px:g}; {py:g}), hệ số góc {slope:g}."
+            return diagram
+        # Standard-form line equations ax+by+c=0 are rendered as the actual
+        # line, including vertical lines. This is essential for point-to-line
+        # distance and line-intersection questions.
+        implicit = re.search(r"([+-]?\d*\.?\d*)\s*\*?x\s*([+-]\s*\d*\.?\d*)\s*\*?y\s*([+-]\s*\d+(?:\.\d+)?)?\s*=\s*0", normalized)
+        if implicit:
+            def _coef(raw, default=0.0):
+                raw = (raw or "").replace(" ", "")
+                if raw in ("", "+"): return 1.0 if raw else default
+                if raw == "-": return -1.0
+                return float(raw)
+            aa = _coef(implicit.group(1), 0.0)
+            bb = _coef(implicit.group(2), 0.0)
+            cc = float((implicit.group(3) or "0").replace(" ", ""))
+            coord_matches = list(re.finditer(r"\b([a-z])\s*\(\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)", normalized))
+            marked = [{"x": float(m.group(2).replace(",", ".")), "y": float(m.group(3).replace(",", ".")), "label": f"{m.group(1).upper()}({float(m.group(2).replace(',', '.')):g}; {float(m.group(3).replace(',', '.')):g})"} for m in coord_matches]
+            if abs(bb) > 1e-12:
+                slope, intercept = -aa / bb, -cc / bb
+                xmax = max(5, *(abs(m["x"]) + 3 for m in marked)) if marked else 5
+                yvals = [slope * x + intercept for x in (-xmax, xmax)] + [m["y"] for m in marked]
+                ymax = max(5, *(abs(v) for v in yvals))
+                diagram = line_graph(slope, intercept, (-xmax, xmax), (-ymax-1, ymax+1), label=f"d: {aa:g}x{bb:+g}y{cc:+g}=0")
+                diagram["marked_points"] = marked
+                diagram["caption"] = "Mặt phẳng tọa độ, đường thẳng theo phương trình và các điểm đúng theo đề bài."
+                return diagram
+            if abs(aa) > 1e-12:
+                xmin = -cc / aa
+                ymin, ymax = -5.0, 5.0
+                xmax = max(5.0, abs(xmin) + 2)
+                diagram = graph_diagram([{"label": f"x={xmin:g}", "points": [[xmin, ymin], [xmin, ymax]]}], (min(-5.0, xmin-2), xmax), (ymin, ymax), "Mặt phẳng tọa độ với đường thẳng đứng theo phương trình đề bài", marked_points=marked)
+                return diagram
+        # Coordinate questions with named points are plotted using the exact
+        # coordinates stated in the prompt; connecting segments are only drawn
+        # when two or more points are explicitly present.
+        coord_points = {}
+        for match in re.finditer(r"\b([a-z])\s*\(\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)", normalized):
+            name = match.group(1).upper()
+            if name not in coord_points:
+                coord_points[name] = (float(match.group(2).replace(",", ".")), float(match.group(3).replace(",", ".")))
+        if len(coord_points) >= 1 and not re.search(r"\by\s*=", normalized):
+            xs = [v[0] for v in coord_points.values()]; ys = [v[1] for v in coord_points.values()]
+            xmin, xmax = min(xs)-2, max(xs)+2; ymin, ymax = min(ys)-2, max(ys)+2
+            curves = []
+            if len(coord_points) >= 2:
+                vals = list(coord_points.items())[:2]
+                curves = [{"label": "Đoạn nối các điểm đã cho", "points": [[vals[0][1][0], vals[0][1][1]], [vals[1][1][0], vals[1][1][1]]]}]
+            return graph_diagram(curves, (xmin, xmax), (ymin, ymax), "Mặt phẳng tọa độ với các điểm đúng theo đề bài", marked_points=[{"x": x, "y": y, "label": f"{name}({x:g}; {y:g})"} for name, (x,y) in coord_points.items()])
+        # Standard conic equations are converted to the corresponding curves.
+        conic = re.search(r"x\^2\s*/\s*(\d+(?:\.\d+)?)\s*([+-])\s*y\^2\s*/\s*(\d+(?:\.\d+)?)\s*=\s*1", normalized)
+        if conic:
+            dx, sign, dy = float(conic.group(1)), conic.group(2), float(conic.group(3))
+            if sign == "+":
+                return ellipse_graph(math.sqrt(dx), math.sqrt(dy), x_range=(-max(5, math.sqrt(dx)+1), max(5, math.sqrt(dx)+1)), y_range=(-max(5, math.sqrt(dy)+1), max(5, math.sqrt(dy)+1)))
+            return hyperbola_graph(math.sqrt(dx), math.sqrt(dy), orientation="horizontal", x_range=(-6, 6), y_range=(-6, 6))
+        conic = re.search(r"y\^2\s*/\s*(\d+(?:\.\d+)?)\s*-\s*x\^2\s*/\s*(\d+(?:\.\d+)?)\s*=\s*1", normalized)
+        if conic:
+            return hyperbola_graph(math.sqrt(float(conic.group(2))), math.sqrt(float(conic.group(1))), orientation="vertical", x_range=(-6, 6), y_range=(-6, 6))
+        # Trigonometric graphs are sampled directly from trusted math functions.
+        trig_match = re.search(r"y\s*=\s*(sin|cos|tan)\s*\(?\s*x", normalized)
+        if trig_match:
+            return trigonometric_graph(trig_match.group(1), caption=f"Đồ thị {trig_match.group(0)} theo đề bài.")
+        # Parse a polynomial y=ax²+bx+c without evaluating user-provided text.
+        equation = re.search(r"y\s*=\s*([^;,.?\n]+)", normalized)
+        if equation:
+            expr = equation.group(1).replace(" ", "")
+            terms = re.findall(r"([+-]?)(\d*(?:\.\d+)?)\*?x(?:\^(2))?|([+-]?\d+(?:\.\d+)?)", expr)
+            a = b = c = 0.0
+            parsed = False
+            for sign, coeff, power2, const in terms:
+                if const:
+                    c += float(const)
+                    parsed = True
+                elif coeff is not None:
+                    value = (-1 if sign == "-" else 1) * (float(coeff) if coeff not in ("", None) else 1.0)
+                    if power2 == "2": a += value
+                    else: b += value
+                    parsed = True
+            if parsed:
+                try:
+                    if abs(a) > 1e-12:
+                        return quadratic_graph(a, b, c, (-5, 5), (-10, 10), label=f"y={expr}")
+                    if abs(b) > 1e-12:
+                        return line_graph(b, c, (-5, 5), (-10, 10))
+                except (ValueError, OverflowError):
+                    pass
+    spatial_ids = {"hinh_khong_gian", "hinh_hoc_khong_gian", "song_song_khong_gian", "vuong_goc_khong_gian", "goc_khoang_cach_11", "thiet_dien_hinh_khong_gian_11", "the_tich_khong_gian"}
+    if "hình chóp" in low or "hinh chop" in low:
+        return {"type": "pyramid", "labels": ["S", "A", "B", "C", "D"], "caption": "Hình chóp minh họa; các nét không khuất được dùng để hỗ trợ đọc hình."}
+    if topic_id in spatial_ids or any(k in low for k in ("hình lập phương", "hình hộp", "hinh hop", "mặt phẳng", "mat phang", "không gian oxyz", "oxyz", "hình trụ", "hình nón", "khối cầu", "mat cau")):
+        return {"type": "box", "labels": ["A", "B", "C", "D"], "caption": "Sơ đồ hình không gian minh họa, không theo tỉ lệ."}
+    if ("hình chữ nhật" in low or "hinh chu nhat" in low) and any(k in low for k in ("nội tiếp", "noi tiep", "đường tròn", "duong tron")):
+        return {"type": "circle_inscribed", "shape": "rectangle", "labels": ["A", "B", "C", "D"], "caption": "Hình chữ nhật nội tiếp đường tròn; đường chéo là đường kính."}
+    if ("tam giác" in low or "tam giac" in low) and any(k in low for k in ("nội tiếp", "noi tiep", "đường tròn", "duong tron")):
+        return {"type": "circle_inscribed_triangle", "labels": ["A", "B", "C", "O"], "caption": "Tam giác nội tiếp đường tròn; các đỉnh nằm trên đường tròn."}
+    if any(k in low for k in ("tứ giác nội tiếp", "tu giac noi tiep")):
+        return {"type": "circle_inscribed", "labels": ["A", "B", "C", "D"], "caption": "Tứ giác nội tiếp đường tròn minh họa."}
+    if any(k in low for k in ("tiếp tuyến", "tiep tuyen")):
+        r_match = re.search(r"(?:bán kính|radius|r\s*=)\s*(\d+)", low)
+        r = int(r_match.group(1)) if r_match else None
+        return {"type": "circle_tangent", "labels": ["O", "T"], "radius": r, "caption": "Tiếp tuyến vuông góc với bán kính tại tiếp điểm."}
+    if any(k in low for k in ("dây ab", "day ab", "dây cung", "day cung", "hai dây")):
+        return {"type": "circle_chord", "labels": ["O", "A", "B", "H"], "caption": "Dây cung và đường vuông góc từ tâm minh họa."}
+    if any(k in low for k in ("đường tròn", "duong tron", "bán kính", "ban kinh", "đường kính")):
+        diameter_match = re.search(r"(?:đường kính|duong kinh)\s*(?:ab\s*)?=?\s*(\d+(?:[.,]\d+)?)", low)
+        radius_match = re.search(r"(?:bán kính|ban kinh|radius|r\s*=)\s*(\d+(?:[.,]\d+)?)", low)
+        diameter = float(diameter_match.group(1).replace(",", ".")) if diameter_match else None
+        radius = float(radius_match.group(1).replace(",", ".")) if radius_match else (diameter / 2 if diameter is not None else None)
+        if diameter is not None:
+            return {"type": "circle", "shape": "diameter", "labels": ["O", "A", "B"], "radius": radius, "diameter": diameter,
+                    "points": {"O": [0, 0], "A": [-diameter/2, 0], "B": [diameter/2, 0]},
+                    "segments": [["A", "B"]], "caption": f"AB là đường kính dài {diameter:g}; bán kính bằng {radius:g}."}
+        return {"type": "circle", "labels": ["O"], "radius": radius, "caption": "Đường tròn và bán kính minh họa; không theo tỉ lệ."}
+    if any(k in low for k in ("tọa độ", "tọa do", "đường thẳng d", "đường thẳng có hệ số góc", "vectơ ab", "vector ab", "điểm p(")):
+        return {"type": "coordinate", "labels": ["A", "B"], "caption": "Mặt phẳng tọa độ minh họa."}
+    if any(k in low for k in ("hình chữ nhật", "hinh chu nhat", "hình vuông", "hinh vuong", "hình thang", "hinh thang", "hình thoi", "hinh thoi", "hình bình hành", "hinh binh hanh")):
+        if "hình thang" in low or "hinh thang" in low:
+            points = {"A": [0, 0], "B": [8, 0], "C": [6, 4], "D": [2, 4]}
+            segments = [["A", "B"], ["B", "C"], ["C", "D"], ["D", "A"]]
+            caption = "Hình thang với hai đáy song song, sơ đồ minh họa."
+        elif "hình thoi" in low or "hinh thoi" in low:
+            points = {"A": [0, 3], "B": [4, 0], "C": [8, 3], "D": [4, 6]}
+            segments = [["A", "B"], ["B", "C"], ["C", "D"], ["D", "A"], ["A", "C"], ["B", "D"]]
+            caption = "Hình thoi và hai đường chéo minh họa."
+        else:
+            points = {"A": [0, 0], "B": [8, 0], "C": [8, 4], "D": [0, 4]}
+            segments = [["A", "B"], ["B", "C"], ["C", "D"], ["D", "A"], ["A", "C"]]
+            caption = "Tứ giác và đường chéo minh họa, không theo tỉ lệ."
+        return {"type": "geometry", "shape": "polygon", "points": points, "segments": segments, "labels": list(points), "caption": caption}
+    if any(k in low for k in ("tam giác", "tam giac", "pythagore", "định lý cos", "dinh ly cos", "phân giác", "phan giac", "đường cao", "duong cao", "đường trung tuyến", "duong trung tuyen", "góc a", "goc a")):
+        A, B, C = (4.0, 7.0), (0.0, 0.0), (9.0, 0.0)
+        points = {"A": list(A), "B": list(B), "C": list(C)}
+        segments = [["A", "B"], ["B", "C"], ["C", "A"]]
+        caption = "Tam giác minh họa, không theo tỉ lệ."
+        if "phân giác" in low or "phan giac" in low:
+            # Angle-bisector theorem: BD/DC = AB/AC.
+            ab = ((A[0]-B[0])**2 + (A[1]-B[1])**2) ** 0.5
+            ac = ((A[0]-C[0])**2 + (A[1]-C[1])**2) ** 0.5
+            dx = 9.0 * ab / (ab + ac)
+            points["D"] = [dx, 0.0]
+            segments.append(["A", "D"])
+            caption = "AD là phân giác minh họa; D chia BC theo định lý phân giác. Không theo tỉ lệ số liệu đề."
+        elif "trung điểm bc" in low or "trung diem bc" in low or "trung tuyến" in low or "trung tuyen" in low:
+            points["M"] = [4.5, 0.0]
+            segments.append(["A", "M"])
+            caption = "M là trung điểm BC và AM là đường trung tuyến."
+        elif "đường cao" in low or "duong cao" in low:
+            # Orthogonal projection of A onto BC, with the altitude shown dashed.
+            points["H"] = [A[0], 0.0]
+            segments = [["A", "H"], ["H", "B"], ["H", "C"], ["A", "B"], ["B", "C"], ["C", "A"]]
+            return {"type": "geometry", "shape": "polygon", "points": points, "segments": segments,
+                    "labels": list(points), "right_angle": "H", "altitudes": [["A", "H"]],
+                    "dashed_segments": [["A", "H"]], "caption": "AH là đường cao, AH vuông góc BC. Hình minh họa, không theo tỉ lệ."}
+        elif "vuông" in low or "vuong" in low or "pythagore" in low:
+            points = {"A": [0.0, 0.0], "B": [8.0, 0.0], "C": [0.0, 5.0]}
+            segments = [["A", "B"], ["B", "C"], ["C", "A"]]
+            return {"type": "geometry", "shape": "polygon", "points": points, "segments": segments,
+                    "labels": list(points), "right_angle": "A", "caption": "Tam giác vuông tại A; minh họa, không theo tỉ lệ."}
+        return {"type": "geometry", "shape": "polygon", "points": points, "segments": segments, "labels": list(points), "caption": caption}
     geometry_ids = {
         "he_thuc_luong", "he_thuc_luong_tam_giac", "toa_do_phang", "duong_tron",
         "hinh_hoc_10", "hinh_khong_gian", "hinh_hoc_khong_gian", "song_song_khong_gian",
@@ -478,7 +651,7 @@ def geometry_diagram(topic_id: str, question: str, answer: str | int | float):
         "goc_khoang_cach_oxyz", "the_tich_khong_gian"
     }
     if topic_id in geometry_ids:
-        return {"type": "triangle", "labels": ["A", "B", "C"]}
+        return {"type": "geometry", "shape": "polygon", "points": {"A": [0, 0], "B": [8, 0], "C": [3, 5]}, "segments": [["A", "B"], ["B", "C"], ["C", "A"]], "labels": ["A", "B", "C"], "caption": "Hình minh họa theo chủ đề."}
     return None
 
 

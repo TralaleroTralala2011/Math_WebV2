@@ -50,12 +50,18 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
 
-    # Cho phép localhost / 127.0.0.1 / IP LAN
-    # với bất kỳ port nào.
+    # Local development: localhost, loopback và IP private trong LAN.
+    # Production: GitHub Pages origin đã cấu hình cho dự án.
+    # Chỉ cho phép origin dạng HTTP(S), không cho phép wildcard * khi dùng cookie/token.
     allow_origin_regex=(
-        r"^https?://"
-        r"(localhost|127\.0\.0\.1|192\.168\.1\.3|tralalerotralala2011\.github\.io)"
-        r"(:\d+)?$"
+        r"^https?://(?:"
+        r"localhost|"
+        r"127(?:\.\d{1,3}){3}|"
+        r"10(?:\.\d{1,3}){3}|"
+        r"192\.168(?:\.\d{1,3}){2}|"
+        r"172\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2}|"
+        r"tralalerotralala2011\.github\.io"
+        r")(?::\d+)?$"
     ),
 
     allow_credentials=True,

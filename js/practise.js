@@ -26,7 +26,7 @@
 
     const DEFAULT_DIFFICULTY = "medium";
 
-    const DEFAULT_QUESTION_TYPE = "multiple_choice";
+    const DEFAULT_QUESTION_TYPE = "mixed";
 
     const DEFAULT_COUNT = 10;
 
@@ -1195,6 +1195,266 @@
         "description": "Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.",
         "level_key": "advanced",
         "id_num": 92
+    },
+    {
+        "id": "hinh_hoc_co_ban_10",
+        "name": "Hình học cơ bản: góc, cạnh và diện tích",
+        "grade": 10,
+        "games": [
+            {
+                "name": "Hình học cơ bản: góc, cạnh và diện tích [hinh_hoc_co_ban_10] • Khám phá",
+                "icon": "🔎",
+                "path": "games/knowledge/hinh-hoc-co-ban-10/1-kham-pha.html"
+            },
+            {
+                "name": "Hình học cơ bản: góc, cạnh và diện tích [hinh_hoc_co_ban_10] • Nhiệm vụ",
+                "icon": "🧩",
+                "path": "games/knowledge/hinh-hoc-co-ban-10/2-nhiem-vu.html"
+            },
+            {
+                "name": "Hình học cơ bản: góc, cạnh và diện tích [hinh_hoc_co_ban_10] • Trùm cuối",
+                "icon": "🏆",
+                "path": "games/knowledge/hinh-hoc-co-ban-10/3-trum-cuoi.html"
+            }
+        ],
+        "category": "TOÁN 10 · HÌNH HỌC",
+        "description": "Luyện tập hình học cơ bản: góc, cạnh và diện tích với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.",
+        "level_key": "foundation",
+        "id_num": 93
+    },
+    {
+        "id": "tam_giac_tu_giac_10",
+        "name": "Tam giác và tứ giác cơ bản",
+        "grade": 10,
+        "games": [
+            {
+                "name": "Tam giác và tứ giác cơ bản [tam_giac_tu_giac_10] • Khám phá",
+                "icon": "🔎",
+                "path": "games/knowledge/tam-giac-tu-giac-10/1-kham-pha.html"
+            },
+            {
+                "name": "Tam giác và tứ giác cơ bản [tam_giac_tu_giac_10] • Nhiệm vụ",
+                "icon": "🧩",
+                "path": "games/knowledge/tam-giac-tu-giac-10/2-nhiem-vu.html"
+            },
+            {
+                "name": "Tam giác và tứ giác cơ bản [tam_giac_tu_giac_10] • Trùm cuối",
+                "icon": "🏆",
+                "path": "games/knowledge/tam-giac-tu-giac-10/3-trum-cuoi.html"
+            }
+        ],
+        "category": "TOÁN 10 · HÌNH HỌC",
+        "description": "Luyện tập tam giác và tứ giác cơ bản với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.",
+        "level_key": "foundation",
+        "id_num": 94
+    },
+    {
+        "id": "duong_tron_co_ban_10",
+        "name": "Đường tròn và các góc cơ bản",
+        "grade": 10,
+        "games": [
+            {
+                "name": "Đường tròn và các góc cơ bản [duong_tron_co_ban_10] • Khám phá",
+                "icon": "🔎",
+                "path": "games/knowledge/duong-tron-co-ban-10/1-kham-pha.html"
+            },
+            {
+                "name": "Đường tròn và các góc cơ bản [duong_tron_co_ban_10] • Nhiệm vụ",
+                "icon": "🧩",
+                "path": "games/knowledge/duong-tron-co-ban-10/2-nhiem-vu.html"
+            },
+            {
+                "name": "Đường tròn và các góc cơ bản [duong_tron_co_ban_10] • Trùm cuối",
+                "icon": "🏆",
+                "path": "games/knowledge/duong-tron-co-ban-10/3-trum-cuoi.html"
+            }
+        ],
+        "category": "TOÁN 10 · HÌNH HỌC",
+        "description": "Luyện tập đường tròn và các góc cơ bản với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.",
+        "level_key": "foundation",
+        "id_num": 95
+    },
+    {
+        "id": "he_thuc_luong_van_dung_10",
+        "name": "Hệ thức lượng trong tam giác",
+        "grade": 10,
+        "games": [
+            {
+                "name": "Hệ thức lượng trong tam giác [he_thuc_luong_van_dung_10] • Khám phá",
+                "icon": "🔎",
+                "path": "games/knowledge/he-thuc-luong-van-dung-10/1-kham-pha.html"
+            },
+            {
+                "name": "Hệ thức lượng trong tam giác [he_thuc_luong_van_dung_10] • Nhiệm vụ",
+                "icon": "🧩",
+                "path": "games/knowledge/he-thuc-luong-van-dung-10/2-nhiem-vu.html"
+            },
+            {
+                "name": "Hệ thức lượng trong tam giác [he_thuc_luong_van_dung_10] • Trùm cuối",
+                "icon": "🏆",
+                "path": "games/knowledge/he-thuc-luong-van-dung-10/3-trum-cuoi.html"
+            }
+        ],
+        "category": "TOÁN 10 · HÌNH HỌC",
+        "description": "Luyện tập hệ thức lượng trong tam giác với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.",
+        "level_key": "medium",
+        "id_num": 96
+    },
+    {
+        "id": "toa_do_hinh_hoc_10",
+        "name": "Tọa độ và đường thẳng trong mặt phẳng",
+        "grade": 10,
+        "games": [
+            {
+                "name": "Tọa độ và đường thẳng trong mặt phẳng [toa_do_hinh_hoc_10] • Khám phá",
+                "icon": "🔎",
+                "path": "games/knowledge/toa-do-hinh-hoc-10/1-kham-pha.html"
+            },
+            {
+                "name": "Tọa độ và đường thẳng trong mặt phẳng [toa_do_hinh_hoc_10] • Nhiệm vụ",
+                "icon": "🧩",
+                "path": "games/knowledge/toa-do-hinh-hoc-10/2-nhiem-vu.html"
+            },
+            {
+                "name": "Tọa độ và đường thẳng trong mặt phẳng [toa_do_hinh_hoc_10] • Trùm cuối",
+                "icon": "🏆",
+                "path": "games/knowledge/toa-do-hinh-hoc-10/3-trum-cuoi.html"
+            }
+        ],
+        "category": "TOÁN 10 · HÌNH HỌC",
+        "description": "Luyện tập tọa độ và đường thẳng trong mặt phẳng với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.",
+        "level_key": "medium",
+        "id_num": 97
+    },
+    {
+        "id": "chung_minh_hinh_hoc_10",
+        "name": "Chứng minh hình học và bài toán tổng hợp",
+        "grade": 10,
+        "games": [
+            {
+                "name": "Chứng minh hình học và bài toán tổng hợp [chung_minh_hinh_hoc_10] • Khám phá",
+                "icon": "🔎",
+                "path": "games/knowledge/chung-minh-hinh-hoc-10/1-kham-pha.html"
+            },
+            {
+                "name": "Chứng minh hình học và bài toán tổng hợp [chung_minh_hinh_hoc_10] • Nhiệm vụ",
+                "icon": "🧩",
+                "path": "games/knowledge/chung-minh-hinh-hoc-10/2-nhiem-vu.html"
+            },
+            {
+                "name": "Chứng minh hình học và bài toán tổng hợp [chung_minh_hinh_hoc_10] • Trùm cuối",
+                "icon": "🏆",
+                "path": "games/knowledge/chung-minh-hinh-hoc-10/3-trum-cuoi.html"
+            }
+        ],
+        "category": "TOÁN 10 · HÌNH HỌC",
+        "description": "Luyện tập chứng minh hình học và bài toán tổng hợp với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.",
+        "level_key": "advanced",
+        "id_num": 98
+    },
+    {
+        "id": "phep_bien_hinh_co_ban_11",
+        "name": "Phép biến hình cơ bản",
+        "grade": 11,
+        "games": [
+            {
+                "name": "Phép biến hình cơ bản [phep_bien_hinh_co_ban_11] • Khám phá",
+                "icon": "🔎",
+                "path": "games/knowledge/phep-bien-hinh-co-ban-11/1-kham-pha.html"
+            },
+            {
+                "name": "Phép biến hình cơ bản [phep_bien_hinh_co_ban_11] • Nhiệm vụ",
+                "icon": "🧩",
+                "path": "games/knowledge/phep-bien-hinh-co-ban-11/2-nhiem-vu.html"
+            },
+            {
+                "name": "Phép biến hình cơ bản [phep_bien_hinh_co_ban_11] • Trùm cuối",
+                "icon": "🏆",
+                "path": "games/knowledge/phep-bien-hinh-co-ban-11/3-trum-cuoi.html"
+            }
+        ],
+        "category": "TOÁN 11 · HÌNH HỌC",
+        "description": "Luyện tập phép biến hình cơ bản với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.",
+        "level_key": "foundation",
+        "id_num": 99
+    },
+    {
+        "id": "nhan_biet_hinh_khong_gian_11",
+        "name": "Nhận biết hình học không gian",
+        "grade": 11,
+        "games": [
+            {
+                "name": "Nhận biết hình học không gian [nhan_biet_hinh_khong_gian_11] • Khám phá",
+                "icon": "🔎",
+                "path": "games/knowledge/nhan-biet-hinh-khong-gian-11/1-kham-pha.html"
+            },
+            {
+                "name": "Nhận biết hình học không gian [nhan_biet_hinh_khong_gian_11] • Nhiệm vụ",
+                "icon": "🧩",
+                "path": "games/knowledge/nhan-biet-hinh-khong-gian-11/2-nhiem-vu.html"
+            },
+            {
+                "name": "Nhận biết hình học không gian [nhan_biet_hinh_khong_gian_11] • Trùm cuối",
+                "icon": "🏆",
+                "path": "games/knowledge/nhan-biet-hinh-khong-gian-11/3-trum-cuoi.html"
+            }
+        ],
+        "category": "TOÁN 11 · HÌNH HỌC",
+        "description": "Luyện tập nhận biết hình học không gian với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.",
+        "level_key": "foundation",
+        "id_num": 100
+    },
+    {
+        "id": "hinh_khoi_va_the_tich_co_ban_12",
+        "name": "Hình khối và thể tích cơ bản",
+        "grade": 12,
+        "games": [
+            {
+                "name": "Hình khối và thể tích cơ bản [hinh_khoi_va_the_tich_co_ban_12] • Khám phá",
+                "icon": "🔎",
+                "path": "games/knowledge/hinh-khoi-va-the-tich-co-ban-12/1-kham-pha.html"
+            },
+            {
+                "name": "Hình khối và thể tích cơ bản [hinh_khoi_va_the_tich_co_ban_12] • Nhiệm vụ",
+                "icon": "🧩",
+                "path": "games/knowledge/hinh-khoi-va-the-tich-co-ban-12/2-nhiem-vu.html"
+            },
+            {
+                "name": "Hình khối và thể tích cơ bản [hinh_khoi_va_the_tich_co_ban_12] • Trùm cuối",
+                "icon": "🏆",
+                "path": "games/knowledge/hinh-khoi-va-the-tich-co-ban-12/3-trum-cuoi.html"
+            }
+        ],
+        "category": "TOÁN 12 · HÌNH HỌC",
+        "description": "Luyện tập hình khối và thể tích cơ bản với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.",
+        "level_key": "foundation",
+        "id_num": 101
+    },
+    {
+        "id": "hinh_hoc_oxyz_van_dung_12",
+        "name": "Vận dụng tọa độ Oxyz",
+        "grade": 12,
+        "games": [
+            {
+                "name": "Vận dụng tọa độ Oxyz [hinh_hoc_oxyz_van_dung_12] • Khám phá",
+                "icon": "🔎",
+                "path": "games/knowledge/hinh-hoc-oxyz-van-dung-12/1-kham-pha.html"
+            },
+            {
+                "name": "Vận dụng tọa độ Oxyz [hinh_hoc_oxyz_van_dung_12] • Nhiệm vụ",
+                "icon": "🧩",
+                "path": "games/knowledge/hinh-hoc-oxyz-van-dung-12/2-nhiem-vu.html"
+            },
+            {
+                "name": "Vận dụng tọa độ Oxyz [hinh_hoc_oxyz_van_dung_12] • Trùm cuối",
+                "icon": "🏆",
+                "path": "games/knowledge/hinh-hoc-oxyz-van-dung-12/3-trum-cuoi.html"
+            }
+        ],
+        "category": "TOÁN 12 · HÌNH HỌC",
+        "description": "Luyện tập vận dụng tọa độ oxyz với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.",
+        "level_key": "medium",
+        "id_num": 102
     }
 ];
 
@@ -1249,6 +1509,8 @@
         "color-purple",
         "color-pink",
         "color-green"
+
+
     ];
 
 
@@ -1820,101 +2082,111 @@
         // The pages are cloned from the existing legacy game templates so their
         // original visual/gameplay interfaces remain the baseline.
         const gameMap = {
-            "REMAINDER": [{name:"Bốc số",icon:"🎱",path:"games/knowledge/remainder/1-boc-so.html"}, {name:"Săn số dư",icon:"🔎",path:"games/knowledge/remainder/2-san-so-du.html"}, {name:"Thử thách modulo",icon:"%",path:"games/knowledge/remainder/3-thu-thach-modulo.html"}],
-            "DIVISIBILITY": [{name:"Truy tìm số",icon:"🔎",path:"games/knowledge/divisibility/1-truy-tim-so.html"}, {name:"Chọn số",icon:"🎯",path:"games/knowledge/divisibility/2-chon-so.html"}, {name:"Phá khóa",icon:"🔐",path:"games/knowledge/divisibility/3-pha-khoa.html"}],
-            "FUNCTION": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/function/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/function/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/function/3-o-thi-bi-an.html"}],
-            "ham_so_bac_nhat": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/ham-so-bac-nhat/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/ham-so-bac-nhat/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/ham-so-bac-nhat/3-o-thi-bi-an.html"}],
-            "he_phuong_trinh": [{name:"Điều tra",icon:"🕵️",path:"games/knowledge/he-phuong-trinh/1-ieu-tra.html"}, {name:"Tìm giá trị",icon:"🔢",path:"games/knowledge/he-phuong-trinh/2-tim-gia-tri.html"}, {name:"Ghép đáp án",icon:"🧩",path:"games/knowledge/he-phuong-trinh/3-ghep-ap-an.html"}],
-            "SYSTEM_EQUATION": [{name:"Điều tra",icon:"🕵️",path:"games/knowledge/system-equation/1-ieu-tra.html"}, {name:"Tìm giá trị",icon:"🔢",path:"games/knowledge/system-equation/2-tim-gia-tri.html"}, {name:"Ghép đáp án",icon:"🧩",path:"games/knowledge/system-equation/3-ghep-ap-an.html"}],
-            "menh_de": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/menh-de/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/menh-de/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/menh-de/3-o-thi-bi-an.html"}],
-            "STATISTICS": [{name:"Đọc biểu đồ",icon:"📊",path:"games/knowledge/statistics/1-oc-bieu-o.html"}, {name:"Săn số liệu",icon:"🔎",path:"games/knowledge/statistics/2-san-so-lieu.html"}, {name:"Thử thách thống kê",icon:"🏆",path:"games/knowledge/statistics/3-thu-thach-thong-ke.html"}],
-            "tap_hop": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/tap-hop/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/tap-hop/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/tap-hop/3-o-thi-bi-an.html"}],
-            "vector": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/vector/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/vector/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/vector/3-o-thi-bi-an.html"}],
-            "PROBABILITY": [{name:"Bốc bi",icon:"🔮",path:"games/knowledge/probability/1-boc-bi.html"}, {name:"Xúc xắc",icon:"🎲",path:"games/knowledge/probability/2-xuc-xac.html"}, {name:"Chọn tình huống",icon:"🎯",path:"games/knowledge/probability/3-chon-tinh-huong.html"}],
-            "RADICAL": [{name:"Săn căn",icon:"√",path:"games/knowledge/radical/1-san-can.html"}, {name:"Rút gọn nhanh",icon:"⚡",path:"games/knowledge/radical/2-rut-gon-nhanh.html"}, {name:"Mở khóa căn thức",icon:"🔓",path:"games/knowledge/radical/3-mo-khoa-can-thuc.html"}],
-            "SEQUENCE": [{name:"Tìm quy luật",icon:"🔍",path:"games/knowledge/sequence/1-tim-quy-luat.html"}, {name:"Điền số",icon:"🔢",path:"games/knowledge/sequence/2-ien-so.html"}, {name:"Đường đua dãy số",icon:"🏁",path:"games/knowledge/sequence/3-uong-ua-day-so.html"}],
-            "GEOMETRY": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/geometry/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/geometry/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/geometry/3-ban-o-hinh-hoc.html"}],
-            "menh_de_tap_hop": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/menh-de-tap-hop/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/menh-de-tap-hop/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/menh-de-tap-hop/3-o-thi-bi-an.html"}],
-            "phuong_trinh": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/phuong-trinh/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/phuong-trinh/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/phuong-trinh/3-o-thi-bi-an.html"}],
-            "QUADRATIC_EQUATION": [{name:"Săn nghiệm",icon:"🎯",path:"games/knowledge/quadratic-equation/1-san-nghiem.html"}, {name:"Ghép nghiệm",icon:"🧩",path:"games/knowledge/quadratic-equation/2-ghep-nghiem.html"}, {name:"Mở khóa",icon:"🔓",path:"games/knowledge/quadratic-equation/3-mo-khoa.html"}],
-            "toa_do_phang": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/toa-do-phang/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/toa-do-phang/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/toa-do-phang/3-ban-o-hinh-hoc.html"}],
-            "COMBINATION": [{name:"Chọn đội",icon:"👥",path:"games/knowledge/combination/1-chon-oi.html"}, {name:"Ghép lựa chọn",icon:"🧩",path:"games/knowledge/combination/2-ghep-lua-chon.html"}, {name:"Săn tổ hợp",icon:"🔎",path:"games/knowledge/combination/3-san-to-hop.html"}],
-            "duong_thang": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/duong-thang/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/duong-thang/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/duong-thang/3-o-thi-bi-an.html"}],
-            "duong_tron": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/duong-tron/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/duong-tron/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/duong-tron/3-ban-o-hinh-hoc.html"}],
-            "bai_toan_thuc_te_10": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/bai-toan-thuc-te-10/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/bai-toan-thuc-te-10/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/bai-toan-thuc-te-10/3-o-thi-bi-an.html"}],
-            "INEQUALITY": [{name:"Vùng an toàn",icon:"🛡️",path:"games/knowledge/inequality/1-vung-an-toan.html"}, {name:"Chọn khoảng",icon:"📏",path:"games/knowledge/inequality/2-chon-khoang.html"}, {name:"Vượt rào",icon:"🚧",path:"games/knowledge/inequality/3-vuot-rao.html"}],
-            "PERMUTATION": [{name:"Xếp vị trí",icon:"📍",path:"games/knowledge/permutation/1-xep-vi-tri.html"}, {name:"Mật mã",icon:"🔐",path:"games/knowledge/permutation/2-mat-ma.html"}, {name:"Sắp thứ tự",icon:"📋",path:"games/knowledge/permutation/3-sap-thu-tu.html"}],
-            "ham_so_bac_hai": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/ham-so-bac-hai/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/ham-so-bac-hai/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/ham-so-bac-hai/3-o-thi-bi-an.html"}],
-            "IDENTITIES": [{name:"Ghép công thức",icon:"🧩",path:"games/knowledge/identities/1-ghep-cong-thuc.html"}, {name:"Phá biểu thức",icon:"💥",path:"games/knowledge/identities/2-pha-bieu-thuc.html"}, {name:"Công thức bí ẩn",icon:"❓",path:"games/knowledge/identities/3-cong-thuc-bi-an.html"}],
-            "he_bat_phuong_trinh": [{name:"Vùng an toàn",icon:"🛡️",path:"games/knowledge/he-bat-phuong-trinh/1-vung-an-toan.html"}, {name:"Chọn khoảng",icon:"📏",path:"games/knowledge/he-bat-phuong-trinh/2-chon-khoang.html"}, {name:"Vượt rào",icon:"🚧",path:"games/knowledge/he-bat-phuong-trinh/3-vuot-rao.html"}],
-            "he_thuc_luong": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/he-thuc-luong/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/he-thuc-luong/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/he-thuc-luong/3-ban-o-hinh-hoc.html"}],
-            "he_thuc_luong_tam_giac": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/he-thuc-luong-tam-giac/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/he-thuc-luong-tam-giac/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/he-thuc-luong-tam-giac/3-ban-o-hinh-hoc.html"}],
-            "nhi_thuc_newton": [{name:"Chọn đội",icon:"👥",path:"games/knowledge/nhi-thuc-newton/1-chon-oi.html"}, {name:"Ghép lựa chọn",icon:"🧩",path:"games/knowledge/nhi-thuc-newton/2-ghep-lua-chon.html"}, {name:"Săn tổ hợp",icon:"🔎",path:"games/knowledge/nhi-thuc-newton/3-san-to-hop.html"}],
-            "ALGEBRAIC_FRACTION": [{name:"Rút gọn",icon:"➗",path:"games/knowledge/algebraic-fraction/1-rut-gon.html"}, {name:"Tìm điều kiện",icon:"🔎",path:"games/knowledge/algebraic-fraction/2-tim-ieu-kien.html"}, {name:"Phân thức tốc độ",icon:"⚡",path:"games/knowledge/algebraic-fraction/3-phan-thuc-toc-o.html"}],
-            "quy_tac_dem": [{name:"Chọn đội",icon:"👥",path:"games/knowledge/quy-tac-dem/1-chon-oi.html"}, {name:"Ghép lựa chọn",icon:"🧩",path:"games/knowledge/quy-tac-dem/2-ghep-lua-chon.html"}, {name:"Săn tổ hợp",icon:"🔎",path:"games/knowledge/quy-tac-dem/3-san-to-hop.html"}],
-            "cong_thuc_luong_giac": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/cong-thuc-luong-giac/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/cong-thuc-luong-giac/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/cong-thuc-luong-giac/3-o-thi-bi-an.html"}],
-            "cap_so_cong": [{name:"Tìm quy luật",icon:"🔍",path:"games/knowledge/cap-so-cong/1-tim-quy-luat.html"}, {name:"Điền số",icon:"🔢",path:"games/knowledge/cap-so-cong/2-ien-so.html"}, {name:"Đường đua dãy số",icon:"🏁",path:"games/knowledge/cap-so-cong/3-uong-ua-day-so.html"}],
-            "cap_so_nhan": [{name:"Tìm quy luật",icon:"🔍",path:"games/knowledge/cap-so-nhan/1-tim-quy-luat.html"}, {name:"Điền số",icon:"🔢",path:"games/knowledge/cap-so-nhan/2-ien-so.html"}, {name:"Đường đua dãy số",icon:"🏁",path:"games/knowledge/cap-so-nhan/3-uong-ua-day-so.html"}],
-            "day_so": [{name:"Tìm quy luật",icon:"🔍",path:"games/knowledge/day-so/1-tim-quy-luat.html"}, {name:"Điền số",icon:"🔢",path:"games/knowledge/day-so/2-ien-so.html"}, {name:"Đường đua dãy số",icon:"🏁",path:"games/knowledge/day-so/3-uong-ua-day-so.html"}],
-            "gia_tri_luong_giac": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/gia-tri-luong-giac/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/gia-tri-luong-giac/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/gia-tri-luong-giac/3-o-thi-bi-an.html"}],
-            "gioi_han": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/gioi-han/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/gioi-han/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/gioi-han/3-o-thi-bi-an.html"}],
-            "ham_so_luong_giac": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/ham-so-luong-giac/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/ham-so-luong-giac/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/ham-so-luong-giac/3-o-thi-bi-an.html"}],
-            "thong_ke_11": [{name:"Đọc biểu đồ",icon:"📊",path:"games/knowledge/thong-ke-11/1-oc-bieu-o.html"}, {name:"Săn số liệu",icon:"🔎",path:"games/knowledge/thong-ke-11/2-san-so-lieu.html"}, {name:"Thử thách thống kê",icon:"🏆",path:"games/knowledge/thong-ke-11/3-thu-thach-thong-ke.html"}],
-            "xac_suat_11": [{name:"Bốc bi",icon:"🔮",path:"games/knowledge/xac-suat-11/1-boc-bi.html"}, {name:"Xúc xắc",icon:"🎲",path:"games/knowledge/xac-suat-11/2-xuc-xac.html"}, {name:"Chọn tình huống",icon:"🎯",path:"games/knowledge/xac-suat-11/3-chon-tinh-huong.html"}],
-            "dao_ham": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/dao-ham/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/dao-ham/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/dao-ham/3-o-thi-bi-an.html"}],
-            "bai_toan_thuc_te_11": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/bai-toan-thuc-te-11/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/bai-toan-thuc-te-11/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/bai-toan-thuc-te-11/3-o-thi-bi-an.html"}],
-            "day_so_tong_quat": [{name:"Tìm quy luật",icon:"🔍",path:"games/knowledge/day-so-tong-quat/1-tim-quy-luat.html"}, {name:"Điền số",icon:"🔢",path:"games/knowledge/day-so-tong-quat/2-ien-so.html"}, {name:"Đường đua dãy số",icon:"🏁",path:"games/knowledge/day-so-tong-quat/3-uong-ua-day-so.html"}],
-            "gioi_han_ham_so": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/gioi-han-ham-so/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/gioi-han-ham-so/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/gioi-han-ham-so/3-o-thi-bi-an.html"}],
-            "goc_khoang_cach_11": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/goc-khoang-cach-11/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/goc-khoang-cach-11/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/goc-khoang-cach-11/3-ban-o-hinh-hoc.html"}],
-            "ham_so_lien_tuc": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/ham-so-lien-tuc/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/ham-so-lien-tuc/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/ham-so-lien-tuc/3-o-thi-bi-an.html"}],
-            "phuong_trinh_luong_giac": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/phuong-trinh-luong-giac/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/phuong-trinh-luong-giac/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/phuong-trinh-luong-giac/3-o-thi-bi-an.html"}],
-            "song_song_khong_gian": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/song-song-khong-gian/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/song-song-khong-gian/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/song-song-khong-gian/3-ban-o-hinh-hoc.html"}],
-            "vuong_goc_khong_gian": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/vuong-goc-khong-gian/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/vuong-goc-khong-gian/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/vuong-goc-khong-gian/3-ban-o-hinh-hoc.html"}],
-            "dao_ham_quy_tac": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/dao-ham-quy-tac/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/dao-ham-quy-tac/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/dao-ham-quy-tac/3-o-thi-bi-an.html"}],
-            "ung_dung_dao_ham_11": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/ung-dung-dao-ham-11/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/ung-dung-dao-ham-11/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/ung-dung-dao-ham-11/3-o-thi-bi-an.html"}],
-            "bien_co_doc_lap_11": [{name:"Bốc bi",icon:"🔮",path:"games/knowledge/bien-co-doc-lap-11/1-boc-bi.html"}, {name:"Xúc xắc",icon:"🎲",path:"games/knowledge/bien-co-doc-lap-11/2-xuc-xac.html"}, {name:"Chọn tình huống",icon:"🎯",path:"games/knowledge/bien-co-doc-lap-11/3-chon-tinh-huong.html"}],
-            "bai_toan_thuc_te_tong_hop_11": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/bai-toan-thuc-te-tong-hop-11/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/bai-toan-thuc-te-tong-hop-11/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/bai-toan-thuc-te-tong-hop-11/3-o-thi-bi-an.html"}],
-            "day_so_truy_hoi_11": [{name:"Tìm quy luật",icon:"🔍",path:"games/knowledge/day-so-truy-hoi-11/1-tim-quy-luat.html"}, {name:"Điền số",icon:"🔢",path:"games/knowledge/day-so-truy-hoi-11/2-ien-so.html"}, {name:"Đường đua dãy số",icon:"🏁",path:"games/knowledge/day-so-truy-hoi-11/3-uong-ua-day-so.html"}],
-            "ham_so_luong_giac_day_du": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/ham-so-luong-giac-day-du/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/ham-so-luong-giac-day-du/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/ham-so-luong-giac-day-du/3-o-thi-bi-an.html"}],
-            "phep_bien_hinh_11": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/phep-bien-hinh-11/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/phep-bien-hinh-11/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/phep-bien-hinh-11/3-ban-o-hinh-hoc.html"}],
-            "phuong_trinh_luong_giac_day_du": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/phuong-trinh-luong-giac-day-du/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/phuong-trinh-luong-giac-day-du/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/phuong-trinh-luong-giac-day-du/3-o-thi-bi-an.html"}],
-            "hinh_khong_gian": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/hinh-khong-gian/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/hinh-khong-gian/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/hinh-khong-gian/3-ban-o-hinh-hoc.html"}],
-            "quy_nap_toan_hoc_11": [{name:"Tìm quy luật",icon:"🔍",path:"games/knowledge/quy-nap-toan-hoc-11/1-tim-quy-luat.html"}, {name:"Điền số",icon:"🔢",path:"games/knowledge/quy-nap-toan-hoc-11/2-ien-so.html"}, {name:"Đường đua dãy số",icon:"🏁",path:"games/knowledge/quy-nap-toan-hoc-11/3-uong-ua-day-so.html"}],
-            "thiet_dien_hinh_khong_gian_11": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/thiet-dien-hinh-khong-gian-11/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/thiet-dien-hinh-khong-gian-11/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/thiet-dien-hinh-khong-gian-11/3-ban-o-hinh-hoc.html"}],
-            "to_hop_xac_suat_nang_cao_11": [{name:"Bốc bi",icon:"🔮",path:"games/knowledge/to-hop-xac-suat-nang-cao-11/1-boc-bi.html"}, {name:"Xúc xắc",icon:"🎲",path:"games/knowledge/to-hop-xac-suat-nang-cao-11/2-xuc-xac.html"}, {name:"Chọn tình huống",icon:"🎯",path:"games/knowledge/to-hop-xac-suat-nang-cao-11/3-chon-tinh-huong.html"}],
-            "thong_ke_12": [{name:"Đọc biểu đồ",icon:"📊",path:"games/knowledge/thong-ke-12/1-oc-bieu-o.html"}, {name:"Săn số liệu",icon:"🔎",path:"games/knowledge/thong-ke-12/2-san-so-lieu.html"}, {name:"Thử thách thống kê",icon:"🏆",path:"games/knowledge/thong-ke-12/3-thu-thach-thong-ke.html"}],
-            "cuc_tri": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/cuc-tri/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/cuc-tri/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/cuc-tri/3-o-thi-bi-an.html"}],
-            "gtln_gtnn": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/gtln-gtnn/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/gtln-gtnn/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/gtln-gtnn/3-o-thi-bi-an.html"}],
-            "ham_logarit": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/ham-logarit/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/ham-logarit/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/ham-logarit/3-o-thi-bi-an.html"}],
-            "ham_mu": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/ham-mu/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/ham-mu/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/ham-mu/3-o-thi-bi-an.html"}],
-            "hinh_hoc_khong_gian": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/hinh-hoc-khong-gian/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/hinh-hoc-khong-gian/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/hinh-hoc-khong-gian/3-ban-o-hinh-hoc.html"}],
-            "so_phuc": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/so-phuc/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/so-phuc/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/so-phuc/3-o-thi-bi-an.html"}],
-            "tinh_don_dieu": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/tinh-don-dieu/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/tinh-don-dieu/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/tinh-don-dieu/3-o-thi-bi-an.html"}],
-            "toa_do_khong_gian": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/toa-do-khong-gian/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/toa-do-khong-gian/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/toa-do-khong-gian/3-ban-o-hinh-hoc.html"}],
-            "xac_suat_12": [{name:"Bốc bi",icon:"🔮",path:"games/knowledge/xac-suat-12/1-boc-bi.html"}, {name:"Xúc xắc",icon:"🎲",path:"games/knowledge/xac-suat-12/2-xuc-xac.html"}, {name:"Chọn tình huống",icon:"🎯",path:"games/knowledge/xac-suat-12/3-chon-tinh-huong.html"}],
-            "bieu_dien_so_phuc": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/bieu-dien-so-phuc/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/bieu-dien-so-phuc/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/bieu-dien-so-phuc/3-o-thi-bi-an.html"}],
-            "khao_sat_ham_so": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/khao-sat-ham-so/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/khao-sat-ham-so/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/khao-sat-ham-so/3-o-thi-bi-an.html"}],
-            "mat_phang_oxyz": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/mat-phang-oxyz/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/mat-phang-oxyz/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/mat-phang-oxyz/3-ban-o-hinh-hoc.html"}],
-            "nguyen_ham_tich_phan": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/nguyen-ham-tich-phan/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/nguyen-ham-tich-phan/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/nguyen-ham-tich-phan/3-o-thi-bi-an.html"}],
-            "pt_logarit": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/pt-logarit/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/pt-logarit/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/pt-logarit/3-o-thi-bi-an.html"}],
-            "pt_mu": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/pt-mu/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/pt-mu/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/pt-mu/3-o-thi-bi-an.html"}],
-            "tiep_tuyen": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/tiep-tuyen/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/tiep-tuyen/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/tiep-tuyen/3-o-thi-bi-an.html"}],
-            "tien_can": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/tien-can/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/tien-can/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/tien-can/3-o-thi-bi-an.html"}],
-            "duong_thang_oxyz": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/duong-thang-oxyz/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/duong-thang-oxyz/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/duong-thang-oxyz/3-o-thi-bi-an.html"}],
-            "ung_dung_dao_ham": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/ung-dung-dao-ham/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/ung-dung-dao-ham/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/ung-dung-dao-ham/3-o-thi-bi-an.html"}],
-            "bai_toan_thuc_te_12": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/bai-toan-thuc-te-12/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/bai-toan-thuc-te-12/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/bai-toan-thuc-te-12/3-o-thi-bi-an.html"}],
-            "tong_hop_thpt": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/tong-hop-thpt/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/tong-hop-thpt/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/tong-hop-thpt/3-o-thi-bi-an.html"}],
-            "bpt_logarit": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/bpt-logarit/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/bpt-logarit/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/bpt-logarit/3-o-thi-bi-an.html"}],
-            "bpt_mu": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/bpt-mu/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/bpt-mu/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/bpt-mu/3-o-thi-bi-an.html"}],
-            "goc_khoang_cach_oxyz": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/goc-khoang-cach-oxyz/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/goc-khoang-cach-oxyz/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/goc-khoang-cach-oxyz/3-ban-o-hinh-hoc.html"}],
-            "mat_cau": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/mat-cau/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/mat-cau/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/mat-cau/3-ban-o-hinh-hoc.html"}],
-            "pt_so_phuc": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/pt-so-phuc/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/pt-so-phuc/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/pt-so-phuc/3-o-thi-bi-an.html"}],
-            "the_tich_khong_gian": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/the-tich-khong-gian/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/the-tich-khong-gian/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/the-tich-khong-gian/3-ban-o-hinh-hoc.html"}],
-            "tuong_giao": [{name:"Tìm góc",icon:"📐",path:"games/knowledge/tuong-giao/1-tim-goc.html"}, {name:"Săn độ dài",icon:"📏",path:"games/knowledge/tuong-giao/2-san-o-dai.html"}, {name:"Bản đồ hình học",icon:"🗺️",path:"games/knowledge/tuong-giao/3-ban-o-hinh-hoc.html"}],
-            "ung_dung_tich_phan": [{name:"Bắt điểm",icon:"🎯",path:"games/knowledge/ung-dung-tich-phan/1-bat-iem.html"}, {name:"Tìm giao điểm",icon:"✖️",path:"games/knowledge/ung-dung-tich-phan/2-tim-giao-iem.html"}, {name:"Đồ thị bí ẩn",icon:"📈",path:"games/knowledge/ung-dung-tich-phan/3-o-thi-bi-an.html"}],
+            "REMAINDER": [{"name":"Chia dư • Bốc số","icon":"🎱","path":"games/knowledge/remainder/1-boc-so.html"},{"name":"Chia dư • Săn số dư","icon":"🔎","path":"games/knowledge/remainder/2-san-so-du.html"},{"name":"Chia dư • Thử thách modulo","icon":"%","path":"games/knowledge/remainder/3-thu-thach-modulo.html"}],
+            "DIVISIBILITY": [{"name":"Chia hết • Truy tìm số","icon":"🔎","path":"games/knowledge/divisibility/1-truy-tim-so.html"},{"name":"Chia hết • Chọn số","icon":"🎯","path":"games/knowledge/divisibility/2-chon-so.html"},{"name":"Chia hết • Phá khóa","icon":"🔐","path":"games/knowledge/divisibility/3-pha-khoa.html"}],
+            "FUNCTION": [{"name":"Hàm số • Bắt điểm","icon":"🎯","path":"games/knowledge/function/1-bat-iem.html"},{"name":"Hàm số • Tìm giao điểm","icon":"✖️","path":"games/knowledge/function/2-tim-giao-iem.html"},{"name":"Hàm số • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/function/3-o-thi-bi-an.html"}],
+            "ham_so_bac_nhat": [{"name":"Hàm số bậc nhất • Bắt điểm","icon":"🎯","path":"games/knowledge/ham-so-bac-nhat/1-bat-iem.html"},{"name":"Hàm số bậc nhất • Tìm giao điểm","icon":"✖️","path":"games/knowledge/ham-so-bac-nhat/2-tim-giao-iem.html"},{"name":"Hàm số bậc nhất • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/ham-so-bac-nhat/3-o-thi-bi-an.html"}],
+            "he_phuong_trinh": [{"name":"Hệ phương trình [he_phuong_trinh] • Điều tra","icon":"🕵️","path":"games/knowledge/he-phuong-trinh/1-ieu-tra.html"},{"name":"Hệ phương trình [he_phuong_trinh] • Tìm giá trị","icon":"🔢","path":"games/knowledge/he-phuong-trinh/2-tim-gia-tri.html"},{"name":"Hệ phương trình [he_phuong_trinh] • Ghép đáp án","icon":"🧩","path":"games/knowledge/he-phuong-trinh/3-ghep-ap-an.html"}],
+            "SYSTEM_EQUATION": [{"name":"Hệ phương trình [SYSTEM_EQUATION] • Điều tra","icon":"🕵️","path":"games/knowledge/system-equation/1-ieu-tra.html"},{"name":"Hệ phương trình [SYSTEM_EQUATION] • Tìm giá trị","icon":"🔢","path":"games/knowledge/system-equation/2-tim-gia-tri.html"},{"name":"Hệ phương trình [SYSTEM_EQUATION] • Ghép đáp án","icon":"🧩","path":"games/knowledge/system-equation/3-ghep-ap-an.html"}],
+            "menh_de": [{"name":"Mệnh đề • Bắt điểm","icon":"🎯","path":"games/knowledge/menh-de/1-bat-iem.html"},{"name":"Mệnh đề • Tìm giao điểm","icon":"✖️","path":"games/knowledge/menh-de/2-tim-giao-iem.html"},{"name":"Mệnh đề • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/menh-de/3-o-thi-bi-an.html"}],
+            "STATISTICS": [{"name":"Thống kê • Đọc biểu đồ","icon":"📊","path":"games/knowledge/statistics/1-oc-bieu-o.html"},{"name":"Thống kê • Săn số liệu","icon":"🔎","path":"games/knowledge/statistics/2-san-so-lieu.html"},{"name":"Thống kê • Thử thách thống kê","icon":"🏆","path":"games/knowledge/statistics/3-thu-thach-thong-ke.html"}],
+            "tap_hop": [{"name":"Tập hợp và các phép toán • Bắt điểm","icon":"🎯","path":"games/knowledge/tap-hop/1-bat-iem.html"},{"name":"Tập hợp và các phép toán • Tìm giao điểm","icon":"✖️","path":"games/knowledge/tap-hop/2-tim-giao-iem.html"},{"name":"Tập hợp và các phép toán • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/tap-hop/3-o-thi-bi-an.html"}],
+            "vector": [{"name":"Vectơ • Bắt điểm","icon":"🎯","path":"games/knowledge/vector/1-bat-iem.html"},{"name":"Vectơ • Tìm giao điểm","icon":"✖️","path":"games/knowledge/vector/2-tim-giao-iem.html"},{"name":"Vectơ • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/vector/3-o-thi-bi-an.html"}],
+            "PROBABILITY": [{"name":"Xác suất [PROBABILITY] • Bốc bi","icon":"🔮","path":"games/knowledge/probability/1-boc-bi.html"},{"name":"Xác suất [PROBABILITY] • Xúc xắc","icon":"🎲","path":"games/knowledge/probability/2-xuc-xac.html"},{"name":"Xác suất [PROBABILITY] • Chọn tình huống","icon":"🎯","path":"games/knowledge/probability/3-chon-tinh-huong.html"}],
+            "RADICAL": [{"name":"Căn thức • Săn căn","icon":"√","path":"games/knowledge/radical/1-san-can.html"},{"name":"Căn thức • Rút gọn nhanh","icon":"⚡","path":"games/knowledge/radical/2-rut-gon-nhanh.html"},{"name":"Căn thức • Mở khóa căn thức","icon":"🔓","path":"games/knowledge/radical/3-mo-khoa-can-thuc.html"}],
+            "SEQUENCE": [{"name":"Dãy số [SEQUENCE] • Tìm quy luật","icon":"🔍","path":"games/knowledge/sequence/1-tim-quy-luat.html"},{"name":"Dãy số [SEQUENCE] • Điền số","icon":"🔢","path":"games/knowledge/sequence/2-ien-so.html"},{"name":"Dãy số [SEQUENCE] • Đường đua dãy số","icon":"🏁","path":"games/knowledge/sequence/3-uong-ua-day-so.html"}],
+            "GEOMETRY": [{"name":"Hình học • Tìm góc","icon":"📐","path":"games/knowledge/geometry/1-tim-goc.html"},{"name":"Hình học • Săn độ dài","icon":"📏","path":"games/knowledge/geometry/2-san-o-dai.html"},{"name":"Hình học • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/geometry/3-ban-o-hinh-hoc.html"}],
+            "menh_de_tap_hop": [{"name":"Mệnh đề và tập hợp • Bắt điểm","icon":"🎯","path":"games/knowledge/menh-de-tap-hop/1-bat-iem.html"},{"name":"Mệnh đề và tập hợp • Tìm giao điểm","icon":"✖️","path":"games/knowledge/menh-de-tap-hop/2-tim-giao-iem.html"},{"name":"Mệnh đề và tập hợp • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/menh-de-tap-hop/3-o-thi-bi-an.html"}],
+            "phuong_trinh": [{"name":"Phương trình • Bắt điểm","icon":"🎯","path":"games/knowledge/phuong-trinh/1-bat-iem.html"},{"name":"Phương trình • Tìm giao điểm","icon":"✖️","path":"games/knowledge/phuong-trinh/2-tim-giao-iem.html"},{"name":"Phương trình • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/phuong-trinh/3-o-thi-bi-an.html"}],
+            "QUADRATIC_EQUATION": [{"name":"Phương trình bậc hai • Săn nghiệm","icon":"🎯","path":"games/knowledge/quadratic-equation/1-san-nghiem.html"},{"name":"Phương trình bậc hai • Ghép nghiệm","icon":"🧩","path":"games/knowledge/quadratic-equation/2-ghep-nghiem.html"},{"name":"Phương trình bậc hai • Mở khóa","icon":"🔓","path":"games/knowledge/quadratic-equation/3-mo-khoa.html"}],
+            "toa_do_phang": [{"name":"Tọa độ trong mặt phẳng • Tìm góc","icon":"📐","path":"games/knowledge/toa-do-phang/1-tim-goc.html"},{"name":"Tọa độ trong mặt phẳng • Săn độ dài","icon":"📏","path":"games/knowledge/toa-do-phang/2-san-o-dai.html"},{"name":"Tọa độ trong mặt phẳng • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/toa-do-phang/3-ban-o-hinh-hoc.html"}],
+            "COMBINATION": [{"name":"Tổ hợp • Chọn đội","icon":"👥","path":"games/knowledge/combination/1-chon-oi.html"},{"name":"Tổ hợp • Ghép lựa chọn","icon":"🧩","path":"games/knowledge/combination/2-ghep-lua-chon.html"},{"name":"Tổ hợp • Săn tổ hợp","icon":"🔎","path":"games/knowledge/combination/3-san-to-hop.html"}],
+            "duong_thang": [{"name":"Đường thẳng • Bắt điểm","icon":"🎯","path":"games/knowledge/duong-thang/1-bat-iem.html"},{"name":"Đường thẳng • Tìm giao điểm","icon":"✖️","path":"games/knowledge/duong-thang/2-tim-giao-iem.html"},{"name":"Đường thẳng • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/duong-thang/3-o-thi-bi-an.html"}],
+            "duong_tron": [{"name":"Đường tròn • Góc nội tiếp bí ẩn","icon":"📐","path":"games/knowledge/duong-tron/1-goc-noi-tiep-bi-an.html"},{"name":"Đường tròn • Truy tìm bán kính","icon":"📏","path":"games/knowledge/duong-tron/2-truy-tim-ban-kinh.html"},{"name":"Đường tròn • Tiếp tuyến thử thách","icon":"🗺️","path":"games/knowledge/duong-tron/3-tiep-tuyen-thu-thach.html"}],
+            "bai_toan_thuc_te_10": [{"name":"Bài toán thực tế Toán 10 • Bắt điểm","icon":"🎯","path":"games/knowledge/bai-toan-thuc-te-10/1-bat-iem.html"},{"name":"Bài toán thực tế Toán 10 • Tìm giao điểm","icon":"✖️","path":"games/knowledge/bai-toan-thuc-te-10/2-tim-giao-iem.html"},{"name":"Bài toán thực tế Toán 10 • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/bai-toan-thuc-te-10/3-o-thi-bi-an.html"}],
+            "INEQUALITY": [{"name":"Bất phương trình • Vùng an toàn","icon":"🛡️","path":"games/knowledge/inequality/1-vung-an-toan.html"},{"name":"Bất phương trình • Chọn khoảng","icon":"📏","path":"games/knowledge/inequality/2-chon-khoang.html"},{"name":"Bất phương trình • Vượt rào","icon":"🚧","path":"games/knowledge/inequality/3-vuot-rao.html"}],
+            "PERMUTATION": [{"name":"Chỉnh hợp • Xếp vị trí","icon":"📍","path":"games/knowledge/permutation/1-xep-vi-tri.html"},{"name":"Chỉnh hợp • Mật mã","icon":"🔐","path":"games/knowledge/permutation/2-mat-ma.html"},{"name":"Chỉnh hợp • Sắp thứ tự","icon":"📋","path":"games/knowledge/permutation/3-sap-thu-tu.html"}],
+            "ham_so_bac_hai": [{"name":"Hàm số bậc hai và parabol • Bắt điểm","icon":"🎯","path":"games/knowledge/ham-so-bac-hai/1-bat-iem.html"},{"name":"Hàm số bậc hai và parabol • Tìm giao điểm","icon":"✖️","path":"games/knowledge/ham-so-bac-hai/2-tim-giao-iem.html"},{"name":"Hàm số bậc hai và parabol • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/ham-so-bac-hai/3-o-thi-bi-an.html"}],
+            "IDENTITIES": [{"name":"Hằng đẳng thức • Ghép công thức","icon":"🧩","path":"games/knowledge/identities/1-ghep-cong-thuc.html"},{"name":"Hằng đẳng thức • Phá biểu thức","icon":"💥","path":"games/knowledge/identities/2-pha-bieu-thuc.html"},{"name":"Hằng đẳng thức • Công thức bí ẩn","icon":"❓","path":"games/knowledge/identities/3-cong-thuc-bi-an.html"}],
+            "he_bat_phuong_trinh": [{"name":"Hệ bất phương trình • Vùng an toàn","icon":"🛡️","path":"games/knowledge/he-bat-phuong-trinh/1-vung-an-toan.html"},{"name":"Hệ bất phương trình • Chọn khoảng","icon":"📏","path":"games/knowledge/he-bat-phuong-trinh/2-chon-khoang.html"},{"name":"Hệ bất phương trình • Vượt rào","icon":"🚧","path":"games/knowledge/he-bat-phuong-trinh/3-vuot-rao.html"}],
+            "he_thuc_luong": [{"name":"Hệ thức lượng trong tam giác [he_thuc_luong] • Giải mã góc","icon":"📐","path":"games/knowledge/he-thuc-luong/1-giai-ma-goc.html"},{"name":"Hệ thức lượng trong tam giác [he_thuc_luong] • Săn cạnh tam giác","icon":"📏","path":"games/knowledge/he-thuc-luong/2-san-canh-tam-giac.html"},{"name":"Hệ thức lượng trong tam giác [he_thuc_luong] • Ứng dụng tam giác","icon":"🗺️","path":"games/knowledge/he-thuc-luong/3-ung-dung-tam-giac.html"}],
+            "he_thuc_luong_tam_giac": [{"name":"Hệ thức lượng trong tam giác [he_thuc_luong_tam_giac] • Giải mã góc","icon":"📐","path":"games/knowledge/he-thuc-luong-tam-giac/1-giai-ma-goc.html"},{"name":"Hệ thức lượng trong tam giác [he_thuc_luong_tam_giac] • Săn cạnh tam giác","icon":"📏","path":"games/knowledge/he-thuc-luong-tam-giac/2-san-canh-tam-giac.html"},{"name":"Hệ thức lượng trong tam giác [he_thuc_luong_tam_giac] • Ứng dụng tam giác","icon":"🗺️","path":"games/knowledge/he-thuc-luong-tam-giac/3-ung-dung-tam-giac.html"}],
+            "nhi_thuc_newton": [{"name":"Nhị thức Newton • Chọn đội","icon":"👥","path":"games/knowledge/nhi-thuc-newton/1-chon-oi.html"},{"name":"Nhị thức Newton • Ghép lựa chọn","icon":"🧩","path":"games/knowledge/nhi-thuc-newton/2-ghep-lua-chon.html"},{"name":"Nhị thức Newton • Săn tổ hợp","icon":"🔎","path":"games/knowledge/nhi-thuc-newton/3-san-to-hop.html"}],
+            "ALGEBRAIC_FRACTION": [{"name":"Phân thức đại số • Rút gọn","icon":"➗","path":"games/knowledge/algebraic-fraction/1-rut-gon.html"},{"name":"Phân thức đại số • Tìm điều kiện","icon":"🔎","path":"games/knowledge/algebraic-fraction/2-tim-ieu-kien.html"},{"name":"Phân thức đại số • Phân thức tốc độ","icon":"⚡","path":"games/knowledge/algebraic-fraction/3-phan-thuc-toc-o.html"}],
+            "quy_tac_dem": [{"name":"Quy tắc đếm • Chọn đội","icon":"👥","path":"games/knowledge/quy-tac-dem/1-chon-oi.html"},{"name":"Quy tắc đếm • Ghép lựa chọn","icon":"🧩","path":"games/knowledge/quy-tac-dem/2-ghep-lua-chon.html"},{"name":"Quy tắc đếm • Săn tổ hợp","icon":"🔎","path":"games/knowledge/quy-tac-dem/3-san-to-hop.html"}],
+            "cong_thuc_luong_giac": [{"name":"Công thức lượng giác • Bắt điểm","icon":"🎯","path":"games/knowledge/cong-thuc-luong-giac/1-bat-iem.html"},{"name":"Công thức lượng giác • Tìm giao điểm","icon":"✖️","path":"games/knowledge/cong-thuc-luong-giac/2-tim-giao-iem.html"},{"name":"Công thức lượng giác • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/cong-thuc-luong-giac/3-o-thi-bi-an.html"}],
+            "cap_so_cong": [{"name":"Cấp số cộng • Tìm quy luật","icon":"🔍","path":"games/knowledge/cap-so-cong/1-tim-quy-luat.html"},{"name":"Cấp số cộng • Điền số","icon":"🔢","path":"games/knowledge/cap-so-cong/2-ien-so.html"},{"name":"Cấp số cộng • Đường đua dãy số","icon":"🏁","path":"games/knowledge/cap-so-cong/3-uong-ua-day-so.html"}],
+            "cap_so_nhan": [{"name":"Cấp số nhân • Tìm quy luật","icon":"🔍","path":"games/knowledge/cap-so-nhan/1-tim-quy-luat.html"},{"name":"Cấp số nhân • Điền số","icon":"🔢","path":"games/knowledge/cap-so-nhan/2-ien-so.html"},{"name":"Cấp số nhân • Đường đua dãy số","icon":"🏁","path":"games/knowledge/cap-so-nhan/3-uong-ua-day-so.html"}],
+            "day_so": [{"name":"Dãy số [day_so] • Tìm quy luật","icon":"🔍","path":"games/knowledge/day-so/1-tim-quy-luat.html"},{"name":"Dãy số [day_so] • Điền số","icon":"🔢","path":"games/knowledge/day-so/2-ien-so.html"},{"name":"Dãy số [day_so] • Đường đua dãy số","icon":"🏁","path":"games/knowledge/day-so/3-uong-ua-day-so.html"}],
+            "gia_tri_luong_giac": [{"name":"Giá trị lượng giác • Bắt điểm","icon":"🎯","path":"games/knowledge/gia-tri-luong-giac/1-bat-iem.html"},{"name":"Giá trị lượng giác • Tìm giao điểm","icon":"✖️","path":"games/knowledge/gia-tri-luong-giac/2-tim-giao-iem.html"},{"name":"Giá trị lượng giác • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/gia-tri-luong-giac/3-o-thi-bi-an.html"}],
+            "gioi_han": [{"name":"Giới hạn • Bắt điểm","icon":"🎯","path":"games/knowledge/gioi-han/1-bat-iem.html"},{"name":"Giới hạn • Tìm giao điểm","icon":"✖️","path":"games/knowledge/gioi-han/2-tim-giao-iem.html"},{"name":"Giới hạn • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/gioi-han/3-o-thi-bi-an.html"}],
+            "ham_so_luong_giac": [{"name":"Hàm số lượng giác [ham_so_luong_giac] • Bắt điểm","icon":"🎯","path":"games/knowledge/ham-so-luong-giac/1-bat-iem.html"},{"name":"Hàm số lượng giác [ham_so_luong_giac] • Tìm giao điểm","icon":"✖️","path":"games/knowledge/ham-so-luong-giac/2-tim-giao-iem.html"},{"name":"Hàm số lượng giác [ham_so_luong_giac] • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/ham-so-luong-giac/3-o-thi-bi-an.html"}],
+            "thong_ke_11": [{"name":"Thống kê Toán 11 • Đọc biểu đồ","icon":"📊","path":"games/knowledge/thong-ke-11/1-oc-bieu-o.html"},{"name":"Thống kê Toán 11 • Săn số liệu","icon":"🔎","path":"games/knowledge/thong-ke-11/2-san-so-lieu.html"},{"name":"Thống kê Toán 11 • Thử thách thống kê","icon":"🏆","path":"games/knowledge/thong-ke-11/3-thu-thach-thong-ke.html"}],
+            "xac_suat_11": [{"name":"Xác suất [xac_suat_11] • Bốc bi","icon":"🔮","path":"games/knowledge/xac-suat-11/1-boc-bi.html"},{"name":"Xác suất [xac_suat_11] • Xúc xắc","icon":"🎲","path":"games/knowledge/xac-suat-11/2-xuc-xac.html"},{"name":"Xác suất [xac_suat_11] • Chọn tình huống","icon":"🎯","path":"games/knowledge/xac-suat-11/3-chon-tinh-huong.html"}],
+            "dao_ham": [{"name":"Đạo hàm • Bắt điểm","icon":"🎯","path":"games/knowledge/dao-ham/1-bat-iem.html"},{"name":"Đạo hàm • Tìm giao điểm","icon":"✖️","path":"games/knowledge/dao-ham/2-tim-giao-iem.html"},{"name":"Đạo hàm • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/dao-ham/3-o-thi-bi-an.html"}],
+            "bai_toan_thuc_te_11": [{"name":"Bài toán thực tế Toán 11 • Bắt điểm","icon":"🎯","path":"games/knowledge/bai-toan-thuc-te-11/1-bat-iem.html"},{"name":"Bài toán thực tế Toán 11 • Tìm giao điểm","icon":"✖️","path":"games/knowledge/bai-toan-thuc-te-11/2-tim-giao-iem.html"},{"name":"Bài toán thực tế Toán 11 • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/bai-toan-thuc-te-11/3-o-thi-bi-an.html"}],
+            "day_so_tong_quat": [{"name":"Dãy số [day_so_tong_quat] • Tìm quy luật","icon":"🔍","path":"games/knowledge/day-so-tong-quat/1-tim-quy-luat.html"},{"name":"Dãy số [day_so_tong_quat] • Điền số","icon":"🔢","path":"games/knowledge/day-so-tong-quat/2-ien-so.html"},{"name":"Dãy số [day_so_tong_quat] • Đường đua dãy số","icon":"🏁","path":"games/knowledge/day-so-tong-quat/3-uong-ua-day-so.html"}],
+            "gioi_han_ham_so": [{"name":"Giới hạn hàm số • Bắt điểm","icon":"🎯","path":"games/knowledge/gioi-han-ham-so/1-bat-iem.html"},{"name":"Giới hạn hàm số • Tìm giao điểm","icon":"✖️","path":"games/knowledge/gioi-han-ham-so/2-tim-giao-iem.html"},{"name":"Giới hạn hàm số • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/gioi-han-ham-so/3-o-thi-bi-an.html"}],
+            "goc_khoang_cach_11": [{"name":"Góc và khoảng cách trong không gian • Tìm góc","icon":"📐","path":"games/knowledge/goc-khoang-cach-11/1-tim-goc.html"},{"name":"Góc và khoảng cách trong không gian • Săn độ dài","icon":"📏","path":"games/knowledge/goc-khoang-cach-11/2-san-o-dai.html"},{"name":"Góc và khoảng cách trong không gian • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/goc-khoang-cach-11/3-ban-o-hinh-hoc.html"}],
+            "ham_so_lien_tuc": [{"name":"Hàm số liên tục • Bắt điểm","icon":"🎯","path":"games/knowledge/ham-so-lien-tuc/1-bat-iem.html"},{"name":"Hàm số liên tục • Tìm giao điểm","icon":"✖️","path":"games/knowledge/ham-so-lien-tuc/2-tim-giao-iem.html"},{"name":"Hàm số liên tục • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/ham-so-lien-tuc/3-o-thi-bi-an.html"}],
+            "phuong_trinh_luong_giac": [{"name":"Phương trình lượng giác [phuong_trinh_luong_giac] • Bắt điểm","icon":"🎯","path":"games/knowledge/phuong-trinh-luong-giac/1-bat-iem.html"},{"name":"Phương trình lượng giác [phuong_trinh_luong_giac] • Tìm giao điểm","icon":"✖️","path":"games/knowledge/phuong-trinh-luong-giac/2-tim-giao-iem.html"},{"name":"Phương trình lượng giác [phuong_trinh_luong_giac] • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/phuong-trinh-luong-giac/3-o-thi-bi-an.html"}],
+            "song_song_khong_gian": [{"name":"Quan hệ song song trong không gian • Tìm góc","icon":"📐","path":"games/knowledge/song-song-khong-gian/1-tim-goc.html"},{"name":"Quan hệ song song trong không gian • Săn độ dài","icon":"📏","path":"games/knowledge/song-song-khong-gian/2-san-o-dai.html"},{"name":"Quan hệ song song trong không gian • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/song-song-khong-gian/3-ban-o-hinh-hoc.html"}],
+            "vuong_goc_khong_gian": [{"name":"Quan hệ vuông góc trong không gian • Tìm góc","icon":"📐","path":"games/knowledge/vuong-goc-khong-gian/1-tim-goc.html"},{"name":"Quan hệ vuông góc trong không gian • Săn độ dài","icon":"📏","path":"games/knowledge/vuong-goc-khong-gian/2-san-o-dai.html"},{"name":"Quan hệ vuông góc trong không gian • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/vuong-goc-khong-gian/3-ban-o-hinh-hoc.html"}],
+            "dao_ham_quy_tac": [{"name":"Quy tắc đạo hàm • Bắt điểm","icon":"🎯","path":"games/knowledge/dao-ham-quy-tac/1-bat-iem.html"},{"name":"Quy tắc đạo hàm • Tìm giao điểm","icon":"✖️","path":"games/knowledge/dao-ham-quy-tac/2-tim-giao-iem.html"},{"name":"Quy tắc đạo hàm • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/dao-ham-quy-tac/3-o-thi-bi-an.html"}],
+            "ung_dung_dao_ham_11": [{"name":"Ứng dụng đạo hàm [ung_dung_dao_ham_11] • Bắt điểm","icon":"🎯","path":"games/knowledge/ung-dung-dao-ham-11/1-bat-iem.html"},{"name":"Ứng dụng đạo hàm [ung_dung_dao_ham_11] • Tìm giao điểm","icon":"✖️","path":"games/knowledge/ung-dung-dao-ham-11/2-tim-giao-iem.html"},{"name":"Ứng dụng đạo hàm [ung_dung_dao_ham_11] • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/ung-dung-dao-ham-11/3-o-thi-bi-an.html"}],
+            "bien_co_doc_lap_11": [{"name":"Biến cố độc lập và xác suất có điều kiện • Bốc bi","icon":"🔮","path":"games/knowledge/bien-co-doc-lap-11/1-boc-bi.html"},{"name":"Biến cố độc lập và xác suất có điều kiện • Xúc xắc","icon":"🎲","path":"games/knowledge/bien-co-doc-lap-11/2-xuc-xac.html"},{"name":"Biến cố độc lập và xác suất có điều kiện • Chọn tình huống","icon":"🎯","path":"games/knowledge/bien-co-doc-lap-11/3-chon-tinh-huong.html"}],
+            "bai_toan_thuc_te_tong_hop_11": [{"name":"Bài toán thực tế tổng hợp Toán 11 • Bắt điểm","icon":"🎯","path":"games/knowledge/bai-toan-thuc-te-tong-hop-11/1-bat-iem.html"},{"name":"Bài toán thực tế tổng hợp Toán 11 • Tìm giao điểm","icon":"✖️","path":"games/knowledge/bai-toan-thuc-te-tong-hop-11/2-tim-giao-iem.html"},{"name":"Bài toán thực tế tổng hợp Toán 11 • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/bai-toan-thuc-te-tong-hop-11/3-o-thi-bi-an.html"}],
+            "day_so_truy_hoi_11": [{"name":"Dãy số truy hồi • Tìm quy luật","icon":"🔍","path":"games/knowledge/day-so-truy-hoi-11/1-tim-quy-luat.html"},{"name":"Dãy số truy hồi • Điền số","icon":"🔢","path":"games/knowledge/day-so-truy-hoi-11/2-ien-so.html"},{"name":"Dãy số truy hồi • Đường đua dãy số","icon":"🏁","path":"games/knowledge/day-so-truy-hoi-11/3-uong-ua-day-so.html"}],
+            "ham_so_luong_giac_day_du": [{"name":"Hàm số lượng giác [ham_so_luong_giac_day_du] • Bắt điểm","icon":"🎯","path":"games/knowledge/ham-so-luong-giac-day-du/1-bat-iem.html"},{"name":"Hàm số lượng giác [ham_so_luong_giac_day_du] • Tìm giao điểm","icon":"✖️","path":"games/knowledge/ham-so-luong-giac-day-du/2-tim-giao-iem.html"},{"name":"Hàm số lượng giác [ham_so_luong_giac_day_du] • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/ham-so-luong-giac-day-du/3-o-thi-bi-an.html"}],
+            "phep_bien_hinh_11": [{"name":"Phép biến hình trong mặt phẳng • Tìm góc","icon":"📐","path":"games/knowledge/phep-bien-hinh-11/1-tim-goc.html"},{"name":"Phép biến hình trong mặt phẳng • Săn độ dài","icon":"📏","path":"games/knowledge/phep-bien-hinh-11/2-san-o-dai.html"},{"name":"Phép biến hình trong mặt phẳng • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/phep-bien-hinh-11/3-ban-o-hinh-hoc.html"}],
+            "phuong_trinh_luong_giac_day_du": [{"name":"Phương trình lượng giác [phuong_trinh_luong_giac_day_du] • Bắt điểm","icon":"🎯","path":"games/knowledge/phuong-trinh-luong-giac-day-du/1-bat-iem.html"},{"name":"Phương trình lượng giác [phuong_trinh_luong_giac_day_du] • Tìm giao điểm","icon":"✖️","path":"games/knowledge/phuong-trinh-luong-giac-day-du/2-tim-giao-iem.html"},{"name":"Phương trình lượng giác [phuong_trinh_luong_giac_day_du] • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/phuong-trinh-luong-giac-day-du/3-o-thi-bi-an.html"}],
+            "hinh_khong_gian": [{"name":"Quan hệ song song và vuông góc trong không gian • Tìm góc","icon":"📐","path":"games/knowledge/hinh-khong-gian/1-tim-goc.html"},{"name":"Quan hệ song song và vuông góc trong không gian • Săn độ dài","icon":"📏","path":"games/knowledge/hinh-khong-gian/2-san-o-dai.html"},{"name":"Quan hệ song song và vuông góc trong không gian • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/hinh-khong-gian/3-ban-o-hinh-hoc.html"}],
+            "quy_nap_toan_hoc_11": [{"name":"Quy nạp toán học • Tìm quy luật","icon":"🔍","path":"games/knowledge/quy-nap-toan-hoc-11/1-tim-quy-luat.html"},{"name":"Quy nạp toán học • Điền số","icon":"🔢","path":"games/knowledge/quy-nap-toan-hoc-11/2-ien-so.html"},{"name":"Quy nạp toán học • Đường đua dãy số","icon":"🏁","path":"games/knowledge/quy-nap-toan-hoc-11/3-uong-ua-day-so.html"}],
+            "thiet_dien_hinh_khong_gian_11": [{"name":"Thiết diện hình không gian • Tìm góc","icon":"📐","path":"games/knowledge/thiet-dien-hinh-khong-gian-11/1-tim-goc.html"},{"name":"Thiết diện hình không gian • Săn độ dài","icon":"📏","path":"games/knowledge/thiet-dien-hinh-khong-gian-11/2-san-o-dai.html"},{"name":"Thiết diện hình không gian • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/thiet-dien-hinh-khong-gian-11/3-ban-o-hinh-hoc.html"}],
+            "to_hop_xac_suat_nang_cao_11": [{"name":"Tổ hợp và xác suất nâng cao • Bốc bi","icon":"🔮","path":"games/knowledge/to-hop-xac-suat-nang-cao-11/1-boc-bi.html"},{"name":"Tổ hợp và xác suất nâng cao • Xúc xắc","icon":"🎲","path":"games/knowledge/to-hop-xac-suat-nang-cao-11/2-xuc-xac.html"},{"name":"Tổ hợp và xác suất nâng cao • Chọn tình huống","icon":"🎯","path":"games/knowledge/to-hop-xac-suat-nang-cao-11/3-chon-tinh-huong.html"}],
+            "thong_ke_12": [{"name":"Các số đặc trưng đo xu thế và độ phân tán • Đọc biểu đồ","icon":"📊","path":"games/knowledge/thong-ke-12/1-oc-bieu-o.html"},{"name":"Các số đặc trưng đo xu thế và độ phân tán • Săn số liệu","icon":"🔎","path":"games/knowledge/thong-ke-12/2-san-so-lieu.html"},{"name":"Các số đặc trưng đo xu thế và độ phân tán • Thử thách thống kê","icon":"🏆","path":"games/knowledge/thong-ke-12/3-thu-thach-thong-ke.html"}],
+            "cuc_tri": [{"name":"Cực trị • Bắt điểm","icon":"🎯","path":"games/knowledge/cuc-tri/1-bat-iem.html"},{"name":"Cực trị • Tìm giao điểm","icon":"✖️","path":"games/knowledge/cuc-tri/2-tim-giao-iem.html"},{"name":"Cực trị • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/cuc-tri/3-o-thi-bi-an.html"}],
+            "gtln_gtnn": [{"name":"Giá trị lớn nhất và nhỏ nhất • Bắt điểm","icon":"🎯","path":"games/knowledge/gtln-gtnn/1-bat-iem.html"},{"name":"Giá trị lớn nhất và nhỏ nhất • Tìm giao điểm","icon":"✖️","path":"games/knowledge/gtln-gtnn/2-tim-giao-iem.html"},{"name":"Giá trị lớn nhất và nhỏ nhất • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/gtln-gtnn/3-o-thi-bi-an.html"}],
+            "ham_logarit": [{"name":"Hàm số logarit • Bắt điểm","icon":"🎯","path":"games/knowledge/ham-logarit/1-bat-iem.html"},{"name":"Hàm số logarit • Tìm giao điểm","icon":"✖️","path":"games/knowledge/ham-logarit/2-tim-giao-iem.html"},{"name":"Hàm số logarit • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/ham-logarit/3-o-thi-bi-an.html"}],
+            "ham_mu": [{"name":"Hàm số mũ • Bắt điểm","icon":"🎯","path":"games/knowledge/ham-mu/1-bat-iem.html"},{"name":"Hàm số mũ • Tìm giao điểm","icon":"✖️","path":"games/knowledge/ham-mu/2-tim-giao-iem.html"},{"name":"Hàm số mũ • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/ham-mu/3-o-thi-bi-an.html"}],
+            "hinh_hoc_khong_gian": [{"name":"Hình học không gian • Tìm góc","icon":"📐","path":"games/knowledge/hinh-hoc-khong-gian/1-tim-goc.html"},{"name":"Hình học không gian • Săn độ dài","icon":"📏","path":"games/knowledge/hinh-hoc-khong-gian/2-san-o-dai.html"},{"name":"Hình học không gian • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/hinh-hoc-khong-gian/3-ban-o-hinh-hoc.html"}],
+            "so_phuc": [{"name":"Số phức • Bắt điểm","icon":"🎯","path":"games/knowledge/so-phuc/1-bat-iem.html"},{"name":"Số phức • Tìm giao điểm","icon":"✖️","path":"games/knowledge/so-phuc/2-tim-giao-iem.html"},{"name":"Số phức • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/so-phuc/3-o-thi-bi-an.html"}],
+            "tinh_don_dieu": [{"name":"Tính đơn điệu • Bắt điểm","icon":"🎯","path":"games/knowledge/tinh-don-dieu/1-bat-iem.html"},{"name":"Tính đơn điệu • Tìm giao điểm","icon":"✖️","path":"games/knowledge/tinh-don-dieu/2-tim-giao-iem.html"},{"name":"Tính đơn điệu • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/tinh-don-dieu/3-o-thi-bi-an.html"}],
+            "toa_do_khong_gian": [{"name":"Tọa độ trong không gian • Tìm góc","icon":"📐","path":"games/knowledge/toa-do-khong-gian/1-tim-goc.html"},{"name":"Tọa độ trong không gian • Săn độ dài","icon":"📏","path":"games/knowledge/toa-do-khong-gian/2-san-o-dai.html"},{"name":"Tọa độ trong không gian • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/toa-do-khong-gian/3-ban-o-hinh-hoc.html"}],
+            "xac_suat_12": [{"name":"Xác suất và biến ngẫu nhiên • Bốc bi","icon":"🔮","path":"games/knowledge/xac-suat-12/1-boc-bi.html"},{"name":"Xác suất và biến ngẫu nhiên • Xúc xắc","icon":"🎲","path":"games/knowledge/xac-suat-12/2-xuc-xac.html"},{"name":"Xác suất và biến ngẫu nhiên • Chọn tình huống","icon":"🎯","path":"games/knowledge/xac-suat-12/3-chon-tinh-huong.html"}],
+            "bieu_dien_so_phuc": [{"name":"Biểu diễn số phức • Bắt điểm","icon":"🎯","path":"games/knowledge/bieu-dien-so-phuc/1-bat-iem.html"},{"name":"Biểu diễn số phức • Tìm giao điểm","icon":"✖️","path":"games/knowledge/bieu-dien-so-phuc/2-tim-giao-iem.html"},{"name":"Biểu diễn số phức • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/bieu-dien-so-phuc/3-o-thi-bi-an.html"}],
+            "khao_sat_ham_so": [{"name":"Khảo sát và vẽ đồ thị hàm số • Bắt điểm","icon":"🎯","path":"games/knowledge/khao-sat-ham-so/1-bat-iem.html"},{"name":"Khảo sát và vẽ đồ thị hàm số • Tìm giao điểm","icon":"✖️","path":"games/knowledge/khao-sat-ham-so/2-tim-giao-iem.html"},{"name":"Khảo sát và vẽ đồ thị hàm số • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/khao-sat-ham-so/3-o-thi-bi-an.html"}],
+            "mat_phang_oxyz": [{"name":"Mặt phẳng trong Oxyz • Tìm góc","icon":"📐","path":"games/knowledge/mat-phang-oxyz/1-tim-goc.html"},{"name":"Mặt phẳng trong Oxyz • Săn độ dài","icon":"📏","path":"games/knowledge/mat-phang-oxyz/2-san-o-dai.html"},{"name":"Mặt phẳng trong Oxyz • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/mat-phang-oxyz/3-ban-o-hinh-hoc.html"}],
+            "nguyen_ham_tich_phan": [{"name":"Nguyên hàm và tích phân • Bắt điểm","icon":"🎯","path":"games/knowledge/nguyen-ham-tich-phan/1-bat-iem.html"},{"name":"Nguyên hàm và tích phân • Tìm giao điểm","icon":"✖️","path":"games/knowledge/nguyen-ham-tich-phan/2-tim-giao-iem.html"},{"name":"Nguyên hàm và tích phân • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/nguyen-ham-tich-phan/3-o-thi-bi-an.html"}],
+            "pt_logarit": [{"name":"Phương trình logarit • Bắt điểm","icon":"🎯","path":"games/knowledge/pt-logarit/1-bat-iem.html"},{"name":"Phương trình logarit • Tìm giao điểm","icon":"✖️","path":"games/knowledge/pt-logarit/2-tim-giao-iem.html"},{"name":"Phương trình logarit • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/pt-logarit/3-o-thi-bi-an.html"}],
+            "pt_mu": [{"name":"Phương trình mũ • Bắt điểm","icon":"🎯","path":"games/knowledge/pt-mu/1-bat-iem.html"},{"name":"Phương trình mũ • Tìm giao điểm","icon":"✖️","path":"games/knowledge/pt-mu/2-tim-giao-iem.html"},{"name":"Phương trình mũ • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/pt-mu/3-o-thi-bi-an.html"}],
+            "tiep_tuyen": [{"name":"Tiếp tuyến • Bắt điểm","icon":"🎯","path":"games/knowledge/tiep-tuyen/1-bat-iem.html"},{"name":"Tiếp tuyến • Tìm giao điểm","icon":"✖️","path":"games/knowledge/tiep-tuyen/2-tim-giao-iem.html"},{"name":"Tiếp tuyến • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/tiep-tuyen/3-o-thi-bi-an.html"}],
+            "tien_can": [{"name":"Tiệm cận • Bắt điểm","icon":"🎯","path":"games/knowledge/tien-can/1-bat-iem.html"},{"name":"Tiệm cận • Tìm giao điểm","icon":"✖️","path":"games/knowledge/tien-can/2-tim-giao-iem.html"},{"name":"Tiệm cận • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/tien-can/3-o-thi-bi-an.html"}],
+            "duong_thang_oxyz": [{"name":"Đường thẳng trong Oxyz • Bắt điểm","icon":"🎯","path":"games/knowledge/duong-thang-oxyz/1-bat-iem.html"},{"name":"Đường thẳng trong Oxyz • Tìm giao điểm","icon":"✖️","path":"games/knowledge/duong-thang-oxyz/2-tim-giao-iem.html"},{"name":"Đường thẳng trong Oxyz • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/duong-thang-oxyz/3-o-thi-bi-an.html"}],
+            "ung_dung_dao_ham": [{"name":"Ứng dụng đạo hàm [ung_dung_dao_ham] • Bắt điểm","icon":"🎯","path":"games/knowledge/ung-dung-dao-ham/1-bat-iem.html"},{"name":"Ứng dụng đạo hàm [ung_dung_dao_ham] • Tìm giao điểm","icon":"✖️","path":"games/knowledge/ung-dung-dao-ham/2-tim-giao-iem.html"},{"name":"Ứng dụng đạo hàm [ung_dung_dao_ham] • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/ung-dung-dao-ham/3-o-thi-bi-an.html"}],
+            "bai_toan_thuc_te_12": [{"name":"Bài toán thực tế Toán 12 • Bắt điểm","icon":"🎯","path":"games/knowledge/bai-toan-thuc-te-12/1-bat-iem.html"},{"name":"Bài toán thực tế Toán 12 • Tìm giao điểm","icon":"✖️","path":"games/knowledge/bai-toan-thuc-te-12/2-tim-giao-iem.html"},{"name":"Bài toán thực tế Toán 12 • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/bai-toan-thuc-te-12/3-o-thi-bi-an.html"}],
+            "tong_hop_thpt": [{"name":"Bài toán tổng hợp THPT • Bắt điểm","icon":"🎯","path":"games/knowledge/tong-hop-thpt/1-bat-iem.html"},{"name":"Bài toán tổng hợp THPT • Tìm giao điểm","icon":"✖️","path":"games/knowledge/tong-hop-thpt/2-tim-giao-iem.html"},{"name":"Bài toán tổng hợp THPT • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/tong-hop-thpt/3-o-thi-bi-an.html"}],
+            "bpt_logarit": [{"name":"Bất phương trình logarit • Bắt điểm","icon":"🎯","path":"games/knowledge/bpt-logarit/1-bat-iem.html"},{"name":"Bất phương trình logarit • Tìm giao điểm","icon":"✖️","path":"games/knowledge/bpt-logarit/2-tim-giao-iem.html"},{"name":"Bất phương trình logarit • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/bpt-logarit/3-o-thi-bi-an.html"}],
+            "bpt_mu": [{"name":"Bất phương trình mũ • Bắt điểm","icon":"🎯","path":"games/knowledge/bpt-mu/1-bat-iem.html"},{"name":"Bất phương trình mũ • Tìm giao điểm","icon":"✖️","path":"games/knowledge/bpt-mu/2-tim-giao-iem.html"},{"name":"Bất phương trình mũ • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/bpt-mu/3-o-thi-bi-an.html"}],
+            "goc_khoang_cach_oxyz": [{"name":"Góc và khoảng cách Oxyz • Tìm góc","icon":"📐","path":"games/knowledge/goc-khoang-cach-oxyz/1-tim-goc.html"},{"name":"Góc và khoảng cách Oxyz • Săn độ dài","icon":"📏","path":"games/knowledge/goc-khoang-cach-oxyz/2-san-o-dai.html"},{"name":"Góc và khoảng cách Oxyz • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/goc-khoang-cach-oxyz/3-ban-o-hinh-hoc.html"}],
+            "mat_cau": [{"name":"Mặt cầu • Tìm góc","icon":"📐","path":"games/knowledge/mat-cau/1-tim-goc.html"},{"name":"Mặt cầu • Săn độ dài","icon":"📏","path":"games/knowledge/mat-cau/2-san-o-dai.html"},{"name":"Mặt cầu • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/mat-cau/3-ban-o-hinh-hoc.html"}],
+            "pt_so_phuc": [{"name":"Phương trình số phức • Bắt điểm","icon":"🎯","path":"games/knowledge/pt-so-phuc/1-bat-iem.html"},{"name":"Phương trình số phức • Tìm giao điểm","icon":"✖️","path":"games/knowledge/pt-so-phuc/2-tim-giao-iem.html"},{"name":"Phương trình số phức • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/pt-so-phuc/3-o-thi-bi-an.html"}],
+            "the_tich_khong_gian": [{"name":"Thể tích hình học không gian • Tìm góc","icon":"📐","path":"games/knowledge/the-tich-khong-gian/1-tim-goc.html"},{"name":"Thể tích hình học không gian • Săn độ dài","icon":"📏","path":"games/knowledge/the-tich-khong-gian/2-san-o-dai.html"},{"name":"Thể tích hình học không gian • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/the-tich-khong-gian/3-ban-o-hinh-hoc.html"}],
+            "tuong_giao": [{"name":"Tương giao đồ thị • Tìm góc","icon":"📐","path":"games/knowledge/tuong-giao/1-tim-goc.html"},{"name":"Tương giao đồ thị • Săn độ dài","icon":"📏","path":"games/knowledge/tuong-giao/2-san-o-dai.html"},{"name":"Tương giao đồ thị • Bản đồ hình học","icon":"🗺️","path":"games/knowledge/tuong-giao/3-ban-o-hinh-hoc.html"}],
+            "ung_dung_tich_phan": [{"name":"Ứng dụng tích phân • Bắt điểm","icon":"🎯","path":"games/knowledge/ung-dung-tich-phan/1-bat-iem.html"},{"name":"Ứng dụng tích phân • Tìm giao điểm","icon":"✖️","path":"games/knowledge/ung-dung-tich-phan/2-tim-giao-iem.html"},{"name":"Ứng dụng tích phân • Đồ thị bí ẩn","icon":"📈","path":"games/knowledge/ung-dung-tich-phan/3-o-thi-bi-an.html"}],
+            "hinh_hoc_co_ban_10": [{"name":"Hình học cơ bản: góc, cạnh và diện tích • Khám phá","icon":"🔎","path":"games/knowledge/hinh-hoc-co-ban-10/1-kham-pha.html"},{"name":"Hình học cơ bản: góc, cạnh và diện tích • Nhiệm vụ","icon":"🧩","path":"games/knowledge/hinh-hoc-co-ban-10/2-nhiem-vu.html"},{"name":"Hình học cơ bản: góc, cạnh và diện tích • Trùm cuối","icon":"🏆","path":"games/knowledge/hinh-hoc-co-ban-10/3-trum-cuoi.html"}],
+            "tam_giac_tu_giac_10": [{"name":"Tam giác và tứ giác cơ bản • Khám phá","icon":"🔎","path":"games/knowledge/tam-giac-tu-giac-10/1-kham-pha.html"},{"name":"Tam giác và tứ giác cơ bản • Nhiệm vụ","icon":"🧩","path":"games/knowledge/tam-giac-tu-giac-10/2-nhiem-vu.html"},{"name":"Tam giác và tứ giác cơ bản • Trùm cuối","icon":"🏆","path":"games/knowledge/tam-giac-tu-giac-10/3-trum-cuoi.html"}],
+            "duong_tron_co_ban_10": [{"name":"Đường tròn và các góc cơ bản • Khám phá","icon":"🔎","path":"games/knowledge/duong-tron-co-ban-10/1-kham-pha.html"},{"name":"Đường tròn và các góc cơ bản • Nhiệm vụ","icon":"🧩","path":"games/knowledge/duong-tron-co-ban-10/2-nhiem-vu.html"},{"name":"Đường tròn và các góc cơ bản • Trùm cuối","icon":"🏆","path":"games/knowledge/duong-tron-co-ban-10/3-trum-cuoi.html"}],
+            "he_thuc_luong_van_dung_10": [{"name":"Hệ thức lượng trong tam giác [he_thuc_luong_van_dung_10] • Khám phá","icon":"🔎","path":"games/knowledge/he-thuc-luong-van-dung-10/1-kham-pha.html"},{"name":"Hệ thức lượng trong tam giác [he_thuc_luong_van_dung_10] • Nhiệm vụ","icon":"🧩","path":"games/knowledge/he-thuc-luong-van-dung-10/2-nhiem-vu.html"},{"name":"Hệ thức lượng trong tam giác [he_thuc_luong_van_dung_10] • Trùm cuối","icon":"🏆","path":"games/knowledge/he-thuc-luong-van-dung-10/3-trum-cuoi.html"}],
+            "toa_do_hinh_hoc_10": [{"name":"Tọa độ và đường thẳng trong mặt phẳng • Khám phá","icon":"🔎","path":"games/knowledge/toa-do-hinh-hoc-10/1-kham-pha.html"},{"name":"Tọa độ và đường thẳng trong mặt phẳng • Nhiệm vụ","icon":"🧩","path":"games/knowledge/toa-do-hinh-hoc-10/2-nhiem-vu.html"},{"name":"Tọa độ và đường thẳng trong mặt phẳng • Trùm cuối","icon":"🏆","path":"games/knowledge/toa-do-hinh-hoc-10/3-trum-cuoi.html"}],
+            "chung_minh_hinh_hoc_10": [{"name":"Chứng minh hình học và bài toán tổng hợp • Khám phá","icon":"🔎","path":"games/knowledge/chung-minh-hinh-hoc-10/1-kham-pha.html"},{"name":"Chứng minh hình học và bài toán tổng hợp • Nhiệm vụ","icon":"🧩","path":"games/knowledge/chung-minh-hinh-hoc-10/2-nhiem-vu.html"},{"name":"Chứng minh hình học và bài toán tổng hợp • Trùm cuối","icon":"🏆","path":"games/knowledge/chung-minh-hinh-hoc-10/3-trum-cuoi.html"}],
+            "phep_bien_hinh_co_ban_11": [{"name":"Phép biến hình cơ bản • Khám phá","icon":"🔎","path":"games/knowledge/phep-bien-hinh-co-ban-11/1-kham-pha.html"},{"name":"Phép biến hình cơ bản • Nhiệm vụ","icon":"🧩","path":"games/knowledge/phep-bien-hinh-co-ban-11/2-nhiem-vu.html"},{"name":"Phép biến hình cơ bản • Trùm cuối","icon":"🏆","path":"games/knowledge/phep-bien-hinh-co-ban-11/3-trum-cuoi.html"}],
+            "nhan_biet_hinh_khong_gian_11": [{"name":"Nhận biết hình học không gian • Khám phá","icon":"🔎","path":"games/knowledge/nhan-biet-hinh-khong-gian-11/1-kham-pha.html"},{"name":"Nhận biết hình học không gian • Nhiệm vụ","icon":"🧩","path":"games/knowledge/nhan-biet-hinh-khong-gian-11/2-nhiem-vu.html"},{"name":"Nhận biết hình học không gian • Trùm cuối","icon":"🏆","path":"games/knowledge/nhan-biet-hinh-khong-gian-11/3-trum-cuoi.html"}],
+            "hinh_khoi_va_the_tich_co_ban_12": [{"name":"Hình khối và thể tích cơ bản • Khám phá","icon":"🔎","path":"games/knowledge/hinh-khoi-va-the-tich-co-ban-12/1-kham-pha.html"},{"name":"Hình khối và thể tích cơ bản • Nhiệm vụ","icon":"🧩","path":"games/knowledge/hinh-khoi-va-the-tich-co-ban-12/2-nhiem-vu.html"},{"name":"Hình khối và thể tích cơ bản • Trùm cuối","icon":"🏆","path":"games/knowledge/hinh-khoi-va-the-tich-co-ban-12/3-trum-cuoi.html"}],
+            "hinh_hoc_oxyz_van_dung_12": [{"name":"Vận dụng tọa độ Oxyz • Khám phá","icon":"🔎","path":"games/knowledge/hinh-hoc-oxyz-van-dung-12/1-kham-pha.html"},{"name":"Vận dụng tọa độ Oxyz • Nhiệm vụ","icon":"🧩","path":"games/knowledge/hinh-hoc-oxyz-van-dung-12/2-nhiem-vu.html"},{"name":"Vận dụng tọa độ Oxyz • Trùm cuối","icon":"🏆","path":"games/knowledge/hinh-hoc-oxyz-van-dung-12/3-trum-cuoi.html"}]
         };
         const key = String(knowledge?.id || knowledge?.code || '').trim();
-        const games = gameMap[key] || [];
+        const games = gameMap[key] || knowledge?.games || [];
         return games.map(function (game) {
             return { name: game.name, icon: game.icon, path: game.path };
         });
@@ -2769,6 +3041,15 @@
 
     function openAISetup() {
 
+        // Close the topic/game information popup first; keep currentKnowledge so
+        // the selected topic is still sent to the AI question engine.
+        if (knowledgePopup) knowledgePopup.classList.remove("active");
+        if (practiceOverlay) practiceOverlay.classList.remove("active");
+        if (knowledgePopup) knowledgePopup.setAttribute("aria-hidden", "true");
+        if (practiceOverlay) practiceOverlay.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("popup-open");
+        isPopupOpen = false;
+
         const overlay =
             createAIOverlay();
 
@@ -2821,9 +3102,10 @@
                         ${escapeHTML(topicName)}
                     </strong>
                     <br>
-                    AI sẽ tạo bộ câu hỏi riêng cho bạn,
-                    kiểm tra đáp án ở máy chủ và điều chỉnh
-                    độ khó dựa trên kết quả làm bài.
+                    Chọn hình thức câu hỏi và độ khó trước khi tạo đề.
+                    Nền tảng tập trung kiến thức cơ bản; Trung cấp tăng vận dụng;
+                    Nâng cao ưu tiên suy luận nhiều bước; Địa ngục hướng tới bài toán
+                    thử thách cực khó. Mỗi câu được kiểm tra trùng lặp trong bộ đề.
                 </div>
 
 
@@ -2863,15 +3145,19 @@
                         <select id="mathwebAiDifficulty">
 
                             <option value="easy">
-                                🔰 Nền tảng
+                                🔰 Nền tảng · Dễ, nắm chắc kiến thức
                             </option>
 
                             <option value="medium" selected>
-                                🔵 Trung cấp
+                                🔵 Trung cấp · Vận dụng nhiều bước
                             </option>
 
                             <option value="hard">
-                                🟣 Nâng cao
+                                🟣 Nâng cao · HSG quốc gia/quốc tế
+                            </option>
+
+                            <option value="hell">
+                                🔥 Địa ngục · Thử thách cực hạn
                             </option>
 
                         </select></div>
@@ -2894,7 +3180,11 @@
                             </option>
 
                             <option value="short_answer">
-                                Trả lời ngắn
+                                Điền đáp án
+                            </option>
+
+                            <option value="mixed" selected>
+                                ✨ Tất cả hình thức (mặc định)
                             </option>
 
                         </select>
@@ -3120,6 +3410,16 @@
             IDENTITIES: "menh_de_tap_hop",
             ALGEBRAIC_FRACTION: "menh_de_tap_hop",
             GEOMETRY: "hinh_hoc_10",
+            hinh_hoc_co_ban_10: "hinh_hoc_10",
+            tam_giac_tu_giac_10: "hinh_hoc_10",
+            duong_tron_co_ban_10: "duong_tron",
+            he_thuc_luong_van_dung_10: "he_thuc_luong_tam_giac",
+            toa_do_hinh_hoc_10: "duong_thang",
+            chung_minh_hinh_hoc_10: "hinh_hoc_10",
+            phep_bien_hinh_co_ban_11: "phep_bien_hinh_11",
+            nhan_biet_hinh_khong_gian_11: "hinh_khong_gian",
+            hinh_khoi_va_the_tich_co_ban_12: "the_tich_khong_gian",
+            hinh_hoc_oxyz_van_dung_12: "goc_khoang_cach_oxyz",
             STATISTICS: "thong_ke"
         };
         const raw=String(knowledge.code || knowledge.id || "").trim();
@@ -3881,12 +4181,93 @@
             return escapeHTML(String(value ?? ""));
         };
 
+        if (diagram.type === "graph" && Array.isArray(diagram.x_range) && Array.isArray(diagram.y_range)) {
+            const xmin = Number(diagram.x_range[0]), xmax = Number(diagram.x_range[1]);
+            const ymin = Number(diagram.y_range[0]), ymax = Number(diagram.y_range[1]);
+            if (![xmin, xmax, ymin, ymax].every(Number.isFinite) || xmin >= xmax || ymin >= ymax) return "";
+            const W = 360, H = 220, left = 38, right = 14, top = 14, bottom = 30;
+            const plotW = W-left-right, plotH = H-top-bottom;
+            const px = x => left + (Number(x)-xmin)/(xmax-xmin)*plotW;
+            const py = y => top + (ymax-Number(y))/(ymax-ymin)*plotH;
+            const niceStep = span => {
+                const rough = span / 6, power = Math.pow(10, Math.floor(Math.log10(Math.max(rough, 1e-9))));
+                const unit = rough / power;
+                return (unit <= 1 ? 1 : unit <= 2 ? 2 : unit <= 5 ? 5 : 10) * power;
+            };
+            const fmtTick = v => Number(v.toPrecision(4)).toString();
+            const sx = niceStep(xmax-xmin), sy = niceStep(ymax-ymin);
+            const bits = [];
+            if (diagram.grid !== false) {
+                for (let x = Math.ceil(xmin/sx)*sx; x <= xmax+sx*1e-7; x += sx) {
+                    bits.push(`<line x1="${px(x)}" y1="${top}" x2="${px(x)}" y2="${top+plotH}" stroke="currentColor" opacity=".12" stroke-width="1"/>`);
+                }
+                for (let y = Math.ceil(ymin/sy)*sy; y <= ymax+sy*1e-7; y += sy) {
+                    bits.push(`<line x1="${left}" y1="${py(y)}" x2="${left+plotW}" y2="${py(y)}" stroke="currentColor" opacity=".12" stroke-width="1"/>`);
+                }
+            }
+            if (xmin <= 0 && xmax >= 0) bits.push(`<line x1="${px(0)}" y1="${top}" x2="${px(0)}" y2="${top+plotH}" stroke="currentColor" stroke-width="1.5" opacity=".75"/>`);
+            if (ymin <= 0 && ymax >= 0) bits.push(`<line x1="${left}" y1="${py(0)}" x2="${left+plotW}" y2="${py(0)}" stroke="currentColor" stroke-width="1.5" opacity=".75"/>`);
+            for (let x = Math.ceil(xmin/sx)*sx; x <= xmax+sx*1e-7; x += sx) {
+                if (Math.abs(x) < sx*1e-7) continue;
+                bits.push(`<text x="${px(x)}" y="${Math.min(H-5, Math.max(top+11, (ymin<=0&&ymax>=0?py(0):top+plotH)+14))}" font-size="9" text-anchor="middle" fill="currentColor" opacity=".75">${label(fmtTick(x))}</text>`);
+            }
+            for (let y = Math.ceil(ymin/sy)*sy; y <= ymax+sy*1e-7; y += sy) {
+                if (Math.abs(y) < sy*1e-7) continue;
+                bits.push(`<text x="${Math.max(7, (xmin<=0&&xmax>=0?px(0):left)+ (xmin<=0&&xmax>=0?-5: -6))}" y="${py(y)+3}" font-size="9" text-anchor="end" fill="currentColor" opacity=".75">${label(fmtTick(y))}</text>`);
+            }
+            if (xmin <= 0 && xmax >= 0 && ymin <= 0 && ymax >= 0) bits.push(`<text x="${px(0)-7}" y="${py(0)+12}" font-size="10" fill="currentColor">O</text>`);
+            bits.push(`<text x="${W-right-2}" y="${Math.min(H-3, Math.max(11, (ymin<=0&&ymax>=0?py(0):H-bottom)+12))}" font-size="11" fill="currentColor">${label(diagram.x_label || "x")}</text>`);
+            bits.push(`<text x="${Math.min(W-10, Math.max(10, (xmin<=0&&xmax>=0?px(0):left)+8))}" y="${top+7}" font-size="11" fill="currentColor">${label(diagram.y_label || "y")}</text>`);
+            (diagram.asymptotes || []).forEach(a => {
+                if (a.axis === "x" && Number.isFinite(Number(a.value)) && a.value >= xmin && a.value <= xmax) {
+                    bits.push(`<line x1="${px(a.value)}" y1="${top}" x2="${px(a.value)}" y2="${top+plotH}" stroke="#e6a23c" stroke-width="1.5" stroke-dasharray="5 4"/>`);
+                    if (a.label) bits.push(`<text x="${px(a.value)+3}" y="${top+12}" font-size="10" fill="#e6a23c">${label(a.label)}</text>`);
+                } else if (a.axis === "y" && Number.isFinite(Number(a.value)) && a.value >= ymin && a.value <= ymax) {
+                    bits.push(`<line x1="${left}" y1="${py(a.value)}" x2="${left+plotW}" y2="${py(a.value)}" stroke="#e6a23c" stroke-width="1.5" stroke-dasharray="5 4"/>`);
+                    if (a.label) bits.push(`<text x="${left+4}" y="${py(a.value)-4}" font-size="10" fill="#e6a23c">${label(a.label)}</text>`);
+                }
+            });
+            const palette = ["#22a06b", "#378add", "#e06c9f", "#e6a23c"];
+            (diagram.curves || []).forEach((curve, index) => {
+                const runs = []; let run = [];
+                (curve.points || []).forEach(p => {
+                    if (!Array.isArray(p) || p.length < 2 || !Number.isFinite(Number(p[0])) || !Number.isFinite(Number(p[1])) || Number(p[0]) < xmin || Number(p[0]) > xmax || Number(p[1]) < ymin || Number(p[1]) > ymax) {
+                        if (run.length >= 2) runs.push(run);
+                        run = [];
+                        return;
+                    }
+                    run.push(p);
+                });
+                if (run.length >= 2) runs.push(run);
+                const dash = curve.style === "dashed" ? 'stroke-dasharray="5 4"' : "";
+                runs.forEach(pts => {
+                    const coords = pts.map(p => `${px(p[0])},${py(p[1])}`).join(" ");
+                    bits.push(`<polyline points="${coords}" fill="none" stroke="${palette[index % palette.length]}" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" ${dash}/>`);
+                });
+            });
+            (diagram.marked_points || []).forEach(p => {
+                const x = Number(p.x), y = Number(p.y);
+                if (!Number.isFinite(x) || !Number.isFinite(y) || x < xmin || x > xmax || y < ymin || y > ymax) return;
+                bits.push(`<circle cx="${px(x)}" cy="${py(y)}" r="3.6" fill="#e06c9f" stroke="white" stroke-width="1"/>`);
+                if (p.label) bits.push(`<text x="${px(x)+5}" y="${py(y)-6}" font-size="10" fill="currentColor">${label(p.label)}</text>`);
+            });
+            return `<div class="mathweb-ai-diagram-wrap"><svg class="mathweb-ai-diagram" viewBox="0 0 ${W} ${H}" role="img" aria-label="Đồ thị tọa độ được dựng từ dữ kiện đề bài">${bits.join("")}</svg><div style="font-size:11px;opacity:.7;margin-top:4px;">${label(diagram.caption || "Đồ thị theo dữ kiện đề bài")}</div></div>`;
+        }
+
         if (diagram.type === "geometry" && diagram.points) {
             const points = diagram.points || {};
             const entries = Object.entries(points);
             if (!entries.length) return "";
             const xs = entries.map(e => Number(e[1]?.[0] || 0));
             const ys = entries.map(e => Number(e[1]?.[1] || 0));
+            (diagram.circles || []).forEach(c => {
+                const center = c.center || [0, 0], r = Number(c.radius || 0);
+                xs.push(Number(center[0])-r, Number(center[0])+r);
+                ys.push(Number(center[1])-r, Number(center[1])+r);
+            });
+            (diagram.polylines || []).forEach(linePoints => (linePoints || []).forEach(xy => {
+                xs.push(Number(xy[0]) || 0); ys.push(Number(xy[1]) || 0);
+            }));
             const minX = Math.min(...xs), maxX = Math.max(...xs);
             const minY = Math.min(...ys), maxY = Math.max(...ys);
             const spanX = Math.max(1, maxX - minX);
@@ -3905,14 +4286,36 @@
                 svgLines.push(`<line x1="20" y1="${190/2}" x2="340" y2="${190/2}" stroke="currentColor" stroke-width="1.5" opacity=".45"/>`);
                 svgLines.push(`<line x1="180" y1="15" x2="180" y2="175" stroke="currentColor" stroke-width="1.5" opacity=".45"/>`);
             }
+            (diagram.circles || []).forEach(c => {
+                const center = project(c.center || [0, 0]);
+                const edge = project([(c.center || [0,0])[0] + Number(c.radius || 1), (c.center || [0,0])[1]]);
+                const radiusPx = Math.hypot(edge[0]-center[0], edge[1]-center[1]);
+                svgLines.push(`<circle cx="${center[0]}" cy="${center[1]}" r="${radiusPx}" fill="none" stroke="currentColor" stroke-width="2.2" opacity=".8"/>`);
+            });
             (diagram.segments || []).forEach(seg => {
                 const a = project(points[seg[0]]), b = project(points[seg[1]]);
                 svgLines.push(`<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="currentColor" stroke-width="3"/>`);
             });
+            (diagram.hidden_segments || []).forEach(seg => {
+                if (!points[seg[0]] || !points[seg[1]]) return;
+                const a = project(points[seg[0]]), b = project(points[seg[1]]);
+                svgLines.push(`<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4" opacity=".7"/>`);
+            });
+            (diagram.dashed_segments || []).forEach(seg => {
+                if (!points[seg[0]] || !points[seg[1]]) return;
+                const a = project(points[seg[0]]), b = project(points[seg[1]]);
+                svgLines.push(`<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="#ffd166" stroke-width="2.4" stroke-dasharray="6 4"/>`);
+            });
+            (diagram.polylines || []).forEach(linePoints => {
+                const coords = (linePoints || []).map(xy => project(xy)).map(p => p.join(",")).join(" ");
+                if (coords) svgLines.push(`<polyline points="${coords}" fill="none" stroke="#58d9f7" stroke-width="2.5" stroke-linejoin="round"/>`);
+            });
             entries.forEach(([name, xy]) => {
                 const p = project(xy);
-                svgLines.push(`<circle cx="${p[0]}" cy="${p[1]}" r="4" fill="currentColor"/>`);
-                svgLines.push(`<text x="${p[0] + 7}" y="${p[1] - 7}" font-size="15" font-weight="700">${label(name)}</text>`);
+                if (!(diagram.hide_labels || []).includes(name)) {
+                    svgLines.push(`<circle cx="${p[0]}" cy="${p[1]}" r="4" fill="currentColor"/>`);
+                    svgLines.push(`<text x="${p[0] + 7}" y="${p[1] - 7}" font-size="15" font-weight="700">${label(name)}</text>`);
+                }
             });
             if (diagram.measurements) {
                 diagram.measurements.forEach(m => {
@@ -3922,14 +4325,68 @@
                     svgLines.push(`<text x="${mx + 5}" y="${my - 5}" font-size="13">${label(m.text)}</text>`);
                 });
             }
-            if (diagram.right_angle && points[diagram.right_angle]) {
-                const p = project(points[diagram.right_angle]);
-                svgLines.push(`<path d="M ${p[0] + 8} ${p[1]} L ${p[0] + 8} ${p[1] - 8} L ${p[0]} ${p[1] - 8}" fill="none" stroke="currentColor" stroke-width="2"/>`);
+            if (diagram.angle_labels) {
+                Object.entries(diagram.angle_labels).forEach(([key, value]) => {
+                    const names = key.split("").filter(ch => points[ch]);
+                    if (!names.length) return;
+                    const ps = names.map(n => project(points[n]));
+                    const x = ps.reduce((sum,p)=>sum+p[0],0)/ps.length;
+                    const y = ps.reduce((sum,p)=>sum+p[1],0)/ps.length;
+                    svgLines.push(`<text x="${x+5}" y="${y-5}" font-size="12" fill="#e7c66b">${label(value + "°")}</text>`);
+                });
             }
+            const rightAngles = Array.isArray(diagram.right_angles) ? diagram.right_angles : (diagram.right_angle ? [diagram.right_angle] : []);
+            rightAngles.forEach(vertex => {
+                const adjacent = (diagram.segments || []).filter(seg => seg.includes(vertex)).map(seg => seg.find(n => n !== vertex)).filter(n => points[n]);
+                if (adjacent.length < 2) return;
+                const raw = points[vertex];
+                let pair = null, best = Infinity;
+                for (let i = 0; i < adjacent.length; i++) for (let j = i + 1; j < adjacent.length; j++) {
+                    const a = points[adjacent[i]], b = points[adjacent[j]];
+                    const u = [Number(a[0])-Number(raw[0]), Number(a[1])-Number(raw[1])];
+                    const v = [Number(b[0])-Number(raw[0]), Number(b[1])-Number(raw[1])];
+                    const nu = Math.hypot(...u), nv = Math.hypot(...v);
+                    if (!nu || !nv) continue;
+                    const score = Math.abs((u[0]*v[0]+u[1]*v[1])/(nu*nv));
+                    if (score < best) { best = score; pair = [adjacent[i], adjacent[j]]; }
+                }
+                if (!pair || best > 1e-4) return;
+                const p = project(points[vertex]), p1 = project(points[pair[0]]), p2 = project(points[pair[1]]);
+                const v1 = [p1[0]-p[0], p1[1]-p[1]], v2 = [p2[0]-p[0], p2[1]-p[1]];
+                const n1 = Math.hypot(...v1) || 1, n2 = Math.hypot(...v2) || 1, size = 9;
+                const q1 = [p[0]+v1[0]/n1*size,p[1]+v1[1]/n1*size], q2 = [p[0]+v2[0]/n2*size,p[1]+v2[1]/n2*size], q3=[q1[0]+q2[0]-p[0],q1[1]+q2[1]-p[1]];
+                svgLines.push(`<path d="M ${q1[0]} ${q1[1]} L ${q3[0]} ${q3[1]} L ${q2[0]} ${q2[1]}" fill="none" stroke="currentColor" stroke-width="1.8"/>`);
+            });
             return `<div class="mathweb-ai-diagram-wrap"><svg class="mathweb-ai-diagram" viewBox="0 0 360 190" role="img" aria-label="Hình minh họa chính xác theo dữ kiện">${svgLines.join("")}</svg><div style="font-size:11px;opacity:.6;margin-top:4px;">${label(diagram.caption || "Hình minh họa theo dữ kiện")}</div></div>`;
         }
 
         const common = 'class="mathweb-ai-diagram" viewBox="0 0 360 190" role="img" aria-label="Hình minh họa"';
+
+        if (diagram.type === "circle_inscribed_triangle") {
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <circle cx="180" cy="95" r="70" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                        <polygon points="180,25 112,132 248,132" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <line x1="180" y1="95" x2="180" y2="25" stroke="currentColor" stroke-width="1.8" stroke-dasharray="4 4"/>
+                        <circle cx="180" cy="95" r="3.5" fill="currentColor"/>
+                        <text x="174" y="18" font-size="15">A</text><text x="95" y="145" font-size="15">B</text><text x="251" y="145" font-size="15">C</text><text x="187" y="91" font-size="14">O</text>
+                    </svg><div style="font-size:11px;opacity:.6;margin-top:4px;">${label(diagram.caption || "Tam giác nội tiếp đường tròn")}</div>
+                </div>`;
+        }
+
+        if (diagram.type === "circle_inscribed" && diagram.shape === "rectangle") {
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <circle cx="180" cy="95" r="70" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                        <polygon points="125,35 235,35 235,155 125,155" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <line x1="125" y1="35" x2="235" y2="155" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/>
+                        <line x1="235" y1="35" x2="125" y2="155" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/>
+                        <text x="113" y="32" font-size="15">A</text><text x="239" y="32" font-size="15">B</text><text x="239" y="170" font-size="15">C</text><text x="112" y="170" font-size="15">D</text>
+                    </svg><div style="font-size:11px;opacity:.6;margin-top:4px;">${label(diagram.caption || "Hình chữ nhật nội tiếp đường tròn")}</div>
+                </div>`;
+        }
 
         if (diagram.type === "triangle") {
             return `
@@ -3943,7 +4400,90 @@
                 </div>`;
         }
 
+        if (diagram.type === "circle_chord") {
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <circle cx="180" cy="95" r="65" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <line x1="115" y1="95" x2="245" y2="95" stroke="currentColor" stroke-width="3"/>
+                        <line x1="180" y1="95" x2="180" y2="30" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/>
+                        <line x1="180" y1="30" x2="180" y2="95" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="180" cy="95" r="4" fill="currentColor"/>
+                        <text x="166" y="113" font-size="15">O</text><text x="105" y="91" font-size="15">A</text><text x="248" y="91" font-size="15">B</text><text x="185" y="31" font-size="15">H</text>
+                    </svg><div style="font-size:11px;opacity:.6;margin-top:4px;">${label(diagram.caption || "Dây cung minh họa")}</div>
+                </div>`;
+        }
+
+        if (diagram.type === "circle_tangent") {
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <circle cx="145" cy="105" r="58" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <line x1="145" y1="105" x2="203" y2="105" stroke="currentColor" stroke-width="2.5"/>
+                        <line x1="203" y1="28" x2="203" y2="165" stroke="currentColor" stroke-width="3"/>
+                        <circle cx="145" cy="105" r="4" fill="currentColor"/><circle cx="203" cy="105" r="4" fill="currentColor"/>
+                        <path d="M 193 105 L 193 95 L 203 95" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <text x="132" y="98" font-size="15">O</text><text x="207" y="100" font-size="15">T</text><text x="169" y="96" font-size="13">R</text>
+                    </svg><div style="font-size:11px;opacity:.6;margin-top:4px;">${label(diagram.caption || "Tiếp tuyến và bán kính")}</div>
+                </div>`;
+        }
+
+        if (diagram.type === "circle_inscribed_triangle") {
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <circle cx="180" cy="95" r="70" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                        <polygon points="180,25 112,132 248,132" fill="none" stroke="currentColor" stroke-width="3"/>
+                        <line x1="180" y1="95" x2="180" y2="25" stroke="currentColor" stroke-width="1.8" stroke-dasharray="4 4"/>
+                        <circle cx="180" cy="95" r="3.5" fill="currentColor"/>
+                        <text x="174" y="18" font-size="15">A</text><text x="95" y="145" font-size="15">B</text><text x="251" y="145" font-size="15">C</text><text x="187" y="91" font-size="14">O</text>
+                    </svg><div style="font-size:11px;opacity:.6;margin-top:4px;">${label(diagram.caption || "Tam giác nội tiếp đường tròn")}</div>
+                </div>`;
+        }
+
+        if (diagram.type === "circle_inscribed") {
+            const polygon = diagram.shape === "rectangle" ? "125,35 235,35 235,155 125,155" : "132,43 239,76 214,151 104,126";
+            const labels = diagram.shape === "rectangle"
+                ? '<text x="113" y="32" font-size="15">A</text><text x="239" y="32" font-size="15">B</text><text x="239" y="170" font-size="15">C</text><text x="112" y="170" font-size="15">D</text>'
+                : '<text x="119" y="40" font-size="15">A</text><text x="243" y="75" font-size="15">B</text><text x="218" y="165" font-size="15">C</text><text x="86" y="133" font-size="15">D</text>';
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <circle cx="180" cy="95" r="70" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                        <polygon points="${polygon}" fill="none" stroke="currentColor" stroke-width="3"/>
+                        ${diagram.shape === "rectangle" ? '<line x1="125" y1="35" x2="235" y2="155" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/><line x1="235" y1="35" x2="125" y2="155" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/>' : ''}
+                        ${labels}
+                    </svg><div style="font-size:11px;opacity:.6;margin-top:4px;">${label(diagram.caption || "Tứ giác nội tiếp")}</div>
+                </div>`;
+        }
+
+        if (diagram.type === "pyramid") {
+            return `
+                <div class="mathweb-ai-diagram-wrap">
+                    <svg ${common}>
+                        <polygon points="105,115 210,145 285,105 177,76" fill="none" stroke="currentColor" stroke-width="2.5"/>
+                        <line x1="192" y1="25" x2="105" y2="115" stroke="currentColor" stroke-width="3"/><line x1="192" y1="25" x2="210" y2="145" stroke="currentColor" stroke-width="3"/><line x1="192" y1="25" x2="285" y2="105" stroke="currentColor" stroke-width="3"/><line x1="192" y1="25" x2="177" y2="76" stroke="currentColor" stroke-width="2.5" stroke-dasharray="5 4"/>
+                        <text x="188" y="19" font-size="15">S</text><text x="88" y="118" font-size="15">A</text><text x="212" y="161" font-size="15">B</text><text x="289" y="105" font-size="15">C</text><text x="163" y="71" font-size="15">D</text>
+                    </svg><div style="font-size:11px;opacity:.6;margin-top:4px;">${label(diagram.caption || "Hình chóp minh họa")}</div>
+                </div>`;
+        }
+
         if (diagram.type === "circle") {
+            if (diagram.shape === "diameter" && diagram.points?.A && diagram.points?.B) {
+                const diameterText = Number.isFinite(Number(diagram.diameter)) ? `AB=${label(diagram.diameter)}` : "AB";
+                const radiusText = Number.isFinite(Number(diagram.radius)) ? `R=${label(diagram.radius)}` : "R";
+                return `
+                    <div class="mathweb-ai-diagram-wrap">
+                        <svg ${common}>
+                            <circle cx="180" cy="95" r="62" fill="none" stroke="currentColor" stroke-width="3"/>
+                            <line x1="118" y1="95" x2="242" y2="95" stroke="currentColor" stroke-width="2.8"/>
+                            <circle cx="180" cy="95" r="4" fill="currentColor"/>
+                            <circle cx="118" cy="95" r="3.5" fill="currentColor"/><circle cx="242" cy="95" r="3.5" fill="currentColor"/>
+                            <text x="106" y="84" font-size="15">A</text><text x="246" y="84" font-size="15">B</text><text x="185" y="88" font-size="15">O</text>
+                            <text x="150" y="117" font-size="13">${diameterText}</text><text x="187" y="132" font-size="13">${radiusText}</text>
+                        </svg><div style="font-size:11px;opacity:.6;margin-top:4px;">${label(diagram.caption || "Đường kính đi qua tâm, bằng hai lần bán kính")}</div>
+                    </div>`;
+            }
             return `
                 <div class="mathweb-ai-diagram-wrap">
                     <svg ${common}>
@@ -3951,8 +4491,8 @@
                         <line x1="180" y1="95" x2="242" y2="95" stroke="currentColor" stroke-width="2"/>
                         <circle cx="180" cy="95" r="4" fill="currentColor"/>
                         <text x="168" y="88" font-size="16">${label(diagram.labels?.[0] || "O")}</text>
-                        <text x="208" y="87" font-size="14">R</text>
-                    </svg>
+                        <text x="208" y="87" font-size="14">${label(diagram.radius ? `R=${diagram.radius}` : "R")}</text>
+                    </svg><div style="font-size:11px;opacity:.6;margin-top:4px;">${label(diagram.caption || "Đường tròn và bán kính")}</div>
                 </div>`;
         }
 

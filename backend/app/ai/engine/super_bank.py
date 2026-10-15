@@ -94,19 +94,70 @@ def _quadratic_parameter(d):
 
 
 def _system_construct(d):
-    x, y = random.randint(-6, 6), random.randint(-6, 6)
-    a, b = _pick([1, 2, 3]), _pick([1, 2, 3])
-    p, q = _pick([1, 2, 3]), _pick([1, 2, 3])
-    if a * q == b * p:
-        q += 1
-    c, r = a * x + b * y, p * x + q * y
-    ans = f"({x}; {y})"
+    """Generate several genuinely different linear-system task archetypes."""
+    families = {"easy": ["solve", "sum_difference"], "medium": ["solve", "sum_difference", "coefficient_mix"], "hard": ["word_problem", "verify", "coefficient_mix", "solve"]}
+    family = random.choice(families.get(d, ["solve", "sum_difference", "word_problem", "verify", "coefficient_mix"]))
+    x, y = random.randint(-6, 9), random.randint(-6, 9)
+    if family == "sum_difference":
+        total = x + y
+        difference = x - y
+        return _base(
+            f"Hai số x, y thỏa mãn x+y={total} và x−y={difference}. Tìm (x;y).",
+            f"({x}; {y})",
+            f"Cộng hai phương trình: 2x={total+difference}, suy ra x={x}. Sau đó y={total}−{x}={y}.",
+            [f"({y}; {x})", f"({x+1}; {y-1})", f"({-x}; {y})"],
+            "Cộng hai phương trình để khử y, rồi thay ngược tìm x.",
+            archetype="system_sum_difference", generation_style="elimination", template_family="tổng và hiệu"
+        )
+    if family == "word_problem":
+        a, b = random.randint(8, 25), random.randint(5, 18)
+        while a == b:
+            b = random.randint(5, 18)
+        count = random.randint(8, 25)
+        first = random.randint(1, count-1)
+        second = count-first
+        total_price = a*first+b*second
+        return _base(
+            f"Một quầy bán {count} món gồm bút giá {a} nghìn đồng và vở giá {b} nghìn đồng. Tổng tiền là {total_price} nghìn đồng. Gọi x là số bút, y là số vở. Cặp (x;y) nào thỏa hệ?",
+            f"({first}; {second})",
+            f"Lập hệ x+y={count}, {a}x+{b}y={total_price}. Lấy phương trình hai trừ {b} lần phương trình một: ({a-b})x={total_price-b*count} nên x={first}; y={second}.",
+            [f"({second}; {first})", f"({first+1}; {second-1})", f"({count}; 0)"],
+            "Đặt ẩn theo từng loại món, sau đó dùng tổng số món và tổng tiền để lập hệ.",
+            archetype="system_word_problem", generation_style="real_life_multi_step", template_family="lập hệ từ thực tế"
+        )
+    a, b, c, e = random.choice([(1, 1, 1, -1), (2, 1, 1, 2), (3, -1, 2, 1), (1, 2, 3, -1), (2, -1, -1, 3)])
+    if a*e-b*c == 0:
+        e += 1
+    u, v = a*x+b*y, c*x+e*y
+    if family == "verify":
+        candidate_x, candidate_y = random.choice([(x,y),(x+1,y),(x,y-1),(y,x)])
+        valid = (a*candidate_x+b*candidate_y == u and c*candidate_x+e*candidate_y == v)
+        answer = "Đúng" if valid else "Sai"
+        return _base(
+            f"Cho hệ {a}x{b:+d}y={u}; {c}x{e:+d}y={v}. Một bạn cho rằng nghiệm là ({candidate_x}; {candidate_y}). Nhận định này đúng hay sai?",
+            answer,
+            f"Thay cặp ({candidate_x};{candidate_y}) vào hai phương trình: vế trái lần lượt là {a*candidate_x+b*candidate_y} và {c*candidate_x+e*candidate_y}; cần bằng {u} và {v}. Vì vậy kết luận là {answer.lower()}.",
+            ["Đúng" if not valid else "Sai", "Không đủ dữ kiện", "Cả hai đều đúng"],
+            "Một cặp là nghiệm khi thỏa mãn đồng thời cả hai phương trình.",
+            archetype="system_solution_check", generation_style="error_diagnosis", template_family="kiểm tra nghiệm hệ"
+        )
+    if family == "coefficient_mix":
+        # Equivalent equations are intentionally written with parentheses/fractions.
+        return _base(
+            f"Giải hệ: 2({a}x{b:+d}y)={2*u}; {c}x{e:+d}y={v}.",
+            f"({x}; {y})",
+            f"Rút gọn phương trình đầu được {a}x{b:+d}y={u}. Hệ tương đương có định thức {a*e-b*c} khác 0, nên nghiệm duy nhất là ({x};{y}). Thay vào hai phương trình ban đầu đều đúng.",
+            [f"({x+1}; {y})", f"({x}; {y+1})", f"({y}; {x})"],
+            "Rút gọn hệ số trước, sau đó dùng thế hoặc cộng đại số.",
+            archetype="system_equivalent_form", generation_style="algebraic_manipulation", template_family="hệ có hệ số cần rút gọn"
+        )
     return _base(
-        f"Giải hệ: {a}x+{b}y={c}; {p}x+{q}y={r}.", ans,
-        f"Thay x={x}, y={y}: {a}·{x}+{b}·{y}={c} và {p}·{x}+{q}·{y}={r}. Do hệ có định thức {a*q-b*p} khác 0, nghiệm duy nhất là ({x};{y}).",
+        f"Giải hệ phương trình: {a}x{b:+d}y={u}; {c}x{e:+d}y={v}.",
+        f"({x}; {y})",
+        f"Nhân phương trình thích hợp để khử một ẩn. Hệ có định thức {a*e-b*c} khác 0 nên nghiệm duy nhất; thay x={x}, y={y} vào hai phương trình đều cho đúng vế phải.",
         [f"({x+1}; {y})", f"({x}; {y+1})", f"({-x}; {y})"],
-        "Có thể dùng thế hoặc cộng đại số; sau cùng kiểm tra cả hai phương trình.",
-        archetype="system_solve", generation_style="multi_step", template_family="hệ hai ẩn"
+        "Chọn phép thế hoặc cộng đại số để khử một ẩn, rồi kiểm tra cả hai phương trình.",
+        archetype="system_solve", generation_style="multi_step", template_family="giải hệ hai ẩn"
     )
 
 
@@ -331,22 +382,180 @@ def _vector_dot(d):
 
 
 def _trig_value(d):
-    table=[("0", "0", "1"), ("π/6", "1/2", "√3/2"), ("π/4", "√2/2", "√2/2"), ("π/3", "√3/2", "1/2"), ("π/2", "1", "0")]
-    angle,s,c=_pick(table)
-    if _pick([True,False]):
-        return _base(f"Tính sin({angle}).", s, f"Theo bảng giá trị lượng giác cơ bản, sin({angle})={s}.", [c,"0","1"], "Nhớ các giá trị lượng giác góc đặc biệt.", archetype="trig_table", generation_style="theory_check", template_family="giá trị lượng giác")
-    return _base(f"Tính cos({angle}).", c, f"Theo bảng giá trị lượng giác cơ bản, cos({angle})={c}.", [s,"0","1"], "Nhớ các giá trị lượng giác góc đặc biệt.", archetype="trig_table", generation_style="theory_check", template_family="giá trị lượng giác")
-
-
-def _trig_identity(d):
+    # Exact special-angle questions remain central, with an approximate-value
+    # branch that gives the permanent anti-repeat ledger a large valid pool.
+    exact_table = {
+        0:   {"sin": "0", "cos": "1", "tan": "0"},
+        30:  {"sin": "1/2", "cos": "√3/2", "tan": "√3/3"},
+        45:  {"sin": "√2/2", "cos": "√2/2", "tan": "1"},
+        60:  {"sin": "√3/2", "cos": "1/2", "tan": "√3"},
+        120: {"sin": "√3/2", "cos": "-1/2", "tan": "-√3"},
+        135: {"sin": "√2/2", "cos": "-√2/2", "tan": "-1"},
+        150: {"sin": "1/2", "cos": "-√3/2", "tan": "-√3/3"},
+        180: {"sin": "0", "cos": "-1", "tan": "0"},
+        210: {"sin": "-1/2", "cos": "-√3/2", "tan": "√3/3"},
+        225: {"sin": "-√2/2", "cos": "-√2/2", "tan": "1"},
+        240: {"sin": "-√3/2", "cos": "-1/2", "tan": "√3"},
+        270: {"sin": "-1", "cos": "0", "tan": None},
+        300: {"sin": "-√3/2", "cos": "1/2", "tan": "-√3"},
+        315: {"sin": "-√2/2", "cos": "√2/2", "tan": "-1"},
+        330: {"sin": "-1/2", "cos": "√3/2", "tan": "-√3/3"},
+        360: {"sin": "0", "cos": "1", "tan": "0"},
+    }
+    fn = random.choice(["sin", "cos", "tan"])
+    if random.random() < 0.55:
+        angle = random.choice([a for a, values in exact_table.items() if values["tan"] is not None])
+        answer = exact_table[angle][fn]
+        question_forms = [
+            f"Tính {fn}({angle}°).",
+            f"Giá trị chính xác của {fn}({angle}°) bằng bao nhiêu?",
+            f"Hãy xác định giá trị lượng giác {fn}({angle}°).",
+        ]
+        question = random.choice(question_forms)
+        wrong = [exact_table[angle]["cos" if fn == "sin" else "sin"], exact_table[angle]["tan"], "0" if answer != "0" else "1"]
+        solution = f"Tra bảng giá trị lượng giác góc đặc biệt: {fn}({angle}°)={answer}."
+        style = "exact_special_angle"
+    else:
+        angle = random.choice([a for a in range(0, 360) if not (fn == "tan" and a in (90, 270))])
+        rad = math.radians(angle)
+        raw = math.sin(rad) if fn == "sin" else math.cos(rad) if fn == "cos" else math.tan(rad)
+        answer = f"{raw:.3f}"
+        if answer == "-0.000":
+            answer = "0.000"
+        question_forms = [
+            f"Tính {fn}({angle}°), làm tròn đến 3 chữ số thập phân.",
+            f"Giá trị gần đúng của {fn}({angle}°), làm tròn đến hàng phần nghìn, là bao nhiêu?",
+            f"Dùng máy tính để xác định {fn}({angle}°) và làm tròn đến 0,001.",
+        ]
+        question = random.choice(question_forms)
+        wrong = [f"{raw + 0.1:.3f}", f"{raw - 0.1:.3f}", f"{-raw:.3f}"]
+        solution = f"Tính theo chế độ độ: {fn}({angle}°)≈{answer} khi làm tròn đến 3 chữ số thập phân."
+        style = "approximate_value"
     return _base(
-        "Với mọi x mà biểu thức xác định, giá trị của sin²x + cos²x bằng bao nhiêu?",
-        1,
-        "Đây là hệ thức lượng giác cơ bản sin²x+cos²x=1.", [0,2,"sin x+cos x"],
-        "Đây là hệ thức cơ bản liên hệ sin và cos của cùng một góc.",
-        archetype="trig_identity", generation_style="knowledge", template_family="hệ thức lượng giác"
+        question, answer, solution, wrong,
+        "Kiểm tra đơn vị góc là độ; với góc đặc biệt có thể dùng bảng giá trị lượng giác.",
+        archetype="trig_value_" + style, generation_style="calculation", template_family="giá trị lượng giác"
     )
 
+def _trig_identity(d):
+    variable = random.choice(["x", "t", "u", "θ", "α", "β", "m", "n"])
+    identities = [
+        (f"sin²{variable} + cos²{variable}", "1", f"Theo hệ thức cơ bản, sin²{variable}+cos²{variable}=1.", ["0", "2", f"sin {variable}+cos {variable}"]),
+        (f"1 + tan²{variable}", f"1/cos²{variable}", f"Từ sin²{variable}+cos²{variable}=1, chia hai vế cho cos²{variable} (cos {variable} ≠ 0): 1+tan²{variable}=1/cos²{variable}.", [f"1/sin²{variable}", f"cos²{variable}", f"1-tan²{variable}"]),
+        (f"1 + cot²{variable}", f"1/sin²{variable}", f"Từ sin²{variable}+cos²{variable}=1, chia hai vế cho sin²{variable} (sin {variable} ≠ 0): 1+cot²{variable}=1/sin²{variable}.", [f"1/cos²{variable}", f"sin²{variable}", f"1-cot²{variable}"]),
+        (f"cos²{variable} - sin²{variable}", f"cos 2{variable}", f"Theo công thức nhân đôi, cos 2{variable}=cos²{variable}-sin²{variable}.", [f"sin 2{variable}", "1", f"cos²{variable}+sin²{variable}"]),
+    ]
+    expression, answer, solution, distractors = random.choice(identities)
+    return _base(
+        f"Rút gọn biểu thức {expression} (trong điều kiện xác định).", answer, solution, distractors,
+        "Dùng hệ thức lượng giác cơ bản và chia hai vế cho bình phương sin hoặc cos khi phù hợp.",
+        archetype="trig_identity", generation_style="reasoning", template_family="hệ thức lượng giác cơ bản"
+    )
+
+
+def _trig_formula(d):
+    a, b = random.sample(["x", "t", "u", "α", "β", "m", "n"], 2)
+    formulas = [
+        (f"sin({a}+{b})", f"sin {a} cos {b} + cos {a} sin {b}",
+         [f"sin {a} sin {b} + cos {a} cos {b}", f"sin {a} cos {b} - cos {a} sin {b}", f"cos {a} cos {b} - sin {a} sin {b}"]),
+        (f"sin({a}-{b})", f"sin {a} cos {b} - cos {a} sin {b}",
+         [f"sin {a} cos {b} + cos {a} sin {b}", f"sin {a} sin {b} - cos {a} cos {b}", f"cos {a} cos {b} + sin {a} sin {b}"]),
+        (f"cos({a}+{b})", f"cos {a} cos {b} - sin {a} sin {b}",
+         [f"cos {a} cos {b} + sin {a} sin {b}", f"sin {a} cos {b} + cos {a} sin {b}", f"sin {a} sin {b} - cos {a} cos {b}"]),
+        (f"cos({a}-{b})", f"cos {a} cos {b} + sin {a} sin {b}",
+         [f"cos {a} cos {b} - sin {a} sin {b}", f"sin {a} cos {b} - cos {a} sin {b}", f"sin {a} sin {b} - cos {a} cos {b}"]),
+        (f"sin 2{a}", f"2 sin {a} cos {a}",
+         [f"sin²{a} + cos²{a}", f"cos²{a} - sin²{a}", f"2 sin²{a}"]),
+        (f"cos 2{a}", random.choice([f"cos²{a} - sin²{a}", f"1 - 2sin²{a}", f"2cos²{a} - 1"]),
+         [f"2 sin {a} cos {a}", f"cos²{a} + sin²{a}", f"1 + 2sin²{a}"]),
+    ]
+    expression, answer, distractors = random.choice(formulas)
+    return _base(
+        f"Chọn công thức đúng để biến đổi {expression}.", answer,
+        f"Áp dụng công thức lượng giác tương ứng: {expression}={answer}.", distractors,
+        "Phân biệt công thức cộng, công thức nhân đôi và dấu của từng hạng tử.",
+        archetype="trig_formula", generation_style="knowledge", template_family="công thức lượng giác"
+    )
+
+
+def _trig_function(d):
+    amplitude = random.randint(3, 8) if d == "hell" else random.randint(1, 5)
+    frequency = random.randint(3, 8) if d == "hell" else random.randint(1, 5)
+    shift = random.randint(-4, 4) if d in {"medium", "hard", "expert", "hell"} else 0
+    fn = random.choice(["sin", "cos"])
+    ask = random.choice(["maximum", "minimum", "period", "range"] if d in {"hard", "expert", "hell"} else ["maximum", "minimum", "period"] if d == "medium" else ["maximum", "minimum"])
+    amplitude_text = "" if amplitude == 1 else str(amplitude)
+    expression = f"y={amplitude_text}{fn}({frequency}x)" + (f"{'+' if shift >= 0 else ''}{shift}" if shift else "")
+    period = "2π" if frequency == 1 else f"2π/{frequency}"
+    if ask == "maximum":
+        answer = amplitude + shift
+        solution = f"Vì -1≤{fn}({frequency}x)≤1 nên y≤{amplitude}+({shift})={answer}; giá trị lớn nhất là {answer}."
+        question = f"Hàm số {expression} có giá trị lớn nhất bằng bao nhiêu?"
+    elif ask == "minimum":
+        answer = shift - amplitude
+        solution = f"Vì {fn}({frequency}x)≥-1 nên y≥-{amplitude}+({shift})={answer}; giá trị nhỏ nhất là {answer}."
+        question = f"Hàm số {expression} có giá trị nhỏ nhất bằng bao nhiêu?"
+    elif ask == "period":
+        answer = period
+        solution = f"Chu kỳ của sin({frequency}x) hoặc cos({frequency}x) là T=2π/{frequency}={period}."
+        question = f"Chu kỳ cơ bản của hàm số y={fn}({frequency}x) là bao nhiêu?"
+    else:
+        answer = f"[{shift-amplitude}; {shift+amplitude}]"
+        solution = f"Do -1≤{fn}({frequency}x)≤1, nhân với {amplitude} rồi cộng {shift}, ta được tập giá trị [{shift-amplitude}; {shift+amplitude}]."
+        question = f"Tìm tập giá trị của hàm số {expression}."
+    distractors = [answer + 1 if isinstance(answer, int) else "π", answer - 1 if isinstance(answer, int) else "π/{0}".format(frequency), 0 if answer != 0 else 1]
+    return _base(question, answer, solution, distractors,
+                 "Dùng biên độ, phép tịnh tiến theo trục tung và chu kỳ của hàm sin/cos.",
+                 archetype=f"trig_function_{ask}", generation_style="calculation", template_family="hàm số lượng giác")
+
+
+def _trig_equation(d):
+    if d == "easy":
+        n = random.randint(1, 20)
+        equation = random.choice(["sin", "cos"])
+        if equation == "sin":
+            # sin x = 0 has n+1 solutions on the closed interval [0,nπ].
+            answer = n + 1
+            question = f"Trên đoạn [0; {n}π], phương trình sin x=0 có bao nhiêu nghiệm phân biệt?"
+            solution = f"sin x=0 khi x=kπ. Trên [0;{n}π] có k=0,1,...,{n}, tức {answer} nghiệm."
+        else:
+            # cos x = 0 has exactly n roots on [0,nπ].
+            answer = n
+            question = f"Trên đoạn [0; {n}π], phương trình cos x=0 có bao nhiêu nghiệm phân biệt?"
+            solution = f"cos x=0 khi x=π/2+kπ. Với x thuộc [0;{n}π], có đúng {n} nghiệm."
+        return _base(question, answer, solution, [max(0, answer-1), answer+1, answer+2],
+                     "Viết nghiệm tổng quát rồi đếm các nghiệm thuộc đoạn đã cho.",
+                     archetype="trig_equation_count", generation_style="calculation", template_family="phương trình lượng giác cơ bản")
+
+    if d == "medium":
+        fn = random.choice(["sin", "cos"])
+        angle_value = random.choice(["1/2", "√2/2", "√3/2", "-1/2", "-√2/2", "-√3/2"])
+        periods = random.randint(1, 20)
+        answer = 2 * periods
+        end = 2 * periods
+        question = f"Trên đoạn [0; {end}π), phương trình {fn} x={angle_value} có bao nhiêu nghiệm?"
+        solution = (f"Trong mỗi chu kỳ dài 2π, phương trình {fn} x={angle_value} có đúng hai nghiệm. "
+                    f"Đoạn [0;{end}π) gồm {periods} chu kỳ nên có 2·{periods}={answer} nghiệm.")
+        return _base(
+            question, answer, solution,
+            [max(1, answer-1), answer+1, answer+2],
+            "Xác định số nghiệm trong một chu kỳ rồi nhân với số chu kỳ của khoảng xét.",
+            archetype="trig_equation_special_value", generation_style="reasoning", template_family="phương trình lượng giác"
+        )
+
+    n = random.randint(2, 30)
+    fn = random.choice(["sin", "cos"])
+    if fn == "sin":
+        answer = 2*n + 1
+        question = f"Trên đoạn [0; 2π], phương trình sin({n}x)=0 có bao nhiêu nghiệm phân biệt?"
+        solution = f"sin({n}x)=0 khi {n}x=kπ, tức x=kπ/{n}. Với x∈[0;2π], k=0,1,...,{2*n}, nên có {answer} nghiệm."
+    else:
+        answer = 2*n
+        question = f"Trên đoạn [0; 2π], phương trình cos({n}x)=0 có bao nhiêu nghiệm phân biệt?"
+        solution = f"cos({n}x)=0 khi {n}x=π/2+kπ. Trong [0;2π] có đúng {answer} nghiệm."
+    return _base(question, answer, solution, [answer-1, answer+1, answer+2],
+                 "Đổi biến t=nx, xác định các nghiệm trong khoảng rồi đếm cẩn thận cả hai đầu mút.",
+                 archetype="trig_equation_parameter", generation_style="reasoning", template_family="phương trình lượng giác nâng cao")
 
 def _limit_simple(d):
     a=random.randint(-5,5); h=random.randint(1,6)
@@ -921,17 +1130,36 @@ def generate(topic_id: str, grade: int, difficulty: str, topic_info=None):
     Returns None when no safe specialized archetype is registered.  This is
     deliberate: the legacy engine remains the fallback and is never deleted.
     """
+    # Route grade-11 trigonometry topics to a topic-specific builder. The old
+    # generic trig group had only a handful of fixed prompts; its permanent
+    # anti-repeat ledger eventually rejected every candidate and broke the API.
+    topic_specific = {
+        "gia_tri_luong_giac": _trig_value,
+        "cong_thuc_luong_giac": _trig_formula,
+        "ham_so_luong_giac": _trig_function,
+        "ham_so_luong_giac_day_du": _trig_function,
+        "phuong_trinh_luong_giac": _trig_equation,
+        "phuong_trinh_luong_giac_day_du": _trig_equation,
+        "he_thuc_luong": _trig_identity,
+        "he_thuc_luong_tam_giac": _trig_identity,
+    }
+    builder = topic_specific.get(topic_id)
+    if builder is not None:
+        q = builder(difficulty)
+        q["topic_group"] = "trig"
+        return q
+
     group = TOPIC_GROUP.get(topic_id)
     if not group:
         return None
     builders = GROUPS[group]["builders"]
     # Easy favors direct/calculation; harder levels deliberately increase the
     # chance of reverse, multi-step, error-check and reasoning archetypes.
-    if difficulty in {"hard", "expert"}:
+    if difficulty in {"hard", "expert", "hell"}:
         preferred=[b for b in builders if getattr(b, "__name__", "") in {
             "_linear_reverse","_quadratic_parameter","_system_construct","_error_check",
             "_dice_reverse","_conditional_probability","_sequence_sum","_tangent_line",
-            "_graph_reasoning","_real_life_growth"
+            "_graph_reasoning","_real_life_growth","_system_construct"
         }]
         if preferred and random.random()<0.78:
             builders=preferred

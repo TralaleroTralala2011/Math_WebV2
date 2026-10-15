@@ -101,7 +101,7 @@ class AIQuestionService:
             raise ValueError("Unsupported question type")
         topics=self.knowledge.normalize_topics(grade,topics)
         if not topics: raise ValueError("No valid topics")
-        current=next_difficulty(history,normalize(difficulty)) if history else normalize(difficulty)
+        current=normalize(difficulty)
         out=[]; seen=set()
         seen_structures=set()
         seen_variations=set()
@@ -122,13 +122,25 @@ class AIQuestionService:
             if i == 0:
                 topic_order=list(topics); random.shuffle(topic_order)
             topic=topic_order[i%len(topic_order)] if len(topic_order)>1 else topic_order[0]
+            # Keep the selected level stable across a question set. Adaptive
+            # difficulty can still react to learner history above, but a user
+            # who selected Nền tảng should not silently receive nâng cao items
+            # just because the set contains ten questions.
             level=current
-            if count>=8 and i>=count*0.65: level={"easy":"medium","medium":"hard","hard":"expert","expert":"expert"}[current]
             item_type = mixed_types[i % len(mixed_types)] if question_type == "mixed" else question_type
             q=self.generate_one(grade,topic,level,item_type,seen,game_id,recent_families[-10:],seen_structures,seen_variations,seen_archetypes)
             q["variation_key"]=self._variation_key(q)
-            # Provide a structured, browser-rendered diagram for geometry questions.
-            diagram = geometry_diagram(topic, q.get("question", ""), q.get("answer", ""))
+            # Prefer a diagram reconstructed from this exact question whenever
+            # its wording contains coordinate, slope, graph, or geometric data.
+            # A stale template illustration must never override the actual prompt.
+            question_text = q.get("question", "")
+            generated_diagram = geometry_diagram(topic, question_text, q.get("answer", ""))
+            explicit_figure = any(token in str(question_text).lower() for token in (
+                "tọa độ", "toa do", "hệ số góc", "he so goc", "đồ thị", "do thi",
+                "đường thẳng", "duong thang", "đường tròn", "duong tron", "tam giác",
+                "tam giac", "hình chóp", "hinh chop", "oxyz", "mặt phẳng", "mat phang",
+            ))
+            diagram = generated_diagram if (generated_diagram and explicit_figure) else (q.get("diagram") or generated_diagram)
             if diagram:
                 q["diagram"] = diagram
             seen.add(q["fingerprint"]); seen_structures.add(q.get("structure_fingerprint")); seen_variations.add(q["variation_key"]);
@@ -142,7 +154,7 @@ class AIQuestionService:
         if count<1 or count>MAX_COUNT: raise ValueError("count out of range")
         topics=self.knowledge.normalize_topics(grade,topics)
         if not topics: raise ValueError("No valid topics")
-        current=next_difficulty(history,normalize(difficulty)) if history else normalize(difficulty)
+        current=normalize(difficulty)
         problems=[]
         flat=[]
         seen_titles=set()

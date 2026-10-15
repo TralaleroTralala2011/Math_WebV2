@@ -12,7 +12,7 @@ import uuid
 from fractions import Fraction
 
 from .problem_bank import BY_ID
-from .geometry_diagrams import triangle_3_4_5, rectangle, coordinate_rectangle, circle
+from .geometry_diagrams import triangle_3_4_5, rectangle, coordinate_rectangle, circle, inscribed_rectangle, inscribed_right_triangle, validate_geometry_diagram
 
 
 def _fmt(v):
@@ -34,6 +34,8 @@ class ProblemGenerator:
         errors = []
         if not isinstance(problem, dict) or not problem.get("title") or not problem.get("context"):
             errors.append("missing title/context")
+        if isinstance(problem, dict) and problem.get("diagram"):
+            errors.extend("problem diagram: " + e for e in validate_geometry_diagram(problem["diagram"]))
         parts = problem.get("parts", []) if isinstance(problem, dict) else []
         if not isinstance(parts, list) or not 2 <= len(parts) <= 6:
             errors.append("part count must be between 2 and 6")
@@ -42,6 +44,8 @@ class ProblemGenerator:
         if len(set(labels)) != len(labels):
             errors.append("duplicate part labels")
         for i, part in enumerate(parts):
+            if part.get("diagram"):
+                errors.extend(f"part {i+1} diagram: " + e for e in validate_geometry_diagram(part["diagram"]))
             if not part.get("question") or part.get("answer") is None or not part.get("solution"):
                 errors.append(f"part {i+1} is missing question/answer/solution")
             qtype = part.get("question_type")
@@ -92,6 +96,8 @@ class ProblemGenerator:
         t = str(topic_id).lower()
         if "bien_co_doc_lap" in t:
             return "probability_selection"
+        if "duong_tron" in t:
+            return "circle_geometry_challenge"
         if any(k in t for k in ("xac_suat", "probability", "xac-suat", "to_hop_xac_suat")):
             return random.choice(["probability_selection", "probability_experiment"])
         if any(k in t for k in ("thong_ke", "statistics", "du_lieu")):
@@ -108,7 +114,7 @@ class ProblemGenerator:
             return random.choice(["function_model", "optimization"])
         if any(k in t for k in ("phuong_trinh", "he_", "bat_phuong_trinh", "equation", "inequality")):
             return random.choice(["production", "missing_data", "schedule"])
-        if difficulty in {"hard", "expert"}:
+        if difficulty in {"hard", "expert", "hell"}:
             return random.choice(["compare_plans", "optimization", "missing_data", "function_model"])
         return random.choice(["compare_plans", "missing_data", "schedule", "production"])
 
@@ -284,6 +290,39 @@ class ProblemGenerator:
             self._part("d", "Nếu số sản phẩm nhóm II tăng thêm 2 và nhóm I giữ nguyên, tổng số sản phẩm mới là bao nhiêu?", total + 2, f"Tổng mới={x}+({y}+2)={total+2}.", "short_answer"),
         ]
         return self._wrap("Bài toán dữ liệu bị thiếu và lập hệ", context, parts, {"S": total, "T": weighted})
+
+    def _build_circle_geometry_challenge(self, grade, topic, difficulty):
+        """Linked multi-part circle challenge: inscribed rectangle or triangle."""
+        if random.choice([True, False]):
+            a, b, c = random.choice([(3, 4, 5), (5, 12, 13), (8, 15, 17), (7, 24, 25)])
+            scale = random.randint(1, 3 if difficulty != "hard" else 5)
+            a, b, c = a * scale, b * scale, c * scale
+            width, height, radius = 2 * a, 2 * b, c
+            diameter = 2 * radius
+            area, perimeter = width * height, 2 * (width + height)
+            diagram = inscribed_rectangle(a, b, c)
+            context = f"Một khung hình chữ nhật ABCD nội tiếp đường tròn tâm O bán kính {radius} cm. Biết cạnh AB={width} cm. Các dữ kiện được chọn để độ dài các cạnh là số nguyên dương."
+            parts = [
+                self._part("a", "Tính đường kính của đường tròn.", diameter, f"d=2R=2·{radius}={diameter} cm.", "short_answer", diagram=diagram),
+                self._part("b", "Tính độ dài cạnh BC.", height, f"Đường chéo AC là đường kính nên AC={diameter} cm. Theo Pythagore, BC²=AC²−AB²={diameter}²−{width}²={height*height}, suy ra BC={height} cm.", "short_answer", diagram=diagram),
+                self._part("c", "Tính diện tích hình chữ nhật ABCD.", area, f"S=AB·BC={width}·{height}={area} cm².", "multiple_choice", [area+width, 2*(width+height), width+height], diagram=diagram),
+                self._part("d", "Tính chu vi hình chữ nhật ABCD.", perimeter, f"P=2(AB+BC)=2({width}+{height})={perimeter} cm.", "short_answer", diagram=diagram),
+            ]
+            return self._wrap("Trùm cuối: Khung chữ nhật trong đường tròn", context, parts, diagram=diagram)
+
+        a, b, c = random.choice([(3, 4, 5), (5, 12, 13), (8, 15, 17), (7, 24, 25)])
+        scale = random.randint(1, 3 if difficulty != "hard" else 5)
+        a, b, c = a * scale, b * scale, c * scale
+        diagram = inscribed_right_triangle(a, b, c)
+        context = f"Tam giác ABC nội tiếp đường tròn (O), trong đó AB là đường kính. Biết AC={a} cm và BC={b} cm."
+        area = a * b // 2
+        parts = [
+            self._part("a", "Góc C bằng bao nhiêu độ?", 90, "Góc nội tiếp chắn nửa đường tròn là góc vuông, nên ∠ACB=90°.", "short_answer", diagram=diagram),
+            self._part("b", "Tính đường kính AB.", c, f"Theo Pythagore, AB²=AC²+BC²={a}²+{b}²={c*c}, nên AB={c} cm.", "short_answer", diagram=diagram),
+            self._part("c", "Tính diện tích tam giác ABC.", area, f"S=AC·BC/2={a}·{b}/2={area} cm².", "multiple_choice", [a*b, area+2, c*c//2], diagram=diagram),
+            self._part("d", "Tính bán kính đường tròn ngoại tiếp tam giác ABC.", c/2 if c % 2 else c//2, f"Vì AB là đường kính đường tròn ngoại tiếp nên R=AB/2={c}/2={c/2:g} cm.", "short_answer", diagram=diagram),
+        ]
+        return self._wrap("Trùm cuối: Tam giác nội tiếp", context, parts, diagram=diagram)
 
     def _build_geometry_measurement(self, grade, topic, difficulty):
         a = random.choice([3, 6, 9])

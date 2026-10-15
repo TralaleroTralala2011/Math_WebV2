@@ -231,6 +231,66 @@
         "mô hình hóa",
         "đo đạc"
       ]
+    },
+    {
+      "id": "hinh_hoc_co_ban_10",
+      "name": "Hình học cơ bản: góc, cạnh và diện tích",
+      "subtopics": [
+        "góc",
+        "cạnh",
+        "chu vi",
+        "diện tích"
+      ]
+    },
+    {
+      "id": "tam_giac_tu_giac_10",
+      "name": "Tam giác và tứ giác cơ bản",
+      "subtopics": [
+        "tam giác",
+        "tứ giác",
+        "đường cao",
+        "đường trung tuyến"
+      ]
+    },
+    {
+      "id": "duong_tron_co_ban_10",
+      "name": "Đường tròn và các góc cơ bản",
+      "subtopics": [
+        "bán kính",
+        "dây cung",
+        "góc nội tiếp",
+        "góc ở tâm"
+      ]
+    },
+    {
+      "id": "he_thuc_luong_van_dung_10",
+      "name": "Hệ thức lượng trong tam giác",
+      "subtopics": [
+        "Pythagore",
+        "định lý sin",
+        "định lý cos",
+        "diện tích tam giác"
+      ]
+    },
+    {
+      "id": "toa_do_hinh_hoc_10",
+      "name": "Tọa độ và đường thẳng trong mặt phẳng",
+      "subtopics": [
+        "tọa độ điểm",
+        "đường thẳng",
+        "khoảng cách",
+        "đường tròn"
+      ]
+    },
+    {
+      "id": "chung_minh_hinh_hoc_10",
+      "name": "Chứng minh hình học và bài toán tổng hợp",
+      "subtopics": [
+        "chứng minh",
+        "quỹ tích",
+        "tam giác đồng dạng",
+        "đường tròn"
+      ]
     }
   ],
   "11": [
@@ -514,6 +574,26 @@
         "hàm số",
         "xác suất"
       ]
+    },
+    {
+      "id": "phep_bien_hinh_co_ban_11",
+      "name": "Phép biến hình cơ bản",
+      "subtopics": [
+        "tịnh tiến",
+        "đối xứng",
+        "phép quay",
+        "vị tự"
+      ]
+    },
+    {
+      "id": "nhan_biet_hinh_khong_gian_11",
+      "name": "Nhận biết hình học không gian",
+      "subtopics": [
+        "hình chóp",
+        "lăng trụ",
+        "song song",
+        "vuông góc"
+      ]
     }
   ],
   "12": [
@@ -795,6 +875,28 @@
         "tăng trưởng",
         "chuyển động",
         "kinh tế"
+      ]
+    },
+    {
+      "id": "hinh_khoi_va_the_tich_co_ban_12",
+      "name": "Hình khối và thể tích cơ bản",
+      "subtopics": [
+        "lăng trụ",
+        "hình chóp",
+        "hình trụ",
+        "mặt cầu",
+        "thể tích"
+      ]
+    },
+    {
+      "id": "hinh_hoc_oxyz_van_dung_12",
+      "name": "Vận dụng tọa độ Oxyz",
+      "subtopics": [
+        "khoảng cách Oxyz",
+        "góc",
+        "mặt phẳng",
+        "đường thẳng",
+        "mặt cầu"
       ]
     }
   ]

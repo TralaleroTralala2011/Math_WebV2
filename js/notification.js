@@ -4,7 +4,6 @@
 ========================================================= */
 
 const NOTIFICATION_API_URL =
-    window.MATHWEB_API_URL ||
     window.MATHWEB_API_URL || "http://127.0.0.1:8000";
 
 
@@ -1262,6 +1261,72 @@ function createNotificationItem(
             notification.id
         );
 
+    // Friend requests are actionable directly from the notification tray.
+    // related_id is the pending friends.id, never the sender's user ID.
+    if (
+        notification.type === "friend_request" &&
+        Number.isSafeInteger(Number(notification.related_id)) &&
+        Number(notification.related_id) > 0
+    ) {
+        const actions = document.createElement("div");
+        actions.className = "notification-actions";
+        actions.style.display = "flex";
+        actions.style.gap = "8px";
+        actions.style.marginTop = "10px";
+
+        const accept = document.createElement("button");
+        accept.type = "button";
+        accept.textContent = "Chấp nhận";
+        accept.className = "notification-friend-accept";
+        accept.style.cssText = "border:0;border-radius:8px;padding:7px 12px;cursor:pointer;font-weight:600;";
+
+        const reject = document.createElement("button");
+        reject.type = "button";
+        reject.textContent = "Từ chối";
+        reject.className = "notification-friend-reject";
+        reject.style.cssText = "border:1px solid currentColor;border-radius:8px;padding:7px 12px;cursor:pointer;background:transparent;";
+
+        const runAction = async (accepted, button) => {
+            actions.querySelectorAll("button").forEach(b => b.disabled = true);
+            button.textContent = accepted ? "Đang chấp nhận…" : "Đang từ chối…";
+            try {
+                const result = await notificationFetch(
+                    `${NOTIFICATION_API_URL}/api/friends/${accepted ? "accept" : "reject"}/${encodeURIComponent(Number(notification.related_id))}`,
+                    { method: "POST" }
+                );
+                if (!result.ok) {
+                    throw new Error(result.message || "Không thể xử lý lời mời kết bạn.");
+                }
+                actions.replaceChildren();
+                const status = document.createElement("span");
+                status.textContent = accepted ? "Đã kết bạn. Có thể bắt đầu trò chuyện hoặc mời đấu!" : "Đã từ chối lời mời.";
+                status.setAttribute("role", "status");
+                actions.appendChild(status);
+                item.classList.remove("unread");
+                await loadNotificationBadge();
+            } catch (error) {
+                actions.querySelectorAll("button").forEach(b => b.disabled = false);
+                button.textContent = accepted ? "Chấp nhận" : "Từ chối";
+                let errorText = actions.querySelector(".notification-action-error");
+                if (!errorText) {
+                    errorText = document.createElement("div");
+                    errorText.className = "notification-action-error";
+                    errorText.style.cssText = "color:#dc2626;font-size:12px;margin-top:6px;";
+                    actions.appendChild(errorText);
+                }
+                errorText.textContent = error.message || "Có lỗi xảy ra. Vui lòng thử lại.";
+            }
+        };
+
+        accept.addEventListener("click", event => {
+            event.preventDefault(); event.stopPropagation(); runAction(true, accept);
+        });
+        reject.addEventListener("click", event => {
+            event.preventDefault(); event.stopPropagation(); runAction(false, reject);
+        });
+        actions.append(accept, reject);
+        content.appendChild(actions);
+    }
 
     return item;
 
