@@ -48,7 +48,29 @@ function isGeometry(){const t=String(GAME.topicId||GAME.engine||'').toLowerCase(
 function records(){try{return JSON.parse(localStorage.getItem(scoreStoreKey)||'{}')}catch(e){return {}}}
 function saveRecord(){const all=records(),key=String(GAME.knowledgeId||GAME.topicId||GAME.engine)+'::'+String(GAME.title||location.pathname);const old=all[key]||{plays:0,bestProgress:0,totalCorrect:0,totalWrong:0,lastPlayed:null};all[key]={...old,liveProgress:S.progress,livePoints:S.points,totalCorrect:S.correct,totalWrong:S.wrong,answered:S.answered,lastPlayed:new Date().toISOString(),bestProgress:Math.max(old.bestProgress||0,S.progress)};try{localStorage.setItem(scoreStoreKey,JSON.stringify(all))}catch(e){};if(RECORD)RECORD.textContent=`🏅 Kỷ lục đã lưu: ${all[key].bestProgress||0}/100 • Đã chơi ${all[key].plays||0} lần`}
 function saveFinished(){const all=records(),key=String(GAME.knowledgeId||GAME.topicId||GAME.engine)+'::'+String(GAME.title||location.pathname);const old=all[key]||{plays:0,bestProgress:0,totalCorrect:0,totalWrong:0,lastPlayed:null};all[key]={...old,plays:(old.plays||0)+1,bestProgress:Math.max(old.bestProgress||0,S.progress),lastProgress:S.progress,lastPoints:S.points,totalCorrect:(old.totalCorrect||0)+S.correct,totalWrong:(old.totalWrong||0)+S.wrong,lastPlayed:new Date().toISOString()};try{localStorage.setItem(scoreStoreKey,JSON.stringify(all))}catch(e){};if(RECORD)RECORD.textContent=`🏅 Kỷ lục đã lưu: ${all[key].bestProgress}/100 • Đã chơi ${all[key].plays} lần`}
-function addDiagram(q){if(!DIAGRAM)return;const d=q&&q.diagram;const geometry=isGeometry()||!!d;DIAGRAM.hidden=!geometry;if(!geometry){DIAGRAM.innerHTML='';return}if(!d){DIAGRAM.innerHTML='<div class="diagram-title">📐 Chưa có hình minh họa cho câu này</div><p>Không tự vẽ hình phỏng đoán khi đề chưa có dữ liệu dựng hình.</p>';return}let svg='';
+function addDiagram(q){if(!DIAGRAM)return;let d=q&&q.diagram;const questionText=String((q&&(q.question||q.text))||'');if(!d&&isGeometry()){
+ // Build exact diagrams from explicit numeric data when a legacy question bank omitted diagram metadata.
+ const circleMatch=questionText.match(/(?:đường tròn|đường tròn \(C\))\s*(?:tâm)?\s*I?\s*\(?\s*I?\s*\(?\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)?/i);
+ const centerMatch=questionText.match(/tâm\s+I\s*\(?\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)?/i);
+ const radiusMatch=questionText.match(/bán kính\s*(?:bằng\s*)?(-?\d+(?:[.,]\d+)?)/i);
+ const tangentMatch=questionText.match(/tiếp tuyến.*?điểm\s+T\s*\(?\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)?/i);
+ const num=v=>Number(String(v).replace(',','.'));
+ if(centerMatch&&radiusMatch&&tangentMatch){const h=num(centerMatch[1]),k=num(centerMatch[2]),r=num(radiusMatch[1]),tx=num(tangentMatch[1]),ty=num(tangentMatch[2]);const dist=Math.hypot(tx-h,ty-k);if(r>0&&Math.abs(dist-r)<1e-6){let px=tx,py=ty;if(Math.abs(tx-h)<1e-6)px=tx+r;else if(Math.abs(ty-k)<1e-6)py=ty+r;else {px=tx-(ty-k);py=ty+(tx-h)}d={type:'geometry',points:{I:[h,k],T:[tx,ty],P:[px,py]},segments:[['I','T'],['T','P']],circles:[{center:[h,k],radius:r}],right_angle:'T',measurements:[{from:'I',to:'T',text:String(r)}],caption:'Hình dựng từ tâm, bán kính và tiếp điểm trong đề; bán kính IT vuông góc tiếp tuyến tại T.'};}}
+ if(!d&&centerMatch&&radiusMatch){const h=num(centerMatch[1]),k=num(centerMatch[2]),r=num(radiusMatch[1]);if(r>0)d={type:'geometry',points:{I:[h,k],R:[h+r,k]},segments:[['I','R']],circles:[{center:[h,k],radius:r}],measurements:[{from:'I',to:'R',text:String(r)}],caption:'Đường tròn dựng theo đúng tâm và bán kính đã cho.'};}
+ }if(!d&&isGeometry()){
+ const id=String(GAME.topicId||GAME.knowledgeId||'').toLowerCase();
+ const caption='Hình sơ đồ minh họa cho chuyên đề; nếu đề có số liệu/ tọa độ cụ thể, ưu tiên dữ kiện trong đề.';
+ if(/circle|duong_tron|mat_cau|sphere/.test(id)){
+   d={type:'geometry',points:{O:[0,0],A:[1,0],B:[0,1]},segments:[['O','A']],circles:[{center:[0,0],radius:1}],caption};
+ } else if(/coordinate|toa_do|plane_equation|line_equation|vector|oxyz|distance|midpoint/.test(id)){
+   d={type:'geometry',points:{O:[0,0],A:[2,1],B:[-1,2]},segments:[['A','B']],axes:true,caption};
+ } else if(/space|khong_gian|prism|pyramid|3d|solid|section|plane|skew|mat_phang/.test(id)){
+   d={type:'geometry',points:{A:[0,0],B:[2,0],C:[2.8,0.8],D:[0.8,0.8],A1:[0,1.8],B1:[2,1.8],C1:[2.8,2.6],D1:[0.8,2.6]},segments:[['A','B'],['B','C'],['C','D'],['D','A'],['A1','B1'],['B1','C1'],['C1','D1'],['D1','A1'],['A','A1'],['B','B1'],['C','C1'],['D','D1']],caption};
+ } else {
+   d={type:'geometry',points:{A:[0,0],B:[3,0],C:[1.1,2]},segments:[['A','B'],['B','C'],['C','A']],caption};
+ }
+}
+const geometry=isGeometry()||!!d;DIAGRAM.hidden=!geometry;if(!geometry){DIAGRAM.innerHTML='';return}if(!d){DIAGRAM.innerHTML='<div class="diagram-title">📐 Chưa có hình minh họa cho câu này</div><p>Không tự vẽ hình phỏng đoán khi đề chưa có dữ liệu dựng hình.</p>';return}let svg='';
  const label=(x,y,t)=>`<text x="${x}" y="${y}" fill="#dcecff" font-size="14" font-weight="700">${safe(t)}</text>`;
  const line=(x1,y1,x2,y2,stroke='#58d9f7',w=2)=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round"/>`;
  if(d&&d.type==='circle_inscribed_triangle'){svg=`<circle cx="190" cy="95" r="66" fill="rgba(88,217,247,.04)" stroke="#58d9f7" stroke-width="2"/>${line(190,29,132,140)}${line(132,140,248,140)}${line(248,140,190,29)}${line(190,95,190,29,'#9a83ff',1.5)}${label(183,22,'A')}${label(117,153,'B')}${label(253,153,'C')}${label(198,92,'O')}`}
@@ -81,14 +103,15 @@ function normalizeQuestion(q){const raw=q.options||q.choices||[];return {...q,te
 function gameStage(){const match=location.pathname.match(/\/([123])-[^/]+\.html$/);if(match)return Number(match[1]);const title=String(GAME.title||'').toLowerCase();if(/boss|trùm|thu thách|thử thách|challenge|mật mã|bí ẩn/.test(title))return 3;if(/săn|tìm|ghép|điều tra|hunt|match|value/.test(title))return 2;return 1}
 async function requestBatch(){
  const stage=gameStage();
- const difficulty=stage===1?'easy':stage===2?'medium':'hard';
+ const learningTier=stage===1?'foundation':stage===2?'provincial':'national';
+ const difficulty=stage===1?'easy':stage===2?'expert':'hell';
  const history=S.history.slice(-30);
  const gameId=`${GAME.knowledgeId||GAME.engine}_${GAME.title||'game'}_stage${stage}`;
  let found=[];
  try{
    const payload=stage===3
-     ? {grade:GAME.grade||10,topics:[GAME.topicId],count:3,problem_parts:4,difficulty,question_type:'mixed',problem_mode:true,history,game_id:gameId}
-     : {grade:GAME.grade||10,topics:[GAME.topicId],count:10,difficulty,question_type:stage===1?'multiple_choice':'short_answer',problem_mode:false,history,game_id:gameId};
+     ? {grade:GAME.grade||10,topics:[GAME.topicId],count:3,problem_parts:4,difficulty,learning_tier:learningTier,question_type:'mixed',problem_mode:true,history,game_id:gameId}
+     : {grade:GAME.grade||10,topics:[GAME.topicId],count:10,difficulty,learning_tier:learningTier,question_type:stage===1?'multiple_choice':'short_answer',problem_mode:false,history,game_id:gameId};
    const r=await fetch(`${API}/api/ai/practice/session`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
    if(!r.ok)throw new Error('question-batch');
    const d=await r.json();if(Array.isArray(d.questions))found.push(...d.questions.map(normalizeQuestion));
@@ -99,6 +122,8 @@ async function requestBatch(){
 }
 function qLocalTopic(){
  const id=String(GAME.knowledgeId||GAME.topicId||'').toLowerCase();
+ if(id==='g10_geom_coordinate_distance_midpoint'){const ax=rnd(-7,7),ay=rnd(-7,7),bx=rnd(-7,7),by=rnd(-7,7);const dx=bx-ax,dy=by-ay;const families=[0,1,2];const family=families[rnd(0,2)];let text,answer,solution,diagram={type:'coordinate',points:{A:[ax,ay],B:[bx,by]},segments:[['A','B']],caption:'Hai điểm được đặt theo đúng tọa độ trong đề.'};if(family===0){const mx=(ax+bx)/2,my=(ay+by)/2;answer=`(${mx}; ${my})`;text=`Cho A(${ax}; ${ay}), B(${bx}; ${by}). Tìm tọa độ trung điểm M của AB.`;solution=`M=((x_A+x_B)/2;(y_A+y_B)/2)=((${ax}+${bx})/2;(${ay}+${by})/2)=(${mx}; ${my}).`;diagram.points.M=[mx,my];diagram.segments=[['A','B'],['A','M'],['M','B']]}else if(family===1){const d2=dx*dx+dy*dy;answer=Number.isInteger(Math.sqrt(d2))?String(Math.sqrt(d2)):`√${d2}`;text=`Cho A(${ax}; ${ay}), B(${bx}; ${by}). Tính độ dài AB.`;solution=`AB=√[(${bx}−${ax})²+(${by}−${ay})²]=√${d2}=${answer}.`}else{const mx=(ax+bx)/2,my=(ay+by)/2;answer=`(${bx}; ${by})`;text=`M(${mx}; ${my}) là trung điểm AB. Biết A(${ax}; ${ay}), tìm B.`;solution=`x_B=2x_M−x_A=${2*mx}−(${ax})=${bx}; y_B=2y_M−y_A=${2*my}−(${ay})=${by}.`;diagram.points.M=[mx,my];diagram.segments=[['A','B'],['A','M'],['M','B']]}return {text,answer,options:[answer,String(family===0?`${ax+bx}; ${ay+by}`:family===1?dx*dx+dy*dy:`(${ax}; ${by})`),'Không đủ dữ kiện','0'].filter((v,i,a)=>a.indexOf(v)===i).slice(0,4),solution,diagram,topic:GAME.topicId,grade:10};}
+
  const title=String(GAME.title||'').toLowerCase();
  let text,answer,opts=[],diagram=null;
  if(/duong_tron/.test(id)){

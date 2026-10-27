@@ -570,6 +570,46 @@ def geometry_diagram(topic_id: str, question: str, answer: str | int | float):
                         return line_graph(b, c, (-5, 5), (-10, 10))
                 except (ValueError, OverflowError):
                     pass
+    # Parse explicitly stated Oxyz coordinates before falling back to any schematic.
+    # The 3D source coordinates are retained; only the display coordinates are projected.
+    spatial_coord_matches = list(re.finditer(r"\b([A-Za-z][A-Za-z0-9_]*)\s*\(\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)", question))
+    if spatial_coord_matches and ("oxyz" in low or "không gian" in low or "khong gian" in low or any(len(m.groups()) == 4 for m in spatial_coord_matches)):
+        from .geometry_diagrams import spatial_points_projection, cube_projection, rectangular_prism_projection
+        coords3d = {}
+        for match in spatial_coord_matches:
+            name = match.group(1).upper()
+            coords3d.setdefault(name, [float(match.group(i).replace(",", ".")) for i in (2,3,4)])
+        segments = []
+        # Draw only relationships stated by the prompt, rather than joining every point arbitrarily.
+        upper = question.upper()
+        for a, b in re.findall(r"(?:đoạn thẳng|đường thẳng|cạnh)\s+([A-Z][A-Z0-9_]*)\s*([A-Z][A-Z0-9_]*)", upper):
+            if a in coords3d and b in coords3d and [a,b] not in segments:
+                segments.append([a,b])
+        triangle_match = re.search(r"tam giác\s+([A-Z])([A-Z])([A-Z])", upper)
+        if triangle_match:
+            names = list(triangle_match.groups())
+            if all(n in coords3d for n in names):
+                segments.extend([[names[0],names[1]],[names[1],names[2]],[names[2],names[0]]])
+        return spatial_points_projection(coords3d, segments,
+            "Hình chiếu Oxyz: vị trí các điểm được dựng từ đúng tọa độ đã cho; hình chiếu không bảo toàn độ dài 3D.")
+
+    # Dimensions explicitly supplied for common solids should drive the model.
+    if "hình lập phương" in low or "hinh lap phuong" in low:
+        side_match = re.search(r"(?:cạnh|canh)\s*(?:bằng|la|=|dài)?\s*(\d+(?:[.,]\d+)?)", low)
+        if side_match:
+            from .geometry_diagrams import cube_projection
+            side = float(side_match.group(1).replace(",", "."))
+            diagram = cube_projection(side, show_measurement=True)
+            diagram["diagram_mode"] = "schematic_projection"
+            diagram["caption"] = f"Hình chiếu lập phương có cạnh {side:g} theo đề bài; hình chiếu 2D không dùng để đo độ dài không gian."
+            return diagram
+    if "hình hộp chữ nhật" in low or "hinh hop chu nhat" in low:
+        dims = re.search(r"(?:dài|dai)\s*(?:là|la|=)?\s*(\d+(?:[.,]\d+)?).*?(?:rộng|rong)\s*(?:là|la|=)?\s*(\d+(?:[.,]\d+)?).*?(?:cao|chiều cao|chieu cao)\s*(?:là|la|=)?\s*(\d+(?:[.,]\d+)?)", low)
+        if dims:
+            from .geometry_diagrams import rectangular_prism_projection
+            values = [float(dims.group(i).replace(",", ".")) for i in (1,2,3)]
+            return rectangular_prism_projection(*values)
+
     spatial_ids = {"hinh_khong_gian", "hinh_hoc_khong_gian", "song_song_khong_gian", "vuong_goc_khong_gian", "goc_khoang_cach_11", "thiet_dien_hinh_khong_gian_11", "the_tich_khong_gian"}
     if "hình chóp" in low or "hinh chop" in low:
         return {"type": "pyramid", "labels": ["S", "A", "B", "C", "D"], "caption": "Hình chóp minh họa; các nét không khuất được dùng để hỗ trợ đọc hình."}

@@ -1,0 +1,193 @@
+{
+  "version": "1.0.0",
+  "notice": "Ví dụ tự biên soạn để minh họa schema và bốn dạng trả lời; không thay thế việc kiểm định toàn ngân hàng.",
+  "questions": [
+    {
+      "id": "sample_g10_mc_001",
+      "grade": 10,
+      "strand": "algebra",
+      "topic": "Hàm số bậc hai",
+      "response_type": "multiple_choice",
+      "difficulty": "foundation",
+      "prompt": "Cho f(x)=x²−4x+1. Hoành độ đỉnh của đồ thị là bao nhiêu?",
+      "options": [
+        "−4",
+        "−2",
+        "2",
+        "4"
+      ],
+      "answer": "2",
+      "solution": "Với f(x)=ax²+bx+c, hoành độ đỉnh là −b/(2a). Ở đây a=1, b=−4 nên x=−(−4)/2=2.",
+      "archetype": "tính trực tiếp",
+      "original_content": true
+    },
+    {
+      "id": "sample_g10_tf_001",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "topic": "Vectơ",
+      "response_type": "true_false",
+      "difficulty": "foundation",
+      "prompt": "Với mọi vectơ u, v, nếu u·v=0 thì hai vectơ đều phải khác vectơ-không và vuông góc nhau.",
+      "answer": false,
+      "solution": "Mệnh đề sai vì nếu u là vectơ-không thì u·v=0 với mọi v. Điều kiện vuông góc theo góc giữa hai vectơ thường cần cả hai vectơ khác vectơ-không.",
+      "archetype": "phát hiện sai lầm",
+      "original_content": true
+    },
+    {
+      "id": "sample_g10_short_001",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "topic": "Tọa độ phẳng",
+      "response_type": "short_answer",
+      "difficulty": "foundation",
+      "prompt": "Tính khoảng cách giữa A(1,2) và B(4,6).",
+      "answer": "5",
+      "solution": "AB=√((4−1)²+(6−2)²)=√(9+16)=5.",
+      "archetype": "tính trực tiếp",
+      "original_content": true
+    },
+    {
+      "id": "sample_g10_written_001",
+      "grade": 10,
+      "strand": "algebra",
+      "topic": "Phương trình bậc hai",
+      "response_type": "written_solution",
+      "difficulty": "intermediate",
+      "prompt": "Tìm tất cả m để phương trình x²−(m+1)x+m=0 có hai nghiệm thực phân biệt.",
+      "answer": "m≠1",
+      "solution": "Biệt thức Δ=(m+1)²−4m=(m−1)². Có hai nghiệm thực phân biệt khi Δ>0, tương đương (m−1)²>0, tức m≠1.",
+      "archetype": "tham số",
+      "original_content": true
+    },
+    {
+      "id": "sample_g11_mc_001",
+      "grade": 11,
+      "strand": "trigonometry",
+      "topic": "Lượng giác",
+      "response_type": "multiple_choice",
+      "difficulty": "foundation",
+      "prompt": "Giá trị của sin(π/6) là gì?",
+      "options": [
+        "0",
+        "1/2",
+        "√2/2",
+        "1"
+      ],
+      "answer": "1/2",
+      "solution": "Góc π/6 bằng 30°, nên sin(π/6)=1/2.",
+      "archetype": "nhận dạng khái niệm",
+      "original_content": true
+    },
+    {
+      "id": "sample_g11_tf_001",
+      "grade": 11,
+      "strand": "sequences",
+      "topic": "Cấp số cộng",
+      "response_type": "true_false",
+      "difficulty": "intermediate",
+      "prompt": "Nếu một dãy là cấp số cộng thì hiệu u(n+1)−u(n) không đổi với mọi n trong miền chỉ số.",
+      "answer": true,
+      "solution": "Đây là đặc trưng của cấp số cộng; hằng số d được gọi là công sai.",
+      "archetype": "nhận dạng khái niệm",
+      "original_content": true
+    },
+    {
+      "id": "sample_g11_short_001",
+      "grade": 11,
+      "strand": "combinatorics_probability",
+      "topic": "Tổ hợp",
+      "response_type": "short_answer",
+      "difficulty": "foundation",
+      "prompt": "Có bao nhiêu cách chọn 2 học sinh từ một nhóm 6 học sinh, không xét thứ tự?",
+      "answer": "15",
+      "solution": "Số cách là C(6,2)=6!/(2!4!)=15.",
+      "archetype": "đếm cấu hình",
+      "original_content": true
+    },
+    {
+      "id": "sample_g11_written_001",
+      "grade": 11,
+      "strand": "geometry_space",
+      "topic": "Quan hệ song song",
+      "response_type": "written_solution",
+      "difficulty": "intermediate",
+      "prompt": "Trong hình chóp S.ABC, M và N lần lượt là trung điểm của SA và SB. Chứng minh MN song song với AB.",
+      "answer": "MN ∥ AB",
+      "solution": "Xét tam giác SAB. M,N lần lượt là trung điểm của SA,SB nên theo định lý đường trung bình của tam giác, MN∥AB và MN=AB/2.",
+      "archetype": "chứng minh",
+      "original_content": true
+    },
+    {
+      "id": "sample_g12_mc_001",
+      "grade": 12,
+      "strand": "functions_calculus",
+      "topic": "Đạo hàm",
+      "response_type": "multiple_choice",
+      "difficulty": "foundation",
+      "prompt": "Đạo hàm của f(x)=x³−2x là gì?",
+      "options": [
+        "3x²−2",
+        "x²−2",
+        "3x−2",
+        "3x²"
+      ],
+      "answer": "3x²−2",
+      "solution": "Áp dụng (x^n)'=nx^(n−1) và (ax)'=a: f'(x)=3x²−2.",
+      "archetype": "tính trực tiếp",
+      "original_content": true
+    },
+    {
+      "id": "sample_g12_tf_001",
+      "grade": 12,
+      "strand": "analytic_geometry",
+      "topic": "Mặt cầu",
+      "response_type": "true_false",
+      "difficulty": "foundation",
+      "prompt": "Phương trình (x−1)²+(y+2)²+(z−3)²=16 biểu diễn mặt cầu tâm I(1,−2,3), bán kính 4.",
+      "answer": true,
+      "solution": "So sánh với dạng chuẩn (x−a)²+(y−b)²+(z−c)²=R². Tâm là (a,b,c)=(1,−2,3), R=√16=4.",
+      "archetype": "nhận dạng khái niệm",
+      "original_content": true
+    },
+    {
+      "id": "sample_g12_short_001",
+      "grade": 12,
+      "strand": "functions_calculus",
+      "topic": "Tích phân",
+      "response_type": "short_answer",
+      "difficulty": "foundation",
+      "prompt": "Tính tích phân từ 0 đến 1 của 2x dx.",
+      "answer": "1",
+      "solution": "∫₀¹2x dx=[x²]₀¹=1.",
+      "archetype": "tính trực tiếp",
+      "original_content": true
+    },
+    {
+      "id": "sample_g12_written_001",
+      "grade": 12,
+      "strand": "analytic_geometry",
+      "topic": "Khoảng cách điểm đến mặt phẳng",
+      "response_type": "written_solution",
+      "difficulty": "intermediate",
+      "prompt": "Tính khoảng cách từ P(1,2,−1) đến mặt phẳng 2x−y+2z−3=0.",
+      "answer": "5/3",
+      "solution": "Dùng công thức d=|Ax₀+By₀+Cz₀+D|/√(A²+B²+C²). Tử số |2−2−2−3|=5; mẫu số √(4+1+4)=3. Vậy d=5/3.",
+      "archetype": "tính trực tiếp",
+      "original_content": true
+    },
+    {
+      "id": "sample_olympiad_001",
+      "grade": 10,
+      "strand": "number_theory",
+      "topic": "Đồng dư",
+      "response_type": "written_solution",
+      "difficulty": "advanced",
+      "prompt": "Chứng minh rằng với mọi số nguyên n, n(n+1) là số chẵn.",
+      "answer": "n(n+1) chia hết cho 2",
+      "solution": "Hai số nguyên liên tiếp n và n+1 có một số chẵn. Vì vậy tích của chúng chia hết cho 2.",
+      "archetype": "chứng minh",
+      "original_content": true
+    }
+  ]
+}

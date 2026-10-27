@@ -10,6 +10,8 @@ from .games.routes import router as games_router
 from .chat.routes import router as chat_router
 from .matchmaking.routes import router as matchmaking_router
 from app.ai.routes import router as ai_router
+from .admin_routes import router as admin_router
+from .ai.maintenance_worker import start_worker, stop_worker
 
 
 # =========================================================
@@ -89,6 +91,7 @@ app.include_router(games_router)
 app.include_router(chat_router)
 app.include_router(matchmaking_router)
 app.include_router(ai_router)
+app.include_router(admin_router)
 
 # =========================================================
 # ROOT
@@ -114,3 +117,13 @@ def health_check():
         "status": "online",
         "service": "MATH WEB API"
     }
+
+@app.on_event("startup")
+def start_mathweb_ai_maintenance():
+    # Background maintenance lives with the API process and uses the same SQLite bank.
+    start_worker()
+
+
+@app.on_event("shutdown")
+def stop_mathweb_ai_maintenance():
+    stop_worker()

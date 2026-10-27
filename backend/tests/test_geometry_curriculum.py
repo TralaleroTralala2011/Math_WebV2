@@ -50,7 +50,7 @@ class GeometryCurriculumTests(unittest.TestCase):
             circle_application = generate(10, "duong_tron", level, "duong_tron_Tiếp tuyến thử thách_variety")
             self.assertIn(circle_angle["archetype"], {"circle_angle", "inscribed_triangle_angle", "inscribed_triangle_diameter"})
             self.assertIn(circle_length["archetype"], {"circle_center_radius", "circle_intersection", "inscribed_rectangle_diagonal", "inscribed_rectangle_area"})
-            self.assertIn(circle_application["archetype"], {"circle_tangent", "circle_intersection", "inscribed_rectangle_diagonal", "inscribed_rectangle_area", "rectangle_max_area", "inscribed_triangle_diameter"})
+            self.assertIn(circle_application["archetype"], {"circle_tangent", "external_tangents", "circle_intersection", "inscribed_rectangle_diagonal", "inscribed_rectangle_area", "rectangle_max_area", "inscribed_triangle_diameter"})
 
     def test_circle_bank_includes_inscribed_rectangle_and_triangle(self):
         seen = {generate(10, "duong_tron", level)["archetype"] for level in ("easy", "medium", "hard") for _ in range(80)}

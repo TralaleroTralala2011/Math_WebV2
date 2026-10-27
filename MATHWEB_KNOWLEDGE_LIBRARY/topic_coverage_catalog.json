@@ -1,0 +1,3539 @@
+{
+  "version": "1.0.0",
+  "created": "2026-10-24",
+  "input_project": "MATH_WEB_147_TOPICS_QUESTION_SYSTEM_3_TIERS_UPGRADED.zip",
+  "counts": {
+    "grade_10": 45,
+    "grade_11": 47,
+    "grade_12": 47,
+    "total_existing_topics": 139,
+    "advanced_map_nodes": 46,
+    "formula_theorem_entries": 74
+  },
+  "topics": [
+    {
+      "id": "menh_de_tap_hop",
+      "title_vi": "Mệnh đề và tập hợp",
+      "grade": 10,
+      "strand": "logic_sets",
+      "subtopics": [
+        "mệnh đề",
+        "tập hợp",
+        "khoảng",
+        "hợp giao hiệu"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "bat_phuong_trinh",
+      "title_vi": "Bất phương trình và hệ bất phương trình",
+      "grade": 10,
+      "strand": "algebra",
+      "subtopics": [
+        "bậc nhất",
+        "bậc hai",
+        "hệ bất phương trình"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "he_thuc_luong",
+      "title_vi": "Hệ thức lượng trong tam giác",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "sin cos",
+        "định lý cos",
+        "diện tích",
+        "đường tròn ngoại tiếp"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "vector",
+      "title_vi": "Vectơ",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "tổng hiệu",
+        "tọa độ",
+        "tích vô hướng",
+        "trung điểm"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "ham_so_bac_hai",
+      "title_vi": "Hàm số bậc hai và parabol",
+      "grade": 10,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "đỉnh",
+        "trục đối xứng",
+        "giao trục",
+        "tham số"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "phuong_trinh_he",
+      "title_vi": "Phương trình và hệ phương trình",
+      "grade": 10,
+      "strand": "algebra",
+      "subtopics": [
+        "bậc nhất",
+        "bậc hai",
+        "hệ hai ẩn",
+        "biện luận"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "quy_tac_dem",
+      "title_vi": "Quy tắc đếm",
+      "grade": 10,
+      "strand": "combinatorics_probability",
+      "subtopics": [
+        "quy tắc cộng",
+        "quy tắc nhân",
+        "sơ đồ cây"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "hoan_vi_chinh_hop_to_hop",
+      "title_vi": "Hoán vị, chỉnh hợp, tổ hợp",
+      "grade": 10,
+      "strand": "combinatorics_probability",
+      "subtopics": [
+        "hoán vị",
+        "chỉnh hợp",
+        "tổ hợp",
+        "nhị thức Newton"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "xac_suat",
+      "title_vi": "Xác suất",
+      "grade": 10,
+      "strand": "geometry_space",
+      "subtopics": [
+        "không gian mẫu",
+        "biến cố",
+        "xác suất cổ điển",
+        "xác suất có điều kiện"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "thong_ke",
+      "title_vi": "Thống kê",
+      "grade": 10,
+      "strand": "statistics",
+      "subtopics": [
+        "trung bình",
+        "trung vị",
+        "mốt",
+        "phương sai",
+        "độ lệch chuẩn"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "menh_de",
+      "title_vi": "Mệnh đề",
+      "grade": 10,
+      "strand": "logic_sets",
+      "subtopics": [
+        "mệnh đề",
+        "phủ định",
+        "kéo theo",
+        "tương đương"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "tap_hop",
+      "title_vi": "Tập hợp và các phép toán",
+      "grade": 10,
+      "strand": "logic_sets",
+      "subtopics": [
+        "hợp",
+        "giao",
+        "hiệu",
+        "phần bù",
+        "khoảng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "he_bat_phuong_trinh",
+      "title_vi": "Hệ bất phương trình",
+      "grade": 10,
+      "strand": "algebra",
+      "subtopics": [
+        "bậc nhất",
+        "bậc hai",
+        "miền nghiệm"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "ham_so",
+      "title_vi": "Hàm số",
+      "grade": 10,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "tập xác định",
+        "biến thiên",
+        "đồ thị"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "ham_so_bac_nhat",
+      "title_vi": "Hàm số bậc nhất",
+      "grade": 10,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "hệ số góc",
+        "đồ thị",
+        "tương giao"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "phuong_trinh",
+      "title_vi": "Phương trình",
+      "grade": 10,
+      "strand": "algebra",
+      "subtopics": [
+        "bậc nhất",
+        "bậc hai",
+        "biện luận"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "he_phuong_trinh",
+      "title_vi": "Hệ phương trình",
+      "grade": 10,
+      "strand": "algebra",
+      "subtopics": [
+        "hai ẩn",
+        "thế",
+        "cộng đại số",
+        "biện luận"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "he_thuc_luong_tam_giac",
+      "title_vi": "Hệ thức lượng trong tam giác",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "sin",
+        "cos",
+        "diện tích",
+        "đường tròn ngoại tiếp"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "toa_do_phang",
+      "title_vi": "Tọa độ trong mặt phẳng",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "điểm",
+        "vectơ",
+        "trung điểm",
+        "khoảng cách"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "duong_thang",
+      "title_vi": "Đường thẳng",
+      "grade": 10,
+      "strand": "algebra",
+      "subtopics": [
+        "phương trình",
+        "góc",
+        "khoảng cách"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "duong_tron",
+      "title_vi": "Đường tròn",
+      "grade": 10,
+      "strand": "algebra",
+      "subtopics": [
+        "phương trình",
+        "tiếp tuyến",
+        "vị trí tương đối"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "nhi_thuc_newton",
+      "title_vi": "Nhị thức Newton",
+      "grade": 10,
+      "strand": "mathematical_modelling_or_other",
+      "subtopics": [
+        "khai triển",
+        "hệ số",
+        "số hạng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "hinh_hoc_10",
+      "title_vi": "Hình học phẳng",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "tam giác",
+        "tứ giác",
+        "đường tròn",
+        "quỹ tích"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "bai_toan_thuc_te_10",
+      "title_vi": "Bài toán thực tế Toán 10",
+      "grade": 10,
+      "strand": "mathematical_modelling_or_other",
+      "subtopics": [
+        "tối ưu",
+        "mô hình hóa",
+        "đo đạc"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "hinh_hoc_co_ban_10",
+      "title_vi": "Hình học cơ bản: góc, cạnh và diện tích",
+      "grade": 10,
+      "strand": "mathematical_modelling_or_other",
+      "subtopics": [
+        "góc",
+        "cạnh",
+        "chu vi",
+        "diện tích"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "tam_giac_tu_giac_10",
+      "title_vi": "Tam giác và tứ giác cơ bản",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "tam giác",
+        "tứ giác",
+        "đường cao",
+        "đường trung tuyến"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "duong_tron_co_ban_10",
+      "title_vi": "Đường tròn và các góc cơ bản",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "bán kính",
+        "dây cung",
+        "góc nội tiếp",
+        "góc ở tâm"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "he_thuc_luong_van_dung_10",
+      "title_vi": "Hệ thức lượng trong tam giác",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "Pythagore",
+        "định lý sin",
+        "định lý cos",
+        "diện tích tam giác"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "toa_do_hinh_hoc_10",
+      "title_vi": "Tọa độ và đường thẳng trong mặt phẳng",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "tọa độ điểm",
+        "đường thẳng",
+        "khoảng cách",
+        "đường tròn"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "chung_minh_hinh_hoc_10",
+      "title_vi": "Chứng minh hình học và bài toán tổng hợp",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "chứng minh",
+        "quỹ tích",
+        "tam giác đồng dạng",
+        "đường tròn"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_angles_parallel",
+      "title_vi": "Góc tạo bởi hai đường thẳng và đường cắt",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "góc đồng vị",
+        "góc so le trong",
+        "góc trong cùng phía"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_triangle_congruence",
+      "title_vi": "Các trường hợp bằng nhau của tam giác",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "cạnh-cạnh-cạnh",
+        "cạnh-góc-cạnh",
+        "góc-cạnh-góc"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_special_lines",
+      "title_vi": "Đường trung tuyến, phân giác và đường cao",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "trọng tâm",
+        "tâm đường tròn nội tiếp",
+        "trực tâm"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_quadrilaterals_properties",
+      "title_vi": "Tính chất hình bình hành và hình thoi",
+      "grade": 10,
+      "strand": "mathematical_modelling_or_other",
+      "subtopics": [
+        "đường chéo hình bình hành",
+        "đường chéo hình thoi",
+        "dấu hiệu nhận biết"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_circle_chords_arcs",
+      "title_vi": "Dây cung, cung và khoảng cách đến tâm",
+      "grade": 10,
+      "strand": "geometry_space",
+      "subtopics": [
+        "đường vuông góc từ tâm đến dây",
+        "so sánh dây",
+        "cung tương ứng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_thales_similarity",
+      "title_vi": "Định lý Thales và tam giác đồng dạng",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "tỉ số đoạn thẳng",
+        "đường thẳng song song một cạnh",
+        "tỉ số đồng dạng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_triangle_area_ratio",
+      "title_vi": "Tỉ số diện tích tam giác",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "cùng chiều cao",
+        "cùng đáy",
+        "tỉ số diện tích tam giác đồng dạng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_circle_angles",
+      "title_vi": "Góc nội tiếp và góc ở tâm nâng cao",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "cùng chắn một cung",
+        "góc nội tiếp chắn nửa đường tròn",
+        "liên hệ số đo cung"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_coordinate_distance_midpoint",
+      "title_vi": "Trung điểm và khoảng cách trong tọa độ phẳng",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "công thức trung điểm",
+        "độ dài đoạn thẳng",
+        "điểm chia đoạn theo tỉ số"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_line_intersections",
+      "title_vi": "Giao điểm và vị trí tương đối của hai đường thẳng",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "song song",
+        "trùng nhau",
+        "cắt nhau và giải hệ"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_locus",
+      "title_vi": "Quỹ tích điểm trong mặt phẳng",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "quỹ tích cách đều hai điểm",
+        "quỹ tích cách đều hai đường thẳng",
+        "điều kiện cần và đủ"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_circle_tangent_chord",
+      "title_vi": "Tiếp tuyến và dây cung của đường tròn",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "bán kính vuông góc tiếp tuyến",
+        "hai tiếp tuyến từ một điểm",
+        "góc tạo bởi tiếp tuyến và dây"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_triangle_inequalities",
+      "title_vi": "Bất đẳng thức và cực trị trong tam giác",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "điều kiện ba cạnh",
+        "chu vi cố định",
+        "diện tích cực trị"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_vector_proofs",
+      "title_vi": "Chứng minh hình học bằng vectơ",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "biểu diễn vectơ theo hai vectơ cơ sở",
+        "điều kiện thẳng hàng",
+        "điều kiện đồng quy"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_geom_coordinate_circle_line",
+      "title_vi": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+      "grade": 10,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "giao điểm đường thẳng-đường tròn",
+        "tiếp xúc qua biệt thức",
+        "tham số tọa độ"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "ham_so_luong_giac",
+      "title_vi": "Hàm số lượng giác",
+      "grade": 11,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "sin",
+        "cos",
+        "tan",
+        "đồ thị",
+        "tập xác định"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "phuong_trinh_luong_giac",
+      "title_vi": "Phương trình lượng giác",
+      "grade": 11,
+      "strand": "algebra",
+      "subtopics": [
+        "cơ bản",
+        "đồng nhất",
+        "đặt ẩn phụ",
+        "tham số"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "day_so",
+      "title_vi": "Dãy số",
+      "grade": 11,
+      "strand": "trigonometry",
+      "subtopics": [
+        "số hạng",
+        "công thức tổng quát",
+        "truy hồi"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "cap_so_cong",
+      "title_vi": "Cấp số cộng",
+      "grade": 11,
+      "strand": "trigonometry",
+      "subtopics": [
+        "công sai",
+        "số hạng",
+        "tổng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "cap_so_nhan",
+      "title_vi": "Cấp số nhân",
+      "grade": 11,
+      "strand": "trigonometry",
+      "subtopics": [
+        "công bội",
+        "số hạng",
+        "tổng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "gioi_han",
+      "title_vi": "Giới hạn",
+      "grade": 11,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "dãy số",
+        "hàm số",
+        "vô cực",
+        "liên tục"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "dao_ham",
+      "title_vi": "Đạo hàm",
+      "grade": 11,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "quy tắc",
+        "hàm hợp",
+        "tiếp tuyến",
+        "cực trị"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "hinh_khong_gian",
+      "title_vi": "Quan hệ song song và vuông góc trong không gian",
+      "grade": 11,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "đường thẳng",
+        "mặt phẳng",
+        "góc",
+        "khoảng cách"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "xac_suat_11",
+      "title_vi": "Xác suất",
+      "grade": 11,
+      "strand": "combinatorics_probability",
+      "subtopics": [
+        "biến cố độc lập",
+        "hợp biến cố",
+        "điều kiện"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "gia_tri_luong_giac",
+      "title_vi": "Giá trị lượng giác",
+      "grade": 11,
+      "strand": "trigonometry",
+      "subtopics": [
+        "sin",
+        "cos",
+        "tan",
+        "cung góc"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "cong_thuc_luong_giac",
+      "title_vi": "Công thức lượng giác",
+      "grade": 11,
+      "strand": "trigonometry",
+      "subtopics": [
+        "cộng",
+        "nhân đôi",
+        "hạ bậc",
+        "biến đổi"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "ham_so_luong_giac_day_du",
+      "title_vi": "Hàm số lượng giác",
+      "grade": 11,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "đồ thị",
+        "chu kỳ",
+        "tập xác định",
+        "giá trị lớn nhất"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "phuong_trinh_luong_giac_day_du",
+      "title_vi": "Phương trình lượng giác",
+      "grade": 11,
+      "strand": "algebra",
+      "subtopics": [
+        "cơ bản",
+        "đồng nhất",
+        "đặt ẩn phụ",
+        "tham số"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "day_so_tong_quat",
+      "title_vi": "Dãy số",
+      "grade": 11,
+      "strand": "trigonometry",
+      "subtopics": [
+        "công thức tổng quát",
+        "truy hồi",
+        "đơn điệu"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "gioi_han_ham_so",
+      "title_vi": "Giới hạn hàm số",
+      "grade": 11,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "vô cực",
+        "hữu hạn",
+        "liên tục"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "ham_so_lien_tuc",
+      "title_vi": "Hàm số liên tục",
+      "grade": 11,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "liên tục tại điểm",
+        "trên khoảng",
+        "giá trị trung gian"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "dao_ham_quy_tac",
+      "title_vi": "Quy tắc đạo hàm",
+      "grade": 11,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "tổng",
+        "tích",
+        "thương",
+        "hàm hợp"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "ung_dung_dao_ham_11",
+      "title_vi": "Ứng dụng đạo hàm",
+      "grade": 11,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "tiếp tuyến",
+        "đơn điệu",
+        "cực trị"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "song_song_khong_gian",
+      "title_vi": "Quan hệ song song trong không gian",
+      "grade": 11,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "đường thẳng",
+        "mặt phẳng",
+        "thiết diện"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "vuong_goc_khong_gian",
+      "title_vi": "Quan hệ vuông góc trong không gian",
+      "grade": 11,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "đường thẳng",
+        "mặt phẳng",
+        "hình chiếu"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "goc_khoang_cach_11",
+      "title_vi": "Góc và khoảng cách trong không gian",
+      "grade": 11,
+      "strand": "geometry_space",
+      "subtopics": [
+        "góc",
+        "khoảng cách",
+        "hình chiếu"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "thong_ke_11",
+      "title_vi": "Thống kê Toán 11",
+      "grade": 11,
+      "strand": "statistics",
+      "subtopics": [
+        "mẫu số liệu",
+        "độ phân tán",
+        "tứ phân vị"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "bai_toan_thuc_te_11",
+      "title_vi": "Bài toán thực tế Toán 11",
+      "grade": 11,
+      "strand": "mathematical_modelling_or_other",
+      "subtopics": [
+        "tăng trưởng",
+        "lãi suất",
+        "mô hình"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "to_hop_xac_suat_nang_cao_11",
+      "title_vi": "Tổ hợp và xác suất nâng cao",
+      "grade": 11,
+      "strand": "combinatorics_probability",
+      "subtopics": [
+        "đếm nâng cao",
+        "xác suất",
+        "điều kiện"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "bien_co_doc_lap_11",
+      "title_vi": "Biến cố độc lập và xác suất có điều kiện",
+      "grade": 11,
+      "strand": "combinatorics_probability",
+      "subtopics": [
+        "độc lập",
+        "xác suất có điều kiện",
+        "công thức"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "day_so_truy_hoi_11",
+      "title_vi": "Dãy số truy hồi",
+      "grade": 11,
+      "strand": "trigonometry",
+      "subtopics": [
+        "truy hồi",
+        "số hạng",
+        "quy luật"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "quy_nap_toan_hoc_11",
+      "title_vi": "Quy nạp toán học",
+      "grade": 11,
+      "strand": "logic_sets",
+      "subtopics": [
+        "mệnh đề",
+        "quy nạp",
+        "chứng minh"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "phep_bien_hinh_11",
+      "title_vi": "Phép biến hình trong mặt phẳng",
+      "grade": 11,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "phép tịnh tiến",
+        "phép quay",
+        "đối xứng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "thiet_dien_hinh_khong_gian_11",
+      "title_vi": "Thiết diện hình không gian",
+      "grade": 11,
+      "strand": "geometry_space",
+      "subtopics": [
+        "thiết diện",
+        "hình chóp",
+        "mặt phẳng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "bai_toan_thuc_te_tong_hop_11",
+      "title_vi": "Bài toán thực tế tổng hợp Toán 11",
+      "grade": 11,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "mô hình hóa",
+        "hàm số",
+        "xác suất"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "phep_bien_hinh_co_ban_11",
+      "title_vi": "Phép biến hình cơ bản",
+      "grade": 11,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "tịnh tiến",
+        "đối xứng",
+        "phép quay",
+        "vị tự"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "nhan_biet_hinh_khong_gian_11",
+      "title_vi": "Nhận biết hình học không gian",
+      "grade": 11,
+      "strand": "geometry_space",
+      "subtopics": [
+        "hình chóp",
+        "lăng trụ",
+        "song song",
+        "vuông góc"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_transform_translation",
+      "title_vi": "Phép tịnh tiến và ảnh của hình",
+      "grade": 11,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "vectơ tịnh tiến",
+        "ảnh của điểm",
+        "bảo toàn độ dài"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_transform_reflection",
+      "title_vi": "Phép đối xứng trục",
+      "grade": 11,
+      "strand": "mathematical_modelling_or_other",
+      "subtopics": [
+        "trục đối xứng",
+        "ảnh của điểm",
+        "điểm bất động"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_space_lines_planes",
+      "title_vi": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+      "grade": 11,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "điểm thuộc mặt phẳng",
+        "đường thẳng nằm trong mặt phẳng",
+        "xác định mặt phẳng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_parallel_line_plane",
+      "title_vi": "Đường thẳng song song với mặt phẳng",
+      "grade": 11,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "điều kiện song song",
+        "đường thẳng không giao mặt phẳng",
+        "lập luận bằng mặt phẳng phụ"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_prism_pyramid_sections",
+      "title_vi": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+      "grade": 11,
+      "strand": "geometry_space",
+      "subtopics": [
+        "nhận dạng đỉnh-cạnh-mặt",
+        "số mặt",
+        "thiết diện đơn giản"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_rotation_homothety",
+      "title_vi": "Phép quay và phép vị tự",
+      "grade": 11,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "tâm và góc quay",
+        "tỉ số vị tự",
+        "ảnh của đường tròn"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_parallel_planes",
+      "title_vi": "Hai mặt phẳng song song",
+      "grade": 11,
+      "strand": "geometry_space",
+      "subtopics": [
+        "dấu hiệu song song",
+        "giao tuyến với mặt phẳng thứ ba",
+        "định lý Thales không gian"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_perpendicular_line_plane",
+      "title_vi": "Đường thẳng vuông góc với mặt phẳng",
+      "grade": 11,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "đường thẳng vuông góc hai đường cắt nhau",
+        "chân đường vuông góc",
+        "chứng minh vuông góc"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_dihedral_angles",
+      "title_vi": "Góc giữa đường thẳng và mặt phẳng",
+      "grade": 11,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "hình chiếu vuông góc",
+        "góc nhọn quy ước",
+        "tính góc trong hình chóp"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_section_construction",
+      "title_vi": "Dựng thiết diện của hình chóp và lăng trụ",
+      "grade": 11,
+      "strand": "geometry_space",
+      "subtopics": [
+        "tìm giao tuyến",
+        "tìm giao điểm trên cạnh",
+        "nối các điểm đồng phẳng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_skew_lines_distance",
+      "title_vi": "Khoảng cách giữa hai đường thẳng chéo nhau",
+      "grade": 11,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "đường vuông góc chung",
+        "đoạn vuông góc chung",
+        "mặt phẳng song song chứa một đường"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_three_perpendiculars",
+      "title_vi": "Định lý ba đường vuông góc",
+      "grade": 11,
+      "strand": "geometry_space",
+      "subtopics": [
+        "hình chiếu của đường xiên",
+        "vuông góc trong mặt phẳng đáy",
+        "chứng minh quan hệ vuông góc"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_transform_composition",
+      "title_vi": "Hợp thành các phép biến hình",
+      "grade": 11,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "hai phép đối xứng trục",
+        "phép quay kết hợp tịnh tiến",
+        "xác định ảnh cuối"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_section_ratio",
+      "title_vi": "Thiết diện và tỉ số đoạn trong hình không gian",
+      "grade": 11,
+      "strand": "geometry_space",
+      "subtopics": [
+        "định lý Thales trong không gian",
+        "tỉ số trên cạnh bên",
+        "diện tích thiết diện"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g11_geom_space_proof",
+      "title_vi": "Chứng minh tổng hợp song song và vuông góc",
+      "grade": 11,
+      "strand": "geometry_space",
+      "subtopics": [
+        "dựng mặt phẳng phụ",
+        "chuỗi suy luận nhiều bước",
+        "phản chứng hình học"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "ung_dung_dao_ham",
+      "title_vi": "Ứng dụng đạo hàm",
+      "grade": 12,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "đồng biến nghịch biến",
+        "cực trị",
+        "GTLN GTNN",
+        "tiệm cận",
+        "tham số"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "khao_sat_ham_so",
+      "title_vi": "Khảo sát và vẽ đồ thị hàm số",
+      "grade": 12,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "tập xác định",
+        "biến thiên",
+        "tiệm cận",
+        "giao điểm"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "nguyen_ham_tich_phan",
+      "title_vi": "Nguyên hàm và tích phân",
+      "grade": 12,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "nguyên hàm cơ bản",
+        "đổi biến",
+        "từng phần",
+        "diện tích"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "so_phuc",
+      "title_vi": "Số phức",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "dạng đại số",
+        "môđun",
+        "liên hợp",
+        "phương trình"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "hinh_hoc_khong_gian",
+      "title_vi": "Hình học không gian",
+      "grade": 12,
+      "strand": "geometry_space",
+      "subtopics": [
+        "thể tích",
+        "góc",
+        "khoảng cách",
+        "mặt cầu"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "toa_do_khong_gian",
+      "title_vi": "Tọa độ trong không gian",
+      "grade": 12,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "Oxyz",
+        "mặt phẳng",
+        "đường thẳng",
+        "mặt cầu"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "xac_suat_12",
+      "title_vi": "Xác suất và biến ngẫu nhiên",
+      "grade": 12,
+      "strand": "combinatorics_probability",
+      "subtopics": [
+        "xác suất có điều kiện",
+        "độc lập",
+        "kỳ vọng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "thong_ke_12",
+      "title_vi": "Các số đặc trưng đo xu thế và độ phân tán",
+      "grade": 12,
+      "strand": "statistics",
+      "subtopics": [
+        "trung bình",
+        "trung vị",
+        "tứ phân vị",
+        "phương sai"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "tinh_don_dieu",
+      "title_vi": "Tính đơn điệu",
+      "grade": 12,
+      "strand": "mathematical_modelling_or_other",
+      "subtopics": [
+        "đồng biến",
+        "nghịch biến",
+        "tham số"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "cuc_tri",
+      "title_vi": "Cực trị",
+      "grade": 12,
+      "strand": "mathematical_modelling_or_other",
+      "subtopics": [
+        "điểm cực trị",
+        "tham số",
+        "đồ thị"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "gtln_gtnn",
+      "title_vi": "Giá trị lớn nhất và nhỏ nhất",
+      "grade": 12,
+      "strand": "mathematical_modelling_or_other",
+      "subtopics": [
+        "đoạn",
+        "khoảng",
+        "ứng dụng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "tiep_tuyen",
+      "title_vi": "Tiếp tuyến",
+      "grade": 12,
+      "strand": "mathematical_modelling_or_other",
+      "subtopics": [
+        "hệ số góc",
+        "tiếp xúc",
+        "tham số"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "tien_can",
+      "title_vi": "Tiệm cận",
+      "grade": 12,
+      "strand": "mathematical_modelling_or_other",
+      "subtopics": [
+        "đứng",
+        "ngang",
+        "xiên"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "tuong_giao",
+      "title_vi": "Tương giao đồ thị",
+      "grade": 12,
+      "strand": "mathematical_modelling_or_other",
+      "subtopics": [
+        "số giao điểm",
+        "tham số",
+        "biện luận"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "ham_mu",
+      "title_vi": "Hàm số mũ",
+      "grade": 12,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "đồ thị",
+        "đơn điệu",
+        "giá trị"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "ham_logarit",
+      "title_vi": "Hàm số logarit",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "đồ thị",
+        "tập xác định",
+        "đơn điệu"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "pt_mu",
+      "title_vi": "Phương trình mũ",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "cơ bản",
+        "đặt ẩn phụ",
+        "tham số"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "pt_logarit",
+      "title_vi": "Phương trình logarit",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "điều kiện",
+        "biến đổi",
+        "tham số"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "bpt_mu",
+      "title_vi": "Bất phương trình mũ",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "đơn điệu",
+        "đặt ẩn phụ",
+        "tham số"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "bpt_logarit",
+      "title_vi": "Bất phương trình logarit",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "điều kiện",
+        "đơn điệu",
+        "tham số"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "ung_dung_tich_phan",
+      "title_vi": "Ứng dụng tích phân",
+      "grade": 12,
+      "strand": "functions_calculus",
+      "subtopics": [
+        "diện tích",
+        "thể tích",
+        "quãng đường"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "bieu_dien_so_phuc",
+      "title_vi": "Biểu diễn số phức",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "mặt phẳng phức",
+        "môđun",
+        "liên hợp"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "pt_so_phuc",
+      "title_vi": "Phương trình số phức",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "bậc hai",
+        "liên hợp",
+        "tham số"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "mat_phang_oxyz",
+      "title_vi": "Mặt phẳng trong Oxyz",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "phương trình",
+        "vị trí tương đối",
+        "khoảng cách"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "duong_thang_oxyz",
+      "title_vi": "Đường thẳng trong Oxyz",
+      "grade": 12,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "tham số",
+        "vị trí tương đối",
+        "góc"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "mat_cau",
+      "title_vi": "Mặt cầu",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "phương trình",
+        "tiếp xúc",
+        "giao tuyến"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "goc_khoang_cach_oxyz",
+      "title_vi": "Góc và khoảng cách Oxyz",
+      "grade": 12,
+      "strand": "geometry_space",
+      "subtopics": [
+        "góc",
+        "đường vuông góc",
+        "khoảng cách"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "the_tich_khong_gian",
+      "title_vi": "Thể tích hình học không gian",
+      "grade": 12,
+      "strand": "geometry_space",
+      "subtopics": [
+        "lăng trụ",
+        "chóp",
+        "mặt cầu"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "tong_hop_thpt",
+      "title_vi": "Bài toán tổng hợp THPT",
+      "grade": 12,
+      "strand": "combinatorics_probability",
+      "subtopics": [
+        "đại số",
+        "giải tích",
+        "hình học",
+        "xác suất"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "bai_toan_thuc_te_12",
+      "title_vi": "Bài toán thực tế Toán 12",
+      "grade": 12,
+      "strand": "mathematical_modelling_or_other",
+      "subtopics": [
+        "tối ưu",
+        "tăng trưởng",
+        "chuyển động",
+        "kinh tế"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "hinh_khoi_va_the_tich_co_ban_12",
+      "title_vi": "Hình khối và thể tích cơ bản",
+      "grade": 12,
+      "strand": "geometry_space",
+      "subtopics": [
+        "lăng trụ",
+        "hình chóp",
+        "hình trụ",
+        "mặt cầu",
+        "thể tích"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "hinh_hoc_oxyz_van_dung_12",
+      "title_vi": "Vận dụng tọa độ Oxyz",
+      "grade": 12,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "khoảng cách Oxyz",
+        "góc",
+        "mặt phẳng",
+        "đường thẳng",
+        "mặt cầu"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_vectors_3d",
+      "title_vi": "Vectơ và độ dài trong không gian Oxyz",
+      "grade": 12,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "tọa độ vectơ",
+        "độ dài vectơ",
+        "tích vô hướng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_plane_equation",
+      "title_vi": "Phương trình mặt phẳng",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "vectơ pháp tuyến",
+        "mặt phẳng qua một điểm",
+        "thay tọa độ kiểm tra"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_line_equation_3d",
+      "title_vi": "Phương trình đường thẳng trong Oxyz",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "vectơ chỉ phương",
+        "phương trình tham số",
+        "điểm thuộc đường thẳng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_sphere_equation",
+      "title_vi": "Phương trình mặt cầu và tâm bán kính",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "đọc tâm",
+        "tìm bán kính",
+        "lập phương trình chuẩn"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_solid_surface_area",
+      "title_vi": "Diện tích xung quanh và toàn phần hình khối",
+      "grade": 12,
+      "strand": "geometry_space",
+      "subtopics": [
+        "hình trụ",
+        "hình nón",
+        "mặt cầu"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_point_plane_distance",
+      "title_vi": "Khoảng cách từ điểm đến mặt phẳng",
+      "grade": 12,
+      "strand": "geometry_space",
+      "subtopics": [
+        "công thức khoảng cách",
+        "mặt phẳng tọa độ",
+        "điều kiện điểm thuộc mặt phẳng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_line_plane_angle",
+      "title_vi": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+      "grade": 12,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "vectơ chỉ phương",
+        "vectơ pháp tuyến",
+        "sin góc giữa đường và mặt phẳng"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_two_planes_angle",
+      "title_vi": "Góc giữa hai mặt phẳng",
+      "grade": 12,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "hai vectơ pháp tuyến",
+        "cos góc",
+        "nhận biết vuông góc"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_line_plane_intersection",
+      "title_vi": "Giao điểm đường thẳng và mặt phẳng",
+      "grade": 12,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "thế tham số vào mặt phẳng",
+        "giải tham số",
+        "kiểm tra giao điểm"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_sphere_tangent_plane",
+      "title_vi": "Mặt phẳng tiếp xúc với mặt cầu",
+      "grade": 12,
+      "strand": "geometry_space",
+      "subtopics": [
+        "khoảng cách tâm đến mặt phẳng",
+        "điều kiện tiếp xúc",
+        "tìm tham số"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_skew_line_relation",
+      "title_vi": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "đồng phẳng hay chéo nhau",
+        "hệ phương trình tham số",
+        "tích hỗn tạp"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_min_distance_3d",
+      "title_vi": "Cực trị khoảng cách trong không gian tọa độ",
+      "grade": 12,
+      "strand": "algebra",
+      "subtopics": [
+        "điểm di động trên đường thẳng",
+        "hình chiếu vuông góc",
+        "tối ưu biểu thức bậc hai"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_sphere_plane_intersection",
+      "title_vi": "Giao tuyến mặt cầu và mặt phẳng",
+      "grade": 12,
+      "strand": "geometry_plane",
+      "subtopics": [
+        "đường tròn giao tuyến",
+        "bán kính đường tròn giao",
+        "tiếp xúc hoặc không giao"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_parameter_geometry",
+      "title_vi": "Bài toán tham số hình học Oxyz",
+      "grade": 12,
+      "strand": "geometry_space",
+      "subtopics": [
+        "điều kiện đồng phẳng",
+        "điều kiện vuông góc",
+        "biện luận giao điểm"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g12_geom_3d_optimization",
+      "title_vi": "Bài toán tối ưu hình học không gian",
+      "grade": 12,
+      "strand": "geometry_space",
+      "subtopics": [
+        "ràng buộc thể tích",
+        "diện tích nhỏ nhất",
+        "mô hình hóa thực tế"
+      ],
+      "supported_response_types": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution"
+      ],
+      "tier_targets": [
+        "foundation",
+        "intermediate",
+        "advanced"
+      ],
+      "source_status": "existing_project_catalog",
+      "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
+      "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    }
+  ]
+}

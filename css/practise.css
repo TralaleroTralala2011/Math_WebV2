@@ -1752,3 +1752,31 @@
     font-size: 12px;
     font-family: inherit;
 }
+
+/* Interactive 3D geometry controls: additive to the locked practice UI. */
+.mathweb-3d-controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin: 8px auto 4px;
+    max-width: 420px;
+}
+.mathweb-3d-controls button {
+    border: 1px solid rgba(115, 166, 255, .32);
+    border-radius: 999px;
+    padding: 6px 10px;
+    background: rgba(42, 86, 150, .18);
+    color: inherit;
+    font: inherit;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background .15s ease, border-color .15s ease, transform .15s ease;
+}
+.mathweb-3d-controls button:hover {
+    background: rgba(42, 86, 150, .32);
+    border-color: rgba(115, 166, 255, .65);
+}
+.mathweb-3d-controls button:active { transform: scale(.97); }
+.mathweb-3d-controls button:focus-visible { outline: 2px solid #75aaff; outline-offset: 2px; }
+.mathweb-3d-note { margin-top: 5px; font-size: 11px; opacity: .7; text-align: center; }

@@ -1,0 +1,524 @@
+{
+  "version": "1.0.0",
+  "notice": "Ngân hàng tham khảo ban đầu; cần rà soát điều kiện và đối chiếu chương trình trước khi dùng làm nguồn đáp án tự động.",
+  "entries": [
+    {
+      "id": "ft_001",
+      "area": "Logic and sets",
+      "name_vi": "Mệnh đề kéo theo",
+      "statement": "p⇒q tương đương ¬p∨q; phản đảo tương đương ¬q⇒¬p.",
+      "conditions_or_notes": "Không đồng nhất mệnh đề đảo với mệnh đề phản đảo."
+    },
+    {
+      "id": "ft_002",
+      "area": "Logic and sets",
+      "name_vi": "De Morgan",
+      "statement": "¬(p∧q) ⇔ (¬p∨¬q); ¬(p∨q) ⇔ (¬p∧¬q).",
+      "conditions_or_notes": "Áp dụng cho logic và phép toán tập hợp."
+    },
+    {
+      "id": "ft_003",
+      "area": "Logic and sets",
+      "name_vi": "Tập hợp",
+      "statement": "A\\B = A∩Bᶜ; (A∪B)ᶜ=Aᶜ∩Bᶜ; (A∩B)ᶜ=Aᶜ∪Bᶜ.",
+      "conditions_or_notes": "Phần bù xét trong tập vũ trụ xác định."
+    },
+    {
+      "id": "ft_004",
+      "area": "Algebra",
+      "name_vi": "Hằng đẳng thức bình phương",
+      "statement": "(a±b)²=a²±2ab+b².",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_005",
+      "area": "Algebra",
+      "name_vi": "Hiệu hai bình phương",
+      "statement": "a²−b²=(a−b)(a+b).",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_006",
+      "area": "Algebra",
+      "name_vi": "Lập phương",
+      "statement": "a³−b³=(a−b)(a²+ab+b²); a³+b³=(a+b)(a²−ab+b²).",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_007",
+      "area": "Algebra",
+      "name_vi": "Nhị thức Newton",
+      "statement": "(a+b)^n=Σ C(n,k)a^(n−k)b^k.",
+      "conditions_or_notes": "n nguyên không âm."
+    },
+    {
+      "id": "ft_008",
+      "area": "Algebra",
+      "name_vi": "Viète bậc hai",
+      "statement": "ax²+bx+c=0: x₁+x₂=−b/a; x₁x₂=c/a (a≠0).",
+      "conditions_or_notes": "Chỉ khi phương trình có hai nghiệm tính cả bội."
+    },
+    {
+      "id": "ft_009",
+      "area": "Algebra",
+      "name_vi": "Biệt thức",
+      "statement": "Δ=b²−4ac; nghiệm thực theo dấu Δ.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_010",
+      "area": "Algebra",
+      "name_vi": "Hoàn thành bình phương",
+      "statement": "ax²+bx+c=a(x+b/(2a))²−Δ/(4a).",
+      "conditions_or_notes": "a≠0."
+    },
+    {
+      "id": "ft_011",
+      "area": "Algebra",
+      "name_vi": "AM-GM",
+      "statement": "Với xᵢ≥0: (x₁+…+xₙ)/n ≥ (x₁…xₙ)^(1/n).",
+      "conditions_or_notes": "Dấu bằng khi các số bằng nhau."
+    },
+    {
+      "id": "ft_012",
+      "area": "Algebra",
+      "name_vi": "Cauchy-Schwarz",
+      "statement": "(Σaᵢ²)(Σbᵢ²)≥(Σaᵢbᵢ)².",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_013",
+      "area": "Algebra",
+      "name_vi": "Cauchy Engel",
+      "statement": "Σ xᵢ²/aᵢ ≥ (Σxᵢ)²/(Σaᵢ), aᵢ>0.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_014",
+      "area": "Algebra",
+      "name_vi": "Bernoulli",
+      "statement": "(1+x)^n≥1+nx với x≥−1, n nguyên không âm.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_015",
+      "area": "Algebra",
+      "name_vi": "Schur bậc 3",
+      "statement": "a³+b³+c³+3abc ≥ Σ_sym a²b/2, với a,b,c≥0.",
+      "conditions_or_notes": "Tương đương Σa(a−b)(a−c)≥0."
+    },
+    {
+      "id": "ft_016",
+      "area": "Algebra",
+      "name_vi": "Giá trị tuyệt đối",
+      "statement": "|x|≤a ⇔ −a≤x≤a (a≥0); |x|≥a ⇔ x≤−a hoặc x≥a.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_017",
+      "area": "Functions",
+      "name_vi": "Hợp hàm",
+      "statement": "(f∘g)(x)=f(g(x)).",
+      "conditions_or_notes": "Kiểm tra miền xác định."
+    },
+    {
+      "id": "ft_018",
+      "area": "Functions",
+      "name_vi": "Hàm chẵn/lẻ",
+      "statement": "f(−x)=f(x) chẵn; f(−x)=−f(x) lẻ.",
+      "conditions_or_notes": "Miền xác định cần đối xứng qua 0."
+    },
+    {
+      "id": "ft_019",
+      "area": "Functions",
+      "name_vi": "Hàm bậc hai",
+      "statement": "y=ax²+bx+c; đỉnh x=−b/(2a), y=−Δ/(4a).",
+      "conditions_or_notes": "a≠0."
+    },
+    {
+      "id": "ft_020",
+      "area": "Functions",
+      "name_vi": "Đạo hàm lũy thừa",
+      "statement": "(x^n)'=n x^(n−1).",
+      "conditions_or_notes": "Trên miền xác định thích hợp."
+    },
+    {
+      "id": "ft_021",
+      "area": "Functions",
+      "name_vi": "Quy tắc tích",
+      "statement": "(uv)'=u'v+uv'.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_022",
+      "area": "Functions",
+      "name_vi": "Quy tắc thương",
+      "statement": "(u/v)'=(u'v−uv')/v².",
+      "conditions_or_notes": "v≠0."
+    },
+    {
+      "id": "ft_023",
+      "area": "Functions",
+      "name_vi": "Đạo hàm hàm hợp",
+      "statement": "(f(g(x)))'=f'(g(x))g'(x).",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_024",
+      "area": "Functions",
+      "name_vi": "Đạo hàm mũ và log",
+      "statement": "(e^x)'=e^x; (ln x)'=1/x (x>0).",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_025",
+      "area": "Functions",
+      "name_vi": "Định lý giá trị trung bình",
+      "statement": "Nếu f liên tục trên [a,b], khả vi trên (a,b), tồn tại c: f'(c)=(f(b)−f(a))/(b−a).",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_026",
+      "area": "Sequences",
+      "name_vi": "Cấp số cộng",
+      "statement": "u_n=u_1+(n−1)d; S_n=n(u_1+u_n)/2.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_027",
+      "area": "Sequences",
+      "name_vi": "Cấp số nhân",
+      "statement": "u_n=u_1 q^(n−1); S_n=u_1(1−q^n)/(1−q), q≠1.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_028",
+      "area": "Sequences",
+      "name_vi": "Tổng bình phương",
+      "statement": "Σ_{k=1}^n k²=n(n+1)(2n+1)/6.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_029",
+      "area": "Sequences",
+      "name_vi": "Tổng lập phương",
+      "statement": "Σ_{k=1}^n k³=[n(n+1)/2]².",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_030",
+      "area": "Trigonometry",
+      "name_vi": "Cơ bản",
+      "statement": "sin²x+cos²x=1; tan x=sin x/cos x khi cos x≠0.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_031",
+      "area": "Trigonometry",
+      "name_vi": "Cộng góc sin",
+      "statement": "sin(a±b)=sin a cos b ± cos a sin b.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_032",
+      "area": "Trigonometry",
+      "name_vi": "Cộng góc cos",
+      "statement": "cos(a±b)=cos a cos b ∓ sin a sin b.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_033",
+      "area": "Trigonometry",
+      "name_vi": "Nhân đôi",
+      "statement": "sin2x=2sin x cos x; cos2x=cos²x−sin²x=1−2sin²x=2cos²x−1.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_034",
+      "area": "Trigonometry",
+      "name_vi": "Định lý sin",
+      "statement": "a/sin A=b/sin B=c/sin C=2R.",
+      "conditions_or_notes": "Tam giác không suy biến."
+    },
+    {
+      "id": "ft_035",
+      "area": "Trigonometry",
+      "name_vi": "Định lý cos",
+      "statement": "c²=a²+b²−2ab cos C.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_036",
+      "area": "Geometry",
+      "name_vi": "Diện tích tam giác",
+      "statement": "S=½ab sin C = abc/(4R)=rs.",
+      "conditions_or_notes": "Các biểu thức áp dụng với tam giác phù hợp."
+    },
+    {
+      "id": "ft_037",
+      "area": "Geometry",
+      "name_vi": "Heron",
+      "statement": "S=√[p(p−a)(p−b)(p−c)], p=(a+b+c)/2.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_038",
+      "area": "Geometry",
+      "name_vi": "Ceva",
+      "statement": "Ba đường thẳng qua các đỉnh đồng quy khi và chỉ khi (BD/DC)(CE/EA)(AF/FB)=1.",
+      "conditions_or_notes": "Điểm chia cạnh theo hướng có dấu khi cần."
+    },
+    {
+      "id": "ft_039",
+      "area": "Geometry",
+      "name_vi": "Menelaus",
+      "statement": "Với A,B,C thẳng hàng theo cấu hình cắt cạnh: tích ba tỉ số có hướng bằng −1 (quy ước dấu phụ thuộc cách đặt).",
+      "conditions_or_notes": "Phải thống nhất quy ước đoạn có hướng."
+    },
+    {
+      "id": "ft_040",
+      "area": "Geometry",
+      "name_vi": "Phương tích điểm",
+      "statement": "Với hai cát tuyến PAB và PCD: PA·PB=PC·PD (đoạn có hướng phù hợp).",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_041",
+      "area": "Geometry",
+      "name_vi": "Góc nội tiếp",
+      "statement": "Số đo góc nội tiếp bằng nửa số đo cung bị chắn.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_042",
+      "area": "Geometry",
+      "name_vi": "Ptolemy",
+      "statement": "Tứ giác lồi ABCD nội tiếp: AC·BD=AB·CD+AD·BC.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_043",
+      "area": "Geometry",
+      "name_vi": "Đường tròn",
+      "statement": "Độ dài cung l=Rθ; diện tích quạt S=½R²θ.",
+      "conditions_or_notes": "θ tính bằng radian."
+    },
+    {
+      "id": "ft_044",
+      "area": "Geometry",
+      "name_vi": "Vectơ",
+      "statement": "AB⃗=(x_B−x_A,y_B−y_A) hoặc tương tự trong 3D.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_045",
+      "area": "Geometry",
+      "name_vi": "Khoảng cách 2D",
+      "statement": "d(A,B)=√[(x₂−x₁)²+(y₂−y₁)²].",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_046",
+      "area": "Geometry",
+      "name_vi": "Trung điểm",
+      "statement": "M=((x₁+x₂)/2,(y₁+y₂)/2) trong mặt phẳng.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_047",
+      "area": "Geometry",
+      "name_vi": "Đường thẳng",
+      "statement": "Ax+By+C=0; khoảng cách từ (x₀,y₀) đến đường thẳng = |Ax₀+By₀+C|/√(A²+B²).",
+      "conditions_or_notes": "A²+B²>0."
+    },
+    {
+      "id": "ft_048",
+      "area": "Geometry",
+      "name_vi": "Khoảng cách 3D",
+      "statement": "d(A,B)=√[(Δx)²+(Δy)²+(Δz)²].",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_049",
+      "area": "Geometry",
+      "name_vi": "Mặt cầu",
+      "statement": "(x−a)²+(y−b)²+(z−c)²=R².",
+      "conditions_or_notes": "R>0."
+    },
+    {
+      "id": "ft_050",
+      "area": "Geometry",
+      "name_vi": "Tích vô hướng",
+      "statement": "a·b=|a||b|cosθ; tọa độ: Σaᵢbᵢ.",
+      "conditions_or_notes": "Vectơ khác 0 khi dùng góc."
+    },
+    {
+      "id": "ft_051",
+      "area": "Geometry",
+      "name_vi": "Thể tích lăng trụ",
+      "statement": "V=S_đáy h.",
+      "conditions_or_notes": "h là chiều cao vuông góc."
+    },
+    {
+      "id": "ft_052",
+      "area": "Geometry",
+      "name_vi": "Thể tích chóp",
+      "statement": "V=⅓ S_đáy h.",
+      "conditions_or_notes": "h là chiều cao vuông góc."
+    },
+    {
+      "id": "ft_053",
+      "area": "Geometry",
+      "name_vi": "Thể tích cầu",
+      "statement": "V=4πR³/3; diện tích mặt cầu=4πR².",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_054",
+      "area": "Combinatorics",
+      "name_vi": "Giai thừa",
+      "statement": "n!=n(n−1)…2·1; 0!=1.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_055",
+      "area": "Combinatorics",
+      "name_vi": "Hoán vị",
+      "statement": "P_n=n!.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_056",
+      "area": "Combinatorics",
+      "name_vi": "Chỉnh hợp",
+      "statement": "A_n^k=n!/(n−k)!.",
+      "conditions_or_notes": "0≤k≤n."
+    },
+    {
+      "id": "ft_057",
+      "area": "Combinatorics",
+      "name_vi": "Tổ hợp",
+      "statement": "C_n^k=n!/[k!(n−k)!].",
+      "conditions_or_notes": "0≤k≤n."
+    },
+    {
+      "id": "ft_058",
+      "area": "Combinatorics",
+      "name_vi": "Bao hàm-loại trừ 2 tập",
+      "statement": "|A∪B|=|A|+|B|−|A∩B|.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_059",
+      "area": "Combinatorics",
+      "name_vi": "Nhị thức xác suất",
+      "statement": "P(X=k)=C(n,k)p^k(1−p)^(n−k).",
+      "conditions_or_notes": "n phép thử Bernoulli độc lập, cùng p."
+    },
+    {
+      "id": "ft_060",
+      "area": "Probability",
+      "name_vi": "Xác suất cổ điển",
+      "statement": "P(A)=|A|/|Ω|.",
+      "conditions_or_notes": "Các kết quả sơ cấp đồng khả năng và Ω hữu hạn."
+    },
+    {
+      "id": "ft_061",
+      "area": "Probability",
+      "name_vi": "Xác suất có điều kiện",
+      "statement": "P(A|B)=P(A∩B)/P(B).",
+      "conditions_or_notes": "P(B)>0."
+    },
+    {
+      "id": "ft_062",
+      "area": "Probability",
+      "name_vi": "Bayes",
+      "statement": "P(Aᵢ|B)=P(B|Aᵢ)P(Aᵢ)/ΣⱼP(B|Aⱼ)P(Aⱼ).",
+      "conditions_or_notes": "Các Aᵢ tạo thành phân hoạch và P(B)>0."
+    },
+    {
+      "id": "ft_063",
+      "area": "Statistics",
+      "name_vi": "Trung bình mẫu",
+      "statement": "x̄=(Σxᵢ)/n.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_064",
+      "area": "Statistics",
+      "name_vi": "Phương sai dữ liệu",
+      "statement": "s²=(Σ(xᵢ−x̄)²)/n theo quy ước mô tả dữ liệu phổ thông.",
+      "conditions_or_notes": "Phân biệt phương sai tổng thể và ước lượng không chệch."
+    },
+    {
+      "id": "ft_065",
+      "area": "Complex numbers",
+      "name_vi": "Số phức",
+      "statement": "z=a+bi; i²=−1; |z|=√(a²+b²).",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_066",
+      "area": "Complex numbers",
+      "name_vi": "Liên hợp",
+      "statement": "z z̄=|z|²; (a+bi)⁻¹=(a−bi)/(a²+b²) khi z≠0.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_067",
+      "area": "Number theory",
+      "name_vi": "Euclid",
+      "statement": "gcd(a,b)=gcd(b,a mod b).",
+      "conditions_or_notes": "Với a,b nguyên không đồng thời bằng 0."
+    },
+    {
+      "id": "ft_068",
+      "area": "Number theory",
+      "name_vi": "Định lý Fermat nhỏ",
+      "statement": "Nếu p nguyên tố và p∤a thì a^(p−1)≡1 (mod p).",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_069",
+      "area": "Number theory",
+      "name_vi": "Định lý Euler",
+      "statement": "Nếu gcd(a,n)=1 thì a^φ(n)≡1 (mod n).",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_070",
+      "area": "Number theory",
+      "name_vi": "Đồng dư tuyến tính",
+      "statement": "ax≡b (mod n) có nghiệm khi và chỉ khi gcd(a,n)|b.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_071",
+      "area": "Number theory",
+      "name_vi": "Nguyên lý Dirichlet",
+      "statement": "Nếu n+1 vật đặt vào n hộp thì có hộp chứa ít nhất 2 vật.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_072",
+      "area": "Proof methods",
+      "name_vi": "Quy nạp",
+      "statement": "Chứng minh mệnh đề cơ sở và bước P(n)⇒P(n+1).",
+      "conditions_or_notes": "Phải xác định miền n và bước đầu."
+    },
+    {
+      "id": "ft_073",
+      "area": "Proof methods",
+      "name_vi": "Phản chứng",
+      "statement": "Giả sử phủ định kết luận, suy ra mâu thuẫn với giả thiết/định lý.",
+      "conditions_or_notes": ""
+    },
+    {
+      "id": "ft_074",
+      "area": "Proof methods",
+      "name_vi": "Phân tích trường hợp",
+      "statement": "Phân hoạch các trường hợp bao phủ toàn bộ khả năng và không bỏ sót.",
+      "conditions_or_notes": ""
+    }
+  ]
+}

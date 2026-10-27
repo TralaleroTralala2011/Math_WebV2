@@ -6,7 +6,7 @@ this module does not reproduce textbook wording or proprietary exercise sets.
 from __future__ import annotations
 import math, random, re, unicodedata
 from fractions import Fraction
-from .geometry_diagrams import triangle_3_4_5, triangle_from_sides, triangle_with_base_height, rectangle, square, trapezoid, rhombus, regular_polygon, circle, circle_with_tangent, circle_with_diameter, inscribed_rectangle, inscribed_right_triangle, inscribed_square, validate_geometry_diagram, inscribed_triangle_by_angles, circle_with_central_angle, triangle_from_angles, similar_triangles, circle_with_chord, coordinate_points, parallel_lines_transversal, angle_bisector_triangle, triangle_median_diagram, cyclic_chords_diagram, isosceles_triangle_diagram, parabola_diagram, cube_projection, cylinder_projection, cone_projection, sphere_projection, pyramid_projection, graph_diagram, line_graph, quadratic_graph, trigonometric_graph, right_triangle_with_altitude, external_tangents_to_circle
+from .geometry_diagrams import triangle_3_4_5, triangle_from_sides, triangle_with_base_height, rectangle, square, trapezoid, rhombus, regular_polygon, circle, circle_with_tangent, circle_with_diameter, inscribed_rectangle, inscribed_right_triangle, inscribed_square, validate_geometry_diagram, inscribed_triangle_by_angles, circle_with_central_angle, triangle_from_angles, similar_triangles, circle_with_chord, coordinate_points, parallel_lines_transversal, angle_bisector_triangle, triangle_median_diagram, cyclic_chords_diagram, isosceles_triangle_diagram, parabola_diagram, cube_projection, cylinder_projection, cone_projection, sphere_projection, pyramid_projection, regular_prism_projection, triangular_prism_by_dimensions, pyramid_by_base_height, graph_diagram, line_graph, quadratic_graph, trigonometric_graph, right_triangle_with_altitude, external_tangents_to_circle
 
 
 def _q(question, answer, solution, distractors, hint, family, style="calculation", diagram=None):
@@ -478,10 +478,104 @@ def _olympic_extension(kind, grade):
     return None
 
 
-def generate(grade: int, topic_id: str, difficulty: str, game_id: str | None = None):
+def _g10_coordinate_midpoint_topic(level: str):
+    """Dedicated topic bank: midpoint, point distance, section ratio and olympiad extensions."""
+    level = level if level in {"easy", "medium", "hard", "expert", "hell"} else "easy"
+    if level == "easy":
+        family = random.choice(["midpoint", "distance_points", "recover_endpoint", "midpoint_axis"])
+    elif level in {"medium", "hard"}:
+        family = random.choice(["distance_points", "recover_endpoint", "section_ratio", "distance_compare", "midpoint_parameter"])
+    else:
+        family = random.choice(["distance_locus", "midpoint_parameter", "section_ratio_proof", "parallelogram_midpoint", "distance_sum_parameter"])
+    ax, ay = random.randint(-7, 7), random.randint(-7, 7)
+    bx, by = random.randint(-7, 7), random.randint(-7, 7)
+    while (ax, ay) == (bx, by):
+        bx, by = random.randint(-7, 7), random.randint(-7, 7)
+    dx, dy = bx-ax, by-ay
+    d2 = dx*dx + dy*dy
+    dist = math.sqrt(d2)
+    if family == "midpoint":
+        mx, my = Fraction(ax+bx,2), Fraction(ay+by,2)
+        ans = f"({_fmt_fraction(mx.numerator,mx.denominator)}; {_fmt_fraction(my.numerator,my.denominator)})"
+        return _q(f"Trong mặt phẳng tọa độ, cho A({ax}; {ay}), B({bx}; {by}). Tìm tọa độ trung điểm M của AB.", ans,
+                  f"M=((x_A+x_B)/2;(y_A+y_B)/2)=(({ax}+{bx})/2;({ay}+{by})/2)=({ _fmt_fraction(mx.numerator,mx.denominator)};{_fmt_fraction(my.numerator,my.denominator)}).",
+                  [f"({ax+bx}; {ay+by})",f"({ax-bx}; {ay-by})",f"({bx}; {ay})"], "Tính trung bình cộng hai hoành độ và hai tung độ riêng biệt.", family,
+                  diagram=coordinate_points({"A":[ax,ay],"B":[bx,by],"M":[float(mx),float(my)]},[["A","B"],["A","M"],["M","B"]],"M là trung điểm của đoạn AB."))
+    if family == "distance_points":
+        return _q(f"Cho A({ax}; {ay}), B({bx}; {by}). Tính độ dài AB.", f"√{d2}" if int(math.isqrt(d2))**2 != d2 else str(math.isqrt(d2)),
+                  f"AB=√[({bx}−({ax}))²+({by}−({ay}))²]=√({dx*dx}+{dy*dy})=√{d2}"+(f"={math.isqrt(d2)}" if int(math.isqrt(d2))**2==d2 else ""),
+                  [str(abs(dx)+abs(dy)),str(d2),f"√{abs(dx*dx-dy*dy)}"], "Lấy hiệu hoành độ và tung độ, bình phương rồi cộng lại.", family,
+                  diagram=coordinate_points({"A":[ax,ay],"B":[bx,by]},[["A","B"]],"Hai điểm được đặt đúng theo tọa độ đã cho."))
+    if family == "recover_endpoint":
+        mx,my=Fraction(ax+bx,2),Fraction(ay+by,2)
+        cx,cy=2*mx-ax,2*my-ay
+        ans=f"({ _fmt_fraction(cx.numerator,cx.denominator)}; {_fmt_fraction(cy.numerator,cy.denominator)})"
+        return _q(f"M({ _fmt_fraction(mx.numerator,mx.denominator)}; {_fmt_fraction(my.numerator,my.denominator)}) là trung điểm AB. Biết A({ax}; {ay}), tìm B.",ans,
+                  f"x_B=2x_M−x_A=2·{_fmt_fraction(mx.numerator,mx.denominator)}−({ax})={_fmt_fraction(cx.numerator,cx.denominator)}; y_B=2y_M−y_A=2·{_fmt_fraction(my.numerator,my.denominator)}−({ay})={_fmt_fraction(cy.numerator,cy.denominator)}.",
+                  [f"({ax+bx}; {ay+by})",f"({ax-bx}; {ay-by})",f"({bx}; {ay})"],"Dùng tính chất trung điểm theo từng tọa độ.",family,
+                  diagram=coordinate_points({"A":[ax,ay],"M":[float(mx),float(my)],"B":[float(cx),float(cy)]},[["A","B"],["A","M"],["M","B"]],"M là trung điểm của AB."))
+    if family == "midpoint_axis":
+        # Choose a point B so midpoint lies on the y-axis, then solve x_A.
+        x_b=random.randint(1,8); x_a=-x_b; y_a=random.randint(-5,5); y_b=random.randint(-5,5)
+        ans=str(x_a)
+        return _q(f"A(m; {y_a}) và B({x_b}; {y_b}) có trung điểm nằm trên trục Oy. Tìm m.",ans,
+                  f"Hoành độ trung điểm là (m+{x_b})/2. Vì trung điểm thuộc Oy nên (m+{x_b})/2=0, suy ra m=−{x_b}.",
+                  [str(x_b),str(-2*x_b),"0"],"Điểm thuộc trục Oy có hoành độ bằng 0.",family)
+    if family == "section_ratio":
+        m,n=random.choice([(1,2),(2,1),(2,3),(3,2)])
+        # AP:PB = m:n => P=(n*A + m*B)/(m+n)
+        px=Fraction(n*ax+m*bx,m+n); py=Fraction(n*ay+m*by,m+n)
+        ans=f"({_fmt_fraction(px.numerator,px.denominator)}; {_fmt_fraction(py.numerator,py.denominator)})"
+        return _q(f"Cho A({ax}; {ay}), B({bx}; {by}). Điểm P chia đoạn AB trong tỉ số AP:PB={m}:{n}. Tìm P.",ans,
+                  f"P=((n·x_A+m·x_B)/(m+n);(n·y_A+m·y_B)/(m+n))=(({n}·{ax}+{m}·{bx})/{m+n};({n}·{ay}+{m}·{by})/{m+n})=({ _fmt_fraction(px.numerator,px.denominator)};{_fmt_fraction(py.numerator,py.denominator)}).",
+                  [f"({ax+bx}; {ay+by})",f"({_fmt_fraction(Fraction(ax+bx,2).numerator,Fraction(ax+bx,2).denominator)}; {_fmt_fraction(Fraction(ay+by,2).numerator,Fraction(ay+by,2).denominator)})",f"({bx-ax}; {by-ay})"],"Áp dụng công thức chia đoạn theo tỉ số AP:PB.",family,
+                  diagram=coordinate_points({"A":[ax,ay],"B":[bx,by],"P":[float(px),float(py)]},[["A","B"],["A","P"],["P","B"]],"P chia AB theo tỉ số đã cho."))
+    if family == "distance_compare":
+        cx,cy=random.randint(-5,5),random.randint(-5,5)
+        da=(cx-ax)**2+(cy-ay)**2; db=(cx-bx)**2+(cy-by)**2
+        ans="CA=CB" if da==db else ("CA<CB" if da<db else "CA>CB")
+        return _q(f"Cho A({ax}; {ay}), B({bx}; {by}), C({cx}; {cy}). So sánh CA và CB.",ans,
+                  f"CA²=({cx}−{ax})²+({cy}−{ay})²={da}; CB²=({cx}−{bx})²+({cy}−{by})²={db}. So sánh hai bình phương không âm suy ra {ans}.",
+                  ["CA=CB" if ans!="CA=CB" else "CA<CB","CA>CB" if ans!="CA>CB" else "CA<CB","Không đủ dữ kiện"],"Tính bình phương hai khoảng cách để tránh căn thức.",family,
+                  diagram=coordinate_points({"A":[ax,ay],"B":[bx,by],"C":[cx,cy]},[["C","A"],["C","B"]],"So sánh khoảng cách từ C đến A và B."))
+    if family == "midpoint_parameter":
+        k=random.randint(-5,5); target=random.randint(-4,4)
+        ans=str(2*target-k)
+        return _q(f"A(m; {ay}), B({k}; {by}) có trung điểm M thuộc đường thẳng x={target}. Tìm m.",ans,
+                  f"Hoành độ trung điểm là (m+{k})/2. Vì M thuộc x={target}, ta có (m+{k})/2={target}, suy ra m={ans}.",
+                  [str(k-2*target),str(target-k),str(2*target+k)],"Điều kiện M thuộc đường thẳng x=c quy về hoành độ trung điểm bằng c.",family)
+    if family == "distance_locus":
+        r=random.randint(2,8); h,k=random.randint(-3,3),random.randint(-3,3)
+        ans=f"(x−({h}))²+(y−({k}))²={r*r}"
+        return _q(f"Tìm phương trình tập hợp các điểm M(x;y) cách điểm I({h}; {k}) một khoảng {r}.",ans,
+                  f"Điều kiện MI={r} tương đương √((x−{h})²+(y−{k})²)={r}. Bình phương hai vế được (x−({h}))²+(y−({k}))²={r*r}.",
+                  [f"(x+{h})²+(y+{k})²={r}",f"(x−({h}))²+(y−({k}))²={r}",f"x²+y²={r*r}"],"Tập hợp điểm cách một điểm cố định R là đường tròn tâm I, bán kính R.",family,
+                  diagram=circle(r,(h,k),label="I"))
+    if family == "section_ratio_proof":
+        return _q("Cho A(x₁;y₁), B(x₂;y₂). Chứng minh trung điểm M của AB không phụ thuộc vào cách chọn hệ trục tọa độ?", "Không; tọa độ phụ thuộc hệ trục, còn điểm hình học M thì không đổi",
+                  "Khi đổi hệ trục, các tọa độ của A, B và M có thể thay đổi. Tuy nhiên, định nghĩa hình học M là điểm nằm trên AB và MA=MB không phụ thuộc hệ tọa độ.",
+                  ["Có; cả điểm M và tọa độ đều luôn giữ nguyên", "M luôn là gốc tọa độ", "Không thể xác định trung điểm"],"Phân biệt điểm hình học với tọa độ của điểm.",family,"proof_reasoning")
+    if family == "parallelogram_midpoint":
+        ax,ay=0,0; bx,by=random.randint(2,8),random.randint(-4,4); dx,dy=random.randint(-4,4),random.randint(2,8); cx,cy=bx+dx,by+dy
+        ans=f"({bx+dx}; {by+dy})"
+        return _q(f"Trong hình bình hành ABCD, A({ax};{ay}), B({bx};{by}), D({dx};{dy}). Tìm tọa độ C.",ans,
+                  f"Trong hình bình hành, vectơ AC=AB+AD nên C=B+D−A=({bx}+{dx};{by}+{dy})=({bx+dx};{by+dy}).",
+                  [f"({bx-dx}; {by-dy})",f"({dx-bx}; {dy-by})",f"({bx}; {dy})"],"Dùng quy tắc hình bình hành theo tọa độ.",family,"multi_step",
+                  diagram=coordinate_points({"A":[ax,ay],"B":[bx,by],"D":[dx,dy],"C":[cx,cy]},[["A","B"],["B","C"],["C","D"],["D","A"]],"Hình bình hành được dựng từ ba đỉnh đã cho."))
+    # National-level parameterized sum of squared distances; use a correct minimizer.
+    x0,y0=random.randint(-4,4),random.randint(-4,4)
+    ans=f"({x0}; {y0+1})"
+    return _q(f"Với A({x0-2};{y0}), B({x0+2};{y0}), C({x0};{y0+3}), tìm điểm M làm tổng MA²+MB²+MC² nhỏ nhất.",ans,
+              f"Tổng bình phương khoảng cách đến các điểm cố định đạt cực tiểu tại trọng tâm G. G=(({x0-2}+{x0+2}+{x0})/3;({y0}+{y0}+{y0+3})/3)=({x0};{y0+1}).",
+              [f"({x0}; {y0+1})",f"({x0+1}; {y0})",f"({x0-1}; {y0+1})"],"Dùng đẳng thức tổng bình phương khoảng cách và trọng tâm của ba điểm.",family,"olympiad_reasoning")
+
+
+def _generate_geometry_question(grade: int, topic_id: str, difficulty: str, game_id: str | None = None):
     """Return an original geometry question, or None for a non-geometry topic."""
     t=(topic_id or "").lower()
     g=int(grade or 10)
+    if t == "g10_geom_coordinate_distance_midpoint":
+        return _g10_coordinate_midpoint_topic(difficulty)
     aliases={
       "hinh_hoc_co_ban_10":"plane", "tam_giac_tu_giac_10":"plane", "duong_tron_co_ban_10":"circle", "he_thuc_luong_van_dung_10":"triangle", "toa_do_hinh_hoc_10":"coordinate", "chung_minh_hinh_hoc_10":"plane", "phep_bien_hinh_co_ban_11":"transform", "nhan_biet_hinh_khong_gian_11":"space11", "hinh_khoi_va_the_tich_co_ban_12":"volume", "hinh_hoc_oxyz_van_dung_12":"space12",
       "he_thuc_luong":"triangle", "he_thuc_luong_tam_giac":"triangle", "hinh_hoc_10":"plane",
@@ -489,7 +583,53 @@ def generate(grade: int, topic_id: str, difficulty: str, game_id: str | None = N
       "phep_bien_hinh_11":"transform", "hinh_khong_gian":"space11", "song_song_khong_gian":"space11",
       "vuong_goc_khong_gian":"space11", "goc_khoang_cach_11":"space11", "thiet_dien_hinh_khong_gian_11":"space11",
       "hinh_hoc_khong_gian":"volume", "toa_do_khong_gian":"space12", "mat_phang_oxyz":"plane", "duong_thang_oxyz":"line3d", "goc_khoang_cach_oxyz":"distance3d", "mat_cau":"sphere", "the_tich_khong_gian":"volume",
-      "ham_so_bac_nhat":"graph", "ham_so_bac_hai":"graph", "do_thi_ham_so":"graph", "do_thi":"graph", "ham_so":"graph", "dao_ham":"graph", "cuc_tri":"graph"
+      "ham_so_bac_nhat":"graph", "ham_so_bac_hai":"graph", "do_thi_ham_so":"graph", "do_thi":"graph", "ham_so":"graph", "dao_ham":"graph", "cuc_tri":"graph",
+      # Added 45 focused geometry topics (2026-10-16), routed to grade-aware validated builders.
+      "g10_geom_angles_parallel":"plane",
+      "g10_geom_triangle_congruence":"triangle",
+      "g10_geom_special_lines":"triangle",
+      "g10_geom_quadrilaterals_properties":"plane",
+      "g10_geom_circle_chords_arcs":"circle",
+      "g10_geom_thales_similarity":"triangle",
+      "g10_geom_triangle_area_ratio":"triangle",
+      "g10_geom_circle_angles":"circle",
+      "g10_geom_coordinate_distance_midpoint":"coordinate",
+      "g10_geom_line_intersections":"line2d",
+      "g10_geom_locus":"plane",
+      "g10_geom_circle_tangent_chord":"circle",
+      "g10_geom_triangle_inequalities":"triangle",
+      "g10_geom_vector_proofs":"vector",
+      "g10_geom_coordinate_circle_line":"coordinate",
+      "g11_geom_transform_translation":"transform",
+      "g11_geom_transform_reflection":"transform",
+      "g11_geom_space_lines_planes":"space11",
+      "g11_geom_parallel_line_plane":"space11",
+      "g11_geom_prism_pyramid_sections":"space11",
+      "g11_geom_rotation_homothety":"transform",
+      "g11_geom_parallel_planes":"space11",
+      "g11_geom_perpendicular_line_plane":"space11",
+      "g11_geom_dihedral_angles":"space11",
+      "g11_geom_section_construction":"space11",
+      "g11_geom_skew_lines_distance":"space11",
+      "g11_geom_three_perpendiculars":"space11",
+      "g11_geom_transform_composition":"transform",
+      "g11_geom_section_ratio":"space11",
+      "g11_geom_space_proof":"space11",
+      "g12_geom_vectors_3d":"space12",
+      "g12_geom_plane_equation":"plane",
+      "g12_geom_line_equation_3d":"line3d",
+      "g12_geom_sphere_equation":"sphere",
+      "g12_geom_solid_surface_area":"volume",
+      "g12_geom_point_plane_distance":"distance3d",
+      "g12_geom_line_plane_angle":"distance3d",
+      "g12_geom_two_planes_angle":"distance3d",
+      "g12_geom_line_plane_intersection":"line3d",
+      "g12_geom_sphere_tangent_plane":"sphere",
+      "g12_geom_skew_line_relation":"line3d",
+      "g12_geom_min_distance_3d":"distance3d",
+      "g12_geom_sphere_plane_intersection":"sphere",
+      "g12_geom_parameter_geometry":"space12",
+      "g12_geom_3d_optimization":"volume",
     }
     kind=aliases.get(t)
     if not kind: return None
@@ -531,3 +671,32 @@ def generate(grade: int, topic_id: str, difficulty: str, game_id: str | None = N
     if kind=="coordinate": return _g12_space_coordinate(level)
     if kind=="circle": return _g10_circle(level, game_id)
     return _g12_space_coordinate(level)
+
+
+def generate(grade: int, topic_id: str, difficulty: str, game_id: str | None = None):
+    """Generate a geometry question and ensure new geometry topics have a relevant diagram."""
+    q = _generate_geometry_question(grade, topic_id, difficulty, game_id)
+    if q is None or not topic_id.startswith(("g10_geom_", "g11_geom_", "g12_geom_")):
+        return q
+    if not q.get("diagram"):
+        tid = topic_id
+        # Topic-family fallbacks are intentionally shape-specific; these diagrams
+        # are labeled as illustrations and never claim to be numerically to scale.
+        if any(k in tid for k in ("circle", "chords", "sphere")) or tid in {"g12_geom_sphere_equation", "g12_geom_sphere_tangent_plane", "g12_geom_sphere_plane_intersection"}:
+            diagram = circle(5) if not tid.startswith("g12_geom_sphere") else sphere_projection(5)
+        elif any(k in tid for k in ("triangle", "thales", "special_lines", "area_ratio", "inequalities")):
+            diagram = triangle_3_4_5()
+        elif any(k in tid for k in ("transform", "reflection", "rotation", "homothety")):
+            diagram = coordinate_points({"A":[1,1],"B":[4,1],"A′":[1,4],"B′":[4,4]}, [["A","B"],["A′","B′"]], "Minh họa ảnh của đoạn thẳng qua phép biến hình; không theo tỉ lệ dữ kiện.")
+        elif grade == 11:
+            diagram = pyramid_projection() if any(k in tid for k in ("pyramid", "section", "space_proof", "ratio")) else cube_projection()
+        elif grade == 12 and any(k in tid for k in ("volume", "solid", "optimization")):
+            diagram = pyramid_projection()
+        else:
+            diagram = coordinate_points({"A":[0,0],"B":[4,0],"C":[2,3]}, [["A","B"],["B","C"],["C","A"]], "Hình hình học minh họa theo chủ đề; không theo tỉ lệ dữ kiện.")
+        errors = validate_geometry_diagram(diagram)
+        if errors:
+            raise ValueError("Invalid fallback geometry diagram: " + "; ".join(errors))
+        q["diagram"] = diagram
+        q["diagram_generated_for_topic"] = True
+    return q

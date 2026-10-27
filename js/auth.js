@@ -1111,9 +1111,15 @@ function isAuthPage() {
 
 function redirectToAccount() {
 
-    window.location.replace(
-        "account.html"
-    );
+    // Admin dùng cùng login.html với người học, nhưng được đưa vào
+    // Control Center thay vì trang tài khoản/luyện tập.
+    const currentUser = getUser();
+    if (currentUser && currentUser.role === "admin") {
+        window.location.replace("admin.html");
+        return;
+    }
+
+    window.location.replace("account.html");
 }
 
 

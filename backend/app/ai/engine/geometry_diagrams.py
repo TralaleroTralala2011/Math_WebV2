@@ -162,16 +162,85 @@ def external_tangents_to_circle(radius=1, labels=("A", "B", "P", "O")):
         tangent_constraints=[[O, A, P], [O, B, P]],
         measurements=[{"from": O, "to": A, "text": str(radius)}, {"from": O, "to": B, "text": str(radius)}])
 
+
+def normalize_geometry_diagram(diagram):
+    """Convert legacy compact diagram payloads into data-bound geometry primitives.
+
+    This keeps older question banks working while preventing their generic SVG
+    placeholders from ignoring dimensions and coordinates carried by a prompt.
+    Unknown diagram types are left untouched for their dedicated renderer.
+    """
+    if not isinstance(diagram, dict):
+        return diagram
+    kind = diagram.get("type")
+    try:
+        if kind == "right_triangle":
+            a, b = float(diagram["a"]), float(diagram["b"])
+            return triangle_3_4_5(a, b, tuple(diagram.get("labels", ("A", "B", "C"))))
+        if kind == "triangle_area":
+            base, height = float(diagram["base"]), float(diagram["height"])
+            if min(base, height) <= 0:
+                raise ValueError("Triangle base and height must be positive")
+            A, B, C, H = "A", "B", "C", "H"
+            foot = base * 0.62
+            return _geom({A: [0.0, 0.0], B: [base, 0.0], C: [foot, height], H: [foot, 0.0]},
+                [[A, B], [B, C], [C, A], [C, H], [H, B]],
+                "Tam giác có đáy và chiều cao đúng theo dữ kiện.", right_angle=H,
+                altitudes=[[C, H]], dashed_segments=[[C, H]],
+                measurements=[{"from": A, "to": B, "text": str(base)}, {"from": H, "to": C, "text": str(height)}],
+                constraints=[{"type": "point_on_segment", "point": H, "segment": [A, B]},
+                             {"type": "right_triangle_altitude", "vertex": C, "foot": H, "base": [A, B]}])
+        if kind == "circle" and diagram.get("shape") == "diameter" and isinstance(diagram.get("points"), dict):
+            radius = diagram.get("radius")
+            if radius is not None and float(radius) > 0:
+                points = {name: list(xy) for name, xy in diagram["points"].items()}
+                center = points.get("O", [0.0, 0.0])
+                diameter_points = [name for name in ("A", "B") if name in points]
+                measurements = ([{"from": diameter_points[0], "to": diameter_points[1], "text": str(diagram.get("diameter"))}]
+                                if len(diameter_points) == 2 and diagram.get("diameter") is not None else [])
+                return _geom(points, diagram.get("segments", [["A", "B"]]),
+                    diagram.get("caption", "Đường tròn và đường kính theo dữ kiện."),
+                    circles=[{"center": center, "radius": float(radius)}],
+                    circle_vertices=diameter_points, measurements=measurements, diagram_mode="exact_data")
+        if kind == "circle" and not diagram.get("points") and diagram.get("radius", diagram.get("r")) is not None:
+            return circle(float(diagram.get("radius", diagram.get("r"))))
+        if kind == "circle_tangent" and diagram.get("radius", diagram.get("r")) is not None:
+            return circle_with_tangent(float(diagram.get("radius", diagram.get("r"))))
+        if kind == "pyramid" and not diagram.get("points"):
+            schematic = pyramid_projection(tuple(diagram.get("labels", ("S", "A", "B", "C", "D"))))
+            schematic["diagram_mode"] = "schematic_projection"
+            schematic["caption"] = "Sơ đồ hình chóp minh họa; dùng các điều kiện ghi trong đề để suy luận."
+            return schematic
+        if kind == "points" and isinstance(diagram.get("a"), (list, tuple)) and isinstance(diagram.get("b"), (list, tuple)):
+            a, b = diagram["a"], diagram["b"]
+            if len(a) < 2 or len(b) < 2:
+                raise ValueError("Coordinate points require x and y")
+            return _geom({"A": [float(a[0]), float(a[1])], "B": [float(b[0]), float(b[1])]},
+                [["A", "B"]], "Hai điểm được đặt theo đúng tọa độ đề bài.", axes=True,
+                coordinates_2d={"A": [float(a[0]), float(a[1])], "B": [float(b[0]), float(b[1])]})
+    except (KeyError, TypeError, ValueError, OverflowError) as exc:
+        # The caller's validation gate will suppress malformed geometry rather than
+        # silently replacing it with a plausible but unrelated illustration.
+        return {"type": "geometry", "points": {}, "segments": [], "caption": "Không thể dựng hình từ dữ kiện hiện có.",
+                "diagram_error": str(exc)}
+    return diagram
+
 def validate_geometry_diagram(diagram):
     """Return errors for malformed geometry or inconsistent right-angle/circle constraints."""
     errors=[]
     if not isinstance(diagram,dict) or diagram.get("type")!="geometry": return errors
     points=diagram.get("points",{})
     if not isinstance(points,dict): return ["points must be a mapping"]
+    if not points and not diagram.get("circles"):
+        return ["geometry diagram needs at least one point or circle"]
     for name,xy in points.items():
         if not isinstance(xy,(list,tuple)) or len(xy)<2:
             errors.append(f"point {name} must have x,y coordinates"); continue
-        if not all(math.isfinite(float(v)) for v in xy[:2]): errors.append(f"point {name} has non-finite coordinates")
+        try:
+            if not all(math.isfinite(float(v)) for v in xy[:2]):
+                errors.append(f"point {name} has non-finite coordinates")
+        except (TypeError, ValueError, OverflowError):
+            errors.append(f"point {name} has non-numeric coordinates")
     for seg in diagram.get("segments",[]):
         if not isinstance(seg,(list,tuple)) or len(seg)!=2 or seg[0] not in points or seg[1] not in points:
             errors.append(f"invalid segment {seg}")
@@ -504,3 +573,131 @@ def sphere_projection(radius,center=(0,0,0),center_label="I"):
     if radius<=0: raise ValueError("Sphere radius must be positive")
     x,y,z=center
     return _geom({center_label:[x,y],"R":[x+radius,y]},[[center_label,"R"]],"Hình chiếu phẳng của mặt cầu; tâm và bán kính theo dữ kiện không gian.",circles=[{"center":[x,y],"radius":radius}],measurements=[{"from":center_label,"to":"R","text":str(radius)}])
+
+
+def rectangular_prism_projection(length, width, height, labels=("A", "B", "C", "D", "A1", "B1", "C1", "D1"), show_measurements=True):
+    """Build a dimension-aware oblique projection of a rectangular prism.
+
+    The edge lengths are preserved in metadata; the drawing is a 2D projection,
+    so depth edges are intentionally projected rather than represented as true
+    2D distances.
+    """
+    if min(length, width, height) <= 0:
+        raise ValueError("Prism dimensions must be positive")
+    L, W, H = map(float, (length, width, height))
+    A, B, C, D, A1, B1, C1, D1 = labels
+    dx, dy = W * 0.52, W * 0.38
+    points = {
+        A: [0.0, 0.0], B: [L, 0.0], C: [L + dx, dy], D: [dx, dy],
+        A1: [0.0, H], B1: [L, H], C1: [L + dx, H + dy], D1: [dx, H + dy],
+    }
+    # Preserve the exact three-dimensional vertices separately from their 2D projection.
+    coordinates_3d = {
+        A: [0.0, 0.0, 0.0], B: [L, 0.0, 0.0], C: [L, W, 0.0], D: [0.0, W, 0.0],
+        A1: [0.0, 0.0, H], B1: [L, 0.0, H], C1: [L, W, H], D1: [0.0, W, H],
+    }
+    # Draw visible edges as solid and back-left edges as dashed, without duplicating them.
+    segments = [[A,B],[B,C],[C,D],[A1,B1],[B1,C1],[C1,D1],[D1,A1],[A,A1],[B,B1],[C,C1]]
+    hidden = [[D,A],[D,D1]]
+    measurements = []
+    if show_measurements:
+        measurements = [
+            {"from": A, "to": B, "text": str(length)},
+            {"from": A, "to": A1, "text": str(height)},
+            {"from": A, "to": D, "text": str(width)},
+        ]
+    return _geom(points, segments, "Hình hộp chữ nhật chiếu xiên; ba kích thước được lấy từ đề bài.",
+        hidden_segments=hidden, measurements=measurements,
+        solid_dimensions={"length": L, "width": W, "height": H}, coordinates_3d=coordinates_3d,
+        projection="oblique", diagram_mode="schematic_projection",
+        constraints=[{"type":"rectangular_prism","dimensions":[L,W,H]}])
+
+
+def spatial_points_projection(points_3d, segments=None, caption="Các điểm Oxyz được chiếu xiên từ tọa độ đề bài"):
+    """Project explicit Oxyz coordinates to a drawable 2D oblique view.
+
+    Original coordinates remain attached so downstream tools can use the exact
+    3D data. The projected picture is labelled schematic, never to scale in 2D.
+    """
+    if not isinstance(points_3d, dict) or not points_3d:
+        raise ValueError("At least one 3D point is required")
+    projected = {}
+    exact = {}
+    for name, xyz in points_3d.items():
+        if not isinstance(xyz, (list, tuple)) or len(xyz) != 3:
+            raise ValueError(f"Point {name} must have x,y,z coordinates")
+        vals = [float(v) for v in xyz]
+        if not all(math.isfinite(v) for v in vals):
+            raise ValueError(f"Point {name} has non-finite coordinates")
+        x, y, z = vals
+        projected[name] = [x - 0.45*z, y + 0.45*z]
+        exact[name] = vals
+    segs = segments or []
+    for seg in segs:
+        if len(seg) != 2 or any(name not in projected for name in seg):
+            raise ValueError(f"Invalid segment {seg}")
+    return _geom(projected, segs, caption, axes=True, coordinates_3d=exact,
+        projection="oblique", diagram_mode="schematic_projection",
+        coordinate_warning="Tọa độ 3D là dữ kiện chính xác; hình 2D là phép chiếu minh họa, không dùng độ dài chiếu để suy luận.")
+
+
+def regular_prism_projection(sides=5, radius=2, height=3, labels=None):
+    """Dimension-aware right regular prism projection with exact 3D vertex metadata."""
+    if not isinstance(sides, int) or sides < 3 or sides > 12:
+        raise ValueError("Prism base must have 3 to 12 sides")
+    if not math.isfinite(float(radius)) or not math.isfinite(float(height)) or radius <= 0 or height <= 0:
+        raise ValueError("Prism radius and height must be positive finite numbers")
+    r, h = float(radius), float(height)
+    names = labels or ([chr(65+i) for i in range(sides)] + [chr(65+i)+"1" for i in range(sides)])
+    if len(names) != 2*sides or len(set(names)) != len(names):
+        raise ValueError("Need unique labels for all 2n prism vertices")
+    base3 = [(r*math.cos(2*math.pi*i/sides), r*math.sin(2*math.pi*i/sides), 0.0) for i in range(sides)]
+    top3 = [(x,y,h) for x,y,_ in base3]
+    exact = {names[i]: list(base3[i]) for i in range(sides)}
+    exact.update({names[sides+i]: list(top3[i]) for i in range(sides)})
+    # Oblique projection: x' = x - 0.45y, y' = z + 0.45y.
+    points = {k:[v[0]-0.45*v[1], v[2]+0.45*v[1]] for k,v in exact.items()}
+    segments=[]; hidden=[]
+    for i in range(sides):
+        j=(i+1)%sides
+        edge=[names[i],names[j]]
+        top_edge=[names[sides+i],names[sides+j]]
+        (hidden if math.sin(2*math.pi*(i+0.5)/sides) < -0.15 else segments).append(edge)
+        segments.append(top_edge)
+        segments.append([names[i],names[sides+i]])
+    return _geom(points, segments, f"Lăng trụ đứng đáy đa giác đều {sides} cạnh; bán kính ngoại tiếp đáy {r:g}, chiều cao {h:g}. Phép chiếu xiên, không dùng độ dài chiếu để suy luận.", hidden_segments=hidden, coordinates_3d=exact, solid_dimensions={"base_sides":sides,"circumradius":r,"height":h}, projection="oblique", diagram_mode="schematic_projection", constraints=[{"type":"right_regular_prism","base_sides":sides,"height":h}])
+
+
+def triangular_prism_by_dimensions(side_a=3, side_b=4, side_c=5, length=6, labels=("A","B","C","A1","B1","C1")):
+    """Triangular prism with a triangle computed from its three side lengths."""
+    a,b,c,L=map(float,(side_a,side_b,side_c,length))
+    if min(a,b,c,L)<=0 or max(a,b,c) >= sum((a,b,c))-max(a,b,c):
+        raise ValueError("Triangle sides must be positive and satisfy triangle inequality; length must be positive")
+    # Place AB=c on x-axis; AC=b, BC=a.
+    x=(b*b+c*c-a*a)/(2*c); y=math.sqrt(max(0.0,b*b-x*x))
+    base=[(0.0,0.0,0.0),(c,0.0,0.0),(x,y,0.0)]
+    top=[(px,py,L) for px,py,_ in base]
+    names=list(labels)
+    if len(names)!=6 or len(set(names))!=6: raise ValueError("Six unique vertex labels required")
+    exact={names[i]:list(base[i]) for i in range(3)}; exact.update({names[i+3]:list(top[i]) for i in range(3)})
+    points={k:[v[0]-0.45*v[1],v[2]+0.45*v[1]] for k,v in exact.items()}
+    segments=[[names[0],names[1]],[names[1],names[2]],[names[2],names[0]], [names[3],names[4]],[names[4],names[5]],[names[5],names[3]], [names[0],names[3]],[names[1],names[4]],[names[2],names[5]]]
+    return _geom(points,segments,"Lăng trụ tam giác dựng từ ba cạnh đáy và chiều dài lăng trụ.",coordinates_3d=exact,solid_dimensions={"triangle_sides":[a,b,c],"length":L},projection="oblique",diagram_mode="schematic_projection",constraints=[{"type":"triangular_prism","base_sides":[a,b,c],"length":L}])
+
+
+def pyramid_by_base_height(sides=4, radius=2, height=3, labels=None):
+    """Regular pyramid projection; base vertices and apex are computed, not hard-coded."""
+    if not isinstance(sides,int) or sides < 3 or sides > 12: raise ValueError("Pyramid base must have 3 to 12 sides")
+    if radius<=0 or height<=0 or not math.isfinite(float(radius)) or not math.isfinite(float(height)): raise ValueError("Radius and height must be positive finite numbers")
+    r,h=float(radius),float(height)
+    names=labels or [chr(65+i) for i in range(sides)] + ["S"]
+    if len(names)!=sides+1 or len(set(names))!=len(names): raise ValueError("Need n unique base labels and one apex label")
+    exact={names[i]:[r*math.cos(2*math.pi*i/sides),r*math.sin(2*math.pi*i/sides),0.0] for i in range(sides)}
+    exact[names[-1]]=[0.0,0.0,h]
+    points={k:[v[0]-0.45*v[1],v[2]+0.45*v[1]] for k,v in exact.items()}
+    segments=[]; hidden=[]
+    for i in range(sides):
+        j=(i+1)%sides; edge=[names[i],names[j]]
+        (hidden if math.sin(2*math.pi*(i+0.5)/sides)<-0.15 else segments).append(edge)
+        segments.append([names[-1],names[i]])
+    return _geom(points,segments,f"Hình chóp đều đáy {sides} cạnh, chiều cao {h:g}; hình chiếu xiên.",hidden_segments=hidden,coordinates_3d=exact,solid_dimensions={"base_sides":sides,"circumradius":r,"height":h},projection="oblique",diagram_mode="schematic_projection",constraints=[{"type":"regular_pyramid","base_sides":sides,"height":h}])

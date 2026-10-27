@@ -1,0 +1,696 @@
+{
+  "version": "1.0.0",
+  "purpose": "Bản đồ bao phủ Toán chuyên/HSG/Olympiad; đây là taxonomy chứ không phải xác nhận đã có đầy đủ bài giảng và đề thi.",
+  "nodes": [
+    {
+      "id": "olympiad_001",
+      "title_vi": "Chia hết, ước và bội",
+      "area": "Số học",
+      "description_vi": "Chia hết, ước và bội; gcd/lcm; thuật toán Euclid; phân tích nguyên tố; định lý cơ bản số học.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_002",
+      "title_vi": "Đồng dư modulo",
+      "area": "Số học",
+      "description_vi": "Đồng dư modulo; lớp thặng dư; phép toán modulo; định lý Fermat nhỏ; định lý Euler; định lý phần dư Trung Hoa.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_003",
+      "title_vi": "Phương trình nghiệm nguyên tuyến tính ax+by=c",
+      "area": "Số học",
+      "description_vi": "Phương trình nghiệm nguyên tuyến tính ax+by=c; điều kiện gcd(a,b)|c; phương trình Pell; phương trình Diophantine.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_004",
+      "title_vi": "Số nguyên tố",
+      "area": "Số học",
+      "description_vi": "Số nguyên tố; vô hạn số nguyên tố; phân tích theo modulo; đánh giá ước nguyên tố.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_005",
+      "title_vi": "Chữ số, biểu diễn cơ số, tính chia hết, tổng chữ số và chu kỳ lũy thừa",
+      "area": "Số học",
+      "description_vi": "Chữ số, biểu diễn cơ số, tính chia hết, tổng chữ số và chu kỳ lũy thừa.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_006",
+      "title_vi": "Bất đẳng thức AM-GM, Cauchy-Schwarz, rearrangement, Chebyshev, Jensen khi đủ điều kiện",
+      "area": "Đại số chuyên",
+      "description_vi": "Bất đẳng thức AM-GM, Cauchy-Schwarz, rearrangement, Chebyshev, Jensen khi đủ điều kiện.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_007",
+      "title_vi": "Bất đẳng thức Schur, Nesbitt, Bernoulli",
+      "area": "Đại số chuyên",
+      "description_vi": "Bất đẳng thức Schur, Nesbitt, Bernoulli; đồng nhất thức SOS; pqr cho biểu thức đối xứng.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_008",
+      "title_vi": "Bất đẳng thức có điều kiện tổng, tích",
+      "area": "Đại số chuyên",
+      "description_vi": "Bất đẳng thức có điều kiện tổng, tích; chuẩn hóa; đồng bậc; biến đổi tương đương.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_009",
+      "title_vi": "Cực trị đại số",
+      "area": "Đại số chuyên",
+      "description_vi": "Cực trị đại số; phương pháp tiếp tuyến; uvw/pqr; điểm rơi và dấu bằng.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_010",
+      "title_vi": "Bất đẳng thức phân thức",
+      "area": "Đại số chuyên",
+      "description_vi": "Bất đẳng thức phân thức; đánh giá mẫu; Cauchy Engel; Titu Andreescu.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_011",
+      "title_vi": "Định lý dư và Bézout",
+      "area": "Đa thức",
+      "description_vi": "Định lý dư và Bézout; chia đa thức; nghiệm bội; hệ thức Viète.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_012",
+      "title_vi": "Định lý nghiệm hữu tỉ",
+      "area": "Đa thức",
+      "description_vi": "Định lý nghiệm hữu tỉ; đa thức bất khả quy ở mức phù hợp; phân tích nhân tử.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_013",
+      "title_vi": "Đa thức đối xứng",
+      "area": "Đa thức",
+      "description_vi": "Đa thức đối xứng; đa thức luân phiên; định thức Vandermonde.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_014",
+      "title_vi": "Nội suy Lagrange",
+      "area": "Đa thức",
+      "description_vi": "Nội suy Lagrange; sai phân; xác định đa thức từ giá trị.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_015",
+      "title_vi": "Đa thức nguyên",
+      "area": "Đa thức",
+      "description_vi": "Đa thức nguyên; giá trị nguyên; đồng dư đa thức.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_016",
+      "title_vi": "Thay biến đặc biệt",
+      "area": "Phương trình hàm",
+      "description_vi": "Thay biến đặc biệt; đơn ánh, toàn ánh; tính đơn điệu; chẵn lẻ; chu kỳ.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_017",
+      "title_vi": "Phương trình Cauchy và biến thể trong miền xác định có điều kiện",
+      "area": "Phương trình hàm",
+      "description_vi": "Phương trình Cauchy và biến thể trong miền xác định có điều kiện; không mặc định tính liên tục.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_018",
+      "title_vi": "Phương trình hàm trên số nguyên/số hữu tỉ",
+      "area": "Phương trình hàm",
+      "description_vi": "Phương trình hàm trên số nguyên/số hữu tỉ; truy hồi giá trị; bất biến.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_019",
+      "title_vi": "Truy hồi tuyến tính",
+      "area": "Dãy số",
+      "description_vi": "Truy hồi tuyến tính; phương trình đặc trưng; dãy sai phân; quy nạp.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_020",
+      "title_vi": "Đơn điệu và bị chặn",
+      "area": "Dãy số",
+      "description_vi": "Đơn điệu và bị chặn; hội tụ; đánh giá; kẹp; dãy con.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_021",
+      "title_vi": "Bất biến, chu kỳ, modulo và cấu trúc trong dãy số nguyên",
+      "area": "Dãy số",
+      "description_vi": "Bất biến, chu kỳ, modulo và cấu trúc trong dãy số nguyên.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_022",
+      "title_vi": "Quy tắc cộng/nhân",
+      "area": "Tổ hợp",
+      "description_vi": "Quy tắc cộng/nhân; hoán vị, chỉnh hợp, tổ hợp; nhị thức Newton.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_023",
+      "title_vi": "Nguyên lý Dirichlet",
+      "area": "Tổ hợp",
+      "description_vi": "Nguyên lý Dirichlet; nguyên lý cực hạn; đếm hai cách; bao hàm-loại trừ.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_024",
+      "title_vi": "Song ánh",
+      "area": "Tổ hợp",
+      "description_vi": "Song ánh; truy hồi; phân hoạch; hệ thức tổ hợp.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_025",
+      "title_vi": "Bất biến và đơn biến trong trò chơi/biến đổi hữu hạn",
+      "area": "Tổ hợp",
+      "description_vi": "Bất biến và đơn biến trong trò chơi/biến đổi hữu hạn.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_026",
+      "title_vi": "Đồ thị: bậc đỉnh, đường đi, chu trình, tô màu, ghép cặp ở mức nhập môn",
+      "area": "Tổ hợp",
+      "description_vi": "Đồ thị: bậc đỉnh, đường đi, chu trình, tô màu, ghép cặp ở mức nhập môn.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_027",
+      "title_vi": "Tổ hợp hình học",
+      "area": "Tổ hợp",
+      "description_vi": "Tổ hợp hình học; đếm đường lưới; chọn điểm và đường thẳng.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_028",
+      "title_vi": "Tam giác: đường trung tuyến, phân giác, đường cao, trung trực, tâm nội/ngoại tiếp",
+      "area": "Hình học phẳng",
+      "description_vi": "Tam giác: đường trung tuyến, phân giác, đường cao, trung trực, tâm nội/ngoại tiếp.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_029",
+      "title_vi": "Ceva, Menelaus, định lý phân giác, Stewart, Apollonius",
+      "area": "Hình học phẳng",
+      "description_vi": "Ceva, Menelaus, định lý phân giác, Stewart, Apollonius.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_030",
+      "title_vi": "Đường tròn: góc nội tiếp, phương tích, trục đẳng phương, tiếp tuyến-cát tuyến",
+      "area": "Hình học phẳng",
+      "description_vi": "Đường tròn: góc nội tiếp, phương tích, trục đẳng phương, tiếp tuyến-cát tuyến.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_031",
+      "title_vi": "Tứ giác nội tiếp",
+      "area": "Hình học phẳng",
+      "description_vi": "Tứ giác nội tiếp; Ptolemy; Miquel; Simson; đường tròn chín điểm.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_032",
+      "title_vi": "Đồng dạng, vị tự, phép quay, đối xứng, phép nghịch đảo ở mức nâng cao",
+      "area": "Hình học phẳng",
+      "description_vi": "Đồng dạng, vị tự, phép quay, đối xứng, phép nghịch đảo ở mức nâng cao.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_033",
+      "title_vi": "Hàng điểm điều hòa",
+      "area": "Hình học phẳng",
+      "description_vi": "Hàng điểm điều hòa; cực-đối cực ở mức chuyên sâu.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_034",
+      "title_vi": "Biến đổi hình học",
+      "area": "Hình học phẳng",
+      "description_vi": "Biến đổi hình học; dựng hình; quỹ tích; phương pháp diện tích.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_035",
+      "title_vi": "Vectơ và tọa độ",
+      "area": "Hình học phẳng",
+      "description_vi": "Vectơ và tọa độ; barycentric/complex geometry ở mức nâng cao tùy chương trình.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_036",
+      "title_vi": "Quan hệ điểm-đường-mặt",
+      "area": "Hình học không gian",
+      "description_vi": "Quan hệ điểm-đường-mặt; song song, vuông góc; góc và khoảng cách.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_037",
+      "title_vi": "Thiết diện, thể tích, tỉ số thể tích, phép chiếu và định lý ba đường vuông góc",
+      "area": "Hình học không gian",
+      "description_vi": "Thiết diện, thể tích, tỉ số thể tích, phép chiếu và định lý ba đường vuông góc.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_038",
+      "title_vi": "Giới hạn, liên tục, đạo hàm",
+      "area": "Giải tích nâng cao",
+      "description_vi": "Giới hạn, liên tục, đạo hàm; định lý giá trị trung bình và ứng dụng.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_039",
+      "title_vi": "Tối ưu hóa",
+      "area": "Giải tích nâng cao",
+      "description_vi": "Tối ưu hóa; khảo sát hàm; tham số; tiếp tuyến; số nghiệm phương trình.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_040",
+      "title_vi": "Tích phân và ứng dụng diện tích/thể tích",
+      "area": "Giải tích nâng cao",
+      "description_vi": "Tích phân và ứng dụng diện tích/thể tích; đánh giá tích phân ở mức mở rộng.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_041",
+      "title_vi": "Xác suất có điều kiện",
+      "area": "Xác suất",
+      "description_vi": "Xác suất có điều kiện; độc lập; công thức xác suất toàn phần và Bayes.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_042",
+      "title_vi": "Biến ngẫu nhiên rời rạc, kỳ vọng, phương sai",
+      "area": "Xác suất",
+      "description_vi": "Biến ngẫu nhiên rời rạc, kỳ vọng, phương sai; đếm mô hình mẫu.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_043",
+      "title_vi": "Tham số",
+      "area": "Bài toán tổng hợp",
+      "description_vi": "Tham số; cực trị; tìm điều kiện cần/đủ; phản ví dụ; phân loại trường hợp.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_044",
+      "title_vi": "Bài toán thực tế: mô hình hóa, nêu giả thiết, kiểm tra đơn vị và nghiệm hợp lý",
+      "area": "Bài toán tổng hợp",
+      "description_vi": "Bài toán thực tế: mô hình hóa, nêu giả thiết, kiểm tra đơn vị và nghiệm hợp lý.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_045",
+      "title_vi": "Phản chứng, phản đảo, quy nạp, bất biến, cực hạn, dựng cấu hình phụ",
+      "area": "Chứng minh",
+      "description_vi": "Phản chứng, phản đảo, quy nạp, bất biến, cực hạn, dựng cấu hình phụ.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    },
+    {
+      "id": "olympiad_046",
+      "title_vi": "Phân tích ngược",
+      "area": "Chứng minh",
+      "description_vi": "Phân tích ngược; tổng quát hóa; tìm dấu bằng; chứng minh điều kiện cần và đủ.",
+      "audience": [
+        "luyen_thi_chuyen",
+        "hsg_tinh",
+        "hsg_quoc_gia",
+        "olympiad_foundation"
+      ],
+      "grade_alignment": "10-12 linh hoạt theo kiến thức tiên quyết",
+      "source_status": "curriculum_map_to_be_crosswalked_to_official_advanced_program",
+      "content_status": "coverage_node_requires_lesson_and_original_problem_authoring"
+    }
+  ]
+}

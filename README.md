@@ -102,3 +102,25 @@ python -m pytest -q
 ```
 
 Nếu trình duyệt báo CORS khi ghép trận, trước tiên kiểm tra `http://127.0.0.1:8000/health` và khởi động backend đúng thư mục bằng `START_BACKEND.bat`. Một lỗi backend 500 có thể bị trình duyệt hiển thị thành lỗi CORS, vì vậy hãy xem cả cửa sổ terminal backend. Xem `AUDIT_FIX_REPORT.md` để biết các sửa lỗi và phạm vi kiểm thử của bản này.
+
+## Bổ sung AI tạo đề và dựng hình theo dữ kiện (16/10/2026)
+
+- `AI_GENERATION_AND_GEOMETRY_REQUIREMENTS_2026-10-16.md`: tiêu chí sản phẩm cho AI tạo đề đa dạng, kiểm chứng đáp án, chống lặp, dựng hình 2D/3D và tích hợp Practice/Game/Battle.
+- `AI_UPGRADE_IMPLEMENTATION_NOTES_2026-10-16.md`: các thay đổi đã đưa vào bản ZIP này và giới hạn còn lại.
+- Backend dựng hình giữ lại tọa độ Oxyz và kích thước hình hộp; hình hộp chữ nhật lưu tọa độ 3D chính xác của cả tám đỉnh.
+- Với hình có dữ liệu 3D, vùng hình học SVG hỗ trợ xoay trái/phải, nghiêng lên/xuống và đặt lại góc nhìn. Đây là wireframe chiếu 2D có tương tác, chưa phải phần mềm dựng hình 3D đầy đủ kiểu GeoGebra/CAD.
+- Các payload hình học cũ có số liệu được chuẩn hóa thành hình theo dữ kiện; bộ kiểm tra từ chối hình rỗng, tọa độ không hợp lệ hoặc ràng buộc hình học mâu thuẫn.
+- Kiểm thử tự động trong bản này: `python -m pytest -q` (70 tests). Một lượt kiểm tra độc lập sinh và xác minh 846 câu trên 94 chủ đề, 3 cấp độ và 3 loại câu hỏi; 270 câu có hình, không có lỗi trong lượt kiểm tra đó.
+- Ghi chú chi tiết: `AI_UPGRADE_IMPLEMENTATION_NOTES_2026-10-16.md`. Bộ sinh vẫn là AI nội bộ theo ngân hàng dạng bài và quy tắc, không phải LLM tổng quát; những cấu hình không đủ dữ kiện vẫn phải được ghi nhận là hình sơ đồ.
+
+
+## Hệ thống quản trị MATH WEB
+
+- Mở `admin.html` sau khi chạy frontend và backend.
+- Tài khoản bootstrap duy nhất: `admin19022011`. Mật khẩu khởi tạo: `adminsitinh`.
+- Đăng nhập lần đầu, chọn **Đổi mật khẩu** và đổi mật khẩu ngay. Không triển khai hệ thống công khai với mật khẩu mặc định.
+- Backend xác thực quyền quản trị tại `/api/admin/*`; sửa giao diện hoặc gọi API trực tiếp không thể tự cấp quyền admin.
+- Bảng quản trị gồm tổng quan, tìm kiếm tài khoản, hồ sơ học tập, cấm/mở cấm, đặt lại mật khẩu người dùng, ngân hàng câu hỏi và nhật ký quản trị.
+- Câu hỏi do admin thêm được đưa vào nguồn sinh đề khi khối, tên chủ đề, mức độ, loại câu hỏi và mã trò chơi khớp với yêu cầu. Để trống mã trò chơi cho luyện tập chung; nhập đúng `game_id` để nhắm tới một trò chơi cụ thể. Trắc nghiệm cần đúng 4 lựa chọn khác nhau; đáp án có thể là nhãn A/B/C/D hoặc nội dung lựa chọn.
+- Có thể đặt `MATHWEB_BOOTSTRAP_ADMIN_PASSWORD` trước khi tạo cơ sở dữ liệu lần đầu để đổi mật khẩu bootstrap. Khi tài khoản admin đã tồn tại, khởi động lại không tự đặt lại mật khẩu.
+- Dữ liệu quản trị nằm trong SQLite `backend/database/mathweb.db`; hãy cấu hình sao lưu và `MATH_WEB_SECRET_KEY` riêng khi triển khai thật.

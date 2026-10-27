@@ -1,1 +1,7 @@
-6.7-ai-hell-tier-exact-geometry-graphs-notification-responsive
+MATH_WEB build: 2026-10-16 geometry game catalog integration
+- Practice knowledge topics: 147 (102 original catalog entries + 45 geometry additions; original catalog must be deduplicated against curriculum before claiming a curriculum-unique total)
+- Individual game pages: 441 (3 per manifest topic)
+- Added: 45 geometry cards and 135 geometry game pages
+- Preserved existing Practice/Game/Battle UI structure
+- Automated checks: 72 Python tests passed; JS syntax checked; game manifest audit passed
+- Not claimed: full manual browser QA or 100% topic-specific AI/diagram correctness

@@ -8,11 +8,52 @@ from .engine.super_bank import SUPER_BANK_STATS
 router=APIRouter(prefix="/api/ai",tags=["AI Question Engine"])
 service=AIQuestionService()
 
+TIER_DIFFICULTY = {
+    "foundation": "easy", "so_cap": "easy", "sơ cấp": "easy",
+    "provincial": "expert", "mo_rong": "expert", "mở rộng": "expert",
+    "national": "hell", "quoc_gia": "hell", "chuyên sâu": "hell",
+}
+
+def effective_difficulty(req: "QuestionRequest") -> str:
+    tier = (req.learning_tier or "").strip().lower()
+    return TIER_DIFFICULTY.get(tier, req.difficulty)
+
+
+def annotate_tier(result: dict, req: "QuestionRequest") -> dict:
+    tier = (req.learning_tier or "foundation").strip().lower()
+    labels = {
+        "foundation": "Sơ cấp · Toàn bộ kiến thức chương trình THPT",
+        "so_cap": "Sơ cấp · Toàn bộ kiến thức chương trình THPT",
+        "sơ cấp": "Sơ cấp · Toàn bộ kiến thức chương trình THPT",
+        "provincial": "Mở rộng · Ôn luyện học sinh giỏi cấp tỉnh",
+        "mo_rong": "Mở rộng · Ôn luyện học sinh giỏi cấp tỉnh",
+        "mở rộng": "Mở rộng · Ôn luyện học sinh giỏi cấp tỉnh",
+        "national": "Chuyên sâu · Ôn luyện học sinh giỏi cấp quốc gia",
+        "quoc_gia": "Chuyên sâu · Ôn luyện học sinh giỏi cấp quốc gia",
+        "chuyên sâu": "Chuyên sâu · Ôn luyện học sinh giỏi cấp quốc gia",
+    }
+    result["learning_tier"] = tier
+    result["tier_label"] = labels.get(tier, "Theo độ khó đã chọn")
+    for q in result.get("questions", []):
+        if isinstance(q, dict):
+            q["learning_tier"] = tier
+            q["tier_label"] = result["tier_label"]
+    for problem in result.get("problems", []):
+        if isinstance(problem, dict):
+            problem["learning_tier"] = tier
+            problem["tier_label"] = result["tier_label"]
+            for q in problem.get("parts", []):
+                if isinstance(q, dict):
+                    q["learning_tier"] = tier
+                    q["tier_label"] = result["tier_label"]
+    return result
+
 class QuestionRequest(BaseModel):
     grade:int=Field(ge=10,le=12)
     topics:list[str]=Field(min_length=1,max_length=MAX_TOPICS)
     count:int=Field(default=10,ge=1,le=MAX_COUNT)
     difficulty:str="medium"
+    learning_tier:str|None=None
     question_type:str="multiple_choice"
     history:list[dict]=Field(default_factory=list)
     game_id:str|None=None
@@ -53,24 +94,26 @@ def knowledge_detail(topic_id:str):
 def questions(req:QuestionRequest):
     try:
         if req.problem_mode:
-            return service.generate_problem_set(req.grade,req.topics,req.count,req.difficulty,req.problem_parts,req.history,req.game_id)
-        return service.generate_set(req.grade,req.topics,req.count,req.difficulty,req.question_type,req.history,req.game_id)
+            result=service.generate_problem_set(req.grade,req.topics,req.count,effective_difficulty(req),req.problem_parts,req.history,req.game_id)
+        else:
+            result=service.generate_set(req.grade,req.topics,req.count,effective_difficulty(req),req.question_type,req.history,req.game_id)
+        return annotate_tier(result, req)
     except (ValueError,RuntimeError) as e: raise HTTPException(400,str(e))
 
 @router.post("/problems")
 def problems(req:QuestionRequest):
-    try: return service.generate_problem_set(req.grade,req.topics,req.count,req.difficulty,req.problem_parts,req.history,req.game_id)
+    try: return annotate_tier(service.generate_problem_set(req.grade,req.topics,req.count,effective_difficulty(req),req.problem_parts,req.history,req.game_id), req)
     except (ValueError,RuntimeError) as e: raise HTTPException(400,str(e))
 
 @router.post("/practice/session")
 def practice_session(req:QuestionRequest):
     try:
         if req.problem_mode:
-            result=service.generate_problem_set(req.grade,req.topics,req.count,req.difficulty,req.problem_parts,req.history,req.game_id)
+            result=service.generate_problem_set(req.grade,req.topics,req.count,effective_difficulty(req),req.problem_parts,req.history,req.game_id)
         else:
-            result=service.generate_set(req.grade,req.topics,req.count,req.difficulty,req.question_type,req.history,req.game_id)
+            result=service.generate_set(req.grade,req.topics,req.count,effective_difficulty(req),req.question_type,req.history,req.game_id)
         result["mode"]="practice"
-        return result
+        return annotate_tier(result, req)
     except (ValueError,RuntimeError) as e: raise HTTPException(400,str(e))
 
 @router.post("/questions/{question_id}/answer")

@@ -1,0 +1,543 @@
+MATH_WEB - THU VIEN KIEN THUC TOAN 10-12 + TOAN CHUYEN/HSG
+Phien ban: 1.0.0 | Ngay: 24/10/2026
+
+MUC DICH
+Thu vien nen co cau truc de tiep tuc mo rong. Khong khoa o 147 chu de.
+Day la ban nen co danh muc va bo cong thuc/phuong phap tham khao, KHONG phai bang chung da thu thap 100% moi sach va de thi.
+
+DANH MUC CHU DE DANG CO TRONG ZIP DAU VAO
+Toan 10: 45 chu de
+  - Mệnh đề và tập hợp [menh_de_tap_hop]
+    Kien thuc con: mệnh đề, tập hợp, khoảng, hợp giao hiệu
+  - Bất phương trình và hệ bất phương trình [bat_phuong_trinh]
+    Kien thuc con: bậc nhất, bậc hai, hệ bất phương trình
+  - Hệ thức lượng trong tam giác [he_thuc_luong]
+    Kien thuc con: sin cos, định lý cos, diện tích, đường tròn ngoại tiếp
+  - Vectơ [vector]
+    Kien thuc con: tổng hiệu, tọa độ, tích vô hướng, trung điểm
+  - Hàm số bậc hai và parabol [ham_so_bac_hai]
+    Kien thuc con: đỉnh, trục đối xứng, giao trục, tham số
+  - Phương trình và hệ phương trình [phuong_trinh_he]
+    Kien thuc con: bậc nhất, bậc hai, hệ hai ẩn, biện luận
+  - Quy tắc đếm [quy_tac_dem]
+    Kien thuc con: quy tắc cộng, quy tắc nhân, sơ đồ cây
+  - Hoán vị, chỉnh hợp, tổ hợp [hoan_vi_chinh_hop_to_hop]
+    Kien thuc con: hoán vị, chỉnh hợp, tổ hợp, nhị thức Newton
+  - Xác suất [xac_suat]
+    Kien thuc con: không gian mẫu, biến cố, xác suất cổ điển, xác suất có điều kiện
+  - Thống kê [thong_ke]
+    Kien thuc con: trung bình, trung vị, mốt, phương sai, độ lệch chuẩn
+  - Mệnh đề [menh_de]
+    Kien thuc con: mệnh đề, phủ định, kéo theo, tương đương
+  - Tập hợp và các phép toán [tap_hop]
+    Kien thuc con: hợp, giao, hiệu, phần bù, khoảng
+  - Hệ bất phương trình [he_bat_phuong_trinh]
+    Kien thuc con: bậc nhất, bậc hai, miền nghiệm
+  - Hàm số [ham_so]
+    Kien thuc con: tập xác định, biến thiên, đồ thị
+  - Hàm số bậc nhất [ham_so_bac_nhat]
+    Kien thuc con: hệ số góc, đồ thị, tương giao
+  - Phương trình [phuong_trinh]
+    Kien thuc con: bậc nhất, bậc hai, biện luận
+  - Hệ phương trình [he_phuong_trinh]
+    Kien thuc con: hai ẩn, thế, cộng đại số, biện luận
+  - Hệ thức lượng trong tam giác [he_thuc_luong_tam_giac]
+    Kien thuc con: sin, cos, diện tích, đường tròn ngoại tiếp
+  - Tọa độ trong mặt phẳng [toa_do_phang]
+    Kien thuc con: điểm, vectơ, trung điểm, khoảng cách
+  - Đường thẳng [duong_thang]
+    Kien thuc con: phương trình, góc, khoảng cách
+  - Đường tròn [duong_tron]
+    Kien thuc con: phương trình, tiếp tuyến, vị trí tương đối
+  - Nhị thức Newton [nhi_thuc_newton]
+    Kien thuc con: khai triển, hệ số, số hạng
+  - Hình học phẳng [hinh_hoc_10]
+    Kien thuc con: tam giác, tứ giác, đường tròn, quỹ tích
+  - Bài toán thực tế Toán 10 [bai_toan_thuc_te_10]
+    Kien thuc con: tối ưu, mô hình hóa, đo đạc
+  - Hình học cơ bản: góc, cạnh và diện tích [hinh_hoc_co_ban_10]
+    Kien thuc con: góc, cạnh, chu vi, diện tích
+  - Tam giác và tứ giác cơ bản [tam_giac_tu_giac_10]
+    Kien thuc con: tam giác, tứ giác, đường cao, đường trung tuyến
+  - Đường tròn và các góc cơ bản [duong_tron_co_ban_10]
+    Kien thuc con: bán kính, dây cung, góc nội tiếp, góc ở tâm
+  - Hệ thức lượng trong tam giác [he_thuc_luong_van_dung_10]
+    Kien thuc con: Pythagore, định lý sin, định lý cos, diện tích tam giác
+  - Tọa độ và đường thẳng trong mặt phẳng [toa_do_hinh_hoc_10]
+    Kien thuc con: tọa độ điểm, đường thẳng, khoảng cách, đường tròn
+  - Chứng minh hình học và bài toán tổng hợp [chung_minh_hinh_hoc_10]
+    Kien thuc con: chứng minh, quỹ tích, tam giác đồng dạng, đường tròn
+  - Góc tạo bởi hai đường thẳng và đường cắt [g10_geom_angles_parallel]
+    Kien thuc con: góc đồng vị, góc so le trong, góc trong cùng phía
+  - Các trường hợp bằng nhau của tam giác [g10_geom_triangle_congruence]
+    Kien thuc con: cạnh-cạnh-cạnh, cạnh-góc-cạnh, góc-cạnh-góc
+  - Đường trung tuyến, phân giác và đường cao [g10_geom_special_lines]
+    Kien thuc con: trọng tâm, tâm đường tròn nội tiếp, trực tâm
+  - Tính chất hình bình hành và hình thoi [g10_geom_quadrilaterals_properties]
+    Kien thuc con: đường chéo hình bình hành, đường chéo hình thoi, dấu hiệu nhận biết
+  - Dây cung, cung và khoảng cách đến tâm [g10_geom_circle_chords_arcs]
+    Kien thuc con: đường vuông góc từ tâm đến dây, so sánh dây, cung tương ứng
+  - Định lý Thales và tam giác đồng dạng [g10_geom_thales_similarity]
+    Kien thuc con: tỉ số đoạn thẳng, đường thẳng song song một cạnh, tỉ số đồng dạng
+  - Tỉ số diện tích tam giác [g10_geom_triangle_area_ratio]
+    Kien thuc con: cùng chiều cao, cùng đáy, tỉ số diện tích tam giác đồng dạng
+  - Góc nội tiếp và góc ở tâm nâng cao [g10_geom_circle_angles]
+    Kien thuc con: cùng chắn một cung, góc nội tiếp chắn nửa đường tròn, liên hệ số đo cung
+  - Trung điểm và khoảng cách trong tọa độ phẳng [g10_geom_coordinate_distance_midpoint]
+    Kien thuc con: công thức trung điểm, độ dài đoạn thẳng, điểm chia đoạn theo tỉ số
+  - Giao điểm và vị trí tương đối của hai đường thẳng [g10_geom_line_intersections]
+    Kien thuc con: song song, trùng nhau, cắt nhau và giải hệ
+  - Quỹ tích điểm trong mặt phẳng [g10_geom_locus]
+    Kien thuc con: quỹ tích cách đều hai điểm, quỹ tích cách đều hai đường thẳng, điều kiện cần và đủ
+  - Tiếp tuyến và dây cung của đường tròn [g10_geom_circle_tangent_chord]
+    Kien thuc con: bán kính vuông góc tiếp tuyến, hai tiếp tuyến từ một điểm, góc tạo bởi tiếp tuyến và dây
+  - Bất đẳng thức và cực trị trong tam giác [g10_geom_triangle_inequalities]
+    Kien thuc con: điều kiện ba cạnh, chu vi cố định, diện tích cực trị
+  - Chứng minh hình học bằng vectơ [g10_geom_vector_proofs]
+    Kien thuc con: biểu diễn vectơ theo hai vectơ cơ sở, điều kiện thẳng hàng, điều kiện đồng quy
+  - Bài toán tổng hợp đường thẳng và đường tròn tọa độ [g10_geom_coordinate_circle_line]
+    Kien thuc con: giao điểm đường thẳng-đường tròn, tiếp xúc qua biệt thức, tham số tọa độ
+Toan 11: 47 chu de
+  - Hàm số lượng giác [ham_so_luong_giac]
+    Kien thuc con: sin, cos, tan, đồ thị, tập xác định
+  - Phương trình lượng giác [phuong_trinh_luong_giac]
+    Kien thuc con: cơ bản, đồng nhất, đặt ẩn phụ, tham số
+  - Dãy số [day_so]
+    Kien thuc con: số hạng, công thức tổng quát, truy hồi
+  - Cấp số cộng [cap_so_cong]
+    Kien thuc con: công sai, số hạng, tổng
+  - Cấp số nhân [cap_so_nhan]
+    Kien thuc con: công bội, số hạng, tổng
+  - Giới hạn [gioi_han]
+    Kien thuc con: dãy số, hàm số, vô cực, liên tục
+  - Đạo hàm [dao_ham]
+    Kien thuc con: quy tắc, hàm hợp, tiếp tuyến, cực trị
+  - Quan hệ song song và vuông góc trong không gian [hinh_khong_gian]
+    Kien thuc con: đường thẳng, mặt phẳng, góc, khoảng cách
+  - Xác suất [xac_suat_11]
+    Kien thuc con: biến cố độc lập, hợp biến cố, điều kiện
+  - Giá trị lượng giác [gia_tri_luong_giac]
+    Kien thuc con: sin, cos, tan, cung góc
+  - Công thức lượng giác [cong_thuc_luong_giac]
+    Kien thuc con: cộng, nhân đôi, hạ bậc, biến đổi
+  - Hàm số lượng giác [ham_so_luong_giac_day_du]
+    Kien thuc con: đồ thị, chu kỳ, tập xác định, giá trị lớn nhất
+  - Phương trình lượng giác [phuong_trinh_luong_giac_day_du]
+    Kien thuc con: cơ bản, đồng nhất, đặt ẩn phụ, tham số
+  - Dãy số [day_so_tong_quat]
+    Kien thuc con: công thức tổng quát, truy hồi, đơn điệu
+  - Giới hạn hàm số [gioi_han_ham_so]
+    Kien thuc con: vô cực, hữu hạn, liên tục
+  - Hàm số liên tục [ham_so_lien_tuc]
+    Kien thuc con: liên tục tại điểm, trên khoảng, giá trị trung gian
+  - Quy tắc đạo hàm [dao_ham_quy_tac]
+    Kien thuc con: tổng, tích, thương, hàm hợp
+  - Ứng dụng đạo hàm [ung_dung_dao_ham_11]
+    Kien thuc con: tiếp tuyến, đơn điệu, cực trị
+  - Quan hệ song song trong không gian [song_song_khong_gian]
+    Kien thuc con: đường thẳng, mặt phẳng, thiết diện
+  - Quan hệ vuông góc trong không gian [vuong_goc_khong_gian]
+    Kien thuc con: đường thẳng, mặt phẳng, hình chiếu
+  - Góc và khoảng cách trong không gian [goc_khoang_cach_11]
+    Kien thuc con: góc, khoảng cách, hình chiếu
+  - Thống kê Toán 11 [thong_ke_11]
+    Kien thuc con: mẫu số liệu, độ phân tán, tứ phân vị
+  - Bài toán thực tế Toán 11 [bai_toan_thuc_te_11]
+    Kien thuc con: tăng trưởng, lãi suất, mô hình
+  - Tổ hợp và xác suất nâng cao [to_hop_xac_suat_nang_cao_11]
+    Kien thuc con: đếm nâng cao, xác suất, điều kiện
+  - Biến cố độc lập và xác suất có điều kiện [bien_co_doc_lap_11]
+    Kien thuc con: độc lập, xác suất có điều kiện, công thức
+  - Dãy số truy hồi [day_so_truy_hoi_11]
+    Kien thuc con: truy hồi, số hạng, quy luật
+  - Quy nạp toán học [quy_nap_toan_hoc_11]
+    Kien thuc con: mệnh đề, quy nạp, chứng minh
+  - Phép biến hình trong mặt phẳng [phep_bien_hinh_11]
+    Kien thuc con: phép tịnh tiến, phép quay, đối xứng
+  - Thiết diện hình không gian [thiet_dien_hinh_khong_gian_11]
+    Kien thuc con: thiết diện, hình chóp, mặt phẳng
+  - Bài toán thực tế tổng hợp Toán 11 [bai_toan_thuc_te_tong_hop_11]
+    Kien thuc con: mô hình hóa, hàm số, xác suất
+  - Phép biến hình cơ bản [phep_bien_hinh_co_ban_11]
+    Kien thuc con: tịnh tiến, đối xứng, phép quay, vị tự
+  - Nhận biết hình học không gian [nhan_biet_hinh_khong_gian_11]
+    Kien thuc con: hình chóp, lăng trụ, song song, vuông góc
+  - Phép tịnh tiến và ảnh của hình [g11_geom_transform_translation]
+    Kien thuc con: vectơ tịnh tiến, ảnh của điểm, bảo toàn độ dài
+  - Phép đối xứng trục [g11_geom_transform_reflection]
+    Kien thuc con: trục đối xứng, ảnh của điểm, điểm bất động
+  - Nhận biết đường thẳng và mặt phẳng trong không gian [g11_geom_space_lines_planes]
+    Kien thuc con: điểm thuộc mặt phẳng, đường thẳng nằm trong mặt phẳng, xác định mặt phẳng
+  - Đường thẳng song song với mặt phẳng [g11_geom_parallel_line_plane]
+    Kien thuc con: điều kiện song song, đường thẳng không giao mặt phẳng, lập luận bằng mặt phẳng phụ
+  - Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp [g11_geom_prism_pyramid_sections]
+    Kien thuc con: nhận dạng đỉnh-cạnh-mặt, số mặt, thiết diện đơn giản
+  - Phép quay và phép vị tự [g11_geom_rotation_homothety]
+    Kien thuc con: tâm và góc quay, tỉ số vị tự, ảnh của đường tròn
+  - Hai mặt phẳng song song [g11_geom_parallel_planes]
+    Kien thuc con: dấu hiệu song song, giao tuyến với mặt phẳng thứ ba, định lý Thales không gian
+  - Đường thẳng vuông góc với mặt phẳng [g11_geom_perpendicular_line_plane]
+    Kien thuc con: đường thẳng vuông góc hai đường cắt nhau, chân đường vuông góc, chứng minh vuông góc
+  - Góc giữa đường thẳng và mặt phẳng [g11_geom_dihedral_angles]
+    Kien thuc con: hình chiếu vuông góc, góc nhọn quy ước, tính góc trong hình chóp
+  - Dựng thiết diện của hình chóp và lăng trụ [g11_geom_section_construction]
+    Kien thuc con: tìm giao tuyến, tìm giao điểm trên cạnh, nối các điểm đồng phẳng
+  - Khoảng cách giữa hai đường thẳng chéo nhau [g11_geom_skew_lines_distance]
+    Kien thuc con: đường vuông góc chung, đoạn vuông góc chung, mặt phẳng song song chứa một đường
+  - Định lý ba đường vuông góc [g11_geom_three_perpendiculars]
+    Kien thuc con: hình chiếu của đường xiên, vuông góc trong mặt phẳng đáy, chứng minh quan hệ vuông góc
+  - Hợp thành các phép biến hình [g11_geom_transform_composition]
+    Kien thuc con: hai phép đối xứng trục, phép quay kết hợp tịnh tiến, xác định ảnh cuối
+  - Thiết diện và tỉ số đoạn trong hình không gian [g11_geom_section_ratio]
+    Kien thuc con: định lý Thales trong không gian, tỉ số trên cạnh bên, diện tích thiết diện
+  - Chứng minh tổng hợp song song và vuông góc [g11_geom_space_proof]
+    Kien thuc con: dựng mặt phẳng phụ, chuỗi suy luận nhiều bước, phản chứng hình học
+Toan 12: 47 chu de
+  - Ứng dụng đạo hàm [ung_dung_dao_ham]
+    Kien thuc con: đồng biến nghịch biến, cực trị, GTLN GTNN, tiệm cận, tham số
+  - Khảo sát và vẽ đồ thị hàm số [khao_sat_ham_so]
+    Kien thuc con: tập xác định, biến thiên, tiệm cận, giao điểm
+  - Nguyên hàm và tích phân [nguyen_ham_tich_phan]
+    Kien thuc con: nguyên hàm cơ bản, đổi biến, từng phần, diện tích
+  - Số phức [so_phuc]
+    Kien thuc con: dạng đại số, môđun, liên hợp, phương trình
+  - Hình học không gian [hinh_hoc_khong_gian]
+    Kien thuc con: thể tích, góc, khoảng cách, mặt cầu
+  - Tọa độ trong không gian [toa_do_khong_gian]
+    Kien thuc con: Oxyz, mặt phẳng, đường thẳng, mặt cầu
+  - Xác suất và biến ngẫu nhiên [xac_suat_12]
+    Kien thuc con: xác suất có điều kiện, độc lập, kỳ vọng
+  - Các số đặc trưng đo xu thế và độ phân tán [thong_ke_12]
+    Kien thuc con: trung bình, trung vị, tứ phân vị, phương sai
+  - Tính đơn điệu [tinh_don_dieu]
+    Kien thuc con: đồng biến, nghịch biến, tham số
+  - Cực trị [cuc_tri]
+    Kien thuc con: điểm cực trị, tham số, đồ thị
+  - Giá trị lớn nhất và nhỏ nhất [gtln_gtnn]
+    Kien thuc con: đoạn, khoảng, ứng dụng
+  - Tiếp tuyến [tiep_tuyen]
+    Kien thuc con: hệ số góc, tiếp xúc, tham số
+  - Tiệm cận [tien_can]
+    Kien thuc con: đứng, ngang, xiên
+  - Tương giao đồ thị [tuong_giao]
+    Kien thuc con: số giao điểm, tham số, biện luận
+  - Hàm số mũ [ham_mu]
+    Kien thuc con: đồ thị, đơn điệu, giá trị
+  - Hàm số logarit [ham_logarit]
+    Kien thuc con: đồ thị, tập xác định, đơn điệu
+  - Phương trình mũ [pt_mu]
+    Kien thuc con: cơ bản, đặt ẩn phụ, tham số
+  - Phương trình logarit [pt_logarit]
+    Kien thuc con: điều kiện, biến đổi, tham số
+  - Bất phương trình mũ [bpt_mu]
+    Kien thuc con: đơn điệu, đặt ẩn phụ, tham số
+  - Bất phương trình logarit [bpt_logarit]
+    Kien thuc con: điều kiện, đơn điệu, tham số
+  - Ứng dụng tích phân [ung_dung_tich_phan]
+    Kien thuc con: diện tích, thể tích, quãng đường
+  - Biểu diễn số phức [bieu_dien_so_phuc]
+    Kien thuc con: mặt phẳng phức, môđun, liên hợp
+  - Phương trình số phức [pt_so_phuc]
+    Kien thuc con: bậc hai, liên hợp, tham số
+  - Mặt phẳng trong Oxyz [mat_phang_oxyz]
+    Kien thuc con: phương trình, vị trí tương đối, khoảng cách
+  - Đường thẳng trong Oxyz [duong_thang_oxyz]
+    Kien thuc con: tham số, vị trí tương đối, góc
+  - Mặt cầu [mat_cau]
+    Kien thuc con: phương trình, tiếp xúc, giao tuyến
+  - Góc và khoảng cách Oxyz [goc_khoang_cach_oxyz]
+    Kien thuc con: góc, đường vuông góc, khoảng cách
+  - Thể tích hình học không gian [the_tich_khong_gian]
+    Kien thuc con: lăng trụ, chóp, mặt cầu
+  - Bài toán tổng hợp THPT [tong_hop_thpt]
+    Kien thuc con: đại số, giải tích, hình học, xác suất
+  - Bài toán thực tế Toán 12 [bai_toan_thuc_te_12]
+    Kien thuc con: tối ưu, tăng trưởng, chuyển động, kinh tế
+  - Hình khối và thể tích cơ bản [hinh_khoi_va_the_tich_co_ban_12]
+    Kien thuc con: lăng trụ, hình chóp, hình trụ, mặt cầu, thể tích
+  - Vận dụng tọa độ Oxyz [hinh_hoc_oxyz_van_dung_12]
+    Kien thuc con: khoảng cách Oxyz, góc, mặt phẳng, đường thẳng, mặt cầu
+  - Vectơ và độ dài trong không gian Oxyz [g12_geom_vectors_3d]
+    Kien thuc con: tọa độ vectơ, độ dài vectơ, tích vô hướng
+  - Phương trình mặt phẳng [g12_geom_plane_equation]
+    Kien thuc con: vectơ pháp tuyến, mặt phẳng qua một điểm, thay tọa độ kiểm tra
+  - Phương trình đường thẳng trong Oxyz [g12_geom_line_equation_3d]
+    Kien thuc con: vectơ chỉ phương, phương trình tham số, điểm thuộc đường thẳng
+  - Phương trình mặt cầu và tâm bán kính [g12_geom_sphere_equation]
+    Kien thuc con: đọc tâm, tìm bán kính, lập phương trình chuẩn
+  - Diện tích xung quanh và toàn phần hình khối [g12_geom_solid_surface_area]
+    Kien thuc con: hình trụ, hình nón, mặt cầu
+  - Khoảng cách từ điểm đến mặt phẳng [g12_geom_point_plane_distance]
+    Kien thuc con: công thức khoảng cách, mặt phẳng tọa độ, điều kiện điểm thuộc mặt phẳng
+  - Góc giữa đường thẳng và mặt phẳng Oxyz [g12_geom_line_plane_angle]
+    Kien thuc con: vectơ chỉ phương, vectơ pháp tuyến, sin góc giữa đường và mặt phẳng
+  - Góc giữa hai mặt phẳng [g12_geom_two_planes_angle]
+    Kien thuc con: hai vectơ pháp tuyến, cos góc, nhận biết vuông góc
+  - Giao điểm đường thẳng và mặt phẳng [g12_geom_line_plane_intersection]
+    Kien thuc con: thế tham số vào mặt phẳng, giải tham số, kiểm tra giao điểm
+  - Mặt phẳng tiếp xúc với mặt cầu [g12_geom_sphere_tangent_plane]
+    Kien thuc con: khoảng cách tâm đến mặt phẳng, điều kiện tiếp xúc, tìm tham số
+  - Vị trí tương đối của hai đường thẳng trong Oxyz [g12_geom_skew_line_relation]
+    Kien thuc con: đồng phẳng hay chéo nhau, hệ phương trình tham số, tích hỗn tạp
+  - Cực trị khoảng cách trong không gian tọa độ [g12_geom_min_distance_3d]
+    Kien thuc con: điểm di động trên đường thẳng, hình chiếu vuông góc, tối ưu biểu thức bậc hai
+  - Giao tuyến mặt cầu và mặt phẳng [g12_geom_sphere_plane_intersection]
+    Kien thuc con: đường tròn giao tuyến, bán kính đường tròn giao, tiếp xúc hoặc không giao
+  - Bài toán tham số hình học Oxyz [g12_geom_parameter_geometry]
+    Kien thuc con: điều kiện đồng phẳng, điều kiện vuông góc, biện luận giao điểm
+  - Bài toán tối ưu hình học không gian [g12_geom_3d_optimization]
+    Kien thuc con: ràng buộc thể tích, diện tích nhỏ nhất, mô hình hóa thực tế
+
+BAN DO TOAN CHUYEN/HSG: 46 dau muc
+- Số học: Chia hết, ước và bội; gcd/lcm; thuật toán Euclid; phân tích nguyên tố; định lý cơ bản số học.
+- Số học: Đồng dư modulo; lớp thặng dư; phép toán modulo; định lý Fermat nhỏ; định lý Euler; định lý phần dư Trung Hoa.
+- Số học: Phương trình nghiệm nguyên tuyến tính ax+by=c; điều kiện gcd(a,b)|c; phương trình Pell; phương trình Diophantine.
+- Số học: Số nguyên tố; vô hạn số nguyên tố; phân tích theo modulo; đánh giá ước nguyên tố.
+- Số học: Chữ số, biểu diễn cơ số, tính chia hết, tổng chữ số và chu kỳ lũy thừa.
+- Đại số chuyên: Bất đẳng thức AM-GM, Cauchy-Schwarz, rearrangement, Chebyshev, Jensen khi đủ điều kiện.
+- Đại số chuyên: Bất đẳng thức Schur, Nesbitt, Bernoulli; đồng nhất thức SOS; pqr cho biểu thức đối xứng.
+- Đại số chuyên: Bất đẳng thức có điều kiện tổng, tích; chuẩn hóa; đồng bậc; biến đổi tương đương.
+- Đại số chuyên: Cực trị đại số; phương pháp tiếp tuyến; uvw/pqr; điểm rơi và dấu bằng.
+- Đại số chuyên: Bất đẳng thức phân thức; đánh giá mẫu; Cauchy Engel; Titu Andreescu.
+- Đa thức: Định lý dư và Bézout; chia đa thức; nghiệm bội; hệ thức Viète.
+- Đa thức: Định lý nghiệm hữu tỉ; đa thức bất khả quy ở mức phù hợp; phân tích nhân tử.
+- Đa thức: Đa thức đối xứng; đa thức luân phiên; định thức Vandermonde.
+- Đa thức: Nội suy Lagrange; sai phân; xác định đa thức từ giá trị.
+- Đa thức: Đa thức nguyên; giá trị nguyên; đồng dư đa thức.
+- Phương trình hàm: Thay biến đặc biệt; đơn ánh, toàn ánh; tính đơn điệu; chẵn lẻ; chu kỳ.
+- Phương trình hàm: Phương trình Cauchy và biến thể trong miền xác định có điều kiện; không mặc định tính liên tục.
+- Phương trình hàm: Phương trình hàm trên số nguyên/số hữu tỉ; truy hồi giá trị; bất biến.
+- Dãy số: Truy hồi tuyến tính; phương trình đặc trưng; dãy sai phân; quy nạp.
+- Dãy số: Đơn điệu và bị chặn; hội tụ; đánh giá; kẹp; dãy con.
+- Dãy số: Bất biến, chu kỳ, modulo và cấu trúc trong dãy số nguyên.
+- Tổ hợp: Quy tắc cộng/nhân; hoán vị, chỉnh hợp, tổ hợp; nhị thức Newton.
+- Tổ hợp: Nguyên lý Dirichlet; nguyên lý cực hạn; đếm hai cách; bao hàm-loại trừ.
+- Tổ hợp: Song ánh; truy hồi; phân hoạch; hệ thức tổ hợp.
+- Tổ hợp: Bất biến và đơn biến trong trò chơi/biến đổi hữu hạn.
+- Tổ hợp: Đồ thị: bậc đỉnh, đường đi, chu trình, tô màu, ghép cặp ở mức nhập môn.
+- Tổ hợp: Tổ hợp hình học; đếm đường lưới; chọn điểm và đường thẳng.
+- Hình học phẳng: Tam giác: đường trung tuyến, phân giác, đường cao, trung trực, tâm nội/ngoại tiếp.
+- Hình học phẳng: Ceva, Menelaus, định lý phân giác, Stewart, Apollonius.
+- Hình học phẳng: Đường tròn: góc nội tiếp, phương tích, trục đẳng phương, tiếp tuyến-cát tuyến.
+- Hình học phẳng: Tứ giác nội tiếp; Ptolemy; Miquel; Simson; đường tròn chín điểm.
+- Hình học phẳng: Đồng dạng, vị tự, phép quay, đối xứng, phép nghịch đảo ở mức nâng cao.
+- Hình học phẳng: Hàng điểm điều hòa; cực-đối cực ở mức chuyên sâu.
+- Hình học phẳng: Biến đổi hình học; dựng hình; quỹ tích; phương pháp diện tích.
+- Hình học phẳng: Vectơ và tọa độ; barycentric/complex geometry ở mức nâng cao tùy chương trình.
+- Hình học không gian: Quan hệ điểm-đường-mặt; song song, vuông góc; góc và khoảng cách.
+- Hình học không gian: Thiết diện, thể tích, tỉ số thể tích, phép chiếu và định lý ba đường vuông góc.
+- Giải tích nâng cao: Giới hạn, liên tục, đạo hàm; định lý giá trị trung bình và ứng dụng.
+- Giải tích nâng cao: Tối ưu hóa; khảo sát hàm; tham số; tiếp tuyến; số nghiệm phương trình.
+- Giải tích nâng cao: Tích phân và ứng dụng diện tích/thể tích; đánh giá tích phân ở mức mở rộng.
+- Xác suất: Xác suất có điều kiện; độc lập; công thức xác suất toàn phần và Bayes.
+- Xác suất: Biến ngẫu nhiên rời rạc, kỳ vọng, phương sai; đếm mô hình mẫu.
+- Bài toán tổng hợp: Tham số; cực trị; tìm điều kiện cần/đủ; phản ví dụ; phân loại trường hợp.
+- Bài toán tổng hợp: Bài toán thực tế: mô hình hóa, nêu giả thiết, kiểm tra đơn vị và nghiệm hợp lý.
+- Chứng minh: Phản chứng, phản đảo, quy nạp, bất biến, cực hạn, dựng cấu hình phụ.
+- Chứng minh: Phân tích ngược; tổng quát hóa; tìm dấu bằng; chứng minh điều kiện cần và đủ.
+
+NGAN HANG CONG THUC/DINH LY/PHUONG PHAP THAM KHAO: 74 muc
+1. [Logic and sets] Mệnh đề kéo theo: p⇒q tương đương ¬p∨q; phản đảo tương đương ¬q⇒¬p.
+   Luu y: Không đồng nhất mệnh đề đảo với mệnh đề phản đảo.
+2. [Logic and sets] De Morgan: ¬(p∧q) ⇔ (¬p∨¬q); ¬(p∨q) ⇔ (¬p∧¬q).
+   Luu y: Áp dụng cho logic và phép toán tập hợp.
+3. [Logic and sets] Tập hợp: A\B = A∩Bᶜ; (A∪B)ᶜ=Aᶜ∩Bᶜ; (A∩B)ᶜ=Aᶜ∪Bᶜ.
+   Luu y: Phần bù xét trong tập vũ trụ xác định.
+4. [Algebra] Hằng đẳng thức bình phương: (a±b)²=a²±2ab+b².
+5. [Algebra] Hiệu hai bình phương: a²−b²=(a−b)(a+b).
+6. [Algebra] Lập phương: a³−b³=(a−b)(a²+ab+b²); a³+b³=(a+b)(a²−ab+b²).
+7. [Algebra] Nhị thức Newton: (a+b)^n=Σ C(n,k)a^(n−k)b^k.
+   Luu y: n nguyên không âm.
+8. [Algebra] Viète bậc hai: ax²+bx+c=0: x₁+x₂=−b/a; x₁x₂=c/a (a≠0).
+   Luu y: Chỉ khi phương trình có hai nghiệm tính cả bội.
+9. [Algebra] Biệt thức: Δ=b²−4ac; nghiệm thực theo dấu Δ.
+10. [Algebra] Hoàn thành bình phương: ax²+bx+c=a(x+b/(2a))²−Δ/(4a).
+   Luu y: a≠0.
+11. [Algebra] AM-GM: Với xᵢ≥0: (x₁+…+xₙ)/n ≥ (x₁…xₙ)^(1/n).
+   Luu y: Dấu bằng khi các số bằng nhau.
+12. [Algebra] Cauchy-Schwarz: (Σaᵢ²)(Σbᵢ²)≥(Σaᵢbᵢ)².
+13. [Algebra] Cauchy Engel: Σ xᵢ²/aᵢ ≥ (Σxᵢ)²/(Σaᵢ), aᵢ>0.
+14. [Algebra] Bernoulli: (1+x)^n≥1+nx với x≥−1, n nguyên không âm.
+15. [Algebra] Schur bậc 3: a³+b³+c³+3abc ≥ Σ_sym a²b/2, với a,b,c≥0.
+   Luu y: Tương đương Σa(a−b)(a−c)≥0.
+16. [Algebra] Giá trị tuyệt đối: |x|≤a ⇔ −a≤x≤a (a≥0); |x|≥a ⇔ x≤−a hoặc x≥a.
+17. [Functions] Hợp hàm: (f∘g)(x)=f(g(x)).
+   Luu y: Kiểm tra miền xác định.
+18. [Functions] Hàm chẵn/lẻ: f(−x)=f(x) chẵn; f(−x)=−f(x) lẻ.
+   Luu y: Miền xác định cần đối xứng qua 0.
+19. [Functions] Hàm bậc hai: y=ax²+bx+c; đỉnh x=−b/(2a), y=−Δ/(4a).
+   Luu y: a≠0.
+20. [Functions] Đạo hàm lũy thừa: (x^n)'=n x^(n−1).
+   Luu y: Trên miền xác định thích hợp.
+21. [Functions] Quy tắc tích: (uv)'=u'v+uv'.
+22. [Functions] Quy tắc thương: (u/v)'=(u'v−uv')/v².
+   Luu y: v≠0.
+23. [Functions] Đạo hàm hàm hợp: (f(g(x)))'=f'(g(x))g'(x).
+24. [Functions] Đạo hàm mũ và log: (e^x)'=e^x; (ln x)'=1/x (x>0).
+25. [Functions] Định lý giá trị trung bình: Nếu f liên tục trên [a,b], khả vi trên (a,b), tồn tại c: f'(c)=(f(b)−f(a))/(b−a).
+26. [Sequences] Cấp số cộng: u_n=u_1+(n−1)d; S_n=n(u_1+u_n)/2.
+27. [Sequences] Cấp số nhân: u_n=u_1 q^(n−1); S_n=u_1(1−q^n)/(1−q), q≠1.
+28. [Sequences] Tổng bình phương: Σ_{k=1}^n k²=n(n+1)(2n+1)/6.
+29. [Sequences] Tổng lập phương: Σ_{k=1}^n k³=[n(n+1)/2]².
+30. [Trigonometry] Cơ bản: sin²x+cos²x=1; tan x=sin x/cos x khi cos x≠0.
+31. [Trigonometry] Cộng góc sin: sin(a±b)=sin a cos b ± cos a sin b.
+32. [Trigonometry] Cộng góc cos: cos(a±b)=cos a cos b ∓ sin a sin b.
+33. [Trigonometry] Nhân đôi: sin2x=2sin x cos x; cos2x=cos²x−sin²x=1−2sin²x=2cos²x−1.
+34. [Trigonometry] Định lý sin: a/sin A=b/sin B=c/sin C=2R.
+   Luu y: Tam giác không suy biến.
+35. [Trigonometry] Định lý cos: c²=a²+b²−2ab cos C.
+36. [Geometry] Diện tích tam giác: S=½ab sin C = abc/(4R)=rs.
+   Luu y: Các biểu thức áp dụng với tam giác phù hợp.
+37. [Geometry] Heron: S=√[p(p−a)(p−b)(p−c)], p=(a+b+c)/2.
+38. [Geometry] Ceva: Ba đường thẳng qua các đỉnh đồng quy khi và chỉ khi (BD/DC)(CE/EA)(AF/FB)=1.
+   Luu y: Điểm chia cạnh theo hướng có dấu khi cần.
+39. [Geometry] Menelaus: Với A,B,C thẳng hàng theo cấu hình cắt cạnh: tích ba tỉ số có hướng bằng −1 (quy ước dấu phụ thuộc cách đặt).
+   Luu y: Phải thống nhất quy ước đoạn có hướng.
+40. [Geometry] Phương tích điểm: Với hai cát tuyến PAB và PCD: PA·PB=PC·PD (đoạn có hướng phù hợp).
+41. [Geometry] Góc nội tiếp: Số đo góc nội tiếp bằng nửa số đo cung bị chắn.
+42. [Geometry] Ptolemy: Tứ giác lồi ABCD nội tiếp: AC·BD=AB·CD+AD·BC.
+43. [Geometry] Đường tròn: Độ dài cung l=Rθ; diện tích quạt S=½R²θ.
+   Luu y: θ tính bằng radian.
+44. [Geometry] Vectơ: AB⃗=(x_B−x_A,y_B−y_A) hoặc tương tự trong 3D.
+45. [Geometry] Khoảng cách 2D: d(A,B)=√[(x₂−x₁)²+(y₂−y₁)²].
+46. [Geometry] Trung điểm: M=((x₁+x₂)/2,(y₁+y₂)/2) trong mặt phẳng.
+47. [Geometry] Đường thẳng: Ax+By+C=0; khoảng cách từ (x₀,y₀) đến đường thẳng = |Ax₀+By₀+C|/√(A²+B²).
+   Luu y: A²+B²>0.
+48. [Geometry] Khoảng cách 3D: d(A,B)=√[(Δx)²+(Δy)²+(Δz)²].
+49. [Geometry] Mặt cầu: (x−a)²+(y−b)²+(z−c)²=R².
+   Luu y: R>0.
+50. [Geometry] Tích vô hướng: a·b=|a||b|cosθ; tọa độ: Σaᵢbᵢ.
+   Luu y: Vectơ khác 0 khi dùng góc.
+51. [Geometry] Thể tích lăng trụ: V=S_đáy h.
+   Luu y: h là chiều cao vuông góc.
+52. [Geometry] Thể tích chóp: V=⅓ S_đáy h.
+   Luu y: h là chiều cao vuông góc.
+53. [Geometry] Thể tích cầu: V=4πR³/3; diện tích mặt cầu=4πR².
+54. [Combinatorics] Giai thừa: n!=n(n−1)…2·1; 0!=1.
+55. [Combinatorics] Hoán vị: P_n=n!.
+56. [Combinatorics] Chỉnh hợp: A_n^k=n!/(n−k)!.
+   Luu y: 0≤k≤n.
+57. [Combinatorics] Tổ hợp: C_n^k=n!/[k!(n−k)!].
+   Luu y: 0≤k≤n.
+58. [Combinatorics] Bao hàm-loại trừ 2 tập: |A∪B|=|A|+|B|−|A∩B|.
+59. [Combinatorics] Nhị thức xác suất: P(X=k)=C(n,k)p^k(1−p)^(n−k).
+   Luu y: n phép thử Bernoulli độc lập, cùng p.
+60. [Probability] Xác suất cổ điển: P(A)=|A|/|Ω|.
+   Luu y: Các kết quả sơ cấp đồng khả năng và Ω hữu hạn.
+61. [Probability] Xác suất có điều kiện: P(A|B)=P(A∩B)/P(B).
+   Luu y: P(B)>0.
+62. [Probability] Bayes: P(Aᵢ|B)=P(B|Aᵢ)P(Aᵢ)/ΣⱼP(B|Aⱼ)P(Aⱼ).
+   Luu y: Các Aᵢ tạo thành phân hoạch và P(B)>0.
+63. [Statistics] Trung bình mẫu: x̄=(Σxᵢ)/n.
+64. [Statistics] Phương sai dữ liệu: s²=(Σ(xᵢ−x̄)²)/n theo quy ước mô tả dữ liệu phổ thông.
+   Luu y: Phân biệt phương sai tổng thể và ước lượng không chệch.
+65. [Complex numbers] Số phức: z=a+bi; i²=−1; |z|=√(a²+b²).
+66. [Complex numbers] Liên hợp: z z̄=|z|²; (a+bi)⁻¹=(a−bi)/(a²+b²) khi z≠0.
+67. [Number theory] Euclid: gcd(a,b)=gcd(b,a mod b).
+   Luu y: Với a,b nguyên không đồng thời bằng 0.
+68. [Number theory] Định lý Fermat nhỏ: Nếu p nguyên tố và p∤a thì a^(p−1)≡1 (mod p).
+69. [Number theory] Định lý Euler: Nếu gcd(a,n)=1 thì a^φ(n)≡1 (mod n).
+70. [Number theory] Đồng dư tuyến tính: ax≡b (mod n) có nghiệm khi và chỉ khi gcd(a,n)|b.
+71. [Number theory] Nguyên lý Dirichlet: Nếu n+1 vật đặt vào n hộp thì có hộp chứa ít nhất 2 vật.
+72. [Proof methods] Quy nạp: Chứng minh mệnh đề cơ sở và bước P(n)⇒P(n+1).
+   Luu y: Phải xác định miền n và bước đầu.
+73. [Proof methods] Phản chứng: Giả sử phủ định kết luận, suy ra mâu thuẫn với giả thiết/định lý.
+74. [Proof methods] Phân tích trường hợp: Phân hoạch các trường hợp bao phủ toàn bộ khả năng và không bỏ sót.
+
+DANG TU DUY/CAU HOI: 28
+1. nhận dạng khái niệm: Chọn/nhận định đúng về định nghĩa, tính chất hoặc điều kiện.
+2. tính trực tiếp: Tính một đại lượng theo dữ kiện rõ ràng.
+3. tìm dữ kiện ngược: Biết kết quả hoặc ràng buộc, tìm dữ kiện ban đầu.
+4. tham số: Tìm tham số để phương trình, hình hoặc bất đẳng thức thỏa điều kiện.
+5. điều kiện cần và đủ: Xác định tương đương, không chỉ kiểm tra một chiều.
+6. chứng minh: Chứng minh mệnh đề từ giả thiết; nêu rõ chuỗi lập luận.
+7. phản ví dụ: Bác bỏ mệnh đề sai bằng phản ví dụ hợp lệ.
+8. phát hiện sai lầm: Phân tích lời giải có lỗi và xác định bước sai.
+9. so sánh phương pháp: Chọn cách giải hiệu quả và giải thích lý do.
+10. nhiều biểu diễn: Chuyển đổi giữa đồ thị, bảng, công thức, lời văn và hình vẽ.
+11. mô hình hóa thực tế: Lập biến, điều kiện, mô hình, giải và diễn giải kết quả.
+12. tối ưu: Tìm giá trị lớn nhất/nhỏ nhất và chứng minh đạt được.
+13. đếm cấu hình: Đếm số trường hợp bằng quy tắc cộng/nhân, song ánh hoặc bao hàm-loại trừ.
+14. bài toán xác suất: Xác định không gian mẫu, biến cố, xác suất và điều kiện.
+15. đọc hình: Suy luận từ cấu hình hình học, chỉ dùng quan hệ được cho hoặc chứng minh.
+16. dựng hình/quỹ tích: Mô tả tập điểm hoặc dựng cấu hình, chứng minh thuận-nghịch.
+17. bài toán đảo: Đảo vai trò dữ kiện/kết luận và kiểm tra điều kiện đảo có đúng không.
+18. tổng hợp liên chủ đề: Kết hợp ít nhất hai mảng kiến thức có liên hệ thực chất.
+19. trường hợp biên: Kiểm tra nghiệm biên, mẫu bằng 0, suy biến, dấu bằng hoặc miền xác định.
+20. ước lượng/đánh giá: Chặn trên/dưới, chứng minh bất đẳng thức hoặc khoảng giá trị.
+21. truy hồi: Tìm công thức, tính chất hoặc giới hạn từ quan hệ truy hồi.
+22. bất biến/đơn biến: Tìm đại lượng giữ nguyên hoặc thay đổi một chiều qua thao tác.
+23. chia hết/đồng dư: Dùng phân tích modulo hoặc cấu trúc số nguyên.
+24. phân loại nghiệm: Chứng minh mọi nghiệm thuộc các trường hợp đã liệt kê.
+25. thiết kế phản chứng: Giả sử điều ngược lại và tìm mâu thuẫn có căn cứ.
+26. đúng-sai có giải thích: Mỗi mệnh đề yêu cầu quyết định đúng/sai và nêu lập luận hoặc phản ví dụ.
+27. trả lời ngắn có kiểm soát: Kết quả dạng số, phân số, tọa độ hoặc biểu thức chuẩn hóa.
+28. tự luận nhiều ý: Các ý liên kết tăng dần, ý sau có thể dùng kết quả ý trước.
+
+VI DU CAU HOI TU BIEN SOAN: 13
+- sample_g10_mc_001 | Lop 10 | multiple_choice | foundation | Hàm số bậc hai
+  De: Cho f(x)=x²−4x+1. Hoành độ đỉnh của đồ thị là bao nhiêu?
+  Dap an: 2
+  Loi giai: Với f(x)=ax²+bx+c, hoành độ đỉnh là −b/(2a). Ở đây a=1, b=−4 nên x=−(−4)/2=2.
+- sample_g10_tf_001 | Lop 10 | true_false | foundation | Vectơ
+  De: Với mọi vectơ u, v, nếu u·v=0 thì hai vectơ đều phải khác vectơ-không và vuông góc nhau.
+  Dap an: False
+  Loi giai: Mệnh đề sai vì nếu u là vectơ-không thì u·v=0 với mọi v. Điều kiện vuông góc theo góc giữa hai vectơ thường cần cả hai vectơ khác vectơ-không.
+- sample_g10_short_001 | Lop 10 | short_answer | foundation | Tọa độ phẳng
+  De: Tính khoảng cách giữa A(1,2) và B(4,6).
+  Dap an: 5
+  Loi giai: AB=√((4−1)²+(6−2)²)=√(9+16)=5.
+- sample_g10_written_001 | Lop 10 | written_solution | intermediate | Phương trình bậc hai
+  De: Tìm tất cả m để phương trình x²−(m+1)x+m=0 có hai nghiệm thực phân biệt.
+  Dap an: m≠1
+  Loi giai: Biệt thức Δ=(m+1)²−4m=(m−1)². Có hai nghiệm thực phân biệt khi Δ>0, tương đương (m−1)²>0, tức m≠1.
+- sample_g11_mc_001 | Lop 11 | multiple_choice | foundation | Lượng giác
+  De: Giá trị của sin(π/6) là gì?
+  Dap an: 1/2
+  Loi giai: Góc π/6 bằng 30°, nên sin(π/6)=1/2.
+- sample_g11_tf_001 | Lop 11 | true_false | intermediate | Cấp số cộng
+  De: Nếu một dãy là cấp số cộng thì hiệu u(n+1)−u(n) không đổi với mọi n trong miền chỉ số.
+  Dap an: True
+  Loi giai: Đây là đặc trưng của cấp số cộng; hằng số d được gọi là công sai.
+- sample_g11_short_001 | Lop 11 | short_answer | foundation | Tổ hợp
+  De: Có bao nhiêu cách chọn 2 học sinh từ một nhóm 6 học sinh, không xét thứ tự?
+  Dap an: 15
+  Loi giai: Số cách là C(6,2)=6!/(2!4!)=15.
+- sample_g11_written_001 | Lop 11 | written_solution | intermediate | Quan hệ song song
+  De: Trong hình chóp S.ABC, M và N lần lượt là trung điểm của SA và SB. Chứng minh MN song song với AB.
+  Dap an: MN ∥ AB
+  Loi giai: Xét tam giác SAB. M,N lần lượt là trung điểm của SA,SB nên theo định lý đường trung bình của tam giác, MN∥AB và MN=AB/2.
+- sample_g12_mc_001 | Lop 12 | multiple_choice | foundation | Đạo hàm
+  De: Đạo hàm của f(x)=x³−2x là gì?
+  Dap an: 3x²−2
+  Loi giai: Áp dụng (x^n)'=nx^(n−1) và (ax)'=a: f'(x)=3x²−2.
+- sample_g12_tf_001 | Lop 12 | true_false | foundation | Mặt cầu
+  De: Phương trình (x−1)²+(y+2)²+(z−3)²=16 biểu diễn mặt cầu tâm I(1,−2,3), bán kính 4.
+  Dap an: True
+  Loi giai: So sánh với dạng chuẩn (x−a)²+(y−b)²+(z−c)²=R². Tâm là (a,b,c)=(1,−2,3), R=√16=4.
+- sample_g12_short_001 | Lop 12 | short_answer | foundation | Tích phân
+  De: Tính tích phân từ 0 đến 1 của 2x dx.
+  Dap an: 1
+  Loi giai: ∫₀¹2x dx=[x²]₀¹=1.
+- sample_g12_written_001 | Lop 12 | written_solution | intermediate | Khoảng cách điểm đến mặt phẳng
+  De: Tính khoảng cách từ P(1,2,−1) đến mặt phẳng 2x−y+2z−3=0.
+  Dap an: 5/3
+  Loi giai: Dùng công thức d=|Ax₀+By₀+Cz₀+D|/√(A²+B²+C²). Tử số |2−2−2−3|=5; mẫu số √(4+1+4)=3. Vậy d=5/3.
+- sample_olympiad_001 | Lop 10 | written_solution | advanced | Đồng dư
+  De: Chứng minh rằng với mọi số nguyên n, n(n+1) là số chẵn.
+  Dap an: n(n+1) chia hết cho 2
+  Loi giai: Hai số nguyên liên tiếp n và n+1 có một số chẵn. Vì vậy tích của chúng chia hết cho 2.
+
+NGUON THAM KHAO CO THE KIEM CHUNG
+1. Chuong trinh GDPT mon Toan - Thong tu 32/2018/TT-BGDDT: https://vbpl.moj.gov.vn/bogiaoducdaotao/Pages/vbpq-toanvan.aspx?ItemID=146721
+2. Chuong trinh nang cao mon chuyen - Thong tu 22/2025/TT-BGDDT: https://vanban.chinhphu.vn/?classid=1&docid=215557&pageid=27160&typegroupid=6
+3. IMO official problem archive: https://www.imo-official.org/problems/
+
+GIOI HAN VA KE HOACH
+- Danh muc hien tai co 139 chu de (45 lop 10, 47 lop 11, 47 lop 12), khong phai 147.
+- 46 dau muc Toan chuyen/HSG la ban do pham vi, khong phai 46 bai giang da hoan tat.
+- 74 cong thuc/dinh ly/phuong phap can duoc ra soat chuyen mon truoc khi dung tu dong.
+- 28 archetype la khung chong lap mau, can tich hop vao question engine va test.
+- 13 cau mau tu bien soan minh hoa du lieu va loi giai, khong phai kho cau hoi day du.
+- Chua the tuyen bo da lay 100% sach, sach bai tap va de thi moi nam; can thu thap co nguon va quyen su dung, doi chieu tung muc.
+- Thu vien da duoc them vao ZIP du an, nhung chua tu dong tich hop vao runtime question engine.

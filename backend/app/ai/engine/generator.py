@@ -9,7 +9,7 @@ from .distractor_engine import DistractorEngine
 from .extended_bank import generate as generate_extended
 from .super_bank import generate as generate_super
 from .geometry_curriculum import generate as generate_geometry_curriculum
-from .geometry_diagrams import validate_geometry_diagram
+from .geometry_diagrams import validate_geometry_diagram, normalize_geometry_diagram
 from ..config import KNOWLEDGE_DIR
 
 class QuestionGenerator:
@@ -101,6 +101,8 @@ class QuestionGenerator:
         # any legacy/additive bank before the question leaves the generator.
         diagram = q.get("diagram")
         if diagram:
+            diagram = normalize_geometry_diagram(diagram)
+            q["diagram"] = diagram
             diagram_errors = validate_geometry_diagram(diagram)
             if diagram_errors:
                 q.pop("diagram", None)

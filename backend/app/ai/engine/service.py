@@ -1,4 +1,5 @@
-import time, random, uuid
+import time, random, uuid, json, re
+from database.database import get_connection
 from ..config import MAX_COUNT, MAX_TOPICS, QUESTION_TTL_SECONDS
 from .knowledge_service import KnowledgeService
 from .generator import QuestionGenerator
@@ -39,6 +40,93 @@ class AIQuestionService:
 
     def topics(self,grade=None): return self.knowledge.list_topics(grade)
 
+    def _curated_admin_candidates(self, grade, topic_id, difficulty, question_type, game_id=None):
+        """Load reviewed admin-authored items for the exact knowledge topic, if any."""
+        type_aliases = {"short_answer": {"short_answer", "written"}, "multiple_choice": {"multiple_choice"}, "true_false": {"true_false"}}
+        allowed_types = type_aliases.get(question_type, {question_type})
+        topic_info = self.knowledge.get(topic_id) or {}
+        topic_name = str(topic_info.get("name", "")).strip().casefold()
+        wanted = str(topic_id).strip().casefold()
+        level_aliases = {"easy": {"easy", "foundation", "nền tảng", "sơ cấp"},
+                         "medium": {"medium", "intermediate", "trung cấp"},
+                         "hard": {"hard", "advanced", "nâng cao", "expert", "hell"}}
+        accepted_levels = level_aliases.get(normalize(difficulty), {str(difficulty).casefold()})
+        conn = get_connection()
+        try:
+            rows = conn.execute("SELECT * FROM admin_question_bank WHERE grade=? ORDER BY id DESC LIMIT 500", (grade,)).fetchall()
+        finally:
+            conn.close()
+        matched = []
+        for row in rows:
+            item = dict(row)
+            stored_topic = str(item.get("topic", "")).strip().casefold()
+            stored_type = str(item.get("question_type", "")).strip().casefold()
+            stored_level = str(item.get("difficulty", "")).strip().casefold()
+            if stored_topic not in {wanted, topic_name}:
+                continue
+            stored_game_id = str(item.get("game_id", "") or "").strip()
+            requested_game_id = str(game_id or "").strip()
+            # An empty game_id marks a general bank question usable by practice and games.
+            # A non-empty game_id remains restricted to that exact game.
+            if stored_game_id and stored_game_id != requested_game_id:
+                continue
+            if stored_type not in allowed_types:
+                continue
+            if stored_level and stored_level not in accepted_levels:
+                continue
+            try:
+                choices = json.loads(item.get("choices_json") or "[]")
+            except Exception:
+                choices = []
+            item["choices"] = choices if isinstance(choices, list) else []
+            matched.append(item)
+        random.shuffle(matched)
+        return matched
+
+    def _build_curated_question(self, item, grade, topic_id, difficulty, question_type):
+        stored_type = str(item.get("question_type", ""))
+        choices = [str(x).strip() for x in item.get("choices", []) if str(x).strip()]
+        answer = str(item.get("correct_answer", "")).strip()
+        if question_type == "multiple_choice":
+            if len(choices) != 4 or len(set(choices)) != 4:
+                return None
+            if answer not in choices:
+                match = re.match(r"^([A-D])(?:\.|\)|\s|$)", answer, re.I)
+                if match:
+                    idx = ord(match.group(1).upper()) - ord("A")
+                    if 0 <= idx < len(choices): answer = choices[idx]
+            if answer not in choices:
+                return None
+            options = choices
+        elif question_type == "true_false":
+            if len(choices) != 4:
+                return None
+            tokens = [x.strip().casefold() for x in re.split(r"[,;|]", answer) if x.strip()]
+            truth_map = {"true": True, "t": True, "đ": True, "đúng": True, "1": True,
+                         "false": False, "f": False, "s": False, "sai": False, "0": False}
+            if len(tokens) != 4 or any(t not in truth_map for t in tokens):
+                return None
+            statement_answers = [truth_map[t] for t in tokens]
+            options = []
+        else:
+            options = []
+        q = {
+            "id": uuid.uuid4().hex, "grade": grade, "topic": topic_id,
+            "difficulty": normalize(difficulty), "question_type": question_type,
+            "question": str(item.get("question", "")).strip(),
+            "answer": answer, "solution": str(item.get("explanation", "")).strip() or "Lời giải đang được bổ sung.",
+            "explanation": str(item.get("explanation", "")).strip(), "options": options,
+            "archetype": f"admin_bank_{item['id']}", "template_family": f"admin_bank_{item['id']}",
+            "generation_style": "admin_curated", "source": item.get("source", "Admin MATH_WEB"),
+            "knowledge_name": (self.knowledge.get(topic_id) or {}).get("name", topic_id),
+            "game_id": str(item.get("game_id", "") or ""), "admin_question_id": item["id"]
+        }
+        if question_type == "true_false":
+            q["statements"] = choices
+            q["statement_answers"] = statement_answers
+            q["answer"] = ",".join("Đúng" if x else "Sai" for x in statement_answers)
+        return q
+
     def generate_one(self,grade,topic_id,difficulty="medium",question_type="multiple_choice",seen=None,game_id=None,recent_families=None,seen_structures=None,seen_variations=None,seen_archetypes=None):
         if self.knowledge.get(topic_id) is None: raise ValueError("Unknown topic")
         seen=set(seen or set())
@@ -52,6 +140,31 @@ class AIQuestionService:
         seen_variations.update(self.question_history.recent_variations(topic_id, limit=10))
         last=None
         recent_families = list(recent_families or self.recent_families.get(game_id, []))
+
+        # Admin-reviewed questions are a first-class source for the matching topic.
+        # They pass the same validation and duplicate gates as generated questions.
+        for item in self._curated_admin_candidates(grade, topic_id, difficulty, question_type, game_id):
+            q = self._build_curated_question(item, grade, topic_id, difficulty, question_type)
+            if not q:
+                continue
+            try:
+                validate(q)
+            except ValidationError:
+                continue
+            variation = self._variation_key(q)
+            if q["fingerprint"] in seen or self.question_history.question_seen(q.get("question", "")):
+                continue
+            if q.get("structure_fingerprint") in seen_structures or variation in seen_variations:
+                continue
+            if q.get("archetype") in seen_archetypes:
+                continue
+            self.store.put(q)
+            self.question_history.record_question(q)
+            if game_id:
+                bucket = self.recent_families.setdefault(game_id, [])
+                bucket.append(q.get("template_family"))
+                del bucket[:-12]
+            return q
 
         # Phase 1: strict diversity. A question must not repeat the same
         # mathematical structure or the same bank variation already used.

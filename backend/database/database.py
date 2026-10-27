@@ -1,5 +1,8 @@
 import os
 import sqlite3
+import base64
+import hashlib
+import secrets
 
 from datetime import datetime, timezone
 from pathlib import Path
@@ -394,6 +397,12 @@ def init_database():
             "created_at",
             "TEXT"
         )
+
+        add_column_if_missing(connection, "users", "role", "TEXT NOT NULL DEFAULT 'user'")
+        add_column_if_missing(connection, "users", "status", "TEXT NOT NULL DEFAULT 'active'")
+        add_column_if_missing(connection, "users", "banned_at", "TEXT")
+        add_column_if_missing(connection, "users", "ban_reason", "TEXT")
+        add_column_if_missing(connection, "users", "auth_version", "INTEGER NOT NULL DEFAULT 0")
 
         # =====================================================
         # USERS DATA NORMALIZATION
@@ -1457,6 +1466,62 @@ def init_database():
             )
             """
         )
+
+        # =====================================================
+        # ADMIN MANAGEMENT TABLES + SINGLE ADMIN BOOTSTRAP
+        # =====================================================
+
+        connection.execute("CREATE INDEX IF NOT EXISTS idx_users_status ON users(status)")
+        connection.execute("""CREATE TABLE IF NOT EXISTS admin_audit_logs (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            admin_user_id INTEGER,
+            action TEXT NOT NULL,
+            target_user_id INTEGER,
+            details TEXT,
+            created_at TEXT NOT NULL
+        )""")
+        connection.execute("""CREATE TABLE IF NOT EXISTS admin_question_bank (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            grade INTEGER NOT NULL CHECK(grade BETWEEN 10 AND 12),
+            topic TEXT NOT NULL,
+            difficulty TEXT NOT NULL,
+            question_type TEXT NOT NULL,
+            game_id TEXT NOT NULL DEFAULT '',
+            question TEXT NOT NULL,
+            choices_json TEXT NOT NULL DEFAULT '[]',
+            correct_answer TEXT NOT NULL,
+            explanation TEXT NOT NULL DEFAULT '',
+            source TEXT NOT NULL DEFAULT 'Admin MATH_WEB',
+            tags_json TEXT NOT NULL DEFAULT '[]',
+            created_by INTEGER,
+            created_at TEXT NOT NULL,
+            updated_at TEXT NOT NULL
+        )""")
+        add_column_if_missing(connection, "admin_question_bank", "game_id", "TEXT NOT NULL DEFAULT ''")
+        connection.execute("CREATE INDEX IF NOT EXISTS idx_admin_questions_topic ON admin_question_bank(grade, topic, difficulty)")
+
+        admin_username = "admin19022011"
+        connection.execute("UPDATE users SET role='user' WHERE role='admin' AND username<>?", (admin_username,))
+        admin_row = connection.execute("SELECT id, role FROM users WHERE username=? LIMIT 1", (admin_username,)).fetchone()
+        bootstrap_password = os.getenv("MATHWEB_BOOTSTRAP_ADMIN_PASSWORD", "adminsitinh")
+        if admin_row:
+            if admin_row["role"] != "admin":
+                salt = secrets.token_bytes(16)
+                digest = hashlib.pbkdf2_hmac("sha256", bootstrap_password.encode("utf-8"), salt, 100_000)
+                password_hash = base64.b64encode(salt).decode("ascii") + ":" + base64.b64encode(digest).decode("ascii")
+                connection.execute("UPDATE users SET role='admin', status='active', password_hash=? WHERE id=?", (password_hash, admin_row["id"]))
+        else:
+            salt = secrets.token_bytes(16)
+            digest = hashlib.pbkdf2_hmac("sha256", bootstrap_password.encode("utf-8"), salt, 100_000)
+            password_hash = base64.b64encode(salt).decode("ascii") + ":" + base64.b64encode(digest).decode("ascii")
+            player_id = "MWADMIN" + datetime.now(timezone.utc).strftime("%y%m%d%H%M%S")
+            stamp = utc_now_iso()
+            connection.execute("""INSERT INTO users
+                (player_id, username, password_hash, level, xp, total_games, total_correct, total_wrong,
+                 total_blank, total_score, last_seen, created_at, role, status)
+                VALUES (?, ?, ?, 0, 0, 0, 0, 0, 0, 0, ?, ?, 'admin', 'active')""",
+                (player_id, admin_username, password_hash, stamp, stamp))
+        connection.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_single_admin_role ON users(role) WHERE role='admin'")
 
         # =====================================================
         # COMMIT

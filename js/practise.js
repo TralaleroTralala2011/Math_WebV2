@@ -1455,7 +1455,1222 @@
         "description": "Luyện tập vận dụng tọa độ oxyz với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.",
         "level_key": "medium",
         "id_num": 102
-    }
+    },
+{
+            "id": "g10_geom_angles_parallel",
+            "name": "Góc tạo bởi hai đường thẳng và đường cắt",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_angles_parallel/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_angles_parallel/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_angles_parallel/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Góc tạo bởi hai đường thẳng và đường cắt. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1001,
+            "geometry": true
+        },
+        {
+            "id": "g10_geom_triangle_congruence",
+            "name": "Các trường hợp bằng nhau của tam giác",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_triangle_congruence/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_triangle_congruence/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_triangle_congruence/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Các trường hợp bằng nhau của tam giác. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1002,
+            "geometry": true
+        },
+        {
+            "id": "g10_geom_special_lines",
+            "name": "Đường trung tuyến, phân giác và đường cao",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_special_lines/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_special_lines/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_special_lines/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Đường trung tuyến, phân giác và đường cao. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1003,
+            "geometry": true
+        },
+        {
+            "id": "g10_geom_quadrilaterals_properties",
+            "name": "Tính chất hình bình hành và hình thoi",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_quadrilaterals_properties/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_quadrilaterals_properties/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_quadrilaterals_properties/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Tính chất hình bình hành và hình thoi. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1004,
+            "geometry": true
+        },
+        {
+            "id": "g10_geom_circle_chords_arcs",
+            "name": "Dây cung, cung và khoảng cách đến tâm",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_circle_chords_arcs/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_circle_chords_arcs/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_circle_chords_arcs/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Dây cung, cung và khoảng cách đến tâm. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1005,
+            "geometry": true
+        },
+        {
+            "id": "g10_geom_thales_similarity",
+            "name": "Định lý Thales và tam giác đồng dạng",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_thales_similarity/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_thales_similarity/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_thales_similarity/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Định lý Thales và tam giác đồng dạng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1006,
+            "geometry": true
+        },
+        {
+            "id": "g10_geom_triangle_area_ratio",
+            "name": "Tỉ số diện tích tam giác",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_triangle_area_ratio/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_triangle_area_ratio/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_triangle_area_ratio/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Tỉ số diện tích tam giác. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1007,
+            "geometry": true
+        },
+        {
+            "id": "g10_geom_circle_angles",
+            "name": "Góc nội tiếp và góc ở tâm nâng cao",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_circle_angles/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_circle_angles/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_circle_angles/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Góc nội tiếp và góc ở tâm nâng cao. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1008,
+            "geometry": true
+        },
+        {
+            "id": "g10_geom_coordinate_distance_midpoint",
+            "name": "Trung điểm và khoảng cách trong tọa độ phẳng",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_coordinate_distance_midpoint/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_coordinate_distance_midpoint/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_coordinate_distance_midpoint/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Trung điểm và khoảng cách trong tọa độ phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1009,
+            "geometry": true
+        },
+        {
+            "id": "g10_geom_line_intersections",
+            "name": "Giao điểm và vị trí tương đối của hai đường thẳng",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_line_intersections/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_line_intersections/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_line_intersections/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Giao điểm và vị trí tương đối của hai đường thẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1010,
+            "geometry": true
+        },
+        {
+            "id": "g10_geom_locus",
+            "name": "Quỹ tích điểm trong mặt phẳng",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_locus/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_locus/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_locus/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Quỹ tích điểm trong mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1011,
+            "geometry": true
+        },
+        {
+            "id": "g10_geom_circle_tangent_chord",
+            "name": "Tiếp tuyến và dây cung của đường tròn",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_circle_tangent_chord/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_circle_tangent_chord/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_circle_tangent_chord/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Tiếp tuyến và dây cung của đường tròn. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1012,
+            "geometry": true
+        },
+        {
+            "id": "g10_geom_triangle_inequalities",
+            "name": "Bất đẳng thức và cực trị trong tam giác",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_triangle_inequalities/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_triangle_inequalities/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_triangle_inequalities/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Bất đẳng thức và cực trị trong tam giác. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1013,
+            "geometry": true
+        },
+        {
+            "id": "g10_geom_vector_proofs",
+            "name": "Chứng minh hình học bằng vectơ",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_vector_proofs/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_vector_proofs/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_vector_proofs/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Chứng minh hình học bằng vectơ. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1014,
+            "geometry": true
+        },
+        {
+            "id": "g10_geom_coordinate_circle_line",
+            "name": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+            "grade": 10,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g10_geom_coordinate_circle_line/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g10_geom_coordinate_circle_line/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g10_geom_coordinate_circle_line/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 10 • HÌNH HỌC",
+            "description": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1015,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_transform_translation",
+            "name": "Phép tịnh tiến và ảnh của hình",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_transform_translation/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_transform_translation/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_transform_translation/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Phép tịnh tiến và ảnh của hình. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1016,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_transform_reflection",
+            "name": "Phép đối xứng trục",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_transform_reflection/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_transform_reflection/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_transform_reflection/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Phép đối xứng trục. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1017,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_space_lines_planes",
+            "name": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_space_lines_planes/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_space_lines_planes/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_space_lines_planes/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Nhận biết đường thẳng và mặt phẳng trong không gian. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1018,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_parallel_line_plane",
+            "name": "Đường thẳng song song với mặt phẳng",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_parallel_line_plane/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_parallel_line_plane/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_parallel_line_plane/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Đường thẳng song song với mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1019,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_prism_pyramid_sections",
+            "name": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_prism_pyramid_sections/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_prism_pyramid_sections/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_prism_pyramid_sections/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1020,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_rotation_homothety",
+            "name": "Phép quay và phép vị tự",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_rotation_homothety/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_rotation_homothety/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_rotation_homothety/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Phép quay và phép vị tự. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1021,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_parallel_planes",
+            "name": "Hai mặt phẳng song song",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_parallel_planes/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_parallel_planes/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_parallel_planes/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Hai mặt phẳng song song. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1022,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_perpendicular_line_plane",
+            "name": "Đường thẳng vuông góc với mặt phẳng",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_perpendicular_line_plane/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_perpendicular_line_plane/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_perpendicular_line_plane/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Đường thẳng vuông góc với mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1023,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_dihedral_angles",
+            "name": "Góc giữa đường thẳng và mặt phẳng",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_dihedral_angles/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_dihedral_angles/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_dihedral_angles/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Góc giữa đường thẳng và mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1024,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_section_construction",
+            "name": "Dựng thiết diện của hình chóp và lăng trụ",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_section_construction/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_section_construction/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_section_construction/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Dựng thiết diện của hình chóp và lăng trụ. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1025,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_skew_lines_distance",
+            "name": "Khoảng cách giữa hai đường thẳng chéo nhau",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_skew_lines_distance/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_skew_lines_distance/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_skew_lines_distance/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Khoảng cách giữa hai đường thẳng chéo nhau. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1026,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_three_perpendiculars",
+            "name": "Định lý ba đường vuông góc",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_three_perpendiculars/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_three_perpendiculars/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_three_perpendiculars/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Định lý ba đường vuông góc. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1027,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_transform_composition",
+            "name": "Hợp thành các phép biến hình",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_transform_composition/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_transform_composition/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_transform_composition/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Hợp thành các phép biến hình. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1028,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_section_ratio",
+            "name": "Thiết diện và tỉ số đoạn trong hình không gian",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_section_ratio/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_section_ratio/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_section_ratio/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Thiết diện và tỉ số đoạn trong hình không gian. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1029,
+            "geometry": true
+        },
+        {
+            "id": "g11_geom_space_proof",
+            "name": "Chứng minh tổng hợp song song và vuông góc",
+            "grade": 11,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g11_geom_space_proof/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g11_geom_space_proof/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g11_geom_space_proof/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 11 • HÌNH HỌC",
+            "description": "Chứng minh tổng hợp song song và vuông góc. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1030,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_vectors_3d",
+            "name": "Vectơ và độ dài trong không gian Oxyz",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_vectors_3d/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_vectors_3d/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_vectors_3d/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Vectơ và độ dài trong không gian Oxyz. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1031,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_plane_equation",
+            "name": "Phương trình mặt phẳng",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_plane_equation/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_plane_equation/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_plane_equation/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Phương trình mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1032,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_line_equation_3d",
+            "name": "Phương trình đường thẳng trong Oxyz",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_line_equation_3d/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_line_equation_3d/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_line_equation_3d/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Phương trình đường thẳng trong Oxyz. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1033,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_sphere_equation",
+            "name": "Phương trình mặt cầu và tâm bán kính",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_sphere_equation/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_sphere_equation/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_sphere_equation/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Phương trình mặt cầu và tâm bán kính. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1034,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_solid_surface_area",
+            "name": "Diện tích xung quanh và toàn phần hình khối",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_solid_surface_area/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_solid_surface_area/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_solid_surface_area/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Diện tích xung quanh và toàn phần hình khối. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "foundation",
+            "id_num": 1035,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_point_plane_distance",
+            "name": "Khoảng cách từ điểm đến mặt phẳng",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_point_plane_distance/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_point_plane_distance/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_point_plane_distance/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Khoảng cách từ điểm đến mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1036,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_line_plane_angle",
+            "name": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_line_plane_angle/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_line_plane_angle/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_line_plane_angle/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Góc giữa đường thẳng và mặt phẳng Oxyz. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1037,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_two_planes_angle",
+            "name": "Góc giữa hai mặt phẳng",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_two_planes_angle/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_two_planes_angle/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_two_planes_angle/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Góc giữa hai mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1038,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_line_plane_intersection",
+            "name": "Giao điểm đường thẳng và mặt phẳng",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_line_plane_intersection/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_line_plane_intersection/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_line_plane_intersection/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Giao điểm đường thẳng và mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1039,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_sphere_tangent_plane",
+            "name": "Mặt phẳng tiếp xúc với mặt cầu",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_sphere_tangent_plane/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_sphere_tangent_plane/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_sphere_tangent_plane/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Mặt phẳng tiếp xúc với mặt cầu. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "medium",
+            "id_num": 1040,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_skew_line_relation",
+            "name": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_skew_line_relation/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_skew_line_relation/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_skew_line_relation/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Vị trí tương đối của hai đường thẳng trong Oxyz. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1041,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_min_distance_3d",
+            "name": "Cực trị khoảng cách trong không gian tọa độ",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_min_distance_3d/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_min_distance_3d/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_min_distance_3d/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Cực trị khoảng cách trong không gian tọa độ. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1042,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_sphere_plane_intersection",
+            "name": "Giao tuyến mặt cầu và mặt phẳng",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_sphere_plane_intersection/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_sphere_plane_intersection/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_sphere_plane_intersection/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Giao tuyến mặt cầu và mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1043,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_parameter_geometry",
+            "name": "Bài toán tham số hình học Oxyz",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_parameter_geometry/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_parameter_geometry/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_parameter_geometry/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Bài toán tham số hình học Oxyz. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1044,
+            "geometry": true
+        },
+        {
+            "id": "g12_geom_3d_optimization",
+            "name": "Bài toán tối ưu hình học không gian",
+            "grade": 12,
+            "games": [
+                {
+                    "name": "Khám phá hình",
+                    "icon": "🧭",
+                    "path": "games/knowledge/g12_geom_3d_optimization/1-kham-pha.html"
+                },
+                {
+                    "name": "Nhiệm vụ hình học",
+                    "icon": "📐",
+                    "path": "games/knowledge/g12_geom_3d_optimization/2-nhiem-vu.html"
+                },
+                {
+                    "name": "Trùm cuối hình học",
+                    "icon": "🏆",
+                    "path": "games/knowledge/g12_geom_3d_optimization/3-trum-cuoi.html"
+                }
+            ],
+            "category": "TOÁN 12 • HÌNH HỌC",
+            "description": "Bài toán tối ưu hình học không gian. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.",
+            "level_key": "advanced",
+            "id_num": 1045,
+            "geometry": true
+        }
 ];
 
     /* =====================================================
@@ -1509,8 +2724,6 @@
         "color-purple",
         "color-pink",
         "color-green"
-
-
     ];
 
 
@@ -4256,7 +5469,21 @@
 
         if (diagram.type === "geometry" && diagram.points) {
             const points = diagram.points || {};
-            const entries = Object.entries(points);
+            const drawPoints = { ...points };
+            const rotation = diagram._rotation || { yaw: -28, pitch: 18 };
+            if (diagram.coordinates_3d && typeof diagram.coordinates_3d === "object") {
+                const yaw = Number(rotation.yaw || 0) * Math.PI / 180;
+                const pitch = Number(rotation.pitch || 0) * Math.PI / 180;
+                Object.entries(diagram.coordinates_3d).forEach(([name, xyz]) => {
+                    if (!Array.isArray(xyz) || xyz.length < 3 || !xyz.slice(0, 3).every(v => Number.isFinite(Number(v)))) return;
+                    const [x, y, z] = xyz.map(Number);
+                    const xr = x * Math.cos(yaw) - z * Math.sin(yaw);
+                    const zr = x * Math.sin(yaw) + z * Math.cos(yaw);
+                    const yr = y * Math.cos(pitch) - zr * Math.sin(pitch);
+                    drawPoints[name] = [xr, yr];
+                });
+            }
+            const entries = Object.entries(drawPoints);
             if (!entries.length) return "";
             const xs = entries.map(e => Number(e[1]?.[0] || 0));
             const ys = entries.map(e => Number(e[1]?.[1] || 0));
@@ -4293,17 +5520,17 @@
                 svgLines.push(`<circle cx="${center[0]}" cy="${center[1]}" r="${radiusPx}" fill="none" stroke="currentColor" stroke-width="2.2" opacity=".8"/>`);
             });
             (diagram.segments || []).forEach(seg => {
-                const a = project(points[seg[0]]), b = project(points[seg[1]]);
+                const a = project(drawPoints[seg[0]]), b = project(drawPoints[seg[1]]);
                 svgLines.push(`<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="currentColor" stroke-width="3"/>`);
             });
             (diagram.hidden_segments || []).forEach(seg => {
-                if (!points[seg[0]] || !points[seg[1]]) return;
-                const a = project(points[seg[0]]), b = project(points[seg[1]]);
+                if (!drawPoints[seg[0]] || !drawPoints[seg[1]]) return;
+                const a = project(drawPoints[seg[0]]), b = project(drawPoints[seg[1]]);
                 svgLines.push(`<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4" opacity=".7"/>`);
             });
             (diagram.dashed_segments || []).forEach(seg => {
-                if (!points[seg[0]] || !points[seg[1]]) return;
-                const a = project(points[seg[0]]), b = project(points[seg[1]]);
+                if (!drawPoints[seg[0]] || !drawPoints[seg[1]]) return;
+                const a = project(drawPoints[seg[0]]), b = project(drawPoints[seg[1]]);
                 svgLines.push(`<line x1="${a[0]}" y1="${a[1]}" x2="${b[0]}" y2="${b[1]}" stroke="#ffd166" stroke-width="2.4" stroke-dasharray="6 4"/>`);
             });
             (diagram.polylines || []).forEach(linePoints => {
@@ -4319,17 +5546,17 @@
             });
             if (diagram.measurements) {
                 diagram.measurements.forEach(m => {
-                    if (!points[m.from] || !points[m.to]) return;
-                    const a = project(points[m.from]), b = project(points[m.to]);
+                    if (!drawPoints[m.from] || !drawPoints[m.to]) return;
+                    const a = project(drawPoints[m.from]), b = project(drawPoints[m.to]);
                     const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2;
                     svgLines.push(`<text x="${mx + 5}" y="${my - 5}" font-size="13">${label(m.text)}</text>`);
                 });
             }
             if (diagram.angle_labels) {
                 Object.entries(diagram.angle_labels).forEach(([key, value]) => {
-                    const names = key.split("").filter(ch => points[ch]);
+                    const names = key.split("").filter(ch => drawPoints[ch]);
                     if (!names.length) return;
-                    const ps = names.map(n => project(points[n]));
+                    const ps = names.map(n => project(drawPoints[n]));
                     const x = ps.reduce((sum,p)=>sum+p[0],0)/ps.length;
                     const y = ps.reduce((sum,p)=>sum+p[1],0)/ps.length;
                     svgLines.push(`<text x="${x+5}" y="${y-5}" font-size="12" fill="#e7c66b">${label(value + "°")}</text>`);
@@ -4337,12 +5564,12 @@
             }
             const rightAngles = Array.isArray(diagram.right_angles) ? diagram.right_angles : (diagram.right_angle ? [diagram.right_angle] : []);
             rightAngles.forEach(vertex => {
-                const adjacent = (diagram.segments || []).filter(seg => seg.includes(vertex)).map(seg => seg.find(n => n !== vertex)).filter(n => points[n]);
+                const adjacent = (diagram.segments || []).filter(seg => seg.includes(vertex)).map(seg => seg.find(n => n !== vertex)).filter(n => drawPoints[n]);
                 if (adjacent.length < 2) return;
-                const raw = points[vertex];
+                const raw = drawPoints[vertex];
                 let pair = null, best = Infinity;
                 for (let i = 0; i < adjacent.length; i++) for (let j = i + 1; j < adjacent.length; j++) {
-                    const a = points[adjacent[i]], b = points[adjacent[j]];
+                    const a = drawPoints[adjacent[i]], b = drawPoints[adjacent[j]];
                     const u = [Number(a[0])-Number(raw[0]), Number(a[1])-Number(raw[1])];
                     const v = [Number(b[0])-Number(raw[0]), Number(b[1])-Number(raw[1])];
                     const nu = Math.hypot(...u), nv = Math.hypot(...v);
@@ -4351,13 +5578,17 @@
                     if (score < best) { best = score; pair = [adjacent[i], adjacent[j]]; }
                 }
                 if (!pair || best > 1e-4) return;
-                const p = project(points[vertex]), p1 = project(points[pair[0]]), p2 = project(points[pair[1]]);
+                const p = project(drawPoints[vertex]), p1 = project(drawPoints[pair[0]]), p2 = project(drawPoints[pair[1]]);
                 const v1 = [p1[0]-p[0], p1[1]-p[1]], v2 = [p2[0]-p[0], p2[1]-p[1]];
                 const n1 = Math.hypot(...v1) || 1, n2 = Math.hypot(...v2) || 1, size = 9;
                 const q1 = [p[0]+v1[0]/n1*size,p[1]+v1[1]/n1*size], q2 = [p[0]+v2[0]/n2*size,p[1]+v2[1]/n2*size], q3=[q1[0]+q2[0]-p[0],q1[1]+q2[1]-p[1]];
                 svgLines.push(`<path d="M ${q1[0]} ${q1[1]} L ${q3[0]} ${q3[1]} L ${q2[0]} ${q2[1]}" fill="none" stroke="currentColor" stroke-width="1.8"/>`);
             });
-            return `<div class="mathweb-ai-diagram-wrap"><svg class="mathweb-ai-diagram" viewBox="0 0 360 190" role="img" aria-label="Hình minh họa chính xác theo dữ kiện">${svgLines.join("")}</svg><div style="font-size:11px;opacity:.6;margin-top:4px;">${label(diagram.caption || "Hình minh họa theo dữ kiện")}</div></div>`;
+            const is3D = Boolean(diagram.coordinates_3d && Object.keys(diagram.coordinates_3d).length);
+            const controls = is3D ? `<div class="mathweb-3d-controls" aria-label="Điều khiển góc nhìn 3D"><button type="button" onclick="window.mathwebRotateAIDiagram(this,'yaw',-15)" aria-label="Xoay trái">↶ Xoay trái</button><button type="button" onclick="window.mathwebRotateAIDiagram(this,'yaw',15)" aria-label="Xoay phải">Xoay phải ↷</button><button type="button" onclick="window.mathwebRotateAIDiagram(this,'pitch',-10)" aria-label="Nghiêng lên">Nghiêng lên</button><button type="button" onclick="window.mathwebRotateAIDiagram(this,'pitch',10)" aria-label="Nghiêng xuống">Nghiêng xuống</button><button type="button" onclick="window.mathwebRotateAIDiagram(this,'reset',0)">Đặt lại</button></div>` : "";
+            const payload = is3D ? ` data-mathweb-geometry="${label(JSON.stringify({ ...diagram, _rotation: rotation }))}"` : "";
+            const warning = diagram.diagram_mode === "schematic_projection" ? `<div class="mathweb-3d-note">Hình chiếu minh họa; dùng tọa độ và số liệu đề bài để tính toán.</div>` : "";
+            return `<div class="mathweb-ai-diagram-wrap"${payload}><svg class="mathweb-ai-diagram" viewBox="0 0 360 190" role="img" aria-label="${is3D ? "Mô hình không gian 3D có thể xoay" : "Hình minh họa chính xác theo dữ kiện"}">${svgLines.join("")}</svg>${controls}<div style="font-size:11px;opacity:.7;margin-top:4px;">${label(diagram.caption || "Hình minh họa theo dữ kiện")}</div>${warning}</div>`;
         }
 
         const common = 'class="mathweb-ai-diagram" viewBox="0 0 360 190" role="img" aria-label="Hình minh họa"';
@@ -4425,19 +5656,6 @@
                         <path d="M 193 105 L 193 95 L 203 95" fill="none" stroke="currentColor" stroke-width="2"/>
                         <text x="132" y="98" font-size="15">O</text><text x="207" y="100" font-size="15">T</text><text x="169" y="96" font-size="13">R</text>
                     </svg><div style="font-size:11px;opacity:.6;margin-top:4px;">${label(diagram.caption || "Tiếp tuyến và bán kính")}</div>
-                </div>`;
-        }
-
-        if (diagram.type === "circle_inscribed_triangle") {
-            return `
-                <div class="mathweb-ai-diagram-wrap">
-                    <svg ${common}>
-                        <circle cx="180" cy="95" r="70" fill="none" stroke="currentColor" stroke-width="2.5"/>
-                        <polygon points="180,25 112,132 248,132" fill="none" stroke="currentColor" stroke-width="3"/>
-                        <line x1="180" y1="95" x2="180" y2="25" stroke="currentColor" stroke-width="1.8" stroke-dasharray="4 4"/>
-                        <circle cx="180" cy="95" r="3.5" fill="currentColor"/>
-                        <text x="174" y="18" font-size="15">A</text><text x="95" y="145" font-size="15">B</text><text x="251" y="145" font-size="15">C</text><text x="187" y="91" font-size="14">O</text>
-                    </svg><div style="font-size:11px;opacity:.6;margin-top:4px;">${label(diagram.caption || "Tam giác nội tiếp đường tròn")}</div>
                 </div>`;
         }
 
@@ -4530,6 +5748,29 @@
 
         return "";
     }
+
+    // Interactive 3D rotation uses the exact coordinates stored with each diagram.
+    // It re-renders only the current diagram and never changes question data or answers.
+    window.mathwebRotateAIDiagram = function (button, axis, delta) {
+        try {
+            const wrapper = button && button.closest("[data-mathweb-geometry]");
+            if (!wrapper) return;
+            const diagram = JSON.parse(wrapper.getAttribute("data-mathweb-geometry"));
+            const rotation = { ...(diagram._rotation || { yaw: -28, pitch: 18 }) };
+            if (axis === "reset") { rotation.yaw = -28; rotation.pitch = 18; }
+            else if (axis === "yaw" || axis === "pitch") rotation[axis] = Math.max(-85, Math.min(85, Number(rotation[axis] || 0) + Number(delta || 0)));
+            diagram._rotation = rotation;
+            // A rotated wireframe no longer assumes the original front/back view.
+            // Keep all edges visible rather than leaving stale hidden-edge markings.
+            if (axis !== "reset") diagram.hidden_segments = [];
+            const holder = document.createElement("div");
+            holder.innerHTML = renderAIDiagram(diagram);
+            const next = holder.firstElementChild;
+            if (next) wrapper.replaceWith(next);
+        } catch (error) {
+            console.warn("Không thể xoay hình 3D:", error);
+        }
+    };
 
 
     /* =====================================================

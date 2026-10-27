@@ -1,5 +1,5 @@
 {
-  "version": "1.0-geometry-curriculum-bank",
+  "version": "2026-10-16+geometry45",
   "purpose": "Curriculum-aligned original geometry question archetypes. The bank describes skills and levels, not copied textbook questions.",
   "difficulty_levels": {
     "easy": {
@@ -112,6 +112,186 @@
           "phân giác",
           "chứng minh hình học"
         ]
+      },
+      {
+        "id": "g10_geom_angles_parallel",
+        "topic": "Góc tạo bởi hai đường thẳng và đường cắt",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "góc đồng vị",
+          "góc so le trong",
+          "góc trong cùng phía"
+        ],
+        "generator_kind": "plane",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g10_geom_triangle_congruence",
+        "topic": "Các trường hợp bằng nhau của tam giác",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "cạnh-cạnh-cạnh",
+          "cạnh-góc-cạnh",
+          "góc-cạnh-góc"
+        ],
+        "generator_kind": "triangle",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g10_geom_special_lines",
+        "topic": "Đường trung tuyến, phân giác và đường cao",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "trọng tâm",
+          "tâm đường tròn nội tiếp",
+          "trực tâm"
+        ],
+        "generator_kind": "triangle",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g10_geom_quadrilaterals_properties",
+        "topic": "Tính chất hình bình hành và hình thoi",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "đường chéo hình bình hành",
+          "đường chéo hình thoi",
+          "dấu hiệu nhận biết"
+        ],
+        "generator_kind": "plane",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g10_geom_circle_chords_arcs",
+        "topic": "Dây cung, cung và khoảng cách đến tâm",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "đường vuông góc từ tâm đến dây",
+          "so sánh dây",
+          "cung tương ứng"
+        ],
+        "generator_kind": "circle",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g10_geom_thales_similarity",
+        "topic": "Định lý Thales và tam giác đồng dạng",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "tỉ số đoạn thẳng",
+          "đường thẳng song song một cạnh",
+          "tỉ số đồng dạng"
+        ],
+        "generator_kind": "triangle",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g10_geom_triangle_area_ratio",
+        "topic": "Tỉ số diện tích tam giác",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "cùng chiều cao",
+          "cùng đáy",
+          "tỉ số diện tích tam giác đồng dạng"
+        ],
+        "generator_kind": "triangle",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g10_geom_circle_angles",
+        "topic": "Góc nội tiếp và góc ở tâm nâng cao",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "cùng chắn một cung",
+          "góc nội tiếp chắn nửa đường tròn",
+          "liên hệ số đo cung"
+        ],
+        "generator_kind": "circle",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g10_geom_coordinate_distance_midpoint",
+        "topic": "Trung điểm và khoảng cách trong tọa độ phẳng",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "công thức trung điểm",
+          "độ dài đoạn thẳng",
+          "điểm chia đoạn theo tỉ số"
+        ],
+        "generator_kind": "coordinate",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g10_geom_line_intersections",
+        "topic": "Giao điểm và vị trí tương đối của hai đường thẳng",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "song song",
+          "trùng nhau",
+          "cắt nhau và giải hệ"
+        ],
+        "generator_kind": "line2d",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g10_geom_locus",
+        "topic": "Quỹ tích điểm trong mặt phẳng",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "quỹ tích cách đều hai điểm",
+          "quỹ tích cách đều hai đường thẳng",
+          "điều kiện cần và đủ"
+        ],
+        "generator_kind": "plane",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g10_geom_circle_tangent_chord",
+        "topic": "Tiếp tuyến và dây cung của đường tròn",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "bán kính vuông góc tiếp tuyến",
+          "hai tiếp tuyến từ một điểm",
+          "góc tạo bởi tiếp tuyến và dây"
+        ],
+        "generator_kind": "circle",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g10_geom_triangle_inequalities",
+        "topic": "Bất đẳng thức và cực trị trong tam giác",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "điều kiện ba cạnh",
+          "chu vi cố định",
+          "diện tích cực trị"
+        ],
+        "generator_kind": "triangle",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g10_geom_vector_proofs",
+        "topic": "Chứng minh hình học bằng vectơ",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "biểu diễn vectơ theo hai vectơ cơ sở",
+          "điều kiện thẳng hàng",
+          "điều kiện đồng quy"
+        ],
+        "generator_kind": "vector",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g10_geom_coordinate_circle_line",
+        "topic": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "giao điểm đường thẳng-đường tròn",
+          "tiếp xúc qua biệt thức",
+          "tham số tọa độ"
+        ],
+        "generator_kind": "coordinate",
+        "source": "geometry_45_expansion_2026-10-16"
       }
     ],
     "11": [
@@ -162,6 +342,186 @@
           "song song",
           "vuông góc"
         ]
+      },
+      {
+        "id": "g11_geom_transform_translation",
+        "topic": "Phép tịnh tiến và ảnh của hình",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "vectơ tịnh tiến",
+          "ảnh của điểm",
+          "bảo toàn độ dài"
+        ],
+        "generator_kind": "transform",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g11_geom_transform_reflection",
+        "topic": "Phép đối xứng trục",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "trục đối xứng",
+          "ảnh của điểm",
+          "điểm bất động"
+        ],
+        "generator_kind": "transform",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g11_geom_space_lines_planes",
+        "topic": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "điểm thuộc mặt phẳng",
+          "đường thẳng nằm trong mặt phẳng",
+          "xác định mặt phẳng"
+        ],
+        "generator_kind": "space11",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g11_geom_parallel_line_plane",
+        "topic": "Đường thẳng song song với mặt phẳng",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "điều kiện song song",
+          "đường thẳng không giao mặt phẳng",
+          "lập luận bằng mặt phẳng phụ"
+        ],
+        "generator_kind": "space11",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g11_geom_prism_pyramid_sections",
+        "topic": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "nhận dạng đỉnh-cạnh-mặt",
+          "số mặt",
+          "thiết diện đơn giản"
+        ],
+        "generator_kind": "space11",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g11_geom_rotation_homothety",
+        "topic": "Phép quay và phép vị tự",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "tâm và góc quay",
+          "tỉ số vị tự",
+          "ảnh của đường tròn"
+        ],
+        "generator_kind": "transform",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g11_geom_parallel_planes",
+        "topic": "Hai mặt phẳng song song",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "dấu hiệu song song",
+          "giao tuyến với mặt phẳng thứ ba",
+          "định lý Thales không gian"
+        ],
+        "generator_kind": "space11",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g11_geom_perpendicular_line_plane",
+        "topic": "Đường thẳng vuông góc với mặt phẳng",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "đường thẳng vuông góc hai đường cắt nhau",
+          "chân đường vuông góc",
+          "chứng minh vuông góc"
+        ],
+        "generator_kind": "space11",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g11_geom_dihedral_angles",
+        "topic": "Góc giữa đường thẳng và mặt phẳng",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "hình chiếu vuông góc",
+          "góc nhọn quy ước",
+          "tính góc trong hình chóp"
+        ],
+        "generator_kind": "space11",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g11_geom_section_construction",
+        "topic": "Dựng thiết diện của hình chóp và lăng trụ",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "tìm giao tuyến",
+          "tìm giao điểm trên cạnh",
+          "nối các điểm đồng phẳng"
+        ],
+        "generator_kind": "space11",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g11_geom_skew_lines_distance",
+        "topic": "Khoảng cách giữa hai đường thẳng chéo nhau",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "đường vuông góc chung",
+          "đoạn vuông góc chung",
+          "mặt phẳng song song chứa một đường"
+        ],
+        "generator_kind": "space11",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g11_geom_three_perpendiculars",
+        "topic": "Định lý ba đường vuông góc",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "hình chiếu của đường xiên",
+          "vuông góc trong mặt phẳng đáy",
+          "chứng minh quan hệ vuông góc"
+        ],
+        "generator_kind": "space11",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g11_geom_transform_composition",
+        "topic": "Hợp thành các phép biến hình",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "hai phép đối xứng trục",
+          "phép quay kết hợp tịnh tiến",
+          "xác định ảnh cuối"
+        ],
+        "generator_kind": "transform",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g11_geom_section_ratio",
+        "topic": "Thiết diện và tỉ số đoạn trong hình không gian",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "định lý Thales trong không gian",
+          "tỉ số trên cạnh bên",
+          "diện tích thiết diện"
+        ],
+        "generator_kind": "space11",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g11_geom_space_proof",
+        "topic": "Chứng minh tổng hợp song song và vuông góc",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "dựng mặt phẳng phụ",
+          "chuỗi suy luận nhiều bước",
+          "phản chứng hình học"
+        ],
+        "generator_kind": "space11",
+        "source": "geometry_45_expansion_2026-10-16"
       }
     ],
     "12": [
@@ -214,6 +574,186 @@
           "đường thẳng",
           "mặt cầu"
         ]
+      },
+      {
+        "id": "g12_geom_vectors_3d",
+        "topic": "Vectơ và độ dài trong không gian Oxyz",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "tọa độ vectơ",
+          "độ dài vectơ",
+          "tích vô hướng"
+        ],
+        "generator_kind": "space12",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g12_geom_plane_equation",
+        "topic": "Phương trình mặt phẳng",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "vectơ pháp tuyến",
+          "mặt phẳng qua một điểm",
+          "thay tọa độ kiểm tra"
+        ],
+        "generator_kind": "plane",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g12_geom_line_equation_3d",
+        "topic": "Phương trình đường thẳng trong Oxyz",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "vectơ chỉ phương",
+          "phương trình tham số",
+          "điểm thuộc đường thẳng"
+        ],
+        "generator_kind": "line3d",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g12_geom_sphere_equation",
+        "topic": "Phương trình mặt cầu và tâm bán kính",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "đọc tâm",
+          "tìm bán kính",
+          "lập phương trình chuẩn"
+        ],
+        "generator_kind": "sphere",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g12_geom_solid_surface_area",
+        "topic": "Diện tích xung quanh và toàn phần hình khối",
+        "difficulty_level": "Nền tảng",
+        "skills": [
+          "hình trụ",
+          "hình nón",
+          "mặt cầu"
+        ],
+        "generator_kind": "volume",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g12_geom_point_plane_distance",
+        "topic": "Khoảng cách từ điểm đến mặt phẳng",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "công thức khoảng cách",
+          "mặt phẳng tọa độ",
+          "điều kiện điểm thuộc mặt phẳng"
+        ],
+        "generator_kind": "distance3d",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g12_geom_line_plane_angle",
+        "topic": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "vectơ chỉ phương",
+          "vectơ pháp tuyến",
+          "sin góc giữa đường và mặt phẳng"
+        ],
+        "generator_kind": "distance3d",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g12_geom_two_planes_angle",
+        "topic": "Góc giữa hai mặt phẳng",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "hai vectơ pháp tuyến",
+          "cos góc",
+          "nhận biết vuông góc"
+        ],
+        "generator_kind": "distance3d",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g12_geom_line_plane_intersection",
+        "topic": "Giao điểm đường thẳng và mặt phẳng",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "thế tham số vào mặt phẳng",
+          "giải tham số",
+          "kiểm tra giao điểm"
+        ],
+        "generator_kind": "line3d",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g12_geom_sphere_tangent_plane",
+        "topic": "Mặt phẳng tiếp xúc với mặt cầu",
+        "difficulty_level": "Trung cấp",
+        "skills": [
+          "khoảng cách tâm đến mặt phẳng",
+          "điều kiện tiếp xúc",
+          "tìm tham số"
+        ],
+        "generator_kind": "sphere",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g12_geom_skew_line_relation",
+        "topic": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "đồng phẳng hay chéo nhau",
+          "hệ phương trình tham số",
+          "tích hỗn tạp"
+        ],
+        "generator_kind": "line3d",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g12_geom_min_distance_3d",
+        "topic": "Cực trị khoảng cách trong không gian tọa độ",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "điểm di động trên đường thẳng",
+          "hình chiếu vuông góc",
+          "tối ưu biểu thức bậc hai"
+        ],
+        "generator_kind": "distance3d",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g12_geom_sphere_plane_intersection",
+        "topic": "Giao tuyến mặt cầu và mặt phẳng",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "đường tròn giao tuyến",
+          "bán kính đường tròn giao",
+          "tiếp xúc hoặc không giao"
+        ],
+        "generator_kind": "sphere",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g12_geom_parameter_geometry",
+        "topic": "Bài toán tham số hình học Oxyz",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "điều kiện đồng phẳng",
+          "điều kiện vuông góc",
+          "biện luận giao điểm"
+        ],
+        "generator_kind": "space12",
+        "source": "geometry_45_expansion_2026-10-16"
+      },
+      {
+        "id": "g12_geom_3d_optimization",
+        "topic": "Bài toán tối ưu hình học không gian",
+        "difficulty_level": "Nâng cao",
+        "skills": [
+          "ràng buộc thể tích",
+          "diện tích nhỏ nhất",
+          "mô hình hóa thực tế"
+        ],
+        "generator_kind": "volume",
+        "source": "geometry_45_expansion_2026-10-16"
       }
     ]
   },
@@ -240,5 +780,26 @@
     "Với bài hình chữ nhật nội tiếp đường tròn, kiểm tra đường chéo bằng đường kính và dữ kiện có tương thích.",
     "Với tam giác nội tiếp đường tròn, chỉ dùng định lý góc vuông khi cạnh được nêu là đường kính.",
     "Bài toán tối ưu phải có lập luận về điều kiện đạt dấu bằng, không chỉ nêu công thức."
-  ]
+  ],
+  "expansion_2026_10_16": {
+    "requested_new_topics": 45,
+    "distribution": {
+      "10": {
+        "Nền tảng": 5,
+        "Trung cấp": 5,
+        "Nâng cao": 5
+      },
+      "11": {
+        "Nền tảng": 5,
+        "Trung cấp": 5,
+        "Nâng cao": 5
+      },
+      "12": {
+        "Nền tảng": 5,
+        "Trung cấp": 5,
+        "Nâng cao": 5
+      }
+    },
+    "note": "Các mục được thêm vào danh mục API và được ánh xạ tới bộ sinh câu hỏi hình học theo khối; không phải khẳng định toàn bộ đã có game HTML độc lập riêng."
+  }
 }

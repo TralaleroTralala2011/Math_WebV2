@@ -3058,5 +3058,1355 @@
     "icon": "🏆",
     "path": "games/knowledge/hinh-hoc-oxyz-van-dung-12/3-trum-cuoi.html",
     "source_template": "games/knowledge/duong-tron/3-tiep-tuyen-thu-thach.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_angles_parallel",
+    "knowledge": "Góc tạo bởi hai đường thẳng và đường cắt",
+    "game": "Góc tạo bởi hai đường thẳng và đường cắt • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_angles_parallel/1-kham-pha.html",
+    "source_template": "games/knowledge/tam-giac-tu-giac-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_angles_parallel",
+    "knowledge": "Góc tạo bởi hai đường thẳng và đường cắt",
+    "game": "Góc tạo bởi hai đường thẳng và đường cắt • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_angles_parallel/2-nhiem-vu.html",
+    "source_template": "games/knowledge/tam-giac-tu-giac-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_angles_parallel",
+    "knowledge": "Góc tạo bởi hai đường thẳng và đường cắt",
+    "game": "Góc tạo bởi hai đường thẳng và đường cắt • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_angles_parallel/3-trum-cuoi.html",
+    "source_template": "games/knowledge/tam-giac-tu-giac-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_triangle_congruence",
+    "knowledge": "Các trường hợp bằng nhau của tam giác",
+    "game": "Các trường hợp bằng nhau của tam giác • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_triangle_congruence/1-kham-pha.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_triangle_congruence",
+    "knowledge": "Các trường hợp bằng nhau của tam giác",
+    "game": "Các trường hợp bằng nhau của tam giác • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_triangle_congruence/2-nhiem-vu.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_triangle_congruence",
+    "knowledge": "Các trường hợp bằng nhau của tam giác",
+    "game": "Các trường hợp bằng nhau của tam giác • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_triangle_congruence/3-trum-cuoi.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_special_lines",
+    "knowledge": "Đường trung tuyến, phân giác và đường cao",
+    "game": "Đường trung tuyến, phân giác và đường cao • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_special_lines/1-kham-pha.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_special_lines",
+    "knowledge": "Đường trung tuyến, phân giác và đường cao",
+    "game": "Đường trung tuyến, phân giác và đường cao • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_special_lines/2-nhiem-vu.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_special_lines",
+    "knowledge": "Đường trung tuyến, phân giác và đường cao",
+    "game": "Đường trung tuyến, phân giác và đường cao • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_special_lines/3-trum-cuoi.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_quadrilaterals_properties",
+    "knowledge": "Tính chất hình bình hành và hình thoi",
+    "game": "Tính chất hình bình hành và hình thoi • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_quadrilaterals_properties/1-kham-pha.html",
+    "source_template": "games/knowledge/tam-giac-tu-giac-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_quadrilaterals_properties",
+    "knowledge": "Tính chất hình bình hành và hình thoi",
+    "game": "Tính chất hình bình hành và hình thoi • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_quadrilaterals_properties/2-nhiem-vu.html",
+    "source_template": "games/knowledge/tam-giac-tu-giac-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_quadrilaterals_properties",
+    "knowledge": "Tính chất hình bình hành và hình thoi",
+    "game": "Tính chất hình bình hành và hình thoi • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_quadrilaterals_properties/3-trum-cuoi.html",
+    "source_template": "games/knowledge/tam-giac-tu-giac-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_circle_chords_arcs",
+    "knowledge": "Dây cung, cung và khoảng cách đến tâm",
+    "game": "Dây cung, cung và khoảng cách đến tâm • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_circle_chords_arcs/1-kham-pha.html",
+    "source_template": "games/knowledge/duong-tron-co-ban-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_circle_chords_arcs",
+    "knowledge": "Dây cung, cung và khoảng cách đến tâm",
+    "game": "Dây cung, cung và khoảng cách đến tâm • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_circle_chords_arcs/2-nhiem-vu.html",
+    "source_template": "games/knowledge/duong-tron-co-ban-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_circle_chords_arcs",
+    "knowledge": "Dây cung, cung và khoảng cách đến tâm",
+    "game": "Dây cung, cung và khoảng cách đến tâm • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_circle_chords_arcs/3-trum-cuoi.html",
+    "source_template": "games/knowledge/duong-tron-co-ban-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_thales_similarity",
+    "knowledge": "Định lý Thales và tam giác đồng dạng",
+    "game": "Định lý Thales và tam giác đồng dạng • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_thales_similarity/1-kham-pha.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_thales_similarity",
+    "knowledge": "Định lý Thales và tam giác đồng dạng",
+    "game": "Định lý Thales và tam giác đồng dạng • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_thales_similarity/2-nhiem-vu.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_thales_similarity",
+    "knowledge": "Định lý Thales và tam giác đồng dạng",
+    "game": "Định lý Thales và tam giác đồng dạng • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_thales_similarity/3-trum-cuoi.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_triangle_area_ratio",
+    "knowledge": "Tỉ số diện tích tam giác",
+    "game": "Tỉ số diện tích tam giác • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_triangle_area_ratio/1-kham-pha.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_triangle_area_ratio",
+    "knowledge": "Tỉ số diện tích tam giác",
+    "game": "Tỉ số diện tích tam giác • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_triangle_area_ratio/2-nhiem-vu.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_triangle_area_ratio",
+    "knowledge": "Tỉ số diện tích tam giác",
+    "game": "Tỉ số diện tích tam giác • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_triangle_area_ratio/3-trum-cuoi.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_circle_angles",
+    "knowledge": "Góc nội tiếp và góc ở tâm nâng cao",
+    "game": "Góc nội tiếp và góc ở tâm nâng cao • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_circle_angles/1-kham-pha.html",
+    "source_template": "games/knowledge/duong-tron-co-ban-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_circle_angles",
+    "knowledge": "Góc nội tiếp và góc ở tâm nâng cao",
+    "game": "Góc nội tiếp và góc ở tâm nâng cao • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_circle_angles/2-nhiem-vu.html",
+    "source_template": "games/knowledge/duong-tron-co-ban-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_circle_angles",
+    "knowledge": "Góc nội tiếp và góc ở tâm nâng cao",
+    "game": "Góc nội tiếp và góc ở tâm nâng cao • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_circle_angles/3-trum-cuoi.html",
+    "source_template": "games/knowledge/duong-tron-co-ban-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_coordinate_distance_midpoint",
+    "knowledge": "Trung điểm và khoảng cách trong tọa độ phẳng",
+    "game": "Trung điểm và khoảng cách trong tọa độ phẳng • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_coordinate_distance_midpoint/1-kham-pha.html",
+    "source_template": "games/knowledge/toa-do-hinh-hoc-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_coordinate_distance_midpoint",
+    "knowledge": "Trung điểm và khoảng cách trong tọa độ phẳng",
+    "game": "Trung điểm và khoảng cách trong tọa độ phẳng • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_coordinate_distance_midpoint/2-nhiem-vu.html",
+    "source_template": "games/knowledge/toa-do-hinh-hoc-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_coordinate_distance_midpoint",
+    "knowledge": "Trung điểm và khoảng cách trong tọa độ phẳng",
+    "game": "Trung điểm và khoảng cách trong tọa độ phẳng • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_coordinate_distance_midpoint/3-trum-cuoi.html",
+    "source_template": "games/knowledge/toa-do-hinh-hoc-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_line_intersections",
+    "knowledge": "Giao điểm và vị trí tương đối của hai đường thẳng",
+    "game": "Giao điểm và vị trí tương đối của hai đường thẳng • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_line_intersections/1-kham-pha.html",
+    "source_template": "games/knowledge/toa-do-hinh-hoc-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_line_intersections",
+    "knowledge": "Giao điểm và vị trí tương đối của hai đường thẳng",
+    "game": "Giao điểm và vị trí tương đối của hai đường thẳng • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_line_intersections/2-nhiem-vu.html",
+    "source_template": "games/knowledge/toa-do-hinh-hoc-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_line_intersections",
+    "knowledge": "Giao điểm và vị trí tương đối của hai đường thẳng",
+    "game": "Giao điểm và vị trí tương đối của hai đường thẳng • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_line_intersections/3-trum-cuoi.html",
+    "source_template": "games/knowledge/toa-do-hinh-hoc-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_locus",
+    "knowledge": "Quỹ tích điểm trong mặt phẳng",
+    "game": "Quỹ tích điểm trong mặt phẳng • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_locus/1-kham-pha.html",
+    "source_template": "games/knowledge/tam-giac-tu-giac-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_locus",
+    "knowledge": "Quỹ tích điểm trong mặt phẳng",
+    "game": "Quỹ tích điểm trong mặt phẳng • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_locus/2-nhiem-vu.html",
+    "source_template": "games/knowledge/tam-giac-tu-giac-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_locus",
+    "knowledge": "Quỹ tích điểm trong mặt phẳng",
+    "game": "Quỹ tích điểm trong mặt phẳng • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_locus/3-trum-cuoi.html",
+    "source_template": "games/knowledge/tam-giac-tu-giac-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_circle_tangent_chord",
+    "knowledge": "Tiếp tuyến và dây cung của đường tròn",
+    "game": "Tiếp tuyến và dây cung của đường tròn • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_circle_tangent_chord/1-kham-pha.html",
+    "source_template": "games/knowledge/duong-tron-co-ban-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_circle_tangent_chord",
+    "knowledge": "Tiếp tuyến và dây cung của đường tròn",
+    "game": "Tiếp tuyến và dây cung của đường tròn • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_circle_tangent_chord/2-nhiem-vu.html",
+    "source_template": "games/knowledge/duong-tron-co-ban-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_circle_tangent_chord",
+    "knowledge": "Tiếp tuyến và dây cung của đường tròn",
+    "game": "Tiếp tuyến và dây cung của đường tròn • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_circle_tangent_chord/3-trum-cuoi.html",
+    "source_template": "games/knowledge/duong-tron-co-ban-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_triangle_inequalities",
+    "knowledge": "Bất đẳng thức và cực trị trong tam giác",
+    "game": "Bất đẳng thức và cực trị trong tam giác • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_triangle_inequalities/1-kham-pha.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_triangle_inequalities",
+    "knowledge": "Bất đẳng thức và cực trị trong tam giác",
+    "game": "Bất đẳng thức và cực trị trong tam giác • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_triangle_inequalities/2-nhiem-vu.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_triangle_inequalities",
+    "knowledge": "Bất đẳng thức và cực trị trong tam giác",
+    "game": "Bất đẳng thức và cực trị trong tam giác • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_triangle_inequalities/3-trum-cuoi.html",
+    "source_template": "games/knowledge/he-thuc-luong-van-dung-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_vector_proofs",
+    "knowledge": "Chứng minh hình học bằng vectơ",
+    "game": "Chứng minh hình học bằng vectơ • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_vector_proofs/1-kham-pha.html",
+    "source_template": "games/knowledge/toa-do-hinh-hoc-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_vector_proofs",
+    "knowledge": "Chứng minh hình học bằng vectơ",
+    "game": "Chứng minh hình học bằng vectơ • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_vector_proofs/2-nhiem-vu.html",
+    "source_template": "games/knowledge/toa-do-hinh-hoc-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_vector_proofs",
+    "knowledge": "Chứng minh hình học bằng vectơ",
+    "game": "Chứng minh hình học bằng vectơ • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_vector_proofs/3-trum-cuoi.html",
+    "source_template": "games/knowledge/toa-do-hinh-hoc-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_geom_coordinate_circle_line",
+    "knowledge": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+    "game": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g10_geom_coordinate_circle_line/1-kham-pha.html",
+    "source_template": "games/knowledge/toa-do-hinh-hoc-10/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "medium",
+    "knowledge_id": "g10_geom_coordinate_circle_line",
+    "knowledge": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+    "game": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g10_geom_coordinate_circle_line/2-nhiem-vu.html",
+    "source_template": "games/knowledge/toa-do-hinh-hoc-10/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_geom_coordinate_circle_line",
+    "knowledge": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+    "game": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g10_geom_coordinate_circle_line/3-trum-cuoi.html",
+    "source_template": "games/knowledge/toa-do-hinh-hoc-10/3-trum-cuoi.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_transform_translation",
+    "knowledge": "Phép tịnh tiến và ảnh của hình",
+    "game": "Phép tịnh tiến và ảnh của hình • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_transform_translation/1-kham-pha.html",
+    "source_template": "games/knowledge/phep-bien-hinh-co-ban-11/1-kham-pha.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_transform_translation",
+    "knowledge": "Phép tịnh tiến và ảnh của hình",
+    "game": "Phép tịnh tiến và ảnh của hình • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_transform_translation/2-nhiem-vu.html",
+    "source_template": "games/knowledge/phep-bien-hinh-co-ban-11/2-nhiem-vu.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_transform_translation",
+    "knowledge": "Phép tịnh tiến và ảnh của hình",
+    "game": "Phép tịnh tiến và ảnh của hình • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_transform_translation/3-trum-cuoi.html",
+    "source_template": "games/knowledge/phep-bien-hinh-co-ban-11/3-trum-cuoi.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_transform_reflection",
+    "knowledge": "Phép đối xứng trục",
+    "game": "Phép đối xứng trục • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_transform_reflection/1-kham-pha.html",
+    "source_template": "games/knowledge/phep-bien-hinh-co-ban-11/1-kham-pha.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_transform_reflection",
+    "knowledge": "Phép đối xứng trục",
+    "game": "Phép đối xứng trục • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_transform_reflection/2-nhiem-vu.html",
+    "source_template": "games/knowledge/phep-bien-hinh-co-ban-11/2-nhiem-vu.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_transform_reflection",
+    "knowledge": "Phép đối xứng trục",
+    "game": "Phép đối xứng trục • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_transform_reflection/3-trum-cuoi.html",
+    "source_template": "games/knowledge/phep-bien-hinh-co-ban-11/3-trum-cuoi.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_space_lines_planes",
+    "knowledge": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+    "game": "Nhận biết đường thẳng và mặt phẳng trong không gian • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_space_lines_planes/1-kham-pha.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/1-tim-goc.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_space_lines_planes",
+    "knowledge": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+    "game": "Nhận biết đường thẳng và mặt phẳng trong không gian • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_space_lines_planes/2-nhiem-vu.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/2-san-o-dai.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_space_lines_planes",
+    "knowledge": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+    "game": "Nhận biết đường thẳng và mặt phẳng trong không gian • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_space_lines_planes/3-trum-cuoi.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_parallel_line_plane",
+    "knowledge": "Đường thẳng song song với mặt phẳng",
+    "game": "Đường thẳng song song với mặt phẳng • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_parallel_line_plane/1-kham-pha.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/1-tim-goc.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_parallel_line_plane",
+    "knowledge": "Đường thẳng song song với mặt phẳng",
+    "game": "Đường thẳng song song với mặt phẳng • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_parallel_line_plane/2-nhiem-vu.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/2-san-o-dai.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_parallel_line_plane",
+    "knowledge": "Đường thẳng song song với mặt phẳng",
+    "game": "Đường thẳng song song với mặt phẳng • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_parallel_line_plane/3-trum-cuoi.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_prism_pyramid_sections",
+    "knowledge": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+    "game": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_prism_pyramid_sections/1-kham-pha.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/1-tim-goc.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_prism_pyramid_sections",
+    "knowledge": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+    "game": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_prism_pyramid_sections/2-nhiem-vu.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/2-san-o-dai.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_prism_pyramid_sections",
+    "knowledge": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+    "game": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_prism_pyramid_sections/3-trum-cuoi.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_rotation_homothety",
+    "knowledge": "Phép quay và phép vị tự",
+    "game": "Phép quay và phép vị tự • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_rotation_homothety/1-kham-pha.html",
+    "source_template": "games/knowledge/phep-bien-hinh-co-ban-11/1-kham-pha.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_rotation_homothety",
+    "knowledge": "Phép quay và phép vị tự",
+    "game": "Phép quay và phép vị tự • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_rotation_homothety/2-nhiem-vu.html",
+    "source_template": "games/knowledge/phep-bien-hinh-co-ban-11/2-nhiem-vu.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_rotation_homothety",
+    "knowledge": "Phép quay và phép vị tự",
+    "game": "Phép quay và phép vị tự • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_rotation_homothety/3-trum-cuoi.html",
+    "source_template": "games/knowledge/phep-bien-hinh-co-ban-11/3-trum-cuoi.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_parallel_planes",
+    "knowledge": "Hai mặt phẳng song song",
+    "game": "Hai mặt phẳng song song • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_parallel_planes/1-kham-pha.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/1-tim-goc.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_parallel_planes",
+    "knowledge": "Hai mặt phẳng song song",
+    "game": "Hai mặt phẳng song song • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_parallel_planes/2-nhiem-vu.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/2-san-o-dai.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_parallel_planes",
+    "knowledge": "Hai mặt phẳng song song",
+    "game": "Hai mặt phẳng song song • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_parallel_planes/3-trum-cuoi.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_perpendicular_line_plane",
+    "knowledge": "Đường thẳng vuông góc với mặt phẳng",
+    "game": "Đường thẳng vuông góc với mặt phẳng • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_perpendicular_line_plane/1-kham-pha.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/1-tim-goc.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_perpendicular_line_plane",
+    "knowledge": "Đường thẳng vuông góc với mặt phẳng",
+    "game": "Đường thẳng vuông góc với mặt phẳng • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_perpendicular_line_plane/2-nhiem-vu.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/2-san-o-dai.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_perpendicular_line_plane",
+    "knowledge": "Đường thẳng vuông góc với mặt phẳng",
+    "game": "Đường thẳng vuông góc với mặt phẳng • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_perpendicular_line_plane/3-trum-cuoi.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_dihedral_angles",
+    "knowledge": "Góc giữa đường thẳng và mặt phẳng",
+    "game": "Góc giữa đường thẳng và mặt phẳng • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_dihedral_angles/1-kham-pha.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/1-tim-goc.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_dihedral_angles",
+    "knowledge": "Góc giữa đường thẳng và mặt phẳng",
+    "game": "Góc giữa đường thẳng và mặt phẳng • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_dihedral_angles/2-nhiem-vu.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/2-san-o-dai.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_dihedral_angles",
+    "knowledge": "Góc giữa đường thẳng và mặt phẳng",
+    "game": "Góc giữa đường thẳng và mặt phẳng • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_dihedral_angles/3-trum-cuoi.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_section_construction",
+    "knowledge": "Dựng thiết diện của hình chóp và lăng trụ",
+    "game": "Dựng thiết diện của hình chóp và lăng trụ • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_section_construction/1-kham-pha.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/1-tim-goc.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_section_construction",
+    "knowledge": "Dựng thiết diện của hình chóp và lăng trụ",
+    "game": "Dựng thiết diện của hình chóp và lăng trụ • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_section_construction/2-nhiem-vu.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/2-san-o-dai.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_section_construction",
+    "knowledge": "Dựng thiết diện của hình chóp và lăng trụ",
+    "game": "Dựng thiết diện của hình chóp và lăng trụ • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_section_construction/3-trum-cuoi.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_skew_lines_distance",
+    "knowledge": "Khoảng cách giữa hai đường thẳng chéo nhau",
+    "game": "Khoảng cách giữa hai đường thẳng chéo nhau • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_skew_lines_distance/1-kham-pha.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/1-tim-goc.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_skew_lines_distance",
+    "knowledge": "Khoảng cách giữa hai đường thẳng chéo nhau",
+    "game": "Khoảng cách giữa hai đường thẳng chéo nhau • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_skew_lines_distance/2-nhiem-vu.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/2-san-o-dai.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_skew_lines_distance",
+    "knowledge": "Khoảng cách giữa hai đường thẳng chéo nhau",
+    "game": "Khoảng cách giữa hai đường thẳng chéo nhau • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_skew_lines_distance/3-trum-cuoi.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_three_perpendiculars",
+    "knowledge": "Định lý ba đường vuông góc",
+    "game": "Định lý ba đường vuông góc • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_three_perpendiculars/1-kham-pha.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/1-tim-goc.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_three_perpendiculars",
+    "knowledge": "Định lý ba đường vuông góc",
+    "game": "Định lý ba đường vuông góc • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_three_perpendiculars/2-nhiem-vu.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/2-san-o-dai.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_three_perpendiculars",
+    "knowledge": "Định lý ba đường vuông góc",
+    "game": "Định lý ba đường vuông góc • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_three_perpendiculars/3-trum-cuoi.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_transform_composition",
+    "knowledge": "Hợp thành các phép biến hình",
+    "game": "Hợp thành các phép biến hình • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_transform_composition/1-kham-pha.html",
+    "source_template": "games/knowledge/phep-bien-hinh-co-ban-11/1-kham-pha.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_transform_composition",
+    "knowledge": "Hợp thành các phép biến hình",
+    "game": "Hợp thành các phép biến hình • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_transform_composition/2-nhiem-vu.html",
+    "source_template": "games/knowledge/phep-bien-hinh-co-ban-11/2-nhiem-vu.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_transform_composition",
+    "knowledge": "Hợp thành các phép biến hình",
+    "game": "Hợp thành các phép biến hình • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_transform_composition/3-trum-cuoi.html",
+    "source_template": "games/knowledge/phep-bien-hinh-co-ban-11/3-trum-cuoi.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_section_ratio",
+    "knowledge": "Thiết diện và tỉ số đoạn trong hình không gian",
+    "game": "Thiết diện và tỉ số đoạn trong hình không gian • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_section_ratio/1-kham-pha.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/1-tim-goc.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_section_ratio",
+    "knowledge": "Thiết diện và tỉ số đoạn trong hình không gian",
+    "game": "Thiết diện và tỉ số đoạn trong hình không gian • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_section_ratio/2-nhiem-vu.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/2-san-o-dai.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_section_ratio",
+    "knowledge": "Thiết diện và tỉ số đoạn trong hình không gian",
+    "game": "Thiết diện và tỉ số đoạn trong hình không gian • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_section_ratio/3-trum-cuoi.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_geom_space_proof",
+    "knowledge": "Chứng minh tổng hợp song song và vuông góc",
+    "game": "Chứng minh tổng hợp song song và vuông góc • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g11_geom_space_proof/1-kham-pha.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/1-tim-goc.html"
+  },
+  {
+    "grade": 11,
+    "level": "medium",
+    "knowledge_id": "g11_geom_space_proof",
+    "knowledge": "Chứng minh tổng hợp song song và vuông góc",
+    "game": "Chứng minh tổng hợp song song và vuông góc • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g11_geom_space_proof/2-nhiem-vu.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/2-san-o-dai.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_geom_space_proof",
+    "knowledge": "Chứng minh tổng hợp song song và vuông góc",
+    "game": "Chứng minh tổng hợp song song và vuông góc • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g11_geom_space_proof/3-trum-cuoi.html",
+    "source_template": "games/knowledge/thiet-dien-hinh-khong-gian-11/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_vectors_3d",
+    "knowledge": "Vectơ và độ dài trong không gian Oxyz",
+    "game": "Vectơ và độ dài trong không gian Oxyz • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_vectors_3d/1-kham-pha.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_vectors_3d",
+    "knowledge": "Vectơ và độ dài trong không gian Oxyz",
+    "game": "Vectơ và độ dài trong không gian Oxyz • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_vectors_3d/2-nhiem-vu.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_vectors_3d",
+    "knowledge": "Vectơ và độ dài trong không gian Oxyz",
+    "game": "Vectơ và độ dài trong không gian Oxyz • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_vectors_3d/3-trum-cuoi.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_plane_equation",
+    "knowledge": "Phương trình mặt phẳng",
+    "game": "Phương trình mặt phẳng • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_plane_equation/1-kham-pha.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_plane_equation",
+    "knowledge": "Phương trình mặt phẳng",
+    "game": "Phương trình mặt phẳng • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_plane_equation/2-nhiem-vu.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_plane_equation",
+    "knowledge": "Phương trình mặt phẳng",
+    "game": "Phương trình mặt phẳng • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_plane_equation/3-trum-cuoi.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_line_equation_3d",
+    "knowledge": "Phương trình đường thẳng trong Oxyz",
+    "game": "Phương trình đường thẳng trong Oxyz • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_line_equation_3d/1-kham-pha.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_line_equation_3d",
+    "knowledge": "Phương trình đường thẳng trong Oxyz",
+    "game": "Phương trình đường thẳng trong Oxyz • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_line_equation_3d/2-nhiem-vu.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_line_equation_3d",
+    "knowledge": "Phương trình đường thẳng trong Oxyz",
+    "game": "Phương trình đường thẳng trong Oxyz • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_line_equation_3d/3-trum-cuoi.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_sphere_equation",
+    "knowledge": "Phương trình mặt cầu và tâm bán kính",
+    "game": "Phương trình mặt cầu và tâm bán kính • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_sphere_equation/1-kham-pha.html",
+    "source_template": "games/knowledge/mat-cau/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_sphere_equation",
+    "knowledge": "Phương trình mặt cầu và tâm bán kính",
+    "game": "Phương trình mặt cầu và tâm bán kính • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_sphere_equation/2-nhiem-vu.html",
+    "source_template": "games/knowledge/mat-cau/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_sphere_equation",
+    "knowledge": "Phương trình mặt cầu và tâm bán kính",
+    "game": "Phương trình mặt cầu và tâm bán kính • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_sphere_equation/3-trum-cuoi.html",
+    "source_template": "games/knowledge/mat-cau/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_solid_surface_area",
+    "knowledge": "Diện tích xung quanh và toàn phần hình khối",
+    "game": "Diện tích xung quanh và toàn phần hình khối • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_solid_surface_area/1-kham-pha.html",
+    "source_template": "games/knowledge/mat-phang-oxyz/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_solid_surface_area",
+    "knowledge": "Diện tích xung quanh và toàn phần hình khối",
+    "game": "Diện tích xung quanh và toàn phần hình khối • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_solid_surface_area/2-nhiem-vu.html",
+    "source_template": "games/knowledge/mat-phang-oxyz/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_solid_surface_area",
+    "knowledge": "Diện tích xung quanh và toàn phần hình khối",
+    "game": "Diện tích xung quanh và toàn phần hình khối • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_solid_surface_area/3-trum-cuoi.html",
+    "source_template": "games/knowledge/mat-phang-oxyz/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_point_plane_distance",
+    "knowledge": "Khoảng cách từ điểm đến mặt phẳng",
+    "game": "Khoảng cách từ điểm đến mặt phẳng • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_point_plane_distance/1-kham-pha.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_point_plane_distance",
+    "knowledge": "Khoảng cách từ điểm đến mặt phẳng",
+    "game": "Khoảng cách từ điểm đến mặt phẳng • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_point_plane_distance/2-nhiem-vu.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_point_plane_distance",
+    "knowledge": "Khoảng cách từ điểm đến mặt phẳng",
+    "game": "Khoảng cách từ điểm đến mặt phẳng • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_point_plane_distance/3-trum-cuoi.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_line_plane_angle",
+    "knowledge": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+    "game": "Góc giữa đường thẳng và mặt phẳng Oxyz • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_line_plane_angle/1-kham-pha.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_line_plane_angle",
+    "knowledge": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+    "game": "Góc giữa đường thẳng và mặt phẳng Oxyz • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_line_plane_angle/2-nhiem-vu.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_line_plane_angle",
+    "knowledge": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+    "game": "Góc giữa đường thẳng và mặt phẳng Oxyz • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_line_plane_angle/3-trum-cuoi.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_two_planes_angle",
+    "knowledge": "Góc giữa hai mặt phẳng",
+    "game": "Góc giữa hai mặt phẳng • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_two_planes_angle/1-kham-pha.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_two_planes_angle",
+    "knowledge": "Góc giữa hai mặt phẳng",
+    "game": "Góc giữa hai mặt phẳng • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_two_planes_angle/2-nhiem-vu.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_two_planes_angle",
+    "knowledge": "Góc giữa hai mặt phẳng",
+    "game": "Góc giữa hai mặt phẳng • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_two_planes_angle/3-trum-cuoi.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_line_plane_intersection",
+    "knowledge": "Giao điểm đường thẳng và mặt phẳng",
+    "game": "Giao điểm đường thẳng và mặt phẳng • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_line_plane_intersection/1-kham-pha.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_line_plane_intersection",
+    "knowledge": "Giao điểm đường thẳng và mặt phẳng",
+    "game": "Giao điểm đường thẳng và mặt phẳng • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_line_plane_intersection/2-nhiem-vu.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_line_plane_intersection",
+    "knowledge": "Giao điểm đường thẳng và mặt phẳng",
+    "game": "Giao điểm đường thẳng và mặt phẳng • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_line_plane_intersection/3-trum-cuoi.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_sphere_tangent_plane",
+    "knowledge": "Mặt phẳng tiếp xúc với mặt cầu",
+    "game": "Mặt phẳng tiếp xúc với mặt cầu • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_sphere_tangent_plane/1-kham-pha.html",
+    "source_template": "games/knowledge/mat-cau/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_sphere_tangent_plane",
+    "knowledge": "Mặt phẳng tiếp xúc với mặt cầu",
+    "game": "Mặt phẳng tiếp xúc với mặt cầu • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_sphere_tangent_plane/2-nhiem-vu.html",
+    "source_template": "games/knowledge/mat-cau/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_sphere_tangent_plane",
+    "knowledge": "Mặt phẳng tiếp xúc với mặt cầu",
+    "game": "Mặt phẳng tiếp xúc với mặt cầu • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_sphere_tangent_plane/3-trum-cuoi.html",
+    "source_template": "games/knowledge/mat-cau/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_skew_line_relation",
+    "knowledge": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+    "game": "Vị trí tương đối của hai đường thẳng trong Oxyz • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_skew_line_relation/1-kham-pha.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_skew_line_relation",
+    "knowledge": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+    "game": "Vị trí tương đối của hai đường thẳng trong Oxyz • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_skew_line_relation/2-nhiem-vu.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_skew_line_relation",
+    "knowledge": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+    "game": "Vị trí tương đối của hai đường thẳng trong Oxyz • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_skew_line_relation/3-trum-cuoi.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_min_distance_3d",
+    "knowledge": "Cực trị khoảng cách trong không gian tọa độ",
+    "game": "Cực trị khoảng cách trong không gian tọa độ • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_min_distance_3d/1-kham-pha.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_min_distance_3d",
+    "knowledge": "Cực trị khoảng cách trong không gian tọa độ",
+    "game": "Cực trị khoảng cách trong không gian tọa độ • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_min_distance_3d/2-nhiem-vu.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_min_distance_3d",
+    "knowledge": "Cực trị khoảng cách trong không gian tọa độ",
+    "game": "Cực trị khoảng cách trong không gian tọa độ • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_min_distance_3d/3-trum-cuoi.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_sphere_plane_intersection",
+    "knowledge": "Giao tuyến mặt cầu và mặt phẳng",
+    "game": "Giao tuyến mặt cầu và mặt phẳng • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_sphere_plane_intersection/1-kham-pha.html",
+    "source_template": "games/knowledge/mat-cau/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_sphere_plane_intersection",
+    "knowledge": "Giao tuyến mặt cầu và mặt phẳng",
+    "game": "Giao tuyến mặt cầu và mặt phẳng • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_sphere_plane_intersection/2-nhiem-vu.html",
+    "source_template": "games/knowledge/mat-cau/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_sphere_plane_intersection",
+    "knowledge": "Giao tuyến mặt cầu và mặt phẳng",
+    "game": "Giao tuyến mặt cầu và mặt phẳng • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_sphere_plane_intersection/3-trum-cuoi.html",
+    "source_template": "games/knowledge/mat-cau/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_parameter_geometry",
+    "knowledge": "Bài toán tham số hình học Oxyz",
+    "game": "Bài toán tham số hình học Oxyz • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_parameter_geometry/1-kham-pha.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_parameter_geometry",
+    "knowledge": "Bài toán tham số hình học Oxyz",
+    "game": "Bài toán tham số hình học Oxyz • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_parameter_geometry/2-nhiem-vu.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_parameter_geometry",
+    "knowledge": "Bài toán tham số hình học Oxyz",
+    "game": "Bài toán tham số hình học Oxyz • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_parameter_geometry/3-trum-cuoi.html",
+    "source_template": "games/knowledge/toa-do-khong-gian/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_geom_3d_optimization",
+    "knowledge": "Bài toán tối ưu hình học không gian",
+    "game": "Bài toán tối ưu hình học không gian • Khám phá hình",
+    "icon": "🧭",
+    "path": "games/knowledge/g12_geom_3d_optimization/1-kham-pha.html",
+    "source_template": "games/knowledge/mat-phang-oxyz/1-tim-goc.html"
+  },
+  {
+    "grade": 12,
+    "level": "medium",
+    "knowledge_id": "g12_geom_3d_optimization",
+    "knowledge": "Bài toán tối ưu hình học không gian",
+    "game": "Bài toán tối ưu hình học không gian • Nhiệm vụ hình học",
+    "icon": "📐",
+    "path": "games/knowledge/g12_geom_3d_optimization/2-nhiem-vu.html",
+    "source_template": "games/knowledge/mat-phang-oxyz/2-san-o-dai.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_geom_3d_optimization",
+    "knowledge": "Bài toán tối ưu hình học không gian",
+    "game": "Bài toán tối ưu hình học không gian • Trùm cuối hình học",
+    "icon": "🏆",
+    "path": "games/knowledge/g12_geom_3d_optimization/3-trum-cuoi.html",
+    "source_template": "games/knowledge/mat-phang-oxyz/3-ban-o-hinh-hoc.html"
   }
 ]

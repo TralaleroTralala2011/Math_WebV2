@@ -419,10 +419,19 @@ def create_token(
         )
 
     now = utc_timestamp()
+    auth_version = 0
+    connection = get_connection()
+    try:
+        version_row = connection.execute("SELECT auth_version FROM users WHERE id=?", (user_id,)).fetchone()
+        if version_row:
+            auth_version = int(version_row["auth_version"] or 0)
+    finally:
+        connection.close()
 
     payload = {
         "user_id": user_id,
         "player_id": player_id,
+        "auth_version": auth_version,
         "iat": now,
         "expires": (
             now
@@ -455,6 +464,27 @@ def create_token(
             "Token quá dài."
         )
 
+    return token
+
+
+def create_admin_token(admin_id: int, username: str, auth_version: int = 0) -> str:
+    """Create a signed token for the separate admin_accounts identity store."""
+    now = utc_timestamp()
+    payload = {
+        "user_id": int(admin_id),
+        "player_id": f"MWADMIN{int(admin_id)}",
+        "auth_version": int(auth_version or 0),
+        "role": "admin",
+        "admin_username": username,
+        "iat": now,
+        "expires": now + timedelta(days=TOKEN_EXPIRE_DAYS).total_seconds(),
+    }
+    data = json.dumps(payload, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+    encoded = base64.urlsafe_b64encode(data).decode("ascii").rstrip("=")
+    signature = hmac.new(SECRET_KEY.encode("utf-8"), encoded.encode("ascii"), hashlib.sha256).hexdigest()
+    token = f"{encoded}.{signature}"
+    if len(token) > MAX_TOKEN_LENGTH:
+        raise ValueError("Token quá dài.")
     return token
 
 
@@ -537,6 +567,10 @@ def verify_token(token: str):
         player_id = payload.get("player_id")
         issued_at = payload.get("iat")
         expires = payload.get("expires")
+        auth_version = payload.get("auth_version", 0)
+
+        if not isinstance(auth_version, int) or isinstance(auth_version, bool) or auth_version < 0:
+            return None
 
         if not isinstance(user_id, int):
             return None
@@ -588,6 +622,9 @@ def verify_token(token: str):
         return {
             "user_id": user_id,
             "player_id": player_id,
+            "auth_version": auth_version,
+            "role": payload.get("role", "user"),
+            "admin_username": payload.get("admin_username"),
             "iat": issued_at,
             "expires": expires
         }
@@ -678,6 +715,9 @@ def get_current_user(
             detail="Phiên đăng nhập đã hết hạn hoặc không hợp lệ."
         )
 
+    if payload.get("role") == "admin":
+        raise HTTPException(status_code=403, detail="Phiên quản trị không được dùng cho API tài khoản người học.")
+
     connection = get_connection()
 
     try:
@@ -698,7 +738,11 @@ def get_current_user(
                 total_blank,
                 total_score,
                 last_seen,
-                created_at
+                created_at,
+                role,
+                status,
+                ban_reason,
+                auth_version
             FROM users
             WHERE id = ?
             LIMIT 1
@@ -720,6 +764,18 @@ def get_current_user(
             raise HTTPException(
                 status_code=401,
                 detail="Token không hợp lệ."
+            )
+
+        if int(payload.get("auth_version", 0)) != int(user["auth_version"] or 0):
+            raise HTTPException(
+                status_code=401,
+                detail="Phiên đăng nhập đã bị thu hồi. Vui lòng đăng nhập lại."
+            )
+
+        if user["status"] == "banned":
+            raise HTTPException(
+                status_code=403,
+                detail=("Tài khoản đã bị tạm khóa. Lý do: " + (user["ban_reason"] or "Liên hệ quản trị viên."))
             )
 
         now = utc_now_iso()
@@ -752,7 +808,9 @@ def get_current_user(
                 total_blank,
                 total_score,
                 last_seen,
-                created_at
+                created_at,
+                role,
+                status
             FROM users
             WHERE id = ?
             LIMIT 1
@@ -809,7 +867,9 @@ def serialize_user(user):
         "total_blank": user["total_blank"] or 0,
         "total_score": user["total_score"] or 0,
         "last_seen": user["last_seen"],
-        "created_at": user["created_at"]
+        "created_at": user["created_at"],
+        "role": user["role"] if "role" in user.keys() else "user",
+        "status": user["status"] if "status" in user.keys() else "active"
     }
 
 
@@ -828,7 +888,9 @@ def serialize_login_user(user):
         "total_correct": user["total_correct"] or 0,
         "total_wrong": user["total_wrong"] or 0,
         "total_blank": user["total_blank"] or 0,
-        "total_score": user["total_score"] or 0
+        "total_score": user["total_score"] or 0,
+        "role": user["role"] if "role" in user.keys() else "user",
+        "status": user["status"] if "status" in user.keys() else "active"
     }
 
 
@@ -849,6 +911,9 @@ def register(
     )
 
     password = data.password
+
+    if username.casefold() == "admin19022011":
+        raise HTTPException(status_code=400, detail="Tên tài khoản này được dành riêng cho hệ thống quản trị.")
 
     validate_password(
         password
@@ -1035,6 +1100,27 @@ def login(
     try:
         cursor = connection.cursor()
 
+        # Admin identity lives in admin_accounts, not in the learner users table.
+        admin = cursor.execute(
+            "SELECT id, username, password_hash, status, auth_version FROM admin_accounts WHERE username=? LIMIT 1",
+            (username,)
+        ).fetchone()
+        if admin:
+            if not verify_password(password, admin["password_hash"]):
+                raise HTTPException(status_code=401, detail="Sai tên tài khoản hoặc mật khẩu.")
+            if admin["status"] != "active":
+                raise HTTPException(status_code=403, detail="Tài khoản quản trị đang bị vô hiệu hóa.")
+            now = utc_now_iso()
+            cursor.execute("UPDATE admin_accounts SET last_login=? WHERE id=?", (now, admin["id"]))
+            connection.commit()
+            return {
+                "message": "Đăng nhập quản trị thành công!",
+                "token": create_admin_token(admin["id"], admin["username"], admin["auth_version"]),
+                "user": {"id": admin["id"], "player_id": f"MWADMIN{admin['id']}", "username": admin["username"],
+                         "level": 0, "xp": 0, "total_games": 0, "total_correct": 0, "total_wrong": 0,
+                         "total_blank": 0, "total_score": 0, "role": "admin", "status": admin["status"]}
+            }
+
         cursor.execute(
             """
             SELECT
@@ -1050,7 +1136,10 @@ def login(
                 total_blank,
                 total_score,
                 last_seen,
-                created_at
+                created_at,
+                role,
+                status,
+                ban_reason
             FROM users
             WHERE username = ?
             LIMIT 1
@@ -1073,6 +1162,12 @@ def login(
             raise HTTPException(
                 status_code=401,
                 detail="Sai tên tài khoản hoặc mật khẩu."
+            )
+
+        if user["status"] == "banned":
+            raise HTTPException(
+                status_code=403,
+                detail=("Tài khoản đã bị tạm khóa. Lý do: " + (user["ban_reason"] or "Liên hệ quản trị viên."))
             )
 
         now = utc_now_iso()
@@ -1105,7 +1200,9 @@ def login(
                 total_blank,
                 total_score,
                 last_seen,
-                created_at
+                created_at,
+                role,
+                status
             FROM users
             WHERE id = ?
             LIMIT 1
@@ -1164,15 +1261,24 @@ def me(
     Lấy thông tin tài khoản hiện tại.
     """
 
-    user = get_current_user(
-        authorization
-    )
-
-    return {
-        "user": serialize_user(
-            user
-        )
-    }
+    token = extract_bearer_token(authorization)
+    payload = verify_token(token)
+    if not payload:
+        raise HTTPException(status_code=401, detail="Phiên đăng nhập đã hết hạn hoặc không hợp lệ.")
+    if payload.get("role") == "admin":
+        connection = get_connection()
+        try:
+            admin = connection.execute("SELECT id, username, status, auth_version, created_at, last_login FROM admin_accounts WHERE id=?", (payload["user_id"],)).fetchone()
+            if not admin or admin["username"] != payload.get("admin_username") or admin["status"] != "active" or int(admin["auth_version"] or 0) != int(payload.get("auth_version", 0)):
+                raise HTTPException(status_code=401, detail="Phiên quản trị đã hết hạn hoặc bị thu hồi.")
+            return {"user": {"id": admin["id"], "player_id": f"MWADMIN{admin['id']}", "username": admin["username"],
+                             "level": 0, "xp": 0, "total_games": 0, "total_correct": 0, "total_wrong": 0,
+                             "total_blank": 0, "total_score": 0, "last_seen": admin["last_login"],
+                             "created_at": admin["created_at"], "role": "admin", "status": admin["status"]}}
+        finally:
+            connection.close()
+    user = get_current_user(authorization)
+    return {"user": serialize_user(user)}
 
 
 # =========================================================
