@@ -37,6 +37,9 @@ let notificationBadgeTimer = null;
 let notificationListRequestId = 0;
 
 let notificationInitialized = false;
+let notificationKnownIds = new Set();
+let notificationToastPollBusy = false;
+let notificationToastTimers = new Map();
 
 
 /* =========================================================
@@ -1477,6 +1480,10 @@ async function loadNotificationList() {
                     "click",
                     async function () {
 
+                        if (["pvp_invite", "chat_message", "friend_request", "friend_accepted"].includes(notification.type)) {
+                            navigateFromNotification(notification);
+                        }
+
                         if (
                             notification.is_read
                         ) {
@@ -1872,6 +1879,145 @@ function handleNotificationEscape(
 
 
 /* =========================================================
+   GAME-STYLE TOASTS + NOTIFICATION ROUTING
+========================================================= */
+function ensureNotificationToastHost() {
+    let host = document.getElementById("mathwebToastHost");
+    if (!host) {
+        host = document.createElement("div");
+        host.id = "mathwebToastHost";
+        host.className = "mathweb-toast-host";
+        host.setAttribute("aria-live", "polite");
+        document.body.appendChild(host);
+    }
+    return host;
+}
+
+function navigateFromNotification(notification) {
+    if (!notification) return;
+    if (notification.type === "pvp_invite") {
+        window.location.href = "battle.html?match_id=" + encodeURIComponent(notification.related_id || "");
+        return;
+    }
+    if (notification.type === "chat_message") {
+        window.location.href = "chat.html?user_id=" + encodeURIComponent(notification.related_user_id || "");
+        return;
+    }
+    if (notification.type === "friend_request") {
+        window.location.href = "account.html#friends";
+        return;
+    }
+    if (notification.type === "friend_accepted") {
+        window.location.href = "chat.html?user_id=" + encodeURIComponent(notification.related_user_id || "");
+    }
+}
+
+function showGameToast(notification) {
+    const host = ensureNotificationToastHost();
+    const toast = document.createElement("section");
+    toast.className = "mathweb-game-toast";
+    toast.setAttribute("role", "status");
+    const head = document.createElement("div");
+    head.className = "mathweb-game-toast-head";
+    const icon = document.createElement("span");
+    icon.className = "mathweb-game-toast-icon";
+    icon.textContent = getNotificationIcon(notification.type);
+    const title = document.createElement("strong");
+    title.textContent = getNotificationTitle(notification);
+    const close = document.createElement("button");
+    close.type = "button";
+    close.className = "mathweb-game-toast-close";
+    close.setAttribute("aria-label", "Đóng thông báo");
+    close.textContent = "×";
+    close.addEventListener("click", event => { event.stopPropagation(); dismiss(); });
+    head.append(icon, title, close);
+    const message = document.createElement("p");
+    message.textContent = getNotificationMessage(notification);
+    toast.append(head, message);
+    let timer = null;
+    let remaining = notification.type === "pvp_invite" ? 18 : 8;
+    let timerLabel = null;
+    const dismiss = () => {
+        if (timer) clearInterval(timer);
+        toast.classList.add("leaving");
+        window.setTimeout(() => toast.remove(), 220);
+        notificationToastTimers.delete(String(notification.id));
+    };
+    if (notification.type === "pvp_invite" && notification.related_id) {
+        const actions = document.createElement("div");
+        actions.className = "mathweb-game-toast-actions";
+        const accept = document.createElement("button");
+        accept.type = "button";
+        accept.className = "toast-accept";
+        accept.textContent = "Chấp nhận";
+        const decline = document.createElement("button");
+        decline.type = "button";
+        decline.className = "toast-decline";
+        decline.textContent = "Từ chối";
+        timerLabel = document.createElement("span");
+        timerLabel.className = "mathweb-game-toast-countdown";
+        timerLabel.textContent = "18 giây";
+        const runInviteAction = async accepted => {
+            accept.disabled = decline.disabled = true;
+            try {
+                const result = await notificationFetch(`${NOTIFICATION_API_URL}/api/matchmaking/match/${encodeURIComponent(notification.related_id)}/${accepted ? "accept" : "reject"}`, { method: "POST" });
+                if (!result.ok) throw new Error(result.message || "Lời mời không còn hiệu lực.");
+                if (accepted) window.location.href = "battle.html?match_id=" + encodeURIComponent(notification.related_id);
+                else dismiss();
+            } catch (error) {
+                message.textContent = error.message || "Không thể xử lý lời mời.";
+                accept.disabled = decline.disabled = false;
+            }
+        };
+        accept.addEventListener("click", event => { event.stopPropagation(); runInviteAction(true); });
+        decline.addEventListener("click", event => { event.stopPropagation(); runInviteAction(false); });
+        actions.append(accept, decline, timerLabel);
+        toast.appendChild(actions);
+        timer = window.setInterval(() => {
+            remaining -= 1;
+            timerLabel.textContent = `${Math.max(remaining, 0)} giây`;
+            if (remaining <= 0) {
+                clearInterval(timer);
+                runInviteAction(false);
+            }
+        }, 1000);
+    } else {
+        toast.addEventListener("click", () => navigateFromNotification(notification));
+        toast.tabIndex = 0;
+        toast.addEventListener("keydown", event => { if (event.key === "Enter") navigateFromNotification(notification); });
+        timer = window.setTimeout(dismiss, 8000);
+    }
+    host.appendChild(toast);
+    notificationToastTimers.set(String(notification.id), dismiss);
+    requestAnimationFrame(() => toast.classList.add("visible"));
+}
+
+async function pollIncomingNotificationToasts() {
+    if (notificationToastPollBusy || !getNotificationToken()) return;
+    notificationToastPollBusy = true;
+    try {
+        const result = await notificationFetch(`${NOTIFICATION_API_URL}/api/notifications`, { method: "GET" });
+        if (!result.ok || !Array.isArray(result.data)) return;
+        const newestFirst = result.data;
+        const currentIds = new Set(newestFirst.map(item => String(item.id)));
+        if (notificationKnownIds.size === 0) {
+            newestFirst.forEach(item => notificationKnownIds.add(String(item.id)));
+            return;
+        }
+        newestFirst.slice().reverse().forEach(item => {
+            const id = String(item.id);
+            if (!notificationKnownIds.has(id)) {
+                notificationKnownIds.add(id);
+                if (!item.is_read) showGameToast(item);
+            }
+        });
+        if (notificationKnownIds.size > 300) notificationKnownIds = new Set([...currentIds]);
+    } finally {
+        notificationToastPollBusy = false;
+    }
+}
+
+/* =========================================================
    POLLING
 ========================================================= */
 
@@ -1918,9 +2064,10 @@ function startNotificationPolling() {
 
 
                 await loadNotificationBadge();
+                await pollIncomingNotificationToasts();
 
             },
-            NOTIFICATION_POLL_INTERVAL
+            2500
         );
 
 }
@@ -2056,6 +2203,9 @@ async function initializeNotifications() {
     notificationInitialized =
         true;
 
+    if (getNotificationToken()) {
+        await pollIncomingNotificationToasts();
+    }
 
     const button =
         document.getElementById(

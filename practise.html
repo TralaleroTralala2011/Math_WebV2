@@ -1302,6 +1302,8 @@
 
     </style>
 
+<style>        .learning-coach{display:flex;align-items:center;justify-content:space-between;gap:18px;margin:0 0 22px;padding:18px 20px;border:1px solid rgba(91,151,255,.2);border-radius:18px;background:linear-gradient(120deg,rgba(46,104,190,.12),rgba(130,86,210,.09));box-shadow:0 12px 32px rgba(0,0,0,.10);animation:coachRise .35s ease both}.learning-coach-copy{min-width:0}.learning-coach .coach-kicker{font-size:9px;letter-spacing:1.6px;font-weight:900;color:#74c8ff}.learning-coach h3{margin:5px 0 6px;font-size:16px}.learning-coach p{margin:0;color:#aab8cc;font-size:12px;line-height:1.7}.learning-coach small{display:block;margin-top:5px;color:#8292aa;font-size:10px}.learning-coach-controls{width:min(240px,100%);flex:0 0 240px}.learning-coach-controls label{display:block;margin-bottom:6px;color:#9cacc4;font-size:11px}.learning-coach-controls select{width:100%;padding:9px;border-radius:10px;border:1px solid rgba(130,160,210,.24);background:#101b2e;color:#edf5ff}.learning-coach-controls button{width:100%;margin-top:7px;padding:9px;border-radius:10px;border:1px solid rgba(88,186,255,.3);background:linear-gradient(110deg,rgba(56,145,255,.22),rgba(153,91,255,.2));color:#eaf5ff;font-weight:800;cursor:pointer}.learning-coach-controls button:disabled{opacity:.55}@keyframes coachRise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}@media(max-width:680px){.learning-coach{align-items:stretch;flex-direction:column;padding:15px}.learning-coach-controls{width:100%;flex:auto}}
+</style>
 </head>
 
 
@@ -1585,6 +1587,18 @@
                  KNOWLEDGE GRID
             ================================================== -->
 
+            <section id="learningCoach" class="learning-coach" aria-live="polite">
+                <div class="learning-coach-copy"><div class="coach-kicker">MATHWEB STUDY COMPANION</div><h3>🎯 Bạn học theo nhịp của mình</h3><p id="coachAdvice">Đang xem lại kết quả học tập để gợi ý bước tiếp theo…</p><small id="coachBasis"></small></div>
+                <div class="learning-coach-controls"><label for="coachDifficulty">Độ khó mong muốn</label><select id="coachDifficulty"><option value="auto">Tự đề xuất theo kết quả</option><option value="easy">Nền tảng</option><option value="medium">Trung cấp</option><option value="hard">Nâng cao</option></select><button id="saveCoachDifficulty" type="button">Lưu lựa chọn</button></div>
+            </section>
+
+
+
+            <section id="myAssignments" class="learning-coach" aria-live="polite" style="display:none;margin:18px 0;">
+              <div class="learning-coach-copy"><div class="coach-kicker">BÀI TẬP ĐƯỢC GIAO</div><h3>📚 Bài tập của bạn</h3><p id="assignmentInboxMessage">Đang tải bài tập…</p></div>
+              <div id="assignmentInboxList" style="display:grid;gap:12px;width:100%;"></div>
+            </section>
+
             <div
                 class="knowledge-grid"
                 id="knowledgeGrid"
@@ -1806,6 +1820,8 @@
     <script src="js/practise-auth.js"></script>
     <script src="js/practise.js?v=147-geometry-fix-20261017"></script>
     <script src="js/ai-practice.js"></script>
+    <script src="js/learning-coach.js"></script>
+    <script src="js/learning-assignments.js"></script>
 
     <!-- =========================================================
          TASKBAR COUNT SYNC
@@ -1854,6 +1870,7 @@
     </script>
 
 
+<script src="js/trial-mode-banner.js"></script>
 </body>
 
 </html>

@@ -6,7 +6,7 @@ Ngày tạo: 24/10/2026
 Bổ sung một gói thư viện kiến thức có cấu trúc cho MATH_WEB, bao phủ khung Toán phổ thông lớp 10–12 và bản đồ Toán chuyên/HSG/Olympiad. Gói này mở rộng theo dữ liệu, không khóa ở 147 chủ đề.
 
 ### Đã đóng gói trong thư viện này
-- `topic_coverage_catalog.json`: danh mục 139 chủ đề có sẵn trong ZIP đầu vào: lớp 10 = 45, lớp 11 = 47, lớp 12 = 47. Các mục giữ nguyên tên/ID/subtopic từ `backend/app/ai/knowledge/index.json`.
+- `topic_coverage_catalog.json`: danh mục 150 chủ đề hiện tại sau mở rộng: lớp 10 = 49, lớp 11 = 51, lớp 12 = 50. Các mục giữ nguyên tên/ID/subtopic từ `backend/app/ai/knowledge/index.json`.
 - `olympiad_advanced_map.json`: 46 nhánh/đầu mục Toán chuyên và HSG: số học, đại số, bất đẳng thức, đa thức, phương trình hàm, dãy số, tổ hợp, hình học, giải tích, xác suất và phương pháp chứng minh.
 - `formula_theorem_bank.json`: 74 mục công thức/định lý/phương pháp tham khảo, có điều kiện và ghi chú khi cần.
 - `question_archetypes.json`: 28 khuôn tư duy/dạng hỏi khác nhau để thiết kế đề đa dạng, không chỉ thay số.
@@ -15,7 +15,7 @@ Bổ sung một gói thư viện kiến thức có cấu trúc cho MATH_WEB, bao
 - `COVERAGE_AND_LIMITATIONS.md`: cách hiểu đúng về độ bao phủ và những việc còn cần làm.
 
 ### Đếm chính xác từ dữ liệu hiện tại
-- Chủ đề phổ thông có sẵn: 139, không phải 147.
+- Chủ đề phổ thông hiện có: 150; đã thêm 11 chủ đề mới vào AI knowledge index.
 - Đầu mục bản đồ Toán chuyên/HSG: 46.
 - Công thức/định lý/phương pháp tham khảo: 74.
 - Dạng tư duy/dạng hỏi: 28.

@@ -1,0 +1,228 @@
+# BỔ SUNG BẮT BUỘC: AI TẠO ĐỀ TOÁN VÀ AI DỰNG HÌNH THÔNG MINH
+
+## B1. AI tạo đề toán phong phú như ChatGPT
+
+### Mục tiêu
+
+Phát triển hệ thống AI tạo đề toán có khả năng hiểu yêu cầu, xây dựng câu hỏi đa dạng, xử lý nhiều dạng kiến thức và tạo bài toán mới theo từng yêu cầu, hướng đến mức độ linh hoạt và phong phú tương tự ChatGPT khi giải quyết các yêu cầu toán học.
+
+AI không được chỉ sử dụng một số lượng nhỏ mẫu câu hỏi cố định rồi thay số liệu để tạo ra các câu hỏi khác nhau.
+
+### 1. Đa dạng hóa nội dung câu hỏi
+
+- Sinh nhiều dạng bài khác nhau trong cùng một chủ đề.
+- Biến đổi cách đặt vấn đề, dữ kiện, yêu cầu cần tìm và phương pháp giải.
+- Kết hợp tính toán, chứng minh, phân tích, suy luận, tìm điều kiện, khảo sát, bài toán tham số và bài toán cực trị khi phù hợp.
+- Tạo câu hỏi từ cơ bản đến phức tạp theo đúng cấp độ đã chọn.
+- Tạo bài toán ứng dụng thực tế với bối cảnh tự nhiên, dữ kiện hợp lý và mục tiêu toán học rõ ràng.
+- Kết hợp nhiều kiến thức trong một câu hỏi khi phù hợp với chương trình và cấp độ.
+- Có thể tạo câu hỏi theo yêu cầu riêng về chủ đề, độ khó, số bước giải, loại đáp án hoặc dạng bài.
+- Hỗ trợ sinh đề mới khi người học yêu cầu, đồng thời giảm nguy cơ lặp lại câu hỏi đã gặp.
+
+### 2. Đa dạng hóa cách giải
+
+AI không chỉ tạo câu hỏi mà còn phải giải thích được phương pháp giải.
+
+- Trình bày lời giải từng bước.
+- Giải thích vì sao sử dụng công thức, định lý hoặc phương pháp đó.
+- Trình bày phép tính và lập luận rõ ràng.
+- Kiểm tra điều kiện xác định, điều kiện nghiệm và các trường hợp đặc biệt.
+- Khi bài toán có nhiều cách giải phù hợp, có thể trình bày phương pháp khác để người học tham khảo.
+- Với bài chứng minh, phải có lập luận logic, không bỏ qua bước quan trọng.
+- Với bài toán thực tế, phải giải thích ý nghĩa của kết quả và đơn vị khi cần.
+
+### 3. Kiểm chứng chất lượng câu hỏi
+
+Mỗi câu hỏi phải trải qua bước kiểm tra trước khi đưa vào Practice, Game hoặc Battle.
+
+- Đề bài phải đủ dữ kiện và không tự mâu thuẫn.
+- Có đáp án đúng hoặc tiêu chí chấm tự luận rõ ràng.
+- Đáp án phải khớp với lời giải.
+- Trắc nghiệm phải có phương án đúng và các phương án nhiễu hợp lý.
+- Câu hỏi đúng/sai phải có kết luận xác định.
+- Câu hỏi tự luận phải có tiêu chí chấm hoặc phương pháp xác minh đáp án phù hợp.
+- Kiểm tra tính toán bằng phương pháp độc lập hoặc công cụ toán học khi có thể.
+- Nếu AI không thể xác minh chắc chắn một câu hỏi, không được tự động coi câu hỏi đó là đã được kiểm chứng.
+
+### 4. Phân biệt cấp độ thực chất
+
+**Nền tảng:** khái niệm, công thức, kỹ năng cơ bản và ứng dụng trực tiếp.
+
+**Trung cấp:** vận dụng kiến thức, kết hợp nhiều bước và xử lý dữ kiện.
+
+**Nâng cao:** lập luận sâu, bài toán tổng hợp, tham số, cực trị và chứng minh phức tạp.
+
+**Địa ngục/Olympic:** bài toán thử thách tư duy, đòi hỏi ý tưởng sáng tạo và lập luận chặt chẽ.
+
+Không được tạo cảm giác khó bằng cách chỉ tăng số lớn, kéo dài đề hoặc thêm phép tính không cần thiết.
+
+### 5. Cá nhân hóa và chống lặp
+
+- Ghi nhận lịch sử câu hỏi theo tài khoản hoặc phiên luyện tập phù hợp.
+- Hạn chế sinh lại câu hỏi đã gặp.
+- Có thể tăng dần độ khó dựa trên kết quả học tập khi tính năng này được bật.
+- Cho phép tạo nhiều đề khác nhau cho cùng chủ đề và cấp độ.
+- Không hy sinh tính chính xác để đạt số lượng câu hỏi lớn.
+- AI phải được tích hợp thực tế vào website, không chỉ tồn tại dưới dạng mô-đun rời.
+
+---
+
+## C1. AI dựng hình toán học thông minh, tương tự các công cụ hình học chuyên dụng
+
+### Mục tiêu
+
+Xây dựng hệ thống AI có thể đọc và phân tích đề bài, xác định những đối tượng hình học được mô tả, suy ra các quan hệ đã cho và tạo hình minh họa tương ứng.
+
+Mục tiêu là kết hợp khả năng hiểu ngôn ngữ toán học với công cụ dựng hình chính xác, hướng đến sự linh hoạt của ChatGPT khi hỗ trợ hình học và khả năng dựng hình của các phần mềm hình học chuyên dụng.
+
+**Không được đồng nhất một hình ảnh đẹp với một hình vẽ toán học chính xác.** Hình phải phản ánh đúng dữ kiện và các quan hệ toán học trong đề.
+
+### 1. Hỗ trợ nhiều loại hình học
+
+#### Hình học phẳng 2D
+
+- Tam giác và các đường đặc biệt trong tam giác.
+- Tứ giác và đa giác.
+- Đường tròn, dây cung, tiếp tuyến, cát tuyến và các góc liên quan.
+- Các đường thẳng song song, vuông góc, giao nhau và đồng quy.
+- Các phép biến hình, vectơ và quỹ tích điểm.
+- Hình học tọa độ trong mặt phẳng.
+- Elip, parabol, hypebol và các đường cong phù hợp chương trình.
+
+#### Hình học không gian 3D
+
+- Hình chóp, hình lăng trụ và các khối đa diện.
+- Hình hộp, hình lập phương và các khối hình học phổ biến.
+- Mặt phẳng cắt khối đa diện và thiết diện.
+- Quan hệ giữa đường thẳng, mặt phẳng và các vật thể trong không gian.
+- Góc, khoảng cách và hình chiếu trong không gian.
+- Mặt cầu và những bài toán hình học không gian liên quan.
+- Hệ tọa độ không gian Oxyz.
+- Các vật thể hoặc cấu hình 3D khác khi phù hợp với đề bài.
+
+#### Hình học tọa độ và đồ thị
+
+- Mặt phẳng tọa độ \(Oxy\) và hệ tọa độ không gian \(Oxyz\).
+- Đánh dấu điểm theo tọa độ được cho.
+- Vẽ đường thẳng, đường tròn, đường cong và mặt cong từ phương trình.
+- Hiển thị giao điểm, vectơ, hình chiếu và các đối tượng liên quan.
+- Hỗ trợ thể hiện những yếu tố cần thiết để giải bài toán.
+
+### 2. Đọc hiểu đề bài trước khi vẽ
+
+AI phải phân tích đề thành các thành phần có cấu trúc, gồm:
+
+- Đối tượng hình học: điểm, đoạn thẳng, đường thẳng, mặt phẳng, đường tròn, khối đa diện và các đối tượng khác.
+- Tên và ký hiệu của từng đối tượng.
+- Độ dài, góc, tọa độ và những đại lượng được cho.
+- Quan hệ song song, vuông góc, tiếp xúc, giao nhau, thuộc nhau và các điều kiện khác.
+- Những đối tượng cần tìm hoặc cần chứng minh.
+- Những ràng buộc hình học và điều kiện đặc biệt.
+
+Sau đó, hệ thống mới dựng hình từ các dữ kiện đã phân tích. Không được chọn một hình mẫu chung chỉ vì đề có từ khóa “tam giác”, “đường tròn” hoặc “hình chóp”.
+
+### 3. Độ chính xác và tỉ lệ hình vẽ
+
+Đây là yêu cầu bắt buộc.
+
+- Nếu đề cho độ dài, tọa độ, góc hoặc tỉ lệ cụ thể, hình phải thể hiện đúng các dữ kiện đó trong giới hạn độ chính xác của công cụ.
+- Nếu đề cho tọa độ, các điểm phải được đặt theo tọa độ, không đặt tùy ý cho đẹp.
+- Nếu đề cho tam giác vuông, vị trí góc vuông phải đúng với đỉnh được nêu.
+- Nếu đề cho hai đường thẳng song song hoặc vuông góc, hình phải thể hiện đúng quan hệ đó.
+- Nếu đề có đường tròn tiếp xúc với đường thẳng, điều kiện tiếp xúc phải được thỏa mãn về mặt hình học.
+- Nếu đề cho hình chóp, các đỉnh, cạnh, mặt và mặt phẳng liên quan phải nhất quán.
+- Hình 3D phải biểu diễn đúng cấu trúc không gian; cần phân biệt cạnh nhìn thấy và cạnh khuất khi phù hợp.
+- Các nhãn điểm, độ dài, góc, tọa độ và chú thích phải khớp với đề bài.
+- Không bóp méo hình chỉ để nhãn dễ nhìn hoặc để hình trông cân đối.
+- Nếu cần thay đổi vị trí nhãn vì lý do trình bày, chỉ được thay đổi vị trí nhãn, không làm thay đổi hình học thực tế.
+
+### 4. Phân biệt hình đúng tỉ lệ và hình minh họa sơ đồ
+
+Nếu đề cung cấp đủ dữ kiện để xác định cấu hình hình học, hệ thống phải dựng hình theo các dữ kiện đó.
+
+Nếu đề không cung cấp đủ dữ kiện để xác định một hình duy nhất:
+
+- Không tự bịa thêm độ dài, góc hoặc quan hệ.
+- Có thể dựng một cấu hình minh họa thỏa mãn những điều kiện đã cho.
+- Phải phân biệt hình minh họa với hình được xác định đầy đủ theo tỉ lệ.
+- Không được suy luận rằng một quan hệ đúng chỉ vì hình vẽ trông có vẻ như vậy.
+- Những kết luận toán học phải dựa trên dữ kiện và chứng minh, không dựa vào cảm giác thị giác.
+
+### 5. Kiến trúc dựng hình
+
+Không nên phụ thuộc hoàn toàn vào AI tạo ảnh thông thường để tạo hình học chính xác.
+
+Nên xây dựng quy trình gồm:
+
+1. AI đọc đề và trích xuất dữ kiện hình học.
+2. Bộ xử lý toán học chuẩn hóa các điểm, đối tượng, phương trình và ràng buộc.
+3. Bộ dựng hình tính toán vị trí hoặc cấu hình thỏa mãn các ràng buộc.
+4. Công cụ hiển thị vẽ hình 2D hoặc 3D, nhãn và ký hiệu.
+5. Bộ kiểm tra xác minh các điều kiện quan trọng.
+6. Hệ thống chỉ hiển thị hình khi vượt qua các kiểm tra cần thiết; nếu dữ kiện mâu thuẫn hoặc chưa đủ, phải xử lý phù hợp thay vì tạo hình sai.
+
+Có thể sử dụng hoặc tích hợp các thư viện, công cụ toán học và phần mềm hình học phù hợp để hỗ trợ dựng hình, tính toán, kiểm tra và hiển thị. Việc lựa chọn công nghệ phải dựa trên khả năng tích hợp với dự án hiện có.
+
+### 6. Tính tương tác của hình vẽ
+
+Khi phù hợp với dạng bài và không phá vỡ giao diện hiện có, hệ thống có thể hỗ trợ:
+
+- Phóng to, thu nhỏ và di chuyển vùng nhìn.
+- Xoay mô hình 3D.
+- Hiện hoặc ẩn nhãn và các đối tượng phụ.
+- Tô sáng đối tượng đang được nhắc đến trong lời giải.
+- Hiển thị từng bước dựng hình.
+- Thay đổi tham số để quan sát hình thay đổi theo dữ kiện.
+- Cập nhật hình khi đề bài hoặc dữ kiện thay đổi.
+
+Đây là các khả năng cần tích hợp có chọn lọc, ưu tiên tính chính xác và trải nghiệm học tập.
+
+### 7. Tích hợp xuyên suốt MATH_WEB
+
+Công cụ dựng hình phải hoạt động với:
+
+- AI tạo câu hỏi.
+- Practice và hệ thống luyện tập.
+- Các game có câu hỏi hình học.
+- Battle và thi đấu.
+- Phần lời giải từng bước.
+
+Đối với câu hỏi hình học, hình minh họa phải tương ứng với chính câu hỏi đang hiển thị. Không được dùng hình của câu trước, hình của chủ đề khác hoặc một hình mẫu không thỏa mãn dữ kiện.
+
+### 8. Kiểm thử hình học
+
+Cần kiểm tra bằng những bài toán có dữ kiện cụ thể và các trường hợp khó, bao gồm:
+
+- Hình học phẳng có độ dài và góc chính xác.
+- Tam giác vuông, đường tròn và tiếp tuyến.
+- Bài toán tọa độ với các điểm có tọa độ xác định.
+- Hình chóp có điều kiện vuông góc hoặc song song.
+- Thiết diện của khối 3D.
+- Bài toán có tham số làm thay đổi hình.
+- Đề thiếu dữ kiện hoặc chứa điều kiện mâu thuẫn.
+- Trường hợp nhãn điểm gần nhau hoặc hình phức tạp.
+
+Phải kiểm tra quan hệ hình học bằng tính toán khi có thể, không chỉ đánh giá bằng mắt.
+
+---
+
+## C2. Tiêu chuẩn hoàn thành bổ sung
+
+### AI tạo đề
+
+- Có nhiều dạng câu hỏi thực sự khác nhau.
+- Có thể sinh đề theo lớp, chủ đề, cấp độ và loại câu hỏi.
+- Có đáp án, lời giải và kiểm tra tính nhất quán.
+- Giảm trùng lặp và tránh mẫu câu hỏi lặp đi lặp lại.
+- Hoạt động trực tiếp trong hệ thống hiện có.
+
+### AI dựng hình
+
+- Hiểu được dữ kiện và quan hệ trong đề.
+- Hỗ trợ hình học phẳng, tọa độ và hình học không gian 3D.
+- Thể hiện đúng kích thước, tọa độ, góc và quan hệ được cung cấp.
+- Không tự thêm điều kiện hoặc sử dụng hình không liên quan.
+- Có cơ chế kiểm tra hình học trước khi hiển thị.
+- Tích hợp vào Practice, Game và Battle mà không phá vỡ giao diện đã khóa.
+
+**Nguyên tắc cuối cùng:** AI phải tạo ra câu hỏi toán học có chất lượng và hình vẽ có căn cứ toán học. Số lượng câu hỏi hay hình minh họa không quan trọng bằng việc chúng đa dạng, chính xác, phù hợp đề bài và thực sự hoạt động trong MATH_WEB.

@@ -103,7 +103,7 @@ function gameStage(){const match=location.pathname.match(/\/([123])-[^/]+\.html$
 async function requestBatch(){
  const stage=gameStage();
  const learningTier=stage===1?'foundation':stage===2?'provincial':'national';
- const difficulty=stage===1?'easy':stage===2?'expert':'hell';
+ const mwPrefUser=(()=>{try{return JSON.parse(localStorage.getItem('mathweb_user')||'{}')}catch{return {}}})();const mwPref=localStorage.getItem('mathweb_preferred_difficulty_'+String(mwPrefUser.id||mwPrefUser.username||'guest'))||'auto';const difficulty=mwPref==='easy'?'easy':mwPref==='medium'?'medium':mwPref==='hard'?'hard':stage===1?'easy':stage===2?'expert':'hell';
  const history=S.history.slice(-30);
  const gameId=`${GAME.knowledgeId||GAME.engine}_${GAME.title||'game'}_stage${stage}`;
  let found=[];

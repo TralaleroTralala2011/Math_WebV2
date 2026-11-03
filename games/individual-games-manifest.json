@@ -4408,5 +4408,335 @@
     "icon": "🏆",
     "path": "games/knowledge/g12_geom_3d_optimization/3-trum-cuoi.html",
     "source_template": "games/knowledge/mat-phang-oxyz/3-ban-o-hinh-hoc.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_advanced_inequalities",
+    "knowledge": "Bất đẳng thức đại số và cực trị nâng cao",
+    "game": "Bất đẳng thức đại số và cực trị nâng cao • Khám phá",
+    "icon": "🌱",
+    "path": "games/knowledge/g10-advanced-inequalities/1-kham-pha.html",
+    "source_template": "games/knowledge/g10_geom_line_intersections/1-kham-pha.html"
+  },
+  {
+    "grade": 10,
+    "level": "intermediate",
+    "knowledge_id": "g10_advanced_inequalities",
+    "knowledge": "Bất đẳng thức đại số và cực trị nâng cao",
+    "game": "Bất đẳng thức đại số và cực trị nâng cao • Nhiệm vụ",
+    "icon": "🎯",
+    "path": "games/knowledge/g10-advanced-inequalities/2-nhiem-vu.html",
+    "source_template": "games/knowledge/g10_geom_line_intersections/2-nhiem-vu.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_advanced_inequalities",
+    "knowledge": "Bất đẳng thức đại số và cực trị nâng cao",
+    "game": "Bất đẳng thức đại số và cực trị nâng cao • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/g10-advanced-inequalities/3-trum-cuoi.html",
+    "source_template": "games/knowledge/g10_geom_line_intersections/3-trum-cuoi.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_symmetric_systems",
+    "knowledge": "Hệ phương trình đối xứng và hoán vị",
+    "game": "Hệ phương trình đối xứng và hoán vị • Khám phá",
+    "icon": "🌱",
+    "path": "games/knowledge/g10-symmetric-systems/1-kham-pha.html",
+    "source_template": "games/knowledge/quadratic-equation/2-ghep-nghiem.html"
+  },
+  {
+    "grade": 10,
+    "level": "intermediate",
+    "knowledge_id": "g10_symmetric_systems",
+    "knowledge": "Hệ phương trình đối xứng và hoán vị",
+    "game": "Hệ phương trình đối xứng và hoán vị • Nhiệm vụ",
+    "icon": "🎯",
+    "path": "games/knowledge/g10-symmetric-systems/2-nhiem-vu.html",
+    "source_template": "games/knowledge/quadratic-equation/2-ghep-nghiem.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_symmetric_systems",
+    "knowledge": "Hệ phương trình đối xứng và hoán vị",
+    "game": "Hệ phương trình đối xứng và hoán vị • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/g10-symmetric-systems/3-trum-cuoi.html",
+    "source_template": "games/knowledge/quadratic-equation/2-ghep-nghiem.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_radical_equations_advanced",
+    "knowledge": "Phương trình chứa căn thức nâng cao",
+    "game": "Phương trình chứa căn thức nâng cao • Khám phá",
+    "icon": "🌱",
+    "path": "games/knowledge/g10-radical-equations-advanced/1-kham-pha.html",
+    "source_template": "games/knowledge/quadratic-equation/2-ghep-nghiem.html"
+  },
+  {
+    "grade": 10,
+    "level": "intermediate",
+    "knowledge_id": "g10_radical_equations_advanced",
+    "knowledge": "Phương trình chứa căn thức nâng cao",
+    "game": "Phương trình chứa căn thức nâng cao • Nhiệm vụ",
+    "icon": "🎯",
+    "path": "games/knowledge/g10-radical-equations-advanced/2-nhiem-vu.html",
+    "source_template": "games/knowledge/quadratic-equation/2-ghep-nghiem.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_radical_equations_advanced",
+    "knowledge": "Phương trình chứa căn thức nâng cao",
+    "game": "Phương trình chứa căn thức nâng cao • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/g10-radical-equations-advanced/3-trum-cuoi.html",
+    "source_template": "games/knowledge/quadratic-equation/2-ghep-nghiem.html"
+  },
+  {
+    "grade": 10,
+    "level": "foundation",
+    "knowledge_id": "g10_combinatorics_olympiad",
+    "knowledge": "Tổ hợp và nguyên lý Dirichlet nâng cao",
+    "game": "Tổ hợp và nguyên lý Dirichlet nâng cao • Khám phá",
+    "icon": "🌱",
+    "path": "games/knowledge/g10-combinatorics-olympiad/1-kham-pha.html",
+    "source_template": "games/knowledge/probability/3-chon-tinh-huong.html"
+  },
+  {
+    "grade": 10,
+    "level": "intermediate",
+    "knowledge_id": "g10_combinatorics_olympiad",
+    "knowledge": "Tổ hợp và nguyên lý Dirichlet nâng cao",
+    "game": "Tổ hợp và nguyên lý Dirichlet nâng cao • Nhiệm vụ",
+    "icon": "🎯",
+    "path": "games/knowledge/g10-combinatorics-olympiad/2-nhiem-vu.html",
+    "source_template": "games/knowledge/probability/3-chon-tinh-huong.html"
+  },
+  {
+    "grade": 10,
+    "level": "advanced",
+    "knowledge_id": "g10_combinatorics_olympiad",
+    "knowledge": "Tổ hợp và nguyên lý Dirichlet nâng cao",
+    "game": "Tổ hợp và nguyên lý Dirichlet nâng cao • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/g10-combinatorics-olympiad/3-trum-cuoi.html",
+    "source_template": "games/knowledge/probability/3-chon-tinh-huong.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_advanced_trig_equations",
+    "knowledge": "Phương trình lượng giác nâng cao",
+    "game": "Phương trình lượng giác nâng cao • Khám phá",
+    "icon": "🌱",
+    "path": "games/knowledge/g11-advanced-trig-equations/1-kham-pha.html",
+    "source_template": "games/knowledge/ham-so-luong-giac/1-bat-iem.html"
+  },
+  {
+    "grade": 11,
+    "level": "intermediate",
+    "knowledge_id": "g11_advanced_trig_equations",
+    "knowledge": "Phương trình lượng giác nâng cao",
+    "game": "Phương trình lượng giác nâng cao • Nhiệm vụ",
+    "icon": "🎯",
+    "path": "games/knowledge/g11-advanced-trig-equations/2-nhiem-vu.html",
+    "source_template": "games/knowledge/gioi-han-ham-so/1-bat-iem.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_advanced_trig_equations",
+    "knowledge": "Phương trình lượng giác nâng cao",
+    "game": "Phương trình lượng giác nâng cao • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/g11-advanced-trig-equations/3-trum-cuoi.html",
+    "source_template": "games/knowledge/ham-so-luong-giac-day-du/1-bat-iem.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_sequences_advanced",
+    "knowledge": "Dãy số truy hồi và bài toán cực trị",
+    "game": "Dãy số truy hồi và bài toán cực trị • Khám phá",
+    "icon": "🌱",
+    "path": "games/knowledge/g11-sequences-advanced/1-kham-pha.html",
+    "source_template": "games/knowledge/cap-so-cong/2-ien-so.html"
+  },
+  {
+    "grade": 11,
+    "level": "intermediate",
+    "knowledge_id": "g11_sequences_advanced",
+    "knowledge": "Dãy số truy hồi và bài toán cực trị",
+    "game": "Dãy số truy hồi và bài toán cực trị • Nhiệm vụ",
+    "icon": "🎯",
+    "path": "games/knowledge/g11-sequences-advanced/2-nhiem-vu.html",
+    "source_template": "games/knowledge/day-so-tong-quat/2-ien-so.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_sequences_advanced",
+    "knowledge": "Dãy số truy hồi và bài toán cực trị",
+    "game": "Dãy số truy hồi và bài toán cực trị • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/g11-sequences-advanced/3-trum-cuoi.html",
+    "source_template": "games/knowledge/quy-nap-toan-hoc-11/2-ien-so.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_binomial_advanced",
+    "knowledge": "Nhị thức Newton và hệ số tổ hợp nâng cao",
+    "game": "Nhị thức Newton và hệ số tổ hợp nâng cao • Khám phá",
+    "icon": "🌱",
+    "path": "games/knowledge/g11-binomial-advanced/1-kham-pha.html",
+    "source_template": "games/knowledge/xac-suat-11/3-chon-tinh-huong.html"
+  },
+  {
+    "grade": 11,
+    "level": "intermediate",
+    "knowledge_id": "g11_binomial_advanced",
+    "knowledge": "Nhị thức Newton và hệ số tổ hợp nâng cao",
+    "game": "Nhị thức Newton và hệ số tổ hợp nâng cao • Nhiệm vụ",
+    "icon": "🎯",
+    "path": "games/knowledge/g11-binomial-advanced/2-nhiem-vu.html",
+    "source_template": "games/knowledge/to-hop-xac-suat-nang-cao-11/3-chon-tinh-huong.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_binomial_advanced",
+    "knowledge": "Nhị thức Newton và hệ số tổ hợp nâng cao",
+    "game": "Nhị thức Newton và hệ số tổ hợp nâng cao • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/g11-binomial-advanced/3-trum-cuoi.html",
+    "source_template": "games/knowledge/to-hop-xac-suat-nang-cao-11/3-chon-tinh-huong.html"
+  },
+  {
+    "grade": 11,
+    "level": "foundation",
+    "knowledge_id": "g11_conditional_probability_models",
+    "knowledge": "Mô hình xác suất có điều kiện",
+    "game": "Mô hình xác suất có điều kiện • Khám phá",
+    "icon": "🌱",
+    "path": "games/knowledge/g11-conditional-probability-models/1-kham-pha.html",
+    "source_template": "games/knowledge/xac-suat-11/3-chon-tinh-huong.html"
+  },
+  {
+    "grade": 11,
+    "level": "intermediate",
+    "knowledge_id": "g11_conditional_probability_models",
+    "knowledge": "Mô hình xác suất có điều kiện",
+    "game": "Mô hình xác suất có điều kiện • Nhiệm vụ",
+    "icon": "🎯",
+    "path": "games/knowledge/g11-conditional-probability-models/2-nhiem-vu.html",
+    "source_template": "games/knowledge/to-hop-xac-suat-nang-cao-11/3-chon-tinh-huong.html"
+  },
+  {
+    "grade": 11,
+    "level": "advanced",
+    "knowledge_id": "g11_conditional_probability_models",
+    "knowledge": "Mô hình xác suất có điều kiện",
+    "game": "Mô hình xác suất có điều kiện • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/g11-conditional-probability-models/3-trum-cuoi.html",
+    "source_template": "games/knowledge/to-hop-xac-suat-nang-cao-11/3-chon-tinh-huong.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_complex_plane_geometry",
+    "knowledge": "Hình học số phức và quỹ tích",
+    "game": "Hình học số phức và quỹ tích • Khám phá",
+    "icon": "🌱",
+    "path": "games/knowledge/g12-complex-plane-geometry/1-kham-pha.html",
+    "source_template": "games/knowledge/g12_geom_line_equation_3d/1-kham-pha.html"
+  },
+  {
+    "grade": 12,
+    "level": "intermediate",
+    "knowledge_id": "g12_complex_plane_geometry",
+    "knowledge": "Hình học số phức và quỹ tích",
+    "game": "Hình học số phức và quỹ tích • Nhiệm vụ",
+    "icon": "🎯",
+    "path": "games/knowledge/g12-complex-plane-geometry/2-nhiem-vu.html",
+    "source_template": "games/knowledge/g12_geom_line_equation_3d/2-nhiem-vu.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_complex_plane_geometry",
+    "knowledge": "Hình học số phức và quỹ tích",
+    "game": "Hình học số phức và quỹ tích • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/g12-complex-plane-geometry/3-trum-cuoi.html",
+    "source_template": "games/knowledge/hinh-hoc-oxyz-van-dung-12/2-nhiem-vu.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_integral_optimization",
+    "knowledge": "Tối ưu và cực trị bằng tích phân",
+    "game": "Tối ưu và cực trị bằng tích phân • Khám phá",
+    "icon": "🌱",
+    "path": "games/knowledge/g12-integral-optimization/1-kham-pha.html",
+    "source_template": "games/knowledge/cuc-tri/1-bat-iem.html"
+  },
+  {
+    "grade": 12,
+    "level": "intermediate",
+    "knowledge_id": "g12_integral_optimization",
+    "knowledge": "Tối ưu và cực trị bằng tích phân",
+    "game": "Tối ưu và cực trị bằng tích phân • Nhiệm vụ",
+    "icon": "🎯",
+    "path": "games/knowledge/g12-integral-optimization/2-nhiem-vu.html",
+    "source_template": "games/knowledge/pt-mu/1-bat-iem.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_integral_optimization",
+    "knowledge": "Tối ưu và cực trị bằng tích phân",
+    "game": "Tối ưu và cực trị bằng tích phân • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/g12-integral-optimization/3-trum-cuoi.html",
+    "source_template": "games/knowledge/ung-dung-tich-phan/1-bat-iem.html"
+  },
+  {
+    "grade": 12,
+    "level": "foundation",
+    "knowledge_id": "g12_solid_of_revolution",
+    "knowledge": "Thể tích khối tròn xoay và mô hình thực tế",
+    "game": "Thể tích khối tròn xoay và mô hình thực tế • Khám phá",
+    "icon": "🌱",
+    "path": "games/knowledge/g12-solid-of-revolution/1-kham-pha.html",
+    "source_template": "games/knowledge/g12_geom_line_equation_3d/1-kham-pha.html"
+  },
+  {
+    "grade": 12,
+    "level": "intermediate",
+    "knowledge_id": "g12_solid_of_revolution",
+    "knowledge": "Thể tích khối tròn xoay và mô hình thực tế",
+    "game": "Thể tích khối tròn xoay và mô hình thực tế • Nhiệm vụ",
+    "icon": "🎯",
+    "path": "games/knowledge/g12-solid-of-revolution/2-nhiem-vu.html",
+    "source_template": "games/knowledge/g12_geom_line_equation_3d/2-nhiem-vu.html"
+  },
+  {
+    "grade": 12,
+    "level": "advanced",
+    "knowledge_id": "g12_solid_of_revolution",
+    "knowledge": "Thể tích khối tròn xoay và mô hình thực tế",
+    "game": "Thể tích khối tròn xoay và mô hình thực tế • Trùm cuối",
+    "icon": "🏆",
+    "path": "games/knowledge/g12-solid-of-revolution/3-trum-cuoi.html",
+    "source_template": "games/knowledge/hinh-hoc-oxyz-van-dung-12/2-nhiem-vu.html"
   }
 ]

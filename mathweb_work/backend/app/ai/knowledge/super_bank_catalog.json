@@ -1,0 +1,353 @@
+{
+  "version": "1.1-super-bank-catalog",
+  "purpose": "Additive structure-first question bank. Legacy game/template/generator code remains preserved.",
+  "stats": {
+    "version": "1.0-super-bank",
+    "archetypes": 62,
+    "topic_mappings": 86,
+    "groups": [
+      "algebra",
+      "asymptote",
+      "complex",
+      "coordinate",
+      "counting",
+      "derivative",
+      "exponential",
+      "exponential_equation",
+      "exponential_inequality",
+      "function",
+      "geometry",
+      "induction",
+      "inequality",
+      "integral",
+      "intersection",
+      "limit",
+      "logarithmic",
+      "logarithmic_equation",
+      "logarithmic_inequality",
+      "newton",
+      "probability",
+      "quadratic",
+      "real_life",
+      "sequence",
+      "set",
+      "space_coordinate",
+      "statistics",
+      "survey",
+      "system",
+      "transformation",
+      "trig"
+    ]
+  },
+  "groups": {
+    "algebra": {
+      "archetypes": [
+        "linear_equation",
+        "linear_reverse",
+        "error_check"
+      ],
+      "count": 3
+    },
+    "quadratic": {
+      "archetypes": [
+        "quadratic_factor",
+        "quadratic_parameter",
+        "quadratic_vertex"
+      ],
+      "count": 3
+    },
+    "system": {
+      "archetypes": [
+        "system_construct",
+        "error_check"
+      ],
+      "count": 2
+    },
+    "inequality": {
+      "archetypes": [
+        "inequality",
+        "error_check"
+      ],
+      "count": 2
+    },
+    "exponential_inequality": {
+      "archetypes": [
+        "exponential_inequality"
+      ],
+      "count": 1
+    },
+    "logarithmic_inequality": {
+      "archetypes": [
+        "logarithmic_inequality"
+      ],
+      "count": 1
+    },
+    "set": {
+      "archetypes": [
+        "set_operation",
+        "generic_theory"
+      ],
+      "count": 2
+    },
+    "counting": {
+      "archetypes": [
+        "count_choice",
+        "arrange"
+      ],
+      "count": 2
+    },
+    "probability": {
+      "archetypes": [
+        "dice_event",
+        "dice_reverse",
+        "sample_space_dice",
+        "dice_exact_event",
+        "coin_experiment",
+        "experiment_probability",
+        "empirical_probability",
+        "probability_complement",
+        "card_event",
+        "probability_union_simple",
+        "conditional_probability"
+      ],
+      "count": 11
+    },
+    "statistics": {
+      "archetypes": [
+        "mean_median"
+      ],
+      "count": 1
+    },
+    "sequence": {
+      "archetypes": [
+        "sequence_arithmetic",
+        "sequence_sum"
+      ],
+      "count": 2
+    },
+    "function": {
+      "archetypes": [
+        "function_point",
+        "quadratic_vertex",
+        "graph_reasoning"
+      ],
+      "count": 3
+    },
+    "coordinate": {
+      "archetypes": [
+        "coordinate_distance",
+        "vector_dot"
+      ],
+      "count": 2
+    },
+    "trig": {
+      "archetypes": [
+        "trig_value",
+        "trig_identity"
+      ],
+      "count": 2
+    },
+    "limit": {
+      "archetypes": [
+        "limit_simple"
+      ],
+      "count": 1
+    },
+    "derivative": {
+      "archetypes": [
+        "derivative_basic",
+        "derivative_quadratic",
+        "tangent_line",
+        "graph_reasoning"
+      ],
+      "count": 4
+    },
+    "integral": {
+      "archetypes": [
+        "integral_power",
+        "integral_constant"
+      ],
+      "count": 2
+    },
+    "complex": {
+      "archetypes": [
+        "complex_modulus",
+        "complex_operation"
+      ],
+      "count": 2
+    },
+    "geometry": {
+      "archetypes": [
+        "geometry_right_triangle",
+        "triangle_area",
+        "geometry_circle",
+        "circle_circumference",
+        "angle_triangle",
+        "geometry_space",
+        "box_surface"
+      ],
+      "count": 7
+    },
+    "real_life": {
+      "archetypes": [
+        "real_life_linear",
+        "real_life_growth"
+      ],
+      "count": 2
+    },
+    "newton": {
+      "archetypes": [
+        "newton_binomial"
+      ],
+      "count": 1
+    },
+    "induction": {
+      "archetypes": [
+        "induction_structure"
+      ],
+      "count": 1
+    },
+    "transformation": {
+      "archetypes": [
+        "transformation_point"
+      ],
+      "count": 1
+    },
+    "survey": {
+      "archetypes": [
+        "survey_parabola"
+      ],
+      "count": 1
+    },
+    "space_coordinate": {
+      "archetypes": [
+        "space_distance"
+      ],
+      "count": 1
+    },
+    "asymptote": {
+      "archetypes": [
+        "asymptote"
+      ],
+      "count": 1
+    },
+    "intersection": {
+      "archetypes": [
+        "line_intersection"
+      ],
+      "count": 1
+    },
+    "exponential": {
+      "archetypes": [
+        "exponential_function"
+      ],
+      "count": 1
+    },
+    "logarithmic": {
+      "archetypes": [
+        "log_function"
+      ],
+      "count": 1
+    },
+    "exponential_equation": {
+      "archetypes": [
+        "exponential_equation"
+      ],
+      "count": 1
+    },
+    "logarithmic_equation": {
+      "archetypes": [
+        "log_equation"
+      ],
+      "count": 1
+    }
+  },
+  "topic_groups": {
+    "menh_de_tap_hop": "set",
+    "menh_de": "set",
+    "tap_hop": "set",
+    "bat_phuong_trinh": "inequality",
+    "he_bat_phuong_trinh": "inequality",
+    "bpt_mu": "exponential_inequality",
+    "bpt_logarit": "logarithmic_inequality",
+    "phuong_trinh_he": "system",
+    "he_phuong_trinh": "system",
+    "ham_so_bac_hai": "quadratic",
+    "phuong_trinh": "quadratic",
+    "cuc_tri": "quadratic",
+    "gtln_gtnn": "quadratic",
+    "quy_tac_dem": "counting",
+    "hoan_vi_chinh_hop_to_hop": "counting",
+    "to_hop_xac_suat_nang_cao_11": "counting",
+    "xac_suat": "probability",
+    "xac_suat_11": "probability",
+    "xac_suat_12": "probability",
+    "bien_co_doc_lap_11": "probability",
+    "thong_ke": "statistics",
+    "thong_ke_11": "statistics",
+    "thong_ke_12": "statistics",
+    "day_so": "sequence",
+    "cap_so_cong": "sequence",
+    "cap_so_nhan": "sequence",
+    "day_so_tong_quat": "sequence",
+    "day_so_truy_hoi_11": "sequence",
+    "ham_so": "function",
+    "ham_so_bac_nhat": "function",
+    "vector": "coordinate",
+    "toa_do_phang": "coordinate",
+    "duong_thang": "coordinate",
+    "mat_phang_oxyz": "coordinate",
+    "duong_thang_oxyz": "coordinate",
+    "he_thuc_luong": "trig",
+    "he_thuc_luong_tam_giac": "trig",
+    "gia_tri_luong_giac": "trig",
+    "cong_thuc_luong_giac": "trig",
+    "phuong_trinh_luong_giac": "trig",
+    "phuong_trinh_luong_giac_day_du": "trig",
+    "ham_so_luong_giac": "trig",
+    "ham_so_luong_giac_day_du": "trig",
+    "gioi_han": "limit",
+    "gioi_han_ham_so": "limit",
+    "ham_so_lien_tuc": "limit",
+    "dao_ham": "derivative",
+    "dao_ham_quy_tac": "derivative",
+    "ung_dung_dao_ham_11": "derivative",
+    "ung_dung_dao_ham": "derivative",
+    "tiep_tuyen": "derivative",
+    "tinh_don_dieu": "derivative",
+    "nguyen_ham_tich_phan": "integral",
+    "nguyen_ham": "integral",
+    "tich_phan": "integral",
+    "ung_dung_tich_phan": "integral",
+    "so_phuc": "complex",
+    "bieu_dien_so_phuc": "complex",
+    "pt_so_phuc": "complex",
+    "hinh_hoc_10": "geometry",
+    "hinh_khong_gian": "geometry",
+    "hinh_hoc_khong_gian": "geometry",
+    "song_song_khong_gian": "geometry",
+    "vuong_goc_khong_gian": "geometry",
+    "goc_khoang_cach_11": "geometry",
+    "thiet_dien_hinh_khong_gian_11": "geometry",
+    "duong_tron": "geometry",
+    "goc_khoang_cach_oxyz": "geometry",
+    "the_tich_khong_gian": "geometry",
+    "mat_cau": "geometry",
+    "bai_toan_thuc_te_10": "real_life",
+    "bai_toan_thuc_te_11": "real_life",
+    "bai_toan_thuc_te_tong_hop_11": "real_life",
+    "bai_toan_thuc_te_12": "real_life",
+    "tong_hop_thpt": "real_life",
+    "nhi_thuc_newton": "newton",
+    "quy_nap_toan_hoc_11": "induction",
+    "phep_bien_hinh_11": "transformation",
+    "khao_sat_ham_so": "survey",
+    "toa_do_khong_gian": "space_coordinate",
+    "tien_can": "asymptote",
+    "tuong_giao": "intersection",
+    "ham_mu": "exponential",
+    "ham_logarit": "logarithmic",
+    "pt_mu": "exponential_equation",
+    "pt_logarit": "logarithmic_equation"
+  }
+}

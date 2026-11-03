@@ -2466,6 +2466,12 @@ async function initChat() {
 
     await loadFriends();
 
+    const requestedUserId = Number(new URLSearchParams(window.location.search).get("user_id"));
+    if (Number.isSafeInteger(requestedUserId) && requestedUserId > 0) {
+        const targetFriend = friends.find(friend => Number(friend.id) === requestedUserId);
+        if (targetFriend) await openConversation(targetFriend);
+    }
+
     await refreshPresence();
     await refreshUnreadCounts();
 

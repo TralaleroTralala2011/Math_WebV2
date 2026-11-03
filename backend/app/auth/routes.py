@@ -898,6 +898,40 @@ def serialize_login_user(user):
 # REGISTER
 # =========================================================
 
+@router.post("/demo")
+def create_demo_session():
+    """Create a disposable learner identity for the public trial experience.
+
+    Trial identities use a reserved `trial_` namespace and are excluded from
+    real-learner admin reports. They never authenticate as the administrator.
+    """
+    connection = get_connection()
+    try:
+        cursor = connection.cursor()
+        suffix = secrets.token_hex(6)
+        username = f"trial_{suffix}"
+        player_id = f"MWTRIAL{secrets.token_hex(5).upper()}"
+        password = secrets.token_urlsafe(32)
+        stamp = utc_now_iso()
+        cursor.execute("""INSERT INTO users
+            (player_id, username, password_hash, level, xp, total_games, total_correct,
+             total_wrong, total_blank, total_score, last_seen, created_at, role, status)
+            VALUES (?, ?, ?, 0, 0, 0, 0, 0, 0, 0, ?, ?, 'user', 'active')""",
+            (player_id, username, hash_password(password), stamp, stamp))
+        user_id = int(cursor.lastrowid)
+        connection.commit()
+        cursor.execute("""SELECT id, player_id, username, level, xp, total_games, total_correct,
+            total_wrong, total_blank, total_score, last_seen, created_at, role, status FROM users WHERE id=?""", (user_id,))
+        user = cursor.fetchone()
+        return {"message": "Đã tạo tài khoản trải nghiệm riêng.", "trial": True,
+                "token": create_token(user_id, player_id), "user": serialize_login_user(user)}
+    except Exception:
+        connection.rollback()
+        raise HTTPException(status_code=500, detail="Không thể tạo phiên trải nghiệm. Hãy thử lại.")
+    finally:
+        connection.close()
+
+
 @router.post("/register")
 def register(
     data: RegisterRequest
@@ -914,6 +948,8 @@ def register(
 
     if username.casefold() == "admin19022011":
         raise HTTPException(status_code=400, detail="Tên tài khoản này được dành riêng cho hệ thống quản trị.")
+    if username.casefold().startswith("trial_"):
+        raise HTTPException(status_code=400, detail="Tiền tố trial_ được dành riêng cho tài khoản trải nghiệm tự động.")
 
     validate_password(
         password

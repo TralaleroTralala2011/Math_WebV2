@@ -27,3 +27,10 @@
 - Với trắc nghiệm, nhập 4 lựa chọn duy nhất; `Đáp án đúng` có thể là `A`, `B`, `C`, `D` hoặc nội dung lựa chọn chính xác.
 - Với đúng/sai, nhập 4 mệnh đề ở ô lựa chọn, mỗi dòng một mệnh đề; đáp án dạng `Đúng,Sai,Đúng,Sai` hoặc `true,false,true,false`.
 - Câu hỏi tự luận/trả lời ngắn cần đáp án chuẩn và lời giải để hệ thống chấm/giải thích đáng tin cậy.
+
+
+## Thư viện và bản xem trước trong Admin
+
+- Thư viện hiện là catalog 139 chủ đề, không phải giáo trình hoàn chỉnh cho từng chủ đề. Số câu trong cột quản trị chỉ đếm câu đã lưu vào `admin_question_bank`; số 0 không có nghĩa AI nội bộ không thể sinh câu, nhưng có nghĩa chưa có câu được quản trị lưu ở bảng đó cho chủ đề này.
+- Mục **Web thử nghiệm** nhúng `index.html` để xem giao diện MathWeb ngay trong Admin và mở ở tab riêng. Bản xem trước dùng chung backend/cơ sở dữ liệu hiện tại, KHÔNG phải môi trường sandbox cách ly. Dùng tài khoản người học riêng để kiểm tra.
+- Tác vụ AI hiện sinh câu bằng bộ máy nội bộ theo chu kỳ khi backend đang chạy. Nó không tự truy cập Internet để thu thập tài liệu. Để bật nghiên cứu web, cần tích hợp nhà cung cấp tìm kiếm hợp pháp, đặt API key ở biến môi trường backend, giới hạn domain, lưu nguồn/trích dẫn, kiểm tra trùng lặp và kiểm duyệt đáp án trước khi đưa vào ngân hàng. Không nhúng key vào frontend hoặc GitHub.

@@ -15,10 +15,10 @@ missing = [item["path"] for item in manifest if not (ROOT / item["path"]).is_fil
 duplicate_paths = len({item["path"] for item in manifest}) != len(manifest)
 duplicate_names = len({item["game"] for item in manifest}) != len(manifest)
 problems = []
-if len(manifest) != 441:
-    problems.append(f"Expected 441 game pages, found {len(manifest)}")
-if len(counts) != 147:
-    problems.append(f"Expected 147 knowledge topics, found {len(counts)}")
+if len(manifest) != 474:
+    problems.append(f"Expected 474 game pages, found {len(manifest)}")
+if len(counts) != 158:
+    problems.append(f"Expected 158 game-topic IDs (150 current AI topics plus legacy aliases), found {len(counts)}")
 if any(count != 3 for count in counts.values()):
     problems.append("Each knowledge topic must have exactly 3 games")
 if missing:

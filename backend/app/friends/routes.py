@@ -138,7 +138,7 @@ def find_user_by_player_id(
             level,
             last_seen
         FROM users
-        WHERE player_id = ?
+        WHERE player_id = ? COLLATE NOCASE
         LIMIT 1
         """,
         (

@@ -68,7 +68,10 @@ class AIQuestionService:
             requested_game_id = str(game_id or "").strip()
             # An empty game_id marks a general bank question usable by practice and games.
             # A non-empty game_id remains restricted to that exact game.
-            if stored_game_id and stored_game_id != requested_game_id:
+            if stored_game_id and not (
+                stored_game_id == requested_game_id
+                or requested_game_id.startswith(stored_game_id + "_")
+            ):
                 continue
             if stored_type not in allowed_types:
                 continue

@@ -1,9 +1,12 @@
-from fastapi import APIRouter, HTTPException, WebSocket, WebSocketDisconnect
+from fastapi import APIRouter, HTTPException, WebSocket, WebSocketDisconnect, Header
 from pydantic import BaseModel, Field
 from .config import MAX_COUNT, MAX_TOPICS
 from .engine.service import AIQuestionService
 from .engine.battle import battle_manager
 from .engine.super_bank import SUPER_BANK_STATS
+from .archive import archive_questions
+from database.database import get_connection
+from ..auth.routes import get_current_user
 
 router=APIRouter(prefix="/api/ai",tags=["AI Question Engine"])
 service=AIQuestionService()
@@ -17,6 +20,34 @@ TIER_DIFFICULTY = {
 def effective_difficulty(req: "QuestionRequest") -> str:
     tier = (req.learning_tier or "").strip().lower()
     return TIER_DIFFICULTY.get(tier, req.difficulty)
+
+
+def apply_learner_personalization(req: "QuestionRequest", authorization: str | None) -> None:
+    """Apply saved per-learner difficulty and workload preferences to practice requests."""
+    if not authorization or req.learning_tier:
+        return
+    try:
+        user = get_current_user(authorization)
+        conn = get_connection()
+        try:
+            row = conn.execute("SELECT preferred_difficulty,difficulty_adjustment,question_count_scale FROM learner_personalization WHERE user_id=?", (user["id"],)).fetchone()
+        finally:
+            conn.close()
+        if not row:
+            return
+        aliases = {"nền tảng":"easy", "trung cấp":"medium", "nâng cao":"hard", "foundation":"easy", "expert":"expert"}
+        preferred = str(row["preferred_difficulty"] or "auto")
+        if preferred != "auto":
+            req.difficulty = aliases.get(preferred.casefold(), preferred)
+        else:
+            order = ["easy", "medium", "hard", "expert", "hell"]
+            current = str(req.difficulty or "medium").casefold()
+            if current in order:
+                req.difficulty = order[max(0, min(len(order)-1, order.index(current)+int(row["difficulty_adjustment"] or 0)))]
+        req.count = max(1, min(MAX_COUNT, round(req.count * float(row["question_count_scale"] or 1.0))))
+    except Exception:
+        # Personalization is an enhancement, not a reason to break practice for a valid user.
+        return
 
 
 def annotate_tier(result: dict, req: "QuestionRequest") -> dict:
@@ -91,28 +122,39 @@ def knowledge_detail(topic_id:str):
     return item
 
 @router.post("/questions")
-def questions(req:QuestionRequest):
+def questions(req:QuestionRequest, authorization: str | None = Header(default=None)):
+    apply_learner_personalization(req, authorization)
     try:
         if req.problem_mode:
             result=service.generate_problem_set(req.grade,req.topics,req.count,effective_difficulty(req),req.problem_parts,req.history,req.game_id)
         else:
             result=service.generate_set(req.grade,req.topics,req.count,effective_difficulty(req),req.question_type,req.history,req.game_id)
+        try: archive_questions(req.grade, req.topics, result.get("questions", []), game_id=req.game_id or "", source="AI runtime · /questions")
+        except Exception: pass  # Archiving must never take down a practice request.
         return annotate_tier(result, req)
     except (ValueError,RuntimeError) as e: raise HTTPException(400,str(e))
 
 @router.post("/problems")
-def problems(req:QuestionRequest):
-    try: return annotate_tier(service.generate_problem_set(req.grade,req.topics,req.count,effective_difficulty(req),req.problem_parts,req.history,req.game_id), req)
+def problems(req:QuestionRequest, authorization: str | None = Header(default=None)):
+    apply_learner_personalization(req, authorization)
+    try:
+        result=service.generate_problem_set(req.grade,req.topics,req.count,effective_difficulty(req),req.problem_parts,req.history,req.game_id)
+        try: archive_questions(req.grade, req.topics, result.get("questions", []), game_id=req.game_id or "", source="AI runtime · /problems")
+        except Exception: pass
+        return annotate_tier(result, req)
     except (ValueError,RuntimeError) as e: raise HTTPException(400,str(e))
 
 @router.post("/practice/session")
-def practice_session(req:QuestionRequest):
+def practice_session(req:QuestionRequest, authorization: str | None = Header(default=None)):
+    apply_learner_personalization(req, authorization)
     try:
         if req.problem_mode:
             result=service.generate_problem_set(req.grade,req.topics,req.count,effective_difficulty(req),req.problem_parts,req.history,req.game_id)
         else:
             result=service.generate_set(req.grade,req.topics,req.count,effective_difficulty(req),req.question_type,req.history,req.game_id)
         result["mode"]="practice"
+        try: archive_questions(req.grade, req.topics, result.get("questions", []), game_id=req.game_id or "", source="AI runtime · practice session")
+        except Exception: pass
         return annotate_tier(result, req)
     except (ValueError,RuntimeError) as e: raise HTTPException(400,str(e))
 

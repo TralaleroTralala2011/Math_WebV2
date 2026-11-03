@@ -2498,7 +2498,7 @@ function setAccountLoading(
 
     const loadingElements =
         document.querySelectorAll(
-            ".account-loading"
+            ".account-loading, .account-loading-state, #accountLoadingState"
         );
 
     loadingElements.forEach(
@@ -2527,12 +2527,9 @@ function showAccountError(
     message
 ) {
     const container =
-        document.getElementById(
-            "accountError"
-        ) ||
-        document.querySelector(
-            ".account-error"
-        );
+        document.getElementById("accountError") ||
+        document.getElementById("accountErrorState") ||
+        document.querySelector(".account-error, .account-error-state");
 
     if (!container) {
         return;
@@ -2550,12 +2547,9 @@ function showAccountError(
 
 function hideAccountError() {
     const container =
-        document.getElementById(
-            "accountError"
-        ) ||
-        document.querySelector(
-            ".account-error"
-        );
+        document.getElementById("accountError") ||
+        document.getElementById("accountErrorState") ||
+        document.querySelector(".account-error, .account-error-state");
 
     if (!container) {
         return;
@@ -2609,6 +2603,13 @@ async function loadAccount(
 
         if (profile) {
             showProfile(profile);
+        } else {
+            const cachedProfile = (() => {
+                try { return JSON.parse(localStorage.getItem("mathweb_profile") || "null"); }
+                catch (_) { return null; }
+            })();
+            if (cachedProfile) showProfile(cachedProfile);
+            else showAccountError("Không tải được hồ sơ tài khoản. Hãy thử làm mới trang hoặc đăng nhập lại.");
         }
 
         showHistory(history);

@@ -486,6 +486,46 @@
       "geometry": true,
       "difficulty_level": "Nâng cao",
       "generator_kind": "coordinate"
+    },
+    {
+      "id": "g10_advanced_inequalities",
+      "name": "Bất đẳng thức đại số và cực trị nâng cao",
+      "subtopics": [
+        "bất đẳng thức AM-GM và Cauchy",
+        "đánh giá hai vế",
+        "điều kiện xảy ra dấu bằng",
+        "cực trị biểu thức nhiều biến"
+      ]
+    },
+    {
+      "id": "g10_symmetric_systems",
+      "name": "Hệ phương trình đối xứng và hoán vị",
+      "subtopics": [
+        "đặt tổng và tích",
+        "hệ đối xứng loại một",
+        "hệ đối xứng loại hai",
+        "điều kiện nghiệm thực"
+      ]
+    },
+    {
+      "id": "g10_radical_equations_advanced",
+      "name": "Phương trình chứa căn thức nâng cao",
+      "subtopics": [
+        "điều kiện xác định",
+        "nâng lũy thừa có kiểm soát",
+        "đặt ẩn phụ",
+        "đối chiếu nghiệm ngoại lai"
+      ]
+    },
+    {
+      "id": "g10_combinatorics_olympiad",
+      "name": "Tổ hợp và nguyên lý Dirichlet nâng cao",
+      "subtopics": [
+        "nguyên lý Dirichlet",
+        "đếm bù",
+        "song ánh",
+        "bất biến trong bài toán đếm"
+      ]
     }
   ],
   "11": [
@@ -984,6 +1024,46 @@
       "geometry": true,
       "difficulty_level": "Nâng cao",
       "generator_kind": "space11"
+    },
+    {
+      "id": "g11_advanced_trig_equations",
+      "name": "Phương trình lượng giác nâng cao",
+      "subtopics": [
+        "biến đổi tổng thành tích",
+        "phương trình đối xứng",
+        "đặt ẩn phụ lượng giác",
+        "lọc nghiệm trên khoảng"
+      ]
+    },
+    {
+      "id": "g11_sequences_advanced",
+      "name": "Dãy số truy hồi và bài toán cực trị",
+      "subtopics": [
+        "truy hồi tuyến tính",
+        "đơn điệu và bị chặn",
+        "đánh giá số hạng",
+        "tổng hữu hạn"
+      ]
+    },
+    {
+      "id": "g11_binomial_advanced",
+      "name": "Nhị thức Newton và hệ số tổ hợp nâng cao",
+      "subtopics": [
+        "hệ số của lũy thừa",
+        "tổng hệ số",
+        "đồng nhất thức tổ hợp",
+        "đếm theo số mũ"
+      ]
+    },
+    {
+      "id": "g11_conditional_probability_models",
+      "name": "Mô hình xác suất có điều kiện",
+      "subtopics": [
+        "xác suất có điều kiện",
+        "công thức Bayes",
+        "biến cố độc lập",
+        "sơ đồ cây và phân hoạch"
+      ]
     }
   ],
   "12": [
@@ -1483,6 +1563,36 @@
       "geometry": true,
       "difficulty_level": "Nâng cao",
       "generator_kind": "volume"
+    },
+    {
+      "id": "g12_complex_plane_geometry",
+      "name": "Hình học số phức và quỹ tích",
+      "subtopics": [
+        "môđun và khoảng cách",
+        "đường tròn trong mặt phẳng phức",
+        "quỹ tích số phức",
+        "biến đổi hình học bằng phép nhân"
+      ]
+    },
+    {
+      "id": "g12_integral_optimization",
+      "name": "Tối ưu và cực trị bằng tích phân",
+      "subtopics": [
+        "diện tích biến thiên",
+        "tối ưu thể tích",
+        "mô hình chi phí và lợi ích",
+        "đánh giá tích phân"
+      ]
+    },
+    {
+      "id": "g12_solid_of_revolution",
+      "name": "Thể tích khối tròn xoay và mô hình thực tế",
+      "subtopics": [
+        "miền phẳng quay quanh trục",
+        "thiết lập tích phân thể tích",
+        "đổi trục và đổi biến",
+        "bài toán ứng dụng"
+      ]
     }
   ]
 }

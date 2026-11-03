@@ -1,15 +1,12 @@
 (function () {
-
-    const token =
-        localStorage.getItem("mathweb_token");
-
-    if (!token || token.trim() === "") {
-
-        window.location.replace("login.html");
-
+    const page = (location.pathname.split("/").pop() || "").toLowerCase();
+    const params = new URLSearchParams(location.search);
+    if (page === "trial-practise.html" && params.get("trial") === "1") {
+        document.documentElement.setAttribute("data-practice-auth", "trial-anonymous");
         return;
     }
-
+    const token = localStorage.getItem("mathweb_token");
+    if (!token || !token.trim()) { window.location.replace("login.html"); }
 })();/* =========================================================
    MATH WEB - PRACTICE AUTH
    Protect the practise page with backend authentication
@@ -483,11 +480,18 @@
 
         if (
             currentPage !== PRACTICE_PAGE &&
-            currentPage !== "practice.html"
+            currentPage !== "practice.html" &&
+            currentPage !== "trial-practise.html"
         ) {
 
             return;
 
+        }
+
+        // Anonymous trial is intentionally isolated from account/social APIs.
+        if (currentPage === "trial-practise.html" && new URLSearchParams(window.location.search).get("trial") === "1") {
+            document.documentElement.setAttribute("data-practice-auth", "trial-anonymous");
+            return;
         }
 
 

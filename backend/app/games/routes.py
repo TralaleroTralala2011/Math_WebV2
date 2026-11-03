@@ -668,6 +668,17 @@ def finish_game(
 
     total_score = game_result["score"]
     total_xp = game_result["xp"]
+    # Admin-controlled XP multiplier affects awarded XP only, not correctness/score.
+    settings_conn = get_connection()
+    try:
+        setting = settings_conn.execute("SELECT value FROM admin_system_settings WHERE key='xp_multiplier'").fetchone()
+        multiplier = float(setting["value"]) if setting else 1.0
+        multiplier = max(0.25, min(3.0, multiplier))
+        total_xp = max(0, round(total_xp * multiplier))
+    except Exception:
+        multiplier = 1.0
+    finally:
+        settings_conn.close()
 
     if total_questions < MIN_QUESTIONS_PER_GAME:
         raise HTTPException(
@@ -924,6 +935,24 @@ def finish_game(
             cursor.lastrowid
         )
 
+        # Learning streak: one activity credit per calendar day in Vietnam.
+        from datetime import datetime, timezone, timedelta
+        local_today = datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=7))).date().isoformat()
+        streak = cursor.execute("SELECT current_streak,longest_streak,last_activity_date FROM learner_streaks WHERE user_id=?", (current_user["id"],)).fetchone()
+        if not streak:
+            current_streak = longest_streak = 1
+            cursor.execute("INSERT INTO learner_streaks(user_id,current_streak,longest_streak,last_activity_date,updated_at) VALUES(?,?,?,?,?)", (current_user["id"],1,1,local_today,datetime.now(timezone.utc).isoformat()))
+        elif streak["last_activity_date"] == local_today:
+            current_streak = int(streak["current_streak"] or 1)
+            longest_streak = max(int(streak["longest_streak"] or 0), current_streak)
+        else:
+            from datetime import date
+            try: previous_day = (date.fromisoformat(local_today) - timedelta(days=1)).isoformat()
+            except Exception: previous_day = ""
+            current_streak = int(streak["current_streak"] or 0) + 1 if streak["last_activity_date"] == previous_day else 1
+            longest_streak = max(int(streak["longest_streak"] or 0), current_streak)
+            cursor.execute("UPDATE learner_streaks SET current_streak=?,longest_streak=?,last_activity_date=?,updated_at=? WHERE user_id=?", (current_streak,longest_streak,local_today,datetime.now(timezone.utc).isoformat(),current_user["id"]))
+
         # -------------------------------------------------
         # GAME COMPLETE NOTIFICATION
         # -------------------------------------------------
@@ -1098,7 +1127,8 @@ def finish_game(
 
         "old_level": old_level,
         "new_level": new_level,
-        "level_ups": level_ups
+        "level_ups": level_ups,
+        "streak": {"current": current_streak, "longest": longest_streak, "activity_date": local_today}
     }
 
 
@@ -1394,6 +1424,18 @@ def get_game_statistics(
 # =========================================================
 # GET CURRENT XP / LEVEL
 # =========================================================
+
+@router.get("/streak")
+def get_learning_streak(authorization: str = Header(default=None)):
+    user = get_user_from_token(authorization)
+    conn = get_connection()
+    try:
+        row = conn.execute("SELECT current_streak,longest_streak,last_activity_date FROM learner_streaks WHERE user_id=?", (user["id"],)).fetchone()
+        if not row: return {"current":0,"longest":0,"last_activity_date":None,"active_today":False}
+        from datetime import datetime, timezone, timedelta
+        today = datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=7))).date().isoformat()
+        return {"current":row["current_streak"],"longest":row["longest_streak"],"last_activity_date":row["last_activity_date"],"active_today":row["last_activity_date"]==today}
+    finally: conn.close()
 
 @router.get("/xp")
 def get_current_xp(

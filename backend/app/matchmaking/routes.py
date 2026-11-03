@@ -8,6 +8,7 @@ from pydantic import BaseModel, Field
 
 from ..auth.routes import get_current_user
 from ..ai.routes import service as ai_service
+from app.ai.archive import archive_questions
 from database.database import get_connection
 
 
@@ -24,7 +25,7 @@ router = APIRouter(
 MATCH_TOTAL_QUESTIONS = 10
 
 MATCH_QUEUE_TIMEOUT_SECONDS = 10 * 60
-MATCH_INVITE_TIMEOUT_SECONDS = 10 * 60
+MATCH_INVITE_TIMEOUT_SECONDS = 18
 MATCH_MAX_DURATION_SECONDS = 30 * 60
 
 MAX_PLAYER_ID_LENGTH = 100
@@ -620,6 +621,10 @@ def generate_ai_battle_questions(
         "questions",
         []
     )
+    try:
+        archive_questions(grade, topics, questions, source="AI runtime · online battle")
+    except Exception:
+        pass
 
     if not isinstance(questions, list):
         raise HTTPException(
@@ -741,7 +746,7 @@ def get_user_by_player_id(player_id):
                 xp,
                 last_seen
             FROM users
-            WHERE player_id = ?
+            WHERE player_id = ? COLLATE NOCASE
             """,
             (player_id,)
         )
@@ -812,10 +817,7 @@ def cleanup_expired_invites(cursor):
         FROM match_invites
         WHERE
             status = 'pending'
-            AND created_at < datetime(
-                'now',
-                '-10 minutes'
-            )
+            AND datetime(replace(created_at, 'T', ' ')) < datetime('now', '-18 seconds')
         """
     )
 
@@ -1430,6 +1432,11 @@ def join_random_match(
     settings = normalize_settings(
         data or MatchSettings()
     )
+    settings["topics"] = normalize_topics_for_grade(
+        settings["grade"], settings["topics"]
+    )
+    if not settings["topics"]:
+        settings["topics"] = get_default_topics(settings["grade"])
 
     cleanup_matchmaking()
 
@@ -1852,6 +1859,11 @@ def invite_player(
     settings = normalize_settings(
         data
     )
+    settings["topics"] = normalize_topics_for_grade(
+        settings["grade"], settings["topics"]
+    )
+    if not settings["topics"]:
+        settings["topics"] = get_default_topics(settings["grade"])
 
     target_player_id = validate_player_id(
         data.player_id
@@ -2247,7 +2259,10 @@ def accept_invite(
             user["id"]
         )
 
-        if existing_match:
+        # get_match_for_user() intentionally includes INVITED matches.
+        # The invitation being accepted is therefore expected to be returned
+        # here; only block a different active match.
+        if existing_match and int(existing_match["id"]) != int(match_id):
             raise HTTPException(
                 status_code=400,
                 detail="Bạn đang ở trong một trận đấu khác."
@@ -3141,11 +3156,16 @@ def current_match(
     if not match:
         return {
             "success": True,
-            "match": None
+            "match": None,
+            "match_id": None,
+            "status": "IDLE"
         }
 
     return {
         "success": True,
+        # Keep top-level aliases for the polling client and the nested object for newer clients.
+        "match_id": match["id"],
+        "status": match["status"],
         "match": {
             "id": match["id"],
             "match_code": match["match_code"],

@@ -31,3 +31,9 @@ Backend chưa chạy hoặc không nghe ở cổng 8000. Kiểm tra terminal bac
 
 ## Lưu thành tích
 Thành tích trò chơi được lưu bằng `localStorage` của trình duyệt trên thiết bị hiện tại. Nếu đổi trình duyệt, xóa dữ liệu trang hoặc dùng thiết bị khác thì thành tích cục bộ có thể không xuất hiện ở đó.
+
+## Trải nghiệm không cần đăng nhập
+- Chạy `START_MATH_WEB.bat` ở thư mục gốc.
+- Mở trang chủ và nhấn **Học thử không cần đăng nhập**. MATH WEB tạo một hồ sơ `trial_*` riêng để thử luyện tập; hồ sơ này không dùng tài khoản Admin và không tính vào báo cáo học sinh thật.
+- Phiên Admin dùng kho token riêng, nên thao tác thử nghiệm không ghi đè phiên Admin. Khi muốn thoát học thử, nhấn **Thoát chế độ thử** trên trang học sinh để khôi phục phiên người học trước đó (nếu có).
+- Đăng nhập Admin tại `login.html` bằng tài khoản quản trị, sau đó trang tự chuyển đến `admin.html`. Đổi mật khẩu quản trị sau lần đăng nhập đầu tiên.

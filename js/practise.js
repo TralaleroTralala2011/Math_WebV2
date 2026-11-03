@@ -2830,6 +2830,7 @@
             ...options,
             headers: {
                 "Content-Type": "application/json",
+                ...(localStorage.getItem("mathweb_token") ? { "Authorization": "Bearer " + localStorage.getItem("mathweb_token") } : {}),
                 ...(options.headers || {})
             }
         };

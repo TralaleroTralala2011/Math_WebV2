@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MATH_WEB knowledge library record schema (starter)",
+  "type": "object",
+  "required": [
+    "id",
+    "record_type",
+    "title_vi",
+    "content_status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "record_type": {
+      "enum": [
+        "concept",
+        "theorem",
+        "formula",
+        "method",
+        "problem_type",
+        "question",
+        "solution",
+        "source"
+      ]
+    },
+    "title_vi": {
+      "type": "string"
+    },
+    "grade_band": {
+      "type": [
+        "array",
+        "string"
+      ],
+      "items": {
+        "type": "integer",
+        "minimum": 10,
+        "maximum": 12
+      }
+    },
+    "strand": {
+      "type": "string"
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "statement": {
+      "type": "string"
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "proof_or_derivation": {
+      "type": "string"
+    },
+    "problem_archetypes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "response_type": {
+      "enum": [
+        "multiple_choice",
+        "true_false",
+        "short_answer",
+        "written_solution",
+        "mixed"
+      ]
+    },
+    "difficulty_dimensions": {
+      "type": "object"
+    },
+    "solution": {
+      "type": "string"
+    },
+    "source_id": {
+      "type": "string"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "license_or_permission": {
+      "type": "string"
+    },
+    "verification_status": {
+      "enum": [
+        "unreviewed",
+        "machine_checked",
+        "expert_reviewed",
+        "approved"
+      ]
+    },
+    "content_status": {
+      "type": "string"
+    }
+  }
+}

@@ -127,11 +127,18 @@ function saveLoginData(
     }
 
 
-    localStorage.setItem(
-        TOKEN_KEY,
-        token
-    );
+    const isAdmin = data.user && data.user.role === "admin";
+    if (isAdmin) {
+        localStorage.setItem("mathweb_admin_token", token);
+        const adminJSON = JSON.stringify(data.user);
+        localStorage.setItem("mathweb_admin_user", adminJSON);
+        localStorage.setItem("mathweb_admin_profile", adminJSON);
+        return token;
+    }
 
+    localStorage.setItem(TOKEN_KEY, token);
+    localStorage.removeItem("mathweb_admin_user");
+    localStorage.removeItem("mathweb_admin_profile");
 
     if (
         data.user &&
@@ -176,7 +183,6 @@ function saveLoginData(
 ========================================================= */
 
 function getToken() {
-
     const token =
         localStorage.getItem(
             TOKEN_KEY
@@ -1113,7 +1119,8 @@ function redirectToAccount() {
 
     // Admin dùng cùng login.html với người học, nhưng được đưa vào
     // Control Center thay vì trang tài khoản/luyện tập.
-    const currentUser = getUser();
+    let currentUser = null;
+    try { currentUser = JSON.parse(localStorage.getItem("mathweb_admin_user") || "null"); } catch (_) {}
     if (currentUser && currentUser.role === "admin") {
         window.location.replace("admin.html");
         return;
@@ -1128,7 +1135,6 @@ function redirectToAccount() {
 ========================================================= */
 
 async function restoreLoginSession() {
-
     if (
         restoreSessionRunning
     ) {

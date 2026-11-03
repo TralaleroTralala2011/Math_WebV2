@@ -534,7 +534,7 @@ NGUON THAM KHAO CO THE KIEM CHUNG
 3. IMO official problem archive: https://www.imo-official.org/problems/
 
 GIOI HAN VA KE HOACH
-- Danh muc hien tai co 139 chu de (45 lop 10, 47 lop 11, 47 lop 12), khong phai 147.
+- Danh muc hien tai co 150 chu de (49 lop 10, 51 lop 11, 50 lop 12) sau dot mo rong ngay 2026-10-29.
 - 46 dau muc Toan chuyen/HSG la ban do pham vi, khong phai 46 bai giang da hoan tat.
 - 74 cong thuc/dinh ly/phuong phap can duoc ra soat chuyen mon truoc khi dung tu dong.
 - 28 archetype la khung chong lap mau, can tich hop vao question engine va test.

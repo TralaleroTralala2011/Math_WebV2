@@ -1,0 +1,152 @@
+{
+  "version": "1.0.0",
+  "rules": [
+    "Không xem thay số hoặc đổi tên biến là một dạng bài mới.",
+    "Một bài luyện tập phải trộn archetype khi chủ đề có đủ dạng hợp lệ.",
+    "Lưu fingerprint của cấu trúc toán học, không chỉ so sánh chuỗi đề.",
+    "Mức độ khó do số tầng suy luận, độ mới của ý tưởng, độ trừu tượng và yêu cầu chứng minh quyết định.",
+    "Không ép dùng dạng không phù hợp với chủ đề."
+  ],
+  "archetypes": [
+    {
+      "id": "qa_01",
+      "name_vi": "nhận dạng khái niệm",
+      "description": "Chọn/nhận định đúng về định nghĩa, tính chất hoặc điều kiện."
+    },
+    {
+      "id": "qa_02",
+      "name_vi": "tính trực tiếp",
+      "description": "Tính một đại lượng theo dữ kiện rõ ràng."
+    },
+    {
+      "id": "qa_03",
+      "name_vi": "tìm dữ kiện ngược",
+      "description": "Biết kết quả hoặc ràng buộc, tìm dữ kiện ban đầu."
+    },
+    {
+      "id": "qa_04",
+      "name_vi": "tham số",
+      "description": "Tìm tham số để phương trình, hình hoặc bất đẳng thức thỏa điều kiện."
+    },
+    {
+      "id": "qa_05",
+      "name_vi": "điều kiện cần và đủ",
+      "description": "Xác định tương đương, không chỉ kiểm tra một chiều."
+    },
+    {
+      "id": "qa_06",
+      "name_vi": "chứng minh",
+      "description": "Chứng minh mệnh đề từ giả thiết; nêu rõ chuỗi lập luận."
+    },
+    {
+      "id": "qa_07",
+      "name_vi": "phản ví dụ",
+      "description": "Bác bỏ mệnh đề sai bằng phản ví dụ hợp lệ."
+    },
+    {
+      "id": "qa_08",
+      "name_vi": "phát hiện sai lầm",
+      "description": "Phân tích lời giải có lỗi và xác định bước sai."
+    },
+    {
+      "id": "qa_09",
+      "name_vi": "so sánh phương pháp",
+      "description": "Chọn cách giải hiệu quả và giải thích lý do."
+    },
+    {
+      "id": "qa_10",
+      "name_vi": "nhiều biểu diễn",
+      "description": "Chuyển đổi giữa đồ thị, bảng, công thức, lời văn và hình vẽ."
+    },
+    {
+      "id": "qa_11",
+      "name_vi": "mô hình hóa thực tế",
+      "description": "Lập biến, điều kiện, mô hình, giải và diễn giải kết quả."
+    },
+    {
+      "id": "qa_12",
+      "name_vi": "tối ưu",
+      "description": "Tìm giá trị lớn nhất/nhỏ nhất và chứng minh đạt được."
+    },
+    {
+      "id": "qa_13",
+      "name_vi": "đếm cấu hình",
+      "description": "Đếm số trường hợp bằng quy tắc cộng/nhân, song ánh hoặc bao hàm-loại trừ."
+    },
+    {
+      "id": "qa_14",
+      "name_vi": "bài toán xác suất",
+      "description": "Xác định không gian mẫu, biến cố, xác suất và điều kiện."
+    },
+    {
+      "id": "qa_15",
+      "name_vi": "đọc hình",
+      "description": "Suy luận từ cấu hình hình học, chỉ dùng quan hệ được cho hoặc chứng minh."
+    },
+    {
+      "id": "qa_16",
+      "name_vi": "dựng hình/quỹ tích",
+      "description": "Mô tả tập điểm hoặc dựng cấu hình, chứng minh thuận-nghịch."
+    },
+    {
+      "id": "qa_17",
+      "name_vi": "bài toán đảo",
+      "description": "Đảo vai trò dữ kiện/kết luận và kiểm tra điều kiện đảo có đúng không."
+    },
+    {
+      "id": "qa_18",
+      "name_vi": "tổng hợp liên chủ đề",
+      "description": "Kết hợp ít nhất hai mảng kiến thức có liên hệ thực chất."
+    },
+    {
+      "id": "qa_19",
+      "name_vi": "trường hợp biên",
+      "description": "Kiểm tra nghiệm biên, mẫu bằng 0, suy biến, dấu bằng hoặc miền xác định."
+    },
+    {
+      "id": "qa_20",
+      "name_vi": "ước lượng/đánh giá",
+      "description": "Chặn trên/dưới, chứng minh bất đẳng thức hoặc khoảng giá trị."
+    },
+    {
+      "id": "qa_21",
+      "name_vi": "truy hồi",
+      "description": "Tìm công thức, tính chất hoặc giới hạn từ quan hệ truy hồi."
+    },
+    {
+      "id": "qa_22",
+      "name_vi": "bất biến/đơn biến",
+      "description": "Tìm đại lượng giữ nguyên hoặc thay đổi một chiều qua thao tác."
+    },
+    {
+      "id": "qa_23",
+      "name_vi": "chia hết/đồng dư",
+      "description": "Dùng phân tích modulo hoặc cấu trúc số nguyên."
+    },
+    {
+      "id": "qa_24",
+      "name_vi": "phân loại nghiệm",
+      "description": "Chứng minh mọi nghiệm thuộc các trường hợp đã liệt kê."
+    },
+    {
+      "id": "qa_25",
+      "name_vi": "thiết kế phản chứng",
+      "description": "Giả sử điều ngược lại và tìm mâu thuẫn có căn cứ."
+    },
+    {
+      "id": "qa_26",
+      "name_vi": "đúng-sai có giải thích",
+      "description": "Mỗi mệnh đề yêu cầu quyết định đúng/sai và nêu lập luận hoặc phản ví dụ."
+    },
+    {
+      "id": "qa_27",
+      "name_vi": "trả lời ngắn có kiểm soát",
+      "description": "Kết quả dạng số, phân số, tọa độ hoặc biểu thức chuẩn hóa."
+    },
+    {
+      "id": "qa_28",
+      "name_vi": "tự luận nhiều ý",
+      "description": "Các ý liên kết tăng dần, ý sau có thể dùng kết quả ý trước."
+    }
+  ]
+}

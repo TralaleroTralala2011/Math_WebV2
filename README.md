@@ -1,6 +1,6 @@
 # MATH WEB
 
-Nền tảng luyện Toán bằng HTML/CSS/JavaScript + FastAPI, có 45 game và AI sinh câu hỏi nội bộ.
+Nền tảng luyện Toán bằng HTML/CSS/JavaScript + FastAPI, có 150 chủ đề kiến thức, 474 trang game theo chủ đề và AI sinh câu hỏi nội bộ.
 
 ## AI Question Engine + Unified Gameplay 6.2
 
@@ -59,7 +59,7 @@ http://127.0.0.1:5500/
 - `battle.html`: PvP.
 - `account.html`: tài khoản.
 - `chat.html`: chat.
-- `games/knowledge/`: 276 trang game độc lập, gồm 92 chủ đề × 3 game riêng; `games/` cũng giữ các trang game cũ.
+- `games/knowledge/`: 474 trang game độc lập trong danh mục; mỗi topic-game group có ba tier, giữ nguyên các trang game cũ.
 - `backend/app/ai/knowledge/template_bank.json`: Template Bank của 45 game.
 - `backend/app/ai/engine/composer.py`: bộ chọn template, kiểu hỏi, ngữ cảnh và derived task.
 - `backend/app/ai/engine/game_bank.py`: bộ sinh toán theo game.
@@ -76,6 +76,18 @@ Repository có thể đưa lên GitHub. Database local `mathweb.db`, cache Pytho
 
 GitHub Pages chỉ phục vụ frontend tĩnh. Đăng nhập, AI, database, matchmaking và PvP cần FastAPI backend được deploy riêng.
 
+
+## Admin chủ đề/game và AI nhập tệp
+
+- Mục **Chủ đề · Game · AI nhập file** tổng hợp chủ đề thành thẻ; mở thẻ để xem game, mở game để quản lý câu hỏi ngay tại chỗ.
+- Mỗi câu hỏi hỗ trợ thêm/sửa/xóa, gán đúng `topic` và `game_id`.
+- AI hỗ trợ nhập JSON, CSV, TXT và Markdown; dò metadata/chủ đề, ghép game theo tên/ID và đưa trường hợp không rõ vào danh sách rà soát. Đây là bộ định tuyến nội bộ, không phải crawler Internet.
+- `/api/matchmaking/current` trả cả `match_id/status` cấp cao nhất lẫn object `match` để giao thức polling Battle không bị lệch. Tìm Player ID không phân biệt chữ hoa/thường.
+
+## Cá nhân hóa người học
+
+- Trang luyện tập thường và thử nghiệm có Study Companion; thống kê độ chính xác theo lịch sử, đề xuất ôn lại chủ đề yếu và gợi ý độ khó.
+- Người học có thể tự chọn **Tự đề xuất / Nền tảng / Trung cấp / Nâng cao**. Lựa chọn được lưu riêng theo tài khoản và áp dụng cho các game kiến thức được sinh câu hỏi.
 
 ## Gameplay thống nhất mới
 
@@ -124,3 +136,17 @@ Nếu trình duyệt báo CORS khi ghép trận, trước tiên kiểm tra `http
 - Câu hỏi do admin thêm được đưa vào nguồn sinh đề khi khối, tên chủ đề, mức độ, loại câu hỏi và mã trò chơi khớp với yêu cầu. Để trống mã trò chơi cho luyện tập chung; nhập đúng `game_id` để nhắm tới một trò chơi cụ thể. Trắc nghiệm cần đúng 4 lựa chọn khác nhau; đáp án có thể là nhãn A/B/C/D hoặc nội dung lựa chọn.
 - Có thể đặt `MATHWEB_BOOTSTRAP_ADMIN_PASSWORD` trước khi tạo cơ sở dữ liệu lần đầu để đổi mật khẩu bootstrap. Khi tài khoản admin đã tồn tại, khởi động lại không tự đặt lại mật khẩu.
 - Dữ liệu quản trị nằm trong SQLite `backend/database/mathweb.db`; hãy cấu hình sao lưu và `MATH_WEB_SECRET_KEY` riêng khi triển khai thật.
+
+
+## Cập nhật GitHub an toàn
+
+1. Giải nén ZIP vào thư mục làm việc riêng để kiểm tra trước.
+2. Nếu đã có repository Git, sao lưu thư mục và cơ sở dữ liệu trước khi chép các file mới vào repository. Không đưa `mathweb.db`, `.env`, token hoặc API key lên GitHub.
+3. Mở PowerShell tại thư mục repository, chạy `git status`, rồi `git add -A`, `git commit -m "Upgrade MATH WEB admin and preview"`, `git push origin main`. Nếu nhánh chính của bạn tên khác, dùng đúng tên nhánh đó.
+4. GitHub Pages chỉ host frontend tĩnh; backend FastAPI và SQLite không tự chạy trên GitHub Pages. Cần deploy backend lên máy chủ riêng và cấu hình `js/api-config.js` trỏ tới API đã deploy. Không công khai mật khẩu bootstrap Admin.
+5. Không chạy `UPDATE_GITHUB.bat` trong thư mục chưa phải Git repository. Script chỉ chạy được khi Git đã cài, remote `origin` đúng và nhánh `main` tồn tại.
+
+
+## Trung tâm điều hành học tập và giao bài
+
+Xem hướng dẫn tính năng Admin/giáo viên, kho câu hỏi AI, giao bài, báo cáo cá nhân hóa và trang học sinh tại [`ADMIN_TEACHER_CENTER.md`](ADMIN_TEACHER_CENTER.md).

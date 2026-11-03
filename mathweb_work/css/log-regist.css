@@ -1,0 +1,889 @@
+/* =========================================================
+   MATHWEB
+   LOG-IN / REGISTER / NOTIFICATION
+========================================================= */
+
+
+/* =========================================================
+   LOGIN + REGISTER PAGE
+========================================================= */
+
+.login-page,
+.register-page {
+
+    min-height: calc(100vh - 76px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 100px 20px 60px;
+
+}
+
+
+/* =========================================================
+   LOGIN + REGISTER CARD
+========================================================= */
+
+.login-card,
+.register-card {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 430px;
+
+    padding: 38px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    background: rgba(16, 23, 41, 0.82);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 0 35px rgba(56, 217, 255, 0.10),
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* Register card */
+
+.register-card {
+
+    box-shadow:
+        0 0 35px rgba(169, 112, 255, 0.10),
+        0 20px 60px rgba(0, 0, 0, 0.35);
+
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.login-close,
+.register-close {
+
+    position: absolute;
+
+    top: 14px;
+
+    right: 16px;
+
+    width: 36px;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: var(--text-soft);
+
+    font-size: 24px;
+
+    line-height: 1;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.login-close:hover,
+.register-close:hover {
+
+    color: #ffffff;
+
+    background: rgba(237, 123, 255, 0.12);
+
+    border-color: rgba(237, 123, 255, 0.45);
+
+    transform: rotate(90deg);
+
+}
+
+
+/* =========================================================
+   AUTH HEADER
+========================================================= */
+
+.login-header,
+.register-header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.login-header h1,
+.register-header h1 {
+
+    margin: 0 0 8px;
+
+    color: var(--white);
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+}
+
+
+.login-header p,
+.register-header p {
+
+    margin: 0;
+
+    color: var(--text-soft);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.login-form,
+.register-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.form-group label {
+
+    color: var(--text);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+
+.form-group input {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: rgba(7, 10, 19, 0.65);
+
+    color: var(--white);
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+}
+
+
+.form-group input::placeholder {
+
+    color: #68758c;
+
+}
+
+
+.form-group input:focus {
+
+    border-color: var(--cyan);
+
+    background: rgba(7, 10, 19, 0.85);
+
+    box-shadow:
+        0 0 18px rgba(56, 217, 255, 0.12);
+
+}
+
+
+/* Register input focus */
+
+.register-card .form-group input:focus {
+
+    border-color: var(--purple);
+
+    box-shadow:
+        0 0 18px rgba(169, 112, 255, 0.14);
+
+}
+
+
+/* =========================================================
+   AUTH MESSAGE
+========================================================= */
+
+#authMessage {
+
+    min-height: 20px;
+
+    margin-top: 3px;
+
+    text-align: center;
+
+    color: var(--text-soft);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   LOGIN / REGISTER SUBMIT BUTTON
+========================================================= */
+
+.login-submit,
+.register-submit {
+
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 13px 18px;
+
+    border-radius: 12px;
+
+    color: var(--white);
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+/* Login */
+
+.login-submit {
+
+    border: 1px solid var(--cyan);
+
+    background: rgba(56, 217, 255, 0.10);
+
+}
+
+
+.login-submit:hover {
+
+    background: rgba(56, 217, 255, 0.18);
+
+    box-shadow:
+        0 0 25px rgba(56, 217, 255, 0.20);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* Register */
+
+.register-submit {
+
+    border: 1px solid var(--purple);
+
+    background: rgba(169, 112, 255, 0.10);
+
+}
+
+
+.register-submit:hover {
+
+    background: rgba(169, 112, 255, 0.18);
+
+    box-shadow:
+        0 0 25px rgba(169, 112, 255, 0.20);
+
+    transform: translateY(-2px);
+
+}
+
+
+.login-submit:active,
+.register-submit:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* =========================================================
+   AUTH FOOTER
+========================================================= */
+
+.login-footer,
+.register-footer {
+
+    margin-top: 24px;
+
+    text-align: center;
+
+    color: var(--text-soft);
+
+    font-size: 13px;
+
+}
+
+
+.login-footer a,
+.register-footer a {
+
+    position: relative;
+
+    color: var(--cyan);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+
+.login-footer a::after,
+.register-footer a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -4px;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--cyan);
+
+    transition: width 0.25s ease;
+
+}
+
+
+.login-footer a:hover::after,
+.register-footer a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   NOTIFICATION WRAPPER
+========================================================= */
+
+.notification-wrapper {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   NOTIFICATION BUTTON
+   Chỉ thay khung chuông
+========================================================= */
+
+.notification-button {
+
+    position: relative;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 0;
+
+    border: 1px solid rgba(56, 189, 248, 0.35);
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: var(--white);
+
+    font-family: inherit;
+
+    font-size: 19px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+
+}
+
+
+.notification-button:hover {
+
+    background: rgba(56, 189, 248, 0.10);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 0 18px rgba(56, 189, 248, 0.20);
+
+    transform: translateY(-1px);
+
+}
+
+
+.notification-button:active {
+
+    transform: scale(0.94);
+
+}
+
+
+/* =========================================================
+   NOTIFICATION BADGE
+========================================================= */
+
+.notification-badge {
+
+    position: absolute;
+
+    top: 3px;
+
+    right: 3px;
+
+    width: 8px;
+
+    height: 8px;
+
+    display: none;
+
+    border-radius: 50%;
+
+    background: #ff4d6d;
+
+    box-shadow:
+        0 0 8px rgba(255, 77, 109, 0.75);
+
+}
+
+
+.notification-badge.show {
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   NOTIFICATION PANEL
+========================================================= */
+
+.notification-panel {
+
+    position: absolute;
+
+    top: calc(100% + 12px);
+
+    right: 0;
+
+    width: 330px;
+
+    max-width: calc(100vw - 30px);
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    background: rgba(11, 16, 32, 0.96);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(56, 217, 255, 0.08);
+
+    backdrop-filter: blur(20px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(-8px)
+        scale(0.98);
+
+    transform-origin: top right;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.20s ease,
+        visibility 0.20s ease,
+        transform 0.20s ease;
+
+    z-index: 9999;
+
+}
+
+
+/* =========================================================
+   QUAN TRỌNG
+   notification.js dùng class "active"
+========================================================= */
+
+.notification-panel.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+    pointer-events: auto;
+
+}
+
+
+/* =========================================================
+   NOTIFICATION HEADER
+========================================================= */
+
+.notification-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 15px 16px;
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+.notification-title {
+
+    color: var(--white);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+.notification-read-all {
+
+    padding: 4px 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--cyan);
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease;
+
+}
+
+
+.notification-read-all:hover {
+
+    color: #ffffff;
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   NOTIFICATION LIST
+========================================================= */
+
+.notification-list {
+
+    max-height: 360px;
+
+    overflow-y: auto;
+
+}
+
+
+.notification-list::-webkit-scrollbar {
+
+    width: 5px;
+
+}
+
+
+.notification-list::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+
+.notification-list::-webkit-scrollbar-thumb {
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border-radius: 999px;
+
+}
+
+
+.notification-list::-webkit-scrollbar-thumb:hover {
+
+    background: rgba(56, 217, 255, 0.25);
+
+}
+
+
+/* =========================================================
+   NOTIFICATION ITEM
+========================================================= */
+
+.notification-item {
+
+    position: relative;
+
+    padding: 13px 16px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    cursor: pointer;
+
+    transition:
+        background 0.20s ease;
+
+}
+
+
+.notification-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.notification-item:hover {
+
+    background: rgba(56, 217, 255, 0.05);
+
+}
+
+
+/* Chưa đọc */
+
+.notification-item.unread {
+
+    background: rgba(56, 217, 255, 0.045);
+
+}
+
+
+.notification-item-title {
+
+    margin-bottom: 4px;
+
+    color: var(--white);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.notification-item-message {
+
+    color: var(--text-soft);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+}
+
+
+.notification-item-time {
+
+    margin-top: 5px;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   EMPTY NOTIFICATION
+========================================================= */
+
+.notification-empty {
+
+    padding: 30px 16px;
+
+    text-align: center;
+
+    color: var(--text-soft);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .login-page,
+    .register-page {
+
+        padding: 90px 16px 40px;
+
+    }
+
+
+    .login-card,
+    .register-card {
+
+        padding: 32px 22px;
+
+        border-radius: 20px;
+
+    }
+
+
+    .login-header h1,
+    .register-header h1 {
+
+        font-size: 26px;
+
+    }
+
+
+    .notification-panel {
+
+        position: fixed;
+
+        top: 70px;
+
+        right: 15px;
+
+        left: 15px;
+
+        width: auto;
+
+        max-width: none;
+
+        transform-origin: top center;
+
+    }
+
+
+    .notification-panel.active {
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}

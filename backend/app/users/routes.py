@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Header, HTTPException
+from pydantic import BaseModel, Field
 
 from ..auth.routes import get_current_user
 from ..presence.routes import is_user_online
@@ -391,7 +392,8 @@ def get_user_from_token(
             detail="Không thể xác định tài khoản."
         )
 
-    if "id" not in user:
+    user_keys = user.keys() if hasattr(user, "keys") else user.keys() if isinstance(user, dict) else ()
+    if "id" not in user_keys:
 
         raise HTTPException(
             status_code=401,
@@ -534,6 +536,81 @@ def get_my_profile(
     }
 
 
+class DifficultyPreferenceRequest(BaseModel):
+    difficulty: str = Field(default="auto", pattern="^(auto|easy|medium|hard)$")
+
+
+def _ensure_learning_preferences(conn):
+    conn.execute("""CREATE TABLE IF NOT EXISTS learner_preferences (
+        user_id INTEGER PRIMARY KEY, difficulty TEXT NOT NULL DEFAULT 'auto',
+        updated_at TEXT NOT NULL, FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
+    )""")
+
+
+@router.get("/me/learning-coach")
+def get_learning_coach(authorization: str | None = Header(default=None)):
+    """Offer transparent, history-based study advice and an explicit user-controlled difficulty."""
+    user = get_user_from_token(authorization)
+    conn = get_connection()
+    try:
+        _ensure_learning_preferences(conn)
+        pref = conn.execute("SELECT difficulty FROM learner_preferences WHERE user_id=?", (user["id"],)).fetchone()
+        preference = str(pref["difficulty"] if pref else "auto")
+        topics = conn.execute("""SELECT topic, COUNT(*) sessions, COALESCE(SUM(total_questions),0) questions,
+            COALESCE(SUM(correct),0) correct, COALESCE(SUM(wrong),0) wrong,
+            ROUND(100.0*SUM(correct)/NULLIF(SUM(total_questions),0),1) accuracy,
+            MAX(created_at) last_practice
+            FROM game_results WHERE user_id=? GROUP BY topic HAVING SUM(total_questions)>0
+            ORDER BY accuracy ASC, sessions DESC LIMIT 20""", (user["id"],)).fetchall()
+        totals = conn.execute("""SELECT COALESCE(SUM(total_questions),0) questions, COALESCE(SUM(correct),0) correct,
+            COALESCE(SUM(wrong),0) wrong, COUNT(*) sessions FROM game_results WHERE user_id=?""", (user["id"],)).fetchone()
+        questions = int(totals["questions"] or 0)
+        correct = int(totals["correct"] or 0)
+        accuracy = round(100 * correct / questions, 1) if questions else None
+        if preference != "auto":
+            suggested = preference
+            basis = "Mức độ bạn đã chủ động chọn"
+        elif accuracy is None:
+            suggested = "easy"; basis = "Chưa đủ lịch sử, bắt đầu nhẹ để hệ thống có dữ liệu"
+        elif accuracy >= 85:
+            suggested = "hard"; basis = "Độ chính xác tổng thể từ 85% trở lên"
+        elif accuracy >= 65:
+            suggested = "medium"; basis = "Đang ở vùng luyện tập trung cấp"
+        else:
+            suggested = "easy"; basis = "Ưu tiên củng cố nền tảng trước khi tăng độ khó"
+        weak = dict(topics[0]) if topics else None
+        advice = "Bắt đầu với vài câu nền tảng; sau một lượt, hệ thống sẽ có dữ liệu để đề xuất phù hợp hơn."
+        if weak:
+            pct = weak["accuracy"]
+            topic_name = str(weak["topic"] or "chủ đề gần đây")
+            if pct is not None and float(pct) < 70:
+                advice = f"Nên làm lại chủ đề {topic_name} ở mức nền tảng, đọc lời giải từng bước rồi thử lại ở mức trung cấp."
+            elif pct is not None and float(pct) >= 85:
+                advice = f"Bạn đang làm tốt chủ đề {topic_name}. Có thể thử mức nâng cao để kiểm tra khả năng vận dụng."
+            else:
+                advice = f"Tiếp tục luyện chủ đề {topic_name}; xem lại câu sai trước khi chuyển sang bộ câu hỏi khó hơn."
+        return {"difficulty": preference, "suggested_difficulty": suggested, "basis": basis,
+                "accuracy": accuracy, "sessions": int(totals["sessions"] or 0), "questions": questions,
+                "advice": advice, "weak_topic": weak, "topic_history": [dict(x) for x in topics[:8]]}
+    finally:
+        conn.close()
+
+
+@router.put("/me/difficulty")
+def set_learning_difficulty(data: DifficultyPreferenceRequest, authorization: str | None = Header(default=None)):
+    user = get_user_from_token(authorization)
+    conn = get_connection()
+    try:
+        _ensure_learning_preferences(conn)
+        from datetime import datetime, timezone
+        stamp = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+        conn.execute("INSERT INTO learner_preferences(user_id,difficulty,updated_at) VALUES(?,?,?) ON CONFLICT(user_id) DO UPDATE SET difficulty=excluded.difficulty,updated_at=excluded.updated_at", (user["id"], data.difficulty, stamp))
+        conn.commit()
+        return {"success": True, "difficulty": data.difficulty, "message": "Đã lưu mức độ luyện tập của bạn."}
+    finally:
+        conn.close()
+
+
 # =========================================================
 # GET OTHER USER PROFILE
 # =========================================================
@@ -607,7 +684,7 @@ def get_user_profile(
                 last_seen,
                 created_at
             FROM users
-            WHERE player_id = ?
+            WHERE player_id = ? COLLATE NOCASE
             """,
             (
                 search_player_id,
@@ -809,7 +886,7 @@ def search_user(
                 last_seen,
                 created_at
             FROM users
-            WHERE player_id = ?
+            WHERE player_id = ? COLLATE NOCASE
             """,
             (
                 search_player_id,

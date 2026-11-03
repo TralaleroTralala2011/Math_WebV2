@@ -3,12 +3,14 @@
   "created": "2026-10-24",
   "input_project": "MATH_WEB_147_TOPICS_QUESTION_SYSTEM_3_TIERS_UPGRADED.zip",
   "counts": {
-    "grade_10": 45,
-    "grade_11": 47,
-    "grade_12": 47,
-    "total_existing_topics": 139,
+    "grade_10": 49,
+    "grade_11": 51,
+    "grade_12": 50,
+    "total_existing_topics": 150,
     "advanced_map_nodes": 46,
-    "formula_theorem_entries": 74
+    "formula_theorem_entries": 74,
+    "topics": 150,
+    "total_topics": 150
   },
   "topics": [
     {
@@ -3534,6 +3536,193 @@
       "source_status": "existing_project_catalog",
       "content_status": "topic_outline_not_a_claim_of_full_lesson_or_question_coverage",
       "coverage_note": "Chủ đề có trong danh mục của ZIP đầu vào; từng kiến thức con, định lý và dạng bài vẫn cần được kiểm kê/biên soạn và kiểm định riêng."
+    },
+    {
+      "id": "g10_advanced_inequalities",
+      "name": "Bất đẳng thức đại số và cực trị nâng cao",
+      "grade": 10,
+      "subtopics": [
+        "bất đẳng thức AM-GM và Cauchy",
+        "đánh giá hai vế",
+        "điều kiện xảy ra dấu bằng",
+        "cực trị biểu thức nhiều biến"
+      ],
+      "difficulty_levels": [
+        "nền tảng",
+        "trung cấp",
+        "nâng cao"
+      ],
+      "source_status": "original topic extension; review recommended"
+    },
+    {
+      "id": "g10_symmetric_systems",
+      "name": "Hệ phương trình đối xứng và hoán vị",
+      "grade": 10,
+      "subtopics": [
+        "đặt tổng và tích",
+        "hệ đối xứng loại một",
+        "hệ đối xứng loại hai",
+        "điều kiện nghiệm thực"
+      ],
+      "difficulty_levels": [
+        "nền tảng",
+        "trung cấp",
+        "nâng cao"
+      ],
+      "source_status": "original topic extension; review recommended"
+    },
+    {
+      "id": "g10_radical_equations_advanced",
+      "name": "Phương trình chứa căn thức nâng cao",
+      "grade": 10,
+      "subtopics": [
+        "điều kiện xác định",
+        "nâng lũy thừa có kiểm soát",
+        "đặt ẩn phụ",
+        "đối chiếu nghiệm ngoại lai"
+      ],
+      "difficulty_levels": [
+        "nền tảng",
+        "trung cấp",
+        "nâng cao"
+      ],
+      "source_status": "original topic extension; review recommended"
+    },
+    {
+      "id": "g10_combinatorics_olympiad",
+      "name": "Tổ hợp và nguyên lý Dirichlet nâng cao",
+      "grade": 10,
+      "subtopics": [
+        "nguyên lý Dirichlet",
+        "đếm bù",
+        "song ánh",
+        "bất biến trong bài toán đếm"
+      ],
+      "difficulty_levels": [
+        "nền tảng",
+        "trung cấp",
+        "nâng cao"
+      ],
+      "source_status": "original topic extension; review recommended"
+    },
+    {
+      "id": "g11_advanced_trig_equations",
+      "name": "Phương trình lượng giác nâng cao",
+      "grade": 11,
+      "subtopics": [
+        "biến đổi tổng thành tích",
+        "phương trình đối xứng",
+        "đặt ẩn phụ lượng giác",
+        "lọc nghiệm trên khoảng"
+      ],
+      "difficulty_levels": [
+        "nền tảng",
+        "trung cấp",
+        "nâng cao"
+      ],
+      "source_status": "original topic extension; review recommended"
+    },
+    {
+      "id": "g11_sequences_advanced",
+      "name": "Dãy số truy hồi và bài toán cực trị",
+      "grade": 11,
+      "subtopics": [
+        "truy hồi tuyến tính",
+        "đơn điệu và bị chặn",
+        "đánh giá số hạng",
+        "tổng hữu hạn"
+      ],
+      "difficulty_levels": [
+        "nền tảng",
+        "trung cấp",
+        "nâng cao"
+      ],
+      "source_status": "original topic extension; review recommended"
+    },
+    {
+      "id": "g11_binomial_advanced",
+      "name": "Nhị thức Newton và hệ số tổ hợp nâng cao",
+      "grade": 11,
+      "subtopics": [
+        "hệ số của lũy thừa",
+        "tổng hệ số",
+        "đồng nhất thức tổ hợp",
+        "đếm theo số mũ"
+      ],
+      "difficulty_levels": [
+        "nền tảng",
+        "trung cấp",
+        "nâng cao"
+      ],
+      "source_status": "original topic extension; review recommended"
+    },
+    {
+      "id": "g11_conditional_probability_models",
+      "name": "Mô hình xác suất có điều kiện",
+      "grade": 11,
+      "subtopics": [
+        "xác suất có điều kiện",
+        "công thức Bayes",
+        "biến cố độc lập",
+        "sơ đồ cây và phân hoạch"
+      ],
+      "difficulty_levels": [
+        "nền tảng",
+        "trung cấp",
+        "nâng cao"
+      ],
+      "source_status": "original topic extension; review recommended"
+    },
+    {
+      "id": "g12_complex_plane_geometry",
+      "name": "Hình học số phức và quỹ tích",
+      "grade": 12,
+      "subtopics": [
+        "môđun và khoảng cách",
+        "đường tròn trong mặt phẳng phức",
+        "quỹ tích số phức",
+        "biến đổi hình học bằng phép nhân"
+      ],
+      "difficulty_levels": [
+        "nền tảng",
+        "trung cấp",
+        "nâng cao"
+      ],
+      "source_status": "original topic extension; review recommended"
+    },
+    {
+      "id": "g12_integral_optimization",
+      "name": "Tối ưu và cực trị bằng tích phân",
+      "grade": 12,
+      "subtopics": [
+        "diện tích biến thiên",
+        "tối ưu thể tích",
+        "mô hình chi phí và lợi ích",
+        "đánh giá tích phân"
+      ],
+      "difficulty_levels": [
+        "nền tảng",
+        "trung cấp",
+        "nâng cao"
+      ],
+      "source_status": "original topic extension; review recommended"
+    },
+    {
+      "id": "g12_solid_of_revolution",
+      "name": "Thể tích khối tròn xoay và mô hình thực tế",
+      "grade": 12,
+      "subtopics": [
+        "miền phẳng quay quanh trục",
+        "thiết lập tích phân thể tích",
+        "đổi trục và đổi biến",
+        "bài toán ứng dụng"
+      ],
+      "difficulty_levels": [
+        "nền tảng",
+        "trung cấp",
+        "nâng cao"
+      ],
+      "source_status": "original topic extension; review recommended"
     }
   ]
 }
