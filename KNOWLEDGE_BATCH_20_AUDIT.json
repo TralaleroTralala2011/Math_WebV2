@@ -1,0 +1,33 @@
+{
+  "base": "MATH_WEB_GITHUB_READY_KNOWLEDGE_QUALITY_BATCH_19.zip",
+  "new_topics": [
+    "vuong_goc_khong_gian",
+    "goc_khoang_cach_11",
+    "bai_toan_thuc_te_11",
+    "to_hop_xac_suat_nang_cao_11",
+    "phep_bien_hinh_11",
+    "g11_geom_parallel_line_plane",
+    "g11_geom_perpendicular_line_plane",
+    "the_tich_khong_gian",
+    "g12_geom_line_equation_3d",
+    "g12_geom_sphere_tangent_plane"
+  ],
+  "new_questions": 100,
+  "total_topics": 150,
+  "topics_with_questions": 101,
+  "topics_without_questions": 49,
+  "scope": "10 curated lessons with conceptual explanation, examples, 100 questions; no claim of full curriculum coverage",
+  "validation": [
+    "all new topics previously had no quiz",
+    "each 7 MC/2 short/1 true-false",
+    "MC choices unique and answer indices valid",
+    "existing 91 quiz sets unchanged",
+    "ZIP integrity"
+  ],
+  "not_validated": [
+    "browser integration",
+    "all mathematical claims independent proof",
+    "videos",
+    "full coverage and deep advanced exercises"
+  ]
+}

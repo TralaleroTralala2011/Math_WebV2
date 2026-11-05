@@ -1,0 +1,16 @@
+{
+  "source": "MATH_WEB_GITHUB_READY_KNOWLEDGE_BATCH_10.zip",
+  "new_topics": 5,
+  "topic_ids": [
+    "phuong_trinh_luong_giac",
+    "xac_suat_11",
+    "ham_so_lien_tuc",
+    "dao_ham_quy_tac",
+    "thong_ke_11"
+  ],
+  "new_questions": 50,
+  "with_quiz": 56,
+  "total_topics": 150,
+  "validation": "quiz shape, unique choices, required explanations, zip CRC; not full browser or formal math proof",
+  "videos_verified": 0
+}

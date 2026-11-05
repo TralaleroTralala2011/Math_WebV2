@@ -12,6 +12,11 @@ from .matchmaking.routes import router as matchmaking_router
 from app.ai.routes import router as ai_router
 from .admin_routes import router as admin_router
 from .video_routes import router as video_router
+from .quality_routes import router as quality_router
+from .tutor_routes import router as tutor_router
+from .learning_progress_routes import router as learning_progress_router
+from .study_suite_routes import router as study_suite_router
+from .final_features_routes import router as final_features_router
 from .ai.maintenance_worker import start_worker, stop_worker
 
 
@@ -94,6 +99,11 @@ app.include_router(matchmaking_router)
 app.include_router(ai_router)
 app.include_router(admin_router)
 app.include_router(video_router)
+app.include_router(quality_router)
+app.include_router(tutor_router)
+app.include_router(learning_progress_router)
+app.include_router(study_suite_router)
+app.include_router(final_features_router)
 
 # =========================================================
 # ROOT

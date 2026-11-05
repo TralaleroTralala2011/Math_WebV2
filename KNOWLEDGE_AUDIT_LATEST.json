@@ -1,0 +1,12 @@
+{
+  "topics": 150,
+  "topics_with_quiz": 20,
+  "topics_without_quiz": 130,
+  "upgraded_topics": [
+    "toa_do_phang",
+    "duong_thang",
+    "duong_tron"
+  ],
+  "new_questions": 30,
+  "note": "Nội dung chưa được kiểm chứng độc lập toàn bộ; cần kiểm thử frontend/backend và xác minh video."
+}

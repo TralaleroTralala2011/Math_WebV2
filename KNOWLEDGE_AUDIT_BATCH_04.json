@@ -1,0 +1,16 @@
+{
+  "batch": "04",
+  "topics_updated": [
+    "g10_advanced_inequalities",
+    "g11_advanced_trig_equations",
+    "g11_binomial_advanced",
+    "g12_solid_of_revolution"
+  ],
+  "questions_added_or_replaced": 40,
+  "mix": {
+    "multiple_choice": 28,
+    "short_answer": 8,
+    "true_false": 4
+  },
+  "notes": "Chưa xác minh video và chưa chạy kiểm thử trình duyệt; các bài tập được kiểm tra thủ công ở mức công thức."
+}

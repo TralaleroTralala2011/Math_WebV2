@@ -1,0 +1,26 @@
+{
+  "base": "MATH_WEB_GITHUB_READY_KNOWLEDGE_QUALITY_BATCH_21.zip",
+  "new_batch": 22,
+  "newly_populated_topic_ids": [
+    "g11_geom_space_lines_planes",
+    "g11_geom_rotation_homothety",
+    "g11_geom_parallel_planes",
+    "g11_geom_dihedral_angles"
+  ],
+  "new_questions": 40,
+  "quiz_topic_coverage": 115,
+  "total_topics": 150,
+  "validation": [
+    "all new lessons have four pedagogical sections",
+    "7 MC, 2 short, 1 true/false per topic",
+    "distinct MC options",
+    "answer and reasoning present",
+    "previous 146 lessons unchanged"
+  ],
+  "limitations": [
+    "not all 150 lessons complete",
+    "not all answers externally independently verified",
+    "no browser integration test",
+    "no verified video additions"
+  ]
+}

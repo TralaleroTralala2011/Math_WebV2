@@ -1,0 +1,32 @@
+{
+  "base": "Batch 20",
+  "topics_added": [
+    "cuc_tri",
+    "gtln_gtnn",
+    "tiep_tuyen",
+    "tien_can",
+    "bpt_mu",
+    "bpt_logarit",
+    "ung_dung_tich_phan",
+    "pt_so_phuc",
+    "g10_symmetric_systems",
+    "g11_sequences_advanced"
+  ],
+  "new_questions": 100,
+  "topics_with_quiz": 111,
+  "topics_without_quiz": 39,
+  "format_each_topic": {
+    "multiple_choice": 7,
+    "short_answer": 2,
+    "true_false": 1
+  },
+  "unchanged_topics": 140,
+  "both_frontend_scripts_reference_shared_library": true,
+  "verification": "automated schema, arithmetic spot checks, topic coverage, and zip integrity; not browser or comprehensive independent math verification",
+  "known_limitations": [
+    "39 topics still lack quizzes",
+    "existing theory depth varies",
+    "no new verified videos",
+    "frontend runtime not tested"
+  ]
+}

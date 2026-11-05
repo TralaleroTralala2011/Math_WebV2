@@ -1,0 +1,33 @@
+{
+  "base": "MATH_WEB_GITHUB_READY_KNOWLEDGE_BATCH_08.zip",
+  "topics_total": 150,
+  "topics_with_quiz": 47,
+  "new_topics": [
+    "ham_so_luong_giac",
+    "day_so",
+    "dao_ham",
+    "ham_mu",
+    "mat_cau"
+  ],
+  "new_questions": 50,
+  "question_type_counts": {
+    "multiple_choice": 35,
+    "short_answer": 10,
+    "true_false": 5
+  },
+  "checks": [
+    "question counts",
+    "unique question prompts per topic",
+    "four distinct MC options",
+    "correct option exists",
+    "minimum five skills per topic",
+    "numeric spot checks",
+    "zip CRC"
+  ],
+  "limitations": [
+    "not browser tested",
+    "not all 150 lessons completed",
+    "not mathematically verified by external CAS",
+    "no verified video links added"
+  ]
+}

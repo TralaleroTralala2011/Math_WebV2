@@ -1,0 +1,19 @@
+{
+  "base": "BATCH_12",
+  "batch": "BATCH_13",
+  "new_topics": [
+    "he_thuc_luong_tam_giac",
+    "gioi_han_ham_so",
+    "bien_co_doc_lap_11",
+    "g11_geom_transform_reflection"
+  ],
+  "new_questions": 40,
+  "quiz_topics_total": 65,
+  "total_topics": 150,
+  "validation": "schema, unique options, 7/2/1 distribution, zip integrity",
+  "limitations": [
+    "No independent full mathematical proof verification",
+    "No browser integration testing",
+    "No verified educational videos"
+  ]
+}

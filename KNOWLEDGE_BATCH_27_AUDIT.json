@@ -1,0 +1,35 @@
+{
+  "source": "BATCH_26",
+  "topics_total": 150,
+  "topics_with_at_least_one_question": 150,
+  "topics_updated": [
+    "chung_minh_hinh_hoc_10",
+    "thiet_dien_hinh_khong_gian_11",
+    "bai_toan_thuc_te_tong_hop_11",
+    "phep_bien_hinh_co_ban_11",
+    "nhan_biet_hinh_khong_gian_11",
+    "g11_geom_section_construction",
+    "g11_geom_transform_composition",
+    "g11_geom_section_ratio",
+    "g11_geom_space_proof",
+    "hinh_hoc_khong_gian",
+    "toa_do_khong_gian",
+    "tuong_giao",
+    "goc_khoang_cach_oxyz",
+    "tong_hop_thpt",
+    "bai_toan_thuc_te_12",
+    "hinh_khoi_va_the_tich_co_ban_12",
+    "hinh_hoc_oxyz_van_dung_12",
+    "g12_geom_min_distance_3d",
+    "g12_geom_3d_optimization"
+  ],
+  "new_questions": 19,
+  "quality_scope": "19 topic-specific worked examples and 19 original short-answer checks, manually reasoned; no claim of full curriculum mastery",
+  "limitations": [
+    "Only one new assessment per previously empty topic",
+    "No independent end-to-end browser verification",
+    "No complete video review",
+    "Other 131 topics preserved, not audited for mathematical accuracy",
+    "Full curriculum breadth and 1000 genuinely distinct problem types per topic remain incomplete"
+  ]
+}
