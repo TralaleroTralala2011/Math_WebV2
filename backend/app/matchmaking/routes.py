@@ -34,7 +34,7 @@ MAX_TOPIC_COUNT = 5
 
 DEFAULT_GRADE = 12
 DEFAULT_DIFFICULTY = "medium"
-DEFAULT_QUESTION_TYPE = "multiple_choice"
+DEFAULT_QUESTION_TYPE = "mixed"
 
 VALID_DIFFICULTIES = {
     "easy",
@@ -44,6 +44,7 @@ VALID_DIFFICULTIES = {
 }
 
 VALID_QUESTION_TYPES = {
+    "mixed",
     "multiple_choice",
     "short_answer",
     "true_false"
@@ -606,12 +607,17 @@ def generate_ai_battle_questions(
         raise HTTPException(status_code=409, detail="Chưa có chủ đề thi đấu.")
     clean_questions = []
     seen_text = set()
+    # Exactly 7/2/1 per standard ten-question battle; shuffled per match.
+    import random
+    battle_types = (["multiple_choice"] * 7 + ["short_answer"] * 2 + ["true_false"])
+    random.shuffle(battle_types)
     for index in range(MATCH_TOTAL_QUESTIONS):
+        item_type = battle_types[index] if question_type == "mixed" else question_type
         topic = topic_cycle[index % len(topic_cycle)]
         try:
             result = ai_service.generate_set(
                 grade=grade, topics=[topic], count=1,
-                difficulty=difficulty, question_type=question_type,
+                difficulty=difficulty, question_type=item_type,
                 history=list(seen_text)
             )
         except (ValueError, RuntimeError) as error:
@@ -620,7 +626,7 @@ def generate_ai_battle_questions(
         if not isinstance(candidates, list) or not candidates or not isinstance(candidates[0], dict):
             raise HTTPException(status_code=500, detail=f"Không có câu hỏi hợp lệ cho {topic}.")
         item = dict(candidates[0])
-        if canonical_type(item) != question_type:
+        if canonical_type(item) != item_type:
             raise HTTPException(status_code=500, detail="Kiểu câu hỏi AI không khớp định dạng trận đấu.")
         question_text = str(item.get("question") or item.get("text") or "").strip()
         if not question_text or question_text in seen_text:

@@ -85,7 +85,7 @@ class QuestionRequest(BaseModel):
     count:int=Field(default=10,ge=1,le=MAX_COUNT)
     difficulty:str="medium"
     learning_tier:str|None=None
-    question_type:str="multiple_choice"
+    question_type:str="mixed"
     history:list[dict]=Field(default_factory=list)
     game_id:str|None=None
     problem_mode:bool=False

@@ -13,9 +13,9 @@ function openTopic(id){current=topics.find(t=>t.id===id);if(!current)return;cons
 function buildTopicQuiz(id){
  const raw=[...(lessons[id]?.quiz||[]),...diagnostic.filter(q=>q.topic===id)];
  const seen=new Set(),out=[];
- for(const q of raw){if(!q||!Array.isArray(q.choices)||q.choices.length<2||!Number.isInteger(q.correct)||q.correct<0||q.correct>=q.choices.length)continue;
+ for(const q of raw){if(!q||!window.MathWebQuestionMix?.valid(q))continue;
  const signature=JSON.stringify([String(q.q||'').trim(),q.choices,q.correct]);if(seen.has(signature))continue;seen.add(signature);out.push(q)}
- for(let i=out.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]]}return out;
+ for(let i=out.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[out[i],out[j]]=[out[j],out[i]]}return window.MathWebQuestionMix?MathWebQuestionMix.mix(out):out;
 }
 function quizResult(){
  const completed=quizPoints>=100;
@@ -35,14 +35,16 @@ function showQuiz(){
  if(quizPoints>=100||quizIndex>=quizBank.length){quizResult();return}
  const item=quizBank[quizIndex];$('quiz-q').textContent=item.q;
  $('quiz-count').textContent=`Câu ${quizIndex+1}/${quizBank.length} · ${quizPoints}/100 điểm · Đúng ${correctCount} · Sai ${wrongCount}`;
- item.choices.forEach((choice,i)=>{const b=document.createElement('button');b.className='choice';b.textContent=String.fromCharCode(65+i)+'. '+choice;b.onclick=()=>{
-  if(answered)return;answered=true;const ok=i===item.correct;
+ MathWebQuestionMix.render($('choices'),item,(value,selected)=>{
+  if(answered)return;answered=true;const ok=MathWebQuestionMix.grade(item,value);
   if(ok){correctCount++;quizPoints=Math.min(100,quizPoints+5)}else{wrongCount++;quizPoints=Math.max(0,quizPoints-1);quizMistakes.push(item.kind||item.type||item.skill||item.q)}
-  $('feedback').textContent=(ok?'Chính xác, +5 điểm. ':'Chưa đúng, −1 điểm (không dưới 0). ')+'Đáp án đúng: '+String.fromCharCode(65+item.correct)+'. '+item.choices[item.correct]+'. '+(item.why||'');
-  [...$('choices').children].forEach((el,j)=>{el.disabled=true;el.classList.add(j===item.correct?'correct':j===i?'wrong':'')});
+  const expected=MathWebQuestionMix.kind(item)==='multiple_choice'?String.fromCharCode(65+item.correct)+'. '+item.choices[item.correct]:(item.answer??item.correct_answer??item.correct);
+  $('feedback').textContent=(ok?'Chính xác, +5 điểm. ':'Chưa đúng, −1 điểm (không dưới 0). ')+'Đáp án đúng: '+expected+'. '+(item.why||'');
+  [...$('choices').querySelectorAll('button,input')].forEach(el=>el.disabled=true);
+  if(selected)selected.classList.add(ok?'correct':'wrong');
   $('quiz-count').textContent=`Câu ${quizIndex+1}/${quizBank.length} · ${quizPoints}/100 điểm · Đúng ${correctCount} · Sai ${wrongCount}`;
-  $('next').textContent=quizPoints>=100?'Xem tổng kết':'Câu tiếp theo';$('next').classList.remove('hidden')
- };$('choices').append(b)})
+  $('next').textContent=quizPoints>=100?'Xem tổng kết':'Câu tiếp theo';$('next').classList.remove('hidden');
+ });
 }
 async function init(){try{const responses=await Promise.all([fetch('learn-assets/topics.json'),fetch('learn-assets/verified-lessons.json'),fetch('learn-assets/diagnostic-bank.json')]);if(responses.some(r=>!r.ok))throw Error('Không tải được thư viện');[topics,lessons,diagnostic]=await Promise.all(responses.map(r=>r.json()));filter();const params=new URLSearchParams(location.search),id=params.get('topic'),t=topics.find(x=>x.id===id);if(t){$('grade').value=String(t.grade);filter();$('topic').value=t.id;openTopic(t.id)}else if(params.has('grade')&&['10','11','12'].includes(params.get('grade'))){$('grade').value=params.get('grade');filter();if($('topic').value)openTopic($('topic').value)}else if($('topic').value)openTopic($('topic').value);$('status').textContent=`Đã tải ${topics.length} chủ đề`;}catch(e){$('status').textContent='Không thể tải dữ liệu bài học. Kiểm tra kết nối và thử tải lại trang.'}}
 $('grade').onchange=()=>{filter();if($('topic').value)openTopic($('topic').value)};let searchTimer;$('search').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{filter();if($('topic').value)openTopic($('topic').value)},120)};$('topic').onchange=()=>{if($('topic').value)openTopic($('topic').value)};document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>tab(b.dataset.tab));$('next').onclick=()=>{quizIndex++;showQuiz()};init();

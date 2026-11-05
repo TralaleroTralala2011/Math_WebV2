@@ -223,8 +223,14 @@ class AIQuestionService:
         seen_variations=set()
         seen_archetypes=set()
         recent_families=[]
-        mixed_types=["multiple_choice", "short_answer", "true_false"]
-        random.shuffle(mixed_types)
+        # Seven multiple-choice, two short-answer and one true/false per full
+        # ten-question block. Shuffle each block to avoid predictable ordering.
+        mixed_types=[]
+        while len(mixed_types)<count:
+            block=["multiple_choice"]*7+["short_answer"]*2+["true_false"]
+            random.shuffle(block)
+            mixed_types.extend(block)
+        mixed_types=mixed_types[:count]
         for item in (history or []):
             if isinstance(item, dict):
                 if item.get("structure_fingerprint"): seen_structures.add(item["structure_fingerprint"])
@@ -243,7 +249,7 @@ class AIQuestionService:
             # who selected Nền tảng should not silently receive nâng cao items
             # just because the set contains ten questions.
             level=current
-            item_type = mixed_types[i % len(mixed_types)] if question_type == "mixed" else question_type
+            item_type = mixed_types[i] if question_type == "mixed" else question_type
             q=self.generate_one(grade,topic,level,item_type,seen,game_id,recent_families[-10:],seen_structures,seen_variations,seen_archetypes)
             q["variation_key"]=self._variation_key(q)
             # Prefer a diagram reconstructed from this exact question whenever
