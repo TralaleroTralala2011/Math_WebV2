@@ -27,7 +27,8 @@ def _safe_numeric(value):
     unary = {ast.UAdd: operator.pos, ast.USub: operator.neg}
     def visit(node):
         if isinstance(node, ast.Expression): return visit(node.body)
-        if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)): return float(node.value)
+        if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)) and not isinstance(node.value, bool): return float(node.value)
+        if isinstance(node, ast.Name) and node.id == "pi": return math.pi
         if isinstance(node, ast.BinOp) and type(node.op) in binary: return binary[type(node.op)](visit(node.left), visit(node.right))
         if isinstance(node, ast.UnaryOp) and type(node.op) in unary: return unary[type(node.op)](visit(node.operand))
         if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == "sqrt" and len(node.args) == 1:
@@ -48,10 +49,50 @@ def _coordinate_pair(value):
     x, y = (_safe_numeric(part) for part in parts)
     return (x, y) if x is not None and y is not None else None
 
+def _labeled_answer(value):
+    """Parse explicit scalar/ordered-pair answers, without guessing missing variables."""
+    if not isinstance(value, str):
+        return None
+    s = value.strip().replace("−", "-")
+    match = re.fullmatch(r"\s*([a-zA-Z])\s*=\s*(.+?)\s*", s)
+    if match:
+        name, rhs = match.groups()
+        number = _safe_numeric(rhs)
+        if number is not None:
+            return ("scalar", name.lower(), number)
+        if name.lower() in ("x", "y"):
+            return None
+    pair = re.fullmatch(r"\s*\(\s*x\s*,\s*y\s*\)\s*=\s*\(\s*(.+?)\s*[;,]\s*(.+?)\s*\)\s*", s, re.I)
+    if pair:
+        nums = tuple(_safe_numeric(x) for x in pair.groups())
+        if all(x is not None for x in nums):
+            return ("pair", nums)
+    return None
+
+def _unlabeled_number(value):
+    if isinstance(value, str) and re.search(r"[a-zA-Z]\s*=", value):
+        return None
+    return _safe_numeric(value)
+
 def equivalent(a,b):
     """Compare numeric, fraction, radical and coordinate-pair answers robustly."""
     if normalize_answer(a) == normalize_answer(b):
         return True
+    labeled_a, labeled_b = _labeled_answer(a), _labeled_answer(b)
+    if labeled_a and labeled_b:
+        if labeled_a[0] != labeled_b[0]:
+            return False
+        if labeled_a[0] == "scalar":
+            return labeled_a[1] == labeled_b[1] and math.isclose(labeled_a[2], labeled_b[2], rel_tol=1e-8, abs_tol=1e-8)
+        return all(math.isclose(x,y,rel_tol=1e-8,abs_tol=1e-8) for x,y in zip(labeled_a[1],labeled_b[1]))
+    if labeled_a or labeled_b:
+        labeled = labeled_a or labeled_b
+        plain = b if labeled_a else a
+        if labeled[0] == "pair":
+            coords = _coordinate_pair(plain)
+            return coords is not None and all(math.isclose(x,y,rel_tol=1e-8,abs_tol=1e-8) for x,y in zip(labeled[1],coords))
+        num = _unlabeled_number(plain)
+        return num is not None and math.isclose(labeled[2],num,rel_tol=1e-8,abs_tol=1e-8)
     pair_a, pair_b = _coordinate_pair(a), _coordinate_pair(b)
     if pair_a is not None and pair_b is not None:
         return all(math.isclose(x,y,rel_tol=1e-8,abs_tol=1e-8) for x,y in zip(pair_a,pair_b))

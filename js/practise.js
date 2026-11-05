@@ -4253,6 +4253,37 @@
        OPEN AI SETUP
        ===================================================== */
 
+    /* Account-scoped AI practice recovery. Only restore questions from the same account. */
+    function aiProgressKey() {
+        let user = '';
+        try { const u=JSON.parse(localStorage.getItem('mathweb_user')||'{}'); user=String(u.id||u.username||u.user_id||''); } catch (_) {}
+        return 'mathweb_ai_progress_v1_'+encodeURIComponent(user||'unknown');
+    }
+    function saveAIProgress() {
+        if (!localStorage.getItem('mathweb_token') || !aiQuestions.length) return;
+        try { localStorage.setItem(aiProgressKey(), JSON.stringify({
+            savedAt:Date.now(), questions:aiQuestions, index:aiCurrentIndex,
+            history:aiHistory, score:aiScore, correct:aiCorrect, wrong:aiWrong,
+            skipped:aiSkipped, settings:aiCurrentSettings,
+            topic:currentKnowledge ? {name:currentKnowledge.name,id:currentKnowledge.id} : null
+        })); } catch (_) { /* storage quota */ }
+    }
+    function loadAIProgress() {
+        try { const p=JSON.parse(localStorage.getItem(aiProgressKey())||'null');
+            return p&&Array.isArray(p.questions)&&p.questions.length&&
+                Number.isInteger(p.index)&&p.index>=0&&p.index<p.questions.length&&
+                Date.now()-p.savedAt<7*86400000?p:null;
+        } catch (_) { return null; }
+    }
+    function resumeAIProgress() {
+        const p=loadAIProgress();if(!p)return;
+        aiQuestions=p.questions;aiCurrentIndex=p.index;aiHistory=p.history||[];
+        aiScore=p.score||0;aiCorrect=p.correct||0;aiWrong=p.wrong||0;
+        aiSkipped=p.skipped||0;aiCurrentSettings=p.settings||{};
+        aiAnswered=false;aiSessionStartedAt=Date.now();aiQuestionStartedAt=Date.now();
+        renderAIQuestion();
+    }
+
     function openAISetup() {
 
         // Close the topic/game information popup first; keep currentKnowledge so
@@ -4277,6 +4308,15 @@
 
 
         renderAISetup();
+        const saved=loadAIProgress();
+        if(saved){
+            const btn=document.createElement('button');
+            btn.type='button';btn.id='mathwebResumeAI';
+            btn.textContent='↩ Tiếp tục bài luyện tập đã lưu ('+(saved.index+1)+'/'+saved.questions.length+')';
+            btn.style.cssText='display:block;margin:12px auto;padding:12px 18px;border-radius:12px;background:#166534;color:white;font-weight:700;cursor:pointer';
+            btn.addEventListener('click',resumeAIProgress);
+            overlay.querySelector('.mathweb-ai-panel')?.append(btn);
+        }
 
     }
 
@@ -4836,6 +4876,7 @@
                 Date.now();
 
 
+            saveAIProgress();
             renderAIQuestion();
 
         } catch (error) {
@@ -6395,6 +6436,7 @@
                 responseTime
 
         });
+        saveAIProgress();
 
     }
 
@@ -6786,6 +6828,7 @@
     function nextAIQuestion() {
 
         aiCurrentIndex++;
+        saveAIProgress();
 
         if (
             aiCurrentIndex >=
@@ -7013,6 +7056,8 @@
        ===================================================== */
 
     function finishAIPractice() {
+        try { localStorage.removeItem(aiProgressKey()); } catch (_) {}
+
 
         stopAITimer();
 

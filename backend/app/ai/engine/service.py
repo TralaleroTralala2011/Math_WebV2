@@ -346,7 +346,24 @@ class AIQuestionService:
 
     def _check(self,q,user_answer):
         t=q["question_type"]
-        if t=="multiple_choice": return str(user_answer).strip()==str(q["answer"]).strip()
+        if t=="multiple_choice":
+            from .solver import equivalent
+            options = q.get("options") or []
+            selected = user_answer
+            # Accept the same formats as the browser widgets: text, A/B/C/D,
+            # 0-based index, and {index|answer|value} payloads.
+            if isinstance(selected, dict):
+                selected = selected.get("answer", selected.get("value", selected.get("index")))
+            if isinstance(selected, int) and not isinstance(selected, bool):
+                if 0 <= selected < len(options): selected = options[selected]
+            elif isinstance(selected, str):
+                value = selected.strip()
+                if len(value) == 1 and value.upper() in "ABCD" and len(options) == 4:
+                    selected = options[ord(value.upper()) - ord("A")]
+                elif value.upper().startswith("OPTION_") and value[7:].isdigit():
+                    index = int(value[7:])
+                    if 0 <= index < len(options): selected = options[index]
+            return equivalent(selected, q["answer"])
         if t=="short_answer":
             from .solver import equivalent
             return equivalent(user_answer,q["answer"])

@@ -970,7 +970,7 @@ def register(
             """
             SELECT id
             FROM users
-            WHERE username = ?
+            WHERE username = ? COLLATE NOCASE
             LIMIT 1
             """,
             (username,)
@@ -1138,7 +1138,7 @@ def login(
 
         # Admin identity lives in admin_accounts, not in the learner users table.
         admin = cursor.execute(
-            "SELECT id, username, password_hash, status, auth_version FROM admin_accounts WHERE username=? LIMIT 1",
+            "SELECT id, username, password_hash, status, auth_version FROM admin_accounts WHERE username=? COLLATE NOCASE LIMIT 1",
             (username,)
         ).fetchone()
         if admin:
@@ -1177,7 +1177,7 @@ def login(
                 status,
                 ban_reason
             FROM users
-            WHERE username = ?
+            WHERE username = ? COLLATE NOCASE
             LIMIT 1
             """,
             (username,)

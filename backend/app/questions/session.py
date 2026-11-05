@@ -629,18 +629,8 @@ def check_answer(
         # So sánh
         # -------------------------------------------------
 
-        normalized_user_answer = _normalize_answer(
-            answer
-        )
-
-        normalized_correct_answer = _normalize_answer(
-            correct_answer
-        )
-
-        is_correct = (
-            normalized_user_answer
-            == normalized_correct_answer
-        )
+        from .answer_checker import grade_answer
+        is_correct = grade_answer(session.get("question") or {}, answer, correct_answer)
 
         now = _utc_timestamp()
 

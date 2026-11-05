@@ -598,62 +598,41 @@ def generate_ai_battle_questions(
             detail="Hai người chơi không có chủ đề chung."
         )
 
+    # Generate a shared, server-authoritative alternating deck.
+    # Each player's selected topic contributes equally (A,B,A,B...).
+    from ..questions.answer_checker import canonical_type
+    topic_cycle = list(dict.fromkeys(str(t) for t in topics if t))[:2]
+    if not topic_cycle:
+        raise HTTPException(status_code=409, detail="Chưa có chủ đề thi đấu.")
+    clean_questions = []
+    seen_text = set()
+    for index in range(MATCH_TOTAL_QUESTIONS):
+        topic = topic_cycle[index % len(topic_cycle)]
+        try:
+            result = ai_service.generate_set(
+                grade=grade, topics=[topic], count=1,
+                difficulty=difficulty, question_type=question_type,
+                history=list(seen_text)
+            )
+        except (ValueError, RuntimeError) as error:
+            raise HTTPException(status_code=400, detail=f"Không tạo được câu hỏi chủ đề {topic}: {error}")
+        candidates = result.get("questions", [])
+        if not isinstance(candidates, list) or not candidates or not isinstance(candidates[0], dict):
+            raise HTTPException(status_code=500, detail=f"Không có câu hỏi hợp lệ cho {topic}.")
+        item = dict(candidates[0])
+        if canonical_type(item) != question_type:
+            raise HTTPException(status_code=500, detail="Kiểu câu hỏi AI không khớp định dạng trận đấu.")
+        question_text = str(item.get("question") or item.get("text") or "").strip()
+        if not question_text or question_text in seen_text:
+            raise HTTPException(status_code=500, detail="Bộ đề bị trùng hoặc thiếu nội dung câu hỏi.")
+        seen_text.add(question_text)
+        item["battle_index"] = index
+        item["battle_topic"] = topic
+        clean_questions.append(item)
     try:
-        result = ai_service.generate_set(
-            grade=grade,
-            topics=topics,
-            count=MATCH_TOTAL_QUESTIONS,
-            difficulty=difficulty,
-            question_type=question_type,
-            history=[]
-        )
-
-    except (
-        ValueError,
-        RuntimeError
-    ) as error:
-        raise HTTPException(
-            status_code=400,
-            detail=f"AI không thể tạo bộ câu hỏi: {error}"
-        )
-
-    questions = result.get(
-        "questions",
-        []
-    )
-    try:
-        archive_questions(grade, topics, questions, source="AI runtime · online battle")
+        archive_questions(grade, topic_cycle, clean_questions, source="AI runtime · alternating Battle")
     except Exception:
         pass
-
-    if not isinstance(questions, list):
-        raise HTTPException(
-            status_code=500,
-            detail="AI trả về bộ câu hỏi không hợp lệ."
-        )
-
-    if len(questions) != MATCH_TOTAL_QUESTIONS:
-        raise HTTPException(
-            status_code=500,
-            detail="AI không tạo đủ số câu hỏi cho trận đấu."
-        )
-
-    clean_questions = []
-
-    for index, question in enumerate(
-        questions
-    ):
-        if not isinstance(question, dict):
-            raise HTTPException(
-                status_code=500,
-                detail="Một câu hỏi AI không hợp lệ."
-            )
-
-        item = dict(question)
-
-        item["battle_index"] = index
-
-        clean_questions.append(item)
 
     return clean_questions
 
@@ -1063,91 +1042,8 @@ def normalize_answer(answer):
 
 
 def check_battle_answer(question, user_answer):
-    answer = normalize_answer(user_answer)
-
-    question_type = (
-        question.get("question_type")
-        or question.get("type")
-        or "multiple_choice"
-    )
-
-    aliases = {
-        "choice": "multiple_choice",
-        "mcq": "multiple_choice",
-        "multiple-choice": "multiple_choice",
-        "input": "short_answer",
-        "short": "short_answer",
-        "short-answer": "short_answer",
-        "tf": "true_false",
-        "true-false": "true_false"
-    }
-
-    question_type = aliases.get(
-        question_type,
-        question_type
-    )
-
-    correct_answer = question.get(
-        "answer"
-    )
-
-    if question_type == "multiple_choice":
-        return (
-            str(answer).strip().lower()
-            ==
-            str(correct_answer).strip().lower()
-        )
-
-    if question_type == "short_answer":
-        try:
-            from ..ai.engine.solver import equivalent
-
-            return equivalent(
-                answer,
-                correct_answer
-            )
-        except Exception:
-            return (
-                str(answer).strip().lower()
-                ==
-                str(correct_answer).strip().lower()
-            )
-
-    if question_type == "true_false":
-        if isinstance(
-            correct_answer,
-            list
-        ):
-            if not isinstance(
-                answer,
-                list
-            ):
-                answer = [answer]
-
-            normalized_correct = [
-                bool(value)
-                for value in correct_answer
-            ]
-
-            normalized_answer = [
-                bool(value)
-                for value in answer
-            ]
-
-            return (
-                normalized_answer
-                == normalized_correct
-            )
-
-        return bool(answer) == bool(
-            correct_answer
-        )
-
-    return (
-        str(answer).strip().lower()
-        ==
-        str(correct_answer).strip().lower()
-    )
+    from ..questions.answer_checker import grade_answer
+    return grade_answer(question, user_answer)
 
 
 def calculate_player_stats(

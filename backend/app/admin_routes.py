@@ -1100,3 +1100,43 @@ def get_audit_logs(authorization: str | None = Header(default=None), limit: int 
             FROM admin_audit_logs l LEFT JOIN admin_accounts u ON u.id=l.admin_user_id ORDER BY l.id DESC LIMIT ?""", (limit,)).fetchall()
         return {"logs": [dict(r) for r in rows]}
     finally: conn.close()
+
+
+# Geometry attachments: separate table keeps existing question schema and legacy data intact.
+class GeometryImageRequest(BaseModel):
+    image_data: str = Field(min_length=30, max_length=2000000)
+
+@router.put('/questions/{question_id}/geometry')
+def save_question_geometry(question_id: int, data: GeometryImageRequest, authorization: str | None = Header(default=None)):
+    import base64
+    require_admin(authorization)
+    if not data.image_data.startswith('data:image/png;base64,'):
+        raise HTTPException(status_code=400, detail='Chỉ chấp nhận hình PNG')
+    try:
+        blob = base64.b64decode(data.image_data.split(',', 1)[1], validate=True)
+    except Exception:
+        raise HTTPException(status_code=400, detail='PNG không hợp lệ')
+    if len(blob) > 1200000 or not blob.startswith(b'\x89PNG\r\n\x1a\n'):
+        raise HTTPException(status_code=400, detail='Ảnh vượt giới hạn hoặc không phải PNG')
+    conn = get_connection()
+    try:
+        if not conn.execute('SELECT 1 FROM admin_question_bank WHERE id=?', (question_id,)).fetchone():
+            raise HTTPException(status_code=404, detail='Không tìm thấy câu hỏi')
+        conn.execute('CREATE TABLE IF NOT EXISTS admin_question_geometry (question_id INTEGER PRIMARY KEY, png BLOB NOT NULL)')
+        conn.execute('INSERT OR REPLACE INTO admin_question_geometry(question_id,png) VALUES(?,?)', (question_id, blob))
+        conn.commit()
+        return {'success': True, 'question_id': question_id}
+    finally:
+        conn.close()
+
+@router.get('/questions/{question_id}/geometry')
+def get_question_geometry_admin(question_id: int, authorization: str | None = Header(default=None)):
+    from fastapi.responses import Response
+    require_admin(authorization)
+    conn = get_connection()
+    try:
+        conn.execute('CREATE TABLE IF NOT EXISTS admin_question_geometry (question_id INTEGER PRIMARY KEY, png BLOB NOT NULL)')
+        row = conn.execute('SELECT png FROM admin_question_geometry WHERE question_id=?', (question_id,)).fetchone()
+        if row is None: raise HTTPException(status_code=404, detail='Câu hỏi chưa có hình')
+        return Response(content=row['png'], media_type='image/png')
+    finally: conn.close()

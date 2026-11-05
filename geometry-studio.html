@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1.0">
+    <title>MathGeo Studio v25.0 - Universal Geometry AI & 3D Extended</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .canvas-bg { background-image: none; }
+        ::-webkit-scrollbar { width: 5px; height: 5px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #475569; }
+        canvas { touch-action: none; user-select: none; }
+    @media(max-width:850px){body{height:auto;min-height:100dvh;overflow:auto}header{position:relative}body>div.flex-1{display:flex;flex-direction:column;overflow:visible!important}aside{width:100%!important;max-height:48vh;min-height:250px;overflow:auto!important}main{min-height:52vh;min-width:0}#geo-canvas{min-height:48vh}.draw-concept-btn{min-height:38px}}
+</style>
+<link rel="stylesheet" href="css/quick-navigation.css">
+</head>
+<body class="bg-slate-900 h-screen flex flex-col font-sans overflow-hidden text-slate-100">
+
+    <!-- Header Điều khiển & Nhập hàm số, Parabol, Tọa độ -->
+    <header class="bg-slate-950 border-b border-slate-800 px-4 py-2 flex items-center justify-between shadow-md z-20 gap-2 flex-wrap">
+        <div class="flex items-center space-x-3">
+            <div class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-indigo-500/30 shadow-lg">
+                <i class="fa-solid fa-square-root-variable"></i>
+            </div>
+            <div>
+                <h1 class="text-xs font-bold tracking-wide text-white flex items-center gap-2">
+                    MathGeo Studio Pro
+                    <span class="bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 text-[10px] px-2 py-0.5 rounded-full font-semibold">v25.0 AI & 3D Extended</span>
+                </h1>
+            </div>
+        </div>
+
+        <!-- Mode Switcher (2D / 3D) -->
+        <div class="flex bg-slate-900 p-1 rounded-lg border border-slate-800 space-x-1 text-xs font-bold">
+            <button id="view-mode-2d" class="px-3 py-1 bg-indigo-600 text-white rounded transition shadow">Mặt phẳng 2D & Đồ thị</button>
+            <button id="view-mode-3d" class="px-3 py-1 text-slate-400 hover:text-white rounded transition">Không gian 3D (Xoay)</button>
+        </div>
+
+        <!-- Thanh nhập hàm số f(x) / Parabol -->
+        <div id="bar-fx-container" class="flex items-center space-x-1.5 bg-slate-900 border border-slate-800 px-2.5 py-1 rounded-lg text-xs">
+            <span class="text-indigo-400 font-bold flex items-center gap-1">
+                <i class="fa-solid fa-calculator"></i> y
+            </span>
+            <select id="func-type" class="bg-slate-950 border border-slate-700 rounded px-1 py-0.5 text-slate-300 focus:outline-none">
+                <option value="linear">Linear (ax + b)</option>
+                <option value="parabola">Parabola (ax² + bx + c)</option>
+            </select>
+            <input id="fx-expr" type="text" value="-x^2 + 4" class="w-24 bg-slate-950 border border-slate-700 rounded px-1.5 py-0.5 text-center font-mono text-emerald-400 focus:outline-none focus:border-indigo-500" placeholder="VD: -x^2+4">
+            <select id="ineq-sign" class="bg-slate-950 border border-slate-700 rounded px-1 py-0.5 font-mono text-amber-400 focus:outline-none">
+                <option value="<=">≤</option>
+                <option value=">=">≥</option>
+                <option value="<">&lt;</option>
+                <option value=">">&gt;</option>
+                <option value="=">=</option>
+            </select>
+            <button id="btn-apply-fx" class="px-2 py-1 bg-indigo-600 hover:bg-indigo-500 text-white rounded font-medium transition text-[11px] shadow">Vẽ Đồ Thị/BPT</button>
+        </div>
+
+        <!-- Quy đổi đơn vị độ dài 1 ô -->
+        <div class="flex items-center space-x-1.5 bg-slate-900 border border-slate-800 px-2 py-1 rounded-lg text-xs">
+            <span class="text-slate-400 font-medium">1 ô:</span>
+            <input id="unit-val" type="number" step="any" value="1" class="w-9 bg-slate-950 border border-slate-700 rounded px-1 py-0.5 text-center font-mono text-indigo-300">
+            <input id="unit-name" type="text" value="cm" class="w-9 bg-slate-950 border border-slate-700 rounded px-1 py-0.5 text-center font-mono text-emerald-400">
+        </div>
+        
+        <!-- Controls & Zoom -->
+        <div class="flex items-center space-x-2">
+            <div class="flex items-center bg-slate-900 border border-slate-800 rounded-lg p-0.5 space-x-1">
+                <button id="btn-undo" class="w-7 h-7 hover:bg-slate-800 text-slate-300 rounded flex items-center justify-center transition disabled:opacity-40" title="Hoàn tác">
+                    <i class="fa-solid fa-rotate-left text-xs"></i>
+                </button>
+                <button id="btn-redo" class="w-7 h-7 hover:bg-slate-800 text-slate-300 rounded flex items-center justify-center transition disabled:opacity-40" title="Làm lại">
+                    <i class="fa-solid fa-rotate-right text-xs"></i>
+                </button>
+            </div>
+
+            <div class="flex items-center bg-slate-900 border border-slate-800 rounded-lg p-0.5 space-x-1">
+                <button id="btn-zoom-out" class="w-7 h-7 hover:bg-slate-800 text-slate-300 rounded flex items-center justify-center transition" title="Thu nhỏ">
+                    <i class="fa-solid fa-minus text-xs"></i>
+                </button>
+                <span id="zoom-text" class="text-xs font-mono text-indigo-400 px-1.5 font-bold">100%</span>
+                <button id="btn-zoom-in" class="w-7 h-7 hover:bg-slate-800 text-slate-300 rounded flex items-center justify-center transition" title="Phóng to">
+                    <i class="fa-solid fa-plus text-xs"></i>
+                </button>
+            </div>
+
+            <button id="btn-reset-view" class="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs transition border border-slate-700 flex items-center gap-1">
+                <i class="fa-solid fa-compress"></i> Căn giữa
+            </button>
+            <button id="btn-send-admin" class="px-3 py-1.5 bg-indigo-600 text-white rounded-lg text-xs font-medium" type="button">Gửi hình vào câu hỏi Admin</button>
+            <button id="btn-export" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg text-xs font-medium transition shadow-lg shadow-emerald-600/20 flex items-center gap-1">
+                <i class="fa-solid fa-download"></i> Xuất PNG
+            </button>
+        </div>
+    </header>
+
+    <div class="flex-1 flex overflow-hidden">
+        <!-- Sidebar Navigation Tabs -->
+        <aside class="w-[440px] bg-slate-950 border-r border-slate-800 flex flex-col justify-between z-10 overflow-hidden">
+            
+            <div class="flex border-b border-slate-800 bg-slate-900/50">
+                <button id="tab-concepts-btn" class="flex-1 py-2 text-xs font-bold text-indigo-400 border-b-2 border-indigo-500 bg-slate-900 transition flex items-center justify-center gap-1">
+                    <i class="fa-solid fa-book-bookmark"></i> Khái niệm (2D)
+                </button>
+                <button id="tab-tools-btn" class="flex-1 py-2 text-xs font-semibold text-slate-400 hover:text-slate-200 border-b-2 border-transparent transition flex items-center justify-center gap-1">
+                    <i class="fa-solid fa-toolbox"></i> Công cụ
+                </button>
+                <button id="tab-ai-btn" class="flex-1 py-2 text-xs font-semibold text-amber-400 hover:text-amber-200 border-b-2 border-transparent transition flex items-center justify-center gap-1">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> AI Tự Sinh Hình
+                </button>
+                <button id="tab-3d-btn" class="flex-1 py-2 text-xs font-semibold text-cyan-400 hover:text-cyan-200 border-b-2 border-transparent transition flex items-center justify-center gap-1">
+                    <i class="fa-solid fa-cubes"></i> Mẫu 3D Mở Rộng
+                </button>
+            </div>
+
+            <!-- TAB 1: DANH MỤC KHÁI NIỆM TỔNG HỢP -->
+            <div id="tab-concepts-content" class="flex-1 p-3 overflow-y-auto space-y-3">
+                <div class="bg-slate-900 p-2.5 rounded-xl border border-slate-800">
+                    <input type="text" id="concept-search" placeholder="🔍 Tìm nhanh khái niệm (parabol, tam giác, elip...)" class="w-full p-2 bg-slate-950 border border-slate-700 rounded-lg text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500">
+                </div>
+
+                <div id="concept-accordion" class="space-y-2.5">
+                    <div class="concept-group bg-slate-900/90 rounded-xl border border-indigo-500/30 overflow-hidden">
+                        <div class="p-2.5 bg-indigo-950/40 font-bold text-xs text-indigo-300 flex items-center justify-between border-b border-slate-800">
+                            <span><i class="fa-solid fa-chart-line text-amber-400 mr-1.5"></i> I. Hệ trục Oxy & Miền nghiệm BPT</span>
+                        </div>
+                        <div class="p-2 grid grid-cols-1 gap-1.5 text-xs">
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-indigo-600/30 text-slate-200 border border-slate-800 transition" data-cmd="he_truc_oxy">
+                                <span>Hệ trục tọa độ Oxy chuẩn & Gốc O(0,0)</span>
+                                <span class="bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded text-[10px] font-mono">Hiển thị</span>
+                            </button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-indigo-600/30 text-slate-200 border border-slate-800 transition" data-cmd="mien_nghiem_parabola">
+                                <span>Miền nghiệm BPT Parabol y ≤ -x² + 4</span>
+                                <span class="bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded text-[10px] font-mono">Hiển thị</span>
+                            </button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-indigo-600/30 text-slate-200 border border-slate-800 transition" data-cmd="mien_nghiem_bpt">
+                                <span>Miền nghiệm BPT tuyến tính ax + by ≤ c</span>
+                                <span class="bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded text-[10px] font-mono">Hiển thị</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="concept-group bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden">
+                        <div class="p-2.5 bg-slate-950 font-bold text-xs text-indigo-300 flex items-center justify-between border-b border-slate-800">
+                            <span><i class="fa-solid fa-slash text-amber-400 mr-1.5"></i> II. Điểm, Đường & Góc</span>
+                        </div>
+                        <div class="p-2 grid grid-cols-1 gap-1.5 text-xs">
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-indigo-600/30 text-slate-200 border border-slate-800 transition" data-cmd="ba_diem_thang_hang">
+                                <span>Ba điểm thẳng hàng & Điểm nằm giữa</span>
+                                <span class="bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded text-[10px] font-mono">Hiển thị</span>
+                            </button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-indigo-600/30 text-slate-200 border border-slate-800 transition" data-cmd="duong_vuong_góc">
+                                <span>Đường thẳng song song & vuông góc</span>
+                                <span class="bg-indigo-500/20 text-indigo-300 px-2 py-0.5 rounded text-[10px] font-mono">Hiển thị</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="concept-group bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden">
+                        <div class="p-2.5 bg-slate-950 font-bold text-xs text-emerald-400 flex items-center justify-between border-b border-slate-800">
+                            <span><i class="fa-solid fa-triangle-exclamation mr-1.5"></i> III. Tam giác & Đường đặc biệt</span>
+                        </div>
+                        <div class="p-2 grid grid-cols-1 gap-1.5 text-xs">
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-emerald-600/30 text-slate-200 border border-slate-800 transition" data-cmd="tg_vuong_can">
+                                <span>Tam giác vuông cân + Đường cao AH</span>
+                                <span class="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded text-[10px] font-mono">Hiển thị</span>
+                            </button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-emerald-600/30 text-slate-200 border border-slate-800 transition" data-cmd="tg_trung_tuyen">
+                                <span>Tam giác + Trọng tâm G (Trung tuyến)</span>
+                                <span class="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded text-[10px] font-mono">Hiển thị</span>
+                            </button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-emerald-600/30 text-slate-200 border border-slate-800 transition" data-cmd="tg_noi_ngoai_tiep">
+                                <span>Đường tròn nội & ngoại tiếp tam giác</span>
+                                <span class="bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded text-[10px] font-mono">Hiển thị</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="concept-group bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden">
+                        <div class="p-2.5 bg-slate-950 font-bold text-xs text-cyan-400 flex items-center justify-between border-b border-slate-800">
+                            <span><i class="fa-solid fa-vector-square mr-1.5"></i> IV. Tứ giác & Đa giác</span>
+                        </div>
+                        <div class="p-2 grid grid-cols-1 gap-1.5 text-xs">
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-cyan-600/30 text-slate-200 border border-slate-800 transition" data-cmd="hinh_chu_nhat">
+                                <span>Hình chữ nhật ABCD + Đường chéo</span>
+                                <span class="bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded text-[10px] font-mono">Hiển thị</span>
+                            </button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-cyan-600/30 text-slate-200 border border-slate-800 transition" data-cmd="hinh_vuong">
+                                <span>Hình vuông ABCD + Đường chéo</span>
+                                <span class="bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded text-[10px] font-mono">Hiển thị</span>
+                            </button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-cyan-600/30 text-slate-200 border border-slate-800 transition" data-cmd="hinh_thoi">
+                                <span>Hình thoi ABCD</span>
+                                <span class="bg-cyan-500/20 text-cyan-300 px-2 py-0.5 rounded text-[10px] font-mono">Hiển thị</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="concept-group bg-slate-900/90 rounded-xl border border-slate-800 overflow-hidden">
+                        <div class="p-2.5 bg-slate-950 font-bold text-xs text-purple-400 flex items-center justify-between border-b border-slate-800">
+                            <span><i class="fa-solid fa-cube mr-1.5"></i> V. Không gian & Conic (Oxy)</span>
+                        </div>
+                        <div class="p-2 grid grid-cols-1 gap-1.5 text-xs">
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-purple-600/30 text-slate-200 border border-slate-800 transition" data-cmd="hinh_chop_sabcd">
+                                <span>Hình chóp S.ABCD</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded text-[10px] font-mono">Hiển thị</span>
+                            </button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-purple-600/30 text-slate-200 border border-slate-800 transition" data-cmd="elip_standard">
+                                <span>Đường Elip chính tắc trên Oxy</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded text-[10px] font-mono">Hiển thị</span>
+                            </button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-purple-600/30 text-slate-200 border border-slate-800 transition" data-cmd="parabola_standard">
+                                <span>Đồ thị Parabol chính tắc y = ax²</span>
+                                <span class="bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded text-[10px] font-mono">Hiển thị</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="concept-group bg-slate-900/90 rounded-xl border border-amber-500/30 overflow-hidden">
+                        <div class="p-2.5 bg-amber-950/30 font-bold text-xs text-amber-300 border-b border-slate-800">
+                            <i class="fa-solid fa-shapes mr-1.5"></i> VI. Hình phẳng mở rộng – dựng nhanh
+                        </div>
+                        <div class="p-2 grid grid-cols-1 gap-1.5 text-xs">
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-amber-600/20 text-slate-200 border border-slate-800" data-cmd="goc_nhon"><span>Góc nhọn (3 tia OA, OB)</span><span class="text-[10px] text-amber-300">Vẽ</span></button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-amber-600/20 text-slate-200 border border-slate-800" data-cmd="goc_vuong"><span>Góc vuông</span><span class="text-[10px] text-amber-300">Vẽ</span></button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-amber-600/20 text-slate-200 border border-slate-800" data-cmd="goc_tu"><span>Góc tù</span><span class="text-[10px] text-amber-300">Vẽ</span></button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-amber-600/20 text-slate-200 border border-slate-800" data-cmd="goc_bet"><span>Góc bẹt – hai tia đối nhau</span><span class="text-[10px] text-amber-300">Vẽ</span></button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-amber-600/20 text-slate-200 border border-slate-800" data-cmd="tam_giac_deu"><span>Tam giác đều</span><span class="text-[10px] text-amber-300">Vẽ</span></button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-amber-600/20 text-slate-200 border border-slate-800" data-cmd="tam_giac_can"><span>Tam giác cân + đường cao</span><span class="text-[10px] text-amber-300">Vẽ</span></button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-amber-600/20 text-slate-200 border border-slate-800" data-cmd="hinh_thang_can"><span>Hình thang cân</span><span class="text-[10px] text-amber-300">Vẽ</span></button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-amber-600/20 text-slate-200 border border-slate-800" data-cmd="ngu_giac_deu"><span>Ngũ giác đều</span><span class="text-[10px] text-amber-300">Vẽ</span></button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-amber-600/20 text-slate-200 border border-slate-800" data-cmd="luc_giac_deu"><span>Lục giác đều</span><span class="text-[10px] text-amber-300">Vẽ</span></button>
+                        </div>
+                    </div>
+                    <div class="concept-group bg-slate-900/90 rounded-xl border border-rose-500/30 overflow-hidden">
+                        <div class="p-2.5 bg-rose-950/30 font-bold text-xs text-rose-300 border-b border-slate-800">
+                            <i class="fa-regular fa-circle mr-1.5"></i> VII. Đường tròn – các trường hợp
+                        </div>
+                        <div class="p-2 grid grid-cols-1 gap-1.5 text-xs">
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-rose-600/20 text-slate-200 border border-slate-800" data-cmd="tron_day_cung"><span>Đường tròn, bán kính và dây cung</span><span class="text-[10px] text-rose-300">Vẽ</span></button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-rose-600/20 text-slate-200 border border-slate-800" data-cmd="tron_tiep_tuyen"><span>Tiếp tuyến và bán kính vuông góc</span><span class="text-[10px] text-rose-300">Vẽ</span></button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-rose-600/20 text-slate-200 border border-slate-800" data-cmd="tron_cat_tuyen"><span>Cát tuyến và dây cung</span><span class="text-[10px] text-rose-300">Vẽ</span></button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-rose-600/20 text-slate-200 border border-slate-800" data-cmd="hai_tron_dong_tam"><span>Hai đường tròn đồng tâm</span><span class="text-[10px] text-rose-300">Vẽ</span></button>
+                            <button class="draw-concept-btn flex items-center justify-between p-2 rounded bg-slate-950 hover:bg-rose-600/20 text-slate-200 border border-slate-800" data-cmd="hai_tron_cat_nhau"><span>Hai đường tròn cắt nhau</span><span class="text-[10px] text-rose-300">Vẽ</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: CÔNG CỤ THỦ CÔNG TỔNG HỢP -->
+            <div id="tab-tools-content" class="flex-1 p-3 overflow-y-auto space-y-3 hidden">
+                <div class="bg-slate-900 p-3 rounded-xl border border-slate-800 space-y-2.5">
+                    <h2 class="text-xs font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
+                        <i class="fa-solid fa-toolbox"></i> Hộp công cụ thủ công nâng cao
+                    </h2>
+                    
+                    <div class="grid grid-cols-3 gap-1.5">
+                        <button class="tool-btn active-tool p-2 bg-emerald-600 text-white rounded-lg text-xs font-medium transition flex flex-col items-center gap-1" data-tool="select">
+                            <i class="fa-solid fa-arrow-pointer"></i> Chọn / Kéo
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex flex-col items-center gap-1" data-tool="point">
+                            <i class="fa-solid fa-circle-dot"></i> Điểm mới
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex flex-col items-center gap-1" data-tool="line">
+                            <i class="fa-solid fa-slash"></i> Đoạn thẳng
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex flex-col items-center gap-1" data-tool="dashline">
+                            <i class="fa-solid fa-ellipsis"></i> Nét đứt
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex flex-col items-center gap-1" data-tool="circle">
+                            <i class="fa-regular fa-circle"></i> Đường tròn
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex flex-col items-center gap-1" data-tool="midpoint">
+                            <i class="fa-solid fa-arrows-to-dot"></i> Trung điểm
+                        </button>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-1.5 pt-2 border-t border-slate-800">
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex items-center justify-center gap-1.5" data-tool="axis_oxy">
+                            <i class="fa-solid fa-chart-simple text-amber-400"></i> Bật/Tắt Trục Oxy
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex items-center justify-center gap-1.5" data-tool="half_plane">
+                            <i class="fa-solid fa-border-top-left text-indigo-400"></i> Miền nghiệm BPT
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex items-center justify-center gap-1.5" data-tool="altitude">
+                            <i class="fa-solid fa-ruler-vertical text-indigo-400"></i> Đường cao (A, B, C)
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex items-center justify-center gap-1.5" data-tool="median">
+                            <i class="fa-solid fa-bezier-curve text-indigo-400"></i> Trung tuyến (A, B, C)
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex items-center justify-center gap-1.5" data-tool="bisector">
+                            <i class="fa-solid fa-code-branch text-indigo-400"></i> Phân giác (A, B, C)
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex items-center justify-center gap-1.5" data-tool="orthocenter">
+                            <i class="fa-solid fa-asterisk text-indigo-400"></i> Trực tâm H (3 điểm)
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex items-center justify-center gap-1.5" data-tool="centroid">
+                            <i class="fa-solid fa-bullseye text-indigo-400"></i> Trọng tâm G (3 điểm)
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex items-center justify-center gap-1.5" data-tool="angle">
+                            <i class="fa-solid fa-angles-right text-amber-400"></i> Đo góc (3 điểm)
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex items-center justify-center gap-1.5" data-tool="circumcenter">
+                            <i class="fa-solid fa-circle-notch text-indigo-400"></i> Tròn ngoại tiếp (3 điểm)
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex items-center justify-center gap-1.5" data-tool="parallelogram">
+                            <i class="fa-solid fa-vector-square text-emerald-400"></i> Dựng Hình bình hành
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex items-center justify-center gap-1.5" data-tool="delete">
+                            <i class="fa-solid fa-eraser text-red-400"></i> Xóa đối tượng lẻ
+                        </button>
+                        <button class="tool-btn p-2 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-xs font-medium transition flex items-center justify-center gap-1.5 col-span-2" data-tool="pan">
+                            <i class="fa-solid fa-hand text-amber-400"></i> Kéo bản vẽ (Pan)
+                        </button>
+                    </div>
+
+                    <button id="btn-clear" class="w-full bg-red-500/20 hover:bg-red-500/30 text-red-300 border border-red-500/30 text-xs py-1.5 rounded-lg transition font-medium mt-2">
+                        <i class="fa-solid fa-trash-can mr-1"></i> Xóa toàn bộ bản vẽ
+                    </button>
+                </div>
+            </div>
+
+            <!-- TAB 3: GENERATIVE AI AUTO PARSER -->
+            <div id="tab-ai-content" class="flex-1 p-3 overflow-y-auto space-y-3 hidden">
+                <div class="bg-gradient-to-b from-indigo-950/60 to-slate-900 p-3.5 rounded-xl border border-indigo-500/30 space-y-3">
+                    <div class="flex items-center gap-2 text-indigo-300 font-bold text-xs uppercase tracking-wider">
+                        <i class="fa-solid fa-wand-magic-sparkles text-amber-400 text-sm"></i>
+                        Universal Geometry AI Engine
+                    </div>
+                    <p class="text-[11px] text-slate-400 leading-relaxed">
+                        Hỗ trợ mọi loại hình: Tam giác, Hình thoi, Hình bình hành, Hình thang, Hình chữ nhật, Ngũ giác, Lục giác, Hình chóp 3D... kèm tỉ lệ (ví dụ: <code class="text-amber-300 font-mono">AB = 2AC</code>, <code class="text-amber-300 font-mono">BC = 5</code>).
+                    </p>
+                    <textarea id="ai-input-text" rows="4" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 font-sans leading-relaxed" placeholder="Ví dụ: Cho hình chóp S.ABCD có đáy ABCD là hình thang cân..."></textarea>
+                    
+                    <div class="space-y-1">
+                        <span class="text-[10px] text-slate-400 font-medium">Mẫu đề bài đa dạng các loại hình:</span>
+                        <div class="flex flex-wrap gap-1 text-[10px]">
+                            <button class="ai-preset-btn px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-amber-300 rounded border border-slate-700" data-preset="Cho hình thoi MNPQ có MP = 2NQ.">Hình thoi MP = 2NQ</button>
+                            <button class="ai-preset-btn px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-indigo-300 rounded border border-slate-700" data-preset="Cho hình thang ABCD vuông tại A và D có AB = 2CD, đường cao AH.">Hình thang vuông AB = 2CD</button>
+                            <button class="ai-preset-btn px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded border border-slate-700" data-preset="Cho hình chóp S.ABCD có đáy ABCD là hình thoi.">Chóp S.ABCD (Đáy hình thoi)</button>
+                            <button class="ai-preset-btn px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-emerald-300 rounded border border-slate-700" data-preset="Cho hình chóp cụt S.ABCD.A'B'C'D'.">Chóp cụt 3D</button>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <button id="btn-ai-parse" class="flex-1 py-2.5 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-indigo-600/30 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-play"></i> Phân Tích & Sinh Hình
+                        </button>
+                        <button id="btn-ai-randomize" class="py-2.5 px-3 bg-amber-600 hover:bg-amber-500 text-white font-bold text-xs rounded-xl shadow-lg shadow-amber-600/30 transition flex items-center justify-center gap-1.5" title="Sinh biến thể góc nhìn ngẫu nhiên mới">
+                            <i class="fa-solid fa-dice"></i> 🎲 Đổi Hình Khác
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: THƯ VIỆN HÌNH KHÔNG GIAN 3D MỞ RỘNG -->
+            <div id="tab-3d-content" class="flex-1 p-3 overflow-y-auto space-y-3 hidden">
+                <div class="bg-slate-900 p-3 rounded-xl border border-cyan-500/30 space-y-3">
+                    <div class="flex items-center justify-between text-cyan-300 font-bold text-xs">
+                        <span><i class="fa-solid fa-cubes text-cyan-400 mr-1.5"></i> Thư viện Khối Không Gian 3D (Xoay tương tác)</span>
+                    </div>
+                    <p class="text-[11px] text-slate-400">Chọn khối 3D để hiển thị. Giữ chuột trái trên bản vẽ để xoay hình tự do mọi góc độ trong không gian!</p>
+
+                    <div class="grid grid-cols-1 gap-1.5 text-xs">
+                        <button class="draw-3d-btn p-2 rounded bg-slate-950 hover:bg-cyan-600/30 border border-slate-800 text-left flex items-center justify-between" data-shape="pyramid_square">
+                            <div><div class="font-bold text-slate-200">Hình Chóp S.ABCD</div><div class="text-[10px] text-slate-400">Đáy là Hình chữ nhật / Tứ giác</div></div>
+                            <i class="fa-solid fa-cube text-cyan-400"></i>
+                        </button>
+                        <button class="draw-3d-btn p-2 rounded bg-slate-950 hover:bg-cyan-600/30 border border-slate-800 text-left flex items-center justify-between" data-shape="pyramid_triangle">
+                            <div><div class="font-bold text-slate-200">Hình Chóp Tam Giác S.ABC</div><div class="text-[10px] text-slate-400">Tứ diện không gian chuẩn</div></div>
+                            <i class="fa-solid fa-play text-cyan-400 transform -rotate-90"></i>
+                        </button>
+                        <button class="draw-3d-btn p-2 rounded bg-slate-950 hover:bg-cyan-600/30 border border-slate-800 text-left flex items-center justify-between" data-shape="cube">
+                            <div><div class="font-bold text-slate-200">Hình Lập Phương / Hộp Chữ Nhật</div><div class="text-[10px] text-slate-400">ABCD.A'B'C'D'</div></div>
+                            <i class="fa-solid fa-vector-square text-cyan-400"></i>
+                        </button>
+                        <button class="draw-3d-btn p-2 rounded bg-slate-950 hover:bg-cyan-600/30 border border-slate-800 text-left flex items-center justify-between" data-shape="prism_triangle">
+                            <div><div class="font-bold text-slate-200">Hình Lăng Trụ Tam Giác</div><div class="text-[10px] text-slate-400">ABC.A'B'C'</div></div>
+                            <i class="fa-solid fa-shapes text-cyan-400"></i>
+                        </button>
+                        <button class="draw-3d-btn p-2 rounded bg-slate-950 hover:bg-cyan-600/30 border border-slate-800 text-left flex items-center justify-between" data-shape="pyramid_truncated">
+                            <div><div class="font-bold text-slate-200">Hình Chóp Cụt S.ABCD.A'B'C'D'</div><div class="text-[10px] text-slate-400">Khối chóp cụt đều / đa giác</div></div>
+                            <i class="fa-solid fa-layer-group text-amber-400"></i>
+                        </button>
+                        <button class="draw-3d-btn p-2 rounded bg-slate-950 hover:bg-cyan-600/30 border border-slate-800 text-left flex items-center justify-between" data-shape="prism_hexagonal">
+                            <div><div class="font-bold text-slate-200">Hình Lăng Trụ Lục Giác Đều</div><div class="text-[10px] text-slate-400">ABCDEF.A'B'C'D'E'F'</div></div>
+                            <i class="fa-solid fa-gem text-purple-400"></i>
+                        </button>
+                        <button class="draw-3d-btn p-2 rounded bg-slate-950 hover:bg-cyan-600/30 border border-slate-800 text-left flex items-center justify-between" data-shape="octahedron">
+                            <div><div class="font-bold text-slate-200">Hình Bát Diện Đều</div><div class="text-[10px] text-slate-400">Khối đa diện 8 mặt đều</div></div>
+                            <i class="fa-solid fa-diamond text-emerald-400"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Output -->
+            <div class="bg-slate-900 p-3 border-t border-slate-800 text-xs space-y-1.5">
+                <h3 class="font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+                    <i class="fa-solid fa-calculator text-indigo-400"></i> Thông số & Đơn vị độ dài
+                </h3>
+                <div id="stats-output" class="text-slate-300 space-y-1 font-mono max-h-36 overflow-y-auto">
+                    Sẵn sàng.
+                </div>
+            </div>
+
+            <div class="text-[10px] text-slate-500 border-t border-slate-800 p-2 text-center bg-slate-950">
+                MathGeo Studio v25.0 - Universal AI & 3D Extended
+            </div>
+        </aside>
+
+        <!-- Main Canvas Area -->
+        <main class="flex-1 canvas-bg relative overflow-hidden flex flex-col bg-slate-900">
+            <canvas id="geo-canvas" class="flex-1 cursor-crosshair"></canvas>
+
+            <div class="bg-slate-950/90 border-t border-slate-800 p-2.5 px-4 text-xs flex items-center justify-between text-slate-300">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-circle-info text-indigo-400"></i>
+                    <span id="guide-text">Nhập đề bài toán hình học vào ô AI hoặc chọn danh mục bên trái để hiển thị bản vẽ tương ứng!</span>
+                </div>
+                <div id="buffer-status" class="font-mono text-indigo-400 font-bold"></div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+    document.getElementById('btn-send-admin').addEventListener('click',()=>{
+      const c=document.getElementById('geo-canvas');
+      if(!window.opener){alert('Hãy mở Studio từ trang Admin để gửi hình.');return;}
+      try{window.opener.postMessage({type:'MATHWEB_GEOMETRY_PNG',image:c.toDataURL('image/png')},location.origin);alert('Đã chuyển hình về form Admin. Hãy lưu câu hỏi để ghi nhận hình.');}
+      catch(e){alert('Không thể xuất hình: '+e.message)}
+    });
+    </script>
+    <script>
+        const canvas = document.getElementById('geo-canvas');
+        const ctx = canvas.getContext('2d');
+        const statsOutput = document.getElementById('stats-output');
+        const btnExport = document.getElementById('btn-export');
+        const btnResetView = document.getElementById('btn-reset-view');
+        const btnZoomIn = document.getElementById('btn-zoom-in');
+        const btnZoomOut = document.getElementById('btn-zoom-out');
+        const zoomText = document.getElementById('zoom-text');
+        const btnClear = document.getElementById('btn-clear');
+        const btnUndo = document.getElementById('btn-undo');
+        const btnRedo = document.getElementById('btn-redo');
+        const guideText = document.getElementById('guide-text');
+        const bufferStatus = document.getElementById('buffer-status');
+
+        const unitValInput = document.getElementById('unit-val');
+        const unitNameInput = document.getElementById('unit-name');
+        const fxExprInput = document.getElementById('fx-expr');
+        const funcTypeSelect = document.getElementById('func-type');
+        const ineqSignSelect = document.getElementById('ineq-sign');
+        const btnApplyFx = document.getElementById('btn-apply-fx');
+
+        const tabConceptsBtn = document.getElementById('tab-concepts-btn');
+        const tabToolsBtn = document.getElementById('tab-tools-btn');
+        const tabAiBtn = document.getElementById('tab-ai-btn');
+        const tab3dBtn = document.getElementById('tab-3d-btn');
+
+        const tabConceptsContent = document.getElementById('tab-concepts-content');
+        const tabToolsContent = document.getElementById('tab-tools-content');
+        const tabAiContent = document.getElementById('tab-ai-content');
+        const tab3dContent = document.getElementById('tab-3d-content');
+
+        const viewMode2dBtn = document.getElementById('view-mode-2d');
+        const viewMode3dBtn = document.getElementById('view-mode-3d');
+        let currentMode = '2D';
+
+        function setTabActive(activeBtn, activeContent) {
+            [tabConceptsBtn, tabToolsBtn, tabAiBtn, tab3dBtn].forEach(b => {
+                b.className = "flex-1 py-2 text-xs font-semibold text-slate-400 hover:text-slate-200 border-b-2 border-transparent transition flex items-center justify-center gap-1";
+            });
+            [tabConceptsContent, tabToolsContent, tabAiContent, tab3dContent].forEach(c => c.classList.add('hidden'));
+
+            activeBtn.className = "flex-1 py-2 text-xs font-bold text-indigo-400 border-b-2 border-indigo-500 bg-slate-900 transition flex items-center justify-center gap-1";
+            activeContent.classList.remove('hidden');
+        }
+
+        tabConceptsBtn.addEventListener('click', () => { setTabActive(tabConceptsBtn, tabConceptsContent); switchMode('2D'); });
+        tabToolsBtn.addEventListener('click', () => { setTabActive(tabToolsBtn, tabToolsContent); switchMode('2D'); });
+        tabAiBtn.addEventListener('click', () => { setTabActive(tabAiBtn, tabAiContent); switchMode('2D'); });
+        tab3dBtn.addEventListener('click', () => { setTabActive(tab3dBtn, tab3dContent); switchMode('3D'); });
+
+        function switchMode(mode) {
+            currentMode = mode;
+            if (mode === '2D') {
+                viewMode2dBtn.className = "px-3 py-1 bg-indigo-600 text-white rounded transition shadow";
+                viewMode3dBtn.className = "px-3 py-1 text-slate-400 hover:text-white rounded transition";
+                document.getElementById('bar-fx-container').style.display = 'flex';
+            } else {
+                viewMode3dBtn.className = "px-3 py-1 bg-cyan-600 text-white rounded transition shadow";
+                viewMode2dBtn.className = "px-3 py-1 text-slate-400 hover:text-white rounded transition";
+                document.getElementById('bar-fx-container').style.display = 'none';
+                if (!mode3D.currentShape) init3DShape('pyramid_square');
+            }
+            draw(); updateStats();
+        }
+
+        viewMode2dBtn.addEventListener('click', () => switchMode('2D'));
+        viewMode3dBtn.addEventListener('click', () => switchMode('3D'));
+
+        document.querySelectorAll('.tool-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tool-btn').forEach(b => b.classList.remove('bg-emerald-600', 'active-tool'));
+                btn.classList.add('bg-emerald-600', 'active-tool');
+                currentTool = btn.dataset.tool;
+                if (currentTool === 'axis_oxy') {
+                    showOxyAxis = !showOxyAxis;
+                    draw(); updateStats();
+                }
+                selectedPointsBuffer = [];
+                updateGuideUI();
+                draw();
+            });
+        });
+
+        document.getElementById('concept-search').addEventListener('input', (e) => {
+            const keyword = e.target.value.toLowerCase();
+            document.querySelectorAll('.draw-concept-btn').forEach(btn => {
+                const text = btn.innerText.toLowerCase();
+                btn.style.display = text.includes(keyword) ? 'flex' : 'none';
+            });
+        });
+
+        const GRID_SIZE = 24;
+        let points = {}, lines = [], circles = [], rightAngleSigns = [], measuredAngles = [], vectors = [], functionsData = [], ellipses = [], halfPlanes = [];
+        let showOxyAxis = false;
+        let lastCreatedPointName = null;
+
+        let zoom = 1, panX = 0, panY = 0;
+        let currentTool = 'select';
+        let draggedPoint = null;
+        let isPanning = false;
+        let startPanX = 0, startPanY = 0;
+        let selectedPointsBuffer = [];
+        let pointCounter = 0;
+
+        let historyStack = [];
+        let redoStack = [];
+
+        let mode3D = {
+            rotX: 0.35,
+            rotY: -0.45,
+            isRotating: false,
+            lastMouseX: 0,
+            lastMouseY: 0,
+            currentShape: null,
+            nodes: {},
+            edges: []
+        };
+
+        function getUnitScale() {
+            const val = parseFloat(unitValInput.value) || 1;
+            const name = unitNameInput.value.trim() || 'đv';
+            return { val, name };
+        }
+
+        unitValInput.addEventListener('input', () => { draw(); updateStats(); });
+        unitNameInput.addEventListener('input', () => { draw(); updateStats(); });
+
+        function saveState() {
+            historyStack.push(JSON.stringify({ points, lines, circles, rightAngleSigns, measuredAngles, vectors, functionsData, ellipses, halfPlanes, showOxyAxis, lastCreatedPointName }));
+            if (historyStack.length > 40) historyStack.shift();
+            redoStack = [];
+            updateUndoRedoButtons();
+        }
+
+        function updateUndoRedoButtons() {
+            btnUndo.disabled = historyStack.length === 0;
+            btnRedo.disabled = redoStack.length === 0;
+        }
+
+        btnUndo.addEventListener('click', () => {
+            if (historyStack.length === 0) return;
+            redoStack.push(JSON.stringify({ points, lines, circles, rightAngleSigns, measuredAngles, vectors, functionsData, ellipses, halfPlanes, showOxyAxis, lastCreatedPointName }));
+            const prevState = JSON.parse(historyStack.pop());
+            points = prevState.points; lines = prevState.lines; circles = prevState.circles; rightAngleSigns = prevState.rightAngleSigns || []; measuredAngles = prevState.measuredAngles || []; vectors = prevState.vectors || []; functionsData = prevState.functionsData || []; ellipses = prevState.ellipses || []; halfPlanes = prevState.halfPlanes || []; showOxyAxis = prevState.showOxyAxis || false; lastCreatedPointName = prevState.lastCreatedPointName || null;
+            updateUndoRedoButtons(); draw(); updateStats();
+        });
+
+        btnRedo.addEventListener('click', () => {
+            if (redoStack.length === 0) return;
+            historyStack.push(JSON.stringify({ points, lines, circles, rightAngleSigns, measuredAngles, vectors, functionsData, ellipses, halfPlanes, showOxyAxis, lastCreatedPointName }));
+            const nextState = JSON.parse(redoStack.pop());
+            points = nextState.points; lines = nextState.lines; circles = nextState.circles; rightAngleSigns = nextState.rightAngleSigns || []; measuredAngles = nextState.measuredAngles || []; vectors = nextState.vectors || []; functionsData = nextState.functionsData || []; ellipses = nextState.ellipses || []; halfPlanes = nextState.halfPlanes || []; showOxyAxis = nextState.showOxyAxis || false; lastCreatedPointName = nextState.lastCreatedPointName || null;
+            updateUndoRedoButtons(); draw(); updateStats();
+        });
+
+        const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        function getNextPointName(prefix = "") {
+            if (prefix) {
+                if (!points[prefix]) return prefix;
+                let c = 1;
+                while (points[prefix + c]) c++;
+                return prefix + c;
+            }
+            const names = Object.keys(points);
+            for (let char of alphabet) {
+                if (!names.includes(char)) return char;
+            }
+            return "P" + (++pointCounter);
+        }
+
+        function resizeCanvas() {
+            const dpr = window.devicePixelRatio || 1;
+            const displayWidth = canvas.parentElement.clientWidth;
+            const displayHeight = canvas.parentElement.clientHeight;
+            canvas.width = displayWidth * dpr;
+            canvas.height = displayHeight * dpr;
+            canvas.style.width = displayWidth + 'px';
+            canvas.style.height = displayHeight + 'px';
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            draw();
+        }
+        window.addEventListener('resize', resizeCanvas);
+
+        function getCanvasCoordinates(e) {
+            const rect = canvas.getBoundingClientRect();
+            return {
+                x: (e.clientX - rect.left - panX) / zoom,
+                y: (e.clientY - rect.top - panY) / zoom
+            };
+        }
+
+        function getSnapPosition(x, y) {
+            for (let name in points) {
+                const p = points[name];
+                if (Math.hypot(p.x - x, p.y - y) <= 24 / zoom) return { x: p.x, y: p.y, pointName: name };
+            }
+            return { x: Math.round(x / GRID_SIZE) * GRID_SIZE, y: Math.round(y / GRID_SIZE) * GRID_SIZE, pointName: null };
+        }
+
+        const TOOL_GUIDES = {
+            'select': 'Kéo thả điểm để di chuyển hoặc kéo vùng trống để cuộn bản vẽ.',
+            'point': 'Nhấp để tạo điểm; điểm sẽ tự căn vào giao điểm chấm lưới. Khi zoom/pan, lưới đi cùng hình.',
+            'line': 'Nhấp chọn lần lượt 2 điểm để tạo Đoạn thẳng.',
+            'dashline': 'Nhấp chọn 2 điểm để tạo Nét đứt.',
+            'circle': 'Nhấp chọn hoặc tạo tâm O, sau đó nhấp chọn hoặc tạo điểm A trên đường tròn.',
+            'midpoint': 'Nhấp chọn 2 điểm bất kỳ để tạo Trung điểm.',
+            'axis_oxy': 'Bật/Tắt hiển thị Trục tọa độ Oxy chuẩn.',
+            'half_plane': 'Dựng đường thẳng & gạch chéo miền nghiệm BPT.',
+            'altitude': 'Nhấp Đỉnh A -> 2 điểm Đáy B, C để dựng Đường cao AH.',
+            'median': 'Nhấp Đỉnh A -> 2 điểm Đáy B, C để dựng Trung tuyến AM.',
+            'bisector': 'Nhấp Đỉnh A -> 2 điểm Đáy B, C để dựng Phân giác AD.',
+            'orthocenter': 'Nhấp 3 đỉnh Tam giác A, B, C để tìm Trực tâm H.',
+            'centroid': 'Nhấp 3 đỉnh Tam giác A, B, C để tìm Trọng tâm G.',
+            'angle': 'Nhấp 3 điểm (Điểm 1 -> Đỉnh -> Điểm 2) để đo góc.',
+            'circumcenter': 'Nhấp 3 đỉnh Tam giác để dựng Tròn ngoại tiếp.',
+            'parallelogram': 'Nhấp 3 điểm A, B, C để tự động dựng đỉnh D tạo hình bình hành ABCD.',
+            'delete': 'Nhấp vào Điểm để xóa đối tượng.',
+            'pan': 'Giữ chuột trái để kéo cuộn bản vẽ theo mọi hướng.'
+        };
+
+        function updateGuideUI() {
+            guideText.innerHTML = TOOL_GUIDES[currentTool] || '';
+            let bufText = selectedPointsBuffer.length > 0 ? `Đã chọn: ${selectedPointsBuffer.join(', ')}` : '';
+            if (lastCreatedPointName) bufText += ` | Điểm vừa dùng: ${lastCreatedPointName}`;
+            bufferStatus.innerText = bufText;
+        }
+
+        function applyCustomFunctionInequality() {
+            saveState();
+            points = {}; lines = []; circles = []; rightAngleSigns = []; measuredAngles = []; vectors = []; functionsData = []; ellipses = []; halfPlanes = [];
+            showOxyAxis = true;
+
+            const fType = funcTypeSelect.value;
+            const rawExpr = fxExprInput.value.trim().toLowerCase();
+            const sign = ineqSignSelect.value;
+
+            let evalFunc = (x) => {
+                try {
+                    // Chỉ chấp nhận đa thức bậc <= 2, không thực thi mã JavaScript từ ô nhập.
+                    const compact = rawExpr.replace(/\s+/g, '').replace(/−/g, '-').replace(/²/g, '^2');
+                    if (!/^[0-9x+*.^-]+$/.test(compact)) throw new Error('Biểu thức không hợp lệ');
+                    const terms = compact.replace(/-/g, '+-').split('+').filter(Boolean);
+                    let result = 0;
+                    for (const term of terms) {
+                        const m = term.match(/^(-?(?:\d+(?:\.\d+)?)?)\*?x(?:\^([12]))?$/);
+                        if (m) { const coefficient = m[1] === '' ? 1 : m[1] === '-' ? -1 : Number(m[1]); result += coefficient * Math.pow(x, Number(m[2] || 1)); }
+                        else if (/^-?\d+(?:\.\d+)?$/.test(term)) result += Number(term);
+                        else throw new Error('Chỉ hỗ trợ đa thức bậc 1 hoặc 2');
+                    }
+                    return result;
+                } catch(e) {
+                    return fType === 'parabola' ? -x*x + 4 : -x + 3;
+                }
+            };
+
+            functionsData.push({ type: fType, expr: rawExpr, sign: sign, eval: evalFunc });
+            draw(); updateStats();
+        }
+
+        btnApplyFx.addEventListener('click', applyCustomFunctionInequality);
+
+        function parseCommand(cmd) {
+            saveState();
+            points = {}; lines = []; circles = []; rightAngleSigns = []; measuredAngles = []; vectors = []; functionsData = []; ellipses = []; halfPlanes = [];
+            showOxyAxis = false;
+            lastCreatedPointName = null;
+
+            const displayW = canvas.parentElement.clientWidth;
+            const displayH = canvas.parentElement.clientHeight;
+            const cx = Math.round((displayW / 2) / GRID_SIZE) * GRID_SIZE;
+            const cy = Math.round((displayH / 2) / GRID_SIZE) * GRID_SIZE;
+
+            switch(cmd) {
+                case 'he_truc_oxy':
+                    showOxyAxis = true;
+                    points['O'] = { x: cx, y: cy };
+                    points['A'] = { x: cx + 96, y: cy - 96 };
+                    vectors.push({ from: 'O', to: 'A' });
+                    lastCreatedPointName = 'A';
+                    break;
+                case 'mien_nghiem_parabola':
+                    showOxyAxis = true;
+                    funcTypeSelect.value = 'parabola';
+                    fxExprInput.value = '-x^2 + 4';
+                    ineqSignSelect.value = '<=';
+                    applyCustomFunctionInequality();
+                    return;
+                case 'mien_nghiem_bpt':
+                    showOxyAxis = true;
+                    funcTypeSelect.value = 'linear';
+                    fxExprInput.value = '-x + 3';
+                    ineqSignSelect.value = '<=';
+                    applyCustomFunctionInequality();
+                    return;
+                case 'ba_diem_thang_hang':
+                    points['A'] = { x: cx - 120, y: cy }; points['B'] = { x: cx, y: cy }; points['C'] = { x: cx + 120, y: cy };
+                    lines.push({p1: 'A', p2: 'C'}); lastCreatedPointName = 'C'; break;
+                case 'duong_vuong_góc':
+                    points['O'] = { x: cx, y: cy }; points['A'] = { x: cx - 144, y: cy - 72 }; points['B'] = { x: cx + 144, y: cy - 72 };
+                    points['C'] = { x: cx - 144, y: cy + 72 }; points['D'] = { x: cx + 144, y: cy + 72 };
+                    lines.push({p1: 'A', p2: 'B'}, {p1: 'C', p2: 'D'}); rightAngleSigns.push({ vertex: 'O', p1: 'A', p2: 'C' });
+                    lastCreatedPointName = 'D'; break;
+                case 'tg_vuong_can':
+                    points['A'] = { x: cx, y: cy - 120 }; points['B'] = { x: cx - 120, y: cy + 120 }; points['C'] = { x: cx + 120, y: cy + 120 }; points['H'] = { x: cx, y: cy + 120 };
+                    lines.push({p1: 'A', p2: 'B'}, {p1: 'B', p2: 'C'}, {p1: 'C', p2: 'A'}, {p1: 'A', p2: 'H', dashed: true});
+                    rightAngleSigns.push({ vertex: 'A', p1: 'B', p2: 'C' }, { vertex: 'H', p1: 'A', p2: 'C' });
+                    lastCreatedPointName = 'H'; break;
+                case 'tg_trung_tuyen':
+                    points['A'] = { x: cx, y: cy - 120 }; points['B'] = { x: cx - 144, y: cy + 96 }; points['C'] = { x: cx + 144, y: cy + 96 };
+                    points['M'] = { x: cx, y: cy + 96 }; points['G'] = { x: cx, y: cy + 24 };
+                    lines.push({p1: 'A', p2: 'B'}, {p1: 'B', p2: 'C'}, {p1: 'C', p2: 'A'}, {p1: 'A', p2: 'M', dashed: true});
+                    lastCreatedPointName = 'G'; break;
+                case 'tg_noi_ngoai_tiep':
+                    points['O'] = { x: cx, y: cy }; points['A'] = { x: cx, y: cy - 120 }; points['B'] = { x: cx - 104, y: cy + 60 }; points['C'] = { x: cx + 104, y: cy + 60 };
+                    circles.push({ center: 'O', r: 120 }); lines.push({p1: 'A', p2: 'B'}, {p1: 'B', p2: 'C'}, {p1: 'C', p2: 'A'});
+                    lastCreatedPointName = 'C'; break;
+                case 'hinh_chu_nhat':
+                    points['A'] = { x: cx - 120, y: cy - 72 }; points['B'] = { x: cx + 120, y: cy - 72 }; points['C'] = { x: cx + 120, y: cy + 72 }; points['D'] = { x: cx - 120, y: cy + 72 };
+                    lines.push({p1: 'A', p2: 'B'}, {p1: 'B', p2: 'C'}, {p1: 'C', p2: 'D'}, {p1: 'D', p2: 'A'}, {p1: 'A', p2: 'C', dashed: true}, {p1: 'B', p2: 'D', dashed: true});
+                    rightAngleSigns.push({ vertex: 'A', p1: 'D', p2: 'B' }); lastCreatedPointName = 'D'; break;
+                case 'hinh_vuong':
+                    points['A'] = { x: cx - 96, y: cy - 96 }; points['B'] = { x: cx + 96, y: cy - 96 }; points['C'] = { x: cx + 96, y: cy + 96 }; points['D'] = { x: cx - 96, y: cy + 96 };
+                    lines.push({p1: 'A', p2: 'B'}, {p1: 'B', p2: 'C'}, {p1: 'C', p2: 'D'}, {p1: 'D', p2: 'A'}, {p1: 'A', p2: 'C', dashed: true});
+                    rightAngleSigns.push({ vertex: 'A', p1: 'D', p2: 'B' }); lastCreatedPointName = 'D'; break;
+                case 'hinh_thoi':
+                    points['A'] = { x: cx, y: cy - 120 }; points['B'] = { x: cx + 96, y: cy }; points['C'] = { x: cx, y: cy + 120 }; points['D'] = { x: cx - 96, y: cy };
+                    lines.push({p1: 'A', p2: 'B'}, {p1: 'B', p2: 'C'}, {p1: 'C', p2: 'D'}, {p1: 'D', p2: 'A'}, {p1: 'A', p2: 'C', dashed: true}, {p1: 'B', p2: 'D', dashed: true});
+                    lastCreatedPointName = 'D'; break;
+                case 'hinh_chop_sabcd':
+                    points['S'] = { x: cx, y: cy - 144 }; points['A'] = { x: cx - 120, y: cy + 24 }; points['B'] = { x: cx - 24, y: cy + 96 }; points['C'] = { x: cx + 120, y: cy + 96 }; points['D'] = { x: cx + 24, y: cy + 24 };
+                    lines.push({p1: 'S', p2: 'A'}, {p1: 'S', p2: 'B'}, {p1: 'S', p2: 'C'}, {p1: 'S', p2: 'D', dashed: true}, {p1: 'A', p2: 'B'}, {p1: 'B', p2: 'C'}, {p1: 'C', p2: 'D'}, {p1: 'A', p2: 'D', dashed: true});
+                    lastCreatedPointName = 'D'; break;
+                case 'elip_standard':
+                    showOxyAxis = true; ellipses.push({ rx: 144, ry: 72 }); break;
+                case 'parabola_standard':
+                    showOxyAxis = true; functionsData.push({ type: 'parabola', expr: 'x^2', sign: '=', eval: (x) => x*x }); break;
+                case 'goc_nhon': case 'goc_vuong': case 'goc_tu': case 'goc_bet': {
+                    const angle = cmd === 'goc_nhon' ? 35 : cmd === 'goc_vuong' ? 90 : cmd === 'goc_tu' ? 125 : 180;
+                    points['O'] = {x: cx - 55, y: cy + 35}; points['A'] = {x: cx + 125, y: cy + 35};
+                    const rad = -angle * Math.PI / 180; points['B'] = {x: points.O.x + 180*Math.cos(rad), y: points.O.y + 180*Math.sin(rad)};
+                    lines.push({p1:'O',p2:'A'}, {p1:'O',p2:'B'}); measuredAngles.push({p1:'A',vertex:'O',p2:'B'}); lastCreatedPointName = 'B'; break;
+                }
+                case 'tam_giac_deu': {
+                    points['A']={x:cx,y:cy-125}; points['B']={x:cx-108,y:cy+62}; points['C']={x:cx+108,y:cy+62};
+                    lines.push({p1:'A',p2:'B'},{p1:'B',p2:'C'},{p1:'C',p2:'A'}); lastCreatedPointName='C'; break;
+                }
+                case 'tam_giac_can': {
+                    points['A']={x:cx,y:cy-130}; points['B']={x:cx-125,y:cy+70}; points['C']={x:cx+125,y:cy+70}; points['H']={x:cx,y:cy+70};
+                    lines.push({p1:'A',p2:'B'},{p1:'B',p2:'C'},{p1:'C',p2:'A'},{p1:'A',p2:'H',dashed:true,color:'#38bdf8'});
+                    rightAngleSigns.push({vertex:'H',p1:'A',p2:'C'}); lastCreatedPointName='H'; break;
+                }
+                case 'hinh_thang_can': {
+                    points['A']={x:cx-145,y:cy+75}; points['B']={x:cx+145,y:cy+75}; points['C']={x:cx+85,y:cy-75}; points['D']={x:cx-85,y:cy-75};
+                    lines.push({p1:'A',p2:'B'},{p1:'B',p2:'C'},{p1:'C',p2:'D'},{p1:'D',p2:'A'}); lastCreatedPointName='D'; break;
+                }
+                case 'ngu_giac_deu': case 'luc_giac_deu': {
+                    const n = cmd === 'ngu_giac_deu' ? 5 : 6, r = 125;
+                    for(let i=0;i<n;i++){const a=-Math.PI/2+i*2*Math.PI/n;points[String.fromCharCode(65+i)]={x:cx+r*Math.cos(a),y:cy+r*Math.sin(a)};}
+                    for(let i=0;i<n;i++) lines.push({p1:String.fromCharCode(65+i),p2:String.fromCharCode(65+(i+1)%n)});
+                    lastCreatedPointName=String.fromCharCode(64+n); break;
+                }
+                case 'tron_day_cung': {
+                    points['O']={x:cx,y:cy}; points['A']={x:cx,y:cy-125}; points['B']={x:cx+125,y:cy}; points['C']={x:cx-88,y:cy-88}; points['D']={x:cx+88,y:cy-88};
+                    circles.push({center:'O',r:125}); lines.push({p1:'O',p2:'A',dashed:true,color:'#facc15'},{p1:'C',p2:'D'}); lastCreatedPointName='D'; break;
+                }
+                case 'tron_tiep_tuyen': {
+                    points['O']={x:cx-45,y:cy+35}; points['A']={x:cx+45,y:cy-55}; points['T1']={x:cx+109,y:cy+9}; points['T2']={x:cx-19,y:cy-119};
+                    circles.push({center:'O',r:127.28}); lines.push({p1:'O',p2:'A',dashed:true,color:'#facc15'},{p1:'T1',p2:'T2'}); rightAngleSigns.push({vertex:'A',p1:'O',p2:'T1'}); lastCreatedPointName='T1'; break;
+                }
+                case 'tron_cat_tuyen': {
+                    points['O']={x:cx,y:cy}; points['A']={x:cx-155,y:cy-48}; points['B']={x:cx+155,y:cy-48}; points['C']={x:cx-110,y:cy+62}; points['D']={x:cx+88,y:cy-88};
+                    circles.push({center:'O',r:125}); lines.push({p1:'A',p2:'B'},{p1:'C',p2:'D'}); lastCreatedPointName='D'; break;
+                }
+                case 'hai_tron_dong_tam': {
+                    points['O']={x:cx,y:cy}; circles.push({center:'O',r:135,color:'#818cf8'},{center:'O',r:78,color:'#f472b6'}); lastCreatedPointName='O'; break;
+                }
+                case 'hai_tron_cat_nhau': {
+                    points['O']={x:cx-58,y:cy}; points['P']={x:cx+58,y:cy}; circles.push({center:'O',r:105,color:'#818cf8'},{center:'P',r:105,color:'#f472b6'}); lines.push({p1:'O',p2:'P',dashed:true,color:'#facc15'}); lastCreatedPointName='P'; break;
+                }
+                case 'lap_phuong': {
+                    const A={x:cx-105,y:cy-70},B={x:cx+35,y:cy-70},C={x:cx+35,y:cy+70},D={x:cx-105,y:cy+70};
+                    const dx=65,dy=-55; const names=['A','B','C','D']; [A,B,C,D].forEach((p,i)=>points[names[i]]=p);
+                    points['E']={x:A.x+dx,y:A.y+dy}; points['F']={x:B.x+dx,y:B.y+dy}; points['G']={x:C.x+dx,y:C.y+dy}; points['H']={x:D.x+dx,y:D.y+dy};
+                    lines.push({p1:'A',p2:'B'},{p1:'B',p2:'C'},{p1:'C',p2:'D'},{p1:'D',p2:'A'},{p1:'E',p2:'F'},{p1:'F',p2:'G'},{p1:'G',p2:'H'},{p1:'H',p2:'E'},{p1:'A',p2:'E'},{p1:'B',p2:'F'},{p1:'C',p2:'G'},{p1:'D',p2:'H',dashed:true}); lastCreatedPointName='H'; break;
+                }
+                case 'lang_tru_tam_giac': {
+                    points['A']={x:cx-125,y:cy+55}; points['B']={x:cx-35,y:cy+105}; points['C']={x:cx+25,y:cy+10};
+                    points['A1']={x:cx-55,y:cy-35}; points['B1']={x:cx+35,y:cy+15}; points['C1']={x:cx+95,y:cy-80};
+                    lines.push({p1:'A',p2:'B'},{p1:'B',p2:'C'},{p1:'C',p2:'A'},{p1:'A1',p2:'B1'},{p1:'B1',p2:'C1'},{p1:'C1',p2:'A1'},{p1:'A',p2:'A1'},{p1:'B',p2:'B1'},{p1:'C',p2:'C1'}); lastCreatedPointName='C1'; break;
+                }
+            }
+            updateGuideUI(); draw(); updateStats();
+        }
+
+        document.querySelectorAll('.draw-concept-btn').forEach(btn => {
+            btn.addEventListener('click', () => parseCommand(btn.dataset.cmd));
+        });
+
+        // --- UNIVERSAL GEOMETRY AI ENGINE (PARSER NÂNG CẤP MỌI HÌNH & TỈ LỆ) ---
+        const aiInputText = document.getElementById('ai-input-text');
+        const btnAiParse = document.getElementById('btn-ai-parse');
+        const btnAiRandomize = document.getElementById('btn-ai-randomize');
+
+        document.querySelectorAll('.ai-preset-btn').forEach(btn => {
+            btn.addEventListener('click', () => { aiInputText.value = btn.dataset.preset; });
+        });
+
+        function parseRatiosAndNumbers(text) {
+            const ratios = {};
+            const lengths = {};
+            const ratioRegex = /([A-Z]{2})\s*=\s*([\d\.]+)\s*\*?\s*([A-Z]{2})/gi;
+            let match;
+            while ((match = ratioRegex.exec(text)) !== null) {
+                ratios[match[1].toUpperCase()] = { target: match[3].toUpperCase(), factor: parseFloat(match[2]) };
+            }
+            const lengthRegex = /([A-Z]{2}|R|r)\s*=\s*([\d\.]+)/gi;
+            while ((match = lengthRegex.exec(text)) !== null) {
+                lengths[match[1].toUpperCase()] = parseFloat(match[2]);
+            }
+            return { ratios, lengths };
+        }
+
+        function extractVertexNames(text) {
+            const matches = text.match(/\b[A-Z]{3,8}\b/g) || [];
+            if (matches.length > 0) return matches[0].split('');
+            return ['A', 'B', 'C', 'D', 'E', 'F'];
+        }
+
+        function runGenerativeAIEngine(isRandomVariation = false) {
+            const text = aiInputText.value.trim();
+            if (!text) return;
+            saveState();
+            points = {}; lines = []; circles = []; rightAngleSigns = []; measuredAngles = []; functionsData = [];
+            showOxyAxis = false;
+            
+            const displayW = canvas.parentElement.clientWidth;
+            const displayH = canvas.parentElement.clientHeight;
+            const cx = Math.round((displayW / 2) / GRID_SIZE) * GRID_SIZE;
+            const cy = Math.round((displayH / 2) / GRID_SIZE) * GRID_SIZE;
+
+            const textLower = text.toLowerCase();
+            const { ratios, lengths } = parseRatiosAndNumbers(text);
+            const vNames = extractVertexNames(text);
+
+            const rndX = isRandomVariation ? (Math.random() - 0.5) * 50 : 0;
+            const rndY = isRandomVariation ? (Math.random() - 0.5) * 50 : 0;
+
+            // 1. XỬ LÝ HÌNH HỌC KHÔNG GIAN (3D MỞ RỘNG)
+            if (textLower.includes("chóp cụt") || textLower.includes("chop cut")) {
+                switchMode('3D');
+                if (isRandomVariation) { mode3D.rotX = 0.2 + Math.random() * 0.4; mode3D.rotY = -0.8 + Math.random() * 0.8; }
+                init3DShape('pyramid_truncated');
+            } else if (textLower.includes("lục giác đều") || textLower.includes("luc giac")) {
+                switchMode('3D');
+                if (isRandomVariation) { mode3D.rotX = 0.2 + Math.random() * 0.4; mode3D.rotY = -0.8 + Math.random() * 0.8; }
+                init3DShape('prism_hexagonal');
+            } else if (textLower.includes("bát diện") || textLower.includes("bat dien")) {
+                switchMode('3D');
+                if (isRandomVariation) { mode3D.rotX = 0.2 + Math.random() * 0.4; mode3D.rotY = -0.8 + Math.random() * 0.8; }
+                init3DShape('octahedron');
+            } else if (textLower.includes("chóp") || textLower.includes("chop") || textLower.includes("tứ diện") || textLower.includes("lăng trụ") || textLower.includes("lập phương")) {
+                switchMode('3D');
+                if (isRandomVariation) {
+                    mode3D.rotX = 0.2 + Math.random() * 0.4;
+                    mode3D.rotY = -0.8 + Math.random() * 0.8;
+                }
+                if (textLower.includes("chóp tam giác") || textLower.includes("tứ diện")) {
+                    init3DShape('pyramid_triangle');
+                } else if (textLower.includes("lăng trụ")) {
+                    init3DShape('prism_triangle');
+                } else if (textLower.includes("lập phương")) {
+                    init3DShape('cube');
+                } else {
+                    init3DShape('pyramid_square');
+                }
+            } 
+            // 2. XỬ LÝ HÌNH THANG (CÂN, VUÔNG, THƯỜNG)
+            else if (textLower.includes("hình thang") || textLower.includes("hinh thang")) {
+                switchMode('2D');
+                const [pA, pB, pC, pD] = vNames.length >= 4 ? vNames : ['A', 'B', 'C', 'D'];
+                const topW = (lengths[pA+pB] || 100) + rndX;
+                const botW = ratios[pC+pD] ? topW * ratios[pC+pD].factor : (topW * 1.8);
+                const h = 100 + rndY;
+
+                if (textLower.includes("vuông")) {
+                    points[pA] = { x: cx - botW/2, y: cy - h/2 };
+                    points[pB] = { x: cx - botW/2 + topW, y: cy - h/2 };
+                    points[pC] = { x: cx + botW/2, y: cy + h/2 };
+                    points[pD] = { x: cx - botW/2, y: cy + h/2 };
+                    rightAngleSigns.push({ vertex: pA, p1: pB, p2: pD }, { vertex: pD, p1: pA, p2: pC });
+                } else if (textLower.includes("cân")) {
+                    const offset = (botW - topW) / 2;
+                    points[pA] = { x: cx - topW/2, y: cy - h/2 };
+                    points[pB] = { x: cx + topW/2, y: cy - h/2 };
+                    points[pC] = { x: cx + topW/2 + offset, y: cy + h/2 };
+                    points[pD] = { x: cx - topW/2 - offset, y: cy + h/2 };
+                } else {
+                    points[pA] = { x: cx - topW/2 - 20, y: cy - h/2 };
+                    points[pB] = { x: cx + topW/2 - 20, y: cy - h/2 };
+                    points[pC] = { x: cx + botW/2 + 20, y: cy + h/2 };
+                    points[pD] = { x: cx - botW/2, y: cy + h/2 };
+                }
+                lines.push({p1:pA, p2:pB}, {p1:pB, p2:pC}, {p1:pC, p2:pD}, {p1:pD, p2:pA});
+            }
+            // 3. XỬ LÝ HÌNH THOI
+            else if (textLower.includes("hình thoi") || textLower.includes("hinh thoi")) {
+                switchMode('2D');
+                const [pA, pB, pC, pD] = vNames.length >= 4 ? vNames : ['A', 'B', 'C', 'D'];
+                const d1 = 150 + rndX;
+                const d2 = 90 + rndY;
+                points[pA] = { x: cx, y: cy - d1 / 2 };
+                points[pB] = { x: cx + d2 / 2, y: cy };
+                points[pC] = { x: cx, y: cy + d1 / 2 };
+                points[pD] = { x: cx - d2 / 2, y: cy };
+                lines.push({p1:pA, p2:pB}, {p1:pB, p2:pC}, {p1:pC, p2:pD}, {p1:pD, p2:pA});
+                lines.push({p1:pA, p2:pC, dashed: true, color: '#64748b'}, {p1:pB, p2:pD, dashed: true, color: '#64748b'});
+                points['O'] = { x: cx, y: cy };
+                rightAngleSigns.push({ vertex: 'O', p1: pA, p2: pB });
+            }
+            // 4. XỬ LÝ HÌNH BÌNH HÀNH
+            else if (textLower.includes("hình bình hành") || textLower.includes("hinh binh hanh")) {
+                switchMode('2D');
+                const [pA, pB, pC, pD] = vNames.length >= 4 ? vNames : ['A', 'B', 'C', 'D'];
+                const w = (lengths[pA+pB] || 6) * 24;
+                const h = 90 + rndY;
+                const skew = 45 + rndX;
+                points[pA] = { x: cx - w/2 - skew/2, y: cy - h/2 };
+                points[pB] = { x: cx + w/2 - skew/2, y: cy - h/2 };
+                points[pC] = { x: cx + w/2 + skew/2, y: cy + h/2 };
+                points[pD] = { x: points[pA].x + points[pC].x - points[pB].x, y: points[pA].y + points[pC].y - points[pB].y };
+                lines.push({p1:pA, p2:pB}, {p1:pB, p2:pC}, {p1:pC, p2:pD}, {p1:pD, p2:pA});
+            }
+            // 5. XỬ LÝ HÌNH CHỮ NHẬT / HÌNH VUÔNG
+            else if (textLower.includes("hình chữ nhật") || textLower.includes("hinh chu nhat") || textLower.includes("hình vuông") || textLower.includes("hinh vuong")) {
+                switchMode('2D');
+                const [pA, pB, pC, pD] = vNames.length >= 4 ? vNames : ['A', 'B', 'C', 'D'];
+                const isSquare = textLower.includes("vuông");
+                const w = (lengths[pA+pB] || 5) * 24;
+                const h = isSquare ? w : (ratios[pA+pD] ? w * ratios[pA+pD].factor : 90);
+                points[pA] = { x: cx - w/2, y: cy - h/2 };
+                points[pB] = { x: cx + w/2, y: cy - h/2 };
+                points[pC] = { x: cx + w/2, y: cy + h/2 };
+                points[pD] = { x: cx - w/2, y: cy + h/2 };
+                lines.push({p1:pA, p2:pB}, {p1:pB, p2:pC}, {p1:pC, p2:pD}, {p1:pD, p2:pA});
+                rightAngleSigns.push({ vertex: pA, p1: pD, p2: pB });
+            }
+            // 6. XỬ LÝ ĐA GIÁC ĐỀU (NGŨ GIÁC, LỤC GIÁC...)
+            else if (textLower.includes("ngũ giác") || textLower.includes("lục giác") || textLower.includes("đa giác")) {
+                switchMode('2D');
+                const n = textLower.includes("ngũ giác") ? 5 : 6;
+                const r = 120 + rndX;
+                for (let i = 0; i < n; i++) {
+                    const a = -Math.PI / 2 + i * 2 * Math.PI / n;
+                    const pName = vNames[i] || String.fromCharCode(65 + i);
+                    points[pName] = { x: cx + r * Math.cos(a), y: cy + r * Math.sin(a) };
+                }
+                for (let i = 0; i < n; i++) {
+                    const p1 = vNames[i] || String.fromCharCode(65 + i);
+                    const p2 = vNames[(i + 1) % n] || String.fromCharCode(65 + (i + 1) % n);
+                    lines.push({ p1, p2 });
+                }
+                if (textLower.includes("tâm o")) points['O'] = { x: cx, y: cy };
+            }
+            // 7. XỬ LÝ TAM GIÁC (NHỌN, TÙ, VUÔNG, CÂN, ĐỀU)
+            else if (textLower.includes("tam giác") || textLower.includes("tam giac")) {
+                switchMode('2D');
+                const [pA, pB, pC] = vNames.length >= 3 ? vNames : ['A', 'B', 'C'];
+                let acLength = (lengths[pA+pC] || 4) * 24;
+                let abLength = ratios[pA+pB] ? (acLength * ratios[pA+pB].factor) : ((lengths[pA+pB] || 5) * 24);
+
+                if (textLower.includes("vuông cân")) {
+                    let len = 110 + rndX;
+                    points[pA] = { x: cx, y: cy - len/2 };
+                    points[pB] = { x: cx - len, y: cy + len/2 };
+                    points[pC] = { x: cx + len, y: cy + len/2 };
+                    rightAngleSigns.push({ vertex: pA, p1: pB, p2: pC });
+                } else if (textLower.includes("vuông")) {
+                    points[pA] = { x: cx - abLength/2 + rndX, y: cy - acLength/2 };
+                    points[pB] = { x: cx - abLength/2 + rndX, y: cy + acLength/2 };
+                    points[pC] = { x: cx + abLength/2 + rndX, y: cy + acLength/2 };
+                    rightAngleSigns.push({ vertex: pA, p1: pB, p2: pC });
+                } else if (textLower.includes("đều")) {
+                    const side = 140; const h = side * Math.sqrt(3) / 2;
+                    points[pA] = { x: cx, y: cy - h*2/3 };
+                    points[pB] = { x: cx - side/2, y: cy + h/3 };
+                    points[pC] = { x: cx + side/2, y: cy + h/3 };
+                } else {
+                    let h = 120 + rndY;
+                    points[pA] = { x: cx + rndX, y: cy - h/2 };
+                    points[pB] = { x: cx - abLength/1.2, y: cy + h/2 };
+                    points[pC] = { x: cx + acLength/1.2, y: cy + h/2 };
+                }
+                lines.push({p1: pA, p2: pB}, {p1: pB, p2: pC}, {p1: pC, p2: pA});
+
+                if (textLower.includes("đường cao") || textLower.includes("duong cao")) {
+                    const foot = getPerpendicularFoot(points[pA], points[pB], points[pC]);
+                    points['H'] = foot;
+                    lines.push({ p1: pA, p2: 'H', dashed: true, color: '#38bdf8' });
+                    rightAngleSigns.push({ vertex: 'H', p1: pA, p2: pC });
+                }
+                if (textLower.includes("trung điểm") || textLower.includes("trung tuyến")) {
+                    points['M'] = { x: (points[pB].x + points[pC].x)/2, y: (points[pB].y + points[pC].y)/2 };
+                    lines.push({ p1: pA, p2: 'M', dashed: true, color: '#facc15' });
+                }
+                if (textLower.includes("trọng tâm")) {
+                    points['G'] = { x: (points[pA].x + points[pB].x + points[pC].x)/3, y: (points[pA].y + points[pB].y + points[pC].y)/3 };
+                }
+            }
+            // 8. XỬ LÝ ĐƯỜNG TRÒN
+            else if (textLower.includes("đường tròn") || textLower.includes("duong tron") || textLower.includes("tròn")) {
+                switchMode('2D');
+                let r = (lengths['R'] || 5) * 24 + rndX;
+                points['O'] = { x: cx, y: cy };
+                circles.push({ center: 'O', r: r });
+                if (textLower.includes("dây cung") || textLower.includes("đường kính")) {
+                    points['A'] = { x: cx - r, y: cy };
+                    points['B'] = { x: cx + r, y: cy };
+                    lines.push({ p1: 'A', p2: 'B', color: '#facc15' });
+                }
+            }
+
+            draw(); updateStats();
+        }
+
+        btnAiParse.addEventListener('click', () => runGenerativeAIEngine(false));
+        btnAiRandomize.addEventListener('click', () => runGenerativeAIEngine(true));
+
+        function init3DShape(shape) {
+            mode3D.currentShape = shape;
+            if (shape === 'pyramid_square') {
+                mode3D.nodes = {
+                    'S': {x: 0, y: 150, z: 0},
+                    'A': {x: -100, y: -80, z: -80}, 'B': {x: 100, y: -80, z: -80},
+                    'C': {x: 120, y: -80, z: 80}, 'D': {x: -80, y: -80, z: 80}
+                };
+                mode3D.edges = [
+                    {p1:'S', p2:'A'}, {p1:'S', p2:'B'}, {p1:'S', p2:'C'}, {p1:'S', p2:'D'},
+                    {p1:'A', p2:'B'}, {p1:'B', p2:'C'}, {p1:'C', p2:'D'}, {p1:'D', p2:'A'}
+                ];
+            } else if (shape === 'pyramid_triangle') {
+                mode3D.nodes = {
+                    'S': {x: 0, y: 140, z: 0},
+                    'A': {x: -100, y: -70, z: -60}, 'B': {x: 100, y: -70, z: -60}, 'C': {x: 0, y: -70, z: 100}
+                };
+                mode3D.edges = [
+                    {p1:'S', p2:'A'}, {p1:'S', p2:'B'}, {p1:'S', p2:'C'},
+                    {p1:'A', p2:'B'}, {p1:'B', p2:'C'}, {p1:'C', p2:'A'}
+                ];
+            } else if (shape === 'cube') {
+                mode3D.nodes = {
+                    'A': {x: -80, y: 80, z: -80}, 'B': {x: 80, y: 80, z: -80}, 'C': {x: 80, y: 80, z: 80}, 'D': {x: -80, y: 80, z: 80},
+                    "A'": {x: -80, y: -80, z: -80}, "B'": {x: 80, y: -80, z: -80}, "C'": {x: 80, y: -80, z: 80}, "D'": {x: -80, y: -80, z: 80}
+                };
+                mode3D.edges = [
+                    {p1:'A', p2:'B'}, {p1:'B', p2:'C'}, {p1:'C', p2:'D'}, {p1:'D', p2:'A'},
+                    {p1:"A'", p2:"B'"}, {p1:"B'", p2:"C'"}, {p1:"C'", p2:"D'"}, {p1:"D'", p2:"A'"},
+                    {p1:'A', p2:"A'"}, {p1:'B', p2:"B'"}, {p1:'C', p2:"C'"}, {p1:'D', p2:"D'"}
+                ];
+            } else if (shape === 'prism_triangle') {
+                mode3D.nodes = {
+                    'A': {x: -90, y: 80, z: -50}, 'B': {x: 90, y: 80, z: -50}, 'C': {x: 0, y: 80, z: 80},
+                    "A'": {x: -90, y: -80, z: -50}, "B'": {x: 90, y: -80, z: -50}, "C'": {x: 0, y: -80, z: 80}
+                };
+                mode3D.edges = [
+                    {p1:'A', p2:'B'}, {p1:'B', p2:'C'}, {p1:'C', p2:'A'},
+                    {p1:"A'", p2:"B'"}, {p1:"B'", p2:"C'"}, {p1:"C'", p2:"A'"},
+                    {p1:'A', p2:"A'"}, {p1:'B', p2:"B'"}, {p1:'C', p2:"C'"}
+                ];
+            } else if (shape === 'pyramid_truncated') {
+                mode3D.nodes = {
+                    'A': {x: -120, y: -80, z: -120}, 'B': {x: 120, y: -80, z: -120}, 'C': {x: 120, y: -80, z: 120}, 'D': {x: -120, y: -80, z: 120},
+                    "A'": {x: -60, y: 80, z: -60}, "B'": {x: 60, y: 80, z: -60}, "C'": {x: 60, y: 80, z: 60}, "D'": {x: -60, y: 80, z: 60}
+                };
+                mode3D.edges = [
+                    {p1:'A', p2:'B'}, {p1:'B', p2:'C'}, {p1:'C', p2:'D'}, {p1:'D', p2:'A'},
+                    {p1:"A'", p2:"B'"}, {p1:"B'", p2:"C'"}, {p1:"C'", p2:"D'"}, {p1:"D'", p2:"A'"},
+                    {p1:'A', p2:"A'"}, {p1:'B', p2:"B'"}, {p1:'C', p2:"C'"}, {p1:'D', p2:"D'"}
+                ];
+            } else if (shape === 'prism_hexagonal') {
+                const r1 = 100, r2 = 60;
+                mode3D.nodes = {};
+                mode3D.edges = [];
+                for (let i = 0; i < 6; i++) {
+                    const angle = i * Math.PI / 3;
+                    const name = String.fromCharCode(65 + i);
+                    const namePrime = name + "'";
+                    mode3D.nodes[name] = { x: r1 * Math.cos(angle), y: -80, z: r1 * Math.sin(angle) };
+                    mode3D.nodes[namePrime] = { x: r2 * Math.cos(angle), y: 80, z: r2 * Math.sin(angle) };
+                }
+                for (let i = 0; i < 6; i++) {
+                    const n1 = String.fromCharCode(65 + i);
+                    const n2 = String.fromCharCode(65 + ((i + 1) % 6));
+                    mode3D.edges.push({ p1: n1, p2: n2 });
+                    mode3D.edges.push({ p1: n1 + "'", p2: n2 + "'" });
+                    mode3D.edges.push({ p1: n1, p2: n1 + "'" });
+                }
+            } else if (shape === 'octahedron') {
+                mode3D.nodes = {
+                    'S': {x: 0, y: 120, z: 0}, 'S\'': {x: 0, y: -120, z: 0},
+                    'A': {x: -100, y: 0, z: 0}, 'B': {x: 0, y: 0, z: -100}, 'C': {x: 100, y: 0, z: 0}, 'D': {x: 0, y: 0, z: 100}
+                };
+                mode3D.edges = [
+                    {p1:'S', p2:'A'}, {p1:'S', p2:'B'}, {p1:'S', p2:'C'}, {p1:'S', p2:'D'},
+                    {p1:'S\'', p2:'A'}, {p1:'S\'', p2:'B'}, {p1:'S\'', p2:'C'}, {p1:'S\'', p2:'D'},
+                    {p1:'A', p2:'B'}, {p1:'B', p2:'C'}, {p1:'C', p2:'D'}, {p1:'D', p2:'A'}
+                ];
+            }
+        }
+
+        document.querySelectorAll('.draw-3d-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchMode('3D');
+                init3DShape(btn.dataset.shape);
+                draw(); updateStats();
+            });
+        });
+
+        function project3D(x, y, z) {
+            const radX = mode3D.rotX;
+            const radY = mode3D.rotY;
+
+            let x1 = x * Math.cos(radY) + z * Math.sin(radY);
+            let y1 = y;
+            let z1 = -x * Math.sin(radY) + z * Math.cos(radY);
+
+            let x2 = x1;
+            let y2 = y1 * Math.cos(radX) - z1 * Math.sin(radX);
+            let z2 = y1 * Math.sin(radX) + z1 * Math.cos(radX);
+
+            const displayW = canvas.parentElement.clientWidth;
+            const displayH = canvas.parentElement.clientHeight;
+
+            return {
+                x: displayW / 2 + x2,
+                y: displayH / 2 - y2,
+                z: z2
+            };
+        }
+
+        function calculateAngle(vKey, p1Key, p2Key) {
+            const V = points[vKey], P1 = points[p1Key], P2 = points[p2Key];
+            if (!V || !P1 || !P2) return 0;
+            const a1 = Math.atan2(P1.y - V.y, P1.x - V.x);
+            const a2 = Math.atan2(P2.y - V.y, P2.x - V.x);
+            let angle = Math.abs((a1 - a2) * (180 / Math.PI));
+            if (angle > 180) angle = 360 - angle;
+            return Math.round(angle);
+        }
+
+        function getPerpendicularFoot(A, B, C) {
+            const dx = C.x - B.x;
+            const dy = C.y - B.y;
+            const lenSq = dx * dx + dy * dy;
+            if (lenSq === 0) return { x: B.x, y: B.y };
+            const k = ((A.x - B.x) * dx + (A.y - B.y) * dy) / lenSq;
+            return { x: B.x + k * dx, y: B.y + k * dy };
+        }
+
+        function drawRightAngle(vertexKey, p1Key, p2Key) {
+            const V = points[vertexKey], P1 = points[p1Key], P2 = points[p2Key];
+            if (!V || !P1 || !P2) return;
+            const len = 14 / zoom;
+            const v1 = { x: P1.x - V.x, y: P1.y - V.y }, v2 = { x: P2.x - V.x, y: P2.y - V.y };
+            const l1 = Math.hypot(v1.x, v1.y), l2 = Math.hypot(v2.x, v2.y);
+            if (l1 === 0 || l2 === 0) return;
+            const u1 = { x: (v1.x / l1) * len, y: (v1.y / l1) * len };
+            const u2 = { x: (v2.x / l2) * len, y: (v2.y / l2) * len };
+
+            ctx.beginPath();
+            ctx.moveTo(V.x + u1.x, V.y + u1.y);
+            ctx.lineTo(V.x + u1.x + u2.x, V.y + u1.y + u2.y);
+            ctx.lineTo(V.x + u2.x, V.y + u2.y);
+            ctx.strokeStyle = '#ef4444'; ctx.lineWidth = 1.8 / zoom; ctx.stroke();
+        }
+
+        // Infinite Cartesian axes: their visible portions always span the viewport.
+        // Adaptive tick intervals avoid crowded labels when zoomed out.
+        function drawOxyAxis(displayW, displayH) {
+            const cx = Math.round((displayW / 2) / GRID_SIZE) * GRID_SIZE;
+            const cy = Math.round((displayH / 2) / GRID_SIZE) * GRID_SIZE;
+            const left = -panX / zoom, right = (displayW-panX) / zoom;
+            const top = -panY / zoom, bottom = (displayH-panY) / zoom;
+            const targetStep = 55 / zoom;
+            const power = Math.pow(10, Math.floor(Math.log10(targetStep / GRID_SIZE)));
+            const normalized = targetStep / GRID_SIZE / power;
+            const nice = normalized <= 1 ? 1 : normalized <= 2 ? 2 : normalized <= 5 ? 5 : 10;
+            const tickUnits = nice * power, tick = tickUnits * GRID_SIZE;
+            ctx.strokeStyle = '#94a3b8'; ctx.lineWidth = 1.8 / zoom;
+            ctx.beginPath();
+            ctx.moveTo(left, cy); ctx.lineTo(right, cy);
+            ctx.moveTo(cx, top); ctx.lineTo(cx, bottom); ctx.stroke();
+            ctx.fillStyle = '#cbd5e1'; ctx.font = `bold ${12 / zoom}px monospace`;
+            // Screen-constant arrowheads and labels, regardless of world zoom.
+            const a = 9 / zoom;
+            ctx.beginPath();ctx.moveTo(right-a,cy-a*.5);ctx.lineTo(right,cy);ctx.lineTo(right-a,cy+a*.5);
+            ctx.moveTo(cx-a*.5,top+a);ctx.lineTo(cx,top);ctx.lineTo(cx+a*.5,top+a);ctx.stroke();
+            ctx.fillText('x',right-20/zoom,cy-10/zoom);
+            ctx.fillText('y',cx+10/zoom,top+19/zoom);
+            if(cx>=left&&cx<=right&&cy>=top&&cy<=bottom) ctx.fillText('O',cx-15/zoom,cy+16/zoom);
+            const fmt=n=>Number(n.toPrecision(7)).toString();
+            const xStart=Math.ceil((left-cx)/tick),xEnd=Math.floor((right-cx)/tick);
+            const yStart=Math.ceil((cy-bottom)/tick),yEnd=Math.floor((cy-top)/tick);
+            const maxTicks=300;
+            for(let i=xStart;i<=xEnd&&i<xStart+maxTicks;i++){
+                if(i===0)continue;const x=cx+i*tick;
+                ctx.beginPath();ctx.moveTo(x,cy-4/zoom);ctx.lineTo(x,cy+4/zoom);ctx.stroke();
+                if(cy>=top&&cy<=bottom)ctx.fillText(fmt(i*tickUnits),x+3/zoom,cy+17/zoom);
+            }
+            for(let i=yStart;i<=yEnd&&i<yStart+maxTicks;i++){
+                if(i===0)continue;const y=cy-i*tick;
+                ctx.beginPath();ctx.moveTo(cx-4/zoom,y);ctx.lineTo(cx+4/zoom,y);ctx.stroke();
+                if(cx>=left&&cx<=right)ctx.fillText(fmt(i*tickUnits),cx+7/zoom,y-5/zoom);
+            }
+        }
+
+        function drawInequalityShading(displayW, displayH) {
+            const cx = Math.round((displayW / 2) / GRID_SIZE) * GRID_SIZE;
+            const cy = Math.round((displayH / 2) / GRID_SIZE) * GRID_SIZE;
+
+            functionsData.forEach(fn => {
+                ctx.save();
+                ctx.strokeStyle = '#0ea5e9';
+                ctx.lineWidth = 1.2 / zoom;
+                const step = 14 / zoom;
+
+                for (let px = -500; px <= 500; px += step) {
+                    let realX = px / GRID_SIZE;
+                    let realY = fn.eval(realX);
+                    let canvasY = cy - realY * GRID_SIZE;
+
+                    ctx.beginPath();
+                    if (fn.sign.includes('<')) {
+                        ctx.moveTo(cx + px, canvasY);
+                        ctx.lineTo(cx + px - 100, canvasY - 150);
+                    } else if (fn.sign.includes('>')) {
+                        ctx.moveTo(cx + px, canvasY);
+                        ctx.lineTo(cx + px + 100, canvasY + 150);
+                    }
+                    ctx.stroke();
+                }
+                ctx.restore();
+            });
+        }
+
+        function drawGridDots(displayW, displayH) {
+            const left=-panX/zoom,top=-panY/zoom;
+            const right=(displayW-panX)/zoom,bottom=(displayH-panY)/zoom;
+            // Display a coarser grid when zoomed out, like GeoGebra.
+            const minSpacing=15/zoom;
+            const gridMultiplier=Math.max(1,Math.pow(2,Math.ceil(Math.log2(minSpacing/GRID_SIZE))));
+            const step=GRID_SIZE*gridMultiplier;
+            const startX=Math.floor(left/step)*step,endX=Math.ceil(right/step)*step;
+            const startY=Math.floor(top/step)*step,endY=Math.ceil(bottom/step)*step;
+            ctx.fillStyle='#475569';
+            const radius=1.15/zoom;
+            for(let x=startX;x<=endX;x+=step){
+                for(let y=startY;y<=endY;y+=step){
+                    ctx.beginPath();ctx.arc(x,y,radius,0,Math.PI*2);ctx.fill();
+                }
+            }
+        }
+
+        function draw3D() {
+            const projNodes = {};
+            for (let key in mode3D.nodes) {
+                const n = mode3D.nodes[key];
+                projNodes[key] = project3D(n.x, n.y, n.z);
+            }
+
+            mode3D.edges.forEach(e => {
+                const p1 = projNodes[e.p1], p2 = projNodes[e.p2];
+                if (!p1 || !p2) return;
+
+                const avgZ = (p1.z + p2.z) / 2;
+                const isDashed = avgZ < -20;
+
+                ctx.beginPath();
+                ctx.setLineDash(isDashed ? [6 / zoom, 6 / zoom] : []);
+                ctx.moveTo(p1.x, p1.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.strokeStyle = isDashed ? '#64748b' : '#38bdf8';
+                ctx.lineWidth = (isDashed ? 1.5 : 2.5) / zoom;
+                ctx.stroke();
+                ctx.setLineDash([]);
+            });
+
+            for (let key in projNodes) {
+                const p = projNodes[key];
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, 5 / zoom, 0, Math.PI * 2);
+                ctx.fillStyle = '#06b6d4';
+                ctx.fill();
+
+                ctx.font = `bold ${14 / zoom}px sans-serif`;
+                ctx.fillStyle = '#f8fafc';
+                ctx.fillText(key, p.x + 8 / zoom, p.y - 8 / zoom);
+            }
+        }
+
+        function draw() {
+            const displayW = canvas.parentElement.clientWidth;
+            const displayH = canvas.parentElement.clientHeight;
+            ctx.clearRect(0, 0, displayW, displayH);
+            
+            ctx.save();
+            ctx.translate(panX, panY);
+            ctx.scale(zoom, zoom);
+
+            if (currentMode === '3D') {
+                draw3D();
+                ctx.restore();
+                return;
+            }
+
+            const { val: unitVal, name: unitName } = getUnitScale();
+
+            drawGridDots(displayW, displayH);
+            if (showOxyAxis) drawOxyAxis(displayW, displayH);
+            if (functionsData.length > 0) drawInequalityShading(displayW, displayH);
+
+            ellipses.forEach(e => {
+                const cx = Math.round((displayW / 2) / GRID_SIZE) * GRID_SIZE;
+                const cy = Math.round((displayH / 2) / GRID_SIZE) * GRID_SIZE;
+                ctx.beginPath();
+                ctx.ellipse(cx, cy, e.rx, e.ry, 0, 0, Math.PI * 2);
+                ctx.strokeStyle = '#f43f5e'; ctx.lineWidth = 2 / zoom; ctx.stroke();
+            });
+
+            functionsData.forEach(fn => {
+                const cx = Math.round((displayW / 2) / GRID_SIZE) * GRID_SIZE;
+                const cy = Math.round((displayH / 2) / GRID_SIZE) * GRID_SIZE;
+
+                ctx.beginPath();
+                for (let px = -300; px <= 300; px += 1) {
+                    let realX = px / GRID_SIZE;
+                    let realY = fn.eval(realX);
+                    let canvasY = cy - realY * GRID_SIZE;
+                    if (px === -300) ctx.moveTo(cx + px, canvasY);
+                    else ctx.lineTo(cx + px, canvasY);
+                }
+                ctx.strokeStyle = '#38bdf8'; 
+                ctx.lineWidth = 2.5 / zoom; 
+                ctx.stroke();
+            });
+
+            circles.forEach(c => {
+                const center = points[c.center];
+                if (!center) return;
+                const target = c.targetPoint ? points[c.targetPoint] : null;
+                const radius = target
+                    ? Math.hypot(target.x - center.x, target.y - center.y)
+                    : Number(c.r);
+                if (!Number.isFinite(radius) || radius <= 0) return;
+                ctx.beginPath();
+                ctx.arc(center.x, center.y, radius, 0, Math.PI * 2);
+                ctx.strokeStyle = c.color || '#818cf8';
+                ctx.lineWidth = 2 / zoom;
+                ctx.stroke();
+            });
+
+            lines.forEach(l => {
+                const pt1 = points[l.p1], pt2 = points[l.p2];
+                if (!pt1 || !pt2) return;
+                ctx.beginPath();
+                ctx.setLineDash(l.dashed ? [6 / zoom, 6 / zoom] : []);
+                ctx.moveTo(pt1.x, pt1.y); ctx.lineTo(pt2.x, pt2.y);
+                ctx.strokeStyle = l.color || '#f8fafc'; ctx.lineWidth = 2.2 / zoom; ctx.stroke();
+                ctx.setLineDash([]);
+
+                const distPx = Math.hypot(pt2.x - pt1.x, pt2.y - pt1.y);
+                const realDist = ((distPx / GRID_SIZE) * unitVal).toFixed(1).replace(/\.0$/, '');
+                ctx.font = `${11 / zoom}px monospace`;
+                ctx.fillStyle = '#facc15';
+                ctx.fillText(`${realDist} ${unitName}`, (pt1.x + pt2.x)/2 + 4/zoom, (pt1.y + pt2.y)/2 - 4/zoom);
+            });
+
+            rightAngleSigns.forEach(item => drawRightAngle(item.vertex, item.p1, item.p2));
+
+            measuredAngles.forEach(item => {
+                const angleVal = calculateAngle(item.vertex, item.p1, item.p2);
+                const V = points[item.vertex];
+                if (!V) return;
+                ctx.font = `bold ${12 / zoom}px sans-serif`;
+                ctx.fillStyle = '#34d399';
+                ctx.fillText(`${angleVal}°`, V.x + 12 / zoom, V.y + 16 / zoom);
+            });
+
+            for (let name in points) {
+                const pt = points[name];
+                ctx.beginPath();
+                ctx.arc(pt.x, pt.y, 6 / zoom, 0, Math.PI * 2);
+                ctx.fillStyle = (name === lastCreatedPointName) ? '#f59e0b' : '#ef4444';
+                ctx.fill();
+
+                ctx.font = `bold ${14 / zoom}px sans-serif`;
+                ctx.fillStyle = '#38bdf8';
+                ctx.fillText(name, pt.x + 8 / zoom, pt.y - 8 / zoom);
+            }
+
+            ctx.restore();
+        }
+
+        function updateStats() {
+            const { val: unitVal, name: unitName } = getUnitScale();
+            let html = '';
+            if (currentMode === '3D') {
+                html = `<div class="text-cyan-400 font-bold">Khối 3D: ${mode3D.currentShape || 'Chưa chọn'}</div>`;
+                for (let k in mode3D.nodes) {
+                    const n = mode3D.nodes[k];
+                    html += `<div class="flex justify-between border-b border-slate-800/60 py-0.5 text-slate-400"><span>Đỉnh ${k}:</span><span>(${n.x}, ${n.y}, ${n.z})</span></div>`;
+                }
+                statsOutput.innerHTML = html;
+                return;
+            }
+            functionsData.forEach((fn, idx) => {
+                html += `<div class="flex justify-between border-b border-slate-800/60 py-0.5"><span class="text-slate-300">Đồ thị ${idx+1}:</span><span class="text-emerald-400 font-bold">y ${fn.sign} ${fn.expr}</span></div>`;
+            });
+            lines.forEach(l => {
+                const pt1 = points[l.p1], pt2 = points[l.p2];
+                if (pt1 && pt2) {
+                    const distPx = Math.hypot(pt2.x - pt1.x, pt2.y - pt1.y);
+                    const realDist = ((distPx / GRID_SIZE) * unitVal).toFixed(2);
+                    html += `<div class="flex justify-between border-b border-slate-800/60 py-0.5"><span class="text-slate-300">Đoạn <strong>${l.p1}${l.p2}</strong>:</span><span class="text-amber-400 font-bold">${realDist} ${unitName}</span></div>`;
+                }
+            });
+            circles.forEach((c, idx) => {
+                const center = points[c.center];
+                const target = c.targetPoint ? points[c.targetPoint] : null;
+                if (!center) return;
+                const radiusPx = target
+                    ? Math.hypot(target.x - center.x, target.y - center.y)
+                    : Number(c.r);
+                if (!Number.isFinite(radiusPx) || radiusPx <= 0) return;
+                const radius = radiusPx / GRID_SIZE * unitVal;
+                const diameter = 2 * radius;
+                const circumference = 2 * Math.PI * radius;
+                const area = Math.PI * radius * radius;
+                html += `<div class="border-b border-slate-800/60 py-1 text-rose-300">
+                    <div class="font-bold">Đường tròn ${idx + 1} (tâm ${c.center})</div>
+                    <div class="flex justify-between"><span>Bán kính R:</span><span>${radius.toFixed(2)} ${unitName}</span></div>
+                    <div class="flex justify-between"><span>Đường kính d:</span><span>${diameter.toFixed(2)} ${unitName}</span></div>
+                    <div class="flex justify-between"><span>Chu vi:</span><span>${circumference.toFixed(2)} ${unitName}</span></div>
+                    <div class="flex justify-between"><span>Diện tích:</span><span>${area.toFixed(2)} ${unitName}<sup>2</sup></span></div>
+                </div>`;
+            });
+            for (let name in points) {
+                const p = points[name];
+                html += `<div class="flex justify-between border-b border-slate-800/60 py-0.5 text-slate-500"><span>Đỉnh ${name}:</span><span>(${Math.round(p.x)}, ${Math.round(p.y)})</span></div>`;
+            }
+            statsOutput.innerHTML = html || 'Chưa có thông tin.';
+        }
+
+        function updateZoomDisplay() {
+            zoomText.innerText = Math.round(zoom * 100) + "%";
+        }
+
+        canvas.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            const rect = canvas.getBoundingClientRect();
+            const mouseX = e.clientX - rect.left;
+            const mouseY = e.clientY - rect.top;
+
+            const zoomFactor = e.deltaY < 0 ? 1.12 : 0.88;
+            const newZoom = Math.min(4, Math.max(0.2, zoom * zoomFactor));
+
+            panX = mouseX - (mouseX - panX) * (newZoom / zoom);
+            panY = mouseY - (mouseY - panY) * (newZoom / zoom);
+
+            zoom = newZoom;
+            updateZoomDisplay();
+            draw();
+        }, { passive: false });
+
+        canvas.addEventListener('mousedown', (e) => {
+            if (currentMode === '3D') {
+                mode3D.isRotating = true;
+                mode3D.lastMouseX = e.clientX;
+                mode3D.lastMouseY = e.clientY;
+                return;
+            }
+
+            const coords = getCanvasCoordinates(e);
+            const snapInfo = getSnapPosition(coords.x, coords.y);
+            let clickedPointName = snapInfo.pointName;
+
+            if (currentTool === 'pan' || e.button === 1 || e.shiftKey) {
+                isPanning = true;
+                startPanX = e.clientX - panX;
+                startPanY = e.clientY - panY;
+                return;
+            }
+
+            if (currentTool === 'select') {
+                if (clickedPointName) { saveState(); draggedPoint = clickedPointName; lastCreatedPointName = clickedPointName; }
+                else { isPanning = true; startPanX = e.clientX - panX; startPanY = e.clientY - panY; }
+            } else if (currentTool === 'delete') {
+                saveState();
+                if (clickedPointName) {
+                    delete points[clickedPointName];
+                    lines = lines.filter(l => l.p1 !== clickedPointName && l.p2 !== clickedPointName);
+                    circles = circles.filter(c => c.center !== clickedPointName && c.targetPoint !== clickedPointName);
+                }
+                draw(); updateStats();
+            } else if (currentTool === 'point') {
+                if (!clickedPointName) {
+                    saveState();
+                    const newName = getNextPointName();
+                    points[newName] = { x: snapInfo.x, y: snapInfo.y };
+                    lastCreatedPointName = newName;
+                    draw(); updateStats();
+                }
+            } else if (currentTool === 'line' || currentTool === 'dashline') {
+                let pointToUse = clickedPointName;
+                if (!pointToUse) {
+                    saveState();
+                    pointToUse = getNextPointName();
+                    points[pointToUse] = { x: snapInfo.x, y: snapInfo.y };
+                }
+                selectedPointsBuffer.push(pointToUse);
+                lastCreatedPointName = pointToUse;
+                if (selectedPointsBuffer.length === 2) {
+                    lines.push({ p1: selectedPointsBuffer[0], p2: selectedPointsBuffer[1], dashed: (currentTool === 'dashline') });
+                    selectedPointsBuffer = [];
+                }
+                updateGuideUI(); draw(); updateStats();
+            } else if (currentTool === 'circle') {
+                let pointToUse = clickedPointName;
+                if (!pointToUse) {
+                    saveState();
+                    pointToUse = getNextPointName();
+                    points[pointToUse] = { x: snapInfo.x, y: snapInfo.y };
+                }
+                selectedPointsBuffer.push(pointToUse);
+                lastCreatedPointName = pointToUse;
+                if (selectedPointsBuffer.length === 2) {
+                    circles.push({ center: selectedPointsBuffer[0], targetPoint: selectedPointsBuffer[1] });
+                    selectedPointsBuffer = [];
+                }
+                updateGuideUI(); draw(); updateStats();
+            } else if (currentTool === 'midpoint') {
+                if (clickedPointName) {
+                    selectedPointsBuffer.push(clickedPointName);
+                    if (selectedPointsBuffer.length === 2) {
+                        saveState();
+                        const p1 = points[selectedPointsBuffer[0]], p2 = points[selectedPointsBuffer[1]];
+                        const mName = getNextPointName("M");
+                        points[mName] = { x: (p1.x + p2.x)/2, y: (p1.y + p2.y)/2 };
+                        selectedPointsBuffer = [];
+                    }
+                    updateGuideUI(); draw(); updateStats();
+                }
+            } else if (currentTool === 'altitude') {
+                if (clickedPointName) {
+                    selectedPointsBuffer.push(clickedPointName);
+                    if (selectedPointsBuffer.length === 3) {
+                        saveState();
+                        const A = points[selectedPointsBuffer[0]], B = points[selectedPointsBuffer[1]], C = points[selectedPointsBuffer[2]];
+                        const foot = getPerpendicularFoot(A, B, C);
+                        const hName = getNextPointName("H");
+                        points[hName] = foot;
+                        lines.push({ p1: selectedPointsBuffer[0], p2: hName, dashed: true, color: '#818cf8' });
+                        rightAngleSigns.push({ vertex: hName, p1: selectedPointsBuffer[0], p2: selectedPointsBuffer[2] });
+                        selectedPointsBuffer = [];
+                    }
+                    updateGuideUI(); draw(); updateStats();
+                }
+            } else if (currentTool === 'median') {
+                if (clickedPointName) {
+                    selectedPointsBuffer.push(clickedPointName);
+                    if (selectedPointsBuffer.length === 3) {
+                        saveState();
+                        const B = points[selectedPointsBuffer[1]], C = points[selectedPointsBuffer[2]];
+                        const mName = getNextPointName("M");
+                        points[mName] = { x: (B.x + C.x)/2, y: (B.y + C.y)/2 };
+                        lines.push({ p1: selectedPointsBuffer[0], p2: mName, dashed: true, color: '#38bdf8' });
+                        selectedPointsBuffer = [];
+                    }
+                    updateGuideUI(); draw(); updateStats();
+                }
+            } else if (currentTool === 'bisector') {
+                if (clickedPointName) {
+                    selectedPointsBuffer.push(clickedPointName);
+                    if (selectedPointsBuffer.length === 3) {
+                        saveState();
+                        const A = points[selectedPointsBuffer[0]], B = points[selectedPointsBuffer[1]], C = points[selectedPointsBuffer[2]];
+                        const c = Math.hypot(A.x - B.x, A.y - B.y);
+                        const b = Math.hypot(A.x - C.x, A.y - C.y);
+                        const dName = getNextPointName("D");
+                        points[dName] = { x: (b * B.x + c * C.x) / (b + c), y: (b * B.y + c * C.y) / (b + c) };
+                        lines.push({ p1: selectedPointsBuffer[0], p2: dName, dashed: true, color: '#f43f5e' });
+                        selectedPointsBuffer = [];
+                    }
+                    updateGuideUI(); draw(); updateStats();
+                }
+            } else if (currentTool === 'orthocenter') {
+                if (clickedPointName) {
+                    selectedPointsBuffer.push(clickedPointName);
+                    if (selectedPointsBuffer.length === 3) {
+                        saveState();
+                        const A = points[selectedPointsBuffer[0]], B = points[selectedPointsBuffer[1]], C = points[selectedPointsBuffer[2]];
+                        const H1 = getPerpendicularFoot(A, B, C);
+                        const H2 = getPerpendicularFoot(B, A, C);
+                        const x1 = A.x, y1 = A.y, x2 = H1.x, y2 = H1.y;
+                        const x3 = B.x, y3 = B.y, x4 = H2.x, y4 = H2.y;
+                        const denom = (x1 - x2)*(y3 - y4) - (y1 - y2)*(x3 - x4);
+                        if (denom !== 0) {
+                            const Hx = ((x1*y2 - y1*x2)*(x3 - x4) - (x1 - x2)*(x3*y4 - y3*x4)) / denom;
+                            const Hy = ((x1*y2 - y1*x2)*(y3 - y4) - (y1 - y2)*(x3*y4 - y3*x4)) / denom;
+                            const hName = getNextPointName("H");
+                            points[hName] = { x: Hx, y: Hy };
+                        }
+                        selectedPointsBuffer = [];
+                    }
+                    updateGuideUI(); draw(); updateStats();
+                }
+            } else if (currentTool === 'centroid') {
+                if (clickedPointName) {
+                    selectedPointsBuffer.push(clickedPointName);
+                    if (selectedPointsBuffer.length === 3) {
+                        saveState();
+                        const A = points[selectedPointsBuffer[0]], B = points[selectedPointsBuffer[1]], C = points[selectedPointsBuffer[2]];
+                        const gName = getNextPointName("G");
+                        points[gName] = { x: (A.x + B.x + C.x)/3, y: (A.y + B.y + C.y)/3 };
+                        selectedPointsBuffer = [];
+                    }
+                    updateGuideUI(); draw(); updateStats();
+                }
+            } else if (currentTool === 'circumcenter') {
+                if (clickedPointName) {
+                    if (!selectedPointsBuffer.includes(clickedPointName)) selectedPointsBuffer.push(clickedPointName);
+                    if (selectedPointsBuffer.length === 3) {
+                        const [nameA, nameB, nameC] = selectedPointsBuffer;
+                        const A = points[nameA], B = points[nameB], C = points[nameC];
+                        const denominator = 2 * (A.x * (B.y - C.y) + B.x * (C.y - A.y) + C.x * (A.y - B.y));
+                        if (Math.abs(denominator) > 1e-8) {
+                            saveState();
+                            const a2 = A.x*A.x + A.y*A.y;
+                            const b2 = B.x*B.x + B.y*B.y;
+                            const c2 = C.x*C.x + C.y*C.y;
+                            const ox = (a2*(B.y-C.y) + b2*(C.y-A.y) + c2*(A.y-B.y)) / denominator;
+                            const oy = (a2*(C.x-B.x) + b2*(A.x-C.x) + c2*(B.x-A.x)) / denominator;
+                            const centerName = getNextPointName('O');
+                            points[centerName] = { x: ox, y: oy };
+                            circles.push({ center: centerName, targetPoint: nameA });
+                            lines.push({ p1: centerName, p2: nameA, dashed: true, color: '#facc15' });
+                            lastCreatedPointName = centerName;
+                        } else {
+                            guideText.textContent = 'Ba điểm thẳng hàng nên không thể dựng đường tròn ngoại tiếp.';
+                        }
+                        selectedPointsBuffer = [];
+                    }
+                    updateGuideUI(); draw(); updateStats();
+                }
+            } else if (currentTool === 'parallelogram') {
+                if (clickedPointName) {
+                    selectedPointsBuffer.push(clickedPointName);
+                    if (selectedPointsBuffer.length === 3) {
+                        saveState();
+                        const A = points[selectedPointsBuffer[0]], B = points[selectedPointsBuffer[1]], C = points[selectedPointsBuffer[2]];
+                        const dName = getNextPointName("D");
+                        points[dName] = { x: A.x + C.x - B.x, y: A.y + C.y - B.y };
+                        lines.push({ p1: selectedPointsBuffer[0], p2: selectedPointsBuffer[1] });
+                        lines.push({ p1: selectedPointsBuffer[1], p2: selectedPointsBuffer[2] });
+                        lines.push({ p1: selectedPointsBuffer[2], p2: dName });
+                        lines.push({ p1: dName, p2: selectedPointsBuffer[0] });
+                        selectedPointsBuffer = [];
+                    }
+                    updateGuideUI(); draw(); updateStats();
+                }
+            } else if (currentTool === 'angle') {
+                if (clickedPointName) {
+                    selectedPointsBuffer.push(clickedPointName);
+                    if (selectedPointsBuffer.length === 3) {
+                        saveState();
+                        measuredAngles.push({ p1: selectedPointsBuffer[0], vertex: selectedPointsBuffer[1], p2: selectedPointsBuffer[2] });
+                        selectedPointsBuffer = [];
+                    }
+                    updateGuideUI(); draw(); updateStats();
+                }
+            }
+        });
+
+        canvas.addEventListener('mousemove', (e) => {
+            if (currentMode === '3D' && mode3D.isRotating) {
+                const deltaX = e.clientX - mode3D.lastMouseX;
+                const deltaY = e.clientY - mode3D.lastMouseY;
+                mode3D.rotY += deltaX * 0.008;
+                mode3D.rotX += deltaY * 0.008;
+                mode3D.lastMouseX = e.clientX;
+                mode3D.lastMouseY = e.clientY;
+                draw();
+                return;
+            }
+
+            if (isPanning) {
+                panX = e.clientX - startPanX;
+                panY = e.clientY - startPanY;
+                draw();
+                return;
+            }
+            if (draggedPoint && currentTool === 'select' && currentMode === '2D') {
+                const coords = getCanvasCoordinates(e);
+                points[draggedPoint].x = Math.round(coords.x / GRID_SIZE) * GRID_SIZE;
+                points[draggedPoint].y = Math.round(coords.y / GRID_SIZE) * GRID_SIZE;
+                draw(); updateStats();
+            }
+        });
+
+        window.addEventListener('mouseup', () => { draggedPoint = null; isPanning = false; mode3D.isRotating = false; });
+        function zoomAtCenter(factor) {
+            const w=canvas.parentElement.clientWidth,h=canvas.parentElement.clientHeight;
+            const next=Math.max(0.12,Math.min(5,zoom*factor));
+            const wx=(w/2-panX)/zoom,wy=(h/2-panY)/zoom;
+            zoom=next;panX=w/2-wx*zoom;panY=h/2-wy*zoom;
+            updateZoomDisplay();draw();
+        }
+        btnZoomIn.addEventListener('click', () => { zoomAtCenter(1.2); });
+        btnZoomOut.addEventListener('click', () => { zoomAtCenter(1/1.2); });
+
+        btnClear.addEventListener('click', () => {
+            saveState();
+            points = {}; lines = []; circles = []; rightAngleSigns = []; measuredAngles = []; vectors = []; functionsData = []; ellipses = []; halfPlanes = []; selectedPointsBuffer = []; showOxyAxis = false; lastCreatedPointName = null;
+            updateGuideUI(); draw(); updateStats();
+        });
+
+        btnExport.addEventListener('click', () => {
+            const link = document.createElement('a');
+            link.download = `MathGeo_${currentMode}_Export.png`;
+            link.href = canvas.toDataURL();
+            link.click();
+        });
+
+        btnResetView.addEventListener('click', () => { panX = 0; panY = 0; zoom = 1; mode3D.rotX = 0.35; mode3D.rotY = -0.45; updateZoomDisplay(); resizeCanvas(); });
+
+        resizeCanvas();
+        parseCommand('he_truc_oxy');
+    </script>
+<section id="measure-panel" style="position:fixed;bottom:15px;right:15px;z-index:60;background:#1e1b4bee;border:1px solid #8b5cf6;border-radius:14px;padding:13px;color:#fff;max-width:min(340px,94vw);box-shadow:0 10px 32px #0005;font:13px system-ui"><b>📏 Đo đạc và chú thích</b><div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap"><input id="measure-a" placeholder="Điểm A" aria-label="Tên điểm đầu" style="width:68px;color:#111;padding:7px;border-radius:7px"><input id="measure-b" placeholder="Điểm B" aria-label="Tên điểm cuối" style="width:68px;color:#111;padding:7px;border-radius:7px"><input id="measure-c" placeholder="Điểm C" aria-label="Tên điểm thứ ba" style="width:75px;color:#111;padding:7px;border-radius:7px"></div><div style="margin-top:8px;display:flex;gap:6px"><button id="measure-length" style="background:#7c3aed;padding:7px;border-radius:7px">Độ dài AB</button><button id="measure-angle" style="background:#7c3aed;padding:7px;border-radius:7px">Góc ABC</button></div><p id="measure-result" aria-live="polite" style="margin:8px 0 0">Nhập tên các điểm đã dựng.</p></section><script>(function(){const el=id=>document.getElementById(id);function get(name){return points[String(el(name).value).trim().toUpperCase()]}function result(s){el('measure-result').textContent=s}el('measure-length').onclick=()=>{const a=get('measure-a'),b=get('measure-b');if(!a||!b)return result('Không tìm thấy điểm A hoặc B.');const scale=getUnitScale(),length=Math.hypot(a.x-b.x,a.y-b.y)/GRID_SIZE*scale.val;result('Độ dài: '+length.toFixed(3)+' '+scale.name)};el('measure-angle').onclick=()=>{const a=get('measure-a'),b=get('measure-b'),c=get('measure-c');if(!a||!b||!c)return result('Cần nhập đủ 3 điểm đã dựng.');const u=[a.x-b.x,a.y-b.y],v=[c.x-b.x,c.y-b.y],d=Math.hypot(...u)*Math.hypot(...v);if(!d)return result('Các điểm không xác định được góc.');const angle=Math.acos(Math.max(-1,Math.min(1,(u[0]*v[0]+u[1]*v[1])/d)))*180/Math.PI;result('Góc ABC: '+angle.toFixed(2)+'°')};if(new URLSearchParams(location.search).get('mode')==='3d')window.addEventListener('load',()=>switchMode('3D'))})();</script><div style="position:fixed;bottom:0;left:0;z-index:45;background:#0f172acc;color:#c4b5fd;padding:3px 8px;font:10px system-ui">Dự án khoa học kỹ thuật · Người thực hiện: Lê Đức Nhân và Ngô Phúc Huy · Giáo viên hướng dẫn: GV Việt Hòa</div><script src="js/quick-navigation.js" defer></script>
+</body>
+</html>

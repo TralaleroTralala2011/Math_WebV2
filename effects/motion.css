@@ -1,0 +1,30 @@
+/* MATH_WEB motion layer: additive and scoped, no layout redesign */
+:root{--mw-motion-ease:cubic-bezier(.22,1,.36,1);--mw-motion-speed:1}
+@media(prefers-reduced-motion:no-preference){@view-transition{navigation:auto}::view-transition-old(root){animation:mw-out .16s ease both}::view-transition-new(root){animation:mw-in .34s var(--mw-motion-ease) both}}
+@keyframes mw-in{from{opacity:.25;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}@keyframes mw-out{to{opacity:0}}
+html{scroll-behavior:smooth}body.mw-effects-ready{animation:mw-in .48s var(--mw-motion-ease) both}
+body.mw-effects-ready :is(button,.btn,[role="button"],a, input,select,textarea){transition-property:transform,box-shadow,filter,background-color,border-color,color,opacity;transition-duration:.2s;transition-timing-function:var(--mw-motion-ease)}
+body.mw-effects-ready :is(button,.btn,[role="button"]):not(:disabled):active{transform:scale(.965)}
+body.mw-effects-ready :is(button,.btn,[role="button"],a):focus-visible{outline:3px solid #8b5cf6;outline-offset:3px}
+body.mw-effects-ready :is(.card,.topic-card,.knowledge-card,.game-card,.stat-card,.feature-card,.mw-hover-card){transition:transform .28s var(--mw-motion-ease),box-shadow .28s ease,filter .28s ease}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){body.mw-effects-ready :is(.card,.topic-card,.knowledge-card,.game-card,.stat-card,.feature-card,.mw-hover-card):hover{transform:translateY(-4px);filter:brightness(1.025)}body.mw-effects-ready :is(button,.btn,[role="button"]):not(:disabled):hover{filter:brightness(1.065)}}
+.mw-reveal{opacity:0;transform:translateY(17px);transition:opacity .62s var(--mw-motion-ease),transform .62s var(--mw-motion-ease)}.mw-reveal.mw-visible{opacity:1;transform:none}
+#mw-progress{position:fixed;z-index:2147483000;top:0;left:0;width:0;height:3px;pointer-events:none;background:linear-gradient(90deg,#06b6d4,#6366f1,#a855f7);box-shadow:0 0 12px #8b5cf699;transition:width .2s ease,opacity .35s ease}
+#mw-loader{position:fixed;inset:0;z-index:2147482999;display:grid;place-items:center;background:rgba(11,17,38,.91);backdrop-filter:blur(12px);opacity:1;visibility:visible;transition:opacity .3s ease,visibility .3s ease;pointer-events:none}
+#mw-loader.mw-done{opacity:0;visibility:hidden}
+.mw-load-center{display:flex;flex-direction:column;align-items:center;gap:19px;color:#eef2ff;font:600 14px/1.5 system-ui,sans-serif;letter-spacing:.4px}
+.mw-orbit{width:88px;height:88px;position:relative;display:grid;place-items:center}
+.mw-orbit:before,.mw-orbit:after,.mw-orbit>i{content:"";position:absolute;border-radius:50%;border:4px solid transparent;animation:mw-spin 1.05s linear infinite}
+.mw-orbit:before{inset:0;border-top-color:#8b5cf6;border-right-color:#8b5cf6}
+.mw-orbit:after{inset:12px;border-left-color:#06b6d4;border-bottom-color:#06b6d4;animation-direction:reverse;animation-duration:.8s}
+.mw-orbit>i{inset:29px;border-top-color:#f9a8d4;border-right-color:#f9a8d4;animation-duration:1.4s}
+@keyframes mw-spin{to{transform:rotate(360deg)}}
+.mw-load-caption{font-size:12px;font-weight:400;color:#a5b4fc}
+.mw-ripple{position:absolute;border-radius:50%;background:rgba(255,255,255,.27);transform:scale(0);animation:mw-ripple .55s ease-out;pointer-events:none;z-index:2}
+@keyframes mw-ripple{to{transform:scale(3);opacity:0}}
+.mw-scroll-top{position:fixed;left:18px;bottom:18px;z-index:9900;width:42px;height:42px;border:1px solid #c7d2fe;border-radius:50%;background:linear-gradient(145deg,#6366f1,#7c3aed);color:white;box-shadow:0 8px 24px #6366f14d;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity .2s,transform .2s}
+.mw-scroll-top.mw-show{opacity:1;pointer-events:auto;transform:translateY(0)}
+.mw-scroll-top:hover{filter:brightness(1.12)}
+.mw-loading-inline{display:inline-block;width:1em;height:1em;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:mw-spin .7s linear infinite;vertical-align:-.15em}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}body.mw-effects-ready,.mw-reveal,.mw-orbit:before,.mw-orbit:after,.mw-orbit>i,.mw-ripple{animation:none!important;transition:none!important;transform:none!important}.mw-reveal{opacity:1!important}body.mw-effects-ready :is(.card,.topic-card,.knowledge-card,.game-card,.stat-card,.feature-card):hover{transform:none!important}}
+@media(max-width:600px){.mw-scroll-top{left:10px;bottom:12px;width:36px;height:36px}#mw-loader{backdrop-filter:blur(5px)}}

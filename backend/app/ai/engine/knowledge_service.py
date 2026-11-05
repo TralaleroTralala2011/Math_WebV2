@@ -9,7 +9,9 @@ class KnowledgeService:
         "permutation": "hoan_vi_chinh_hop_to_hop",
         "function": "ham_so_bac_hai",
         "system-equation": "phuong_trinh_he",
-        "quadratic-equation": "phuong_trinh_he",
+        "system_equation": "phuong_trinh_he",
+        "quadratic-equation": "ham_so_bac_hai",
+        "quadratic_equation": "ham_so_bac_hai",
         "inequality": "bat_phuong_trinh",
         "sequence": "day_so",
         "divisibility": "menh_de_tap_hop",
@@ -40,9 +42,11 @@ class KnowledgeService:
             return list(allowed)
         result = []
         for topic in topics:
-            alias = self.GAME_TOPIC_ALIASES.get(topic)
-            canonical = alias or topic
-            if canonical in allowed or alias is not None:
-                if canonical not in result:
-                    result.append(canonical)
+            # Legacy game IDs can be uppercase (SYSTEM_EQUATION) or have whitespace.
+            # Only admit canonical IDs actually belonging to the requested grade.
+            raw = str(topic).strip()
+            folded = raw.casefold()
+            canonical = self.GAME_TOPIC_ALIASES.get(folded, folded)
+            if canonical in allowed and canonical not in result:
+                result.append(canonical)
         return result

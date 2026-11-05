@@ -1,0 +1,22 @@
+/* MATH_WEB mobile enhancement: additive, preserves desktop rules */
+html{ -webkit-text-size-adjust:100%; }
+img,video,canvas,svg{max-width:100%;}
+math, .katex-display, .MathJax_Display{max-width:100%;overflow-x:auto;overflow-y:hidden;}
+@media(max-width:767px){
+ html,body{width:100%;max-width:100%;overflow-x:hidden;}
+ body{min-width:0!important;}
+ :is(main,section,article,.container,.content,.main-content,.page-content,.wrapper,.layout,.panel,.card,.modal,.dialog,.popup,.question,.question-card,.game-card,.battle-card,.study-card){max-width:100%;min-width:0;box-sizing:border-box;}
+ :is(.container,.content,.main-content,.page-content,.wrapper){width:100%;padding-left:12px;padding-right:12px;}
+ :is(.grid,.cards,.card-grid,.knowledge-grid,.game-grid,.topic-grid,.stats-grid,.dashboard-grid){grid-template-columns:repeat(1,minmax(0,1fr));}
+ :is(.nav,.navbar,.nav-links,.header-actions,.toolbar,.actions,.buttons,.controls){flex-wrap:wrap;max-width:100%;}
+ :is(button,.btn,[role="button"],input[type="submit"],select){min-height:42px;touch-action:manipulation;}
+ :is(input,select,textarea){max-width:100%;font-size:16px;}
+ :is(.question,.question-text,.answer,.option,.choice,.explanation,.solution){overflow-wrap:anywhere;word-break:normal;}
+ :is(.options,.answers,.choices,.answer-options){max-width:100%;min-width:0;}
+ table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
+ :is(.modal,.dialog,.popup,.overlay-content,.practice-overlay-content){max-width:calc(100vw - 20px);max-height:calc(100dvh - 20px);overflow-y:auto;}
+ :is(.chat-container,.chat-layout,.battle-layout,.account-layout,.admin-layout){max-width:100%;min-width:0;}
+ :is(.chat-messages,.messages,.conversation){min-width:0;overflow-wrap:anywhere;}
+ :is(.geometry-diagram,.diagram,.figure-container){max-width:100%;overflow-x:auto;}
+}
+@media(max-width:380px){:is(.container,.content,.main-content,.page-content,.wrapper){padding-left:8px;padding-right:8px;}}
