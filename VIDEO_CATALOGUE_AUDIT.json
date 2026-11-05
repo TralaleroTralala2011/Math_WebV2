@@ -1,0 +1,1472 @@
+{
+  "topics": 150,
+  "unique_title_keys": 145,
+  "duplicate_topic_titles": {
+    "10:hệ thức lượng trong tam giác": 3,
+    "11:hàm số lượng giác": 2,
+    "11:phương trình lượng giác": 2,
+    "11:dãy số": 2
+  },
+  "target": 900,
+  "counts": {
+    "learning": 0,
+    "path": 0
+  },
+  "missing_slots": 870,
+  "incomplete_sections": [
+    {
+      "topic": "10:bài toán thực tế toán 10",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:bài toán thực tế toán 10",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:bất phương trình và hệ bất phương trình",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:bất phương trình và hệ bất phương trình",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:bất đẳng thức và cực trị trong tam giác",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:bất đẳng thức và cực trị trong tam giác",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:bất đẳng thức đại số và cực trị nâng cao",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:bất đẳng thức đại số và cực trị nâng cao",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:chứng minh hình học bằng vectơ",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:chứng minh hình học bằng vectơ",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:chứng minh hình học và bài toán tổng hợp",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:chứng minh hình học và bài toán tổng hợp",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:các trường hợp bằng nhau của tam giác",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:các trường hợp bằng nhau của tam giác",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:dây cung, cung và khoảng cách đến tâm",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:dây cung, cung và khoảng cách đến tâm",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:giao điểm và vị trí tương đối của hai đường thẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:giao điểm và vị trí tương đối của hai đường thẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:góc nội tiếp và góc ở tâm nâng cao",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:góc nội tiếp và góc ở tâm nâng cao",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:góc tạo bởi hai đường thẳng và đường cắt",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:góc tạo bởi hai đường thẳng và đường cắt",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:hoán vị, chỉnh hợp, tổ hợp",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:hoán vị, chỉnh hợp, tổ hợp",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:hàm số",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:hàm số",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:hàm số bậc hai và parabol",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:hàm số bậc hai và parabol",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:hàm số bậc nhất",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:hàm số bậc nhất",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:hình học cơ bản: góc, cạnh và diện tích",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:hình học cơ bản: góc, cạnh và diện tích",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:hình học phẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:hình học phẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:hệ bất phương trình",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:hệ bất phương trình",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:hệ phương trình",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:hệ phương trình",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:hệ phương trình đối xứng và hoán vị",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:hệ phương trình đối xứng và hoán vị",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:hệ thức lượng trong tam giác",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:hệ thức lượng trong tam giác",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:mệnh đề",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:mệnh đề",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:mệnh đề và tập hợp",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:mệnh đề và tập hợp",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:nhị thức newton",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:nhị thức newton",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:phương trình",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:phương trình",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:phương trình chứa căn thức nâng cao",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:phương trình chứa căn thức nâng cao",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:phương trình và hệ phương trình",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:phương trình và hệ phương trình",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:quy tắc đếm",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:quy tắc đếm",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:quỹ tích điểm trong mặt phẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:quỹ tích điểm trong mặt phẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:tam giác và tứ giác cơ bản",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:tam giác và tứ giác cơ bản",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:thống kê",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:thống kê",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:tiếp tuyến và dây cung của đường tròn",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:tiếp tuyến và dây cung của đường tròn",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:trung điểm và khoảng cách trong tọa độ phẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:trung điểm và khoảng cách trong tọa độ phẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:tính chất hình bình hành và hình thoi",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:tính chất hình bình hành và hình thoi",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:tập hợp và các phép toán",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:tập hợp và các phép toán",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:tỉ số diện tích tam giác",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:tỉ số diện tích tam giác",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:tọa độ trong mặt phẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:tọa độ trong mặt phẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:tọa độ và đường thẳng trong mặt phẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:tọa độ và đường thẳng trong mặt phẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:tổ hợp và nguyên lý dirichlet nâng cao",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:tổ hợp và nguyên lý dirichlet nâng cao",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:vectơ",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:vectơ",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:xác suất",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:xác suất",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:đường thẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:đường thẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:đường trung tuyến, phân giác và đường cao",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:đường trung tuyến, phân giác và đường cao",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:đường tròn",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:đường tròn",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:đường tròn và các góc cơ bản",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:đường tròn và các góc cơ bản",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "10:định lý thales và tam giác đồng dạng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "10:định lý thales và tam giác đồng dạng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:biến cố độc lập và xác suất có điều kiện",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:biến cố độc lập và xác suất có điều kiện",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:bài toán thực tế toán 11",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:bài toán thực tế toán 11",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:bài toán thực tế tổng hợp toán 11",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:bài toán thực tế tổng hợp toán 11",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:chứng minh tổng hợp song song và vuông góc",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:chứng minh tổng hợp song song và vuông góc",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:công thức lượng giác",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:công thức lượng giác",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:cấp số cộng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:cấp số cộng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:cấp số nhân",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:cấp số nhân",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:dãy số",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:dãy số",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:dãy số truy hồi",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:dãy số truy hồi",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:dãy số truy hồi và bài toán cực trị",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:dãy số truy hồi và bài toán cực trị",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:dựng thiết diện của hình chóp và lăng trụ",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:dựng thiết diện của hình chóp và lăng trụ",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:giá trị lượng giác",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:giá trị lượng giác",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:giới hạn",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:giới hạn",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:giới hạn hàm số",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:giới hạn hàm số",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:góc giữa đường thẳng và mặt phẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:góc giữa đường thẳng và mặt phẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:góc và khoảng cách trong không gian",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:góc và khoảng cách trong không gian",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:hai mặt phẳng song song",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:hai mặt phẳng song song",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:hàm số liên tục",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:hàm số liên tục",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:hàm số lượng giác",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:hàm số lượng giác",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:hợp thành các phép biến hình",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:hợp thành các phép biến hình",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:khoảng cách giữa hai đường thẳng chéo nhau",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:khoảng cách giữa hai đường thẳng chéo nhau",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:mô hình xác suất có điều kiện",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:mô hình xác suất có điều kiện",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:nhận biết hình học không gian",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:nhận biết hình học không gian",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:nhận biết đường thẳng và mặt phẳng trong không gian",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:nhận biết đường thẳng và mặt phẳng trong không gian",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:nhị thức newton và hệ số tổ hợp nâng cao",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:nhị thức newton và hệ số tổ hợp nâng cao",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:phép biến hình cơ bản",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:phép biến hình cơ bản",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:phép biến hình trong mặt phẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:phép biến hình trong mặt phẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:phép quay và phép vị tự",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:phép quay và phép vị tự",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:phép tịnh tiến và ảnh của hình",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:phép tịnh tiến và ảnh của hình",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:phép đối xứng trục",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:phép đối xứng trục",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:phương trình lượng giác",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:phương trình lượng giác",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:phương trình lượng giác nâng cao",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:phương trình lượng giác nâng cao",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:quan hệ song song trong không gian",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:quan hệ song song trong không gian",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:quan hệ song song và vuông góc trong không gian",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:quan hệ song song và vuông góc trong không gian",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:quan hệ vuông góc trong không gian",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:quan hệ vuông góc trong không gian",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:quy nạp toán học",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:quy nạp toán học",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:quy tắc đạo hàm",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:quy tắc đạo hàm",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:thiết diện hình không gian",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:thiết diện hình không gian",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:thiết diện và tỉ số đoạn trong hình không gian",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:thiết diện và tỉ số đoạn trong hình không gian",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:thống kê toán 11",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:thống kê toán 11",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:tổ hợp và xác suất nâng cao",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:tổ hợp và xác suất nâng cao",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:xác suất",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:xác suất",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:đường thẳng song song với mặt phẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:đường thẳng song song với mặt phẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:đường thẳng vuông góc với mặt phẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:đường thẳng vuông góc với mặt phẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:đạo hàm",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:đạo hàm",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:định lý ba đường vuông góc",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:định lý ba đường vuông góc",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "11:ứng dụng đạo hàm",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "11:ứng dụng đạo hàm",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:biểu diễn số phức",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:biểu diễn số phức",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:bài toán tham số hình học oxyz",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:bài toán tham số hình học oxyz",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:bài toán thực tế toán 12",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:bài toán thực tế toán 12",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:bài toán tối ưu hình học không gian",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:bài toán tối ưu hình học không gian",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:bài toán tổng hợp thpt",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:bài toán tổng hợp thpt",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:bất phương trình logarit",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:bất phương trình logarit",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:bất phương trình mũ",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:bất phương trình mũ",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:các số đặc trưng đo xu thế và độ phân tán",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:các số đặc trưng đo xu thế và độ phân tán",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:cực trị",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:cực trị",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:cực trị khoảng cách trong không gian tọa độ",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:cực trị khoảng cách trong không gian tọa độ",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:diện tích xung quanh và toàn phần hình khối",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:diện tích xung quanh và toàn phần hình khối",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:giao tuyến mặt cầu và mặt phẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:giao tuyến mặt cầu và mặt phẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:giao điểm đường thẳng và mặt phẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:giao điểm đường thẳng và mặt phẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:giá trị lớn nhất và nhỏ nhất",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:giá trị lớn nhất và nhỏ nhất",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:góc giữa hai mặt phẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:góc giữa hai mặt phẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:góc giữa đường thẳng và mặt phẳng oxyz",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:góc giữa đường thẳng và mặt phẳng oxyz",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:góc và khoảng cách oxyz",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:góc và khoảng cách oxyz",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:hàm số logarit",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:hàm số logarit",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:hàm số mũ",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:hàm số mũ",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:hình học không gian",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:hình học không gian",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:hình học số phức và quỹ tích",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:hình học số phức và quỹ tích",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:hình khối và thể tích cơ bản",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:hình khối và thể tích cơ bản",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:khoảng cách từ điểm đến mặt phẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:khoảng cách từ điểm đến mặt phẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:khảo sát và vẽ đồ thị hàm số",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:khảo sát và vẽ đồ thị hàm số",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:mặt cầu",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:mặt cầu",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:mặt phẳng tiếp xúc với mặt cầu",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:mặt phẳng tiếp xúc với mặt cầu",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:mặt phẳng trong oxyz",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:mặt phẳng trong oxyz",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:nguyên hàm và tích phân",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:nguyên hàm và tích phân",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:phương trình logarit",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:phương trình logarit",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:phương trình mũ",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:phương trình mũ",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:phương trình mặt cầu và tâm bán kính",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:phương trình mặt cầu và tâm bán kính",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:phương trình mặt phẳng",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:phương trình mặt phẳng",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:phương trình số phức",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:phương trình số phức",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:phương trình đường thẳng trong oxyz",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:phương trình đường thẳng trong oxyz",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:số phức",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:số phức",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:thể tích hình học không gian",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:thể tích hình học không gian",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:thể tích khối tròn xoay và mô hình thực tế",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:thể tích khối tròn xoay và mô hình thực tế",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:tiếp tuyến",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:tiếp tuyến",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:tiệm cận",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:tiệm cận",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:tính đơn điệu",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:tính đơn điệu",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:tương giao đồ thị",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:tương giao đồ thị",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:tọa độ trong không gian",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:tọa độ trong không gian",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:tối ưu và cực trị bằng tích phân",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:tối ưu và cực trị bằng tích phân",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:vectơ và độ dài trong không gian oxyz",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:vectơ và độ dài trong không gian oxyz",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:vận dụng tọa độ oxyz",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:vận dụng tọa độ oxyz",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:vị trí tương đối của hai đường thẳng trong oxyz",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:vị trí tương đối của hai đường thẳng trong oxyz",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:xác suất và biến ngẫu nhiên",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:xác suất và biến ngẫu nhiên",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:đường thẳng trong oxyz",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:đường thẳng trong oxyz",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:ứng dụng tích phân",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:ứng dụng tích phân",
+      "area": "path",
+      "count": 0
+    },
+    {
+      "topic": "12:ứng dụng đạo hàm",
+      "area": "learning",
+      "count": 0
+    },
+    {
+      "topic": "12:ứng dụng đạo hàm",
+      "area": "path",
+      "count": 0
+    }
+  ],
+  "errors": [
+    "duplicate topic keys need unique IDs: {'10:hệ thức lượng trong tam giác': 3, '11:hàm số lượng giác': 2, '11:phương trình lượng giác': 2, '11:dãy số': 2}"
+  ],
+  "note": "This validates metadata only; playback, pedagogy and embed permissions require manual or authorized external verification."
+}

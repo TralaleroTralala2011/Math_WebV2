@@ -1,0 +1,1802 @@
+[
+  {
+    "grade": 10,
+    "topic": "Mệnh đề và tập hợp",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Bất phương trình và hệ bất phương trình",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Hệ thức lượng trong tam giác",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Vectơ",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Hàm số bậc hai và parabol",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Phương trình và hệ phương trình",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Quy tắc đếm",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Hoán vị, chỉnh hợp, tổ hợp",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Xác suất",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Thống kê",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Mệnh đề",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Tập hợp và các phép toán",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Hệ bất phương trình",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Hàm số",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Hàm số bậc nhất",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Phương trình",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Hệ phương trình",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Hệ thức lượng trong tam giác",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Tọa độ trong mặt phẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Đường thẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Đường tròn",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Nhị thức Newton",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Hình học phẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Bài toán thực tế Toán 10",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Hình học cơ bản: góc, cạnh và diện tích",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Tam giác và tứ giác cơ bản",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Đường tròn và các góc cơ bản",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Hệ thức lượng trong tam giác",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Tọa độ và đường thẳng trong mặt phẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Chứng minh hình học và bài toán tổng hợp",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Góc tạo bởi hai đường thẳng và đường cắt",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Các trường hợp bằng nhau của tam giác",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Đường trung tuyến, phân giác và đường cao",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Tính chất hình bình hành và hình thoi",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Dây cung, cung và khoảng cách đến tâm",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Định lý Thales và tam giác đồng dạng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Tỉ số diện tích tam giác",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Góc nội tiếp và góc ở tâm nâng cao",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Trung điểm và khoảng cách trong tọa độ phẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Giao điểm và vị trí tương đối của hai đường thẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Quỹ tích điểm trong mặt phẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Tiếp tuyến và dây cung của đường tròn",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Bất đẳng thức và cực trị trong tam giác",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Chứng minh hình học bằng vectơ",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Hàm số lượng giác",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Phương trình lượng giác",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Dãy số",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Cấp số cộng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Cấp số nhân",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Giới hạn",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Đạo hàm",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Quan hệ song song và vuông góc trong không gian",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Xác suất",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Giá trị lượng giác",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Công thức lượng giác",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Hàm số lượng giác",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Phương trình lượng giác",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Dãy số",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Giới hạn hàm số",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Hàm số liên tục",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Quy tắc đạo hàm",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Ứng dụng đạo hàm",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Quan hệ song song trong không gian",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Quan hệ vuông góc trong không gian",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Góc và khoảng cách trong không gian",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Thống kê Toán 11",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Bài toán thực tế Toán 11",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Tổ hợp và xác suất nâng cao",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Biến cố độc lập và xác suất có điều kiện",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Dãy số truy hồi",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Quy nạp toán học",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Phép biến hình trong mặt phẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Thiết diện hình không gian",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Bài toán thực tế tổng hợp Toán 11",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Phép biến hình cơ bản",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Nhận biết hình học không gian",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Phép tịnh tiến và ảnh của hình",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Phép đối xứng trục",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Đường thẳng song song với mặt phẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Phép quay và phép vị tự",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Hai mặt phẳng song song",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Đường thẳng vuông góc với mặt phẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Góc giữa đường thẳng và mặt phẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Dựng thiết diện của hình chóp và lăng trụ",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Khoảng cách giữa hai đường thẳng chéo nhau",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Định lý ba đường vuông góc",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Hợp thành các phép biến hình",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Thiết diện và tỉ số đoạn trong hình không gian",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Chứng minh tổng hợp song song và vuông góc",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Ứng dụng đạo hàm",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Khảo sát và vẽ đồ thị hàm số",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Nguyên hàm và tích phân",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Số phức",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Hình học không gian",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Tọa độ trong không gian",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Xác suất và biến ngẫu nhiên",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Các số đặc trưng đo xu thế và độ phân tán",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Tính đơn điệu",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Cực trị",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Giá trị lớn nhất và nhỏ nhất",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Tiếp tuyến",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Tiệm cận",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Tương giao đồ thị",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Hàm số mũ",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Hàm số logarit",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Phương trình mũ",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Phương trình logarit",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Bất phương trình mũ",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Bất phương trình logarit",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Ứng dụng tích phân",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Biểu diễn số phức",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Phương trình số phức",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Mặt phẳng trong Oxyz",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Đường thẳng trong Oxyz",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Mặt cầu",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Góc và khoảng cách Oxyz",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Thể tích hình học không gian",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Bài toán tổng hợp THPT",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Bài toán thực tế Toán 12",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Hình khối và thể tích cơ bản",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Vận dụng tọa độ Oxyz",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Vectơ và độ dài trong không gian Oxyz",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Phương trình mặt phẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Phương trình đường thẳng trong Oxyz",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Phương trình mặt cầu và tâm bán kính",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Diện tích xung quanh và toàn phần hình khối",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Khoảng cách từ điểm đến mặt phẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Góc giữa hai mặt phẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Giao điểm đường thẳng và mặt phẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Mặt phẳng tiếp xúc với mặt cầu",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Cực trị khoảng cách trong không gian tọa độ",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Giao tuyến mặt cầu và mặt phẳng",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Bài toán tham số hình học Oxyz",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Bài toán tối ưu hình học không gian",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Bất đẳng thức đại số và cực trị nâng cao",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Hệ phương trình đối xứng và hoán vị",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Phương trình chứa căn thức nâng cao",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 10,
+    "topic": "Tổ hợp và nguyên lý Dirichlet nâng cao",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Phương trình lượng giác nâng cao",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Dãy số truy hồi và bài toán cực trị",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Nhị thức Newton và hệ số tổ hợp nâng cao",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 11,
+    "topic": "Mô hình xác suất có điều kiện",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Hình học số phức và quỹ tích",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Tối ưu và cực trị bằng tích phân",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  },
+  {
+    "grade": 12,
+    "topic": "Thể tích khối tròn xoay và mô hình thực tế",
+    "learning": {
+      "required": 3,
+      "verified": 0
+    },
+    "path": {
+      "required": 3,
+      "verified": 0
+    }
+  }
+]
