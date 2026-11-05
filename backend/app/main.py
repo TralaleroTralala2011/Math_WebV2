@@ -11,6 +11,7 @@ from .chat.routes import router as chat_router
 from .matchmaking.routes import router as matchmaking_router
 from app.ai.routes import router as ai_router
 from .admin_routes import router as admin_router
+from .video_routes import router as video_router
 from .ai.maintenance_worker import start_worker, stop_worker
 
 
@@ -92,6 +93,7 @@ app.include_router(chat_router)
 app.include_router(matchmaking_router)
 app.include_router(ai_router)
 app.include_router(admin_router)
+app.include_router(video_router)
 
 # =========================================================
 # ROOT

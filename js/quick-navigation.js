@@ -26,7 +26,19 @@ function sync(){
   document.body.appendChild(nav);
 }
 let queued=false;function schedule(){if(queued)return;queued=true;requestAnimationFrame(()=>{queued=false;sync()})}
-function start(){sync();new MutationObserver(schedule).observe(document.body,{attributes:true,subtree:true,childList:true,attributeFilter:['class','style','hidden','aria-hidden']})}
+function start(){
+ sync();
+ // Observe DOM changes only on the practice page; other pages use navigation/auth events.
+ if(page()==='practise.html'){
+  const overlay=document.querySelector('#practiceOverlay');
+  if(overlay)new MutationObserver(schedule).observe(overlay,{attributes:true,attributeFilter:['class','style','hidden','aria-hidden']});
+  for(const el of document.querySelectorAll('#gameOverlay,.game-overlay,.game-modal')){
+   new MutationObserver(schedule).observe(el,{attributes:true,attributeFilter:['class','style','hidden','aria-hidden']});
+  }
+  // Game overlays can be created dynamically by existing practice code.
+  new MutationObserver(schedule).observe(document.body,{childList:true,subtree:false});
+ }
+}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start,{once:true});else start();
 window.addEventListener('pageshow',schedule);window.addEventListener('storage',schedule);window.addEventListener('focus',schedule);document.addEventListener('visibilitychange',()=>{if(!document.hidden)schedule()});document.addEventListener('mathweb:auth-changed',schedule);
 // Account state can be changed by existing login code without a custom event.
