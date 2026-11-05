@@ -31,14 +31,14 @@ function quizResult(){
 }
 function showQuiz(){
  answered=false;$('choices').replaceChildren();$('feedback').replaceChildren();$('next').classList.add('hidden');
- if(!quizBank.length){$('quiz-q').textContent='Chủ đề này chưa có câu hỏi đã kiểm chứng để luyện tập.';$('quiz-count').textContent='0/100 điểm';return}
+ if(!quizBank.length){$('quiz-q').textContent='Chủ đề này chưa có câu hỏi đã kiểm chứng để luyện tập.';$('quiz-count').textContent='0/100 điểm · Chưa thể hoàn thành vì thiếu câu hỏi';return}
  if(quizPoints>=100||quizIndex>=quizBank.length){quizResult();return}
  const item=quizBank[quizIndex];$('quiz-q').textContent=item.q;
  $('quiz-count').textContent=`Câu ${quizIndex+1}/${quizBank.length} · ${quizPoints}/100 điểm · Đúng ${correctCount} · Sai ${wrongCount}`;
  item.choices.forEach((choice,i)=>{const b=document.createElement('button');b.className='choice';b.textContent=String.fromCharCode(65+i)+'. '+choice;b.onclick=()=>{
   if(answered)return;answered=true;const ok=i===item.correct;
   if(ok){correctCount++;quizPoints=Math.min(100,quizPoints+5)}else{wrongCount++;quizPoints=Math.max(0,quizPoints-1);quizMistakes.push(item.kind||item.type||item.skill||item.q)}
-  $('feedback').textContent=(ok?'Chính xác. ':'Chưa đúng. ')+(item.why||'');
+  $('feedback').textContent=(ok?'Chính xác, +5 điểm. ':'Chưa đúng, −1 điểm (không dưới 0). ')+'Đáp án đúng: '+String.fromCharCode(65+item.correct)+'. '+item.choices[item.correct]+'. '+(item.why||'');
   [...$('choices').children].forEach((el,j)=>{el.disabled=true;el.classList.add(j===item.correct?'correct':j===i?'wrong':'')});
   $('quiz-count').textContent=`Câu ${quizIndex+1}/${quizBank.length} · ${quizPoints}/100 điểm · Đúng ${correctCount} · Sai ${wrongCount}`;
   $('next').textContent=quizPoints>=100?'Xem tổng kết':'Câu tiếp theo';$('next').classList.remove('hidden')

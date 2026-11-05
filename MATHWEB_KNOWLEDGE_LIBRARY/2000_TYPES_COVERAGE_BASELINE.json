@@ -1,0 +1,1511 @@
+{
+  "topic_count": 150,
+  "total_questions": 0,
+  "total_declared_types": 0,
+  "topics_meeting_quantity_gate": 0,
+  "all_requirements_certified": false,
+  "errors": [],
+  "error_count": 0,
+  "topics": {
+    "menh_de_tap_hop": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "bat_phuong_trinh": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "he_thuc_luong": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "vector": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "ham_so_bac_hai": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "phuong_trinh_he": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "quy_tac_dem": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "hoan_vi_chinh_hop_to_hop": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "xac_suat": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "thong_ke": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "menh_de": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "tap_hop": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "he_bat_phuong_trinh": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "ham_so": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "ham_so_bac_nhat": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "phuong_trinh": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "he_phuong_trinh": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "he_thuc_luong_tam_giac": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "toa_do_phang": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "duong_thang": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "duong_tron": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "nhi_thuc_newton": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "hinh_hoc_10": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "bai_toan_thuc_te_10": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "hinh_hoc_co_ban_10": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "tam_giac_tu_giac_10": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "duong_tron_co_ban_10": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "he_thuc_luong_van_dung_10": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "toa_do_hinh_hoc_10": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "chung_minh_hinh_hoc_10": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_angles_parallel": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_triangle_congruence": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_special_lines": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_quadrilaterals_properties": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_circle_chords_arcs": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_thales_similarity": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_triangle_area_ratio": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_circle_angles": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_coordinate_distance_midpoint": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_line_intersections": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_locus": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_circle_tangent_chord": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_triangle_inequalities": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_vector_proofs": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_geom_coordinate_circle_line": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "ham_so_luong_giac": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "phuong_trinh_luong_giac": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "day_so": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "cap_so_cong": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "cap_so_nhan": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "gioi_han": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "dao_ham": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "hinh_khong_gian": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "xac_suat_11": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "gia_tri_luong_giac": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "cong_thuc_luong_giac": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "ham_so_luong_giac_day_du": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "phuong_trinh_luong_giac_day_du": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "day_so_tong_quat": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "gioi_han_ham_so": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "ham_so_lien_tuc": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "dao_ham_quy_tac": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "ung_dung_dao_ham_11": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "song_song_khong_gian": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "vuong_goc_khong_gian": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "goc_khoang_cach_11": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "thong_ke_11": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "bai_toan_thuc_te_11": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "to_hop_xac_suat_nang_cao_11": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "bien_co_doc_lap_11": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "day_so_truy_hoi_11": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "quy_nap_toan_hoc_11": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "phep_bien_hinh_11": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "thiet_dien_hinh_khong_gian_11": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "bai_toan_thuc_te_tong_hop_11": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "phep_bien_hinh_co_ban_11": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "nhan_biet_hinh_khong_gian_11": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_transform_translation": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_transform_reflection": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_space_lines_planes": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_parallel_line_plane": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_prism_pyramid_sections": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_rotation_homothety": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_parallel_planes": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_perpendicular_line_plane": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_dihedral_angles": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_section_construction": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_skew_lines_distance": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_three_perpendiculars": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_transform_composition": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_section_ratio": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_geom_space_proof": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "ung_dung_dao_ham": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "khao_sat_ham_so": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "nguyen_ham_tich_phan": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "so_phuc": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "hinh_hoc_khong_gian": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "toa_do_khong_gian": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "xac_suat_12": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "thong_ke_12": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "tinh_don_dieu": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "cuc_tri": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "gtln_gtnn": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "tiep_tuyen": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "tien_can": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "tuong_giao": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "ham_mu": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "ham_logarit": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "pt_mu": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "pt_logarit": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "bpt_mu": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "bpt_logarit": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "ung_dung_tich_phan": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "bieu_dien_so_phuc": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "pt_so_phuc": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "mat_phang_oxyz": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "duong_thang_oxyz": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "mat_cau": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "goc_khoang_cach_oxyz": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "the_tich_khong_gian": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "tong_hop_thpt": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "bai_toan_thuc_te_12": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "hinh_khoi_va_the_tich_co_ban_12": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "hinh_hoc_oxyz_van_dung_12": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_vectors_3d": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_plane_equation": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_line_equation_3d": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_sphere_equation": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_solid_surface_area": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_point_plane_distance": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_line_plane_angle": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_two_planes_angle": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_line_plane_intersection": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_sphere_tangent_plane": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_skew_line_relation": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_min_distance_3d": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_sphere_plane_intersection": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_parameter_geometry": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_geom_3d_optimization": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_advanced_inequalities": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_symmetric_systems": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_radical_equations_advanced": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g10_combinatorics_olympiad": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_advanced_trig_equations": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_sequences_advanced": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_binomial_advanced": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g11_conditional_probability_models": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_complex_plane_geometry": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_integral_optimization": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    },
+    "g12_solid_of_revolution": {
+      "declared_types": 0,
+      "types_with_10_distinct_questions": 0,
+      "questions": 0,
+      "type_target": 2000,
+      "question_target": 20000,
+      "quantity_gate_passed": false,
+      "mathematical_correctness_verified": false,
+      "semantic_distinctness_human_verified": false
+    }
+  }
+}

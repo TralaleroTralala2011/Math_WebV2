@@ -365,8 +365,10 @@ class AIQuestionService:
                     if 0 <= index < len(options): selected = options[index]
             return equivalent(selected, q["answer"])
         if t=="short_answer":
-            from .solver import equivalent
-            return equivalent(user_answer,q["answer"])
+            # Centralized, type-aware grading handles verdict + numeric responses
+            # (e.g. "Sai, 90" versus "Sai; 9(7+3)=90") without text matching.
+            from ...questions.answer_checker import grade_answer
+            return grade_answer(q, user_answer, q["answer"])
         if t=="true_false":
             vals=user_answer if isinstance(user_answer,list) else []
             return [bool(x) for x in vals]==q["statement_answers"]

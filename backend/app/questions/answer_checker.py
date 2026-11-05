@@ -25,6 +25,28 @@ def _choice(v, options):
         return chr(65+int(letter)-1) if letter.isdigit() else letter
     return s.casefold()
 
+def _composite_verdict_number(value):
+    """Parse a two-part true/false + numeric answer without executing expressions.
+
+    Accepted: 'Sai, 90', 'Không đúng; kết quả là 90',
+    'Sai; 9(7+3)=90'. Rejects extra contradictory numbers.
+    """
+    import unicodedata
+    if not isinstance(value, str) or len(value) > 300:
+        return None
+    folded = ''.join(c for c in unicodedata.normalize('NFD', value.casefold()) if unicodedata.category(c) != 'Mn').replace('đ', 'd')
+    negative = bool(re.search(r'\b(?:sai|khong\s+dung|false)\b', folded))
+    positive = bool(re.search(r'\b(?:dung|chinh\s+xac|true)\b', re.sub(r'khong\s+dung', '', folded)))
+    if negative == positive:
+        return None
+    # Explicit final result only; intermediate expressions are not graded by their numbers.
+    tail = re.search(r'(?:=|la|bang|ket\s+qua\s+la)\s*([-+]?\d+(?:[.,]\d+)?)\s*$', folded)
+    if tail is None:
+        tail = re.search(r'[,;:]\s*([-+]?\d+(?:[.,]\d+)?)\s*$', folded)
+    if tail is None:
+        return None
+    return (not negative, float(tail.group(1).replace(',', '.')))
+
 def grade_answer(question, submitted, correct=None):
     t=canonical_type(question)
     if correct is None: correct=question.get("correct_answer",question.get("answer"))
@@ -41,7 +63,11 @@ def grade_answer(question, submitted, correct=None):
             return _truth(v)
         a,b=parse(submitted),parse(correct)
         return a is not None and b is not None and a==b
-    if t=="short_answer":
+    if t in ("short_answer", "written", "essay"):
+        expected_composite = _composite_verdict_number(correct)
+        if expected_composite is not None:
+            actual_composite = _composite_verdict_number(submitted)
+            return actual_composite is not None and actual_composite == expected_composite
         try:
             from ..ai.engine.solver import equivalent
             return bool(equivalent(submitted,correct))
