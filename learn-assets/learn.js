@@ -15,3 +15,17 @@ async function init(){try{const responses=await Promise.all([fetch('learn-assets
 $('grade').onchange=()=>{filter();if($('topic').value)openTopic($('topic').value)};let searchTimer;$('search').oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{filter();if($('topic').value)openTopic($('topic').value)},120)};$('topic').onchange=()=>{if($('topic').value)openTopic($('topic').value)};document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>tab(b.dataset.tab));$('next').onclick=()=>{quizIndex++;showQuiz()};init();
 // Fetch video recommendations only when the video tab is opened.
 const originalTab=tab;tab=function(name){originalTab(name);if(name==='video'&&current&&window.MathWebVideos){window.MathWebVideos.render($('video-player'),current.grade,current.title,currentVideoId)}};
+
+
+// Expanded, reviewed knowledge sections, rendered without replacing existing lesson components.
+function mwShowKnowledgeSections(){
+ const old=document.getElementById('mw-knowledge-sections');if(old)old.remove();
+ if(!current)return;const data=lessons[current.id];if(!Array.isArray(data?.sections)||!data.sections.length)return;
+ const target=document.getElementById('formulas')||document.getElementById('theory');if(!target)return;
+ const panel=document.createElement('section');panel.id='mw-knowledge-sections';panel.style.cssText='margin:18px 0;padding:18px;border:1px solid #d8d2f6;border-radius:16px;background:rgba(125,100,230,.05)';
+ const heading=document.createElement('h3');heading.textContent='Chuyên đề kiến thức chi tiết';panel.append(heading);
+ for(const part of data.sections){const details=document.createElement('details');details.style.cssText='padding:10px 0;border-bottom:1px solid #ded9ed';const title=document.createElement('summary');title.style.cssText='cursor:pointer;font-weight:700';title.textContent=part.level+' · '+part.title;const p=document.createElement('p');p.textContent=part.details;details.append(title,p);panel.append(details)}
+ target.insertAdjacentElement('afterend',panel);
+}
+
+const mwOriginalOpenTopic=openTopic;openTopic=function(id){const result=mwOriginalOpenTopic(id);mwShowKnowledgeSections();return result};
