@@ -45,7 +45,7 @@ window.MathWebVideos = (() => {
       if (result.videos?.length) {
         const heading = document.createElement('p'); heading.className = 'muted';
         heading.textContent = 'Video gợi ý từ YouTube. Chọn video để phát ngay trong trang.';
-        const list = document.createElement('div'); list.className = 'mw-video-list';
+        const list = document.createElement('div'); list.className = 'mw-video-list'; list.setAttribute('aria-label','Danh sách video cuộn ngang');
         const stage = document.createElement('div'); stage.className = 'mw-video-stage';
         result.videos.forEach(v => {
           if (!safeId(v.id)) return;
@@ -60,7 +60,13 @@ window.MathWebVideos = (() => {
           btn.onclick = () => {stage.replaceChildren(player(v.id, v.title));};
           list.append(btn);
         });
-        container.append(heading, stage, list, search);
+        const nav=document.createElement('div');nav.className='mw-video-nav';
+        for(const [symbol,dir,label] of [['←',-1,'Video trước'],['→',1,'Video tiếp']]){
+          const b=document.createElement('button');b.type='button';b.textContent=symbol;b.setAttribute('aria-label',label);
+          b.onclick=()=>list.scrollBy({left:dir*Math.max(250,list.clientWidth*.8),behavior:'smooth'});nav.append(b);
+        }
+        if(list.children.length<3){const warning=document.createElement('p');warning.className='muted';warning.textContent='Hiện chỉ xác minh được '+list.children.length+' video cho chủ đề này; chưa đủ mục tiêu 3 video.';container.append(warning)}
+        container.append(heading, stage, nav, list, search);
       } else {
         msg.textContent = result.message || 'Chưa tìm được video nhúng phù hợp. Bạn vẫn có thể học lý thuyết hoặc làm bài tập.';
         container.append(msg, search);
