@@ -587,59 +587,92 @@ def get_common_topics(grade, topics1, topics2):
     return common[:MAX_TOPIC_COUNT]
 
 
-def generate_ai_battle_questions(
-    grade,
-    topics,
-    difficulty,
-    question_type
-):
-    if not topics:
-        raise HTTPException(
-            status_code=409,
-            detail="Hai người chơi không có chủ đề chung."
-        )
+def generate_ai_battle_questions(grade, topics, difficulty, question_type):
+    """Build a validated Battle-only deck without exhausting practice history.
 
-    # Generate a shared, server-authoritative alternating deck.
-    # Each player's selected topic contributes equally (A,B,A,B...).
+    Normal generation remains the first choice. The fallback does not write to
+    the persistent practice uniqueness ledger and never returns invalid or
+    verbatim-duplicate questions within a match.
+    """
+    if not topics:
+        raise HTTPException(status_code=409, detail="Hai người chơi không có chủ đề chung.")
+
     from ..questions.answer_checker import canonical_type
+    from ..ai.engine.validator import validate, ValidationError
+    import random
+
     topic_cycle = list(dict.fromkeys(str(t) for t in topics if t))[:2]
     if not topic_cycle:
         raise HTTPException(status_code=409, detail="Chưa có chủ đề thi đấu.")
+
+    battle_types = ["multiple_choice"] * 7 + ["short_answer"] * 2 + ["true_false"]
+    random.shuffle(battle_types)
     clean_questions = []
     seen_text = set()
-    # Exactly 7/2/1 per standard ten-question battle; shuffled per match.
-    import random
-    battle_types = (["multiple_choice"] * 7 + ["short_answer"] * 2 + ["true_false"])
-    random.shuffle(battle_types)
+
+    def accept(candidate, expected_type):
+        if not isinstance(candidate, dict):
+            return None
+        item = dict(candidate)
+        try:
+            validate(item)
+        except (ValidationError, ValueError, KeyError, TypeError):
+            return None
+        if canonical_type(item) != expected_type:
+            return None
+        question_text = str(item.get("question") or item.get("text") or "").strip()
+        key = " ".join(question_text.casefold().split())
+        if not key or key in seen_text:
+            return None
+        seen_text.add(key)
+        return item
+
     for index in range(MATCH_TOTAL_QUESTIONS):
-        item_type = battle_types[index] if question_type == "mixed" else question_type
+        item_type = battle_types[index % len(battle_types)] if question_type == "mixed" else question_type
         topic = topic_cycle[index % len(topic_cycle)]
+        chosen = None
+        # Preserve the existing generation path whenever its history allows it.
         try:
             result = ai_service.generate_set(
                 grade=grade, topics=[topic], count=1,
                 difficulty=difficulty, question_type=item_type,
-                history=list(seen_text)
+                history=[]
             )
-        except (ValueError, RuntimeError) as error:
-            raise HTTPException(status_code=400, detail=f"Không tạo được câu hỏi chủ đề {topic}: {error}")
-        candidates = result.get("questions", [])
-        if not isinstance(candidates, list) or not candidates or not isinstance(candidates[0], dict):
-            raise HTTPException(status_code=500, detail=f"Không có câu hỏi hợp lệ cho {topic}.")
-        item = dict(candidates[0])
-        if canonical_type(item) != item_type:
-            raise HTTPException(status_code=500, detail="Kiểu câu hỏi AI không khớp định dạng trận đấu.")
-        question_text = str(item.get("question") or item.get("text") or "").strip()
-        if not question_text or question_text in seen_text:
-            raise HTTPException(status_code=500, detail="Bộ đề bị trùng hoặc thiếu nội dung câu hỏi.")
-        seen_text.add(question_text)
-        item["battle_index"] = index
-        item["battle_topic"] = topic
-        clean_questions.append(item)
+            for candidate in result.get("questions", []):
+                chosen = accept(candidate, item_type)
+                if chosen:
+                    break
+        except (ValueError, RuntimeError):
+            pass
+
+        if chosen is None:
+            # Battle-only escape hatch: use the underlying validated generator.
+            # Do NOT record into question_history, so practice stays strict.
+            for _ in range(120):
+                try:
+                    candidate = ai_service.generator.generate(
+                        grade, topic, difficulty, item_type, None, []
+                    )
+                    chosen = accept(candidate, item_type)
+                    if chosen:
+                        ai_service.store.put(chosen)
+                        break
+                except (ValueError, RuntimeError, ValidationError, KeyError, TypeError):
+                    continue
+
+        if chosen is None:
+            raise HTTPException(
+                status_code=503,
+                detail=f"Nguồn câu hỏi Battle chưa đủ cho chủ đề {topic} ({item_type})."
+            )
+        chosen["battle_index"] = index
+        chosen["battle_topic"] = topic
+        clean_questions.append(chosen)
+
     try:
-        archive_questions(grade, topic_cycle, clean_questions, source="AI runtime · alternating Battle")
+        archive_questions(grade, topic_cycle, clean_questions, source="AI runtime · Battle")
     except Exception:
         pass
-
     return clean_questions
 
 

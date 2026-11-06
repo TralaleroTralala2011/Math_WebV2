@@ -1,0 +1,57 @@
+{
+  "target": {
+    "topics": 150,
+    "distinct_types_per_topic": 2000,
+    "questions_per_type": 10,
+    "total_distinct_types": 300000,
+    "total_questions": 3000000
+  },
+  "catalogue_inventory": {
+    "superbank_declared_type_ids": 62,
+    "problem_bank_declared_type_ids": 20,
+    "superbank_group_sizes": {
+      "algebra": 3,
+      "quadratic": 3,
+      "system": 2,
+      "inequality": 2,
+      "exponential_inequality": 1,
+      "logarithmic_inequality": 1,
+      "set": 2,
+      "counting": 2,
+      "probability": 11,
+      "statistics": 1,
+      "sequence": 2,
+      "function": 3,
+      "coordinate": 2,
+      "trig": 2,
+      "limit": 1,
+      "derivative": 4,
+      "integral": 2,
+      "complex": 2,
+      "geometry": 7,
+      "real_life": 2,
+      "newton": 1,
+      "induction": 1,
+      "transformation": 1,
+      "survey": 1,
+      "space_coordinate": 1,
+      "asymptote": 1,
+      "intersection": 1,
+      "exponential": 1,
+      "logarithmic": 1,
+      "exponential_equation": 1,
+      "logarithmic_equation": 1
+    },
+    "topic_group_entries": 86
+  },
+  "verified_distinct_types_per_topic": null,
+  "verified_unique_questions_per_type": null,
+  "verified_solution_correctness": null,
+  "meets_target": false,
+  "limitations": [
+    "Catalogued archetypes are not proof of distinct mathematical problem types.",
+    "This audit does not count dynamically generated question variants.",
+    "A separate mathematical equivalence and solution review is required.",
+    "No 100% completion claim is supported by this inventory."
+  ]
+}

@@ -698,6 +698,17 @@ def answer_question(
     # RETURN RESULT
     # =====================================================
 
+    # Attach feedback after authoritative session grading, without changing score.
+    from .grading_feedback import feedback_for_result
+    if isinstance(result, dict):
+        verdict = result.get("correct", result.get("is_correct"))
+        if verdict is not None:
+            private = session.get("private_answer") or {}
+            expected = private.get("answer_text") if isinstance(private, dict) else None
+            result.update(feedback_for_result(
+                session.get("question") or {}, selected_answer, expected,
+                bool(verdict), session.get("explanation")
+            ))
     return result
 
 
