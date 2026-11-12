@@ -1,0 +1,42 @@
+{
+  "version": "V157",
+  "input_source_zip": "MATH_WEB_GITHUB_READY_V156_PRIVATE_CHECKPOINT.zip",
+  "input_source_sha256": "a2e9653ea846312c0967bc11888b60bfac6f0d3385d6cffa5645769f56a7a5c1",
+  "created_utc": "2026-11-09T04:43:14.136902+00:00",
+  "changes": [
+    "Fix repeated legacy Admin bootstrap creating shadow users after migration into admin_accounts",
+    "Use cryptographically random legacy admin player_id instead of per-second timestamp",
+    "Fail closed for default/weak bootstrap admin password if MATHWEB_ENV=production"
+  ],
+  "source_sqlite_count": 6,
+  "source_sqlite_bytes_preserved": true,
+  "final_tests": "281 passed, 6 warnings, 7 subtests passed",
+  "admin_new_tests": "2 passed",
+  "package_guard_tests": "4 passed",
+  "cumulative_session_new_candidates": 2,
+  "cumulative_session_answer_verified_questions": 20,
+  "cumulative_new_certified_independent_forms": 0,
+  "cumulative_new_published_questions": 0,
+  "pending_previous_research_methods": 4,
+  "pending_previous_research_questions": 40,
+  "limits": [
+    "no real account data tests",
+    "no Battle/Admin browser E2E",
+    "no million-question benchmark",
+    "no GitHub push",
+    "50-60 minute work duration not independently logged"
+  ],
+  "files": {
+    "report": "V157_RELEASE/V157_REPORT.md",
+    "checkpoint": "V157_RELEASE/CHECKPOINT.json",
+    "full_regression": "V157_RELEASE/V157_FULL_REGRESSION.log",
+    "private_zip": "MATH_WEB_GITHUB_READY_V157_PRIVATE_CHECKPOINT.zip",
+    "source_zip": "MATH_WEB_GITHUB_READY_V157_GITHUB_SOURCE_ONLY.zip"
+  },
+  "next": [
+    "verify staging account persistence after upgrade",
+    "review independent types",
+    "E2E Battle/admin/login/chat",
+    "benchmark on expanded question bank"
+  ]
+}

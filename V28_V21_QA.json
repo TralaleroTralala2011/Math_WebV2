@@ -1,0 +1,68 @@
+{
+  "version": "V21",
+  "baseline": "MATH_WEB_V28_CLASSIC_V20_FUNCTIONAL_FIX.zip",
+  "changes": [
+    "Do not ship HMAC signing secret and SQLite runtime DB inside distribution ZIP",
+    "Preserve the existing external Windows LOCALAPPDATA\\MATH_WEB database and secret when upgrading",
+    "Keep the answer-option shuffle fixed while revisiting a question in one assessment",
+    "No CSS/theme changes"
+  ],
+  "private_files_excluded": [
+    "backend/database/.mathweb_hmac_secret",
+    "backend/database/mathweb.db"
+  ],
+  "testing": {
+    "matrix": {
+      "questions": 900,
+      "topics": 150,
+      "errors": 0
+    },
+    "b25_sha256_unchanged": "6f356f9bede0d79b75bd75a314050dc8bf202a3ccf53297c87dc377cfc26a6a4",
+    "javascript_syntax": "PASS",
+    "js_scoring_tests": {
+      "returncode": 0,
+      "last_output": "{\"passed\":112,\"cases\":12,\"shuffles\":100}\n"
+    },
+    "frontend_http_access": {
+      "/backend/database/mathweb.db": [
+        404,
+        330
+      ],
+      "/backend/database/.mathweb_hmac_secret": [
+        404,
+        330
+      ],
+      "/backend/app/auth/routes.py": [
+        404,
+        330
+      ],
+      "/scripts/serve_frontend.py": [
+        404,
+        330
+      ],
+      "/backend%2Fdatabase%2Fmathweb.db": [
+        404,
+        330
+      ],
+      "/index.html": [
+        200,
+        12909
+      ]
+    },
+    "zip_crc": "PASS",
+    "backend_extended_pytest": {
+      "passed": 25,
+      "failed": 1,
+      "detail": "The one failing test checks presence of neon-v27-usability.css on pages; V28 Classic intentionally excludes that stylesheet. No backend functionality failure observed in selected tests."
+    },
+    "backend_initial_pytest": {
+      "passed": 21,
+      "failed": 0
+    }
+  },
+  "remaining": [
+    "Independent mathematics and pedagogy review of 900 questions",
+    "Live two-account TCP Battle integration and visual 20-page browser review",
+    "Full 150-topic semantic mapping of B25 still unverified"
+  ]
+}

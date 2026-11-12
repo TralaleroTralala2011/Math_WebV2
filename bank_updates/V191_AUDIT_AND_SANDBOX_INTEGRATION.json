@@ -1,0 +1,51 @@
+{
+  "baseline_zip": "V182 full website + V183–V190 patch JSONL",
+  "baseline_records_scanned_including_overlapping_archives": 20166,
+  "baseline_unique_normalized_prompts": 7209,
+  "v191_records": 520,
+  "v191_families": 52,
+  "v191_exact_prompt_duplicates_with_prior": 0,
+  "v191_numeric_mask_pattern_overlaps_with_prior": 0,
+  "v191_exact_family_name_collisions": 0,
+  "semantic_math_method_independence_certified": 0,
+  "production_questions_integrated": 0,
+  "notes": [
+    "Old source includes duplicate records across archived checkpoints.",
+    "Numeric masking is a coarse lexical check, not a proof of distinct mathematical method.",
+    "Production integration is unconfirmed without an authorized user SQLite DB."
+  ],
+  "sandbox_sqlite_preview": {
+    "mode": "preview",
+    "db": "/tmp/mathweb_v191_sqlite_3ndbdbur/test_sqlite.db",
+    "input_records": 520,
+    "bank_before": 0,
+    "potential_new": 520,
+    "certified_independent_types": 0
+  },
+  "sandbox_sqlite_write": {
+    "input_records": 520,
+    "bank_before": 0,
+    "bank_after": 520,
+    "inserted": 520,
+    "ledger_confirmed": 520,
+    "sqlite_integrity": "ok"
+  },
+  "sandbox_app_retrieval_examples": [
+    {
+      "question_type": "multiple_choice",
+      "bank_id": 101,
+      "topic": "cap_so_nhan"
+    },
+    {
+      "question_type": "short_answer",
+      "bank_id": 108,
+      "topic": "cap_so_nhan"
+    },
+    {
+      "question_type": "true_false",
+      "bank_id": 110,
+      "topic": "cap_so_nhan"
+    }
+  ],
+  "sandbox_test_only": true
+}

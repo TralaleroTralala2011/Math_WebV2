@@ -1,0 +1,19 @@
+{
+  "checkpoint": "V213",
+  "canonical_topic_reference": "bank_updates/V203_COVERAGE_150.json",
+  "canonical_topic_pairs": 150,
+  "sqlite_distinct_grade_topic_pairs": 156,
+  "new_questions_in_canonical_150": 660,
+  "new_questions_in_legacy_topics": 60,
+  "by_version": {
+    "V212": {
+      "canonical": 380,
+      "legacy": 40
+    },
+    "V213": {
+      "canonical": 280,
+      "legacy": 20
+    }
+  },
+  "meaning": "Six candidate groups were placed in legacy grade-topic codes already present in the database, not in the archived 150-topic target list. They are topical, but should not be counted as coverage growth of canonical topics."
+}

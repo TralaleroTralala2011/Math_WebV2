@@ -1,0 +1,23 @@
+{
+  "source_rows": 3730,
+  "ready": 3695,
+  "quarantined": 35,
+  "quarantined_reasons": {
+    "mcq_equivalent_options": 35
+  },
+  "by_source": {
+    "V179": 1865,
+    "V180_additional": 360,
+    "V180_QA": 1470
+  },
+  "by_grade": {
+    "10": 1550,
+    "11": 1060,
+    "12": 1085
+  },
+  "topics_covered": 67,
+  "new_certified_independent_types": 0,
+  "production_integrated": 0,
+  "quality_scope": "structural checks, shared grader, prior reported numerical oracle; semantic and detailed solution audit pending",
+  "source_manifest_sha256": "a8ef43520f5ede2e56b4a872cd2ec4fbc355c98dd60d11f1634e3b00b704e98b"
+}

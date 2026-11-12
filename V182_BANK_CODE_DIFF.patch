@@ -1,0 +1,76 @@
+--- a/backend/scripts/import_bank_updates.py
++++ b/backend/scripts/import_bank_updates.py
+@@ -62,16 +62,19 @@
+             if key in seen_prompts:
+                 raise ValueError(f'duplicate prompt at line {line_number}: {rid}')
+             seen_prompts.add(key)
+-            if row['question_type'] not in ('multiple_choice', 'short_answer'):
++            if row['question_type'] not in ('multiple_choice', 'short_answer', 'true_false'):
+                 raise ValueError(f'unsupported question type at line {line_number}: {rid}')
+             choices = row.get('choices') or []
+             if row['question_type'] == 'short_answer' and choices:
+                 raise ValueError(f'unexpected short-answer options at line {line_number}: {rid}')
++            if row['question_type'] == 'true_false' and (len(choices) != 4 or len(str(row['answer']).split(',')) != 4):
++                raise ValueError(f'invalid four-statement true/false at line {line_number}: {rid}')
+             candidate = {
+                 'id': rid, 'grade': row['grade'], 'topic': row['topic'],
+                 'difficulty': row['difficulty'], 'question_type': row['question_type'],
+                 'question': row['question'], 'answer': row['answer'],
+                 'solution': row['solution'], 'options': choices,
++                'statements': choices if row['question_type'] == 'true_false' else [],
+             }
+             try:
+                 validate(candidate)
+@@ -172,7 +175,9 @@
+                         row['grade'], row['topic'], row['difficulty'], row['question_type'], '',
+                         row['question'], json.dumps(row['choices'], ensure_ascii=False), row['answer'],
+                         row['solution'], f'{row["source_bundle"]} QA-gated',
+-                        json.dumps(['V181', row['id'], 'method-independence-not-certified',
++                        json.dumps([str(row.get('source_bundle', 'V181')), row['id'],
++                                    'form:' + str(row.get('form_id') or row.get('family') or row['id']),
++                                    'method-independence-not-certified',
+                                     'semantic-solution-review-pending'], ensure_ascii=False),
+                         None, now, now,
+                     ))
+
+--- a/backend/app/ai/engine/service.py
++++ b/backend/app/ai/engine/service.py
+@@ -134,13 +134,24 @@
+             options = []
+         else:
+             options = []
++        # Group numerical variants under their mathematical family when the
++        # import ledger provides a form tag. Never count a question ID as a new
++        # mathematical archetype. Legacy rows without tags retain old behavior.
++        try:
++            tags = json.loads(item.get("tags_json") or "[]")
++            tags = tags if isinstance(tags, list) else []
++        except (ValueError, TypeError):
++            tags = []
++        form_tag = next((tag[5:] for tag in tags if isinstance(tag, str)
++                         and tag.startswith("form:") and tag[5:]), None)
++        archetype_key = f"admin_form_{form_tag}" if form_tag else f"admin_bank_{item['id']}"
+         q = {
+             "id": uuid.uuid4().hex, "grade": grade, "topic": topic_id,
+             "difficulty": normalize(difficulty), "question_type": question_type,
+             "question": str(item.get("question", "")).strip(),
+             "answer": answer, "solution": str(item.get("explanation", "")).strip() or "Lời giải đang được bổ sung.",
+             "explanation": str(item.get("explanation", "")).strip(), "options": options,
+-            "archetype": f"admin_bank_{item['id']}", "template_family": f"admin_bank_{item['id']}",
++            "archetype": archetype_key, "template_family": archetype_key,
+             "generation_style": "admin_curated", "source": item.get("source", "Admin MATH_WEB"),
+             "knowledge_name": (self.knowledge.get(topic_id) or {}).get("name", topic_id),
+             "game_id": str(item.get("game_id", "") or ""), "admin_question_id": item["id"]
+@@ -409,8 +420,10 @@
+             from ...questions.answer_checker import grade_answer
+             return grade_answer(q, user_answer, q["answer"])
+         if t=="true_false":
+-            vals=user_answer if isinstance(user_answer,list) else []
+-            return [bool(x) for x in vals]==q["statement_answers"]
++            # Browser submissions may be boolean arrays or comma-separated
++            # Đúng/Sai tokens. Never use bool("Sai"), which evaluates True.
++            from ...questions.answer_checker import grade_answer
++            return grade_answer(q, user_answer, q["answer"])
+         return False
+ 
+     def battle_topics(self,a,b):

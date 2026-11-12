@@ -1,0 +1,205 @@
+[
+  {
+    "grade": 10,
+    "topic": "Hàm số bậc nhất",
+    "form_id": "v58_linear_intercept",
+    "signature": "Tìm giao điểm trục hoành của hàm bậc nhất",
+    "count": 10
+  },
+  {
+    "grade": 10,
+    "topic": "Hàm số bậc nhất",
+    "form_id": "v58_linear_two_points",
+    "signature": "Lập hàm bậc nhất qua hai điểm",
+    "count": 10
+  },
+  {
+    "grade": 10,
+    "topic": "Phương trình bậc hai",
+    "form_id": "v58_quadratic_sum",
+    "signature": "Viète: tính tổng hai nghiệm",
+    "count": 10
+  },
+  {
+    "grade": 10,
+    "topic": "Phương trình bậc hai",
+    "form_id": "v58_quadratic_product",
+    "signature": "Viète: tính tích hai nghiệm",
+    "count": 10
+  },
+  {
+    "grade": 10,
+    "topic": "Tập hợp và các phép toán",
+    "form_id": "v58_set_intersection",
+    "signature": "Đếm phần tử giao hai tập hữu hạn",
+    "count": 10
+  },
+  {
+    "grade": 10,
+    "topic": "Chia dư",
+    "form_id": "v58_mod_power",
+    "signature": "Tính số dư lũy thừa theo chu kỳ",
+    "count": 10
+  },
+  {
+    "grade": 10,
+    "topic": "Chia hết",
+    "form_id": "v58_divisibility_9",
+    "signature": "Dấu hiệu chia hết cho 9 qua tổng chữ số",
+    "count": 10
+  },
+  {
+    "grade": 10,
+    "topic": "Tọa độ trong mặt phẳng",
+    "form_id": "v58_midpoint_x",
+    "signature": "Hoành độ trung điểm của đoạn thẳng",
+    "count": 10
+  },
+  {
+    "grade": 10,
+    "topic": "Tọa độ trong mặt phẳng",
+    "form_id": "v58_distance_squared",
+    "signature": "Bình phương khoảng cách hai điểm",
+    "count": 10
+  },
+  {
+    "grade": 10,
+    "topic": "Tổ hợp",
+    "form_id": "v58_comb_choose",
+    "signature": "Chọn nhóm không xét thứ tự",
+    "count": 10
+  },
+  {
+    "grade": 10,
+    "topic": "Quy tắc đếm",
+    "form_id": "v58_count_product",
+    "signature": "Quy tắc nhân trong lựa chọn độc lập",
+    "count": 10
+  },
+  {
+    "grade": 10,
+    "topic": "Thống kê",
+    "form_id": "v58_mean_data",
+    "signature": "Trung bình cộng của bảng số liệu",
+    "count": 10
+  },
+  {
+    "grade": 11,
+    "topic": "Cấp số cộng",
+    "form_id": "v58_ap_nth",
+    "signature": "Tính số hạng thứ n của cấp số cộng",
+    "count": 10
+  },
+  {
+    "grade": 11,
+    "topic": "Cấp số cộng",
+    "form_id": "v58_ap_sum",
+    "signature": "Tổng n số hạng đầu cấp số cộng",
+    "count": 10
+  },
+  {
+    "grade": 11,
+    "topic": "Cấp số nhân",
+    "form_id": "v58_gp_nth",
+    "signature": "Tính số hạng thứ n của cấp số nhân",
+    "count": 10
+  },
+  {
+    "grade": 11,
+    "topic": "Cấp số nhân",
+    "form_id": "v58_gp_sum",
+    "signature": "Tổng hữu hạn cấp số nhân",
+    "count": 10
+  },
+  {
+    "grade": 11,
+    "topic": "Xác suất",
+    "form_id": "v58_prob_one_draw",
+    "signature": "Xác suất cổ điển khi rút một vật",
+    "count": 10
+  },
+  {
+    "grade": 11,
+    "topic": "Đạo hàm",
+    "form_id": "v58_derivative_power",
+    "signature": "Đạo hàm đa thức tại một điểm",
+    "count": 10
+  },
+  {
+    "grade": 11,
+    "topic": "Giới hạn",
+    "form_id": "v58_limit_factor",
+    "signature": "Giới hạn phân thức có nhân tử chung",
+    "count": 10
+  },
+  {
+    "grade": 12,
+    "topic": "Số phức",
+    "form_id": "v58_complex_mod_sq",
+    "signature": "Bình phương môđun số phức",
+    "count": 10
+  },
+  {
+    "grade": 12,
+    "topic": "Số phức",
+    "form_id": "v58_complex_product_real",
+    "signature": "Phần thực tích hai số phức",
+    "count": 10
+  },
+  {
+    "grade": 12,
+    "topic": "Nguyên hàm và tích phân",
+    "form_id": "v58_integral_poly",
+    "signature": "Tích phân xác định đa thức bậc nhất",
+    "count": 10
+  },
+  {
+    "grade": 12,
+    "topic": "Hàm số mũ",
+    "form_id": "v58_exponential_equation",
+    "signature": "Giải phương trình cùng cơ số",
+    "count": 10
+  },
+  {
+    "grade": 12,
+    "topic": "Hàm số logarit",
+    "form_id": "v58_log_value",
+    "signature": "Tính logarit theo định nghĩa",
+    "count": 10
+  },
+  {
+    "grade": 12,
+    "topic": "Tọa độ trong không gian",
+    "form_id": "v58_dot_product_3d",
+    "signature": "Tích vô hướng của hai vectơ Oxyz",
+    "count": 10
+  },
+  {
+    "grade": 12,
+    "topic": "Phương trình mặt phẳng",
+    "form_id": "v58_plane_normal",
+    "signature": "Nhận biết vectơ pháp tuyến mặt phẳng",
+    "count": 10
+  },
+  {
+    "grade": 12,
+    "topic": "Mặt cầu",
+    "form_id": "v58_sphere_radius_sq",
+    "signature": "Bán kính bình phương từ phương trình mặt cầu",
+    "count": 10
+  },
+  {
+    "grade": 12,
+    "topic": "Hình khối và thể tích cơ bản",
+    "form_id": "v58_prism_volume",
+    "signature": "Thể tích lăng trụ khi biết diện tích đáy",
+    "count": 10
+  },
+  {
+    "grade": 12,
+    "topic": "Thể tích hình học không gian",
+    "form_id": "v58_pyramid_volume",
+    "signature": "Thể tích hình chóp từ diện tích đáy và chiều cao",
+    "count": 10
+  }
+]

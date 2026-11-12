@@ -1,0 +1,15 @@
+{
+  "base": "MATH_WEB_GITHUB_READY_KNOWLEDGE_BATCH_11.zip",
+  "new_topic_ids": [
+    "gia_tri_luong_giac",
+    "cong_thuc_luong_giac",
+    "day_so_tong_quat",
+    "quy_nap_toan_hoc_11",
+    "ham_logarit"
+  ],
+  "new_questions": 50,
+  "total_topics": 150,
+  "topics_with_quiz": 61,
+  "checks": "structure, option uniqueness, answer presence, ZIP CRC; no end-to-end browser test",
+  "verified_videos_added": 0
+}

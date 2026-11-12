@@ -1,0 +1,13 @@
+{
+  "version": "V107",
+  "critical_fix": "V106 accidentally replaced 333860-record main bank with 120-record fragment; restored V105 and appended 120 V106 records",
+  "restored_base_questions": 333860,
+  "appended_v106_questions": 120,
+  "combined_questions": 333980,
+  "new_v106_form_ids": 12,
+  "notes": [
+    "Does not certify independent mathematical archetypes",
+    "MathGeo from V106 retained",
+    "No 10000 new independent forms claimed"
+  ]
+}

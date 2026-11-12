@@ -1,0 +1,17 @@
+{
+  "version": "V79",
+  "base": "V78",
+  "added_form_ids": 10,
+  "added_question_records": 100,
+  "total_form_ids": 33378,
+  "total_question_records": 333790,
+  "new_topic": "Toán 10 / Hàm số bậc nhất",
+  "distinct_task_specifications_authored": 10,
+  "certified_independent_types": 0,
+  "questions_per_new_id": 10,
+  "duplicate_new_question_texts": 0,
+  "overlap_with_existing_topic": 0,
+  "reached_10000_new_ids": false,
+  "reached_full_target": false,
+  "limitations": "Ten different mathematical task specifications authored, not independently certified as ten distinct pedagogical types. Existing project not regression tested."
+}

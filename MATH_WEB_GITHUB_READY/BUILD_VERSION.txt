@@ -1,0 +1,37 @@
+MATH_WEB build: 2026-10-29 social matchmaking fix + topic/game question studio + learner coach
+- Preserved existing practice, games, friend/chat, and online battle pages.
+- Added Admin teacher center: student/topic performance, weak-topic signals, homework assignment creation, due date, target students, and assignment result reports.
+- Added learner-facing learning.html: personalized review/challenge suggestions, assignment list, timed attempts, submission, score, and post-submission explanations.
+- Added persistent archive for unique AI questions generated through AI practice/problem endpoints, online matchmaking, Admin generation, and assigned homework.
+- Added learning assignment/profile API and regression coverage for assignment lifecycle and answer hiding.
+- Tests: 90 Python tests passed; JavaScript syntax checked for admin.html and learning-coach.js.
+- Limitations: AI-created content requires review; personalization only uses recorded activity; no full manual browser QA claim.
+
+- Added no-login trial entry with a disposable trial_* identity, separate admin token namespace, and a visible exit/restore banner for learner pages.
+- Added admin source/distribution settings, per-learner difficulty/source/volume controls, and saved personalization for regular AI practice and assigned work.
+- Added admin-configurable XP multiplier, homework XP rewards, and daily streak tracking shown in the learner journey.
+- Added topic-accuracy mini charts to learner profile review and excluded trial profiles from real learner reporting.
+- Additional validation: 90 Python tests passed; API tests cover Battle current-match polling contract, case-insensitive Player ID search, topic/game hierarchy, question-file import, learner-selected difficulty, trial/admin separation, config save, assignment XP idempotency, and personalized practice.
+
+- Fixed a real random-Battle bug: the frontend polled `/api/matchmaking/current` expecting top-level `match_id/status`, while the backend only returned a nested `match` object. The endpoint now returns both shapes.
+- Player ID search in friend and Battle endpoints is case-insensitive, preventing uppercase/lowercase mismatches.
+- Added 11 new Toán 10–12 topics and 33 game pages: 150 AI knowledge topics, 474 game pages, three game tiers per topic.
+- Added Admin topic → game → question workspace with smooth topic/game cards, in-place add/edit/delete, and a structured-file question importer for JSON/CSV/TXT/MD. Ambiguous topic routing is sent to review rather than silently assigned.
+- Added learner-facing study companion on regular and trial practice pages. It uses recorded accuracy to recommend review/difficulty, saves user-selected difficulty per account, and applies the chosen/recommended level to generated knowledge-game questions.
+- Fixed the user-profile auth helper checking `"id" in sqlite3.Row` as a value rather than a column key, which blocked the learning coach endpoint.
+
+MATH_WEB NEON V7 | 2026-11-11
+- Continued from NEON V6, retained all existing project files and functionality.
+- Unified all 529 active games with isolated NEON V7 responsive navigation and styling.
+- Added real server-backed XP/streak/activity and progress to student dashboard.
+- Added admin-only batch generation of nine candidate types / 90 exercises across grades 10-12, without auto-approval.
+- Added admin review queue for existing lesson questions with explicit tier certification and rejection.
+- Added placement draft persistence, secure resume and stronger numeric/true-false/complex grading.
+- Added Chat WebSocket ping/visibility reconnection and new regression tests.
+- Tests: 163 passing; full cross-device end-to-end and all-topic question certification remain outstanding.
+
+NEON V8 (2026-11-11): 169 tests passed; official 30-question
+roadmap exams require 30 independently reviewed questions. Initial
+assessments show actual evidence counts. Admin has 150-topic deficit
+JSON export. Static server blocks private DB/secrets/backend files.
+Common responsive UI refined for 20 pages, shared game CSS for 529.

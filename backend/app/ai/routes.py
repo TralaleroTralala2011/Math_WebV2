@@ -169,25 +169,139 @@ def battle_topics(req:BattleTopicsRequest):
     return {"matched":bool(common),"common_topics":common,"max_topics":MAX_TOPICS}
 
 @router.post("/battle/create")
-def battle_create(req:BattleCreateRequest):
+def battle_create(req:BattleCreateRequest, authorization: str | None = Header(default=None)):
+    # Legacy AI rooms also require a real logged-in participant. The primary
+    # Battle flow uses /api/matchmaking, but this route must not allow an
+    # anonymous request to create unlimited rooms for arbitrary user IDs.
+    current = get_current_user(authorization)
+    with get_connection() as conn:
+        def resolve(value: str):
+            value = str(value).strip()
+            row = conn.execute(
+                "SELECT id FROM users WHERE CAST(id AS TEXT)=? OR player_id=? COLLATE NOCASE OR username=? COLLATE NOCASE LIMIT 1",
+                (value, value, value),
+            ).fetchone()
+            return str(row["id"]) if row else None
+        player1, player2 = resolve(req.player1), resolve(req.player2)
+    if not player1 or not player2 or player1 == player2:
+        raise HTTPException(422, "Battle yêu cầu hai người chơi hợp lệ, khác nhau.")
+    if str(current["id"]) not in (player1, player2):
+        raise HTTPException(403, "Bạn không thuộc phòng Battle này.")
     common=service.battle_topics(req.player1_topics,req.player2_topics)
     if not common: raise HTTPException(409,"no_common_topics")
-    room=battle_manager.create(req.player1,req.player2,common,req.grade)
+    room=battle_manager.create(player1,player2,common,req.grade)
     return {"battle_id":room["id"],"topics":common,"grade":req.grade,"status":room["status"]}
 
+# The primary battle UI uses the SQLite matchmaking system, not the older
+# in-memory AI demonstration rooms. Keep both routes compatible, but enforce
+# the login token AND match membership before allowing WebSocket traffic.
+_active_match_sockets: dict[str, dict[int, WebSocket]] = {}
+
+
+def _socket_match_details(battle_id: str, user_id: int):
+    if battle_id.isdecimal() and len(battle_id) <= 10:
+        conn = get_connection()
+        try:
+            match = conn.execute(
+                "SELECT player1_id, player2_id, status FROM matches WHERE id=?",
+                (int(battle_id),),
+            ).fetchone()
+            if match and user_id in (int(match["player1_id"]), int(match["player2_id"])):
+                return {"kind": "matchmaking", "status": match["status"]}
+        except Exception:
+            pass
+        finally:
+            conn.close()
+    room = battle_manager.get(battle_id)
+    if room and str(user_id) in room["players"]:
+        return {"kind": "legacy", "status": room["status"]}
+    return None
+
+
 @router.websocket("/battle/ws/{battle_id}/{user_id}")
-async def battle_ws(websocket:WebSocket,battle_id:str,user_id:str):
-    room=battle_manager.get(battle_id)
-    if not room or user_id not in room["players"]:
-        await websocket.close(code=1008); return
-    await websocket.accept()
-    battle_manager.attach(battle_id,user_id,websocket)
-    await battle_manager.broadcast(battle_id,{"type":"player_joined","user_id":user_id,"status":room["status"]})
+async def battle_ws(websocket: WebSocket, battle_id: str, user_id: str):
+    from ..auth.routes import get_current_user
     try:
+        token = websocket.query_params.get("token", "")
+        user = get_current_user(f"Bearer {token}")
+        if str(user["id"]) != user_id:
+            raise ValueError("WebSocket user does not match token")
+        details = _socket_match_details(battle_id, int(user["id"]))
+        if not details:
+            raise ValueError("WebSocket user is not a participant of this match")
+    except Exception:
+        await websocket.close(code=1008)
+        return
+
+    await websocket.accept()
+    uid = int(user["id"])
+    participants = _active_match_sockets.setdefault(battle_id, {})
+    participants[uid] = websocket
+    if details["kind"] == "legacy":
+        battle_manager.attach(battle_id, user_id, websocket)
+
+    async def send_authoritative_state():
+        state = _socket_match_details(battle_id, uid)
+        if not state:
+            await websocket.close(code=1008)
+            return
+        packet = {"type": "state", "status": state["status"]}
+        if state["kind"] == "matchmaking":
+            # This is only a projection of the already stored, server-scored
+            # answers. Never trust client-submitted progress/winner values.
+            from ..matchmaking.routes import get_match_progress
+            progress = get_match_progress(int(battle_id), f"Bearer {token}")
+            other = progress["opponent"]
+            packet["progress"] = {
+                "correct": other["correct"], "wrong": other["wrong"],
+                "blank": other["blank"], "answered": other["current"],
+                "total": progress["total"],
+                "finished": progress["status"] == "FINISHED",
+                "time": other.get("time", 0),
+            }
+        await websocket.send_json(packet)
+
+    try:
+        await send_authoritative_state()
+        for other_id, other_ws in list(participants.items()):
+            if other_id != uid:
+                try:
+                    await other_ws.send_json({"type": "player_joined", "user_id": user_id})
+                except Exception:
+                    pass
         while True:
-            msg=await websocket.receive_json()
-            # The authoritative question/answer scoring stays on HTTP service.
-            await battle_manager.broadcast(battle_id,{"type":"battle_event","from":user_id,"data":msg})
+            incoming = await websocket.receive_json()
+            if not isinstance(incoming, dict):
+                continue
+            event = str(incoming.get("type", "")).lower()
+            if event not in {"sync", "progress", "finished"}:
+                continue
+            await send_authoritative_state()
+            if event in {"progress", "finished"}:
+                # Inform other clients to re-sync; no client-provided answers,
+                # winner or scores are rebroadcast.
+                for other_id, other_ws in list(participants.items()):
+                    if other_id != uid:
+                        try:
+                            await other_ws.send_json({"type": "sync"})
+                        except Exception:
+                            pass
     except WebSocketDisconnect:
-        room["players"][user_id]=None
-        await battle_manager.broadcast(battle_id,{"type":"player_left","user_id":user_id})
+        pass
+    except Exception:
+        # A broken socket must not terminate other players' sessions.
+        pass
+    finally:
+        if participants.get(uid) is websocket:
+            participants.pop(uid, None)
+            for other_ws in list(participants.values()):
+                try:
+                    await other_ws.send_json({"type": "player_left", "user_id": user_id})
+                except Exception:
+                    pass
+        if not participants:
+            _active_match_sockets.pop(battle_id, None)
+        room = battle_manager.get(battle_id)
+        if room and room["players"].get(user_id) is websocket:
+            room["players"][user_id] = None
+

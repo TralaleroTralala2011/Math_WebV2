@@ -1,0 +1,20 @@
+{
+  "test": "sandbox_migration_of_4_shipped_sqlite_files",
+  "snapshot_restored": 4,
+  "source_byte_hashes_unchanged": true,
+  "transient_source_sidecars": [
+    "mathweb.db-shm",
+    "mathweb.db-wal",
+    "question_factory.sqlite3-shm",
+    "question_factory.sqlite3-wal"
+  ],
+  "restored_integrity_checks": {
+    "mathweb.db": "ok",
+    "question_factory.sqlite3": "ok",
+    "mathweb_ai_history.sqlite3": "ok",
+    "study_suite.sqlite3": "ok"
+  },
+  "account_row_count_matches": true,
+  "elapsed_seconds_one_trial": 0.019,
+  "note": "One trial only; not a benchmark of performance improvement."
+}

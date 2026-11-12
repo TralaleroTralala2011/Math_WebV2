@@ -1,0 +1,177 @@
+{
+  "version": "V22",
+  "source": "V21",
+  "old_questions": 4240,
+  "new_questions": 300,
+  "total_questions": 4540,
+  "old_form_ids": 423,
+  "new_form_ids": 30,
+  "total_form_ids": 453,
+  "new_forms": [
+    [
+      "v22_symmetric_difference",
+      10,
+      "Tập hợp"
+    ],
+    [
+      "v22_complement_union",
+      10,
+      "Tập hợp"
+    ],
+    [
+      "v22_quadratic_axis",
+      10,
+      "Hàm số bậc hai"
+    ],
+    [
+      "v22_quadratic_sum_reciprocals",
+      10,
+      "Phương trình bậc hai"
+    ],
+    [
+      "v22_vector_dot_perpendicular",
+      10,
+      "Vectơ"
+    ],
+    [
+      "v22_triangle_area_determinant",
+      10,
+      "Tọa độ trong mặt phẳng"
+    ],
+    [
+      "v22_tangent_length_power",
+      10,
+      "Đường tròn"
+    ],
+    [
+      "v22_lattice_paths",
+      10,
+      "Quy tắc đếm"
+    ],
+    [
+      "v22_hypergeom_no_red",
+      10,
+      "Xác suất"
+    ],
+    [
+      "v22_mean_shift",
+      10,
+      "Thống kê"
+    ],
+    [
+      "v22_ap_sum_even_positions",
+      11,
+      "Cấp số cộng"
+    ],
+    [
+      "v22_gp_geometric_mean",
+      11,
+      "Cấp số nhân"
+    ],
+    [
+      "v22_limit_rational_at_infinity",
+      11,
+      "Giới hạn"
+    ],
+    [
+      "v22_derivative_implicit_circle",
+      11,
+      "Đạo hàm"
+    ],
+    [
+      "v22_derivative_product_at_zero",
+      11,
+      "Đạo hàm"
+    ],
+    [
+      "v22_combination_committee",
+      11,
+      "Tổ hợp"
+    ],
+    [
+      "v22_probability_union_independent",
+      11,
+      "Xác suất"
+    ],
+    [
+      "v22_trig_sin_from_cos_quadrant",
+      11,
+      "Lượng giác"
+    ],
+    [
+      "v22_limit_sqrt_conjugate",
+      11,
+      "Giới hạn"
+    ],
+    [
+      "v22_recursion_fixed_point",
+      11,
+      "Dãy số"
+    ],
+    [
+      "v22_integral_exp_scaled",
+      12,
+      "Nguyên hàm và tích phân"
+    ],
+    [
+      "v22_integral_trig_period",
+      12,
+      "Nguyên hàm và tích phân"
+    ],
+    [
+      "v22_complex_power_i",
+      12,
+      "Số phức"
+    ],
+    [
+      "v22_complex_conjugate_modulus",
+      12,
+      "Số phức"
+    ],
+    [
+      "v22_3d_cross_product_norm_sq",
+      12,
+      "Tọa độ trong không gian"
+    ],
+    [
+      "v22_plane_parallel_through_point",
+      12,
+      "Mặt phẳng Oxyz"
+    ],
+    [
+      "v22_exp_decay_half_life",
+      12,
+      "Hàm số mũ"
+    ],
+    [
+      "v22_logarithm_nested",
+      12,
+      "Hàm số logarit"
+    ],
+    [
+      "v22_prism_volume_from_base",
+      12,
+      "Hình học không gian"
+    ],
+    [
+      "v22_binomial_zero_probability",
+      12,
+      "Xác suất và biến ngẫu nhiên"
+    ]
+  ],
+  "new_grade_counts": {
+    "10": 100,
+    "11": 100,
+    "12": 100
+  },
+  "checks": {
+    "new_nonempty_fields": true,
+    "normalized_question_unique": true,
+    "all_new_form_10": true
+  },
+  "limitations": [
+    "Exact formula checking for new answers, not independent proof of conceptual distinctness",
+    "No end-to-end website regression tests",
+    "Separate verified bank API not wired into practice UI"
+  ]
+}

@@ -1,0 +1,30 @@
+/* NEON V7 finishing layer: shared accessibility and responsive polish. */
+body.mw-v5:not(.mw-v5-admin){color-scheme:dark}
+body.mw-v5:not(.mw-v5-admin) :is(button,a,input,textarea,select):focus-visible{outline:3px solid #00e7f6!important;outline-offset:3px}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-card,.mw-v6-topic,.mw-v6-quick a){min-width:0}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-card p,.mw-v5-card h2,.mw-v5-card h3){overflow-wrap:anywhere}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-heat i[data-activity="1"]{background:#0b6589!important}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-heat i[data-activity="2"]{background:#068eb1!important}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-heat i[data-activity="3"]{background:#04bed2!important}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-heat i[data-activity="4"]{background:#00edf2!important;box-shadow:0 0 8px #00e5f555}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-heat i[data-activity="0"]{background:#0b2a43!important}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-actions button{min-height:105px}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-panels .mw-v5-card{display:flex;flex-direction:column;gap:9px}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-panels .mw-v5-card .mw-v5-btn{margin-top:auto}
+body.mw-v5-admin :is(button,a,input,textarea,select):focus-visible{outline:3px solid #0096dc!important;outline-offset:3px}
+.mw-v7-admin-coverage{margin:18px 0 22px;padding:18px;border:1px solid #b9d8ee;border-radius:18px;background:#f7fbff;color:#183a5c}
+.mw-v7-admin-coverage h3{margin:0 0 8px;color:#0b4c78}.mw-v7-admin-coverage p{font-size:13px;color:#4a6885}
+#mw-v7-admin-coverage-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+#mw-v7-admin-coverage-grid article{padding:15px;border-radius:14px;border:1px solid #c6ddee;background:white;box-shadow:0 8px 25px #0a49720e}
+#mw-v7-admin-coverage-grid h4{color:#086f9d;margin:0 0 12px}
+#mw-v7-admin-coverage-grid p{margin:7px 0}
+#mw-v7-admin-generation{color:#52708a;font-size:13px;line-height:1.6}
+@media(max-width:760px){#mw-v7-admin-coverage-grid{grid-template-columns:1fr}body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-panels .mw-v5-card{min-height:0}body.mw-v5:not(.mw-v5-admin) .mw-v5-card{max-width:100%}}
+@media(max-width:480px){body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-actions button{min-height:86px}}
+@media(prefers-reduced-motion:reduce){body.mw-v5 *{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+#mw-v15-audit-queue{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#mw-v15-audit-queue article{padding:12px;border:1px solid #c7dfea;border-radius:12px;background:#fff;min-width:0}
+#mw-v15-audit-queue strong{font-size:13px;color:#14537a}
+#mw-v15-audit-queue p{margin:6px 0 0;line-height:1.6}
+@media(max-width:720px){#mw-v15-audit-queue{grid-template-columns:1fr}}

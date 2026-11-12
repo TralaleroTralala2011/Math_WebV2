@@ -1,0 +1,15 @@
+test_150_questions (test_v131.V131Test.test_150_questions) ... ok
+test_all_answers_independently_checked (test_v131.V131Test.test_all_answers_independently_checked) ... ok
+test_detect_deliberate_wrong_answer (test_v131.V131Test.test_detect_deliberate_wrong_answer) ... ok
+test_exact_duplicate_stems (test_v131.V131Test.test_exact_duplicate_stems) ... ok
+test_fifteen_methods (test_v131.V131Test.test_fifteen_methods) ... ok
+test_pending_expert_review (test_v131.V131Test.test_pending_expert_review) ... ok
+test_solving_text_present (test_v131.V131Test.test_solving_text_present) ... ok
+test_ten_per_method (test_v131.V131Test.test_ten_per_method) ... ok
+test_topic_grade_match (test_v131.V131Test.test_topic_grade_match) ... ok
+test_unpublished (test_v131.V131Test.test_unpublished) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.580s
+
+OK

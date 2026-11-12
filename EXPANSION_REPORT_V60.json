@@ -1,0 +1,19 @@
+{
+  "version": "V60",
+  "source": "V59",
+  "previous_records": 69357,
+  "previous_form_ids": 7078,
+  "incomplete_form_ids_before": 241,
+  "new_records": 1433,
+  "new_form_ids": 0,
+  "new_records_by_topic": {
+    "Vectơ": 702,
+    "Tổ hợp": 174,
+    "Xác suất": 557
+  },
+  "total_records": 70790,
+  "total_form_ids": 7078,
+  "incomplete_form_ids_after": 0,
+  "min_records_per_form": 10,
+  "note": "Existing form IDs retained; new questions are parameter variations, not independent methods. Exact arithmetic checked. No UI regression testing."
+}

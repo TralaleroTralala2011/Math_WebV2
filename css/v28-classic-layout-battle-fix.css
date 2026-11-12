@@ -1,0 +1,18 @@
+/* V28 scoped Classic spacing + Battle restoration */
+body:has(> .navbar) > .chat-page{margin-top:0!important;height:calc(100dvh - 70px)!important;min-height:380px}
+body:has(> .navbar) > .chat-page .chat-app{height:100%;min-height:0}
+body:has(> .battle-header){background:radial-gradient(circle at 50% 0%,#102745,#081426 55%,#07101f)}
+body:has(> .battle-header) .battle-header{height:70px;min-height:70px;border-bottom:1px solid #38bdf833}
+body:has(> .battle-header) .battle-container{width:min(1100px,calc(100% - 32px));margin:0 auto;padding:22px 0 48px;min-height:calc(100dvh - 70px)}
+body:has(> .battle-header) .battle-hero{margin:0 auto 20px}
+body:has(> .battle-header) .battle-choice-grid{gap:16px}
+body:has(> .battle-header) .battle-choice{transition:transform .18s,border-color .18s,box-shadow .18s}
+body:has(> .battle-header) .battle-choice:hover{transform:translateY(-2px)}
+body:has(> .battle-header) :is(button,a,input,select):focus-visible{outline:3px solid #67e8f9;outline-offset:3px}
+@media(max-width:700px){body:has(> .battle-header) .battle-container{width:calc(100% - 20px);padding:12px 0 32px}body:has(> .battle-header) .battle-header{padding-inline:14px}}
+@media(prefers-reduced-motion:reduce){body:has(> .battle-header) .battle-choice,body:has(> .battle-header) .battle-screen{animation:none!important;transition:none!important}}
+
+/* V28 final integration: eliminate empty strip under fixed nav. */
+body:has(> header.navbar) > main.chat-page {margin-top:0!important; height:calc(100dvh - 70px)!important;}
+body:has(> header.navbar) > main.chat-page > .chat-app {height:100%;min-height:0;}
+@media (max-width:700px) { body:has(> header.navbar) > main.chat-page {height:calc(100dvh - 70px)!important;} }

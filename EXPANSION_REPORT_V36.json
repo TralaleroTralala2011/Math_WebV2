@@ -1,0 +1,301 @@
+{
+  "version": "V36",
+  "base": "V35",
+  "previous_questions": 9030,
+  "added_questions": 510,
+  "total_questions": 9540,
+  "previous_form_ids": 902,
+  "added_form_ids": 51,
+  "total_form_ids": 953,
+  "added_by_grade": {
+    "10": 160,
+    "11": 170,
+    "12": 180
+  },
+  "forms": [
+    {
+      "form_id": "v36_four_sets_pairwise_disjoint",
+      "grade": 10,
+      "topic": "Tập hợp"
+    },
+    {
+      "form_id": "v36_two_set_symmetric_difference",
+      "grade": 10,
+      "topic": "Tập hợp"
+    },
+    {
+      "form_id": "v36_discriminant_parameter_zero",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v36_vertex_y_quadratic",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v36_interval_integer_count",
+      "grade": 10,
+      "topic": "Hệ bất phương trình"
+    },
+    {
+      "form_id": "v36_line_parallel_through_point_intercept",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v36_perpendicular_line_slope",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v36_reflection_across_y_axis_abscissa",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v36_collinear_vector_parameter",
+      "grade": 10,
+      "topic": "Vectơ"
+    },
+    {
+      "form_id": "v36_chord_half_length_squared",
+      "grade": 10,
+      "topic": "Đường tròn"
+    },
+    {
+      "form_id": "v36_permutation_with_repeated_symbols",
+      "grade": 10,
+      "topic": "Tổ hợp"
+    },
+    {
+      "form_id": "v36_choose_nonadjacent_positions",
+      "grade": 10,
+      "topic": "Tổ hợp"
+    },
+    {
+      "form_id": "v36_dice_sum_at_least_ten",
+      "grade": 10,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v36_variance_shift",
+      "grade": 10,
+      "topic": "Thống kê"
+    },
+    {
+      "form_id": "v36_variance_scale",
+      "grade": 10,
+      "topic": "Thống kê"
+    },
+    {
+      "form_id": "v36_triangle_cosine_law_side_squared",
+      "grade": 10,
+      "topic": "Hệ thức lượng trong tam giác"
+    },
+    {
+      "form_id": "v36_ap_nth_from_two_terms",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v36_ap_arithmetic_mean_insert",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v36_gp_geometric_mean_positive",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v36_gp_find_ratio_from_terms",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v36_sum_of_first_n_odd",
+      "grade": 11,
+      "topic": "Dãy số"
+    },
+    {
+      "form_id": "v36_limit_rational_at_infinity",
+      "grade": 11,
+      "topic": "Giới hạn"
+    },
+    {
+      "form_id": "v36_limit_radical_conjugate",
+      "grade": 11,
+      "topic": "Giới hạn"
+    },
+    {
+      "form_id": "v36_derivative_log_at_one",
+      "grade": 11,
+      "topic": "Đạo hàm"
+    },
+    {
+      "form_id": "v36_derivative_sqrt_at_zero",
+      "grade": 11,
+      "topic": "Đạo hàm"
+    },
+    {
+      "form_id": "v36_derivative_polynomial_second",
+      "grade": 11,
+      "topic": "Đạo hàm"
+    },
+    {
+      "form_id": "v36_normal_line_slope_quadratic",
+      "grade": 11,
+      "topic": "Đạo hàm"
+    },
+    {
+      "form_id": "v36_binomial_exactly_two_successes",
+      "grade": 11,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v36_conditional_probability_independent",
+      "grade": 11,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v36_stars_bars_three_positive",
+      "grade": 11,
+      "topic": "Tổ hợp"
+    },
+    {
+      "form_id": "v36_stars_bars_four_nonnegative",
+      "grade": 11,
+      "topic": "Tổ hợp"
+    },
+    {
+      "form_id": "v36_cos_double_angle_from_sine",
+      "grade": 11,
+      "topic": "Lượng giác"
+    },
+    {
+      "form_id": "v36_cube_surface_area",
+      "grade": 11,
+      "topic": "Hình học không gian"
+    },
+    {
+      "form_id": "v36_integral_x_exp",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v36_integral_x_sine_pi",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v36_integral_polynomial_symmetric",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v36_integral_area_between_lines",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v36_complex_conjugate_sum",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v36_complex_reciprocal_real",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v36_complex_reciprocal_imag",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v36_plane_normal_norm_squared",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v36_distance_point_to_plane_axis",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v36_line_direction_coordinate_sum",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v36_sphere_center_sum",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v36_compound_growth_double_period",
+      "grade": 12,
+      "topic": "Hàm số mũ"
+    },
+    {
+      "form_id": "v36_log_change_base_ratio",
+      "grade": 12,
+      "topic": "Hàm số logarit"
+    },
+    {
+      "form_id": "v36_min_quadratic_positive",
+      "grade": 12,
+      "topic": "Cực trị"
+    },
+    {
+      "form_id": "v36_max_product_fixed_sum",
+      "grade": 12,
+      "topic": "Cực trị"
+    },
+    {
+      "form_id": "v36_binomial_variance",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên"
+    },
+    {
+      "form_id": "v36_uniform_discrete_expectation",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên"
+    },
+    {
+      "form_id": "v36_cylinder_lateral_coefficient_pi",
+      "grade": 12,
+      "topic": "Hình học không gian"
+    }
+  ],
+  "rejected": [
+    [
+      "v36_complement_of_union",
+      "existing id/signature"
+    ],
+    [
+      "v36_triangle_centroid_abscissa",
+      "existing id/signature"
+    ],
+    [
+      "v36_telescoping_fraction_sum",
+      "duplicate question"
+    ],
+    [
+      "v36_cone_volume_coefficient_pi",
+      "existing id/signature"
+    ]
+  ],
+  "checks": {
+    "exact_fraction_answer_check": 510,
+    "unique_question_text": true,
+    "all_new_have_solutions": true
+  },
+  "limitations": [
+    "Form IDs and signatures do not prove conceptual independence",
+    "Old content not independently audited",
+    "Main practice UI and battle not regression tested",
+    "Bank not connected to practice UI"
+  ]
+}

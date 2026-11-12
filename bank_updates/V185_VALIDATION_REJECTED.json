@@ -1,0 +1,290 @@
+[
+  {
+    "id": "v184_set_intersection_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_divisibility_truth_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_linear_system_sum_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_cosine_law_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_line_slope_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_pythagorean_squared_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_linear_breakeven_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_trapezoid_area_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_inscribed_angle_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_distance_squared_2d_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_sas_matching_side_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_midpoint_sum_2d_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_perp_bisector_vertical_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_tangent_chord_angle_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_symmetric_difference_squared_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_sum_square_sequence_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_prism_edges_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_two_red_without_replacement_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_cos_from_sin_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_cos_double_angle_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_cosine_one_count_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_product_rule_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_normal_slope_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_compound_growth_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_rotation_90_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_pyramid_edges_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_parallel_planes_distance_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_skew_perpendicular_distance_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_affine_recurrence_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_binomial_coefficient_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_conditional_count_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_quadratic_stationary_point_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_cubic_stationary_count_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_prism_volume_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_discrete_expectation_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_population_variance_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_parabola_minimum_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_line_parabola_intersections_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_plane_normal_sum_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_line_parametric_point_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_sphere_radius_squared_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_axis_plane_distance_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_pyramid_volume_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_profit_maximum_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_line_direction_sum_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_point_plane_345_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_plane_parameter_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_distance_to_axis_min_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_integral_maximum_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_sine_rule_diameter_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_parallelogram_fourth_vertex_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_circle_vertical_chord_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_parallel_line_plane_distance_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_perpendicular_vectors_parameter_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_space_point_plane_distance_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_pyramid_parallel_section_area_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_savings_arithmetic_total_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_reflection_x_axis_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_plane_intercept_evaluation_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_direction_parallel_plane_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_direction_normal_plane_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_line_plane_sine_angle_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_prism_horizontal_section_perimeter_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_three_perpendicular_distance_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_pyramid_section_perimeter_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_orthogonal_basis_proof_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_intercept_triangle_area_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_reflection_horizontal_plane_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_skew_vs_intersect_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_line_distance_min_squared_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_radical_extraneous_root_010",
+    "reason": "invalid true/false format"
+  },
+  {
+    "id": "v184_complex_circle_max_real_010",
+    "reason": "invalid true/false format"
+  }
+]

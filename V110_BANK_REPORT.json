@@ -1,0 +1,14 @@
+{
+  "version": "V110",
+  "baseline_records": 334180,
+  "added_candidate_form_ids": 10,
+  "added_questions": 100,
+  "total_main_records": 334280,
+  "total_form_ids": 33428,
+  "all_forms_have_10_questions": true,
+  "duplicate_question_strings_within_grade_topic": 0,
+  "independent_new_forms_certified": 0,
+  "target_new_independent_forms": 10000,
+  "mathgeo": "unchanged from V109",
+  "note": "New IDs are candidate structures only, not certified distinct from entire preexisting bank. No 10000-form completion claim."
+}

@@ -1,0 +1,14 @@
+{
+  "version": "V102",
+  "fixed": "Mixed mode sets of >=3 questions now include multiple_choice, short_answer, true_false even when shuffled blocks are truncated",
+  "tests": {
+    "original_failing_test": "passed",
+    "new_mixed_mode_distribution_160_cases": "passed",
+    "full_suite": "not completed; reached 60% and then timed out at 200 seconds",
+    "chromium": "not available/blocked in this environment",
+    "all_geometry": "not certified"
+  },
+  "new_problem_types": 0,
+  "new_questions": 0,
+  "all_requirements_100_percent": false
+}

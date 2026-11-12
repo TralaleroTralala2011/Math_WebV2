@@ -1,0 +1,62 @@
+{
+  "source_version": "V119",
+  "version": "V120",
+  "topics_requested": 150,
+  "new_candidate_forms": 150,
+  "new_questions": 1500,
+  "new_topics_covered": 150,
+  "new_questions_arithmetic_check_passed": 1500,
+  "topic_ids_covered": 150,
+  "previous_candidate_forms": 320,
+  "candidate_forms_after_V120": 470,
+  "formats": {
+    "tra_loi_ngan": 300,
+    "trac_nghiem": 300,
+    "dung_sai": 300,
+    "tu_luan_ngan": 300,
+    "van_dung": 276,
+    "toan_thuc_te": 24
+  },
+  "old_source_reads": [
+    {
+      "file": "backend/app/ai/verified_seed/verified_seed_bank.jsonl",
+      "readable_rows": 344280,
+      "missing": false
+    },
+    {
+      "file": "V114_AUDIT/V114_1650_MATH_VERIFIED_PENDING_REVIEW.jsonl",
+      "readable_rows": 1650,
+      "missing": false
+    },
+    {
+      "file": "V116_RESEARCH/V116_NEW_QUESTIONS_10_EACH.jsonl",
+      "readable_rows": 310,
+      "missing": false
+    },
+    {
+      "file": "V117_AUDIT/V117_NEW_QUESTIONS.jsonl",
+      "readable_rows": 560,
+      "missing": false
+    },
+    {
+      "file": "V118_AUDIT/V118_NEW_QUESTIONS.jsonl",
+      "readable_rows": 380,
+      "missing": false
+    },
+    {
+      "file": "V119_RESEARCH/V119_NEW_QUESTIONS.jsonl",
+      "readable_rows": 300,
+      "missing": false
+    }
+  ],
+  "old_json_read_errors": 0,
+  "exact_question_text_collisions_with_old": 0,
+  "exact_question_text_collisions_within_V120": 0,
+  "new_methods_flagged_by_title_or_signature_similarity": 58,
+  "independent_methods_certified": 0,
+  "expert_review_complete": false,
+  "published_new_methods": 0,
+  "method_novelty_warning": "150 authored candidate objectives, not 150 independently certified globally new math methods; similar skills in multiple topics may overlap.",
+  "answer_correctness_warning": "SymPy evaluates the authored answer expression; method-level mathematical narratives and distractor pedagogy still require independent assessment.",
+  "preservation": "No legacy application data, existing questions, social features, Battle code, or UI are modified in this stage."
+}

@@ -1,0 +1,20 @@
+{
+  "version": "V88",
+  "base": "V87",
+  "new_form_ids": 0,
+  "new_questions": 0,
+  "records": 333790,
+  "unique_form_ids_per_grade_topic": 33378,
+  "grade_topic_pairs": 140,
+  "forms_with_not_exactly_10_questions": 1,
+  "records_with_missing_fields": 0,
+  "duplicate_question_texts_within_grade_topic": 1,
+  "method_family_clusters": 3267,
+  "distinct_form_id_strings_in_shared_method_families": 30366,
+  "invalid_json_lines": 0,
+  "target_new_form_ids_per_batch": 10000,
+  "target_independent_types": 300000,
+  "target_questions": 3000000,
+  "claim_of_independent_types_certified": 0,
+  "caution": "Exact text duplicates and shared families are signals, not proof of semantic equivalence or mathematical independence. No new forms were added."
+}

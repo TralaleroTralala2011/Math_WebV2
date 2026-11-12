@@ -1,0 +1,29 @@
+MATH_WEB_GITHUB_READY - NEON V9 (11/11/2026)
+
+DA SUA:
+1. Giam nguy co de lech chu de: chan cau so hoc don gian trong chu de Toan khong phu hop, kiem tra nhan chu de va khoi lop.
+2. Bat dap an sai o mot so phep tinh so hoc co the chung minh truc tiep, chan cap dap an tuong duong trong trac nghiem.
+3. Chan hai lua chon trung gia tri (vd 1/2 va 0.5; (x+1)^2 va x^2+2x+1).
+4. Dong bo cham diem AI Practice / Battle / Bai tap / Lo trinh / game co dien, nhan dang so, phan so va nhan lua chon.
+5. Sua login bi loi HTTP 500 khi DB chua co bang admin_accounts. Test dang ky, dang nhap, dang xuat, dang nhap lai va khoi tao lai DB.
+
+BAO TOAN TAI KHOAN (RAT QUAN TRONG):
+- Truoc khi nang cap, DUNG server va SAO LUU ca 2 tep o thu muc ban cu:
+  backend\database\mathweb.db
+  backend\database\.mathweb_hmac_secret
+- Tren Windows, V9 luu DB va khoa phien ben ngoai thu muc ZIP:
+  %LOCALAPPDATA%\MATH_WEB\mathweb.db
+  %LOCALAPPDATA%\MATH_WEB\.mathweb_hmac_secret
+- Neu ban da co DB trong thu muc V8 CU, sao chep HAI tep tren sang thu muc %LOCALAPPDATA%\MATH_WEB\ TRUOC khi chay V9 lan dau. KHONG de V9 ghi de DB cu.
+- Khong doi mat khau: dung lai ten tai khoan va mat khau da dang ky.
+- Neu da co DB trong thu muc V9, ban muon hop nhat du lieu thi KHONG thay the truc tiep, hay sao luu truoc va can giai phap migration.
+- Khi dang nhap tai khoan tren server online: can database persistent volume cua hosting, khong co chung thi tai khoan co the mat khi server duoc tao lai.
+
+CHAY:
+- Giai nen -> mo MATH_WEB_GITHUB_READY -> chay START_MATH_WEB.bat.
+- Can Python, FastAPI, uvicorn va SymPy (launcher tu cai dependency neu thieu).
+- Database + khoa bi mat khong co san trong ZIP de tranh lo tai khoan.
+
+GIOI HAN:
+- Chua kiem chung doc lap moi cau hoi trong ngan hang. Phat hien 2 dap an tuong duong la bao ve bo sung, khong thay the kiem duyet toan hoc va chu de.
+- Chua chung minh moi trac nghiem tu ngan hang deu chi co mot dap an dung theo ngu nghia.

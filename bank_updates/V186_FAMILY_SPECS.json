@@ -1,0 +1,79 @@
+[
+  {
+    "family": "three_set_inclusion_exclusion",
+    "topic": "tap_hop",
+    "grade": 10,
+    "difficulty": "trung cấp",
+    "concept": "Đếm hợp của ba tập có giao đôi và giao ba",
+    "method": "Nguyên lý bù trừ ba tập",
+    "conditions": "Số liệu giao nhất quán",
+    "independence_status": "candidate_requires_semantic_review",
+    "distinctness_argument": "Đếm hợp của ba tập có giao đôi và giao ba; khác phép toán cốt lõi và phương pháp giải so với các họ dạng đã ghi nhận trong V185 (chưa xác nhận độc lập toàn bộ)."
+  },
+  {
+    "family": "crt_two_remainders",
+    "topic": "chia_du",
+    "grade": 10,
+    "difficulty": "nâng cao",
+    "concept": "Giải đồng dư hai môđun nguyên tố cùng nhau",
+    "method": "Thế và xét đồng dư",
+    "conditions": "Hai môđun nguyên tố cùng nhau",
+    "independence_status": "candidate_requires_semantic_review",
+    "distinctness_argument": "Giải đồng dư hai môđun nguyên tố cùng nhau; khác phép toán cốt lõi và phương pháp giải so với các họ dạng đã ghi nhận trong V185 (chưa xác nhận độc lập toàn bộ)."
+  },
+  {
+    "family": "rational_function_inverse_value",
+    "topic": "ham_so",
+    "grade": 10,
+    "difficulty": "trung cấp",
+    "concept": "Tìm tiền ảnh của hàm phân thức bậc nhất",
+    "method": "Nhân chéo và kiểm tra mẫu",
+    "conditions": "Định thức ad−bc khác 0",
+    "independence_status": "candidate_requires_semantic_review",
+    "distinctness_argument": "Tìm tiền ảnh của hàm phân thức bậc nhất; khác phép toán cốt lõi và phương pháp giải so với các họ dạng đã ghi nhận trong V185 (chưa xác nhận độc lập toàn bộ)."
+  },
+  {
+    "family": "arithmetic_progression_two_terms_extrapolation",
+    "topic": "cap_so_cong",
+    "grade": 11,
+    "difficulty": "trung cấp",
+    "concept": "Suy công sai từ hai số hạng không liên tiếp",
+    "method": "Giải hệ tuyến tính theo số hạng đầu và công sai",
+    "conditions": "Chỉ số dương phân biệt",
+    "independence_status": "candidate_requires_semantic_review",
+    "distinctness_argument": "Suy công sai từ hai số hạng không liên tiếp; khác phép toán cốt lõi và phương pháp giải so với các họ dạng đã ghi nhận trong V185 (chưa xác nhận độc lập toàn bộ)."
+  },
+  {
+    "family": "radical_limit_conjugate",
+    "topic": "gioi_han",
+    "grade": 11,
+    "difficulty": "trung cấp",
+    "concept": "Giới hạn vô định dạng căn trừ hằng",
+    "method": "Nhân liên hợp",
+    "conditions": "Biểu thức dưới căn không âm quanh 0",
+    "independence_status": "candidate_requires_semantic_review",
+    "distinctness_argument": "Giới hạn vô định dạng căn trừ hằng; khác phép toán cốt lõi và phương pháp giải so với các họ dạng đã ghi nhận trong V185 (chưa xác nhận độc lập toàn bộ)."
+  },
+  {
+    "family": "conditional_without_replacement",
+    "topic": "xac_suat",
+    "grade": 11,
+    "difficulty": "trung cấp",
+    "concept": "Xác suất có điều kiện khi lấy không hoàn lại",
+    "method": "Điều kiện hóa không gian mẫu",
+    "conditions": "Có ít nhất hai bi đỏ",
+    "independence_status": "candidate_requires_semantic_review",
+    "distinctness_argument": "Xác suất có điều kiện khi lấy không hoàn lại; khác phép toán cốt lõi và phương pháp giải so với các họ dạng đã ghi nhận trong V185 (chưa xác nhận độc lập toàn bộ)."
+  },
+  {
+    "family": "parabola_axis_bounded_area",
+    "topic": "nguyen_ham_tich_phan",
+    "grade": 12,
+    "difficulty": "trung cấp",
+    "concept": "Diện tích miền phẳng giữa parabol và trục hoành",
+    "method": "Tích phân trị tuyệt đối",
+    "conditions": "Hai nghiệm phân biệt",
+    "independence_status": "candidate_requires_semantic_review",
+    "distinctness_argument": "Diện tích miền phẳng giữa parabol và trục hoành; khác phép toán cốt lõi và phương pháp giải so với các họ dạng đã ghi nhận trong V185 (chưa xác nhận độc lập toàn bộ)."
+  }
+]

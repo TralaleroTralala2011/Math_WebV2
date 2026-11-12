@@ -1,0 +1,38 @@
+{
+  "build": "MATH_WEB_GITHUB_READY_V115_LOCAL_AUTOMATION",
+  "source_version": "V114",
+  "changes": [
+    "single-host worker scheduler with review lock",
+    "online SQLite backup + integrity checks",
+    "periodic progress snapshot",
+    "local Nginx frontend & API reverse proxy",
+    "Docker Compose 4 services",
+    "Windows PowerShell one-command local startup"
+  ],
+  "tests": {
+    "backend_without_large_bank_tests": {
+      "passed": 151,
+      "failed": 0,
+      "note": "150 before final same-second backup test + 1 backup test"
+    },
+    "large_bank_api_and_quality": {
+      "passed": 7,
+      "failed": 0
+    },
+    "total": {
+      "passed": 158,
+      "failed": 0
+    },
+    "docker_runtime_tested": false,
+    "nginx_runtime_tested": false,
+    "javascript_syntax_check": true,
+    "yaml_structure_parse": true
+  },
+  "coverage_status": {
+    "topics": 150,
+    "candidate_blueprints_v113_v114": 165,
+    "independently_certified_math_methods": 0,
+    "three_million_questions_complete": false,
+    "production_server_deployed": false
+  }
+}

@@ -1,0 +1,16 @@
+test_180_oracle_recomputed (test_v134.V134QualityGate.test_180_oracle_recomputed) ... ok
+test_catalog_and_all_question_counts (test_v134.V134QualityGate.test_catalog_and_all_question_counts) ... ok
+test_disallowed_certification_detected (test_v134.V134QualityGate.test_disallowed_certification_detected) ... ok
+test_duplicate_question_detected (test_v134.V134QualityGate.test_duplicate_question_detected) ... ok
+test_earlier_topics_repaired (test_v134.V134QualityGate.test_earlier_topics_repaired) ... ok
+test_incorrect_topic_detected (test_v134.V134QualityGate.test_incorrect_topic_detected) ... ok
+test_leakage_detected (test_v134.V134QualityGate.test_leakage_detected) ... ok
+test_no_unreviewed_publications (test_v134.V134QualityGate.test_no_unreviewed_publications) ... ok
+test_number_variants_are_not_new_methods (test_v134.V134QualityGate.test_number_variants_are_not_new_methods) ... ok
+test_tampered_answer_detected (test_v134.V134QualityGate.test_tampered_answer_detected) ... ok
+test_wrong_grade_detected (test_v134.V134QualityGate.test_wrong_grade_detected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.490s
+
+OK

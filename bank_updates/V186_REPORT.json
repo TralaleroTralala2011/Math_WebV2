@@ -1,0 +1,12 @@
+{
+  "version": "V186",
+  "base": "V185",
+  "source_zip_sha256": "07d80d747d1f61fa0d63d040acefe6ef618c84b7937d576b286b45be63eff663",
+  "existing_v185_rows": 6756,
+  "new_candidate_families": 7,
+  "new_oracle_checked_questions": 70,
+  "certified_independent_new_types": 0,
+  "production_integrated_questions": 0,
+  "production_integrated_types": 0,
+  "limitations": "Not 10000 independent types; no full project production DB; semantic certification pending. Short answer only in this batch."
+}

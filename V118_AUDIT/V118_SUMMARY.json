@@ -1,0 +1,54 @@
+{
+  "source_version": "V117 + research V118",
+  "target_topics": 150,
+  "target_types_per_topic": 500,
+  "target_types": 75000,
+  "target_questions": 750000,
+  "candidate_methods_previous": 252,
+  "new_candidate_methods": 38,
+  "candidate_methods_total": 290,
+  "new_questions_generated": 380,
+  "total_candidate_questions_at_10_per_type": 2900,
+  "formats": {
+    "tra_loi_ngan": 76,
+    "trac_nghiem": 76,
+    "dung_sai": 76,
+    "tu_luan_ngan": 76,
+    "van_dung": 72,
+    "toan_thuc_te": 4
+  },
+  "independence_certified": 0,
+  "topics_with_500_candidates": 0,
+  "minimum_candidates_in_topic": 1,
+  "maximum_candidates_in_topic": 6,
+  "old_corpus_files": [
+    {
+      "file": "verified_seed_bank.jsonl",
+      "rows": 344280,
+      "missing": false
+    },
+    {
+      "file": "V114_1650_MATH_VERIFIED_PENDING_REVIEW.jsonl",
+      "rows": 1650,
+      "missing": false
+    },
+    {
+      "file": "V116_NEW_QUESTIONS_10_EACH.jsonl",
+      "rows": 310,
+      "missing": false
+    },
+    {
+      "file": "V117_NEW_QUESTIONS.jsonl",
+      "rows": 560,
+      "missing": false
+    }
+  ],
+  "old_corpus_invalid_json": 0,
+  "normalized_text_collisions": 0,
+  "exact_method_signature_collisions": 2,
+  "new_methods_with_possible_similarity": 22,
+  "review_required": true,
+  "publication_blocked": true,
+  "do_not_claim_100_percent": true,
+  "limitations": "No proof of novelty against legacy mathematical reasoning or expert pedagogical approval. Format changes and number substitutions are never counted as new independent methods."
+}

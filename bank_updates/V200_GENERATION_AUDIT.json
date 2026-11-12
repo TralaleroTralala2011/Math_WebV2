@@ -1,0 +1,17 @@
+{
+  "version": "V200",
+  "new_candidate_families": 23,
+  "exact_oracle_checked_questions": 230,
+  "grades": {
+    "10": 80,
+    "11": 80,
+    "12": 70
+  },
+  "formats": {
+    "multiple_choice": 161,
+    "short_answer": 46,
+    "true_false": 23
+  },
+  "certified_independent_forms": 0,
+  "production_deployed": false
+}

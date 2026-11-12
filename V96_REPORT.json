@@ -1,0 +1,19 @@
+{
+  "version": "V96",
+  "base": "V95",
+  "changes": [
+    "Reject malformed circles instead of rendering misleading center-only points",
+    "Reject segments and polylines referencing nonexistent points",
+    "Clear partially imported objects on import failure",
+    "Add Node runtime contract tests for six supported and invalid geometry scenarios"
+  ],
+  "runtime_tests": "7 cases passed in Node VM with mocked rendering functions",
+  "browser_tested": false,
+  "battle_admin_tested": false,
+  "total_form_ids": 33378,
+  "total_questions": 333780,
+  "new_form_ids": 0,
+  "new_questions": 0,
+  "independent_types_certified": 0,
+  "mathgeo_pro_full_coverage": false
+}

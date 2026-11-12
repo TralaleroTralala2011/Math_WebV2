@@ -1,0 +1,40 @@
+name: MATH_WEB regression and factory checks
+on:
+  push:
+    branches: [main, 'feature/**']
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install backend and test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r backend/requirements-question-factory.txt pytest httpx
+      - name: Compile new code
+        run: python -m compileall -q backend/question_factory backend/app/main.py
+      - name: Factory and critical end-to-end regression tests
+        env:
+          PYTHONPATH: backend
+        run: |
+          pytest -q backend/tests/test_question_factory_v112.py backend/tests/test_api_integration.py backend/tests/test_learning_assignments.py backend/tests/test_geometry_diagrams.py --disable-warnings
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Browser-facing JavaScript static and geometry runtime checks
+        run: |
+          node --check js/battle.js
+          node --check js/practise.js
+          node --check js/practice-mathgeo-bridge.js
+          node tools/v96_mathgeo_runtime_test.cjs geometry-studio.html
+          node tools/v97_triangle_sss_test.cjs geometry-studio.html
+      - name: Read-only seed bank coverage audit
+        run: python tools/audit_v111_seed_stream.py

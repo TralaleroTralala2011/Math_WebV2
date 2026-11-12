@@ -1,0 +1,61 @@
+{
+  "release": "MATH_WEB V215",
+  "status": "checkpoint_verified_local",
+  "baseline_version": "V211",
+  "baseline_rows": 11646,
+  "generated_across_V212_V214": {
+    "candidate_groups": 102,
+    "questions": 1020
+  },
+  "after_semantic_quality_gate": {
+    "active_rows_total": 12266,
+    "active_new_questions": 620,
+    "active_new_candidate_groups": 62,
+    "ten_questions_per_group": true,
+    "preserved_for_review": {
+      "candidate_groups": 40,
+      "questions": 400
+    }
+  },
+  "independent_types_certified": 0,
+  "database": {
+    "integrity_check": "ok",
+    "original_rows_unchanged": 11646
+  },
+  "code_and_assets": {
+    "original_non_database_zip_members_identical": 2526,
+    "original_modified": 0,
+    "original_missing": 0
+  },
+  "candidate_data": {
+    "missing_question_answer_or_explanation": 0,
+    "explanations_under_75_characters": 0,
+    "mcq_rows": 434,
+    "short_answer_rows": 124,
+    "true_false_rows": 62
+  },
+  "live_backend_validation": {
+    "new_questions_tested": 620,
+    "passed": 620,
+    "failures": 0,
+    "answer_check_passed": 620,
+    "mcq_exactly_one_correct": 434,
+    "short_answer_equivalent_numeric_answers_passed": 124,
+    "incorrect_short_answers_rejected": 124,
+    "mcq_have_three_wrong_options": 434
+  },
+  "selected_pytest_suite": {
+    "passed": 116,
+    "failed": 0,
+    "warnings": 6,
+    "total_full_suite_passed": false,
+    "note": "A much larger full suite did not finish within the time limit; do not treat selected test results as a complete E2E site regression."
+  },
+  "mathematical_method_semantic_audit": {
+    "suspected_duplicate_groups_quarantined": 40,
+    "candidates_not_yet_certified": 62,
+    "certified": 0
+  },
+  "deployment": "Not deployed. ZIP has updated SQLite, unchanged original website source.",
+  "download_guidance": "Use V215_FULL_WEB_BANK_INTEGRATED.zip for complete latest checkpoint. V215_BANK_QUALITY_GATE_PATCH.zip only applies as quality-gate cleanup to V214, not as a full upgrade to V211."
+}

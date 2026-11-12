@@ -1,0 +1,16 @@
+{
+  "version": "V231",
+  "base": "V230",
+  "before": 15006,
+  "new_questions": 100,
+  "after": 15106,
+  "candidate_groups": 10,
+  "certified_new_independent_types": 0,
+  "verified_answers": 100,
+  "exact_dedup_passed": 100,
+  "notes": [
+    "Methods are candidates; semantic independence not certified",
+    "No website regression performed",
+    "1000 independent forms target not met"
+  ]
+}

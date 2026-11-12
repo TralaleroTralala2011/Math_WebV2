@@ -1,0 +1,62 @@
+{
+  "covered_topics": 150,
+  "candidate_forms": 300,
+  "questions_with_arithmetic_checks": 3000,
+  "question_formats": {
+    "tra_loi_ngan": 600,
+    "trac_nghiem": 600,
+    "dung_sai": 600,
+    "tu_luan_ngan": 600,
+    "van_dung": 548,
+    "toan_thuc_te": 52
+  },
+  "certified_independent_forms": 0,
+  "expert_verified_questions": 0,
+  "total_candidates_v113_to_v121": 770,
+  "previous_candidate_forms": 470,
+  "legacy_question_sources": [
+    {
+      "filename": "backend/app/ai/verified_seed/verified_seed_bank.jsonl",
+      "parsed_rows": 344280,
+      "missing": false
+    },
+    {
+      "filename": "V114_AUDIT/V114_1650_MATH_VERIFIED_PENDING_REVIEW.jsonl",
+      "parsed_rows": 1650,
+      "missing": false
+    },
+    {
+      "filename": "V116_RESEARCH/V116_NEW_QUESTIONS_10_EACH.jsonl",
+      "parsed_rows": 310,
+      "missing": false
+    },
+    {
+      "filename": "V117_AUDIT/V117_NEW_QUESTIONS.jsonl",
+      "parsed_rows": 560,
+      "missing": false
+    },
+    {
+      "filename": "V118_AUDIT/V118_NEW_QUESTIONS.jsonl",
+      "parsed_rows": 380,
+      "missing": false
+    },
+    {
+      "filename": "V119_RESEARCH/V119_NEW_QUESTIONS.jsonl",
+      "parsed_rows": 300,
+      "missing": false
+    },
+    {
+      "filename": "V120_RESEARCH/V120_1500_NEW_QUESTIONS.jsonl",
+      "parsed_rows": 1500,
+      "missing": false
+    }
+  ],
+  "bad_json_rows_old": [],
+  "legacy_question_hashes_available": 348956,
+  "exact_legacy_stem_collisions": 0,
+  "legacy_collisions": [],
+  "candidate_title_similarity_alerts": 235,
+  "repeated_formula_groups_across_topics": 49,
+  "warning": "Neither the existence of an original title nor a numerical difference establishes independent methods. Expert review pending.",
+  "production_bank_unmodified": true
+}

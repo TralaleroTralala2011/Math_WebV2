@@ -1,0 +1,40 @@
+{
+  "base": "Batch 25",
+  "batch": "26",
+  "updated_topics": [
+    "g10_combinatorics_olympiad",
+    "g12_integral_optimization",
+    "g11_geom_prism_pyramid_sections",
+    "g12_geom_skew_line_relation",
+    "g12_geom_parameter_geometry"
+  ],
+  "new_questions": 50,
+  "topics_total": 150,
+  "topics_with_quiz": 131,
+  "topics_without_quiz": [
+    "chung_minh_hinh_hoc_10",
+    "thiet_dien_hinh_khong_gian_11",
+    "bai_toan_thuc_te_tong_hop_11",
+    "phep_bien_hinh_co_ban_11",
+    "nhan_biet_hinh_khong_gian_11",
+    "g11_geom_section_construction",
+    "g11_geom_transform_composition",
+    "g11_geom_section_ratio",
+    "g11_geom_space_proof",
+    "hinh_hoc_khong_gian",
+    "toa_do_khong_gian",
+    "tuong_giao",
+    "goc_khoang_cach_oxyz",
+    "tong_hop_thpt",
+    "bai_toan_thuc_te_12",
+    "hinh_khoi_va_the_tich_co_ban_12",
+    "hinh_hoc_oxyz_van_dung_12",
+    "g12_geom_min_distance_3d",
+    "g12_geom_3d_optimization"
+  ],
+  "limitations": [
+    "New questions are multiple-choice conceptual questions; do not claim 7:2:1 mix",
+    "No independent mathematical proof checker or browser test",
+    "Theory is structured and improved for five topics but not a complete curriculum-wide pedagogy audit"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "version": "V118",
+  "base_zip": "MATH_WEB_GITHUB_READY_V117_RESEARCH_500_TARGET.zip",
+  "completed_test_groups": [
+    {
+      "name": "Question Factory V112–V118 + Operations",
+      "passed": 51
+    },
+    {
+      "name": "API, Learning, Geometry main",
+      "passed": 33
+    },
+    {
+      "name": "Math algebra/geometry/grading regression",
+      "passed": 43
+    },
+    {
+      "name": "Other backend regression",
+      "passed": 40
+    },
+    {
+      "name": "Verified Bank API",
+      "passed": 4
+    },
+    {
+      "name": "Verified Bank quality: normalization",
+      "passed": 1
+    },
+    {
+      "name": "Verified Bank quality: duplicate/invalid proof",
+      "passed": 1
+    },
+    {
+      "name": "Verified Bank quality: full quality report",
+      "passed": 1
+    }
+  ],
+  "duplicate_test_cases_across_groups": 2,
+  "unique_test_cases_passed": 172,
+  "failed": 0,
+  "errors": 0,
+  "run_all_in_one_process": false,
+  "production_test": false,
+  "browser_device_test": false,
+  "mathematical_method_independence_certified": 0,
+  "new_candidate_types": 38,
+  "new_answers_recomputed": 380,
+  "new_exact_collisions_with_346800_checked_source_records": 0,
+  "new_methods_flagged_near_other_methods": 22,
+  "publication_blocked": true,
+  "interpretation": "Correctness of selected coded examples and existing regression tests only; not proof of uniqueness or every UX workflow."
+}

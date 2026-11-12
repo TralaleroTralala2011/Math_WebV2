@@ -1,0 +1,1 @@
+V190 incremental candidates. Not imported to production. Mathematical checks: SymPy remainder, inequality, projection and determinant identities. Do not count candidates as certified independent types. Import only after full-bank semantic audit and application compatibility testing.

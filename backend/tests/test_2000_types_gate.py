@@ -9,7 +9,9 @@ spec.loader.exec_module(module)
 
 def make(kind, question, signature='concept A'):
     return dict(topic_id='topic1', type_id=kind, question=question,
-                answer='2', solution='Verified separately', structure_signature=signature)
+                skill_id='tested_concept_A', reviewed_topic_id='topic1',
+                topic_alignment_reviewed=True, answer='2',
+                solution='Verified separately', structure_signature=signature)
 
 
 def test_rejects_numeric_substitution_as_new_type():

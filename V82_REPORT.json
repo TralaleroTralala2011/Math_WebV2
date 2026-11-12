@@ -1,0 +1,15 @@
+{
+  "version": "V82",
+  "base": "V81",
+  "change": "GeoGebra integration for graph diagrams on practice page, fallback original SVG for unavailable library and other diagram types",
+  "new_form_ids": 0,
+  "new_questions": 0,
+  "target_new_ids": 10000,
+  "target_met": false,
+  "limitations": [
+    "GeoGebra requires internet for CDN script",
+    "Only graph diagrams routed to GeoGebra; plane geometry and 3D remain on original renderer",
+    "Browser regression testing not performed",
+    "No new independently verified math types"
+  ]
+}

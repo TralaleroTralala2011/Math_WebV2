@@ -1,0 +1,22 @@
+{
+  "candidate_methods": 6,
+  "questions": 60,
+  "independence_certified": 0,
+  "questions_published": 0,
+  "answer_oracle_checked": 60,
+  "format_counts": {
+    "trac_nghiem": 42,
+    "tu_luan": 12,
+    "dung_sai": 6
+  },
+  "status": "PENDING EXPERT REVIEW",
+  "method_ids": [
+    "v158_crt",
+    "v158_binomial",
+    "v158_lineplane",
+    "v158_orthogonal",
+    "v158_geomseries",
+    "v158_variance"
+  ],
+  "methodology": "Six independent arithmetic/combinatorial oracles check numeric answers, not independent-method novelty"
+}

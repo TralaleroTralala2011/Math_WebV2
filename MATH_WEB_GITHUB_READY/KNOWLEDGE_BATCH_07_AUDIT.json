@@ -1,0 +1,17 @@
+{
+  "base": "KNOWLEDGE_BATCH_06",
+  "added_topics": 4,
+  "total_topics": 150,
+  "topics_with_quiz": 36,
+  "new_questions": 40,
+  "question_mix": {
+    "multiple_choice": 28,
+    "short_answer": 8,
+    "true_false": 4
+  },
+  "limitations": [
+    "No browser integration tests",
+    "No new verified videos",
+    "Not full curriculum coverage"
+  ]
+}

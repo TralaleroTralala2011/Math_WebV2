@@ -1,0 +1,184 @@
+{
+  "version": "V25",
+  "base": "V24",
+  "new_form_ids": 28,
+  "new_questions": 280,
+  "total_questions": 5360,
+  "total_unique_form_ids": 535,
+  "grades": {
+    "10": 90,
+    "11": 100,
+    "12": 90
+  },
+  "validation": "nonempty fields, exact text deduplication, deterministic arithmetic formulas, ZIP CRC; not independent proof of mathematical novelty or full system regression",
+  "forms": [
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v25_set_complement",
+      "signature": "complement of union in universe"
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "form_id": "v25_quadratic_vertex_parameter",
+      "signature": "recover quadratic constant from vertex ordinate"
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v25_quadratic_root_gap",
+      "signature": "root difference from coefficients"
+    },
+    {
+      "grade": 10,
+      "topic": "Vectơ",
+      "form_id": "v25_vector_parallelogram",
+      "signature": "fourth vertex of parallelogram from three ordered vertices"
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v25_line_intercept_area",
+      "signature": "triangle area formed by positive coordinate intercepts"
+    },
+    {
+      "grade": 10,
+      "topic": "Đường tròn",
+      "form_id": "v25_circle_chord_midpoint",
+      "signature": "distance from circle center to chord from radius and chord length"
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v25_combinations_committees",
+      "signature": "committees with at least one representative of each group"
+    },
+    {
+      "grade": 10,
+      "topic": "Xác suất",
+      "form_id": "v25_probability_complement",
+      "signature": "at least one success in two independent trials"
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v25_stats_pooled_mean",
+      "signature": "pooled mean of two populations"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v25_ap_middle_term",
+      "signature": "recover middle term from two symmetric terms"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v25_ap_term_count",
+      "signature": "count terms from first last and difference"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v25_gp_missing_ratio",
+      "signature": "positive geometric ratio from first and fourth term"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v25_gp_three_term_product",
+      "signature": "product of symmetric geometric terms"
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v25_limit_rational_infty",
+      "signature": "limit rational function with equal highest degrees"
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v25_limit_rational_cancel",
+      "signature": "limit after factoring difference of squares"
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v25_derivative_inverse_power",
+      "signature": "derivative of reciprocal linear expression at a point"
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v25_derivative_critical_quadratic",
+      "signature": "critical point of quadratic derivative"
+    },
+    {
+      "grade": 11,
+      "topic": "Lượng giác",
+      "form_id": "v25_trig_pythagorean",
+      "signature": "find sine from cosine and quadrant"
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v25_prob_hypergeom",
+      "signature": "exactly one selected from a group in a two draw sample"
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v25_integral_power_interval",
+      "signature": "definite integral monomial with integer endpoint"
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v25_integral_even_symmetric",
+      "signature": "symmetric integral of even quadratic"
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v25_complex_modulus_product",
+      "signature": "modulus of complex product"
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v25_complex_conjugate_sum",
+      "signature": "sum complex number with its conjugate"
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v25_3d_triangle_area_axes",
+      "signature": "triangle area from two perpendicular axis vectors in space"
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số mũ",
+      "form_id": "v25_exponential_growth",
+      "signature": "compound growth after fixed periods"
+    },
+    {
+      "grade": 12,
+      "topic": "Logarit",
+      "form_id": "v25_logarithm_change_base",
+      "signature": "change of base logarithm from two powers"
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v25_quadratic_min_on_interval",
+      "signature": "quadratic constrained minimum at vertex"
+    },
+    {
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "form_id": "v25_cylinder_lateral_area",
+      "signature": "lateral surface area cylinder exact pi coefficient"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "phase": "sandbox_offline_not_production",
+  "input_rows": 7636,
+  "source_bundles": {
+    "V179": 1865,
+    "V180_additional": 360,
+    "V180_QA": 1470,
+    "V182": 1660,
+    "V183": 755,
+    "V184": 646,
+    "V191_RESCUE_V186": 60,
+    "V191_RESCUE_V187": 100,
+    "V191_RESCUE_V188": 50,
+    "V191_RESCUE_V189": 120,
+    "V191_RESCUE_V190": 30,
+    "V191": 520
+  },
+  "sqlite_preview": {
+    "mode": "preview",
+    "db": "/tmp/mathweb_v191_import_test_6nikaxdi/mathweb-fixture.sqlite",
+    "input_records": 7636,
+    "bank_before": 0,
+    "potential_new": 7636,
+    "certified_independent_types": 0
+  },
+  "first_write": {
+    "bank_before": 0,
+    "inserted": 7636,
+    "bank_after": 7636,
+    "ledger_confirmed": 7636,
+    "sqlite_integrity": "ok"
+  },
+  "second_write": {
+    "bank_before": 7636,
+    "inserted": 0,
+    "already_present": 7636,
+    "bank_after": 7636,
+    "ledger_confirmed": 7636,
+    "sqlite_integrity": "ok"
+  },
+  "retrieval_grading_checks": [
+    {
+      "grade": 10,
+      "topic": "tap_hop",
+      "type": "multiple_choice",
+      "pass": true
+    },
+    {
+      "grade": 10,
+      "topic": "tap_hop",
+      "type": "short_answer",
+      "pass": true
+    },
+    {
+      "grade": 10,
+      "topic": "tap_hop",
+      "type": "true_false",
+      "pass": true
+    },
+    {
+      "grade": 11,
+      "topic": "cap_so_nhan",
+      "type": "multiple_choice",
+      "pass": true
+    },
+    {
+      "grade": 11,
+      "topic": "cap_so_nhan",
+      "type": "short_answer",
+      "pass": true
+    },
+    {
+      "grade": 11,
+      "topic": "cap_so_nhan",
+      "type": "true_false",
+      "pass": true
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_sphere_equation",
+      "type": "multiple_choice",
+      "pass": true
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_sphere_equation",
+      "type": "short_answer",
+      "pass": true
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_sphere_equation",
+      "type": "true_false",
+      "pass": true
+    }
+  ],
+  "production_confirmed_inserted": 0,
+  "independent_types_certified": 0
+}

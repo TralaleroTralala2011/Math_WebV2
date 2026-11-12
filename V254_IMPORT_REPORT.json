@@ -1,0 +1,1079 @@
+{
+  "source": "Question_Bank_V254 (3)(1).zip",
+  "source_docx": 150,
+  "word_question_labels": 4000,
+  "extracted_complete_records": 4000,
+  "missing_records": 0,
+  "issues_sample": [],
+  "mapped_topics": 134,
+  "low_confidence_mappings": [
+    {
+      "file": "150_CHU_DE_WORD/043_Toan_10_Chia_Du.docx",
+      "grade": 10,
+      "topic": "nhi_thuc_newton",
+      "topic_name": "Nhị thức Newton",
+      "similarity": 0.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/044_Toan_10_Chia_Het.docx",
+      "grade": 10,
+      "topic": "nhi_thuc_newton",
+      "topic_name": "Nhị thức Newton",
+      "similarity": 0.0
+    }
+  ],
+  "topic_mappings": [
+    {
+      "file": "150_CHU_DE_WORD/001_Toan_10_Bai_toan_thuc_te_Toan_10.docx",
+      "grade": 10,
+      "topic": "bai_toan_thuc_te_10",
+      "topic_name": "Bài toán thực tế Toán 10",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/002_Toan_10_Bai_toan_tong_hop_uong_thang_va_uong_tron_toa_o.docx",
+      "grade": 10,
+      "topic": "g10_geom_coordinate_circle_line",
+      "topic_name": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+      "similarity": 0.969
+    },
+    {
+      "file": "150_CHU_DE_WORD/003_Toan_10_Bat_phuong_trinh_va_he_bat_phuong_trinh.docx",
+      "grade": 10,
+      "topic": "bat_phuong_trinh",
+      "topic_name": "Bất phương trình và hệ bất phương trình",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/004_Toan_10_Bat_ang_thuc_va_cuc_tri_trong_tam_giac.docx",
+      "grade": 10,
+      "topic": "g10_geom_triangle_inequalities",
+      "topic_name": "Bất đẳng thức và cực trị trong tam giác",
+      "similarity": 0.987
+    },
+    {
+      "file": "150_CHU_DE_WORD/005_Toan_10_Bat_ang_thuc_ai_so_va_cuc_tri_nang_cao.docx",
+      "grade": 10,
+      "topic": "g10_geom_triangle_inequalities",
+      "topic_name": "Bất đẳng thức và cực trị trong tam giác",
+      "similarity": 0.727
+    },
+    {
+      "file": "150_CHU_DE_WORD/006_Toan_10_Chung_minh_hinh_hoc_bang_vecto.docx",
+      "grade": 10,
+      "topic": "g10_geom_vector_proofs",
+      "topic_name": "Chứng minh hình học bằng vectơ",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/007_Toan_10_Chung_minh_hinh_hoc_va_bai_toan_tong_hop.docx",
+      "grade": 10,
+      "topic": "chung_minh_hinh_hoc_10",
+      "topic_name": "Chứng minh hình học và bài toán tổng hợp",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/008_Toan_10_Cac_truong_hop_bang_nhau_cua_tam_giac.docx",
+      "grade": 10,
+      "topic": "g10_geom_triangle_congruence",
+      "topic_name": "Các trường hợp bằng nhau của tam giác",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/009_Toan_10_Day_cung_cung_va_khoang_cach_en_tam.docx",
+      "grade": 10,
+      "topic": "g10_geom_circle_chords_arcs",
+      "topic_name": "Dây cung, cung và khoảng cách đến tâm",
+      "similarity": 0.986
+    },
+    {
+      "file": "150_CHU_DE_WORD/010_Toan_10_Giao_iem_va_vi_tri_tuong_oi_cua_hai_uong_thang.docx",
+      "grade": 10,
+      "topic": "g10_geom_line_intersections",
+      "topic_name": "Giao điểm và vị trí tương đối của hai đường thẳng",
+      "similarity": 0.968
+    },
+    {
+      "file": "150_CHU_DE_WORD/011_Toan_10_Goc_noi_tiep_va_goc_o_tam_nang_cao.docx",
+      "grade": 10,
+      "topic": "g10_geom_circle_angles",
+      "topic_name": "Góc nội tiếp và góc ở tâm nâng cao",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/012_Toan_10_Goc_tao_boi_hai_uong_thang_va_uong_cat.docx",
+      "grade": 10,
+      "topic": "g10_geom_angles_parallel",
+      "topic_name": "Góc tạo bởi hai đường thẳng và đường cắt",
+      "similarity": 0.974
+    },
+    {
+      "file": "150_CHU_DE_WORD/013_Toan_10_Hoan_vi_chinh_hop_to_hop.docx",
+      "grade": 10,
+      "topic": "hoan_vi_chinh_hop_to_hop",
+      "topic_name": "Hoán vị, chỉnh hợp, tổ hợp",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/014_Toan_10_Ham_so.docx",
+      "grade": 10,
+      "topic": "ham_so",
+      "topic_name": "Hàm số",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/015_Toan_10_Ham_so_bac_hai_va_parabol.docx",
+      "grade": 10,
+      "topic": "ham_so_bac_hai",
+      "topic_name": "Hàm số bậc hai và parabol",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/016_Toan_10_Ham_so_bac_nhat.docx",
+      "grade": 10,
+      "topic": "ham_so_bac_nhat",
+      "topic_name": "Hàm số bậc nhất",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/017_Toan_10_Hinh_hoc_co_ban_goc_canh_va_dien_tich.docx",
+      "grade": 10,
+      "topic": "hinh_hoc_co_ban_10",
+      "topic_name": "Hình học cơ bản: góc, cạnh và diện tích",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/018_Toan_10_Hinh_hoc_phang.docx",
+      "grade": 10,
+      "topic": "hinh_hoc_10",
+      "topic_name": "Hình học phẳng",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/019_Toan_10_He_bat_phuong_trinh.docx",
+      "grade": 10,
+      "topic": "he_bat_phuong_trinh",
+      "topic_name": "Hệ bất phương trình",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/020_Toan_10_He_phuong_trinh.docx",
+      "grade": 10,
+      "topic": "he_phuong_trinh",
+      "topic_name": "Hệ phương trình",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/021_Toan_10_He_phuong_trinh_oi_xung_va_hoan_vi.docx",
+      "grade": 10,
+      "topic": "he_phuong_trinh",
+      "topic_name": "Hệ phương trình",
+      "similarity": 0.612
+    },
+    {
+      "file": "150_CHU_DE_WORD/022_Toan_10_He_thuc_luong_trong_tam_giac.docx",
+      "grade": 10,
+      "topic": "he_thuc_luong",
+      "topic_name": "Hệ thức lượng trong tam giác",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/023_Toan_10_Menh_e.docx",
+      "grade": 10,
+      "topic": "menh_de",
+      "topic_name": "Mệnh đề",
+      "similarity": 0.923
+    },
+    {
+      "file": "150_CHU_DE_WORD/024_Toan_10_Menh_e_va_tap_hop.docx",
+      "grade": 10,
+      "topic": "menh_de_tap_hop",
+      "topic_name": "Mệnh đề và tập hợp",
+      "similarity": 0.971
+    },
+    {
+      "file": "150_CHU_DE_WORD/025_Toan_10_Nhi_thuc_Newton.docx",
+      "grade": 10,
+      "topic": "nhi_thuc_newton",
+      "topic_name": "Nhị thức Newton",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/026_Toan_10_Phuong_trinh.docx",
+      "grade": 10,
+      "topic": "phuong_trinh",
+      "topic_name": "Phương trình",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/027_Toan_10_Phuong_trinh_chua_can_thuc_nang_cao.docx",
+      "grade": 10,
+      "topic": "g10_geom_vector_proofs",
+      "topic_name": "Chứng minh hình học bằng vectơ",
+      "similarity": 0.615
+    },
+    {
+      "file": "150_CHU_DE_WORD/028_Toan_10_Phuong_trinh_va_he_phuong_trinh.docx",
+      "grade": 10,
+      "topic": "phuong_trinh_he",
+      "topic_name": "Phương trình và hệ phương trình",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/029_Toan_10_Quy_tac_em.docx",
+      "grade": 10,
+      "topic": "quy_tac_dem",
+      "topic_name": "Quy tắc đếm",
+      "similarity": 0.952
+    },
+    {
+      "file": "150_CHU_DE_WORD/030_Toan_10_Quy_tich_iem_trong_mat_phang.docx",
+      "grade": 10,
+      "topic": "g10_geom_locus",
+      "topic_name": "Quỹ tích điểm trong mặt phẳng",
+      "similarity": 0.982
+    },
+    {
+      "file": "150_CHU_DE_WORD/031_Toan_10_Tam_giac_va_tu_giac_co_ban.docx",
+      "grade": 10,
+      "topic": "tam_giac_tu_giac_10",
+      "topic_name": "Tam giác và tứ giác cơ bản",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/032_Toan_10_Thong_ke.docx",
+      "grade": 10,
+      "topic": "thong_ke",
+      "topic_name": "Thống kê",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/033_Toan_10_Tiep_tuyen_va_day_cung_cua_uong_tron.docx",
+      "grade": 10,
+      "topic": "g10_geom_circle_tangent_chord",
+      "topic_name": "Tiếp tuyến và dây cung của đường tròn",
+      "similarity": 0.986
+    },
+    {
+      "file": "150_CHU_DE_WORD/034_Toan_10_Trung_iem_va_khoang_cach_trong_toa_o_phang.docx",
+      "grade": 10,
+      "topic": "g10_geom_coordinate_distance_midpoint",
+      "topic_name": "Trung điểm và khoảng cách trong tọa độ phẳng",
+      "similarity": 0.977
+    },
+    {
+      "file": "150_CHU_DE_WORD/035_Toan_10_Tinh_chat_hinh_binh_hanh_va_hinh_thoi.docx",
+      "grade": 10,
+      "topic": "g10_geom_quadrilaterals_properties",
+      "topic_name": "Tính chất hình bình hành và hình thoi",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/036_Toan_10_Tap_hop_va_cac_phep_toan.docx",
+      "grade": 10,
+      "topic": "tap_hop",
+      "topic_name": "Tập hợp và các phép toán",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/037_Toan_10_Ti_so_dien_tich_tam_giac.docx",
+      "grade": 10,
+      "topic": "g10_geom_triangle_area_ratio",
+      "topic_name": "Tỉ số diện tích tam giác",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/038_Toan_10_Toa_o_trong_mat_phang.docx",
+      "grade": 10,
+      "topic": "toa_do_phang",
+      "topic_name": "Tọa độ trong mặt phẳng",
+      "similarity": 0.977
+    },
+    {
+      "file": "150_CHU_DE_WORD/039_Toan_10_Toa_o_va_uong_thang_trong_mat_phang.docx",
+      "grade": 10,
+      "topic": "toa_do_hinh_hoc_10",
+      "topic_name": "Tọa độ và đường thẳng trong mặt phẳng",
+      "similarity": 0.972
+    },
+    {
+      "file": "150_CHU_DE_WORD/040_Toan_10_To_hop_va_nguyen_ly_Dirichlet_nang_cao.docx",
+      "grade": 10,
+      "topic": "hoan_vi_chinh_hop_to_hop",
+      "topic_name": "Hoán vị, chỉnh hợp, tổ hợp",
+      "similarity": 0.65
+    },
+    {
+      "file": "150_CHU_DE_WORD/041_Toan_10_Vecto.docx",
+      "grade": 10,
+      "topic": "vector",
+      "topic_name": "Vectơ",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/042_Toan_10_Xac_suat.docx",
+      "grade": 10,
+      "topic": "xac_suat",
+      "topic_name": "Xác suất",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/043_Toan_10_Chia_Du.docx",
+      "grade": 10,
+      "topic": "nhi_thuc_newton",
+      "topic_name": "Nhị thức Newton",
+      "similarity": 0.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/044_Toan_10_Chia_Het.docx",
+      "grade": 10,
+      "topic": "nhi_thuc_newton",
+      "topic_name": "Nhị thức Newton",
+      "similarity": 0.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/045_Toan_10_Phuong_Trinh_Bac_Hai.docx",
+      "grade": 10,
+      "topic": "phuong_trinh",
+      "topic_name": "Phương trình",
+      "similarity": 0.75
+    },
+    {
+      "file": "150_CHU_DE_WORD/046_Toan_10_uong_thang.docx",
+      "grade": 10,
+      "topic": "duong_thang",
+      "topic_name": "Đường thẳng",
+      "similarity": 0.952
+    },
+    {
+      "file": "150_CHU_DE_WORD/047_Toan_10_uong_trung_tuyen_phan_giac_va_uong_cao.docx",
+      "grade": 10,
+      "topic": "g10_geom_special_lines",
+      "topic_name": "Đường trung tuyến, phân giác và đường cao",
+      "similarity": 0.974
+    },
+    {
+      "file": "150_CHU_DE_WORD/048_Toan_10_uong_tron.docx",
+      "grade": 10,
+      "topic": "duong_tron",
+      "topic_name": "Đường tròn",
+      "similarity": 0.947
+    },
+    {
+      "file": "150_CHU_DE_WORD/049_Toan_10_uong_tron_va_cac_goc_co_ban.docx",
+      "grade": 10,
+      "topic": "duong_tron_co_ban_10",
+      "topic_name": "Đường tròn và các góc cơ bản",
+      "similarity": 0.982
+    },
+    {
+      "file": "150_CHU_DE_WORD/050_Toan_10_inh_ly_Thales_va_tam_giac_ong_dang.docx",
+      "grade": 10,
+      "topic": "g10_geom_thales_similarity",
+      "topic_name": "Định lý Thales và tam giác đồng dạng",
+      "similarity": 0.971
+    },
+    {
+      "file": "150_CHU_DE_WORD/051_Toan_11_Bien_co_oc_lap_va_xac_suat_co_ieu_kien.docx",
+      "grade": 11,
+      "topic": "bien_co_doc_lap_11",
+      "topic_name": "Biến cố độc lập và xác suất có điều kiện",
+      "similarity": 0.974
+    },
+    {
+      "file": "150_CHU_DE_WORD/052_Toan_11_Bai_toan_thuc_te_Toan_11.docx",
+      "grade": 11,
+      "topic": "bai_toan_thuc_te_11",
+      "topic_name": "Bài toán thực tế Toán 11",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/053_Toan_11_Bai_toan_thuc_te_tong_hop_Toan_11.docx",
+      "grade": 11,
+      "topic": "bai_toan_thuc_te_tong_hop_11",
+      "topic_name": "Bài toán thực tế tổng hợp Toán 11",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/054_Toan_11_Chung_minh_tong_hop_song_song_va_vuong_goc.docx",
+      "grade": 11,
+      "topic": "g11_geom_space_proof",
+      "topic_name": "Chứng minh tổng hợp song song và vuông góc",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/055_Toan_11_Cong_thuc_luong_giac.docx",
+      "grade": 11,
+      "topic": "cong_thuc_luong_giac",
+      "topic_name": "Công thức lượng giác",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/056_Toan_11_Cap_so_cong.docx",
+      "grade": 11,
+      "topic": "cap_so_cong",
+      "topic_name": "Cấp số cộng",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/057_Toan_11_Cap_so_nhan.docx",
+      "grade": 11,
+      "topic": "cap_so_nhan",
+      "topic_name": "Cấp số nhân",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/058_Toan_11_Day_so.docx",
+      "grade": 11,
+      "topic": "day_so",
+      "topic_name": "Dãy số",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/059_Toan_11_Day_so.docx",
+      "grade": 11,
+      "topic": "day_so",
+      "topic_name": "Dãy số",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/060_Toan_11_Day_so_truy_hoi.docx",
+      "grade": 11,
+      "topic": "day_so_truy_hoi_11",
+      "topic_name": "Dãy số truy hồi",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/061_Toan_11_Day_so_truy_hoi_va_bai_toan_cuc_tri.docx",
+      "grade": 11,
+      "topic": "day_so_truy_hoi_11",
+      "topic_name": "Dãy số truy hồi",
+      "similarity": 0.6
+    },
+    {
+      "file": "150_CHU_DE_WORD/062_Toan_11_Dung_thiet_dien_cua_hinh_chop_va_lang_tru.docx",
+      "grade": 11,
+      "topic": "g11_geom_section_construction",
+      "topic_name": "Dựng thiết diện của hình chóp và lăng trụ",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/063_Toan_11_Gia_tri_luong_giac.docx",
+      "grade": 11,
+      "topic": "gia_tri_luong_giac",
+      "topic_name": "Giá trị lượng giác",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/064_Toan_11_Gioi_han.docx",
+      "grade": 11,
+      "topic": "gioi_han",
+      "topic_name": "Giới hạn",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/065_Toan_11_Gioi_han_ham_so.docx",
+      "grade": 11,
+      "topic": "gioi_han_ham_so",
+      "topic_name": "Giới hạn hàm số",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/066_Toan_11_Goc_giua_uong_thang_va_mat_phang.docx",
+      "grade": 11,
+      "topic": "g11_geom_dihedral_angles",
+      "topic_name": "Góc giữa đường thẳng và mặt phẳng",
+      "similarity": 0.985
+    },
+    {
+      "file": "150_CHU_DE_WORD/067_Toan_11_Goc_va_khoang_cach_trong_khong_gian.docx",
+      "grade": 11,
+      "topic": "goc_khoang_cach_11",
+      "topic_name": "Góc và khoảng cách trong không gian",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/068_Toan_11_Hai_mat_phang_song_song.docx",
+      "grade": 11,
+      "topic": "g11_geom_parallel_planes",
+      "topic_name": "Hai mặt phẳng song song",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/069_Toan_11_Ham_so_lien_tuc.docx",
+      "grade": 11,
+      "topic": "ham_so_lien_tuc",
+      "topic_name": "Hàm số liên tục",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/070_Toan_11_Ham_so_luong_giac.docx",
+      "grade": 11,
+      "topic": "ham_so_luong_giac",
+      "topic_name": "Hàm số lượng giác",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/071_Toan_11_Hop_thanh_cac_phep_bien_hinh.docx",
+      "grade": 11,
+      "topic": "g11_geom_transform_composition",
+      "topic_name": "Hợp thành các phép biến hình",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/072_Toan_11_Khoang_cach_giua_hai_uong_thang_cheo_nhau.docx",
+      "grade": 11,
+      "topic": "g11_geom_skew_lines_distance",
+      "topic_name": "Khoảng cách giữa hai đường thẳng chéo nhau",
+      "similarity": 0.988
+    },
+    {
+      "file": "150_CHU_DE_WORD/073_Toan_11_Mo_hinh_xac_suat_co_ieu_kien.docx",
+      "grade": 11,
+      "topic": "bien_co_doc_lap_11",
+      "topic_name": "Biến cố độc lập và xác suất có điều kiện",
+      "similarity": 0.676
+    },
+    {
+      "file": "150_CHU_DE_WORD/074_Toan_11_Mat_ben_canh_ben_va_ay_cua_lang_tru_hinh_chop.docx",
+      "grade": 11,
+      "topic": "g11_geom_prism_pyramid_sections",
+      "topic_name": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+      "similarity": 0.989
+    },
+    {
+      "file": "150_CHU_DE_WORD/075_Toan_11_Nhan_biet_hinh_hoc_khong_gian.docx",
+      "grade": 11,
+      "topic": "nhan_biet_hinh_khong_gian_11",
+      "topic_name": "Nhận biết hình học không gian",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/076_Toan_11_Nhan_biet_uong_thang_va_mat_phang_trong_khong_gian.docx",
+      "grade": 11,
+      "topic": "g11_geom_space_lines_planes",
+      "topic_name": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+      "similarity": 0.99
+    },
+    {
+      "file": "150_CHU_DE_WORD/077_Toan_11_Nhi_thuc_Newton_va_he_so_to_hop_nang_cao.docx",
+      "grade": 11,
+      "topic": "to_hop_xac_suat_nang_cao_11",
+      "topic_name": "Tổ hợp và xác suất nâng cao",
+      "similarity": 0.65
+    },
+    {
+      "file": "150_CHU_DE_WORD/078_Toan_11_Phep_bien_hinh_co_ban.docx",
+      "grade": 11,
+      "topic": "phep_bien_hinh_co_ban_11",
+      "topic_name": "Phép biến hình cơ bản",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/079_Toan_11_Phep_bien_hinh_trong_mat_phang.docx",
+      "grade": 11,
+      "topic": "phep_bien_hinh_11",
+      "topic_name": "Phép biến hình trong mặt phẳng",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/080_Toan_11_Phep_quay_va_phep_vi_tu.docx",
+      "grade": 11,
+      "topic": "g11_geom_rotation_homothety",
+      "topic_name": "Phép quay và phép vị tự",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/081_Toan_11_Phep_tinh_tien_va_anh_cua_hinh.docx",
+      "grade": 11,
+      "topic": "g11_geom_transform_translation",
+      "topic_name": "Phép tịnh tiến và ảnh của hình",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/082_Toan_11_Phep_oi_xung_truc.docx",
+      "grade": 11,
+      "topic": "g11_geom_transform_reflection",
+      "topic_name": "Phép đối xứng trục",
+      "similarity": 0.971
+    },
+    {
+      "file": "150_CHU_DE_WORD/083_Toan_11_Phuong_trinh_luong_giac.docx",
+      "grade": 11,
+      "topic": "phuong_trinh_luong_giac",
+      "topic_name": "Phương trình lượng giác",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/084_Toan_11_Phuong_trinh_luong_giac.docx",
+      "grade": 11,
+      "topic": "phuong_trinh_luong_giac",
+      "topic_name": "Phương trình lượng giác",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/085_Toan_11_Phuong_trinh_luong_giac_nang_cao.docx",
+      "grade": 11,
+      "topic": "phuong_trinh_luong_giac",
+      "topic_name": "Phương trình lượng giác",
+      "similarity": 0.836
+    },
+    {
+      "file": "150_CHU_DE_WORD/086_Toan_11_Quan_he_song_song_trong_khong_gian.docx",
+      "grade": 11,
+      "topic": "song_song_khong_gian",
+      "topic_name": "Quan hệ song song trong không gian",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/087_Toan_11_Quan_he_song_song_va_vuong_goc_trong_khong_gian.docx",
+      "grade": 11,
+      "topic": "hinh_khong_gian",
+      "topic_name": "Quan hệ song song và vuông góc trong không gian",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/088_Toan_11_Quan_he_vuong_goc_trong_khong_gian.docx",
+      "grade": 11,
+      "topic": "vuong_goc_khong_gian",
+      "topic_name": "Quan hệ vuông góc trong không gian",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/089_Toan_11_Quy_nap_toan_hoc.docx",
+      "grade": 11,
+      "topic": "quy_nap_toan_hoc_11",
+      "topic_name": "Quy nạp toán học",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/090_Toan_11_Quy_tac_ao_ham.docx",
+      "grade": 11,
+      "topic": "dao_ham_quy_tac",
+      "topic_name": "Quy tắc đạo hàm",
+      "similarity": 0.966
+    },
+    {
+      "file": "150_CHU_DE_WORD/091_Toan_11_Thiet_dien_hinh_khong_gian.docx",
+      "grade": 11,
+      "topic": "thiet_dien_hinh_khong_gian_11",
+      "topic_name": "Thiết diện hình không gian",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/092_Toan_11_Thiet_dien_va_ti_so_oan_trong_hinh_khong_gian.docx",
+      "grade": 11,
+      "topic": "g11_geom_section_ratio",
+      "topic_name": "Thiết diện và tỉ số đoạn trong hình không gian",
+      "similarity": 0.989
+    },
+    {
+      "file": "150_CHU_DE_WORD/093_Toan_11_Thong_ke_Toan_11.docx",
+      "grade": 11,
+      "topic": "thong_ke_11",
+      "topic_name": "Thống kê Toán 11",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/094_Toan_11_To_hop_va_xac_suat_nang_cao.docx",
+      "grade": 11,
+      "topic": "to_hop_xac_suat_nang_cao_11",
+      "topic_name": "Tổ hợp và xác suất nâng cao",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/095_Toan_11_Xac_suat.docx",
+      "grade": 11,
+      "topic": "xac_suat_11",
+      "topic_name": "Xác suất",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/096_Toan_11_uong_thang_song_song_voi_mat_phang.docx",
+      "grade": 11,
+      "topic": "g11_geom_parallel_line_plane",
+      "topic_name": "Đường thẳng song song với mặt phẳng",
+      "similarity": 0.986
+    },
+    {
+      "file": "150_CHU_DE_WORD/097_Toan_11_uong_thang_vuong_goc_voi_mat_phang.docx",
+      "grade": 11,
+      "topic": "g11_geom_perpendicular_line_plane",
+      "topic_name": "Đường thẳng vuông góc với mặt phẳng",
+      "similarity": 0.986
+    },
+    {
+      "file": "150_CHU_DE_WORD/098_Toan_11_ao_ham.docx",
+      "grade": 11,
+      "topic": "dao_ham",
+      "topic_name": "Đạo hàm",
+      "similarity": 0.923
+    },
+    {
+      "file": "150_CHU_DE_WORD/099_Toan_11_inh_ly_ba_uong_vuong_goc.docx",
+      "grade": 11,
+      "topic": "g11_geom_three_perpendiculars",
+      "topic_name": "Định lý ba đường vuông góc",
+      "similarity": 0.96
+    },
+    {
+      "file": "150_CHU_DE_WORD/100_Toan_11_Ung_dung_ao_ham.docx",
+      "grade": 11,
+      "topic": "ung_dung_dao_ham_11",
+      "topic_name": "Ứng dụng đạo hàm",
+      "similarity": 0.968
+    },
+    {
+      "file": "150_CHU_DE_WORD/101_Toan_12_Bieu_dien_so_phuc.docx",
+      "grade": 12,
+      "topic": "bieu_dien_so_phuc",
+      "topic_name": "Biểu diễn số phức",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/102_Toan_12_Bai_toan_tham_so_hinh_hoc_Oxyz.docx",
+      "grade": 12,
+      "topic": "g12_geom_parameter_geometry",
+      "topic_name": "Bài toán tham số hình học Oxyz",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/103_Toan_12_Bai_toan_thuc_te_Toan_12.docx",
+      "grade": 12,
+      "topic": "bai_toan_thuc_te_12",
+      "topic_name": "Bài toán thực tế Toán 12",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/104_Toan_12_Bai_toan_toi_uu_hinh_hoc_khong_gian.docx",
+      "grade": 12,
+      "topic": "g12_geom_3d_optimization",
+      "topic_name": "Bài toán tối ưu hình học không gian",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/105_Toan_12_Bai_toan_tong_hop_THPT.docx",
+      "grade": 12,
+      "topic": "tong_hop_thpt",
+      "topic_name": "Bài toán tổng hợp THPT",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/106_Toan_12_Bat_phuong_trinh_logarit.docx",
+      "grade": 12,
+      "topic": "bpt_logarit",
+      "topic_name": "Bất phương trình logarit",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/107_Toan_12_Bat_phuong_trinh_mu.docx",
+      "grade": 12,
+      "topic": "bpt_mu",
+      "topic_name": "Bất phương trình mũ",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/108_Toan_12_Cac_so_ac_trung_o_xu_the_va_o_phan_tan.docx",
+      "grade": 12,
+      "topic": "thong_ke_12",
+      "topic_name": "Các số đặc trưng đo xu thế và độ phân tán",
+      "similarity": 0.962
+    },
+    {
+      "file": "150_CHU_DE_WORD/109_Toan_12_Cuc_tri.docx",
+      "grade": 12,
+      "topic": "cuc_tri",
+      "topic_name": "Cực trị",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/110_Toan_12_Cuc_tri_khoang_cach_trong_khong_gian_toa_o.docx",
+      "grade": 12,
+      "topic": "g12_geom_min_distance_3d",
+      "topic_name": "Cực trị khoảng cách trong không gian tọa độ",
+      "similarity": 0.988
+    },
+    {
+      "file": "150_CHU_DE_WORD/111_Toan_12_Dien_tich_xung_quanh_va_toan_phan_hinh_khoi.docx",
+      "grade": 12,
+      "topic": "g12_geom_solid_surface_area",
+      "topic_name": "Diện tích xung quanh và toàn phần hình khối",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/112_Toan_12_Giao_tuyen_mat_cau_va_mat_phang.docx",
+      "grade": 12,
+      "topic": "g12_geom_sphere_plane_intersection",
+      "topic_name": "Giao tuyến mặt cầu và mặt phẳng",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/113_Toan_12_Giao_iem_uong_thang_va_mat_phang.docx",
+      "grade": 12,
+      "topic": "g12_geom_line_plane_intersection",
+      "topic_name": "Giao điểm đường thẳng và mặt phẳng",
+      "similarity": 0.97
+    },
+    {
+      "file": "150_CHU_DE_WORD/114_Toan_12_Gia_tri_lon_nhat_va_nho_nhat.docx",
+      "grade": 12,
+      "topic": "gtln_gtnn",
+      "topic_name": "Giá trị lớn nhất và nhỏ nhất",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/115_Toan_12_Goc_giua_hai_mat_phang.docx",
+      "grade": 12,
+      "topic": "g12_geom_two_planes_angle",
+      "topic_name": "Góc giữa hai mặt phẳng",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/116_Toan_12_Goc_giua_uong_thang_va_mat_phang_Oxyz.docx",
+      "grade": 12,
+      "topic": "g12_geom_line_plane_angle",
+      "topic_name": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+      "similarity": 0.987
+    },
+    {
+      "file": "150_CHU_DE_WORD/117_Toan_12_Goc_va_khoang_cach_Oxyz.docx",
+      "grade": 12,
+      "topic": "goc_khoang_cach_oxyz",
+      "topic_name": "Góc và khoảng cách Oxyz",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/118_Toan_12_Ham_so_logarit.docx",
+      "grade": 12,
+      "topic": "ham_logarit",
+      "topic_name": "Hàm số logarit",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/119_Toan_12_Ham_so_mu.docx",
+      "grade": 12,
+      "topic": "ham_mu",
+      "topic_name": "Hàm số mũ",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/120_Toan_12_Hinh_hoc_khong_gian.docx",
+      "grade": 12,
+      "topic": "hinh_hoc_khong_gian",
+      "topic_name": "Hình học không gian",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/121_Toan_12_Hinh_hoc_so_phuc_va_quy_tich.docx",
+      "grade": 12,
+      "topic": "bieu_dien_so_phuc",
+      "topic_name": "Biểu diễn số phức",
+      "similarity": 0.65
+    },
+    {
+      "file": "150_CHU_DE_WORD/122_Toan_12_Hinh_khoi_va_the_tich_co_ban.docx",
+      "grade": 12,
+      "topic": "hinh_khoi_va_the_tich_co_ban_12",
+      "topic_name": "Hình khối và thể tích cơ bản",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/123_Toan_12_Khoang_cach_tu_iem_en_mat_phang.docx",
+      "grade": 12,
+      "topic": "g12_geom_point_plane_distance",
+      "topic_name": "Khoảng cách từ điểm đến mặt phẳng",
+      "similarity": 0.969
+    },
+    {
+      "file": "150_CHU_DE_WORD/124_Toan_12_Khao_sat_va_ve_o_thi_ham_so.docx",
+      "grade": 12,
+      "topic": "khao_sat_ham_so",
+      "topic_name": "Khảo sát và vẽ đồ thị hàm số",
+      "similarity": 0.982
+    },
+    {
+      "file": "150_CHU_DE_WORD/125_Toan_12_Mat_cau.docx",
+      "grade": 12,
+      "topic": "mat_cau",
+      "topic_name": "Mặt cầu",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/126_Toan_12_Mat_phang_tiep_xuc_voi_mat_cau.docx",
+      "grade": 12,
+      "topic": "g12_geom_sphere_tangent_plane",
+      "topic_name": "Mặt phẳng tiếp xúc với mặt cầu",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/127_Toan_12_Mat_phang_trong_Oxyz.docx",
+      "grade": 12,
+      "topic": "mat_phang_oxyz",
+      "topic_name": "Mặt phẳng trong Oxyz",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/128_Toan_12_Nguyen_ham_va_tich_phan.docx",
+      "grade": 12,
+      "topic": "nguyen_ham_tich_phan",
+      "topic_name": "Nguyên hàm và tích phân",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/129_Toan_12_Phuong_trinh_logarit.docx",
+      "grade": 12,
+      "topic": "pt_logarit",
+      "topic_name": "Phương trình logarit",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/130_Toan_12_Phuong_trinh_mu.docx",
+      "grade": 12,
+      "topic": "pt_mu",
+      "topic_name": "Phương trình mũ",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/131_Toan_12_Phuong_trinh_mat_cau_va_tam_ban_kinh.docx",
+      "grade": 12,
+      "topic": "g12_geom_sphere_equation",
+      "topic_name": "Phương trình mặt cầu và tâm bán kính",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/132_Toan_12_Phuong_trinh_mat_phang.docx",
+      "grade": 12,
+      "topic": "g12_geom_plane_equation",
+      "topic_name": "Phương trình mặt phẳng",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/133_Toan_12_Phuong_trinh_so_phuc.docx",
+      "grade": 12,
+      "topic": "pt_so_phuc",
+      "topic_name": "Phương trình số phức",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/134_Toan_12_Phuong_trinh_uong_thang_trong_Oxyz.docx",
+      "grade": 12,
+      "topic": "g12_geom_line_equation_3d",
+      "topic_name": "Phương trình đường thẳng trong Oxyz",
+      "similarity": 0.986
+    },
+    {
+      "file": "150_CHU_DE_WORD/135_Toan_12_So_phuc.docx",
+      "grade": 12,
+      "topic": "so_phuc",
+      "topic_name": "Số phức",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/136_Toan_12_The_tich_hinh_hoc_khong_gian.docx",
+      "grade": 12,
+      "topic": "the_tich_khong_gian",
+      "topic_name": "Thể tích hình học không gian",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/137_Toan_12_The_tich_khoi_tron_xoay_va_mo_hinh_thuc_te.docx",
+      "grade": 12,
+      "topic": "ung_dung_tich_phan",
+      "topic_name": "Ứng dụng tích phân",
+      "similarity": 0.65
+    },
+    {
+      "file": "150_CHU_DE_WORD/138_Toan_12_Tiep_tuyen.docx",
+      "grade": 12,
+      "topic": "tiep_tuyen",
+      "topic_name": "Tiếp tuyến",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/139_Toan_12_Tiem_can.docx",
+      "grade": 12,
+      "topic": "tien_can",
+      "topic_name": "Tiệm cận",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/140_Toan_12_Tinh_on_ieu.docx",
+      "grade": 12,
+      "topic": "tinh_don_dieu",
+      "topic_name": "Tính đơn điệu",
+      "similarity": 0.917
+    },
+    {
+      "file": "150_CHU_DE_WORD/141_Toan_12_Tuong_giao_o_thi.docx",
+      "grade": 12,
+      "topic": "tuong_giao",
+      "topic_name": "Tương giao đồ thị",
+      "similarity": 0.97
+    },
+    {
+      "file": "150_CHU_DE_WORD/142_Toan_12_Toa_o_trong_khong_gian.docx",
+      "grade": 12,
+      "topic": "toa_do_khong_gian",
+      "topic_name": "Tọa độ trong không gian",
+      "similarity": 0.978
+    },
+    {
+      "file": "150_CHU_DE_WORD/143_Toan_12_Toi_uu_va_cuc_tri_bang_tich_phan.docx",
+      "grade": 12,
+      "topic": "ung_dung_tich_phan",
+      "topic_name": "Ứng dụng tích phân",
+      "similarity": 0.65
+    },
+    {
+      "file": "150_CHU_DE_WORD/144_Toan_12_Vecto_va_o_dai_trong_khong_gian_Oxyz.docx",
+      "grade": 12,
+      "topic": "g12_geom_vectors_3d",
+      "topic_name": "Vectơ và độ dài trong không gian Oxyz",
+      "similarity": 0.986
+    },
+    {
+      "file": "150_CHU_DE_WORD/145_Toan_12_Van_dung_toa_o_Oxyz.docx",
+      "grade": 12,
+      "topic": "hinh_hoc_oxyz_van_dung_12",
+      "topic_name": "Vận dụng tọa độ Oxyz",
+      "similarity": 0.974
+    },
+    {
+      "file": "150_CHU_DE_WORD/146_Toan_12_Vi_tri_tuong_oi_cua_hai_uong_thang_trong_Oxyz.docx",
+      "grade": 12,
+      "topic": "g12_geom_skew_line_relation",
+      "topic_name": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+      "similarity": 0.978
+    },
+    {
+      "file": "150_CHU_DE_WORD/147_Toan_12_Xac_suat_va_bien_ngau_nhien.docx",
+      "grade": 12,
+      "topic": "xac_suat_12",
+      "topic_name": "Xác suất và biến ngẫu nhiên",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/148_Toan_12_uong_thang_trong_Oxyz.docx",
+      "grade": 12,
+      "topic": "duong_thang_oxyz",
+      "topic_name": "Đường thẳng trong Oxyz",
+      "similarity": 0.977
+    },
+    {
+      "file": "150_CHU_DE_WORD/149_Toan_12_Ung_dung_tich_phan.docx",
+      "grade": 12,
+      "topic": "ung_dung_tich_phan",
+      "topic_name": "Ứng dụng tích phân",
+      "similarity": 1.0
+    },
+    {
+      "file": "150_CHU_DE_WORD/150_Toan_12_Ung_dung_ao_ham.docx",
+      "grade": 12,
+      "topic": "ung_dung_dao_ham",
+      "topic_name": "Ứng dụng đạo hàm",
+      "similarity": 0.968
+    }
+  ],
+  "status": "candidate_unverified; full mathematical validation not completed",
+  "old_candidates_backup": 4000
+}

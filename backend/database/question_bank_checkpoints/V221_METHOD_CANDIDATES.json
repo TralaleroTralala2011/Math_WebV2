@@ -1,0 +1,157 @@
+{
+  "version": "V221",
+  "base": "V220",
+  "group_count": 21,
+  "groups": {
+    "v221_divisor_sum_two_prime_powers": {
+      "grade": 10,
+      "topic": "g10_combinatorics_olympiad",
+      "method_signature": "multiplicative_divisor_sum_geometric_products",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_count_squarefree_divisors": {
+      "grade": 10,
+      "topic": "g10_combinatorics_olympiad",
+      "method_signature": "select_subset_distinct_prime_divisor",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_diophantine_difference_of_squares": {
+      "grade": 10,
+      "topic": "phuong_trinh",
+      "method_signature": "factor_difference_of_squares_same_parity",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_cyclic_quadrilateral_opposite_angles": {
+      "grade": 10,
+      "topic": "g10_geom_circle_angles",
+      "method_signature": "opposite_angles_cyclic_quadrilateral_supplementary",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_kite_area_perpendicular_diagonals": {
+      "grade": 10,
+      "topic": "g10_geom_quadrilaterals_properties",
+      "method_signature": "diagonal_half_product_kite_area",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_pick_lattice_triangle_interior": {
+      "grade": 10,
+      "topic": "g10_geom_coordinate_distance_midpoint",
+      "method_signature": "picks_theorem_lattice_right_triangle_interior_count",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_circumradius_sine_rule": {
+      "grade": 10,
+      "topic": "he_thuc_luong",
+      "method_signature": "extended_sine_rule_triangle_circumradius",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_sum_first_n_cubes": {
+      "grade": 11,
+      "topic": "quy_nap_toan_hoc_11",
+      "method_signature": "induction_sum_cubes_square_triangular_sum",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_wait_two_consecutive_successes": {
+      "grade": 11,
+      "topic": "g11_conditional_probability_models",
+      "method_signature": "two_state_markov_wait_for_run",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_total_variance_mixture": {
+      "grade": 11,
+      "topic": "g11_conditional_probability_models",
+      "method_signature": "law_total_variance_with_between_group_means",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_cosine_arithmetic_series_period_six": {
+      "grade": 11,
+      "topic": "ham_so_luong_giac",
+      "method_signature": "trig_periodic_values_sum_cos_multiples_pi_3",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_alternating_even_square_sum": {
+      "grade": 11,
+      "topic": "day_so",
+      "method_signature": "pair_alternating_square_terms",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_fibonacci_partial_sum_identity": {
+      "grade": 11,
+      "topic": "g11_sequences_advanced",
+      "method_signature": "fibonacci_telescoping_via_recurrence",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_permutations_exact_two_cycles": {
+      "grade": 11,
+      "topic": "g11_binomial_advanced",
+      "method_signature": "unsigned_stirling_first_kind_two_cycles",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_radical_plane_two_spheres": {
+      "grade": 12,
+      "topic": "g12_geom_sphere_plane_intersection",
+      "method_signature": "subtract_sphere_equations_radical_plane",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_intersection_line_direction_cross_normals": {
+      "grade": 12,
+      "topic": "g12_geom_line_plane_intersection",
+      "method_signature": "cross_product_normals_intersection_direction",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_optimal_power_product_log_derivative": {
+      "grade": 12,
+      "topic": "g12_integral_optimization",
+      "method_signature": "log_derivative_beta_shape_maximum_location",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_coupon_collector_expected_completion_time": {
+      "grade": 12,
+      "topic": "xac_suat_12",
+      "method_signature": "coupon_collector_harmonic_stage_wait",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_binomial_even_success_count": {
+      "grade": 12,
+      "topic": "xac_suat_12",
+      "method_signature": "binomial_parity_root_of_unity_filter",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_regular_octahedron_volume_squared": {
+      "grade": 12,
+      "topic": "hinh_khoi_va_the_tich_co_ban_12",
+      "method_signature": "decompose_octahedron_two_square_pyramids",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v221_lattice_points_on_integer_sphere": {
+      "grade": 12,
+      "topic": "g12_geom_sphere_equation",
+      "method_signature": "sum_three_squares_integer_lattice_enumeration",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    }
+  },
+  "certified_independent_forms": 0,
+  "semantic_review_required": true,
+  "definition": "One group is a method candidate, not a certified independent type; changing numeric data does not count as a new type."
+}

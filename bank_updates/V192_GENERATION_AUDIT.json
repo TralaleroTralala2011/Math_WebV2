@@ -1,0 +1,25 @@
+{
+  "version": "V192",
+  "source": "V191_FULL_WEB",
+  "catalog_count": 150,
+  "new_candidate_families": 150,
+  "new_oracle_checked_questions": 1500,
+  "new_topics_expanded": 150,
+  "question_formats": {
+    "multiple_choice": 1050,
+    "short_answer": 300,
+    "true_false": 150
+  },
+  "grades": {
+    "10": 490,
+    "11": 510,
+    "12": 500
+  },
+  "exact_duplicate_new_vs_prior": 0,
+  "numeric_pattern_overlaps_vs_prior": 0,
+  "numeric_pattern_overlap_ids": [],
+  "new_independent_types_globally_certified": 0,
+  "production_questions_imported": 0,
+  "method_spec_exact_name_collision_vs_v191": 0,
+  "test_scope": "exact arithmetic oracle, 7/2/1 formatted per family, application validation and grader, exact dedup; semantic novelty NOT certified"
+}

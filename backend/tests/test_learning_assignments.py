@@ -16,6 +16,7 @@ def learning_client(tmp_path, monkeypatch):
     monkeypatch.setattr(database_module, "DATABASE_PATH", db)
     database_module.init_database()
     init_matchmaking_tables()
+    monkeypatch.setattr(admin_routes, "BOOTSTRAP_PASSWORD", "TestOnlyAdminPass2026")
     admin_routes.ensure_admin_schema_and_account()
     with TestClient(app) as client:
         yield client
@@ -27,7 +28,7 @@ def test_assignment_flow_and_personalized_path(learning_client, monkeypatch):
     assert registered.status_code == 200, registered.text
     learner = registered.json()["user"]
     learner_headers = {"Authorization": f"Bearer {registered.json()['token']}"}
-    admin_login = client.post("/api/auth/login", json={"username": "admin19022011", "password": "adminsitinh"})
+    admin_login = client.post("/api/auth/login", json={"username": "admin19022011", "password": "TestOnlyAdminPass2026"})
     assert admin_login.status_code == 200, admin_login.text
     admin_headers = {"Authorization": f"Bearer {admin_login.json()['token']}"}
     monkeypatch.setattr(ai_service, "generate_set", lambda *args, **kwargs: {"questions": [{"question": "Tính 2 + 2", "options": ["A. 3", "B. 4", "C. 5", "D. 6"], "answer": "B", "solution": "2 + 2 = 4", "question_type": "multiple_choice"}]})

@@ -1,0 +1,1408 @@
+{
+  "base": "MATH_WEB_V28_CLASSIC_V23_BATTLE_QA.zip",
+  "source": "Question_Bank_V254 (6).zip",
+  "source_sha256": "c94f0187844a13d6c4fecd56e2328efc4f1f2fc8e6dd52eccd49efe8c121156e",
+  "replaces_active_v254_4000_json": true,
+  "old_active_4000_sha256": "6f356f9bede0d79b75bd75a314050dc8bf202a3ccf53297c87dc377cfc26a6a4",
+  "old_active_4000_backup": "backend/app/ai/storage/v254_previous_4000_backup.json",
+  "records_imported": 83298,
+  "source_topics": 150,
+  "mapped_source_topics": 147,
+  "web_topics": 150,
+  "web_topics_with_new_records": 147,
+  "web_topics_without_new_records": [
+    {
+      "id": "he_thuc_luong",
+      "title": "Hệ thức lượng trong tam giác",
+      "grade": 10
+    },
+    {
+      "id": "he_thuc_luong_van_dung_10",
+      "title": "Hệ thức lượng trong tam giác",
+      "grade": 10
+    },
+    {
+      "id": "ham_so_luong_giac_day_du",
+      "title": "Hàm số lượng giác",
+      "grade": 11
+    }
+  ],
+  "forms": {
+    "multiple_choice": 41128,
+    "short_answer": 42170
+  },
+  "skipped": {
+    "imported": 81576,
+    "duplicate_question": 577,
+    "quarantined_unmapped_topic": 3414,
+    "missing_id": 98,
+    "manual_review_approved_source_topic_mappings": [
+      29,
+      46,
+      99
+    ]
+  },
+  "source_grade_distribution": {
+    "10": 50,
+    "11": 50,
+    "12": 50
+  },
+  "web_grade_distribution": {
+    "10": 49,
+    "11": 51,
+    "12": 50
+  },
+  "source_topic_mapping": [
+    {
+      "index": 1,
+      "source_grade": 10,
+      "source_title": "BÀI TOÁN THỰC TẾ TOÁN 10 · CHỦ ĐỀ 001",
+      "destination": "bai_toan_thuc_te_10",
+      "destination_title": "Bài toán thực tế Toán 10",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 2,
+      "source_grade": 10,
+      "source_title": "BÀI TOÁN TỔNG HỢP ĐƯỜNG THẲNG VÀ ĐƯỜNG TRÒN TỌA ĐỘ",
+      "destination": "g10_geom_coordinate_circle_line",
+      "destination_title": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 3,
+      "source_grade": 10,
+      "source_title": "003_Toan_10_Bat_phuong_trinh_va_he_bat_phuong_trinh",
+      "destination": "bat_phuong_trinh",
+      "destination_title": "Bất phương trình và hệ bất phương trình",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 4,
+      "source_grade": 10,
+      "source_title": "Bat ang thuc va cuc tri trong tam giac",
+      "destination": "g10_geom_triangle_inequalities",
+      "destination_title": "Bất đẳng thức và cực trị trong tam giác",
+      "score": 0.987,
+      "status": "mapped"
+    },
+    {
+      "index": 5,
+      "source_grade": 10,
+      "source_title": "Bat ang thuc ai so va cuc tri nang cao",
+      "destination": "g10_advanced_inequalities",
+      "destination_title": "Bất đẳng thức đại số và cực trị nâng cao",
+      "score": 0.974,
+      "status": "mapped"
+    },
+    {
+      "index": 6,
+      "source_grade": 10,
+      "source_title": "Chung minh hinh hoc bang vecto",
+      "destination": "g10_geom_vector_proofs",
+      "destination_title": "Chứng minh hình học bằng vectơ",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 7,
+      "source_grade": 10,
+      "source_title": "Chung minh hinh hoc va bai toan tong hop",
+      "destination": "chung_minh_hinh_hoc_10",
+      "destination_title": "Chứng minh hình học và bài toán tổng hợp",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 8,
+      "source_grade": 10,
+      "source_title": "Cac truong hop bang nhau cua tam giac",
+      "destination": "g10_geom_triangle_congruence",
+      "destination_title": "Các trường hợp bằng nhau của tam giác",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 9,
+      "source_grade": 10,
+      "source_title": "Day cung cung va khoang cach en tam",
+      "destination": "g10_geom_circle_chords_arcs",
+      "destination_title": "Dây cung, cung và khoảng cách đến tâm",
+      "score": 0.986,
+      "status": "mapped"
+    },
+    {
+      "index": 10,
+      "source_grade": 10,
+      "source_title": "010_Toan_10_Giao_iem_va_vi_tri_tuong_oi_cua_hai_uong_thang",
+      "destination": "g10_geom_line_intersections",
+      "destination_title": "Giao điểm và vị trí tương đối của hai đường thẳng",
+      "score": 0.86,
+      "status": "mapped"
+    },
+    {
+      "index": 11,
+      "source_grade": 10,
+      "source_title": "Goc noi tiep va goc o tam nang cao",
+      "destination": "g10_geom_circle_angles",
+      "destination_title": "Góc nội tiếp và góc ở tâm nâng cao",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 12,
+      "source_grade": 10,
+      "source_title": "Goc tao boi hai uong thang va uong cat",
+      "destination": "g10_geom_angles_parallel",
+      "destination_title": "Góc tạo bởi hai đường thẳng và đường cắt",
+      "score": 0.974,
+      "status": "mapped"
+    },
+    {
+      "index": 13,
+      "source_grade": 10,
+      "source_title": "Hoan vi chinh hop to hop",
+      "destination": "hoan_vi_chinh_hop_to_hop",
+      "destination_title": "Hoán vị, chỉnh hợp, tổ hợp",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 14,
+      "source_grade": 10,
+      "source_title": "Ham so",
+      "destination": "ham_so",
+      "destination_title": "Hàm số",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 15,
+      "source_grade": 10,
+      "source_title": "Ham so bac hai va parabol",
+      "destination": "ham_so_bac_hai",
+      "destination_title": "Hàm số bậc hai và parabol",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 16,
+      "source_grade": 10,
+      "source_title": "Ham so bac nhat",
+      "destination": "ham_so_bac_nhat",
+      "destination_title": "Hàm số bậc nhất",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 17,
+      "source_grade": 10,
+      "source_title": "Hinh hoc co ban goc canh va dien tich",
+      "destination": "hinh_hoc_co_ban_10",
+      "destination_title": "Hình học cơ bản: góc, cạnh và diện tích",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 18,
+      "source_grade": 10,
+      "source_title": "Hinh hoc phang",
+      "destination": "hinh_hoc_10",
+      "destination_title": "Hình học phẳng",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 19,
+      "source_grade": 10,
+      "source_title": "He bat phuong trinh",
+      "destination": "he_bat_phuong_trinh",
+      "destination_title": "Hệ bất phương trình",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 20,
+      "source_grade": 10,
+      "source_title": "He phuong trinh",
+      "destination": "he_phuong_trinh",
+      "destination_title": "Hệ phương trình",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 21,
+      "source_grade": 10,
+      "source_title": "He phuong trinh oi xung va hoan vi",
+      "destination": null,
+      "destination_title": null,
+      "score": 0.581,
+      "status": "quarantined_low_confidence"
+    },
+    {
+      "index": 22,
+      "source_grade": 10,
+      "source_title": "He thuc luong trong tam giac",
+      "destination": "he_thuc_luong_tam_giac",
+      "destination_title": "Hệ thức lượng trong tam giác",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 23,
+      "source_grade": 10,
+      "source_title": "TOÁN 10 · MỆNH ĐỀ · CHỦ ĐỀ 023",
+      "destination": "menh_de",
+      "destination_title": "Mệnh đề",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 24,
+      "source_grade": 10,
+      "source_title": "Menh e va tap hop",
+      "destination": "menh_de_tap_hop",
+      "destination_title": "Mệnh đề và tập hợp",
+      "score": 0.971,
+      "status": "mapped"
+    },
+    {
+      "index": 25,
+      "source_grade": 10,
+      "source_title": "TOÁN 10 · NHỊ THỨC NEWTON · CHỦ ĐỀ 025",
+      "destination": "nhi_thuc_newton",
+      "destination_title": "Nhị thức Newton",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 26,
+      "source_grade": 10,
+      "source_title": "Phuong trinh",
+      "destination": "g10_symmetric_systems",
+      "destination_title": "Hệ phương trình đối xứng và hoán vị",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 27,
+      "source_grade": 10,
+      "source_title": "TOÁN 10 · PHƯƠNG TRÌNH CHỨA CĂN THỨC NÂNG CAO · CHỦ ĐỀ 027",
+      "destination": "g10_radical_equations_advanced",
+      "destination_title": "Phương trình chứa căn thức nâng cao",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 28,
+      "source_grade": 10,
+      "source_title": "Phuong trinh va he phuong trinh",
+      "destination": "phuong_trinh_he",
+      "destination_title": "Phương trình và hệ phương trình",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 29,
+      "source_grade": 10,
+      "source_title": "029_Toan_10_Quy_tac_em",
+      "destination": "quy_tac_dem",
+      "destination_title": "Quy tắc đếm",
+      "score": 1.0,
+      "status": "mapped_verified_filename"
+    },
+    {
+      "index": 30,
+      "source_grade": 10,
+      "source_title": "Quy tich iem trong mat phang",
+      "destination": "g10_geom_locus",
+      "destination_title": "Quỹ tích điểm trong mặt phẳng",
+      "score": 0.982,
+      "status": "mapped"
+    },
+    {
+      "index": 31,
+      "source_grade": 10,
+      "source_title": "Tam giac va tu giac co ban",
+      "destination": "tam_giac_tu_giac_10",
+      "destination_title": "Tam giác và tứ giác cơ bản",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 32,
+      "source_grade": 10,
+      "source_title": "Thong ke",
+      "destination": "thong_ke",
+      "destination_title": "Thống kê",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 33,
+      "source_grade": 10,
+      "source_title": "Tiep tuyen va day cung cua uong tron",
+      "destination": "g10_geom_circle_tangent_chord",
+      "destination_title": "Tiếp tuyến và dây cung của đường tròn",
+      "score": 0.986,
+      "status": "mapped"
+    },
+    {
+      "index": 34,
+      "source_grade": 10,
+      "source_title": "Trung iem va khoang cach trong toa o phang",
+      "destination": "g10_geom_coordinate_distance_midpoint",
+      "destination_title": "Trung điểm và khoảng cách trong tọa độ phẳng",
+      "score": 0.977,
+      "status": "mapped"
+    },
+    {
+      "index": 35,
+      "source_grade": 10,
+      "source_title": "Tinh chat hinh binh hanh va hinh thoi",
+      "destination": "g10_geom_quadrilaterals_properties",
+      "destination_title": "Tính chất hình bình hành và hình thoi",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 36,
+      "source_grade": 10,
+      "source_title": "TOÁN 10 · TẬP HỢP VÀ CÁC PHÉP TOÁN · CHỦ ĐỀ 036",
+      "destination": "tap_hop",
+      "destination_title": "Tập hợp và các phép toán",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 37,
+      "source_grade": 10,
+      "source_title": "Ti so dien tich tam giac",
+      "destination": "g10_geom_triangle_area_ratio",
+      "destination_title": "Tỉ số diện tích tam giác",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 38,
+      "source_grade": 10,
+      "source_title": "Toa o trong mat phang",
+      "destination": "toa_do_phang",
+      "destination_title": "Tọa độ trong mặt phẳng",
+      "score": 0.977,
+      "status": "mapped"
+    },
+    {
+      "index": 39,
+      "source_grade": 10,
+      "source_title": "Toa o va uong thang trong mat phang",
+      "destination": "toa_do_hinh_hoc_10",
+      "destination_title": "Tọa độ và đường thẳng trong mặt phẳng",
+      "score": 0.972,
+      "status": "mapped"
+    },
+    {
+      "index": 40,
+      "source_grade": 10,
+      "source_title": "TOÁN 10 · TỔ HỢP VÀ NGUYÊN LÝ DIRICHLET NÂNG CAO · CHỦ ĐỀ 040",
+      "destination": "g10_combinatorics_olympiad",
+      "destination_title": "Tổ hợp và nguyên lý Dirichlet nâng cao",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 41,
+      "source_grade": 10,
+      "source_title": "Vecto",
+      "destination": "vector",
+      "destination_title": "Vectơ",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 42,
+      "source_grade": 10,
+      "source_title": "Xac suat",
+      "destination": "xac_suat",
+      "destination_title": "Xác suất",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 43,
+      "source_grade": 10,
+      "source_title": "TOÁN 10 · CHIA DƯ · CHỦ ĐỀ 043",
+      "destination": null,
+      "destination_title": null,
+      "score": 0.444,
+      "status": "quarantined_low_confidence"
+    },
+    {
+      "index": 45,
+      "source_grade": 10,
+      "source_title": "TOÁN 10 · PHƯƠNG TRÌNH BẬC HAI · CHỦ ĐỀ 045",
+      "destination": "phuong_trinh",
+      "destination_title": "Phương trình",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 46,
+      "source_grade": 10,
+      "source_title": "046 · Toan 10 uong thang",
+      "destination": "duong_thang",
+      "destination_title": "Đường thẳng",
+      "score": 1.0,
+      "status": "mapped_verified_filename"
+    },
+    {
+      "index": 47,
+      "source_grade": 10,
+      "source_title": "uong trung tuyen phan giac va uong cao",
+      "destination": "g10_geom_special_lines",
+      "destination_title": "Đường trung tuyến, phân giác và đường cao",
+      "score": 0.962,
+      "status": "mapped"
+    },
+    {
+      "index": 48,
+      "source_grade": 10,
+      "source_title": "uong tron",
+      "destination": "duong_tron",
+      "destination_title": "Đường tròn",
+      "score": 0.947,
+      "status": "mapped"
+    },
+    {
+      "index": 49,
+      "source_grade": 10,
+      "source_title": "uong tron va cac goc co ban",
+      "destination": "duong_tron_co_ban_10",
+      "destination_title": "Đường tròn và các góc cơ bản",
+      "score": 0.982,
+      "status": "mapped"
+    },
+    {
+      "index": 50,
+      "source_grade": 10,
+      "source_title": "TOÁN 10 · ĐỊNH LÝ THALES VÀ TAM GIÁC ĐỒNG DẠNG · CHỦ ĐỀ 050",
+      "destination": "g10_geom_thales_similarity",
+      "destination_title": "Định lý Thales và tam giác đồng dạng",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 44,
+      "source_grade": 10,
+      "source_title": "TOÁN 10 · CHIA HẾT · CHỦ ĐỀ 044",
+      "destination": null,
+      "score": null,
+      "status": "quarantined_no_available_grade_topic"
+    },
+    {
+      "index": 51,
+      "source_grade": 11,
+      "source_title": "Bien co oc lap va xac suat co ieu kien",
+      "destination": "bien_co_doc_lap_11",
+      "destination_title": "Biến cố độc lập và xác suất có điều kiện",
+      "score": 0.974,
+      "status": "mapped"
+    },
+    {
+      "index": 52,
+      "source_grade": 11,
+      "source_title": "Bai toan thuc te Toan 11",
+      "destination": "bai_toan_thuc_te_11",
+      "destination_title": "Bài toán thực tế Toán 11",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 53,
+      "source_grade": 11,
+      "source_title": "053 · Toan 11 Bai toan thuc te tong hop Toan 11",
+      "destination": "bai_toan_thuc_te_tong_hop_11",
+      "destination_title": "Bài toán thực tế tổng hợp Toán 11",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 54,
+      "source_grade": 11,
+      "source_title": "Chung minh tong hop song song va vuong goc",
+      "destination": "g11_geom_space_proof",
+      "destination_title": "Chứng minh tổng hợp song song và vuông góc",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 55,
+      "source_grade": 11,
+      "source_title": "TOÁN 11 · CÔNG THỨC LƯỢNG GIÁC · CHỦ ĐỀ 055",
+      "destination": "cong_thuc_luong_giac",
+      "destination_title": "Công thức lượng giác",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 56,
+      "source_grade": 11,
+      "source_title": "TOÁN 11 · CẤP SỐ CỘNG · CHỦ ĐỀ 056",
+      "destination": "cap_so_cong",
+      "destination_title": "Cấp số cộng",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 57,
+      "source_grade": 11,
+      "source_title": "TOÁN 11 · CẤP SỐ NHÂN · CHỦ ĐỀ 057",
+      "destination": "cap_so_nhan",
+      "destination_title": "Cấp số nhân",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 58,
+      "source_grade": 11,
+      "source_title": "Day so",
+      "destination": "day_so",
+      "destination_title": "Dãy số",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 59,
+      "source_grade": 11,
+      "source_title": "Day so",
+      "destination": "day_so_tong_quat",
+      "destination_title": "Dãy số",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 60,
+      "source_grade": 11,
+      "source_title": "TOÁN 11 · DÃY SỐ TRUY HỒI · CHỦ ĐỀ 060",
+      "destination": "day_so_truy_hoi_11",
+      "destination_title": "Dãy số truy hồi",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 61,
+      "source_grade": 11,
+      "source_title": "Day so truy hoi va bai toan cuc tri",
+      "destination": "g11_sequences_advanced",
+      "destination_title": "Dãy số truy hồi và bài toán cực trị",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 62,
+      "source_grade": 11,
+      "source_title": "062 · Toan 11 Dung thiet dien cua hinh chop va lang tru",
+      "destination": "g11_geom_section_construction",
+      "destination_title": "Dựng thiết diện của hình chóp và lăng trụ",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 63,
+      "source_grade": 11,
+      "source_title": "Gia tri luong giac",
+      "destination": "gia_tri_luong_giac",
+      "destination_title": "Giá trị lượng giác",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 64,
+      "source_grade": 11,
+      "source_title": "TOÁN 11 · GIỚI HẠN · CHỦ ĐỀ 064",
+      "destination": "gioi_han",
+      "destination_title": "Giới hạn",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 65,
+      "source_grade": 11,
+      "source_title": "Gioi han ham so",
+      "destination": "gioi_han_ham_so",
+      "destination_title": "Giới hạn hàm số",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 66,
+      "source_grade": 11,
+      "source_title": "Goc giua uong thang va mat phang",
+      "destination": "g11_geom_dihedral_angles",
+      "destination_title": "Góc giữa đường thẳng và mặt phẳng",
+      "score": 0.985,
+      "status": "mapped"
+    },
+    {
+      "index": 67,
+      "source_grade": 11,
+      "source_title": "067 · Toan 11 Goc va khoang cach trong khong gian",
+      "destination": "goc_khoang_cach_11",
+      "destination_title": "Góc và khoảng cách trong không gian",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 68,
+      "source_grade": 11,
+      "source_title": "068 · Toan 11 Hai mat phang song song",
+      "destination": "g11_geom_parallel_planes",
+      "destination_title": "Hai mặt phẳng song song",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 69,
+      "source_grade": 11,
+      "source_title": "TOÁN 11 · HÀM SỐ LIÊN TỤC · CHỦ ĐỀ 069",
+      "destination": "ham_so_lien_tuc",
+      "destination_title": "Hàm số liên tục",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 70,
+      "source_grade": 11,
+      "source_title": "TOÁN 11 · HÀM SỐ LƯỢNG GIÁC · CHỦ ĐỀ 070",
+      "destination": "ham_so_luong_giac",
+      "destination_title": "Hàm số lượng giác",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 71,
+      "source_grade": 11,
+      "source_title": "Hop thanh cac phep bien hinh",
+      "destination": "g11_geom_transform_composition",
+      "destination_title": "Hợp thành các phép biến hình",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 72,
+      "source_grade": 11,
+      "source_title": "072 · Toan 11 Khoang cach giua hai uong thang cheo nhau",
+      "destination": "g11_geom_skew_lines_distance",
+      "destination_title": "Khoảng cách giữa hai đường thẳng chéo nhau",
+      "score": 0.886,
+      "status": "mapped"
+    },
+    {
+      "index": 73,
+      "source_grade": 11,
+      "source_title": "Mo hinh xac suat co ieu kien",
+      "destination": "g11_conditional_probability_models",
+      "destination_title": "Mô hình xác suất có điều kiện",
+      "score": 0.982,
+      "status": "mapped"
+    },
+    {
+      "index": 74,
+      "source_grade": 11,
+      "source_title": "074 · Toan 11 Mat ben canh ben va ay cua lang tru hinh chop",
+      "destination": "g11_geom_prism_pyramid_sections",
+      "destination_title": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+      "score": 0.912,
+      "status": "mapped"
+    },
+    {
+      "index": 75,
+      "source_grade": 11,
+      "source_title": "075 · Toan 11 Nhan biet hinh hoc khong gian",
+      "destination": "nhan_biet_hinh_khong_gian_11",
+      "destination_title": "Nhận biết hình học không gian",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 76,
+      "source_grade": 11,
+      "source_title": "076 · Toan 11 Nhan biet uong thang va mat phang trong khong gian",
+      "destination": "g11_geom_space_lines_planes",
+      "destination_title": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+      "score": 0.9,
+      "status": "mapped"
+    },
+    {
+      "index": 77,
+      "source_grade": 11,
+      "source_title": "Nhi thuc Newton va he so to hop nang cao",
+      "destination": "g11_binomial_advanced",
+      "destination_title": "Nhị thức Newton và hệ số tổ hợp nâng cao",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 78,
+      "source_grade": 11,
+      "source_title": "Phep bien hinh co ban",
+      "destination": "phep_bien_hinh_co_ban_11",
+      "destination_title": "Phép biến hình cơ bản",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 79,
+      "source_grade": 11,
+      "source_title": "Phep bien hinh trong mat phang",
+      "destination": "phep_bien_hinh_11",
+      "destination_title": "Phép biến hình trong mặt phẳng",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 80,
+      "source_grade": 11,
+      "source_title": "Phep quay va phep vi tu",
+      "destination": "g11_geom_rotation_homothety",
+      "destination_title": "Phép quay và phép vị tự",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 81,
+      "source_grade": 11,
+      "source_title": "081 · Toan 11 Phep tinh tien va anh cua hinh",
+      "destination": "g11_geom_transform_translation",
+      "destination_title": "Phép tịnh tiến và ảnh của hình",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 82,
+      "source_grade": 11,
+      "source_title": "Phep oi xung truc",
+      "destination": "g11_geom_transform_reflection",
+      "destination_title": "Phép đối xứng trục",
+      "score": 0.971,
+      "status": "mapped"
+    },
+    {
+      "index": 83,
+      "source_grade": 11,
+      "source_title": "TOÁN 11 · PHƯƠNG TRÌNH LƯỢNG GIÁC · CHỦ ĐỀ 083",
+      "destination": "phuong_trinh_luong_giac",
+      "destination_title": "Phương trình lượng giác",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 84,
+      "source_grade": 11,
+      "source_title": "Phuong trinh luong giac",
+      "destination": "phuong_trinh_luong_giac_day_du",
+      "destination_title": "Phương trình lượng giác",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 85,
+      "source_grade": 11,
+      "source_title": "085 · Toan 11 Phuong trinh luong giac nang cao",
+      "destination": "g11_advanced_trig_equations",
+      "destination_title": "Phương trình lượng giác nâng cao",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 86,
+      "source_grade": 11,
+      "source_title": "086 · Toan 11 Quan he song song trong khong gian",
+      "destination": "song_song_khong_gian",
+      "destination_title": "Quan hệ song song trong không gian",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 87,
+      "source_grade": 11,
+      "source_title": "087 · Toan 11 Quan he song song va vuong goc trong khong gian",
+      "destination": "hinh_khong_gian",
+      "destination_title": "Quan hệ song song và vuông góc trong không gian",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 88,
+      "source_grade": 11,
+      "source_title": "088 · Toan 11 Quan he vuong goc trong khong gian",
+      "destination": "vuong_goc_khong_gian",
+      "destination_title": "Quan hệ vuông góc trong không gian",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 89,
+      "source_grade": 11,
+      "source_title": "TOÁN 11 · QUY NẠP TOÁN HỌC · CHỦ ĐỀ 089",
+      "destination": "quy_nap_toan_hoc_11",
+      "destination_title": "Quy nạp toán học",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 90,
+      "source_grade": 11,
+      "source_title": "TOÁN 11 · QUY TẮC ĐẠO HÀM · CHỦ ĐỀ 090",
+      "destination": "dao_ham_quy_tac",
+      "destination_title": "Quy tắc đạo hàm",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 91,
+      "source_grade": 11,
+      "source_title": "091 · Toan 11 Thiet dien hinh khong gian",
+      "destination": "thiet_dien_hinh_khong_gian_11",
+      "destination_title": "Thiết diện hình không gian",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 92,
+      "source_grade": 11,
+      "source_title": "092 · Toan 11 Thiet dien va ti so oan trong hinh khong gian",
+      "destination": "g11_geom_section_ratio",
+      "destination_title": "Thiết diện và tỉ số đoạn trong hình không gian",
+      "score": 0.905,
+      "status": "mapped"
+    },
+    {
+      "index": 93,
+      "source_grade": 11,
+      "source_title": "Thong ke Toan 11",
+      "destination": "thong_ke_11",
+      "destination_title": "Thống kê Toán 11",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 94,
+      "source_grade": 11,
+      "source_title": "094 · Toan 11 To hop va xac suat nang cao",
+      "destination": "to_hop_xac_suat_nang_cao_11",
+      "destination_title": "Tổ hợp và xác suất nâng cao",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 95,
+      "source_grade": 11,
+      "source_title": "Xac suat",
+      "destination": "xac_suat_11",
+      "destination_title": "Xác suất",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 96,
+      "source_grade": 11,
+      "source_title": "096 · Toan 11 uong thang song song voi mat phang",
+      "destination": "g11_geom_parallel_line_plane",
+      "destination_title": "Đường thẳng song song với mặt phẳng",
+      "score": 0.853,
+      "status": "mapped"
+    },
+    {
+      "index": 97,
+      "source_grade": 11,
+      "source_title": "097 · Toan 11 uong thang vuong goc voi mat phang",
+      "destination": "g11_geom_perpendicular_line_plane",
+      "destination_title": "Đường thẳng vuông góc với mặt phẳng",
+      "score": 0.87,
+      "status": "mapped"
+    },
+    {
+      "index": 98,
+      "source_grade": 11,
+      "source_title": "ao ham",
+      "destination": "dao_ham",
+      "destination_title": "Đạo hàm",
+      "score": 0.923,
+      "status": "mapped"
+    },
+    {
+      "index": 99,
+      "source_grade": 11,
+      "source_title": "099 · Toan 11 inh ly ba uong vuong goc",
+      "destination": "g11_geom_three_perpendiculars",
+      "destination_title": "Định lý ba đường vuông góc",
+      "score": 1.0,
+      "status": "mapped_verified_filename"
+    },
+    {
+      "index": 100,
+      "source_grade": 11,
+      "source_title": "Ung dung ao ham",
+      "destination": "ung_dung_dao_ham_11",
+      "destination_title": "Ứng dụng đạo hàm",
+      "score": 0.968,
+      "status": "mapped"
+    },
+    {
+      "index": 101,
+      "source_grade": 12,
+      "source_title": "TOÁN 12 · BIỂU DIỄN SỐ PHỨC · CHỦ ĐỀ 101",
+      "destination": "bieu_dien_so_phuc",
+      "destination_title": "Biểu diễn số phức",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 102,
+      "source_grade": 12,
+      "source_title": "102 · Toan 12 Bai toan tham so hinh hoc Oxyz",
+      "destination": "g12_geom_parameter_geometry",
+      "destination_title": "Bài toán tham số hình học Oxyz",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 103,
+      "source_grade": 12,
+      "source_title": "Bai toan thuc te Toan 12",
+      "destination": "bai_toan_thuc_te_12",
+      "destination_title": "Bài toán thực tế Toán 12",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 104,
+      "source_grade": 12,
+      "source_title": "104 · Toan 12 Bai toan toi uu hinh hoc khong gian",
+      "destination": "g12_geom_3d_optimization",
+      "destination_title": "Bài toán tối ưu hình học không gian",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 105,
+      "source_grade": 12,
+      "source_title": "105 · Toan 12 Bai toan tong hop THPT",
+      "destination": "tong_hop_thpt",
+      "destination_title": "Bài toán tổng hợp THPT",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 106,
+      "source_grade": 12,
+      "source_title": "TOÁN 12 · BẤT PHƯƠNG TRÌNH LOGARIT · CHỦ ĐỀ 106",
+      "destination": "bpt_logarit",
+      "destination_title": "Bất phương trình logarit",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 107,
+      "source_grade": 12,
+      "source_title": "TOÁN 12 · BẤT PHƯƠNG TRÌNH MŨ · CHỦ ĐỀ 107",
+      "destination": "bpt_mu",
+      "destination_title": "Bất phương trình mũ",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 108,
+      "source_grade": 12,
+      "source_title": "Cac so ac trung o xu the va o phan tan",
+      "destination": "thong_ke_12",
+      "destination_title": "Các số đặc trưng đo xu thế và độ phân tán",
+      "score": 0.962,
+      "status": "mapped"
+    },
+    {
+      "index": 109,
+      "source_grade": 12,
+      "source_title": "TOÁN 12 · CỰC TRỊ · CHỦ ĐỀ 109",
+      "destination": "cuc_tri",
+      "destination_title": "Cực trị",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 110,
+      "source_grade": 12,
+      "source_title": "Cuc tri khoang cach trong khong gian toa o",
+      "destination": "g12_geom_min_distance_3d",
+      "destination_title": "Cực trị khoảng cách trong không gian tọa độ",
+      "score": 0.988,
+      "status": "mapped"
+    },
+    {
+      "index": 111,
+      "source_grade": 12,
+      "source_title": "Dien tich xung quanh va toan phan hinh khoi",
+      "destination": "g12_geom_solid_surface_area",
+      "destination_title": "Diện tích xung quanh và toàn phần hình khối",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 112,
+      "source_grade": 12,
+      "source_title": "TOÁN 12 · GIAO TUYẾN MẶT CẦU VÀ MẶT PHẲNG · CHỦ ĐỀ 112",
+      "destination": "g12_geom_sphere_plane_intersection",
+      "destination_title": "Giao tuyến mặt cầu và mặt phẳng",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 113,
+      "source_grade": 12,
+      "source_title": "Giao iem uong thang va mat phang",
+      "destination": "g12_geom_line_plane_intersection",
+      "destination_title": "Giao điểm đường thẳng và mặt phẳng",
+      "score": 0.97,
+      "status": "mapped"
+    },
+    {
+      "index": 114,
+      "source_grade": 12,
+      "source_title": "TOÁN 12 · GIÁ TRỊ LỚN NHẤT VÀ NHỎ NHẤT · CHỦ ĐỀ 114",
+      "destination": "gtln_gtnn",
+      "destination_title": "Giá trị lớn nhất và nhỏ nhất",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 115,
+      "source_grade": 12,
+      "source_title": "Goc giua hai mat phang",
+      "destination": "g12_geom_two_planes_angle",
+      "destination_title": "Góc giữa hai mặt phẳng",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 116,
+      "source_grade": 12,
+      "source_title": "116 · Toan 12 Goc giua uong thang va mat phang Oxyz",
+      "destination": "g12_geom_line_plane_angle",
+      "destination_title": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+      "score": 0.878,
+      "status": "mapped"
+    },
+    {
+      "index": 117,
+      "source_grade": 12,
+      "source_title": "117 · Toan 12 Goc va khoang cach Oxyz",
+      "destination": "goc_khoang_cach_oxyz",
+      "destination_title": "Góc và khoảng cách Oxyz",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 118,
+      "source_grade": 12,
+      "source_title": "Ham so logarit",
+      "destination": "ham_logarit",
+      "destination_title": "Hàm số logarit",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 119,
+      "source_grade": 12,
+      "source_title": "Ham so mu",
+      "destination": "ham_mu",
+      "destination_title": "Hàm số mũ",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 120,
+      "source_grade": 12,
+      "source_title": "120 · Toan 12 Hinh hoc khong gian",
+      "destination": "hinh_hoc_khong_gian",
+      "destination_title": "Hình học không gian",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 121,
+      "source_grade": 12,
+      "source_title": "Hinh hoc so phuc va quy tich",
+      "destination": "g12_complex_plane_geometry",
+      "destination_title": "Hình học số phức và quỹ tích",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 122,
+      "source_grade": 12,
+      "source_title": "Hinh khoi va the tich co ban",
+      "destination": "hinh_khoi_va_the_tich_co_ban_12",
+      "destination_title": "Hình khối và thể tích cơ bản",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 123,
+      "source_grade": 12,
+      "source_title": "Khoang cach tu iem en mat phang",
+      "destination": "g12_geom_point_plane_distance",
+      "destination_title": "Khoảng cách từ điểm đến mặt phẳng",
+      "score": 0.969,
+      "status": "mapped"
+    },
+    {
+      "index": 124,
+      "source_grade": 12,
+      "source_title": "124 · Toan 12 Khao sat va ve o thi ham so",
+      "destination": "khao_sat_ham_so",
+      "destination_title": "Khảo sát và vẽ đồ thị hàm số",
+      "score": 0.906,
+      "status": "mapped"
+    },
+    {
+      "index": 125,
+      "source_grade": 12,
+      "source_title": "Mat cau",
+      "destination": "mat_cau",
+      "destination_title": "Mặt cầu",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 126,
+      "source_grade": 12,
+      "source_title": "Mat phang tiep xuc voi mat cau",
+      "destination": "g12_geom_sphere_tangent_plane",
+      "destination_title": "Mặt phẳng tiếp xúc với mặt cầu",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 127,
+      "source_grade": 12,
+      "source_title": "Mat phang trong Oxyz",
+      "destination": "mat_phang_oxyz",
+      "destination_title": "Mặt phẳng trong Oxyz",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 128,
+      "source_grade": 12,
+      "source_title": "TOÁN 12 · NGUYÊN HÀM VÀ TÍCH PHÂN · CHỦ ĐỀ 128",
+      "destination": "nguyen_ham_tich_phan",
+      "destination_title": "Nguyên hàm và tích phân",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 129,
+      "source_grade": 12,
+      "source_title": "TOÁN 12 · PHƯƠNG TRÌNH LOGARIT · CHỦ ĐỀ 129",
+      "destination": "pt_logarit",
+      "destination_title": "Phương trình logarit",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 130,
+      "source_grade": 12,
+      "source_title": "TOÁN 12 · PHƯƠNG TRÌNH MŨ · CHỦ ĐỀ 130",
+      "destination": "pt_mu",
+      "destination_title": "Phương trình mũ",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 131,
+      "source_grade": 12,
+      "source_title": "Phuong trinh mat cau va tam ban kinh",
+      "destination": "g12_geom_sphere_equation",
+      "destination_title": "Phương trình mặt cầu và tâm bán kính",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 132,
+      "source_grade": 12,
+      "source_title": "Phuong trinh mat phang",
+      "destination": "g12_geom_plane_equation",
+      "destination_title": "Phương trình mặt phẳng",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 133,
+      "source_grade": 12,
+      "source_title": "Phuong trinh so phuc",
+      "destination": "pt_so_phuc",
+      "destination_title": "Phương trình số phức",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 134,
+      "source_grade": 12,
+      "source_title": "Phuong trinh uong thang trong Oxyz",
+      "destination": "g12_geom_line_equation_3d",
+      "destination_title": "Phương trình đường thẳng trong Oxyz",
+      "score": 0.986,
+      "status": "mapped"
+    },
+    {
+      "index": 135,
+      "source_grade": 12,
+      "source_title": "So phuc",
+      "destination": "so_phuc",
+      "destination_title": "Số phức",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 136,
+      "source_grade": 12,
+      "source_title": "The tich hinh hoc khong gian",
+      "destination": "the_tich_khong_gian",
+      "destination_title": "Thể tích hình học không gian",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 137,
+      "source_grade": 12,
+      "source_title": "137 · Toan 12 The tich khoi tron xoay va mo hinh thuc te",
+      "destination": "g12_solid_of_revolution",
+      "destination_title": "Thể tích khối tròn xoay và mô hình thực tế",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 138,
+      "source_grade": 12,
+      "source_title": "Tiep tuyen",
+      "destination": "tiep_tuyen",
+      "destination_title": "Tiếp tuyến",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 139,
+      "source_grade": 12,
+      "source_title": "TOÁN 12 · TIỆM CẬN · CHỦ ĐỀ 139",
+      "destination": "tien_can",
+      "destination_title": "Tiệm cận",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 140,
+      "source_grade": 12,
+      "source_title": "Tinh on ieu",
+      "destination": "tinh_don_dieu",
+      "destination_title": "Tính đơn điệu",
+      "score": 0.917,
+      "status": "mapped"
+    },
+    {
+      "index": 141,
+      "source_grade": 12,
+      "source_title": "Tuong giao o thi",
+      "destination": "tuong_giao",
+      "destination_title": "Tương giao đồ thị",
+      "score": 0.97,
+      "status": "mapped"
+    },
+    {
+      "index": 142,
+      "source_grade": 12,
+      "source_title": "Toa o trong khong gian",
+      "destination": "toa_do_khong_gian",
+      "destination_title": "Tọa độ trong không gian",
+      "score": 0.978,
+      "status": "mapped"
+    },
+    {
+      "index": 143,
+      "source_grade": 12,
+      "source_title": "143 · Toan 12 Toi uu va cuc tri bang tich phan",
+      "destination": "g12_integral_optimization",
+      "destination_title": "Tối ưu và cực trị bằng tích phân",
+      "score": 0.96,
+      "status": "mapped"
+    },
+    {
+      "index": 144,
+      "source_grade": 12,
+      "source_title": "Vecto va o dai trong khong gian Oxyz",
+      "destination": "g12_geom_vectors_3d",
+      "destination_title": "Vectơ và độ dài trong không gian Oxyz",
+      "score": 0.986,
+      "status": "mapped"
+    },
+    {
+      "index": 145,
+      "source_grade": 12,
+      "source_title": "Van dung toa o Oxyz",
+      "destination": "hinh_hoc_oxyz_van_dung_12",
+      "destination_title": "Vận dụng tọa độ Oxyz",
+      "score": 0.974,
+      "status": "mapped"
+    },
+    {
+      "index": 146,
+      "source_grade": 12,
+      "source_title": "146 · Toan 12 Vi tri tuong oi cua hai uong thang trong Oxyz",
+      "destination": "g12_geom_skew_line_relation",
+      "destination_title": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+      "score": 0.849,
+      "status": "mapped"
+    },
+    {
+      "index": 147,
+      "source_grade": 12,
+      "source_title": "Xac suat va bien ngau nhien",
+      "destination": "xac_suat_12",
+      "destination_title": "Xác suất và biến ngẫu nhiên",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 148,
+      "source_grade": 12,
+      "source_title": "uong thang trong Oxyz",
+      "destination": "duong_thang_oxyz",
+      "destination_title": "Đường thẳng trong Oxyz",
+      "score": 0.977,
+      "status": "mapped"
+    },
+    {
+      "index": 149,
+      "source_grade": 12,
+      "source_title": "Ung dung tich phan",
+      "destination": "ung_dung_tich_phan",
+      "destination_title": "Ứng dụng tích phân",
+      "score": 1.0,
+      "status": "mapped"
+    },
+    {
+      "index": 150,
+      "source_grade": 12,
+      "source_title": "Ung dung ao ham",
+      "destination": "ung_dung_dao_ham",
+      "destination_title": "Ứng dụng đạo hàm",
+      "score": 0.968,
+      "status": "mapped"
+    }
+  ],
+  "quality": "Imported as UNVERIFIED CANDIDATES, not independently pedagogically approved; numeric changes are not independent mathematical forms.",
+  "note": "Source has 50 DOCX in each grade, MATH_WEB curriculum has 49/51/50; low-confidence mappings quarantined. Existing 900 assessment questions preserved."
+}

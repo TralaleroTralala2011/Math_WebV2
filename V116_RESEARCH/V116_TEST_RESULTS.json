@@ -1,0 +1,16 @@
+{
+  "version": "V116",
+  "date": "2026-11-08",
+  "test_groups": [
+    {"description": "Question Factory V112/V113/V114/V116 and V115 operations", "passed": 41, "failed": 0},
+    {"description": "Verified bank quality and API", "passed": 7, "failed": 0},
+    {"description": "Remaining backend regression tests", "passed": 114, "failed": 0}
+  ],
+  "unique_tests_passed": 162,
+  "unique_tests_failed": 0,
+  "additional_overlapping_rerun_passed": 28,
+  "production_tested": false,
+  "human_certified_methods": 0,
+  "new_candidate_methods": 31,
+  "new_math_checked_questions": 310
+}

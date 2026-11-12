@@ -1,0 +1,14 @@
+{
+  "version": "V149",
+  "base": "MATH_WEB_GITHUB_READY_V148_REVIEW_RISK_AUDIT.zip",
+  "candidate_records_scanned": 1609,
+  "missing_candidate_ids": 1530,
+  "duplicate_candidate_id_groups": 0,
+  "new_certified_independent_methods": 0,
+  "new_published_questions": 0,
+  "tests": "3/3 focused passed",
+  "full_regression": "not run",
+  "browser_e2e": "not run",
+  "database_modified": false,
+  "next": "Review missing candidate IDs and schema, verify math-method independence and run E2E."
+}

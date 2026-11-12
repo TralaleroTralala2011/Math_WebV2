@@ -1,0 +1,23 @@
+{
+  "source": "MATH_WEB_GITHUB_READY_KNOWLEDGE_BATCH_04.zip",
+  "updated_topics": [
+    "ham_so",
+    "phuong_trinh",
+    "he_phuong_trinh",
+    "gioi_han"
+  ],
+  "updated_topic_count": 4,
+  "new_questions": 40,
+  "question_distribution": {
+    "multiple_choice": 28,
+    "short_answer": 8,
+    "true_false": 4
+  },
+  "topics_with_quiz": 28,
+  "total_topics": 150,
+  "limitations": [
+    "No verified video additions",
+    "No browser/backend integration tests",
+    "Other topics remain incomplete"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "version": "V144",
+  "base": "MATH_WEB_GITHUB_READY_V143_CERTIFICATE_ELIGIBILITY.zip",
+  "changed": [
+    "backend/question_factory/storage.py",
+    "backend/tests/test_v141_independence_certification_reporting.py"
+  ],
+  "added": [
+    "backend/tests/test_v144_certificate_whitespace.py"
+  ],
+  "focused_tests_passed": 15,
+  "focused_tests_failed": 0,
+  "full_regression": "incomplete; six setup errors observed",
+  "new_certified_independent_types": 0,
+  "new_published_questions": 0,
+  "pending_candidates_carried": 11,
+  "pending_research_questions_carried": 110,
+  "next": [
+    "investigate regression errors",
+    "review candidate methods",
+    "Battle/Admin E2E"
+  ]
+}

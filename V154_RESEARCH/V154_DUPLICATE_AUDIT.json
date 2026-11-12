@@ -1,0 +1,12 @@
+{
+  "candidate_methods": 2,
+  "candidate_questions": 20,
+  "corpus_files": 54,
+  "corpus_lines": 665293,
+  "exact_question_collisions": 0,
+  "exact_topic_method_collisions": 0,
+  "question_examples": [],
+  "method_examples": [],
+  "independent_certified_types": 0,
+  "scope": "Exact normalized wording only; no semantic or mathematical independence proof."
+}

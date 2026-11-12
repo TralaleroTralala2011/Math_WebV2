@@ -1,0 +1,38 @@
+{
+  "version": "V51",
+  "base": "V50",
+  "previous_records": 46247,
+  "previous_form_ids": 4767,
+  "added_variant_codes": 1000,
+  "added_questions": 10000,
+  "new_method_families": 20,
+  "new_independent_methods_verified": 0,
+  "total_records": 56247,
+  "total_form_ids": 5767,
+  "existing_form_ids_with_under_10_questions": 241,
+  "existing_records_with_non_string_topic": 360,
+  "note": "1000 variant codes across 20 method families; these are NOT 1000 independent mathematical problem types. Older records not independently audited.",
+  "grade_additions": {
+    "10": 4000,
+    "11": 3000,
+    "12": 3000
+  },
+  "families": {
+    "10 / Quy tắc đếm": 100,
+    "10 / Tổ hợp": 50,
+    "10 / Chỉnh hợp": 50,
+    "10 / Vectơ": 50,
+    "10 / Tọa độ trong mặt phẳng": 50,
+    "10 / Hàm số bậc hai và parabol": 50,
+    "10 / Phương trình bậc hai": 50,
+    "11 / Cấp số cộng": 50,
+    "11 / Cấp số nhân": 50,
+    "11 / Đạo hàm": 100,
+    "11 / Giới hạn hàm số": 50,
+    "11 / Xác suất": 50,
+    "12 / Nguyên hàm và tích phân": 100,
+    "12 / Số phức": 100,
+    "12 / Tọa độ trong không gian": 50,
+    "12 / Hàm số logarit": 50
+  }
+}

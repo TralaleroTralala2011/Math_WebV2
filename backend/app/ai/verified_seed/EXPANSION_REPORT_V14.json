@@ -1,0 +1,8 @@
+{
+  "previous_questions": 2090,
+  "new_questions": 240,
+  "total_questions": 2330,
+  "new_form_codes": 24,
+  "total_form_codes": 232,
+  "note": "Signatures are distinct labels, not proof of 24 mathematically independent problem families. New answer checks use exact arithmetic. No full-site regression was run."
+}

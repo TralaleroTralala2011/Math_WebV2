@@ -1,0 +1,12 @@
+{
+  "files_scanned": 56,
+  "historical_question_records": 649653,
+  "historical_title_records": 1740,
+  "unparseable_lines": 0,
+  "exact_question_collisions": [],
+  "exact_title_collisions": [],
+  "new_questions": 60,
+  "new_candidate_methods": 6,
+  "semantic_independence_certified": false,
+  "limitation": "Exact Unicode-normalized text/title comparison ONLY, not semantic/method proof"
+}

@@ -343,10 +343,8 @@ def seconds_since(value):
         - parsed
     ).total_seconds()
 
-    return max(
-        0,
-        int(delta)
-    )
+    # Millisecond resolution matters for the Battle speed tiebreaker.
+    return max(0.0, round(delta, 3))
 
 
 def safe_json_loads(value, default=None):
@@ -636,7 +634,7 @@ def generate_ai_battle_questions(grade, topics, difficulty, question_type):
             result = ai_service.generate_set(
                 grade=grade, topics=[topic], count=1,
                 difficulty=difficulty, question_type=item_type,
-                history=[]
+                history=[], max_attempts_per_phase=12
             )
             for candidate in result.get("questions", []):
                 chosen = accept(candidate, item_type)
@@ -697,6 +695,10 @@ def sanitize_question(question, index=None):
 
     if isinstance(options, list):
         safe["options"] = options
+
+    statements = question.get("statements")
+    if isinstance(statements, list):
+        safe["statements"] = [str(item) for item in statements]
 
     return safe
 
@@ -818,10 +820,10 @@ def cleanup_expired_queue(cursor):
     cursor.execute(
         """
         DELETE FROM matchmaking_queue
-        WHERE created_at < datetime(
-            'now',
-            '-10 minutes'
-        )
+        -- created_at is ISO 8601 (e.g. 2026-11-11T10:00:00+00:00).
+        -- Comparing that text with SQLite's space-separated datetime()
+        -- fails for rows from the same day. Compare normalized instants.
+        WHERE julianday(created_at) < julianday('now', '-10 minutes')
         """
     )
 
@@ -870,43 +872,58 @@ def cleanup_expired_invites(cursor):
         )
 
 
-def cleanup_expired_matches(cursor):
-    cursor.execute(
-        """
-        SELECT
-            id,
-            started_at
-        FROM matches
-        WHERE status = 'PLAYING'
-        """
+def expire_match_if_needed(cursor, match):
+    """Finish a timed-out match with a real scoreboard, not an empty draw.
+
+    Completed players retain their measured finish times. Anyone who did not
+    finish receives the match time limit, so elapsed-time tie-breaks remain
+    meaningful even if one player's connection disappears.
+    """
+    if not is_match_expired(match):
+        return False
+
+    questions = safe_json_loads(match["questions"], [])
+    if not isinstance(questions, list):
+        questions = []
+    count = len(questions)
+    p1_answers = load_player_answers(match, 1)
+    p2_answers = load_player_answers(match, 2)
+    p1 = calculate_player_stats(questions, p1_answers, match["started_at"])
+    p2 = calculate_player_stats(questions, p2_answers, match["started_at"])
+    p1["time"] = (
+        float(match["player1_time"] or 0) or MATCH_MAX_DURATION_SECONDS
+        if count and len(p1_answers) >= count else MATCH_MAX_DURATION_SECONDS
     )
+    p2["time"] = (
+        float(match["player2_time"] or 0) or MATCH_MAX_DURATION_SECONDS
+        if count and len(p2_answers) >= count else MATCH_MAX_DURATION_SECONDS
+    )
+    winner_id = calculate_winner({
+        **dict(match),
+        "player1_correct": p1["correct"], "player1_wrong": p1["wrong"],
+        "player1_blank": p1["blank"], "player1_time": p1["time"],
+        "player2_correct": p2["correct"], "player2_wrong": p2["wrong"],
+        "player2_blank": p2["blank"], "player2_time": p2["time"],
+    }) if count else None
+    cursor.execute("""
+        UPDATE matches
+        SET status='FINISHED', finished_at=?, winner_id=?,
+            player1_correct=?, player1_wrong=?, player1_blank=?, player1_time=?,
+            player2_correct=?, player2_wrong=?, player2_blank=?, player2_time=?
+        WHERE id=? AND status='PLAYING'
+    """, (
+        now_iso(), winner_id,
+        p1["correct"], p1["wrong"], p1["blank"], p1["time"],
+        p2["correct"], p2["wrong"], p2["blank"], p2["time"],
+        match["id"],
+    ))
+    return cursor.rowcount > 0
 
-    rows = cursor.fetchall()
 
-    for match in rows:
-        elapsed = seconds_since(
-            match["started_at"]
-        )
-
-        if (
-            elapsed is not None
-            and elapsed >= MATCH_MAX_DURATION_SECONDS
-        ):
-            cursor.execute(
-                """
-                UPDATE matches
-                SET
-                    status = 'FINISHED',
-                    finished_at = ?
-                WHERE
-                    id = ?
-                    AND status = 'PLAYING'
-                """,
-                (
-                    now_iso(),
-                    match["id"]
-                )
-            )
+def cleanup_expired_matches(cursor):
+    cursor.execute("SELECT * FROM matches WHERE status='PLAYING'")
+    for match in cursor.fetchall():
+        expire_match_if_needed(cursor, match)
 
 
 def cleanup_matchmaking():
@@ -1144,11 +1161,11 @@ def calculate_winner(match):
     if p2_correct > p1_correct:
         return match["player2_id"]
 
-    p1_time = int(
+    p1_time = float(
         match["player1_time"] or 0
     )
 
-    p2_time = int(
+    p2_time = float(
         match["player2_time"] or 0
     )
 
@@ -1233,6 +1250,13 @@ def finalize_match_if_needed(
         p2_answers,
         match["started_at"]
     )
+
+    # Do not recompute BOTH players' finish times now: doing so assigns
+    # the same elapsed time to the two players and destroys the speed tie-break.
+    # Each participant's elapsed time was persisted by update_player_stats at
+    # their own final answer/skip, and must remain unchanged afterwards.
+    p1_stats["time"] = float(match["player1_time"] or 0)
+    p2_stats["time"] = float(match["player2_time"] or 0)
 
     winner_id = calculate_winner(
         {
@@ -2458,6 +2482,9 @@ def submit_answer(
 
     try:
         cursor = connection.cursor()
+        # Serialize concurrent answers from multiple tabs/devices. A stale
+        # read must not overwrite an already submitted answer.
+        cursor.execute("BEGIN IMMEDIATE")
 
         cursor.execute(
             """
@@ -2494,26 +2521,10 @@ def submit_answer(
             )
 
         if is_match_expired(match):
-            cursor.execute(
-                """
-                UPDATE matches
-                SET
-                    status = 'FINISHED',
-                    finished_at = ?
-                WHERE
-                    id = ?
-                    AND status = 'PLAYING'
-                """,
-                (
-                    now_iso(),
-                    match_id
-                )
-            )
-
+            expire_match_if_needed(cursor, match)
             connection.commit()
-
             raise HTTPException(
-                status_code=400,
+                status_code=409,
                 detail="Trận đấu đã hết thời gian."
             )
 
@@ -2547,6 +2558,12 @@ def submit_answer(
         key = str(
             data.question_index
         )
+
+        if data.question_index != len(answers):
+            raise HTTPException(
+                status_code=409,
+                detail="Phải xử lý câu hỏi theo đúng thứ tự trong trận đấu."
+            )
 
         if key in answers:
             raise HTTPException(
@@ -2683,6 +2700,9 @@ def skip_question(
 
     try:
         cursor = connection.cursor()
+        # Serialize concurrent answers from multiple tabs/devices. A stale
+        # read must not overwrite an already submitted answer.
+        cursor.execute("BEGIN IMMEDIATE")
 
         cursor.execute(
             """
@@ -2718,6 +2738,14 @@ def skip_question(
                 detail="Trận đấu chưa ở trạng thái chơi."
             )
 
+        if is_match_expired(match):
+            expire_match_if_needed(cursor, match)
+            connection.commit()
+            raise HTTPException(
+                status_code=409,
+                detail="Trận đấu đã hết thời gian."
+            )
+
         questions = safe_json_loads(
             match["questions"],
             []
@@ -2748,6 +2776,12 @@ def skip_question(
         key = str(
             data.question_index
         )
+
+        if data.question_index != len(answers):
+            raise HTTPException(
+                status_code=409,
+                detail="Phải xử lý câu hỏi theo đúng thứ tự trong trận đấu."
+            )
 
         if key in answers:
             raise HTTPException(
@@ -2892,6 +2926,13 @@ def get_match_progress(
                 detail="Bạn không thuộc trận đấu."
             )
 
+        if is_match_expired(match):
+            expire_match_if_needed(cursor, match)
+            connection.commit()
+            match = cursor.execute(
+                "SELECT * FROM matches WHERE id=?", (match_id,)
+            ).fetchone()
+
         questions = safe_json_loads(
             match["questions"],
             []
@@ -2930,6 +2971,16 @@ def get_match_progress(
             opponent_answers,
             match["started_at"]
         )
+
+        # A completed player's recorded finish time must not keep increasing.
+        for number, answers, stats in (
+            (1 if player_number == 1 else 2, own_answers, own_stats),
+            (2 if player_number == 1 else 1, opponent_answers, opponent_stats),
+        ):
+            if questions and len(answers) >= len(questions):
+                stats["time"] = float(match[f"player{number}_time"] or 0)
+            elif match["status"] == "FINISHED":
+                stats["time"] = float(match[f"player{number}_time"] or 0)
 
         elapsed = seconds_since(
             match["started_at"]
@@ -3021,6 +3072,13 @@ def get_match_result(
                 status_code=403,
                 detail="Bạn không thuộc trận."
             )
+
+        if is_match_expired(match):
+            expire_match_if_needed(cursor, match)
+            connection.commit()
+            match = cursor.execute(
+                "SELECT * FROM matches WHERE id=?", (match_id,)
+            ).fetchone()
 
         return {
             "success": True,

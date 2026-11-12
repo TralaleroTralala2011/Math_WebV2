@@ -1,0 +1,25 @@
+{
+  "base": "MATH_WEB_V28_CLASSIC_V29_NAV_BATTLE_LAYOUT_FIX.zip",
+  "changes": [
+    "MCQ submits {index:number} to backend to prevent correct answer marked wrong; retains text label fallback for offline questions",
+    "Session navigation guard no longer redirects with unverified stale token; auth.js handles login/register redirect after /api/auth/me",
+    "Trial banner is hidden immediately for locally signed-in users",
+    "Chat margin gap overridden regardless of body theme class",
+    "Learning knowledge lists separated into readable cards with relaxed line-height",
+    "Battle V29 layout retained unchanged"
+  ],
+  "verified": {
+    "b54_sqlite_sha256_unchanged": true,
+    "900_matrix_json_unchanged": true,
+    "pytest_14_selected": "14 passed",
+    "pytest_auth_and_security_8_selected": "8 passed",
+    "javascript_syntax": "node --check passed"
+  },
+  "limitations": [
+    "Browser visual test blocked by ERR_BLOCKED_BY_ADMINISTRATOR",
+    "Full mathematical/scholastic validation of imported question bank not performed",
+    "Existing account database on user Windows computer not accessible; re-login test uses isolated test database"
+  ],
+  "missing_local_assets": 0,
+  "missing_local_assets_examples": []
+}

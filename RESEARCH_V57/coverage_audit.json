@@ -1,0 +1,31 @@
+{
+  "version": "V57",
+  "scope": "Research and coverage audit; no fabricated question bank additions",
+  "uploaded_catalog_entries": 147,
+  "by_grade": {
+    "10": 53,
+    "11": 47,
+    "12": 47
+  },
+  "catalog_duplicate_grade_level_title": 2,
+  "existing_jsonl_records": 68067,
+  "existing_grade_counts": {
+    "10": 30908,
+    "11": 19596,
+    "12": 17563
+  },
+  "existing_form_ids_total_unique_grade_topic_form": 6949,
+  "form_ids_with_fewer_than_10_questions": 241,
+  "duplicate_question_text_within_grade_topic": 0,
+  "malformed_json_lines": 0,
+  "catalog_entries_without_exact_title_question_match": 91,
+  "target_2000_forms_per_catalog_entry": 294000,
+  "target_10_questions_per_form": 2940000,
+  "important_limitation": "Exact-title coverage is not full semantic mapping; form IDs do not establish distinct mathematical methods; bank answers not independently audited.",
+  "source_urls": [
+    "https://c2tdinh.pgdninhhoa.edu.vn/van-ban-cong-van/chuong-trinh-gdpt-2018/chuong-trinh-gdpt-mon-toan.html",
+    "https://en.khanacademy.org/mission/math",
+    "https://en.khanacademy.org/math/high-school-math/trigonometry",
+    "https://openstax.org/books/precalculus-2e/pages/preface"
+  ]
+}

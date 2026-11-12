@@ -129,7 +129,7 @@ Nếu trình duyệt báo CORS khi ghép trận, trước tiên kiểm tra `http
 ## Hệ thống quản trị MATH WEB
 
 - Mở `admin.html` sau khi chạy frontend và backend.
-- Tài khoản bootstrap duy nhất: `admin19022011`. Mật khẩu khởi tạo: `adminsitinh`.
+- Tài khoản bootstrap duy nhất: `admin19022011`. Mật khẩu khởi tạo được sinh ngẫu nhiên và **chỉ hiển thị trong terminal backend khi tạo DB lần đầu**, hoặc đặt trước qua biến môi trường `MATHWEB_BOOTSTRAP_ADMIN_PASSWORD`.
 - Đăng nhập lần đầu, chọn **Đổi mật khẩu** và đổi mật khẩu ngay. Không triển khai hệ thống công khai với mật khẩu mặc định.
 - Backend xác thực quyền quản trị tại `/api/admin/*`; sửa giao diện hoặc gọi API trực tiếp không thể tự cấp quyền admin.
 - Bảng quản trị gồm tổng quan, tìm kiếm tài khoản, hồ sơ học tập, cấm/mở cấm, đặt lại mật khẩu người dùng, ngân hàng câu hỏi và nhật ký quản trị.
@@ -150,3 +150,11 @@ Nếu trình duyệt báo CORS khi ghép trận, trước tiên kiểm tra `http
 ## Trung tâm điều hành học tập và giao bài
 
 Xem hướng dẫn tính năng Admin/giáo viên, kho câu hỏi AI, giao bài, báo cáo cá nhân hóa và trang học sinh tại [`ADMIN_TEACHER_CENTER.md`](ADMIN_TEACHER_CENTER.md).
+
+## Rà soát toàn site (10/11/2026)
+
+Xem `FULL_SITE_AUDIT_2026_11_10.md` để biết các hạng mục đã sửa và giới hạn kiểm chứng. Bản vá giữ nguyên những màn hình và API hiện có, sửa 121 trang game bị lỗi đoạn HTML/JavaScript khởi tạo, đồng thời gia cố phiên đăng nhập, WebSocket Battle và điều hướng học tập.
+
+**Bảo mật lần chạy đầu:** Server tự sinh khoá ký token riêng trong `backend/database/.mathweb_hmac_secret` (không đẩy lên Git). Hãy giữ an toàn và sao lưu khoá này cùng database. Trên môi trường triển khai, nên cung cấp `MATH_WEB_SECRET_KEY` dài tối thiểu 32 ký tự qua biến môi trường. Nếu chưa có tài khoản Admin, mật khẩu mạnh ngẫu nhiên chỉ được in ra ở terminal backend một lần; có thể thiết lập `MATHWEB_BOOTSTRAP_ADMIN_PASSWORD` trước khi chạy lần đầu. Thay đổi khoá làm mọi token cũ không còn hợp lệ.
+
+**Kiểm thử:** Tại thư mục gốc, cài `pip install -r backend/requirements.txt` và `pip install pytest httpx`, rồi chạy `python -m pytest -q`. Đăng xuất hiện thu hồi các token đang có của tài khoản trên server, kể cả phiên ở thiết bị khác. Nếu backend không sẵn sàng, trình duyệt vẫn xóa phiên cục bộ ngay; hãy đảm bảo chạy backend để thu hồi token phía server.

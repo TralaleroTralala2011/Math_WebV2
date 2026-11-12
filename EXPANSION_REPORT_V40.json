@@ -1,0 +1,686 @@
+{
+  "version": "V40",
+  "base": "V39",
+  "previous_questions": 11220,
+  "new_forms": 110,
+  "new_questions": 1100,
+  "total_questions": 12320,
+  "total_form_ids": 1231,
+  "by_grade": {
+    "10": 400,
+    "11": 300,
+    "12": 400
+  },
+  "new_forms_catalog": [
+    {
+      "id": "v40_quadratic_00",
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "signature": "Quadratic polynomial operation 0"
+    },
+    {
+      "id": "v40_quadratic_01",
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "signature": "Quadratic polynomial operation 1"
+    },
+    {
+      "id": "v40_quadratic_02",
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "signature": "Quadratic polynomial operation 2"
+    },
+    {
+      "id": "v40_quadratic_03",
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "signature": "Quadratic polynomial operation 3"
+    },
+    {
+      "id": "v40_quadratic_04",
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "signature": "Quadratic polynomial operation 4"
+    },
+    {
+      "id": "v40_quadratic_05",
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "signature": "Quadratic polynomial operation 5"
+    },
+    {
+      "id": "v40_quadratic_06",
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "signature": "Quadratic polynomial operation 6"
+    },
+    {
+      "id": "v40_quadratic_07",
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "signature": "Quadratic polynomial operation 7"
+    },
+    {
+      "id": "v40_quadratic_08",
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "signature": "Quadratic polynomial operation 8"
+    },
+    {
+      "id": "v40_quadratic_09",
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "signature": "Quadratic polynomial operation 9"
+    },
+    {
+      "id": "v40_systems_00",
+      "grade": 10,
+      "topic": "Hệ phương trình",
+      "signature": "Linear equations systems output 0"
+    },
+    {
+      "id": "v40_systems_01",
+      "grade": 10,
+      "topic": "Hệ phương trình",
+      "signature": "Linear equations systems output 1"
+    },
+    {
+      "id": "v40_systems_02",
+      "grade": 10,
+      "topic": "Hệ phương trình",
+      "signature": "Linear equations systems output 2"
+    },
+    {
+      "id": "v40_systems_03",
+      "grade": 10,
+      "topic": "Hệ phương trình",
+      "signature": "Linear equations systems output 3"
+    },
+    {
+      "id": "v40_systems_04",
+      "grade": 10,
+      "topic": "Hệ phương trình",
+      "signature": "Linear equations systems output 4"
+    },
+    {
+      "id": "v40_systems_05",
+      "grade": 10,
+      "topic": "Hệ phương trình",
+      "signature": "Linear equations systems output 5"
+    },
+    {
+      "id": "v40_systems_06",
+      "grade": 10,
+      "topic": "Hệ phương trình",
+      "signature": "Linear equations systems output 6"
+    },
+    {
+      "id": "v40_systems_07",
+      "grade": 10,
+      "topic": "Hệ phương trình",
+      "signature": "Linear equations systems output 7"
+    },
+    {
+      "id": "v40_systems_08",
+      "grade": 10,
+      "topic": "Hệ phương trình",
+      "signature": "Linear equations systems output 8"
+    },
+    {
+      "id": "v40_systems_09",
+      "grade": 10,
+      "topic": "Hệ phương trình",
+      "signature": "Linear equations systems output 9"
+    },
+    {
+      "id": "v40_vector_00",
+      "grade": 10,
+      "topic": "Vectơ và tọa độ trong mặt phẳng",
+      "signature": "Vector coordinate invariant 0"
+    },
+    {
+      "id": "v40_vector_01",
+      "grade": 10,
+      "topic": "Vectơ và tọa độ trong mặt phẳng",
+      "signature": "Vector coordinate invariant 1"
+    },
+    {
+      "id": "v40_vector_02",
+      "grade": 10,
+      "topic": "Vectơ và tọa độ trong mặt phẳng",
+      "signature": "Vector coordinate invariant 2"
+    },
+    {
+      "id": "v40_vector_03",
+      "grade": 10,
+      "topic": "Vectơ và tọa độ trong mặt phẳng",
+      "signature": "Vector coordinate invariant 3"
+    },
+    {
+      "id": "v40_vector_04",
+      "grade": 10,
+      "topic": "Vectơ và tọa độ trong mặt phẳng",
+      "signature": "Vector coordinate invariant 4"
+    },
+    {
+      "id": "v40_vector_05",
+      "grade": 10,
+      "topic": "Vectơ và tọa độ trong mặt phẳng",
+      "signature": "Vector coordinate invariant 5"
+    },
+    {
+      "id": "v40_vector_06",
+      "grade": 10,
+      "topic": "Vectơ và tọa độ trong mặt phẳng",
+      "signature": "Vector coordinate invariant 6"
+    },
+    {
+      "id": "v40_vector_07",
+      "grade": 10,
+      "topic": "Vectơ và tọa độ trong mặt phẳng",
+      "signature": "Vector coordinate invariant 7"
+    },
+    {
+      "id": "v40_vector_08",
+      "grade": 10,
+      "topic": "Vectơ và tọa độ trong mặt phẳng",
+      "signature": "Vector coordinate invariant 8"
+    },
+    {
+      "id": "v40_vector_09",
+      "grade": 10,
+      "topic": "Vectơ và tọa độ trong mặt phẳng",
+      "signature": "Vector coordinate invariant 9"
+    },
+    {
+      "id": "v40_counting_00",
+      "grade": 10,
+      "topic": "Tổ hợp và quy tắc đếm",
+      "signature": "Combinatorial counting scenario 0"
+    },
+    {
+      "id": "v40_counting_01",
+      "grade": 10,
+      "topic": "Tổ hợp và quy tắc đếm",
+      "signature": "Combinatorial counting scenario 1"
+    },
+    {
+      "id": "v40_counting_02",
+      "grade": 10,
+      "topic": "Tổ hợp và quy tắc đếm",
+      "signature": "Combinatorial counting scenario 2"
+    },
+    {
+      "id": "v40_counting_03",
+      "grade": 10,
+      "topic": "Tổ hợp và quy tắc đếm",
+      "signature": "Combinatorial counting scenario 3"
+    },
+    {
+      "id": "v40_counting_04",
+      "grade": 10,
+      "topic": "Tổ hợp và quy tắc đếm",
+      "signature": "Combinatorial counting scenario 4"
+    },
+    {
+      "id": "v40_counting_05",
+      "grade": 10,
+      "topic": "Tổ hợp và quy tắc đếm",
+      "signature": "Combinatorial counting scenario 5"
+    },
+    {
+      "id": "v40_counting_06",
+      "grade": 10,
+      "topic": "Tổ hợp và quy tắc đếm",
+      "signature": "Combinatorial counting scenario 6"
+    },
+    {
+      "id": "v40_counting_07",
+      "grade": 10,
+      "topic": "Tổ hợp và quy tắc đếm",
+      "signature": "Combinatorial counting scenario 7"
+    },
+    {
+      "id": "v40_counting_08",
+      "grade": 10,
+      "topic": "Tổ hợp và quy tắc đếm",
+      "signature": "Combinatorial counting scenario 8"
+    },
+    {
+      "id": "v40_counting_09",
+      "grade": 10,
+      "topic": "Tổ hợp và quy tắc đếm",
+      "signature": "Combinatorial counting scenario 9"
+    },
+    {
+      "id": "v40_ap_00",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "Arithmetic sequence derived quantity 0"
+    },
+    {
+      "id": "v40_ap_01",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "Arithmetic sequence derived quantity 1"
+    },
+    {
+      "id": "v40_ap_02",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "Arithmetic sequence derived quantity 2"
+    },
+    {
+      "id": "v40_ap_03",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "Arithmetic sequence derived quantity 3"
+    },
+    {
+      "id": "v40_ap_04",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "Arithmetic sequence derived quantity 4"
+    },
+    {
+      "id": "v40_ap_05",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "Arithmetic sequence derived quantity 5"
+    },
+    {
+      "id": "v40_ap_06",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "Arithmetic sequence derived quantity 6"
+    },
+    {
+      "id": "v40_ap_07",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "Arithmetic sequence derived quantity 7"
+    },
+    {
+      "id": "v40_ap_08",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "Arithmetic sequence derived quantity 8"
+    },
+    {
+      "id": "v40_ap_09",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "Arithmetic sequence derived quantity 9"
+    },
+    {
+      "id": "v40_gp_00",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "Geometric sequence derived quantity 0"
+    },
+    {
+      "id": "v40_gp_01",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "Geometric sequence derived quantity 1"
+    },
+    {
+      "id": "v40_gp_02",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "Geometric sequence derived quantity 2"
+    },
+    {
+      "id": "v40_gp_03",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "Geometric sequence derived quantity 3"
+    },
+    {
+      "id": "v40_gp_04",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "Geometric sequence derived quantity 4"
+    },
+    {
+      "id": "v40_gp_05",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "Geometric sequence derived quantity 5"
+    },
+    {
+      "id": "v40_gp_06",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "Geometric sequence derived quantity 6"
+    },
+    {
+      "id": "v40_gp_07",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "Geometric sequence derived quantity 7"
+    },
+    {
+      "id": "v40_gp_08",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "Geometric sequence derived quantity 8"
+    },
+    {
+      "id": "v40_gp_09",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "Geometric sequence derived quantity 9"
+    },
+    {
+      "id": "v40_derivative_00",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Derivative expression family 0"
+    },
+    {
+      "id": "v40_derivative_01",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Derivative expression family 1"
+    },
+    {
+      "id": "v40_derivative_02",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Derivative expression family 2"
+    },
+    {
+      "id": "v40_derivative_03",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Derivative expression family 3"
+    },
+    {
+      "id": "v40_derivative_04",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Derivative expression family 4"
+    },
+    {
+      "id": "v40_derivative_05",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Derivative expression family 5"
+    },
+    {
+      "id": "v40_derivative_06",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Derivative expression family 6"
+    },
+    {
+      "id": "v40_derivative_07",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Derivative expression family 7"
+    },
+    {
+      "id": "v40_derivative_08",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Derivative expression family 8"
+    },
+    {
+      "id": "v40_derivative_09",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Derivative expression family 9"
+    },
+    {
+      "id": "v40_integral_00",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Definite integration integrand family 0"
+    },
+    {
+      "id": "v40_integral_01",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Definite integration integrand family 1"
+    },
+    {
+      "id": "v40_integral_02",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Definite integration integrand family 2"
+    },
+    {
+      "id": "v40_integral_03",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Definite integration integrand family 3"
+    },
+    {
+      "id": "v40_integral_04",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Definite integration integrand family 4"
+    },
+    {
+      "id": "v40_integral_05",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Definite integration integrand family 5"
+    },
+    {
+      "id": "v40_integral_06",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Definite integration integrand family 6"
+    },
+    {
+      "id": "v40_integral_07",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Definite integration integrand family 7"
+    },
+    {
+      "id": "v40_integral_08",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Definite integration integrand family 8"
+    },
+    {
+      "id": "v40_integral_09",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Definite integration integrand family 9"
+    },
+    {
+      "id": "v40_xyz_00",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "3D vector coordinate operation 0"
+    },
+    {
+      "id": "v40_xyz_01",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "3D vector coordinate operation 1"
+    },
+    {
+      "id": "v40_xyz_02",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "3D vector coordinate operation 2"
+    },
+    {
+      "id": "v40_xyz_03",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "3D vector coordinate operation 3"
+    },
+    {
+      "id": "v40_xyz_04",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "3D vector coordinate operation 4"
+    },
+    {
+      "id": "v40_xyz_05",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "3D vector coordinate operation 5"
+    },
+    {
+      "id": "v40_xyz_06",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "3D vector coordinate operation 6"
+    },
+    {
+      "id": "v40_xyz_07",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "3D vector coordinate operation 7"
+    },
+    {
+      "id": "v40_xyz_08",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "3D vector coordinate operation 8"
+    },
+    {
+      "id": "v40_xyz_09",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "3D vector coordinate operation 9"
+    },
+    {
+      "id": "v40_complex_00",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Complex number algebra operation 0"
+    },
+    {
+      "id": "v40_complex_01",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Complex number algebra operation 1"
+    },
+    {
+      "id": "v40_complex_02",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Complex number algebra operation 2"
+    },
+    {
+      "id": "v40_complex_03",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Complex number algebra operation 3"
+    },
+    {
+      "id": "v40_complex_04",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Complex number algebra operation 4"
+    },
+    {
+      "id": "v40_complex_05",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Complex number algebra operation 5"
+    },
+    {
+      "id": "v40_complex_06",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Complex number algebra operation 6"
+    },
+    {
+      "id": "v40_complex_07",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Complex number algebra operation 7"
+    },
+    {
+      "id": "v40_complex_08",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Complex number algebra operation 8"
+    },
+    {
+      "id": "v40_complex_09",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Complex number algebra operation 9"
+    },
+    {
+      "id": "v40_binomial_00",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "Binomial distribution statistic/event 0"
+    },
+    {
+      "id": "v40_binomial_01",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "Binomial distribution statistic/event 1"
+    },
+    {
+      "id": "v40_binomial_02",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "Binomial distribution statistic/event 2"
+    },
+    {
+      "id": "v40_binomial_03",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "Binomial distribution statistic/event 3"
+    },
+    {
+      "id": "v40_binomial_04",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "Binomial distribution statistic/event 4"
+    },
+    {
+      "id": "v40_binomial_05",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "Binomial distribution statistic/event 5"
+    },
+    {
+      "id": "v40_binomial_06",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "Binomial distribution statistic/event 6"
+    },
+    {
+      "id": "v40_binomial_07",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "Binomial distribution statistic/event 7"
+    },
+    {
+      "id": "v40_binomial_08",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "Binomial distribution statistic/event 8"
+    },
+    {
+      "id": "v40_binomial_09",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "Binomial distribution statistic/event 9"
+    }
+  ],
+  "validation": {
+    "new_answer_checks": "1100/1100 SymPy cross-check",
+    "exact_duplicate_questions": 0,
+    "zip_integrity": "checked after write"
+  },
+  "limitations": [
+    "Form ID and task variation do not establish genuinely independent mathematical problem types.",
+    "Existing question explanations and the full website have not undergone regression tests.",
+    "No claim that question bank is wired into practice UI."
+  ]
+}

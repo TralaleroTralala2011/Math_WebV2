@@ -1,0 +1,250 @@
+{
+  "version": "V213",
+  "source_archive": "MATH_WEB_GITHUB_READY_V212_FULL_WEB_BANK_INTEGRATED.zip",
+  "verified_source_bank_size": 12066,
+  "new_question_count": 300,
+  "final_sqlite_question_count": 12366,
+  "new_candidate_groups": 30,
+  "new_certified_independent_types": 0,
+  "grades": {
+    "10": 100,
+    "11": 100,
+    "12": 100
+  },
+  "question_formats": {
+    "multiple_choice": 210,
+    "short_answer": 60,
+    "true_false": 30
+  },
+  "validation": {
+    "exact_check_each_generated_answer": 300,
+    "unique_new_question_stems": 300,
+    "exact_question_duplicates_against_base": 0,
+    "candidate_group_id_collision": 0,
+    "mcq_unique_correct_option": 210,
+    "true_false_2_true_2_false": 30,
+    "each_group_has_10": true,
+    "sqlite_integrity": "ok",
+    "full_zip_readback_pending": false,
+    "full_zip_readback_rows": 12366
+  },
+  "method_review_status": "30 method-signature candidates reviewed for internal differences but NOT exhaustively semantically matched against preexisting 11,646 questions; zero certified",
+  "limitations": [
+    "Automatic arithmetic and formula checks do not equal independent manual review of every explanation.",
+    "Semantic equivalence with all past types has not been certified; no independent types claimed.",
+    "Site and Battle integration/regression tests are not yet run.",
+    "No claim of 60 minutes of uninterrupted execution."
+  ],
+  "groups": {
+    "chinese_remainder_two_coprime_moduli": {
+      "grade": 10,
+      "topic": "chia_du",
+      "method_signature": "chinese_remainder_reconstruction",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "bounded_stars_bars_three_variables": {
+      "grade": 10,
+      "topic": "g10_combinatorics_olympiad",
+      "method_signature": "stars_bars_subtract_upper_bound",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "absolute_distance_sum_integer_solution_count": {
+      "grade": 10,
+      "topic": "phuong_trinh",
+      "method_signature": "piecewise_absolute_intervals_parity",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "quadratic_positive_for_all_reals_smallest_integer": {
+      "grade": 10,
+      "topic": "ham_so_bac_hai",
+      "method_signature": "completion_of_square_global_min",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "biquadratic_real_root_count": {
+      "grade": 10,
+      "topic": "phuong_trinh_bac_hai",
+      "method_signature": "substitution_y_x_squared_roots",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "internal_division_point_x_coordinate": {
+      "grade": 10,
+      "topic": "toa_do_phang",
+      "method_signature": "section_formula_weighted_endpoint",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "right_triangle_incircle_radius_squared": {
+      "grade": 10,
+      "topic": "g10_geom_special_lines",
+      "method_signature": "area_semiperimeter_inradius",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "regular_polygon_interior_angle_inverse": {
+      "grade": 10,
+      "topic": "hinh_hoc_co_ban_10",
+      "method_signature": "exterior_angle_regular_polygon",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "digit_arrangements_without_leading_zero": {
+      "grade": 10,
+      "topic": "quy_tac_dem",
+      "method_signature": "multiplication_rule_first_nonzero",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "two_numbers_same_parity_without_replacement": {
+      "grade": 10,
+      "topic": "xac_suat",
+      "method_signature": "pair_parity_hypergeometric",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "triple_angle_cos_from_cosine": {
+      "grade": 11,
+      "topic": "cong_thuc_luong_giac",
+      "method_signature": "cos_triple_angle_chebyshev",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "telescoping_three_consecutive_factors": {
+      "grade": 11,
+      "topic": "day_so",
+      "method_signature": "partial_fractions_telescoping",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "sum_first_n_squares_induction": {
+      "grade": 11,
+      "topic": "quy_nap_toan_hoc_11",
+      "method_signature": "induction_sum_squares_formula",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "vandermonde_sum_binomial_squares": {
+      "grade": 11,
+      "topic": "g11_binomial_advanced",
+      "method_signature": "vandermonde_convolution_count",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "inverse_function_derivative_cubic": {
+      "grade": 11,
+      "topic": "dao_ham",
+      "method_signature": "derivative_inverse_chain_identity",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "implicit_derivative_circle_slope": {
+      "grade": 11,
+      "topic": "dao_ham_quy_tac",
+      "method_signature": "implicit_differentiation_relation",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "removable_discontinuity_parameter_value": {
+      "grade": 11,
+      "topic": "ham_so_lien_tuc",
+      "method_signature": "factor_and_extend_continuity",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "tangent_line_y_intercept_polynomial": {
+      "grade": 11,
+      "topic": "ung_dung_dao_ham_11",
+      "method_signature": "tangent_point_slope_intercept",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "conditional_exactly_one_of_two_given_any": {
+      "grade": 11,
+      "topic": "g11_conditional_probability_models",
+      "method_signature": "conditional_probability_two_bernoulli_events",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "cube_parallel_opposite_edges_distance_squared": {
+      "grade": 11,
+      "topic": "g11_geom_skew_lines_distance",
+      "method_signature": "parallel_skew_edges_shortest_segment",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "global_maximum_cubic_closed_interval": {
+      "grade": 12,
+      "topic": "gtln_gtnn",
+      "method_signature": "derivative_endpoints_stationary_candidates",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "product_logarithm_two_shifted_arguments": {
+      "grade": 12,
+      "topic": "pt_logarit",
+      "method_signature": "logarithm_domain_quadratic_equation",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "even_integrand_symmetric_interval_polynomial": {
+      "grade": 12,
+      "topic": "nguyen_ham_tich_phan",
+      "method_signature": "even_function_symmetry_integral",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "integration_by_parts_x_sin_nx_over_pi": {
+      "grade": 12,
+      "topic": "nguyen_ham_tich_phan",
+      "method_signature": "parts_x_sine_boundary_pi",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "spherical_cap_volume_pi_coefficient": {
+      "grade": 12,
+      "topic": "g12_geom_solid_surface_area",
+      "method_signature": "disk_slicing_sphere_cap",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "squared_sine_angle_line_plane": {
+      "grade": 12,
+      "topic": "g12_geom_line_plane_angle",
+      "method_signature": "normal_projection_line_plane_angle",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "distance_skew_lines_squared_triple_product": {
+      "grade": 12,
+      "topic": "g12_geom_min_distance_3d",
+      "method_signature": "skew_lines_mixed_product_distance",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "tetrahedron_volume_three_vectors_determinant": {
+      "grade": 12,
+      "topic": "the_tich_khong_gian",
+      "method_signature": "scalar_triple_product_tetrahedron",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "grouped_frequency_population_variance": {
+      "grade": 12,
+      "topic": "thong_ke_12",
+      "method_signature": "weighted_second_moment_variance",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "no_adjacent_k_selected_positions_probability": {
+      "grade": 12,
+      "topic": "xac_suat_12",
+      "method_signature": "gap_transform_nonadjacent_selection",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    }
+  }
+}

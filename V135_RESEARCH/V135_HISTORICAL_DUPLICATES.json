@@ -1,0 +1,20 @@
+{
+  "source_scan": "packaged historical JSONL only",
+  "duplicate_occurrences": [
+    {
+      "first": {
+        "file": "V62_ADDED_QUESTIONS.jsonl",
+        "line": 57,
+        "id": "v62_method_006"
+      },
+      "again": {
+        "file": "V64_ADDED_QUESTIONS.jsonl",
+        "line": 57,
+        "id": "v64_geometric_sequence_nth"
+      },
+      "question": "Cấp số nhân có u₁=8, công bội q=2. Tính u₅."
+    }
+  ],
+  "automatic_deletion_performed": false,
+  "publication_policy": "manual review before import"
+}

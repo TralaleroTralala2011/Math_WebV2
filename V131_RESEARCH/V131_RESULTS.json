@@ -1,0 +1,21 @@
+{
+  "version": "V131",
+  "base": "V130",
+  "requested_new_distinct_methods": 1000,
+  "candidate_methods_created": 15,
+  "new_questions_created": 150,
+  "new_topics_touched": 15,
+  "all_topics_catalogue": 150,
+  "verified_answers_by_alternative_calculation": 150,
+  "unique_question_texts": 150,
+  "historical_question_rows_scanned": 13500,
+  "exact_question_stem_collisions_in_v121_and_v123": 0,
+  "existing_form_records_examined": 1350,
+  "form_title_exact_normalization_collisions": 0,
+  "candidate_topic_ids_valid": true,
+  "candidate_grade_matches_catalogue": true,
+  "all_unpublished": true,
+  "new_methods_certified_independent": 0,
+  "reason_not_certified": "No full semantic method equivalence audit against historical and external problem archetypes, no expert pedagogical review.",
+  "scope_limitation": "Exact-stem comparison only against V121 and V123 research corpora, not every historic question file. Existing test suite for whole backend/frontend not run."
+}

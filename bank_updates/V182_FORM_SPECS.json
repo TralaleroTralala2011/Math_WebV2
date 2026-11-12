@@ -1,0 +1,1413 @@
+[
+  {
+    "form_id": "v182_set_intersection",
+    "grade": 10,
+    "topic": "menh_de_tap_hop",
+    "name": "Số phần tử giao của hai tập",
+    "concept": "Công thức bao hàm–loại trừ",
+    "general_method": "|A∩B|=|A|+|B|−|A∪B|",
+    "conditions": "A,B hữu hạn",
+    "distinguishing_feature": "Tìm giao từ hợp và kích thước hai tập",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_count_outfits",
+    "grade": 10,
+    "topic": "quy_tac_dem",
+    "name": "Quy tắc nhân",
+    "concept": "Quy tắc đếm nhân",
+    "general_method": "m lựa chọn độc lập nhân n lựa chọn",
+    "conditions": "Hai công đoạn độc lập",
+    "distinguishing_feature": "Đếm cặp lựa chọn",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_divisibility_truth",
+    "grade": 10,
+    "topic": "menh_de",
+    "name": "Đánh giá mệnh đề chia hết",
+    "concept": "Mệnh đề đúng sai",
+    "general_method": "Kiểm tra phần dư",
+    "conditions": "Các mệnh đề số học xác định",
+    "distinguishing_feature": "Đếm số mệnh đề đúng",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_linear_system_sum",
+    "grade": 10,
+    "topic": "he_phuong_trinh",
+    "name": "Hệ hai phương trình bậc nhất",
+    "concept": "Phép cộng và trừ hệ",
+    "general_method": "x=(s+d)/2",
+    "conditions": "Tổng và hiệu cùng tính chẵn lẻ",
+    "distinguishing_feature": "Tìm nghiệm x từ tổng và hiệu",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_cosine_law",
+    "grade": 10,
+    "topic": "he_thuc_luong_tam_giac",
+    "name": "Định lý cosin",
+    "concept": "Hệ thức lượng tam giác",
+    "general_method": "c²=a²+b²−2ab cos C",
+    "conditions": "Góc xen giữa 60° hoặc 120°",
+    "distinguishing_feature": "Tính bình phương cạnh đối diện",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_line_slope",
+    "grade": 10,
+    "topic": "duong_thang",
+    "name": "Hệ số góc đường thẳng",
+    "concept": "Tọa độ đường thẳng",
+    "general_method": "k=(y₂−y₁)/(x₂−x₁)",
+    "conditions": "Hai điểm khác hoành độ",
+    "distinguishing_feature": "Xác định độ dốc từ hai điểm",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_tangent_length_squared",
+    "grade": 10,
+    "topic": "duong_tron",
+    "name": "Độ dài tiếp tuyến đường tròn",
+    "concept": "Tam giác vuông với bán kính",
+    "general_method": "PT²=PO²−R²",
+    "conditions": "P ngoài đường tròn",
+    "distinguishing_feature": "Tính bình phương đoạn tiếp tuyến",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_pythagorean_squared",
+    "grade": 10,
+    "topic": "hinh_hoc_10",
+    "name": "Định lý Pythagore",
+    "concept": "Tam giác vuông",
+    "general_method": "c²=a²+b²",
+    "conditions": "Hai cạnh góc vuông dương",
+    "distinguishing_feature": "Tính bình phương cạnh huyền",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_linear_breakeven",
+    "grade": 10,
+    "topic": "bai_toan_thuc_te_10",
+    "name": "Hòa vốn mô hình tuyến tính",
+    "concept": "Phương trình tuyến tính",
+    "general_method": "số lượng=chi phí cố định/(giá bán−chi phí biến đổi)",
+    "conditions": "Lãi trên mỗi sản phẩm dương",
+    "distinguishing_feature": "Tìm số lượng hòa vốn",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_trapezoid_area",
+    "grade": 10,
+    "topic": "tam_giac_tu_giac_10",
+    "name": "Diện tích hình thang",
+    "concept": "Diện tích tứ giác",
+    "general_method": "S=(a+b)h/2",
+    "conditions": "Hai đáy song song, h>0",
+    "distinguishing_feature": "Tính diện tích từ hai đáy và chiều cao",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_inscribed_angle",
+    "grade": 10,
+    "topic": "duong_tron_co_ban_10",
+    "name": "Góc nội tiếp",
+    "concept": "Góc ở tâm và góc nội tiếp",
+    "general_method": "góc nội tiếp bằng nửa góc ở tâm",
+    "conditions": "Cùng chắn một cung nhỏ",
+    "distinguishing_feature": "Tính góc nội tiếp từ góc ở tâm",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_distance_squared_2d",
+    "grade": 10,
+    "topic": "toa_do_hinh_hoc_10",
+    "name": "Khoảng cách bình phương",
+    "concept": "Tọa độ mặt phẳng",
+    "general_method": "AB²=(Δx)²+(Δy)²",
+    "conditions": "A,B khác nhau",
+    "distinguishing_feature": "Tính bình phương khoảng cách",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_sas_matching_side",
+    "grade": 10,
+    "topic": "g10_geom_triangle_congruence",
+    "name": "Cạnh tương ứng trong tam giác bằng nhau",
+    "concept": "Trường hợp cạnh–góc–cạnh",
+    "general_method": "SAS => cạnh thứ ba bằng nhau",
+    "conditions": "Hai cạnh và góc xen giữa tương ứng bằng nhau",
+    "distinguishing_feature": "Suy ra cạnh tương ứng bằng nhau",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_midpoint_sum_2d",
+    "grade": 10,
+    "topic": "g10_geom_coordinate_distance_midpoint",
+    "name": "Tọa độ trung điểm",
+    "concept": "Trung điểm đoạn thẳng",
+    "general_method": "M=((x₁+x₂)/2,(y₁+y₂)/2)",
+    "conditions": "A,B thuộc mặt phẳng tọa độ",
+    "distinguishing_feature": "Tính tổng tọa độ trung điểm",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_perp_bisector_vertical",
+    "grade": 10,
+    "topic": "g10_geom_locus",
+    "name": "Quỹ tích đường trung trực",
+    "concept": "Điểm cách đều hai điểm",
+    "general_method": "Trung trực của đoạn thẳng nằm ngang là x=(a+b)/2",
+    "conditions": "A,B cùng tung độ, khác hoành độ",
+    "distinguishing_feature": "Tìm hoành độ mọi điểm cách đều A và B",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_tangent_chord_angle",
+    "grade": 10,
+    "topic": "g10_geom_circle_tangent_chord",
+    "name": "Góc tiếp tuyến và dây cung",
+    "concept": "Định lý góc tạo bởi tiếp tuyến và dây",
+    "general_method": "Góc tiếp tuyến–dây bằng góc nội tiếp chắn cùng cung",
+    "conditions": "Tiếp tuyến tại đầu dây",
+    "distinguishing_feature": "Tính góc tiếp tuyến–dây",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_symmetric_difference_squared",
+    "grade": 10,
+    "topic": "g10_symmetric_systems",
+    "name": "Hệ đối xứng hai ẩn",
+    "concept": "Hệ thức Viète",
+    "general_method": "(x−y)²=(x+y)²−4xy",
+    "conditions": "Biết tổng và tích hai nghiệm thực",
+    "distinguishing_feature": "Tính bình phương hiệu hai nghiệm",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_sum_square_sequence",
+    "grade": 11,
+    "topic": "day_so",
+    "name": "Tổng dãy số bình phương",
+    "concept": "Tổng bình phương",
+    "general_method": "S=n(n+1)(2n+1)/6",
+    "conditions": "n nguyên dương",
+    "distinguishing_feature": "Tính tổng 1²+…+n²",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_removable_limit",
+    "grade": 11,
+    "topic": "gioi_han",
+    "name": "Giới hạn dạng 0/0 khử nhân tử",
+    "concept": "Phân tích đa thức",
+    "general_method": "(x²−a²)/(x−a)=x+a",
+    "conditions": "x tiến tới a, x≠a",
+    "distinguishing_feature": "Khử nhân tử chung trước khi thế",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_prism_edges",
+    "grade": 11,
+    "topic": "hinh_khong_gian",
+    "name": "Đếm cạnh lăng trụ",
+    "concept": "Cấu trúc lăng trụ n-gon",
+    "general_method": "3n cạnh",
+    "conditions": "Lăng trụ có hai đáy n-gon",
+    "distinguishing_feature": "Đếm số cạnh của lăng trụ",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_two_red_without_replacement",
+    "grade": 11,
+    "topic": "xac_suat_11",
+    "name": "Xác suất lấy hai vật cùng màu",
+    "concept": "Quy tắc nhân xác suất phụ thuộc",
+    "general_method": "r(r−1)/(n(n−1))",
+    "conditions": "Rút hai lần không hoàn lại",
+    "distinguishing_feature": "Xác suất có điều kiện trong phép rút",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_cos_from_sin",
+    "grade": 11,
+    "topic": "gia_tri_luong_giac",
+    "name": "Tìm cos từ sin",
+    "concept": "Hệ thức lượng giác cơ bản",
+    "general_method": "cos²=1−sin²",
+    "conditions": "Góc nhọn, sin là phân số tam giác Pythagore",
+    "distinguishing_feature": "Lựa chọn dấu dương của cos",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_cos_double_angle",
+    "grade": 11,
+    "topic": "cong_thuc_luong_giac",
+    "name": "Công thức nhân đôi",
+    "concept": "Lượng giác",
+    "general_method": "cos(2a)=2cos²(a)−1",
+    "conditions": "Biết cos(a)",
+    "distinguishing_feature": "Tính cos góc gấp đôi",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_sine_zero_count",
+    "grade": 11,
+    "topic": "ham_so_luong_giac_day_du",
+    "name": "Số nghiệm của sin(kx)=0",
+    "concept": "Chu kỳ và nghiệm lượng giác",
+    "general_method": "sin(kx)=0 ⇔ kx=mπ",
+    "conditions": "k nguyên dương, 0≤x<2π",
+    "distinguishing_feature": "Đếm nghiệm trong một khoảng",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_cosine_one_count",
+    "grade": 11,
+    "topic": "phuong_trinh_luong_giac_day_du",
+    "name": "Số nghiệm của cos(kx)=1",
+    "concept": "Phương trình lượng giác",
+    "general_method": "cos(kx)=1 ⇔ kx=2mπ",
+    "conditions": "k nguyên dương, 0≤x<2π",
+    "distinguishing_feature": "Đếm nghiệm đúng trên nửa khoảng",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_odd_increment_recurrence",
+    "grade": 11,
+    "topic": "day_so_tong_quat",
+    "name": "Dãy truy hồi cộng số lẻ",
+    "concept": "Dãy số quy nạp",
+    "general_method": "1+3+…+(2n−1)=n²",
+    "conditions": "u₁=1, uₙ=uₙ₋₁+(2n−1)",
+    "distinguishing_feature": "Tính số hạng bằng tổng số lẻ",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_product_rule",
+    "grade": 11,
+    "topic": "dao_ham_quy_tac",
+    "name": "Quy tắc đạo hàm tích",
+    "concept": "Đạo hàm hàm tích",
+    "general_method": "(uv)′=u′v+uv′",
+    "conditions": "u,v là đa thức",
+    "distinguishing_feature": "Đạo hàm tích tại điểm",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_normal_slope",
+    "grade": 11,
+    "topic": "ung_dung_dao_ham_11",
+    "name": "Hệ số góc pháp tuyến",
+    "concept": "Tiếp tuyến và pháp tuyến",
+    "general_method": "k_pháp=−1/f′(x₀)",
+    "conditions": "f′(x₀)≠0",
+    "distinguishing_feature": "Tính độ dốc pháp tuyến từ đạo hàm",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_compound_growth",
+    "grade": 11,
+    "topic": "bai_toan_thuc_te_11",
+    "name": "Lãi kép",
+    "concept": "Cấp số nhân thực tế",
+    "general_method": "Aₙ=A₀qⁿ",
+    "conditions": "Lãi suất kỳ cố định",
+    "distinguishing_feature": "Tính số tiền sau nhiều kỳ",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_rotation_90",
+    "grade": 11,
+    "topic": "phep_bien_hinh_11",
+    "name": "Phép quay 90°",
+    "concept": "Phép biến hình mặt phẳng",
+    "general_method": "(x,y)↦(−y,x)",
+    "conditions": "Quay quanh gốc O ngược chiều kim đồng hồ",
+    "distinguishing_feature": "Tìm tổng tọa độ điểm ảnh",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_pyramid_edges",
+    "grade": 11,
+    "topic": "nhan_biet_hinh_khong_gian_11",
+    "name": "Số cạnh hình chóp",
+    "concept": "Nhận dạng hình chóp",
+    "general_method": "2n cạnh",
+    "conditions": "Hình chóp đáy n-gon",
+    "distinguishing_feature": "Đếm cạnh bên và cạnh đáy",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_parallel_planes_distance",
+    "grade": 11,
+    "topic": "g11_geom_parallel_planes",
+    "name": "Khoảng cách hai mặt phẳng song song",
+    "concept": "Hình học không gian",
+    "general_method": "d=|a−b| cho x=a, x=b",
+    "conditions": "Hai mặt phẳng phân biệt",
+    "distinguishing_feature": "Khoảng cách hai mặt phẳng",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_skew_perpendicular_distance",
+    "grade": 11,
+    "topic": "g11_geom_skew_lines_distance",
+    "name": "Khoảng cách đường thẳng chéo nhau",
+    "concept": "Hình học không gian tọa độ",
+    "general_method": "Khoảng cách hai đường vuông góc chéo nhau bằng độ lệch theo trục chung",
+    "conditions": "Hai đường song song với Ox và Oy tại độ cao khác nhau",
+    "distinguishing_feature": "Khoảng cách hai đường chéo nhau",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_affine_recurrence",
+    "grade": 11,
+    "topic": "g11_sequences_advanced",
+    "name": "Dãy truy hồi affine",
+    "concept": "Giải truy hồi tuyến tính",
+    "general_method": "uₙ=2ⁿ⁻¹(u₁+1)−1",
+    "conditions": "uₙ=2uₙ₋₁+1",
+    "distinguishing_feature": "Giải truy hồi bằng phép đổi biến v=u+1",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_binomial_coefficient",
+    "grade": 11,
+    "topic": "g11_binomial_advanced",
+    "name": "Hệ số nhị thức Newton",
+    "concept": "Khai triển nhị thức",
+    "general_method": "[x^k](1+ax)^n=C(n,k)a^k",
+    "conditions": "n nguyên không âm, 0≤k≤n",
+    "distinguishing_feature": "Tìm hệ số một lũy thừa",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_conditional_count",
+    "grade": 11,
+    "topic": "g11_conditional_probability_models",
+    "name": "Xác suất có điều kiện từ bảng số liệu",
+    "concept": "Xác suất có điều kiện",
+    "general_method": "P(A|B)=n(A∩B)/n(B)",
+    "conditions": "n(B)>0",
+    "distinguishing_feature": "Tính xác suất trên không gian đã điều kiện",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_quadratic_stationary_point",
+    "grade": 12,
+    "topic": "ung_dung_dao_ham",
+    "name": "Điểm dừng của parabol",
+    "concept": "Đạo hàm",
+    "general_method": "f′(x)=2ax+b=0",
+    "conditions": "a≠0",
+    "distinguishing_feature": "Tìm hoành độ điểm dừng",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_cubic_stationary_count",
+    "grade": 12,
+    "topic": "khao_sat_ham_so",
+    "name": "Số cực trị của đa thức bậc ba",
+    "concept": "Khảo sát hàm số",
+    "general_method": "Đạo hàm bậc hai có 2 nghiệm phân biệt khi Δ>0",
+    "conditions": "Hệ số bậc ba khác 0",
+    "distinguishing_feature": "Đếm cực trị từ nghiệm đạo hàm",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_prism_volume",
+    "grade": 12,
+    "topic": "hinh_hoc_khong_gian",
+    "name": "Thể tích lăng trụ",
+    "concept": "Hình khối",
+    "general_method": "V=S_đáy h",
+    "conditions": "Đáy và chiều cao dương",
+    "distinguishing_feature": "Tính thể tích lăng trụ",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_discrete_expectation",
+    "grade": 12,
+    "topic": "xac_suat_12",
+    "name": "Kỳ vọng biến ngẫu nhiên",
+    "concept": "Xác suất rời rạc",
+    "general_method": "E(X)=Σxᵢpᵢ",
+    "conditions": "Các xác suất không âm, tổng 1",
+    "distinguishing_feature": "Tính kỳ vọng từ bảng phân phối",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_population_variance",
+    "grade": 12,
+    "topic": "thong_ke_12",
+    "name": "Phương sai dữ liệu",
+    "concept": "Các số đặc trưng",
+    "general_method": "V=(1/n)Σ(xᵢ−x̄)²",
+    "conditions": "Mẫu gồm các số thực",
+    "distinguishing_feature": "Tính phương sai theo trung bình",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_parabola_minimum",
+    "grade": 12,
+    "topic": "gtln_gtnn",
+    "name": "Giá trị nhỏ nhất parabol",
+    "concept": "Hoàn thành bình phương",
+    "general_method": "a(x−h)²+k ≥ k khi a>0",
+    "conditions": "a>0",
+    "distinguishing_feature": "Tìm GTNN bằng dạng chuẩn",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_line_parabola_intersections",
+    "grade": 12,
+    "topic": "tuong_giao",
+    "name": "Số giao điểm hai đồ thị",
+    "concept": "Giải phương trình hoành độ giao điểm",
+    "general_method": "Δ quyết định số nghiệm thực",
+    "conditions": "Đường thẳng và parabol",
+    "distinguishing_feature": "Đếm số giao điểm",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_exponential_growth",
+    "grade": 12,
+    "topic": "ham_mu",
+    "name": "Hàm mũ tăng trưởng",
+    "concept": "Hàm số mũ",
+    "general_method": "f(t)=A b^t",
+    "conditions": "b>1, t nguyên không âm",
+    "distinguishing_feature": "Tính giá trị hàm mũ",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_logarithm_of_power",
+    "grade": 12,
+    "topic": "ham_logarit",
+    "name": "Logarit của lũy thừa",
+    "concept": "Định nghĩa logarit",
+    "general_method": "log_b(b^n)=n",
+    "conditions": "b>0,b≠1",
+    "distinguishing_feature": "Tính logarit chính xác",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_plane_normal_sum",
+    "grade": 12,
+    "topic": "mat_phang_oxyz",
+    "name": "Vectơ pháp tuyến mặt phẳng",
+    "concept": "Phương trình mặt phẳng",
+    "general_method": "(a,b,c) là VTPT của ax+by+cz+d=0",
+    "conditions": "(a,b,c) khác 0",
+    "distinguishing_feature": "Tính tổng tọa độ vectơ pháp tuyến",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_line_parametric_point",
+    "grade": 12,
+    "topic": "duong_thang_oxyz",
+    "name": "Phương trình tham số đường thẳng",
+    "concept": "Tọa độ Oxyz",
+    "general_method": "M=P+t v",
+    "conditions": "v khác 0",
+    "distinguishing_feature": "Tìm tổng tọa độ điểm theo tham số",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_sphere_radius_squared",
+    "grade": 12,
+    "topic": "mat_cau",
+    "name": "Bán kính mặt cầu",
+    "concept": "Phương trình mặt cầu",
+    "general_method": "R²=a²+b²+c²−d",
+    "conditions": "R²>0",
+    "distinguishing_feature": "Hoàn thành bình phương phương trình mặt cầu",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_axis_plane_distance",
+    "grade": 12,
+    "topic": "goc_khoang_cach_oxyz",
+    "name": "Khoảng cách điểm đến mặt phẳng",
+    "concept": "Khoảng cách Oxyz",
+    "general_method": "d(M,x=k)=|x_M−k|",
+    "conditions": "M bất kỳ, x=k là mặt phẳng",
+    "distinguishing_feature": "Tính khoảng cách từ điểm tới mặt phẳng tọa độ dịch chuyển",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_pyramid_volume",
+    "grade": 12,
+    "topic": "the_tich_khong_gian",
+    "name": "Thể tích hình chóp",
+    "concept": "Thể tích khối đa diện",
+    "general_method": "V=(1/3)S_đáy h",
+    "conditions": "S_đáy>0,h>0",
+    "distinguishing_feature": "Tính thể tích hình chóp",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_profit_maximum",
+    "grade": 12,
+    "topic": "bai_toan_thuc_te_12",
+    "name": "Tối đa hóa lợi nhuận",
+    "concept": "Ứng dụng đạo hàm thực tế",
+    "general_method": "P(x)=−a(x−h)²+k đạt max k",
+    "conditions": "a>0, x≥0, h≥0",
+    "distinguishing_feature": "Tìm lợi nhuận cực đại",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_line_direction_sum",
+    "grade": 12,
+    "topic": "g12_geom_line_equation_3d",
+    "name": "Vectơ chỉ phương đường thẳng Oxyz",
+    "concept": "Phương trình đường thẳng",
+    "general_method": "v=B−A",
+    "conditions": "A≠B",
+    "distinguishing_feature": "Tính tổng tọa độ vectơ chỉ phương",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_point_plane_345",
+    "grade": 12,
+    "topic": "g12_geom_point_plane_distance",
+    "name": "Khoảng cách điểm đến mặt phẳng",
+    "concept": "Công thức khoảng cách Oxyz",
+    "general_method": "|3x+4y−d|/5",
+    "conditions": "Pháp tuyến (3,4,0)",
+    "distinguishing_feature": "Tính khoảng cách đến mặt phẳng nghiêng",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_plane_parameter",
+    "grade": 12,
+    "topic": "g12_geom_parameter_geometry",
+    "name": "Tham số mặt phẳng đi qua điểm",
+    "concept": "Điều kiện điểm thuộc mặt phẳng",
+    "general_method": "Thế tọa độ vào ax+ky+z=0",
+    "conditions": "y≠0",
+    "distinguishing_feature": "Tìm tham số để mặt phẳng chứa điểm",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_distance_to_axis_min",
+    "grade": 12,
+    "topic": "g12_geom_3d_optimization",
+    "name": "Cực trị khoảng cách đến đường thẳng",
+    "concept": "Tối ưu hình học tọa độ",
+    "general_method": "min_{t}[(x−t)²+y²+z²]=y²+z²",
+    "conditions": "Đường thẳng là trục Ox",
+    "distinguishing_feature": "Tìm bình phương khoảng cách ngắn nhất",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_integral_maximum",
+    "grade": 12,
+    "topic": "g12_integral_optimization",
+    "name": "Tối ưu tích phân có tham số",
+    "concept": "Tích phân và đạo hàm",
+    "general_method": "F(t)=∫₀ᵗ(c−2ax)dx=ct−at²",
+    "conditions": "a,c>0, t≥0",
+    "distinguishing_feature": "Tìm t để tích phân lớn nhất",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_revolution_cone",
+    "grade": 12,
+    "topic": "g12_solid_of_revolution",
+    "name": "Thể tích khối tròn xoay",
+    "concept": "Phương pháp đĩa",
+    "general_method": "V=π∫₀ᵇ(kx)²dx=πk²b³/3",
+    "conditions": "k,b>0",
+    "distinguishing_feature": "Tìm hệ số của π trong thể tích",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_sine_rule_diameter",
+    "grade": 10,
+    "topic": "he_thuc_luong_van_dung_10",
+    "name": "Đường kính ngoại tiếp theo định lý sin",
+    "concept": "Hệ thức lượng nâng cao",
+    "general_method": "2R=a/sin A",
+    "conditions": "Tam giác có cạnh a đối diện góc A",
+    "distinguishing_feature": "Tính đường kính đường tròn ngoại tiếp",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_triangle_midsegment",
+    "grade": 10,
+    "topic": "chung_minh_hinh_hoc_10",
+    "name": "Đường trung bình tam giác",
+    "concept": "Định lý đường trung bình",
+    "general_method": "MN=BC/2",
+    "conditions": "M,N là trung điểm hai cạnh",
+    "distinguishing_feature": "Suy ra độ dài cạnh từ quan hệ song song",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_parallelogram_fourth_vertex",
+    "grade": 10,
+    "topic": "g10_geom_vector_proofs",
+    "name": "Chứng minh hình bình hành bằng vectơ",
+    "concept": "Quan hệ vectơ và đường chéo",
+    "general_method": "D=A+C−B",
+    "conditions": "A,B,C là ba đỉnh liên tiếp",
+    "distinguishing_feature": "Tìm đỉnh thứ tư bằng đẳng thức vectơ",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_circle_vertical_chord",
+    "grade": 10,
+    "topic": "g10_geom_coordinate_circle_line",
+    "name": "Giao đường tròn và đường thẳng",
+    "concept": "Tọa độ đường tròn",
+    "general_method": "(y−k)²=r²−(x−h)²",
+    "conditions": "Đường thẳng cắt đường tròn tại hai điểm",
+    "distinguishing_feature": "Tính bình phương độ dài dây cung thẳng đứng",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_parallel_line_plane_distance",
+    "grade": 11,
+    "topic": "song_song_khong_gian",
+    "name": "Khoảng cách đường thẳng song song mặt phẳng",
+    "concept": "Quan hệ song song trong không gian",
+    "general_method": "d(d,z=k)=|h−k|",
+    "conditions": "d nằm trong mặt phẳng z=h, phương Ox",
+    "distinguishing_feature": "Khoảng cách từ đường thẳng đến mặt phẳng",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_perpendicular_vectors_parameter",
+    "grade": 11,
+    "topic": "vuong_goc_khong_gian",
+    "name": "Điều kiện vuông góc hai đường",
+    "concept": "Tích vô hướng",
+    "general_method": "u·v=0",
+    "conditions": "Hai vectơ khác 0",
+    "distinguishing_feature": "Tìm tham số để hai phương vuông góc",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_space_point_plane_distance",
+    "grade": 11,
+    "topic": "goc_khoang_cach_11",
+    "name": "Khoảng cách từ điểm đến mặt phẳng",
+    "concept": "Khoảng cách trong không gian",
+    "general_method": "d(M,z=k)=|z−k|",
+    "conditions": "M bất kỳ, mặt phẳng song song Oxy",
+    "distinguishing_feature": "Khoảng cách từ điểm đến mặt phẳng ngang",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_pyramid_parallel_section_area",
+    "grade": 11,
+    "topic": "thiet_dien_hinh_khong_gian_11",
+    "name": "Thiết diện hình chóp song song đáy",
+    "concept": "Tam giác đồng dạng trong không gian",
+    "general_method": "S_section/S_base=(h/H)²",
+    "conditions": "Mặt phẳng cắt song song đáy",
+    "distinguishing_feature": "Tính diện tích thiết diện",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_savings_arithmetic_total",
+    "grade": 11,
+    "topic": "bai_toan_thuc_te_tong_hop_11",
+    "name": "Tổng tiền tiết kiệm tăng đều",
+    "concept": "Cấp số cộng thực tế",
+    "general_method": "S=n(2a+(n−1)d)/2",
+    "conditions": "Tiết kiệm tăng đều từng năm",
+    "distinguishing_feature": "Tính tổng nhiều năm",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_reflection_x_axis",
+    "grade": 11,
+    "topic": "phep_bien_hinh_co_ban_11",
+    "name": "Phép đối xứng trục Ox",
+    "concept": "Phép biến hình cơ bản",
+    "general_method": "(x,y)↦(x,−y)",
+    "conditions": "Đối xứng qua trục Ox",
+    "distinguishing_feature": "Tính tọa độ điểm ảnh",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_plane_intercept_evaluation",
+    "grade": 11,
+    "topic": "g11_geom_space_lines_planes",
+    "name": "Phương trình mặt phẳng qua ba giao điểm",
+    "concept": "Hình học không gian",
+    "general_method": "x/a+y/b+z/c=1",
+    "conditions": "a,b,c khác 0",
+    "distinguishing_feature": "Tính giá trị biểu thức mặt phẳng tại điểm",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_direction_parallel_plane",
+    "grade": 11,
+    "topic": "g11_geom_parallel_line_plane",
+    "name": "Đường thẳng song song mặt phẳng",
+    "concept": "Tích vô hướng với pháp tuyến",
+    "general_method": "n·v=0",
+    "conditions": "v khác 0",
+    "distinguishing_feature": "Tìm tham số vectơ chỉ phương song song mặt phẳng",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_direction_normal_plane",
+    "grade": 11,
+    "topic": "g11_geom_perpendicular_line_plane",
+    "name": "Đường thẳng vuông góc mặt phẳng",
+    "concept": "Phương vectơ pháp tuyến",
+    "general_method": "v=k n",
+    "conditions": "n khác 0, k khác 0",
+    "distinguishing_feature": "Tìm tỉ số thành phần vectơ chỉ phương",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_line_plane_sine_angle",
+    "grade": 11,
+    "topic": "g11_geom_dihedral_angles",
+    "name": "Góc giữa đường thẳng và mặt phẳng",
+    "concept": "Tích vô hướng với pháp tuyến",
+    "general_method": "sin θ=|v·n|/(|v||n|)",
+    "conditions": "Góc giữa đường thẳng và Oxy",
+    "distinguishing_feature": "Tính sin góc đường–mặt phẳng",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_prism_horizontal_section_perimeter",
+    "grade": 11,
+    "topic": "g11_geom_section_construction",
+    "name": "Thiết diện lăng trụ đứng",
+    "concept": "Thiết diện song song đáy",
+    "general_method": "P=2(a+b)",
+    "conditions": "Thiết diện bởi mặt phẳng ngang cắt lăng trụ",
+    "distinguishing_feature": "Tính chu vi thiết diện",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_three_perpendicular_distance",
+    "grade": 11,
+    "topic": "g11_geom_three_perpendiculars",
+    "name": "Định lý ba đường vuông góc",
+    "concept": "Hình chiếu và khoảng cách",
+    "general_method": "d(P,l)²=h²+d(H,l)²",
+    "conditions": "H là hình chiếu P xuống mặt phẳng",
+    "distinguishing_feature": "Tính khoảng cách P đến đường thẳng trong mặt phẳng",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_pyramid_section_perimeter",
+    "grade": 11,
+    "topic": "g11_geom_section_ratio",
+    "name": "Tỉ số chu vi thiết diện",
+    "concept": "Hình đồng dạng",
+    "general_method": "P_section/P_base=t",
+    "conditions": "Thiết diện song song đáy, t trong (0,1)",
+    "distinguishing_feature": "Tính chu vi thiết diện theo tỉ số",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_orthogonal_basis_proof",
+    "grade": 11,
+    "topic": "g11_geom_space_proof",
+    "name": "Chứng minh vuông góc đường và mặt",
+    "concept": "Hai phương độc lập trong mặt phẳng",
+    "general_method": "u·v=0 và u·w=0",
+    "conditions": "v,w độc lập trong mặt phẳng",
+    "distinguishing_feature": "Xác định tham số để đường vuông góc mặt phẳng",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_intercept_triangle_area",
+    "grade": 12,
+    "topic": "tong_hop_thpt",
+    "name": "Diện tích tam giác giao trục",
+    "concept": "Tổng hợp tọa độ và hình học",
+    "general_method": "S=|ab|/2",
+    "conditions": "Đường thẳng cắt hai trục tại a,b khác 0",
+    "distinguishing_feature": "Tính diện tích tam giác tạo với hai trục",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_reflection_horizontal_plane",
+    "grade": 12,
+    "topic": "hinh_hoc_oxyz_van_dung_12",
+    "name": "Đối xứng điểm qua mặt phẳng",
+    "concept": "Phép đối xứng Oxyz",
+    "general_method": "(x,y,z)↦(x,y,2k−z)",
+    "conditions": "Đối xứng qua z=k",
+    "distinguishing_feature": "Tính tổng tọa độ điểm đối xứng",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_plane_plane_cosine",
+    "grade": 12,
+    "topic": "g12_geom_two_planes_angle",
+    "name": "Góc giữa hai mặt phẳng",
+    "concept": "Góc giữa pháp tuyến",
+    "general_method": "cos θ=|n1·n2|/(|n1||n2|)",
+    "conditions": "Hai mặt phẳng không song song",
+    "distinguishing_feature": "Tính cos góc nhọn giữa hai mặt phẳng",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_skew_vs_intersect",
+    "grade": 12,
+    "topic": "g12_geom_skew_line_relation",
+    "name": "Vị trí tương đối hai đường thẳng",
+    "concept": "Giao và chéo nhau trong Oxyz",
+    "general_method": "Khoảng cách theo phương chung bằng 0 ⇔ cắt nhau",
+    "conditions": "Hai đường có phương Ox và Oy",
+    "distinguishing_feature": "Phân biệt giao nhau và chéo nhau",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_line_distance_min_squared",
+    "grade": 12,
+    "topic": "g12_geom_min_distance_3d",
+    "name": "Cực tiểu khoảng cách đến đường thẳng",
+    "concept": "Khoảng cách từ điểm đến đường",
+    "general_method": "min PM²=(x−a)²+(y−b)²",
+    "conditions": "Đường thẳng song song Oz",
+    "distinguishing_feature": "Tìm bình phương khoảng cách ngắn nhất",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_radical_extraneous_root",
+    "grade": 10,
+    "topic": "g10_radical_equations_advanced",
+    "name": "Giải phương trình chứa căn có nghiệm ngoại lai",
+    "concept": "Bình phương và thử nghiệm",
+    "general_method": "√(x+t(t−1))=x",
+    "conditions": "x≥0, t≥2",
+    "distinguishing_feature": "Bình phương rồi loại nghiệm không thỏa",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_advanced_sin_double_count",
+    "grade": 11,
+    "topic": "g11_advanced_trig_equations",
+    "name": "Đếm nghiệm phương trình lượng giác nhân đôi",
+    "concept": "Biến đổi tích",
+    "general_method": "sin(2kx)=sin(kx) ⇔ sin(kx)(2cos(kx)−1)=0",
+    "conditions": "k nguyên dương, x∈[0,2π)",
+    "distinguishing_feature": "Đếm nghiệm của tích hai nhân tử lượng giác",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  },
+  {
+    "form_id": "v182_complex_circle_max_real",
+    "grade": 12,
+    "topic": "g12_complex_plane_geometry",
+    "name": "Quỹ tích đường tròn số phức",
+    "concept": "Hình học số phức",
+    "general_method": "|z−(a+bi)|=r ⇒ max Re(z)=a+r",
+    "conditions": "r>0",
+    "distinguishing_feature": "Tìm cực đại phần thực trên đường tròn",
+    "difficulty_levels": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "independent_form_certified": false,
+    "status": "candidate_pending_semantic_audit"
+  }
+]

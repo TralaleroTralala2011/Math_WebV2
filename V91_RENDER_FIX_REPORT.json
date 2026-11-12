@@ -1,0 +1,17 @@
+{
+  "version": "V91",
+  "base": "V90",
+  "changes": [
+    "Center graph polyline coordinates around actual data bounds instead of origin, avoiding offscreen graphs when x/y ranges are far from zero",
+    "Clear stale diagram when importing a new unsupported geometry",
+    "Report missing graph coordinate points rather than silently returning",
+    "Bound graph coordinates during scaling"
+  ],
+  "bank_form_ids": 33378,
+  "bank_questions": 333780,
+  "new_form_ids": 0,
+  "new_questions": 0,
+  "mathgeo_pro_full_coverage": false,
+  "browser_tested": false,
+  "target_10000_new_forms_met": false
+}

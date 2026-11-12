@@ -1,0 +1,151 @@
+﻿topic_id,grade,topic,candidate_methods,candidate_exercises,methods_certified,methods_target,methods_not_certified,questions_target,question_target_not_certified,warning
+menh_de_tap_hop,10,Mệnh đề và tập hợp,3,30,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+bat_phuong_trinh,10,Bất phương trình và hệ bất phương trình,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+he_thuc_luong,10,Hệ thức lượng trong tam giác,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+vector,10,Vectơ,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+ham_so_bac_hai,10,Hàm số bậc hai và parabol,2,20,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+phuong_trinh_he,10,Phương trình và hệ phương trình,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+quy_tac_dem,10,Quy tắc đếm,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+hoan_vi_chinh_hop_to_hop,10,"Hoán vị, chỉnh hợp, tổ hợp",1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+xac_suat,10,Xác suất,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+thong_ke,10,Thống kê,2,20,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+menh_de,10,Mệnh đề,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+tap_hop,10,Tập hợp và các phép toán,3,30,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+he_bat_phuong_trinh,10,Hệ bất phương trình,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+ham_so,10,Hàm số,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+ham_so_bac_nhat,10,Hàm số bậc nhất,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+phuong_trinh,10,Phương trình,2,20,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+he_phuong_trinh,10,Hệ phương trình,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+he_thuc_luong_tam_giac,10,Hệ thức lượng trong tam giác,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+toa_do_phang,10,Tọa độ trong mặt phẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+duong_thang,10,Đường thẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+duong_tron,10,Đường tròn,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+nhi_thuc_newton,10,Nhị thức Newton,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+hinh_hoc_10,10,Hình học phẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+bai_toan_thuc_te_10,10,Bài toán thực tế Toán 10,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+hinh_hoc_co_ban_10,10,"Hình học cơ bản: góc, cạnh và diện tích",1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+tam_giac_tu_giac_10,10,Tam giác và tứ giác cơ bản,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+duong_tron_co_ban_10,10,Đường tròn và các góc cơ bản,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+he_thuc_luong_van_dung_10,10,Hệ thức lượng trong tam giác,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+toa_do_hinh_hoc_10,10,Tọa độ và đường thẳng trong mặt phẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+chung_minh_hinh_hoc_10,10,Chứng minh hình học và bài toán tổng hợp,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_angles_parallel,10,Góc tạo bởi hai đường thẳng và đường cắt,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_triangle_congruence,10,Các trường hợp bằng nhau của tam giác,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_special_lines,10,"Đường trung tuyến, phân giác và đường cao",1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_quadrilaterals_properties,10,Tính chất hình bình hành và hình thoi,2,20,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_circle_chords_arcs,10,"Dây cung, cung và khoảng cách đến tâm",2,20,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_thales_similarity,10,Định lý Thales và tam giác đồng dạng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_triangle_area_ratio,10,Tỉ số diện tích tam giác,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_circle_angles,10,Góc nội tiếp và góc ở tâm nâng cao,2,20,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_coordinate_distance_midpoint,10,Trung điểm và khoảng cách trong tọa độ phẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_line_intersections,10,Giao điểm và vị trí tương đối của hai đường thẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_locus,10,Quỹ tích điểm trong mặt phẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_circle_tangent_chord,10,Tiếp tuyến và dây cung của đường tròn,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_triangle_inequalities,10,Bất đẳng thức và cực trị trong tam giác,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_vector_proofs,10,Chứng minh hình học bằng vectơ,2,20,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_geom_coordinate_circle_line,10,Bài toán tổng hợp đường thẳng và đường tròn tọa độ,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+ham_so_luong_giac,11,Hàm số lượng giác,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+phuong_trinh_luong_giac,11,Phương trình lượng giác,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+day_so,11,Dãy số,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+cap_so_cong,11,Cấp số cộng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+cap_so_nhan,11,Cấp số nhân,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+gioi_han,11,Giới hạn,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+dao_ham,11,Đạo hàm,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+hinh_khong_gian,11,Quan hệ song song và vuông góc trong không gian,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+xac_suat_11,11,Xác suất,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+gia_tri_luong_giac,11,Giá trị lượng giác,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+cong_thuc_luong_giac,11,Công thức lượng giác,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+ham_so_luong_giac_day_du,11,Hàm số lượng giác,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+phuong_trinh_luong_giac_day_du,11,Phương trình lượng giác,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+day_so_tong_quat,11,Dãy số,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+gioi_han_ham_so,11,Giới hạn hàm số,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+ham_so_lien_tuc,11,Hàm số liên tục,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+dao_ham_quy_tac,11,Quy tắc đạo hàm,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+ung_dung_dao_ham_11,11,Ứng dụng đạo hàm,2,20,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+song_song_khong_gian,11,Quan hệ song song trong không gian,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+vuong_goc_khong_gian,11,Quan hệ vuông góc trong không gian,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+goc_khoang_cach_11,11,Góc và khoảng cách trong không gian,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+thong_ke_11,11,Thống kê Toán 11,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+bai_toan_thuc_te_11,11,Bài toán thực tế Toán 11,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+to_hop_xac_suat_nang_cao_11,11,Tổ hợp và xác suất nâng cao,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+bien_co_doc_lap_11,11,Biến cố độc lập và xác suất có điều kiện,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+day_so_truy_hoi_11,11,Dãy số truy hồi,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+quy_nap_toan_hoc_11,11,Quy nạp toán học,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+phep_bien_hinh_11,11,Phép biến hình trong mặt phẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+thiet_dien_hinh_khong_gian_11,11,Thiết diện hình không gian,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+bai_toan_thuc_te_tong_hop_11,11,Bài toán thực tế tổng hợp Toán 11,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+phep_bien_hinh_co_ban_11,11,Phép biến hình cơ bản,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+nhan_biet_hinh_khong_gian_11,11,Nhận biết hình học không gian,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_transform_translation,11,Phép tịnh tiến và ảnh của hình,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_transform_reflection,11,Phép đối xứng trục,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_space_lines_planes,11,Nhận biết đường thẳng và mặt phẳng trong không gian,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_parallel_line_plane,11,Đường thẳng song song với mặt phẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_prism_pyramid_sections,11,"Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_rotation_homothety,11,Phép quay và phép vị tự,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_parallel_planes,11,Hai mặt phẳng song song,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_perpendicular_line_plane,11,Đường thẳng vuông góc với mặt phẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_dihedral_angles,11,Góc giữa đường thẳng và mặt phẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_section_construction,11,Dựng thiết diện của hình chóp và lăng trụ,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_skew_lines_distance,11,Khoảng cách giữa hai đường thẳng chéo nhau,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_three_perpendiculars,11,Định lý ba đường vuông góc,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_transform_composition,11,Hợp thành các phép biến hình,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_section_ratio,11,Thiết diện và tỉ số đoạn trong hình không gian,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_geom_space_proof,11,Chứng minh tổng hợp song song và vuông góc,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+ung_dung_dao_ham,12,Ứng dụng đạo hàm,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+khao_sat_ham_so,12,Khảo sát và vẽ đồ thị hàm số,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+nguyen_ham_tich_phan,12,Nguyên hàm và tích phân,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+so_phuc,12,Số phức,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+hinh_hoc_khong_gian,12,Hình học không gian,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+toa_do_khong_gian,12,Tọa độ trong không gian,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+xac_suat_12,12,Xác suất và biến ngẫu nhiên,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+thong_ke_12,12,Các số đặc trưng đo xu thế và độ phân tán,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+tinh_don_dieu,12,Tính đơn điệu,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+cuc_tri,12,Cực trị,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+gtln_gtnn,12,Giá trị lớn nhất và nhỏ nhất,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+tiep_tuyen,12,Tiếp tuyến,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+tien_can,12,Tiệm cận,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+tuong_giao,12,Tương giao đồ thị,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+ham_mu,12,Hàm số mũ,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+ham_logarit,12,Hàm số logarit,2,20,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+pt_mu,12,Phương trình mũ,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+pt_logarit,12,Phương trình logarit,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+bpt_mu,12,Bất phương trình mũ,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+bpt_logarit,12,Bất phương trình logarit,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+ung_dung_tich_phan,12,Ứng dụng tích phân,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+bieu_dien_so_phuc,12,Biểu diễn số phức,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+pt_so_phuc,12,Phương trình số phức,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+mat_phang_oxyz,12,Mặt phẳng trong Oxyz,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+duong_thang_oxyz,12,Đường thẳng trong Oxyz,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+mat_cau,12,Mặt cầu,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+goc_khoang_cach_oxyz,12,Góc và khoảng cách Oxyz,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+the_tich_khong_gian,12,Thể tích hình học không gian,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+tong_hop_thpt,12,Bài toán tổng hợp THPT,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+bai_toan_thuc_te_12,12,Bài toán thực tế Toán 12,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+hinh_khoi_va_the_tich_co_ban_12,12,Hình khối và thể tích cơ bản,2,20,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+hinh_hoc_oxyz_van_dung_12,12,Vận dụng tọa độ Oxyz,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_vectors_3d,12,Vectơ và độ dài trong không gian Oxyz,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_plane_equation,12,Phương trình mặt phẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_line_equation_3d,12,Phương trình đường thẳng trong Oxyz,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_sphere_equation,12,Phương trình mặt cầu và tâm bán kính,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_solid_surface_area,12,Diện tích xung quanh và toàn phần hình khối,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_point_plane_distance,12,Khoảng cách từ điểm đến mặt phẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_line_plane_angle,12,Góc giữa đường thẳng và mặt phẳng Oxyz,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_two_planes_angle,12,Góc giữa hai mặt phẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_line_plane_intersection,12,Giao điểm đường thẳng và mặt phẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_sphere_tangent_plane,12,Mặt phẳng tiếp xúc với mặt cầu,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_skew_line_relation,12,Vị trí tương đối của hai đường thẳng trong Oxyz,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_min_distance_3d,12,Cực trị khoảng cách trong không gian tọa độ,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_sphere_plane_intersection,12,Giao tuyến mặt cầu và mặt phẳng,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_parameter_geometry,12,Bài toán tham số hình học Oxyz,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_geom_3d_optimization,12,Bài toán tối ưu hình học không gian,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_advanced_inequalities,10,Bất đẳng thức đại số và cực trị nâng cao,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_symmetric_systems,10,Hệ phương trình đối xứng và hoán vị,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_radical_equations_advanced,10,Phương trình chứa căn thức nâng cao,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g10_combinatorics_olympiad,10,Tổ hợp và nguyên lý Dirichlet nâng cao,2,20,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_advanced_trig_equations,11,Phương trình lượng giác nâng cao,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_sequences_advanced,11,Dãy số truy hồi và bài toán cực trị,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_binomial_advanced,11,Nhị thức Newton và hệ số tổ hợp nâng cao,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g11_conditional_probability_models,11,Mô hình xác suất có điều kiện,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_complex_plane_geometry,12,Hình học số phức và quỹ tích,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_integral_optimization,12,Tối ưu và cực trị bằng tích phân,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct
+g12_solid_of_revolution,12,Thể tích khối tròn xoay và mô hình thực tế,1,10,0,2000,2000,20000,20000,candidate methods are not approved or certified distinct

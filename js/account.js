@@ -59,6 +59,12 @@ function abortAllRequests() {
 }
 
 function logout() {
+    const tokenToRevoke = localStorage.getItem("mathweb_token");
+    if (tokenToRevoke) {
+        fetch((window.MATHWEB_API_URL || "http://127.0.0.1:8000") + "/api/auth/logout", {
+            method: "POST", headers: {Authorization: "Bearer " + tokenToRevoke}, keepalive: true
+        }).catch(() => {});
+    }
     clearAuthData();
     accountLoaded = false;
     abortAllRequests();

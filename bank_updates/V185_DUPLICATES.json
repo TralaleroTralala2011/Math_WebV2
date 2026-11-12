@@ -1,0 +1,562 @@
+[
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_count_outfits_002",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_count_outfits_003",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_count_outfits_010",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cosine_law_003",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_tangent_length_squared_010",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_inscribed_angle_001",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_inscribed_angle_002",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_inscribed_angle_005",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_inscribed_angle_007",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_inscribed_angle_008",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_inscribed_angle_009",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_tangent_chord_angle_001",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_tangent_chord_angle_002",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_tangent_chord_angle_003",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_tangent_chord_angle_006",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sum_square_sequence_001",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sum_square_sequence_002",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sum_square_sequence_003",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sum_square_sequence_007",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sum_square_sequence_009",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_removable_limit_003",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_removable_limit_004",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_removable_limit_005",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_removable_limit_006",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_removable_limit_007",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_removable_limit_008",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_removable_limit_009",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_removable_limit_010",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_prism_edges_004",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_prism_edges_005",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_prism_edges_009",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_two_red_without_replacement_002",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_two_red_without_replacement_007",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cos_from_sin_003",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cos_from_sin_004",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cos_from_sin_007",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cos_from_sin_008",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cos_double_angle_006",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sine_zero_count_001",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sine_zero_count_002",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sine_zero_count_005",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sine_zero_count_006",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sine_zero_count_007",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sine_zero_count_009",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sine_zero_count_010",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cosine_one_count_001",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cosine_one_count_002",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cosine_one_count_003",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cosine_one_count_004",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cosine_one_count_005",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cosine_one_count_006",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cosine_one_count_007",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cosine_one_count_008",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_cosine_one_count_009",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_odd_increment_recurrence_001",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_odd_increment_recurrence_002",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_odd_increment_recurrence_004",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_odd_increment_recurrence_006",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_odd_increment_recurrence_007",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_odd_increment_recurrence_008",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_odd_increment_recurrence_009",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_odd_increment_recurrence_010",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_rotation_90_004",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_pyramid_edges_005",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_affine_recurrence_009",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_binomial_coefficient_008",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_conditional_count_004",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_exponential_growth_007",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_exponential_growth_010",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_logarithm_of_power_001",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_logarithm_of_power_005",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_logarithm_of_power_006",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_logarithm_of_power_007",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_logarithm_of_power_008",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_logarithm_of_power_010",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_revolution_cone_001",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_revolution_cone_002",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_revolution_cone_003",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_revolution_cone_010",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sine_rule_diameter_001",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sine_rule_diameter_003",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_sine_rule_diameter_005",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_triangle_midsegment_003",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_triangle_midsegment_004",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_triangle_midsegment_005",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_triangle_midsegment_006",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_triangle_midsegment_007",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_triangle_midsegment_008",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_triangle_midsegment_009",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_triangle_midsegment_010",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_line_plane_sine_angle_002",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_line_plane_sine_angle_005",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_line_plane_sine_angle_008",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_line_plane_sine_angle_009",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_three_perpendicular_distance_003",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_three_perpendicular_distance_004",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_three_perpendicular_distance_005",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_orthogonal_basis_proof_001",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_orthogonal_basis_proof_005",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_plane_plane_cosine_002",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_plane_plane_cosine_010",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_radical_extraneous_root_003",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_radical_extraneous_root_004",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_radical_extraneous_root_006",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_radical_extraneous_root_009",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_advanced_sin_double_count_001",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_advanced_sin_double_count_002",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_advanced_sin_double_count_006",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_advanced_sin_double_count_007",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_advanced_sin_double_count_008",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_advanced_sin_double_count_009",
+    "reason": "duplicate question"
+  },
+  {
+    "source": "V184_IMPORT_READY.jsonl",
+    "id": "v184_advanced_sin_double_count_010",
+    "reason": "duplicate question"
+  }
+]

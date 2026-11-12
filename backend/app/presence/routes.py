@@ -314,6 +314,37 @@ def heartbeat(
 
 
 # =========================================================
+# ALL FRIEND PRESENCE IN ONE QUERY
+# =========================================================
+
+@router.get("/friends")
+def get_friends_presence(
+    authorization: str | None = Header(default=None)
+):
+    """Returns only accepted friends of the authenticated user."""
+    current = get_user_from_token(authorization)
+    user_id = int(current["id"])
+    connection = get_connection()
+    try:
+        rows = connection.execute(
+            """
+            SELECT u.id, u.last_seen
+            FROM friends AS f
+            JOIN users AS u ON u.id = CASE
+                WHEN f.requester_id = ? THEN f.receiver_id
+                ELSE f.requester_id
+            END
+            WHERE f.status = 'accepted'
+              AND (f.requester_id = ? OR f.receiver_id = ?)
+            """,
+            (user_id, user_id, user_id),
+        ).fetchall()
+        return {"online": {str(row["id"]): is_user_online(row["last_seen"]) for row in rows}}
+    finally:
+        connection.close()
+
+
+# =========================================================
 # GET USER PRESENCE
 # =========================================================
 

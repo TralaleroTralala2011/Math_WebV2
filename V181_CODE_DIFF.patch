@@ -1,0 +1,418 @@
+--- V167/backend/app/ai/engine/service.py
++++ V181/backend/app/ai/engine/service.py
+@@ -51,9 +51,30 @@
+                          "medium": {"medium", "intermediate", "trung cấp"},
+                          "hard": {"hard", "advanced", "nâng cao", "expert", "hell"}}
+         accepted_levels = level_aliases.get(normalize(difficulty), {str(difficulty).casefold()})
++        # Apply *all* eligibility filters before LIMIT. Previously, a large
++        # topic/grade could hide rarer difficulties, formats and general-game
++        # questions, even though valid bank entries existed.
++        candidate_topics = tuple(dict.fromkeys((str(topic_id).strip(), str(topic_info.get("name", "")).strip())))
++        candidate_topics = tuple(x for x in candidate_topics if x)
++        allowed_types = tuple(sorted(allowed_types))
++        accepted_levels = tuple(sorted(accepted_levels))
++        requested_game_id = str(game_id or "").strip()
++        topic_marks = ",".join("?" for _ in candidate_topics)
++        type_marks = ",".join("?" for _ in allowed_types)
++        level_marks = ",".join("?" for _ in accepted_levels)
++        sql = (
++            f"SELECT * FROM admin_question_bank WHERE grade=? AND topic IN ({topic_marks}) "
++            f"AND lower(trim(question_type)) IN ({type_marks}) "
++            f"AND (trim(difficulty)='' OR lower(trim(difficulty)) IN ({level_marks})) "
++            "AND (coalesce(trim(game_id),'')='' OR game_id=? "
++            "OR substr(?,1,length(game_id)+1)=game_id||'_') "
++            "ORDER BY RANDOM() LIMIT 300"
++        )
+         conn = get_connection()
+         try:
+-            rows = conn.execute("SELECT * FROM admin_question_bank WHERE grade=? ORDER BY id DESC LIMIT 500", (grade,)).fetchall()
++            rows = conn.execute(sql, (grade, *candidate_topics, *allowed_types,
++                                      *accepted_levels, requested_game_id,
++                                      requested_game_id)).fetchall()
+         finally:
+             conn.close()
+         matched = []
+--- V167/backend/app/ai/engine/difficulty.py
++++ V181/backend/app/ai/engine/difficulty.py
+@@ -1,9 +1,9 @@
+ DIFFICULTY_ORDER = {"easy": 1, "medium": 2, "hard": 3, "expert": 4, "hell": 5}
+ 
+ ALIASES = {
+-    "de": "easy", "dễ": "easy", "nền tảng": "easy", "nen tang": "easy", "easy": "easy",
+-    "vừa": "medium", "vua": "medium", "trung cấp": "medium", "trung cap": "medium", "medium": "medium",
+-    "khó": "hard", "kho": "hard", "nâng cao": "hard", "nang cao": "hard", "hard": "hard",
++    "de": "easy", "dễ": "easy", "nền tảng": "easy", "nen tang": "easy", "foundation": "easy", "easy": "easy",
++    "vừa": "medium", "vua": "medium", "trung cấp": "medium", "trung cap": "medium", "intermediate": "medium", "medium": "medium",
++    "khó": "hard", "kho": "hard", "nâng cao": "hard", "nang cao": "hard", "advanced": "hard", "hard": "hard",
+     "chuyên": "expert", "chuyen": "expert", "học sinh giỏi": "expert", "hsg": "expert", "expert": "expert",
+     "địa ngục": "hell", "dia nguc": "hell", "cực khó": "hell", "hell": "hell", "nightmare": "hell",
+ }
+--- V167/backend/app/ai/engine/solver.py
++++ V181/backend/app/ai/engine/solver.py
+@@ -11,33 +11,66 @@
+     except Exception: return s
+ 
+ def _safe_numeric(value):
+-    """Evaluate a restricted arithmetic expression for answer equivalence; never use eval()."""
+-    if isinstance(value, (int, float, Fraction)):
+-        return float(value)
++    """Bounded arithmetic evaluator for answer equivalence; never execute code.
++
++    Reject excessive nesting and exponentiation before computing expensive
++    intermediate values. An untrusted student answer must not exhaust a worker.
++    """
++    if isinstance(value, (int, float, Fraction)) and not isinstance(value, bool):
++        try:
++            number = float(value)
++            return number if math.isfinite(number) and abs(number) <= 1e15 else None
++        except (OverflowError, ValueError):
++            return None
+     text = str(value).strip().replace("−", "-").replace("×", "*").replace("·", "*")
+-    text = text.replace("π", "pi")
++    text = text.replace("π", "pi").replace("^", "**")
+     text = re.sub(r"(?<![A-Za-z])√\s*(\d+(?:\.\d+)?)", r"sqrt(\1)", text)
+-    text = re.sub(r"(?<![A-Za-z])sqrt\s*\(([^()]*)\)", r"sqrt(\1)", text)
++    if len(text) > 120 or not text:
++        return None
+     try:
+         tree = ast.parse(text, mode="eval")
+-    except Exception:
++    except (SyntaxError, ValueError, RecursionError):
++        return None
++    if sum(1 for _ in ast.walk(tree)) > 80:
+         return None
+     binary = {ast.Add: operator.add, ast.Sub: operator.sub, ast.Mult: operator.mul,
+               ast.Div: operator.truediv, ast.Pow: operator.pow, ast.Mod: operator.mod}
+     unary = {ast.UAdd: operator.pos, ast.USub: operator.neg}
+-    def visit(node):
+-        if isinstance(node, ast.Expression): return visit(node.body)
+-        if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)) and not isinstance(node.value, bool): return float(node.value)
+-        if isinstance(node, ast.Name) and node.id == "pi": return math.pi
+-        if isinstance(node, ast.BinOp) and type(node.op) in binary: return binary[type(node.op)](visit(node.left), visit(node.right))
+-        if isinstance(node, ast.UnaryOp) and type(node.op) in unary: return unary[type(node.op)](visit(node.operand))
+-        if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == "sqrt" and len(node.args) == 1:
+-            return math.sqrt(visit(node.args[0]))
+-        raise ValueError("unsupported expression")
++
++    def checked(v):
++        if not isinstance(v, (int, float)) or isinstance(v, bool):
++            raise ValueError('Non-real result')
++        result = float(v)
++        if not math.isfinite(result) or abs(result) > 1e15:
++            raise ValueError('Out-of-range result')
++        return result
++
++    def visit(node, depth=0):
++        if depth > 24:
++            raise ValueError('Expression too deep')
++        if isinstance(node, ast.Expression):
++            return visit(node.body, depth+1)
++        if isinstance(node, ast.Constant) and type(node.value) in (int, float):
++            return checked(node.value)
++        if isinstance(node, ast.Name) and node.id == "pi":
++            return math.pi
++        if isinstance(node, ast.BinOp) and type(node.op) in binary:
++            left = visit(node.left, depth+1)
++            right = visit(node.right, depth+1)
++            if isinstance(node.op, ast.Pow) and (abs(right) > 16 or abs(left) > 1e10):
++                raise ValueError('Exponent too large')
++            return checked(binary[type(node.op)](left, right))
++        if isinstance(node, ast.UnaryOp) and type(node.op) in unary:
++            return checked(unary[type(node.op)](visit(node.operand, depth+1)))
++        if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == "sqrt" and len(node.args) == 1 and not node.keywords:
++            arg = visit(node.args[0], depth+1)
++            if arg < 0:
++                raise ValueError('Negative radical')
++            return checked(math.sqrt(arg))
++        raise ValueError('Unsupported expression')
+     try:
+-        result = visit(tree)
+-        return float(result) if math.isfinite(float(result)) else None
+-    except Exception:
++        return visit(tree)
++    except (ArithmeticError, ValueError, TypeError, RecursionError):
+         return None
+ 
+ def _coordinate_pair(value):
+--- V167/backend/app/admin_routes.py
++++ V181/backend/app/admin_routes.py
+@@ -931,7 +931,6 @@
+         if not qs:
+             profile=conn.execute("SELECT preferred_difficulty,difficulty_adjustment,source_mode,question_count_scale FROM learner_personalization WHERE user_id=?",(uid,)).fetchone()
+             difficulty=str(t['difficulty']); count=int(t['question_count'])
+-            bank_difficulty={'easy':'nền tảng','medium':'trung cấp','hard':'nâng cao','expert':'nâng cao'}.get(difficulty,difficulty)
+             if profile:
+                 if profile['preferred_difficulty'] and profile['preferred_difficulty']!='auto': difficulty=profile['preferred_difficulty']
+                 else:
+@@ -952,17 +951,44 @@
+                     elif homework_rule in ('ai','library','admin_bank','mixed'): source_mode=homework_rule
+                 except Exception: pass
+             if source_mode in ('admin_bank','mixed','library') and 'admin_question_bank' in enabled_sources:
+-                rows=conn.execute("SELECT * FROM admin_question_bank WHERE grade=? AND (lower(topic)=lower(?) OR lower(topic)=lower(?)) AND (difficulty=? OR ?='auto') ORDER BY RANDOM() LIMIT ?",(int(t['grade']),str(t['topic']),str(t['topic']),bank_difficulty,bank_difficulty,count)).fetchall()
++                from .ai.engine.difficulty import normalize
++                difficulty_aliases = {
++                    'easy': ('easy', 'foundation', 'nền tảng', 'sơ cấp'),
++                    'medium': ('medium', 'intermediate', 'trung cấp'),
++                    'hard': ('hard', 'advanced', 'nâng cao', 'expert', 'hell'),
++                }
++                selected_difficulty = str(difficulty).strip().casefold()
++                normalized_level = normalize(selected_difficulty)
++                accepted_levels = difficulty_aliases.get(normalized_level, (selected_difficulty,))
++                known_topic = ai_service.knowledge.get(str(t['topic'])) or {}
++                topic_ids = tuple(dict.fromkeys((str(t['topic']), str(known_topic.get('name', '')))))
++                topic_ids = tuple(v for v in topic_ids if v)
++                query = ('SELECT * FROM admin_question_bank WHERE grade=? AND topic IN ('
++                         + ','.join('?' for _ in topic_ids) + ')')
++                params = [int(t['grade']), *topic_ids]
++                if selected_difficulty != 'auto':
++                    query += ' AND lower(difficulty) IN (' + ','.join('?' for _ in accepted_levels) + ')'
++                    params.extend(accepted_levels)
++                wanted_type = str(t['question_type'] or 'mixed').strip().casefold()
++                if wanted_type != 'mixed':
++                    query += ' AND question_type=?'
++                    params.append(wanted_type)
++                query += ' ORDER BY RANDOM() LIMIT ?'
++                params.append(count)
++                rows = conn.execute(query, params).fetchall()
+                 for r in rows:
+                     try: choices=json.loads(r['choices_json'] or '[]')
+                     except Exception: choices=[]
+-                    qs.append({'question':r['question'],'options':choices,'answer':r['correct_answer'],'correct_answer':r['correct_answer'],'solution':r['explanation'],'question_type':r['question_type'],'difficulty':r['difficulty'],'source':r['source']})
+-            if not qs and source_mode!='admin_bank' and any(x in enabled_sources for x in ('AI runtime','MATHWEB_KNOWLEDGE_LIBRARY')):
++                    qs.append({'question':r['question'],'options':choices,'answer':r['correct_answer'],
++                               'correct_answer':r['correct_answer'],'solution':r['explanation'],
++                               'question_type':r['question_type'],'difficulty':r['difficulty'],'source':r['source']})
++            if len(qs)<count and source_mode!='admin_bank' and any(x in enabled_sources for x in ('AI runtime','MATHWEB_KNOWLEDGE_LIBRARY')):
+                 ai_difficulty={'nền tảng':'easy','trung cấp':'medium','nâng cao':'hard'}.get(str(difficulty).casefold(),difficulty)
+-                try: result=ai_service.generate_set(int(t['grade']),[str(t['topic'])],count,ai_difficulty,str(t['question_type']),history=[],game_id='')
++                try: result=ai_service.generate_set(int(t['grade']),[str(t['topic'])],count-len(qs),ai_difficulty,str(t['question_type']),history=qs,game_id='')
+                 except Exception as e: raise HTTPException(status_code=422,detail=f"AI chưa tạo được câu hỏi: {e}")
+-                qs=result.get('questions',[])
+-            if not qs: raise HTTPException(status_code=422,detail="Chưa có câu hỏi phù hợp trong nguồn đã chọn; hãy bổ sung ngân hàng hoặc dùng nguồn AI.")
++                qs.extend(result.get('questions',[]))
++            if len(qs) < count:
++                raise HTTPException(status_code=422, detail=f"Nguồn câu hỏi hiện chỉ có {len(qs)}/{count} câu phù hợp; hãy bổ sung ngân hàng hoặc chọn nguồn AI.")
+             try: archive_questions(int(t['grade']), [str(t['topic'])], qs, source=f"assigned homework · {source_mode}")
+             except Exception: pass
+             conn.execute("UPDATE learning_assignment_targets SET questions_json=?,started_at=?,status='in_progress' WHERE id=?",(json.dumps(qs,ensure_ascii=False),now_iso(),t['id']));conn.commit()
+@@ -979,19 +1005,18 @@
+         if t['status']=='submitted': raise HTTPException(status_code=409,detail="Bài đã được nộp.")
+         qs=json.loads(t['questions_json'] or '[]')
+         if not qs: raise HTTPException(status_code=409,detail="Hãy bắt đầu làm bài trước khi nộp.")
+-        norm=lambda v: ''.join(str(v or '').strip().casefold().split());out=[];correct=0
++        from .questions.answer_checker import grade_answer
++        out=[];correct=0
+         for i,q in enumerate(qs):
+-            ans=data.answers.get(str(i),'');expected=q.get('answer',q.get('correct_answer',''));opts=q.get('options') or q.get('statements') or q.get('choices') or []
+-            def option_text(opt):
+-                return str(opt.get('value',opt.get('text',opt.get('label',''))) if isinstance(opt,dict) else opt)
+-            ok=bool(norm(ans)) and norm(ans)==norm(expected)
+-            if not ok and isinstance(expected,str) and expected.strip().upper() in ('A','B','C','D') and isinstance(opts,list):
+-                idx=ord(expected.strip().upper())-ord('A')
+-                if idx<len(opts): ok=norm(ans)==norm(option_text(opts[idx]))
+-            if not ok and isinstance(ans,str) and ans.strip().upper() in ('A','B','C','D') and isinstance(opts,list):
+-                idx=ord(ans.strip().upper())-ord('A')
+-                if idx<len(opts): ok=norm(option_text(opts[idx]))==norm(expected)
+-            correct+=int(ok);out.append({"id":str(i),"question":q.get('question',''),"answer":ans,"correct_answer":expected,"is_correct":ok,"explanation":q.get('solution') or q.get('explanation') or ''})
++            ans=data.answers.get(str(i),'')
++            expected=q.get('answer',q.get('correct_answer',''))
++            # Use the shared practice/Battle grader: numeric and symbolic
++            # equivalence, option labels, and true/false arrays are supported.
++            ok=bool(str(ans).strip()) and grade_answer(q,ans,expected)
++            correct+=int(ok)
++            out.append({"id":str(i),"question":q.get('question',''),"answer":ans,
++                        "correct_answer":expected,"is_correct":ok,
++                        "explanation":q.get('solution') or q.get('explanation') or ''})
+         score=round(100*correct/max(1,len(qs)),1);feedback={"results":out,"message":"Hoàn thành tốt!" if score>=85 else "Hãy xem lời giải và củng cố phần còn yếu." if score<70 else "Bạn đang tiến bộ, hãy rà soát câu sai."}
+         submission={"answers":data.answers,"reasoning":data.reasoning}
+         # Award homework XP exactly once; the submitted status guard above prevents replay farming.
+--- V167/backend/app/verified_bank_routes.py
++++ V181/backend/app/verified_bank_routes.py
+@@ -1,6 +1,7 @@
+ """Isolated, opt-in verified question bank API. Does not change existing game or battle routes."""
+ import json
+ import hashlib
++import sys
+ import re
+ import random
+ import secrets
+@@ -18,6 +19,8 @@
+ _SESSIONS = {}
+ _TTL = 1800
+ _MAX_SESSIONS = 10000
++_INDEX_LOCK = threading.RLock()
++_INDEX_CACHE = None
+ 
+ 
+ def normalized_question(text):
+@@ -54,6 +57,68 @@
+             "fully_mathematically_verified": False}
+ 
+ 
++
++def _indexed_bank(path=BANK_PATH):
++    """Index offsets, not 344k parsed dictionaries, for fast public reads.
++
++    The original JSONL remains authoritative and read-only. Rebuild after a
++    file replacement; do not cache user answers or modify the bank on disk.
++    """
++    global _INDEX_CACHE
++    path = Path(path)
++    stat = path.stat()
++    identity = (str(path.resolve()), stat.st_size, stat.st_mtime_ns)
++    with _INDEX_LOCK:
++        if _INDEX_CACHE is not None and _INDEX_CACHE['identity'] == identity:
++            return _INDEX_CACHE
++        by_topic = defaultdict(list)
++        topic_display = {}
++        forms = defaultdict(set)
++        seen = set()
++        offsets = []
++        form_ids = {}
++        with path.open('rb') as stream:
++            while True:
++                offset = stream.tell()
++                line = stream.readline()
++                if not line:
++                    break
++                if not line.strip():
++                    continue
++                try:
++                    row = json.loads(line)
++                    required = ('topic','grade','form_id','form_signature','question','answer','solution')
++                    if any(not str(row.get(k,'')).strip() for k in required):
++                        continue
++                    grade = int(row['grade'])
++                    topic = sys.intern(str(row['topic']))
++                    topic_folded = topic.casefold()
++                    normalized = normalized_question(row['question'])
++                    unique = hashlib.blake2b(f'{grade}|{topic_folded}|{normalized}'.encode('utf-8'),digest_size=16).digest()
++                    if unique in seen:
++                        continue
++                    seen.add(unique)
++                    form_id = sys.intern(str(row['form_id']))
++                    form_idx = form_ids.setdefault(form_id,len(form_ids))
++                    item = (offset,form_idx)
++                    offsets.append((grade,topic_folded,item))
++                    by_topic[(grade,topic_folded)].append(item)
++                    topic_display.setdefault((grade,topic_folded),topic)
++                    forms[(grade,topic_folded)].add(str(row['form_signature']))
++                except (ValueError,TypeError,KeyError,json.JSONDecodeError):
++                    continue
++        # Store only the small index, not all parsed questions/solutions.
++        result = {'identity':identity,'by_topic':by_topic,'offsets':offsets,
++                  'form_ids':form_ids,'forms':forms,'topic_display':topic_display,'count':len(offsets)}
++        _INDEX_CACHE = result
++        return result
++
++
++def _read_indexed_question(offset, path=BANK_PATH):
++    with Path(path).open('rb') as stream:
++        stream.seek(offset)
++        return json.loads(stream.readline())
++
+ @router.get("/quality")
+ def quality():
+     return audit_records(load_bank())
+@@ -99,36 +164,49 @@
+ 
+ @router.get("/catalog")
+ def catalog():
+-    bank = load_bank()
+-    by_topic = defaultdict(lambda: {"questions": 0, "forms": set()})
+-    for row in bank:
+-        key = (row["grade"], row["topic"])
+-        by_topic[key]["questions"] += 1
+-        by_topic[key]["forms"].add(row["form_signature"])
+-    return {"total_questions": len(bank), "distinct_forms": len({(r['grade'],r['topic'],r['form_signature']) for r in bank}), "topics": [{"grade": g, "topic": t, "questions": v["questions"], "forms": len(v["forms"])} for (g,t),v in sorted(by_topic.items())], "target_met": False}
++    index = _indexed_bank()
++    topics = []
++    for (grade, topic), rows in sorted(index['by_topic'].items()):
++        signatures = index['forms'].get((grade, topic), set())
++        display = index['topic_display'][(grade, topic)]
++        topics.append({'grade':grade,'topic':display,'questions':len(rows),'forms':len(signatures)})
++    return {'total_questions':index['count'],
++            'distinct_forms':sum(len(v) for v in index['forms'].values()),
++            'topics':topics,'target_met':False}
+ 
+ 
+ @router.get("/next")
+ def next_question(grade: int | None = None, topic: str | None = None, exclude_form: str | None = None):
+-    bank = [r for r in load_bank() if (grade is None or r["grade"] == grade) and (topic is None or r["topic"].casefold() == topic.strip().casefold())]
++    index = _indexed_bank()
++    if grade is None and topic is None:
++        candidates = [item for _,_,item in index['offsets']]
++    else:
++        folded = topic.strip().casefold() if topic is not None else None
++        candidates = [item for (g,t),rows in index['by_topic'].items()
++                      if (grade is None or grade == g) and (folded is None or folded == t)
++                      for item in rows]
+     if exclude_form:
+-        filtered = [r for r in bank if r["form_id"] != exclude_form]
+-        if filtered:
+-            bank = filtered
+-    if not bank:
++        excluded = index['form_ids'].get(exclude_form)
++        if excluded is not None:
++            filtered = [item for item in candidates if item[1] != excluded]
++            if filtered:
++                candidates = filtered
++    if not candidates:
+         raise HTTPException(status_code=404, detail="Chưa có câu hỏi được kiểm duyệt cho bộ lọc này.")
+-    row = random.SystemRandom().choice(bank)
++    row = _read_indexed_question(random.SystemRandom().choice(candidates)[0])
+     sid = secrets.token_urlsafe(24)
+     now = time.time()
+     with _LOCK:
+         for key, entry in list(_SESSIONS.items()):
+-            if entry["created"] < now - _TTL:
++            if entry['created'] < now - _TTL:
+                 del _SESSIONS[key]
+         if len(_SESSIONS) >= _MAX_SESSIONS:
+-            oldest = min(_SESSIONS, key=lambda k: _SESSIONS[k]["created"])
++            oldest = min(_SESSIONS, key=lambda k: _SESSIONS[k]['created'])
+             del _SESSIONS[oldest]
+-        _SESSIONS[sid] = {"row": row, "created": now}
+-    return {"session_id": sid, "grade": row["grade"], "topic": row["topic"], "form_id": row["form_id"], "question": row["question"], "expires_in_seconds": _TTL}
++        _SESSIONS[sid] = {'row':row,'created':now}
++    return {'session_id':sid,'grade':row['grade'],'topic':row['topic'],
++            'form_id':row['form_id'],'question':row['question'],
++            'expires_in_seconds':_TTL}
+ 
+ 
+ @router.post("/answer")
+--- V167/backend/tests/test_learning_assignments.py
++++ V181/backend/tests/test_learning_assignments.py
+@@ -48,3 +48,32 @@
+     assert client.get("/api/admin/learning/path", headers=learner_headers).status_code == 200
+     results = client.get(f"/api/admin/learning/assignments/{assignment_id}/results", headers=admin_headers)
+     assert results.status_code == 200 and results.json()["results"][0]["status"] == "submitted"
++
++
++def test_homework_accepts_mathematically_equivalent_fraction(learning_client, monkeypatch):
++    client = learning_client
++    registered = client.post('/api/auth/register', json={'username':'FractionStudent','password':'safePass123'})
++    assert registered.status_code == 200, registered.text
++    student = registered.json()['user']
++    student_headers = {'Authorization': f"Bearer {registered.json()['token']}"}
++    admin_login = client.post('/api/auth/login', json={'username':'admin19022011','password':'adminsitinh'})
++    assert admin_login.status_code == 200
++    admin_headers = {'Authorization': f"Bearer {admin_login.json()['token']}"}
++    monkeypatch.setattr(ai_service, 'generate_set', lambda *args, **kwargs: {'questions': [
++        {'question':'Viết 1/2 dưới dạng số thập phân.', 'answer':'1/2',
++         'solution':'Lấy tử chia mẫu: 1:2=0,5.', 'question_type':'short_answer'}
++    ]})
++    created = client.post('/api/admin/learning/assignments', headers=admin_headers, json={
++        'title':'Bài tập phân số', 'grade':10, 'topic':'menh_de_tap_hop',
++        'difficulty':'easy','question_type':'short_answer','question_count':1,
++        'student_ids':[student['id']],
++    })
++    assert created.status_code == 200, created.text
++    aid = created.json()['id']
++    started = client.post(f'/api/admin/learning/assignments/{aid}/start', headers=student_headers)
++    assert started.status_code == 200, started.text
++    submitted = client.post(f'/api/admin/learning/assignments/{aid}/submit', headers=student_headers,
++                            json={'answers':{'0':'0.5'},'elapsed_seconds':5})
++    assert submitted.status_code == 200, submitted.text
++    assert submitted.json()['score'] == 100.0
++    assert submitted.json()['correct_count'] == 1

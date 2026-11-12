@@ -1,0 +1,13 @@
+{
+  "base": "MATH_WEB_GITHUB_READY_KNOWLEDGE_QUALITY_BATCH_24.zip",
+  "updated_topics": [
+    "g12_complex_plane_geometry",
+    "g12_geom_two_planes_angle",
+    "g11_geom_skew_lines_distance"
+  ],
+  "topics_total": 150,
+  "topics_with_quiz": 126,
+  "total_questions": 1322,
+  "new_questions": 30,
+  "validation_scope": "ZIP, JSON, quiz structural and manual arithmetic review; no browser end-to-end or independent review of all existing questions"
+}

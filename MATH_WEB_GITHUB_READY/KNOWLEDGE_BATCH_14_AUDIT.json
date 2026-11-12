@@ -1,0 +1,24 @@
+{
+  "source": "Batch 13",
+  "updated_topics": [
+    "bai_toan_thuc_te_10",
+    "hinh_hoc_co_ban_10",
+    "tam_giac_tu_giac_10"
+  ],
+  "questions_added": 30,
+  "quiz_topics_total": 68,
+  "remaining_without_quiz": 82,
+  "validation": [
+    "schema",
+    "question format 7:2:1",
+    "unique MC choices",
+    "source preservation",
+    "zip CRC"
+  ],
+  "limitations": [
+    "no independent formal proof of all questions",
+    "no browser E2E test",
+    "no verified videos"
+  ],
+  "content_status": "authored_review_pending"
+}

@@ -1,0 +1,103 @@
+{
+  "mode": "read_only_no_merge",
+  "files_found": 6,
+  "accounts_bearing_databases": 3,
+  "parallel_db_warning": true,
+  "databases": [
+    {
+      "relative_path": "MATH_WEB/backend/database/mathweb.db",
+      "bytes": 221184,
+      "sha256": "83e24951f2ab10a2d18a8be20bbdb9950aa32c66cc18d1ac84d654d2a80218f2",
+      "tables": {
+        "users": 5,
+        "game_results": 0,
+        "friends": 0,
+        "messages": 0,
+        "notifications": 0,
+        "question_sessions": 0,
+        "match_invites": 0,
+        "matches": 1
+      },
+      "integrity": "ok"
+    },
+    {
+      "relative_path": "backend/database/mathweb.db",
+      "bytes": 294912,
+      "sha256": "73586b3e07756265d22da3ee66f8a933323f0676a542b5c08ec995e63e406937",
+      "tables": {
+        "users": 11,
+        "game_results": 0,
+        "friends": 0,
+        "messages": 0,
+        "notifications": 0,
+        "question_sessions": 0,
+        "match_invites": 0,
+        "matches": 0,
+        "admin_question_bank": 0
+      },
+      "integrity": "ok"
+    },
+    {
+      "relative_path": "backend/database/mathweb_ai_history.sqlite3",
+      "bytes": 49152,
+      "sha256": "d1f1e19f6d136a6ee5f7e555b5b302d491ad88be35646f73e4848fb53657eaec",
+      "tables": {},
+      "integrity": "ok"
+    },
+    {
+      "relative_path": "backend/database/question_factory.sqlite3",
+      "bytes": 118784,
+      "sha256": "8d9440bb9066e3ac89a390b1329a63e99396fbf05b1e2ce60cca3e2b18c00c51",
+      "tables": {},
+      "integrity": "ok"
+    },
+    {
+      "relative_path": "database/study_suite.sqlite3",
+      "bytes": 28672,
+      "sha256": "612a00df5c7b9980d3731c7bb2d321b7c0dacb4925ee85e0c006527be03dc304",
+      "tables": {},
+      "integrity": "ok"
+    },
+    {
+      "relative_path": "mathweb_work/backend/database/mathweb.db",
+      "bytes": 303104,
+      "sha256": "18835010f61a77c252b83802d7242b614861ffc48b5fa07ad0e9e44e6e161b87",
+      "tables": {
+        "users": 18,
+        "game_results": 0,
+        "friends": 0,
+        "messages": 0,
+        "notifications": 0,
+        "question_sessions": 0,
+        "match_invites": 0,
+        "matches": 0,
+        "admin_question_bank": 0
+      },
+      "integrity": "ok"
+    }
+  ],
+  "account_overlap_aggregates": [
+    {
+      "left": "MATH_WEB/backend/database/mathweb.db",
+      "right": "backend/database/mathweb.db",
+      "matching_usernames_count": 0,
+      "left_only_count": 5,
+      "right_only_count": 11
+    },
+    {
+      "left": "MATH_WEB/backend/database/mathweb.db",
+      "right": "mathweb_work/backend/database/mathweb.db",
+      "matching_usernames_count": 0,
+      "left_only_count": 5,
+      "right_only_count": 18
+    },
+    {
+      "left": "backend/database/mathweb.db",
+      "right": "mathweb_work/backend/database/mathweb.db",
+      "matching_usernames_count": 11,
+      "left_only_count": 0,
+      "right_only_count": 7
+    }
+  ],
+  "caution": "Account overlap by username does NOT certify identity. Never merge, delete, or overwrite databases without a separate validated migration and a verified private backup. SQLite WAL must be checkpointed for a reliable stopped-server inventory."
+}

@@ -1,0 +1,12 @@
+{
+  "version": "V97",
+  "base": "V96",
+  "change": "Exact SSS triangle construction from explicitly supplied AB, BC, CA side lengths, triangle inequality validation and runtime tests",
+  "new_form_ids": 0,
+  "new_questions": 0,
+  "total_form_ids": 33378,
+  "total_questions": 333780,
+  "browser_tested": false,
+  "all_geometry_supported": false,
+  "next": "Need full browser integration tests, then genuine independent type generation"
+}

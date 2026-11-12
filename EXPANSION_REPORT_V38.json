@@ -1,0 +1,417 @@
+{
+  "version": "V38",
+  "source": "V37",
+  "old_questions": 9890,
+  "new_questions": 770,
+  "total_questions": 10660,
+  "old_form_ids": 988,
+  "new_form_ids": 77,
+  "total_form_ids": 1065,
+  "new_by_grade": {
+    "10": 24,
+    "11": 24,
+    "12": 29
+  },
+  "forms": [
+    {
+      "form_id": "v38_viete_sum",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v38_viete_product",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v38_viete_difference",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v38_viete_sum_squares",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v38_viete_product_squares",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v38_viete_reciprocal_sum",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v38_viete_squared_difference",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v38_viete_harmonic_mean",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v38_viete_quadratic_discriminant",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v38_viete_vertex_value",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v38_ap_nth",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v38_ap_common_difference",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v38_ap_first_term",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v38_ap_sum_n",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v38_ap_sum_even_positions",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v38_ap_sum_odd_positions",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v38_ap_term_gap",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v38_ap_average_terms",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v38_ap_index_of_term",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v38_ap_sum_first_last",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v38_gp_nth",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v38_gp_ratio",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v38_gp_first",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v38_gp_product_first_three",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v38_gp_sum_first_four",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v38_gp_index",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v38_gp_middle_term",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v38_gp_sum_odd_index",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v38_integral_monomial",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v38_integral_linear",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v38_integral_quadratic",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v38_integral_cubic",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v38_integral_shifted_square",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v38_integral_exp_base2",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v38_integral_inverse_x",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v38_integral_sin_0_pi",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v38_integral_cos_0_halfpi",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v38_integral_symmetric_odd",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v38_complex_real_sum",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v38_complex_imag_sum",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v38_complex_real_product",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v38_complex_imag_product",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v38_complex_modulus_squared",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v38_complex_conjugate_real",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v38_complex_conjugate_imag",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v38_complex_real_square",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v38_complex_real_quotient",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v38_coordinate_midpoint_x",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v38_coordinate_midpoint_y",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v38_coordinate_distance_squared",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v38_coordinate_dot_product",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v38_coordinate_cross_determinant",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v38_coordinate_line_slope",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v38_coordinate_line_intercept",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v38_coordinate_triangle_area_double",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v38_coordinate_centroid_x",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v38_coordinate_centroid_y",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v38_prob_ordered_pair",
+      "grade": 10,
+      "topic": "Tổ hợp"
+    },
+    {
+      "form_id": "v38_prob_unordered_pair",
+      "grade": 10,
+      "topic": "Tổ hợp"
+    },
+    {
+      "form_id": "v38_prob_ordered_triple",
+      "grade": 10,
+      "topic": "Tổ hợp"
+    },
+    {
+      "form_id": "v38_prob_unordered_triple",
+      "grade": 10,
+      "topic": "Tổ hợp"
+    },
+    {
+      "form_id": "v38_prob_two_red",
+      "grade": 11,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v38_prob_two_blue",
+      "grade": 11,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v38_prob_one_each",
+      "grade": 11,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v38_prob_at_least_one_red",
+      "grade": 11,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v38_prob_all_same",
+      "grade": 11,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v38_prob_exactly_two_red_three",
+      "grade": 11,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v38_xyz_midpoint_x",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v38_xyz_midpoint_y",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v38_xyz_midpoint_z",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v38_xyz_distance_squared",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v38_xyz_dot",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v38_xyz_norm_squared",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v38_xyz_centroid_x",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v38_xyz_centroid_y",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v38_xyz_centroid_z",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v38_xyz_plane_evaluate",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    }
+  ],
+  "skipped": [
+    [
+      "v38_gp_sum_n",
+      "duplicate question"
+    ],
+    [
+      "v38_gp_term_ratio",
+      "duplicate question"
+    ],
+    [
+      "v38_complex_imag_square",
+      "duplicate question"
+    ]
+  ],
+  "validation": "All new answers compared against independently calculated values, exact question duplicate scan over full bank; no independent pedagogical audit or regression testing."
+}

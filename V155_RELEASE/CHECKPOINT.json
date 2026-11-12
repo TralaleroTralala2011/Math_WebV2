@@ -1,0 +1,56 @@
+{
+  "version": "V155",
+  "source_version": "V154",
+  "source_zip": "MATH_WEB_GITHUB_READY_V154_PRIVATE_CHECKPOINT.zip",
+  "source_sha256": "5a81924ca425f78e654320e8b5fcb906840a15cdde6a92272cc060fad716f2a9",
+  "created_utc": "2026-11-09T04:33:05.927415+00:00",
+  "git_commit": null,
+  "code_status": "No application runtime regression detected in selected backend tests. Browser E2E not checked.",
+  "source_sqlite_hashes_preserved": true,
+  "source_sqlite_count": 6,
+  "session_v154_to_v155": {
+    "new_pending_methods": 2,
+    "new_pending_answer_verified_questions": 20,
+    "restored_prior_pending_methods": 4,
+    "restored_prior_questions": 40,
+    "new_certified_independent_methods": 0,
+    "new_published_questions": 0
+  },
+  "question_factory_source": {
+    "topics": 150,
+    "certifications": 0,
+    "registered_archetypes": 0,
+    "questions": 0
+  },
+  "tests": {
+    "final_combined_regression": "279 passed, 6 warnings, 7 subtests passed",
+    "focused_data_migration": "24 passed",
+    "packaging_guard": "2 passed",
+    "v153_answer_oracle": "40 verified",
+    "v154_answer_oracle": "20 verified",
+    "browser_e2e": "not run",
+    "live_migration": "not run",
+    "performance_comparison": "not run"
+  },
+  "known_gaps": [
+    "True math independence not certified",
+    "Live account data version unknown",
+    "Browser/mobile and load testing missing",
+    "No GitHub push",
+    "No verified 50-60 minute runtime"
+  ],
+  "next_steps": [
+    "Verify live DB, migration staging and backup restore",
+    "Independence review for candidates",
+    "Battle/Admin browser E2E",
+    "Optimize measured hot paths"
+  ],
+  "files": {
+    "report": "V155_RELEASE/V155_REPORT.md",
+    "prior_report": "V154_RELEASE/V154_REPORT.md",
+    "private_release": "MATH_WEB_GITHUB_READY_V155_PRIVATE_CHECKPOINT.zip",
+    "source_only_release": "MATH_WEB_GITHUB_READY_V155_GITHUB_SOURCE_ONLY.zip",
+    "candidate_questions": "V154_RESEARCH/V154_VERIFIED_ANSWERS_PENDING_REVIEW.jsonl",
+    "full_regression_log": "V154_RELEASE/FINAL_COMBINED_REGRESSION.log"
+  }
+}

@@ -1,0 +1,8 @@
+{
+ "version":"V100", "based_on":"V99", "status":"NOT 100% VERIFIED",
+ "changes":["Added repeatable expanded regression command", "Expanded geometry test selection", "Recorded browser automation environment block"],
+ "verified":{"python_regression":"49 passed, 4 warnings", "javascript_syntax":"battle.js, practise.js, practice-mathgeo-bridge.js checked", "chromium_browser":"blocked by administrator for localhost and file URLs"},
+ "not_verified":["Two-account Battle end-to-end", "Admin authentication and UI end-to-end", "All geometry questions mapped to mathematically exact diagrams", "All 150 topics covered"],
+ "bank":{"type_ids":33378,"questions":333780,"new_type_ids":0,"new_questions":0},
+ "notes":"This archive is an audited checkpoint, not a claim that all requested functionality is complete."
+}

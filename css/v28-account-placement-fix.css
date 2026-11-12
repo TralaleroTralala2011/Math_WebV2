@@ -1,0 +1,9 @@
+
+/* V28 restored: account overview, not home. Scoped spacing only. */
+body.account-body #mw-account-dashboard{position:relative;z-index:1;width:min(1240px,calc(100% - 32px));margin:100px auto 28px;box-sizing:border-box;min-width:0}
+body.account-body #mw-account-dashboard *,body.account-body #mw-account-dashboard *::before,body.account-body #mw-account-dashboard *::after{box-sizing:border-box}
+body.account-body #mw-account-dashboard .mw-v6-welcome,body.account-body #mw-account-dashboard .mw-v6-hero-grid,body.account-body #mw-account-dashboard .mw-v6-bottom{min-width:0}
+body.account-body #mw-account-dashboard .mw-v5-card{min-width:0;overflow-wrap:anywhere}
+body.account-body #mw-account-dashboard .mw-v6-quick{min-width:0}
+#mathwebTrialBanner[hidden]{display:none!important}
+@media(max-width:700px){body.account-body #mw-account-dashboard{width:calc(100% - 24px);margin:85px auto 20px}body.account-body #mw-account-dashboard .mw-v6-welcome{display:block}body.account-body #mw-account-dashboard .mw-v6-hero-grid,body.account-body #mw-account-dashboard .mw-v6-bottom{grid-template-columns:minmax(0,1fr)!important}}

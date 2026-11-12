@@ -40,6 +40,32 @@ class AIQuestionService:
 
     def topics(self,grade=None): return self.knowledge.list_topics(grade)
 
+    def _v254_candidates(self, grade, topic_id, difficulty, question_type):
+        """Fetch matching V254 drafts from an indexed SQLite bank, not a huge in-memory JSON."""
+        if question_type not in ("short_answer", "written", "multiple_choice"):
+            return []
+        import sqlite3
+        from pathlib import Path
+        db_path = Path(__file__).resolve().parents[1] / "storage" / "v254_candidates.sqlite"
+        if not db_path.is_file():
+            return []
+        requested_type = "short_answer" if question_type == "written" else question_type
+        try:
+            # Open immutable/read-only: concurrent requests cannot write to bundled bank.
+            with sqlite3.connect(f"file:{db_path.as_posix()}?mode=ro", uri=True, timeout=3) as conn:
+                conn.row_factory = sqlite3.Row
+                rows = conn.execute(
+                    """SELECT id, question, answer, solution, options, question_type, difficulty
+                       FROM questions
+                       WHERE grade=? AND topic=? AND difficulty=? AND question_type=?
+                       ORDER BY RANDOM() LIMIT 50""",
+                    (int(grade), str(topic_id), normalize(difficulty), requested_type),
+                ).fetchall()
+                return [dict(x) for x in rows]
+        except (OSError, sqlite3.Error, ValueError):
+            # Generator fallback keeps practice available if bank is missing/broken.
+            return []
+
     def _curated_admin_candidates(self, grade, topic_id, difficulty, question_type, game_id=None):
         """Load reviewed admin-authored items for the exact knowledge topic, if any."""
         type_aliases = {"short_answer": {"short_answer", "written"}, "multiple_choice": {"multiple_choice"}, "true_false": {"true_false"}}
@@ -53,7 +79,32 @@ class AIQuestionService:
         accepted_levels = level_aliases.get(normalize(difficulty), {str(difficulty).casefold()})
         conn = get_connection()
         try:
-            rows = conn.execute("SELECT * FROM admin_question_bank WHERE grade=? ORDER BY id DESC LIMIT 500", (grade,)).fetchall()
+            # Fetch candidates for the requested topic, format and level at the
+            # database, not "the latest 500 for this entire grade". Otherwise
+            # a busy topic can hide older valid questions in every other topic.
+            valid_types = sorted(allowed_types)
+            valid_levels = sorted(accepted_levels)
+            type_marks = ",".join("?" for _ in valid_types)
+            level_marks = ",".join("?" for _ in valid_levels)
+            rows = conn.execute(
+                f"""SELECT * FROM admin_question_bank
+                    WHERE grade = ?
+                      AND (topic = ? COLLATE NOCASE OR topic = ? COLLATE NOCASE)
+                      AND question_type COLLATE NOCASE IN ({type_marks})
+                      AND (difficulty = '' OR difficulty IS NULL
+                           OR difficulty COLLATE NOCASE IN ({level_marks}))
+                    ORDER BY id DESC LIMIT 500""",
+                (grade, topic_id, topic_info.get("name", ""), *valid_types, *valid_levels),
+            ).fetchall()
+            if not rows:
+                # Compatibility with older imports containing padded topic
+                # labels. This slower path runs only when indexed lookup misses.
+                rows = conn.execute(
+                    """SELECT * FROM admin_question_bank
+                       WHERE grade=? AND (lower(trim(topic))=? OR lower(trim(topic))=?)
+                       ORDER BY id DESC LIMIT 500""",
+                    (grade, wanted, topic_name),
+                ).fetchall()
         finally:
             conn.close()
         matched = []
@@ -100,6 +151,9 @@ class AIQuestionService:
                     if 0 <= idx < len(choices): answer = choices[idx]
             if answer not in choices:
                 return None
+            from .validator import options_equivalent
+            if any(options_equivalent(left, right) for i,left in enumerate(choices) for right in choices[i+1:]):
+                return None
             options = choices
         elif question_type == "true_false":
             if len(choices) != 4:
@@ -130,8 +184,11 @@ class AIQuestionService:
             q["answer"] = ",".join("Đúng" if x else "Sai" for x in statement_answers)
         return q
 
-    def generate_one(self,grade,topic_id,difficulty="medium",question_type="multiple_choice",seen=None,game_id=None,recent_families=None,seen_structures=None,seen_variations=None,seen_archetypes=None):
-        if self.knowledge.get(topic_id) is None: raise ValueError("Unknown topic")
+    def generate_one(self,grade,topic_id,difficulty="medium",question_type="multiple_choice",seen=None,game_id=None,recent_families=None,seen_structures=None,seen_variations=None,seen_archetypes=None,max_attempts_per_phase=150):
+        topic_info = self.knowledge.get(topic_id)
+        if topic_info is None: raise ValueError("Unknown topic")
+        if int(topic_info.get("grade",grade)) != int(grade):
+            raise ValueError("Topic does not belong to requested grade")
         seen=set(seen or set())
         seen_structures=set(seen_structures or set())
         seen_variations=set(seen_variations or set())
@@ -169,10 +226,47 @@ class AIQuestionService:
                 del bucket[:-12]
             return q
 
+        # V254 replaces the previous 4,000-row active candidate bank.
+        # Admin-reviewed entries remain higher priority; V254 is still draft data.
+        for item in self._v254_candidates(grade, topic_id, difficulty, question_type):
+            try:
+                options = json.loads(item["options"])
+            except (TypeError, ValueError):
+                options = []
+            qt = item["question_type"]
+            if qt == "multiple_choice":
+                if len(options) != 4 or item["answer"] not in options:
+                    continue
+            q = {
+                "id": uuid.uuid4().hex, "grade": grade, "topic": topic_id,
+                "difficulty": normalize(difficulty), "question_type": qt,
+                "question": item["question"], "answer": item["answer"],
+                "solution": item["solution"], "explanation": item["solution"],
+                "options": options, "source": "Question_Bank_V254 (draft; unverified)",
+                "archetype": "v254_" + str(item["id"]),
+                "template_family": "v254_" + str(item["id"]),
+                "generation_style": "v254_import", "game_id": str(game_id or ""),
+                "knowledge_name": (self.knowledge.get(topic_id) or {}).get("name", ""),
+            }
+            try:
+                validate(q)
+            except ValidationError:
+                continue
+            variation = self._variation_key(q)
+            if q["fingerprint"] in seen or self.question_history.question_seen(q["question"]):
+                continue
+            if q.get("structure_fingerprint") in seen_structures or variation in seen_variations:
+                continue
+            if q.get("archetype") in seen_archetypes:
+                continue
+            self.store.put(q)
+            self.question_history.record_question(q)
+            return q
+
         # Phase 1: strict diversity. A question must not repeat the same
         # mathematical structure or the same bank variation already used.
         for strict in (True, False):
-            for _ in range(150):
+            for _ in range(max(1, min(150, int(max_attempts_per_phase)))):
                 q=self.generator.generate(grade,topic_id,normalize(difficulty),question_type,game_id,recent_families)
                 try: validate(q)
                 except ValidationError as e: last=e; continue
@@ -211,7 +305,19 @@ class AIQuestionService:
             "game_id", "template_family", "generation_style", "context", "archetype", "topic_group"
         ))
 
-    def generate_set(self,grade,topics,count,difficulty="medium",question_type="multiple_choice",history=None,game_id=None):
+    @staticmethod
+    def mixed_question_types(count: int) -> list[str]:
+        if count < 1:
+            return []
+        truth = max(1, int(count * 0.10 + 0.5)) if count >= 3 else 0
+        written = max(1, int(count * 0.20 + 0.5)) if count >= 2 else 0
+        multiple = count - truth - written
+        kinds = (["multiple_choice"] * multiple +
+                 ["short_answer"] * written + ["true_false"] * truth)
+        random.shuffle(kinds)
+        return kinds
+
+    def generate_set(self,grade,topics,count,difficulty="medium",question_type="multiple_choice",history=None,game_id=None,max_attempts_per_phase=150):
         if count<1 or count>MAX_COUNT: raise ValueError("count out of range")
         if question_type not in {"multiple_choice", "short_answer", "true_false", "mixed"}:
             raise ValueError("Unsupported question type")
@@ -223,14 +329,11 @@ class AIQuestionService:
         seen_variations=set()
         seen_archetypes=set()
         recent_families=[]
-        # Seven multiple-choice, two short-answer and one true/false per full
-        # ten-question block. Shuffle each block to avoid predictable ordering.
-        mixed_types=[]
-        while len(mixed_types)<count:
-            block=["multiple_choice"]*7+["short_answer"]*2+["true_false"]
-            random.shuffle(block)
-            mixed_types.extend(block)
-        mixed_types=mixed_types[:count]
+        # A shuffled 10-item block sliced to 9 could randomly drop the only
+        # true/false question. Allocate the exact quotas *before* shuffling.
+        # For count >= 3 all three modes are guaranteed; longer sets stay near
+        # the requested 70%/20%/10% distribution.
+        mixed_types = self.mixed_question_types(count) if question_type == "mixed" else []
         for item in (history or []):
             if isinstance(item, dict):
                 if item.get("structure_fingerprint"): seen_structures.add(item["structure_fingerprint"])
@@ -250,7 +353,7 @@ class AIQuestionService:
             # just because the set contains ten questions.
             level=current
             item_type = mixed_types[i] if question_type == "mixed" else question_type
-            q=self.generate_one(grade,topic,level,item_type,seen,game_id,recent_families[-10:],seen_structures,seen_variations,seen_archetypes)
+            q=self.generate_one(grade,topic,level,item_type,seen,game_id,recent_families[-10:],seen_structures,seen_variations,seen_archetypes,max_attempts_per_phase=max_attempts_per_phase)
             q["variation_key"]=self._variation_key(q)
             # Prefer a diagram reconstructed from this exact question whenever
             # its wording contains coordinate, slope, graph, or geometric data.
@@ -351,34 +454,10 @@ class AIQuestionService:
         }
 
     def _check(self,q,user_answer):
-        t=q["question_type"]
-        if t=="multiple_choice":
-            from .solver import equivalent
-            options = q.get("options") or []
-            selected = user_answer
-            # Accept the same formats as the browser widgets: text, A/B/C/D,
-            # 0-based index, and {index|answer|value} payloads.
-            if isinstance(selected, dict):
-                selected = selected.get("answer", selected.get("value", selected.get("index")))
-            if isinstance(selected, int) and not isinstance(selected, bool):
-                if 0 <= selected < len(options): selected = options[selected]
-            elif isinstance(selected, str):
-                value = selected.strip()
-                if len(value) == 1 and value.upper() in "ABCD" and len(options) == 4:
-                    selected = options[ord(value.upper()) - ord("A")]
-                elif value.upper().startswith("OPTION_") and value[7:].isdigit():
-                    index = int(value[7:])
-                    if 0 <= index < len(options): selected = options[index]
-            return equivalent(selected, q["answer"])
-        if t=="short_answer":
-            # Centralized, type-aware grading handles verdict + numeric responses
-            # (e.g. "Sai, 90" versus "Sai; 9(7+3)=90") without text matching.
-            from ...questions.answer_checker import grade_answer
-            return grade_answer(q, user_answer, q["answer"])
-        if t=="true_false":
-            vals=user_answer if isinstance(user_answer,list) else []
-            return [bool(x) for x in vals]==q["statement_answers"]
-        return False
+        # Keep AI practice, normal practice and Battle on one grading contract.
+        # In particular, visible option text "2" must not become option index 2.
+        from ...questions.answer_checker import grade_answer
+        return grade_answer(q, user_answer, q.get("answer"))
 
     def battle_topics(self,a,b):
         a=[x for x in a if self.knowledge.get(x)]

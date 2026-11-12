@@ -1,0 +1,11 @@
+{
+  "forms": 1050,
+  "questions": 10500,
+  "source_method_groups": 150,
+  "method_reuse_groups": 150,
+  "families_with_ten_questions": 1050,
+  "issues": {},
+  "new_certified_independent_forms": 0,
+  "status": "PASS_STRUCTURE_ONLY",
+  "scope": "Structural checks and publication safety only; no proof of mathematical or pedagogical correctness."
+}

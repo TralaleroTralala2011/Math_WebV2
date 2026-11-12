@@ -1,0 +1,29 @@
+{
+  "scope": "Structural and consistency audit only; NO independent mathematical or pedagogical certification",
+  "total_questions": 900,
+  "expected_questions": 900,
+  "covered_topics": 150,
+  "curriculum_topics": 150,
+  "by_grade": {
+    "10": 294,
+    "11": 306,
+    "12": 300
+  },
+  "formats": {
+    "trac_nghiem": 450,
+    "dung_sai": 300,
+    "tra_loi_ngan": 150
+  },
+  "true_false_distribution": {
+    "true": 198,
+    "false": 102
+  },
+  "warnings": [
+    "True/false answers are imbalanced. Do not invert answers without rewriting and verifying the propositions.",
+    "Difficulty and real-world relevance require independent subject-matter review.",
+    "30-question rounds cannot establish proficiency in all 150 topics."
+  ],
+  "structural_errors": [],
+  "structural_error_count": 0,
+  "unreviewed_count": 900
+}

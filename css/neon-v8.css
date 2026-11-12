@@ -1,0 +1,22 @@
+/* NEON V8: consistent responsive clarity without replacing application handlers. */
+:root{--mw8-focus:#27efff;--mw8-text:#e9f7ff}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-card,.mw-v6-topic,.mw-v6-lock){transition:border-color .16s ease,box-shadow .16s ease}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-card,.mw-v6-topic):focus-within{border-color:#16deed!important;box-shadow:0 0 0 1px #03e6f0,0 14px 38px #0008!important}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-btn,button){touch-action:manipulation}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-roadmap-grid>.mw-v6-topic{position:relative;overflow:hidden}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-roadmap-grid>.mw-v6-topic.done{border-color:#18c3a1!important;background:linear-gradient(155deg,#063d43,#062333)!important}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-roadmap-grid>.mw-v6-topic .mw-v5-btn{min-height:44px;display:inline-flex;align-items:center;justify-content:center;text-align:center}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-roadmap-grid>.mw-v6-topic .mw-v5-pill{max-width:100%;white-space:normal}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-review article{border-left:3px solid #597a99;padding:13px 16px;min-width:0}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-review article[data-verdict='correct']{border-left-color:#25d79d}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-review article[data-verdict='wrong']{border-left-color:#fb748c}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-review article[data-verdict='skipped']{border-left-color:#94a7ba}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-options button{min-height:46px;text-align:left}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-options button.selected{outline:2px solid #00ebf6;outline-offset:1px}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-options input{font-size:16px;min-height:48px}
+body.mw-v5-admin .mw-v7-admin-coverage button{border-radius:10px;min-height:44px;font-weight:650}
+body.mw-v5-admin #mw-v7-admin-coverage-grid article{border:1px solid #b4dced;box-shadow:0 9px 24px #0c4e6817}
+body.mw-v5-admin .mw-v5-review-entry summary{cursor:pointer;outline-offset:4px}
+@media(max-width:760px){body.mw-v5:not(.mw-v5-admin) .mw-v5-canvas{width:calc(100% - 24px)}body.mw-v5:not(.mw-v5-admin) .mw-v6-roadmap-grid>.mw-v6-topic .mw-v5-row{gap:8px}body.mw-v5:not(.mw-v5-admin) .mw-v5-options button{min-height:48px}}
+@media(max-width:480px){body.mw-v5:not(.mw-v5-admin) .mw-v6-roadmap-grid>.mw-v6-topic .mw-v5-row>*{flex:1 1 100%}body.mw-v5:not(.mw-v5-admin) .mw-v5-card{padding:16px}body.mw-v5:not(.mw-v5-admin) .mw-v5-title{font-size:clamp(25px,7vw,33px)}}
+@media(prefers-reduced-motion:reduce){body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-card,.mw-v6-topic,.mw-v6-lock){transition:none}}

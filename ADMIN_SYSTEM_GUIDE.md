@@ -4,7 +4,7 @@
 1. Khởi động backend theo `LOCAL_RUN.md` hoặc `START_BACKEND.bat`.
 2. Khởi động frontend theo `START_FRONTEND.bat`.
 3. Mở `admin.html` trên cùng frontend.
-4. Đăng nhập bằng `admin19022011` với mật khẩu bootstrap `adminsitinh`.
+4. Đăng nhập bằng `admin19022011` với mật khẩu được in ở cửa sổ backend khi khởi tạo DB lần đầu (hoặc biến môi trường `MATHWEB_BOOTSTRAP_ADMIN_PASSWORD`).
 5. Đổi mật khẩu ngay trong nút **Đổi mật khẩu**. Không dùng mật khẩu mặc định trên máy chủ công khai.
 
 ## Chức năng

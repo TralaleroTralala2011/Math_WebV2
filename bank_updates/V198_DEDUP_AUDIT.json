@@ -1,0 +1,87 @@
+{
+  "verified_new_count": 340,
+  "duplicate_normalized_question_count": 0,
+  "family_candidates": 34,
+  "flagged_for_manual_semantic_review": [
+    {
+      "form": "v198_triple_sine",
+      "score": 0.598,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Dùng công thức góc ba lần để tính sin(3α) từ sinα",
+        "method": "sin(3α)=3sinα−4sin³α",
+        "grade": 11,
+        "topic": "cong_thuc_luong_giac"
+      }
+    },
+    {
+      "form": "v198_section_pyramid_volume_ratio",
+      "score": 0.628,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Tỉ số thể tích hai hình chóp đồng dạng do thiết diện song song đáy",
+        "method": "V_nhỏ/V_lớn=(tỉ số chiều cao)^3",
+        "grade": 11,
+        "topic": "g11_geom_section_ratio"
+      }
+    },
+    {
+      "form": "v198_line_plane_t",
+      "score": 0.583,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Tìm tham số giao điểm của đường thẳng tham số với mặt phẳng",
+        "method": "t=(d−n·A)/(n·u)",
+        "grade": 12,
+        "topic": "g12_geom_line_plane_intersection"
+      }
+    },
+    {
+      "form": "v198_reflect_point_plane",
+      "score": 0.72,
+      "possible_prior": {
+        "source": "V191_FAMILY_SPECS.json",
+        "name": "Tìm hình chiếu đối xứng của điểm qua mặt phẳng",
+        "method": "P′=P−2((n·P−d)/||n||²)n",
+        "grade": 12,
+        "topic": "hinh_hoc_oxyz_van_dung_12"
+      }
+    },
+    {
+      "form": "v198_skew_lines_scaled_distance_sq",
+      "score": 0.814,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Bình phương khoảng cách hai đường thẳng chéo nhau bằng tích hỗn tạp",
+        "method": "d²=[(B−A)·(u×v)]²/||u×v||²",
+        "grade": 12,
+        "topic": "g12_geom_skew_line_relation"
+      }
+    },
+    {
+      "form": "v198_discrete_second_moment",
+      "score": 0.7,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Kỳ vọng của biến ngẫu nhiên nhận ba giá trị",
+        "method": "E(X)=Σ x_i·p_i",
+        "grade": 12,
+        "topic": "xac_suat_12"
+      }
+    },
+    {
+      "form": "v198_orthogonal_plane_angle",
+      "score": 0.833,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Bình phương cos góc nhọn giữa hai mặt phẳng",
+        "method": "cos²φ=(n₁·n₂)²/(||n₁||²||n₂||²)",
+        "grade": 12,
+        "topic": "g12_geom_two_planes_angle"
+      }
+    }
+  ],
+  "method_independence_certified": 0,
+  "remaining_invalid_topic_rows": 10,
+  "warning": "heuristic similarity is not proof of mathematical independence"
+}

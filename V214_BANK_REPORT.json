@@ -1,0 +1,250 @@
+{
+  "version": "V214",
+  "source_archive": "MATH_WEB_GITHUB_READY_V213_FULL_WEB_BANK_INTEGRATED.zip",
+  "verified_source_bank_size": 12366,
+  "new_question_count": 300,
+  "final_sqlite_question_count": 12666,
+  "new_candidate_groups": 30,
+  "new_certified_independent_types": 0,
+  "grades": {
+    "10": 100,
+    "11": 100,
+    "12": 100
+  },
+  "question_formats": {
+    "multiple_choice": 210,
+    "short_answer": 60,
+    "true_false": 30
+  },
+  "validation": {
+    "exact_check_each_generated_answer": 300,
+    "unique_new_question_stems": 300,
+    "exact_question_duplicates_against_base": 0,
+    "candidate_group_id_collision": 0,
+    "mcq_unique_correct_option": 210,
+    "true_false_2_true_2_false": 30,
+    "each_group_has_10": true,
+    "sqlite_integrity": "ok",
+    "full_zip_readback_pending": false,
+    "full_zip_readback_rows": 12666
+  },
+  "method_review_status": "30 method-signature candidates reviewed for internal differences but NOT exhaustively semantically matched against preexisting 11,646 questions; zero certified",
+  "limitations": [
+    "Automatic arithmetic and formula checks do not equal independent manual review of every explanation.",
+    "Semantic equivalence with all past types has not been certified; no independent types claimed.",
+    "Site and Battle integration/regression tests are not yet run.",
+    "No claim of 60 minutes of uninterrupted execution."
+  ],
+  "groups": {
+    "parallel_lines_same_side_supplementary_angles": {
+      "grade": 10,
+      "topic": "g10_geom_angles_parallel",
+      "method_signature": "co_interior_angle_sum_parallel_lines",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "thales_parallel_cutting_triangle_side": {
+      "grade": 10,
+      "topic": "g10_geom_thales_similarity",
+      "method_signature": "thales_proportional_segment",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "triangles_shared_altitude_base_ratio": {
+      "grade": 10,
+      "topic": "g10_geom_triangle_area_ratio",
+      "method_signature": "area_ratio_common_altitude",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "perpendicular_bisector_locus_xaxis_intersection": {
+      "grade": 10,
+      "topic": "g10_geom_locus",
+      "method_signature": "equal_distance_locus_linear_equation",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "vector_collinearity_unknown_parameter": {
+      "grade": 10,
+      "topic": "g10_geom_vector_proofs",
+      "method_signature": "determinant_zero_2d_vectors",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "slope_affine_function_two_points": {
+      "grade": 10,
+      "topic": "ham_so_bac_nhat",
+      "method_signature": "rise_over_run_two_points",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "successive_percent_change_net_rate": {
+      "grade": 10,
+      "topic": "bai_toan_thuc_te_10",
+      "method_signature": "multiplicative_percentage_compounding",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "symmetric_sum_squares_from_sum_product": {
+      "grade": 10,
+      "topic": "g10_symmetric_systems",
+      "method_signature": "symmetric_polynomial_identity",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "third_triangle_side_integer_count": {
+      "grade": 10,
+      "topic": "g10_geom_triangle_inequalities",
+      "method_signature": "strict_triangle_inequality_bounds",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "tangent_chord_angle_equals_inscribed_angle": {
+      "grade": 10,
+      "topic": "g10_geom_circle_tangent_chord",
+      "method_signature": "alternate_segment_tangent_chord_theorem",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "fundamental_period_sine_affine_argument": {
+      "grade": 11,
+      "topic": "ham_so_luong_giac",
+      "method_signature": "sine_period_coefficient_inverse",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "maximum_linear_combination_sine_cosine": {
+      "grade": 11,
+      "topic": "ham_so_luong_giac_day_du",
+      "method_signature": "cauchy_schwarz_trigonometric_amplitude",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "point_translation_coordinate_action": {
+      "grade": 11,
+      "topic": "g11_geom_transform_translation",
+      "method_signature": "vector_translation_add_components",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "reflection_across_diagonal_y_equals_x": {
+      "grade": 11,
+      "topic": "g11_geom_transform_reflection",
+      "method_signature": "coordinate_swap_reflection",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "quarter_turn_rotation_counterclockwise": {
+      "grade": 11,
+      "topic": "g11_geom_rotation_homothety",
+      "method_signature": "rotation_90_degree_matrix",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "homothety_nonorigin_center_x_coordinate": {
+      "grade": 11,
+      "topic": "phep_bien_hinh_11",
+      "method_signature": "homothety_affine_center_transform",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "pyramid_parallel_section_volume_ratio_cube": {
+      "grade": 11,
+      "topic": "g11_geom_prism_pyramid_sections",
+      "method_signature": "similar_pyramids_cubic_volume_scaling",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "pyramid_edges_count_n_sided_base": {
+      "grade": 11,
+      "topic": "nhan_biet_hinh_khong_gian_11",
+      "method_signature": "count_base_edges_and_lateral_edges",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "union_three_independent_events_complement": {
+      "grade": 11,
+      "topic": "bien_co_doc_lap_11",
+      "method_signature": "three_way_independent_complement_product",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "square_sequence_recursion_odd_increments": {
+      "grade": 11,
+      "topic": "g11_sequences_advanced",
+      "method_signature": "telescoping_odd_number_squares",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "cubic_increasing_interval_count": {
+      "grade": 12,
+      "topic": "tinh_don_dieu",
+      "method_signature": "derivative_sign_chart_monotonicity",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "decreasing_exponential_strict_inequality_integer": {
+      "grade": 12,
+      "topic": "bpt_mu",
+      "method_signature": "decreasing_base_flip_inequality",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "tangent_to_cubic_from_fixed_external_point": {
+      "grade": 12,
+      "topic": "tiep_tuyen",
+      "method_signature": "cubic_tangent_intercept_equation",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "sphere_general_equation_constant_term": {
+      "grade": 12,
+      "topic": "g12_geom_sphere_equation",
+      "method_signature": "complete_squares_sphere_center_radius",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "sphere_tangent_plane_axis_parallel": {
+      "grade": 12,
+      "topic": "g12_geom_sphere_tangent_plane",
+      "method_signature": "sphere_tangent_normal_radius",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "complex_equidistant_locus_intersects_real_axis": {
+      "grade": 12,
+      "topic": "g12_complex_plane_geometry",
+      "method_signature": "perpendicular_bisector_complex_modulus",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "point_line_distance_squared_projection_3d": {
+      "grade": 12,
+      "topic": "g12_geom_3d_optimization",
+      "method_signature": "orthogonal_projection_minimize_norm",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "inscribed_rectangle_parabola_max_area_squared": {
+      "grade": 12,
+      "topic": "g12_integral_optimization",
+      "method_signature": "single_variable_derivative_optimization",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "expected_maximum_two_fair_dice": {
+      "grade": 12,
+      "topic": "xac_suat_12",
+      "method_signature": "order_statistic_tail_sum",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "discrete_half_life_remaining_quantity": {
+      "grade": 12,
+      "topic": "bai_toan_thuc_te_12",
+      "method_signature": "geometric_exponential_decay_halving",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    }
+  }
+}

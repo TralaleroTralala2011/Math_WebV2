@@ -1,0 +1,15 @@
+{
+  "checkpoint": "V194",
+  "baseline": "V192_FULL_WEB_BANK_INTEGRATED",
+  "previous_patch": "V193_INCREMENT_PATCH",
+  "baseline_questions": 9136,
+  "v193_imported": 100,
+  "v194_imported": 100,
+  "total_sqlite_questions": 9336,
+  "v194_candidate_families": 10,
+  "v194_exact_oracle_passed": 100,
+  "independent_types_certified": 0,
+  "production_integrated": 0,
+  "sqlite_integrity": "ok",
+  "limitations": "No semantic independence certification; no production deployment. V193 checks are inherited from previous patch."
+}

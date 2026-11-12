@@ -1,0 +1,23 @@
+/* NEON V7, additive styling for all 529 active game pages.
+   Keeps every original gameplay selector, timer, answer and event handler. */
+html:has(body.mw-v7-game){color-scheme:dark}
+body.mw-v7-game{background:radial-gradient(ellipse at 2% 0%,#0a4265 0%,transparent 33%),radial-gradient(ellipse at 95% 0%,#102d66 0%,transparent 34%),#020a19!important;color:#e9f7ff;min-width:0}
+body.mw-v7-game .wrap,body.mw-v7-game .shell{width:min(1160px,calc(100% - 28px));max-width:100%;margin-top:20px}
+body.mw-v7-game .card,body.mw-v7-game .arena{border-color:rgba(29,203,247,.43)!important;background:linear-gradient(155deg,#082440,#041329)!important;box-shadow:0 18px 55px #0008,0 0 26px #06a4e016!important}
+body.mw-v7-game .title,body.mw-v7-game .question{color:#f2fbff}
+body.mw-v7-game .kicker,body.mw-v7-game .score,body.mw-v7-game .back{color:#00eaf1!important}
+body.mw-v7-game .answer,body.mw-v7-game .btn,body.mw-v7-game .level{border-color:#1a557b!important;background-color:#0b2845!important}
+body.mw-v7-game .answer:hover:not(:disabled),body.mw-v7-game .btn:hover:not(:disabled){border-color:#15ddea!important;box-shadow:0 0 14px #05d7f52b}
+body.mw-v7-game .answer.correct{background:rgba(25,201,124,.17)!important;border-color:#36da9b!important}
+body.mw-v7-game .answer.wrong{background:rgba(245,92,120,.15)!important;border-color:#fa738c!important}
+body.mw-v7-game .btn.primary,body.mw-v7-game .next{background:linear-gradient(105deg,#06e4e9,#13a9e8)!important;color:#04203a!important;font-weight:700}
+body.mw-v7-game :is(button,a,input,select,textarea):focus-visible{outline:3px solid #00e7f6!important;outline-offset:3px}
+body.mw-v7-game .answers,body.mw-v7-game .options{min-width:0}
+body.mw-v7-game :is(.answer,.question,.title,.desc,.hint){overflow-wrap:anywhere}
+@media(max-width:620px){body.mw-v7-game .wrap,body.mw-v7-game .shell{width:calc(100% - 20px);margin:14px auto 36px}body.mw-v7-game .card,body.mw-v7-game .arena{padding:16px!important}body.mw-v7-game .answers{grid-template-columns:minmax(0,1fr)}body.mw-v7-game .question{font-size:clamp(17px,4.6vw,22px)}body.mw-v7-game .actions{gap:8px}body.mw-v7-game .actions>*{min-height:42px}}
+@media(prefers-reduced-motion:reduce){body.mw-v7-game *{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
+
+/* V8: touch and keyboard interactions remain usable at phone widths. */
+body.mw-v7-game :is(.answer,.btn,.next){touch-action:manipulation;min-height:44px}
+body.mw-v7-game :is(.answer,.btn,.next):focus-visible{outline:3px solid #14f4ff!important;outline-offset:3px}
+@media(max-width:390px){body.mw-v7-game :is(.title,.question){overflow-wrap:anywhere}body.mw-v7-game .wrap{padding-left:0;padding-right:0}}

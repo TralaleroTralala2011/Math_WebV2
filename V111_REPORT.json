@@ -1,0 +1,11 @@
+{
+  "source_version": "V110",
+  "original_bank_questions": 334280,
+  "added_questions": 10000,
+  "added_candidate_form_ids": 1000,
+  "independently_certified_new_forms": 0,
+  "core_bank_questions": 344280,
+  "core_bank_form_ids": 34428,
+  "note": "All new questions have exact arithmetic proof fields; candidate IDs distinguish parameterized structures, not independently certified mathematical methods. 10000 independent forms requirement NOT MET.",
+  "mathgeo": "Existing bridge and practice pages copied without changes."
+}

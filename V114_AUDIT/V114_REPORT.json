@@ -1,0 +1,21 @@
+{
+  "version": "V114",
+  "legacy_questions_inspected": 344280,
+  "legacy_invalid_json": 0,
+  "new_stem_exact_collisions_with_legacy": 0,
+  "course_topics_in_catalog": 150,
+  "topics_with_a_new_candidate": 150,
+  "v113_blueprints": 60,
+  "v114_blueprints": 105,
+  "new_v114_questions": 1050,
+  "total_v113_v114_candidate_blueprints": 165,
+  "total_v113_v114_math_verified_candidate_questions": 1650,
+  "distinct_candidate_stems": 1650,
+  "coarse_method_concept_groups": 146,
+  "potentially_colliding_concept_groups": 16,
+  "independently_certified_methods": 0,
+  "expert_review_approved_methods": 0,
+  "target_methods": 300000,
+  "target_questions": 3000000,
+  "note": "ALL 165 family methods are review candidates. No global method uniqueness certification. This is NOT 100% completion."
+}

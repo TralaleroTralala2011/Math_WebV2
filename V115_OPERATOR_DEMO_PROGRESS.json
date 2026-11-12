@@ -1,0 +1,31 @@
+{
+  "time_utc": "2026-11-08T00:38:29.004783+00:00",
+  "source_version": "V114 base + V115 operator",
+  "registered_v113_blueprints": 60,
+  "registered_v114_blueprints": 105,
+  "jobs_enqueued_this_cycle": 0,
+  "status": {
+    "topics": 150,
+    "archetypes": 165,
+    "jobs": 0,
+    "questions": 0,
+    "approved_archetypes": 0,
+    "pending_review_archetypes": 165,
+    "verified_questions": 0,
+    "rejected_questions": 0,
+    "job_status": {},
+    "paused": false,
+    "max_verified": 0,
+    "cost_limit_cents": 0,
+    "cost_used_cents": 0,
+    "cost_reserved_cents": 0,
+    "type_records_with_approval": 0,
+    "target_types": 300000,
+    "target_questions": 3000000,
+    "methods_remaining_uncertified": 300000,
+    "questions_remaining_unverified": 3000000
+  },
+  "certification_note": "Registered/approved blueprint IDs are NOT certified as unique mathematical methods. Only reviewed methods are enqueued; a correct numeric answer is not a full pedagogical audit.",
+  "production_deployed": false,
+  "explanation": "DEMO: snapshot from a fresh, isolated V115 operator database. NOT an active production server."
+}

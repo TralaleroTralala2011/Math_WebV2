@@ -32,6 +32,74 @@ let refreshingPresence = false;
 let refreshingUnread = false;
 
 let conversationRequestId = 0;
+let liveSocket = null;
+let liveReconnect = null;
+let liveReady = false;
+let liveBackoff = 1500;
+let liveConversationId = 0;
+let livePingTimer = null;
+function stopLiveChat() {
+    if (livePingTimer) { clearInterval(livePingTimer); livePingTimer = null; }
+    if (liveReconnect) { clearTimeout(liveReconnect); liveReconnect = null; }
+    liveConversationId = 0;
+    liveReady = false;
+    if (liveSocket) {
+        const ws = liveSocket; liveSocket = null;
+        ws.onclose = null; ws.onerror = null; ws.onmessage = null;
+        try { ws.close(1000, 'conversation changed'); } catch (_) {}
+    }
+}
+function startLiveChat(friendId) {
+    stopLiveChat();
+    if (!window.WebSocket || !getToken() || !friendId) return;
+    liveConversationId = friendId;
+    let attempts = 0;
+    function connect() {
+        if (!getToken() || !selectedFriend || normalizeFriendId(selectedFriend) !== friendId) return;
+        let ws;
+        try {
+            const api = new URL(CHAT_API_URL);
+            api.protocol = api.protocol === 'https:' ? 'wss:' : 'ws:';
+            api.pathname = api.pathname.replace(/\/$/, '') + '/api/live/chat/' + friendId;
+            api.search = '';
+            ws = new WebSocket(api.toString());
+        } catch (_) { return; }
+        liveSocket = ws; liveReady = false;
+        ws.onopen = () => { if (ws === liveSocket) ws.send(JSON.stringify({type:'auth',token:getToken()})); };
+        ws.onmessage = event => {
+            if (ws !== liveSocket) return;
+            let packet; try { packet = JSON.parse(event.data); } catch (_) { return; }
+            if (packet.type === 'ready') {
+                liveReady = true;liveBackoff = 1500;
+                if (livePingTimer) clearInterval(livePingTimer);
+                livePingTimer = setInterval(()=>{
+                    if (ws !== liveSocket || ws.readyState !== WebSocket.OPEN || document.hidden) return;
+                    try { ws.send(JSON.stringify({type:'ping'})); } catch (_) {}
+                },20000);
+                return;
+            }
+            if (packet.type === 'message' && packet.message && isValidMessageId(packet.message.id)) {
+                mergeNewMessages([packet.message]);
+                if (Number(packet.message.sender_id) === friendId) {
+                    markMessagesRead(friendId).catch(()=>{});
+                }
+            }
+        };
+        ws.onclose = event => {
+            if (ws !== liveSocket) return;
+            liveSocket = null; liveReady = false;
+            if (livePingTimer) {clearInterval(livePingTimer);livePingTimer = null;}
+            if (event.code === 1008) return; // token invalid, role invalid, or no friendship
+            if (liveConversationId !== friendId || document.hidden) return;
+            const delay = Math.min(15000, liveBackoff);
+            liveBackoff = Math.min(15000,liveBackoff*2);
+            liveReconnect = setTimeout(connect,delay);
+        };
+        ws.onerror = () => {}; // close handles reconnect, polling stays available
+    }
+    connect();
+}
+
 
 
 /* =========================================
@@ -924,6 +992,7 @@ async function openConversation(
         conversationRequestId;
 
     stopMessagePolling();
+    stopLiveChat();
 
     selectedFriend =
         friend;
@@ -963,6 +1032,7 @@ async function openConversation(
     }
 
     startMessagePolling();
+    startLiveChat(friendId);
     startPresencePolling();
 }
 
@@ -1028,6 +1098,7 @@ function showEmptyConversation() {
 
     selectedFriend = null;
     currentMessages = [];
+    stopLiveChat();
 
     stopMessagePolling();
     stopPresencePolling();
@@ -1706,60 +1777,40 @@ async function loadUnreadCount(
 ========================================= */
 
 async function refreshUnreadCounts() {
-    if (
-        refreshingUnread ||
-        !friends.length ||
-        !getToken()
-    ) {
-        return;
-    }
-
+    if (refreshingUnread || !friends.length || !getToken()) return;
     refreshingUnread = true;
-
     try {
-        const results =
-            await Promise.allSettled(
-                friends.map(
-                    function (friend) {
-                        return loadUnreadCount(
-                            friend
-                        );
-                    }
-                )
-            );
-
-        results.forEach(
-            function (
-                result,
-                index
-            ) {
-                if (
-                    !friends[index]
-                ) {
-                    return;
-                }
-
-                if (
-                    result.status ===
-                    "fulfilled"
-                ) {
-                    friends[index]
-                        .unread_count =
-                        result.value;
-                }
+        let counts;
+        try {
+            const result = await apiFetch(`${CHAT_API_URL}/api/chat/unread-by-friend`);
+            if (!result || typeof result.counts !== "object" || Array.isArray(result.counts)) {
+                throw new Error("Invalid unread-count response");
             }
-        );
-
-        renderFriendList(
-            getFilteredFriends()
-        );
-
+            counts = result.counts;
+        } catch (error) {
+            // Compatibility with an older backend during a staged deployment.
+            // Avoid flooding that backend with unlimited simultaneous requests.
+            const result = {};
+            for (let start = 0; start < friends.length; start += 5) {
+                const batch = friends.slice(start, start + 5);
+                const values = await Promise.all(batch.map(loadUnreadCount));
+                batch.forEach((friend, index) => {
+                    const id = normalizeFriendId(friend);
+                    if (id) result[String(id)] = values[index];
+                });
+            }
+            counts = result;
+        }
+        friends.forEach(friend => {
+            const id = normalizeFriendId(friend);
+            const value = Number(counts[String(id)] || 0);
+            friend.unread_count = Number.isFinite(value) ? Math.max(0, Math.floor(value)) : 0;
+        });
+        renderFriendList(getFilteredFriends());
     } finally {
-        refreshingUnread =
-            false;
+        refreshingUnread = false;
     }
 }
-
 
 /* =========================================
    MESSAGE POLLING
@@ -1775,6 +1826,7 @@ function startMessagePolling() {
     messagePolling =
         setInterval(
             async function () {
+                if (liveReady && liveSocket && liveSocket.readyState === WebSocket.OPEN) return;
                 if (
                     document.hidden ||
                     !selectedFriend ||
@@ -1871,38 +1923,34 @@ async function updateFriendPresence(
 
 
 async function refreshPresence() {
-    if (
-        refreshingPresence ||
-        !friends.length ||
-        !getToken()
-    ) {
-        return;
-    }
-
-    refreshingPresence =
-        true;
-
+    if (refreshingPresence || !friends.length || !getToken()) return;
+    refreshingPresence = true;
     try {
-        await Promise.allSettled(
-            friends.map(
-                function (friend) {
-                    return updateFriendPresence(
-                        friend
-                    );
+        try {
+            const result = await apiFetch(`${CHAT_API_URL}/api/presence/friends`);
+            if (!result || typeof result.online !== "object" || Array.isArray(result.online)) {
+                throw new Error("Invalid presence summary");
+            }
+            friends.forEach(friend => {
+                const friendId = normalizeFriendId(friend);
+                friend.online = Boolean(result.online[String(friendId)]);
+                if (selectedFriend && Number(selectedFriend.id) === friendId) {
+                    selectedFriend = friend;
+                    updateConversationStatus(friend.online);
                 }
-            )
-        );
-
-        renderFriendList(
-            getFilteredFriends()
-        );
-
+            });
+        } catch (error) {
+            // Allow the updated frontend to work against older API installs.
+            // Cap the number of parallel requests to avoid network congestion.
+            for (let index = 0; index < friends.length; index += 5) {
+                await Promise.allSettled(friends.slice(index, index + 5).map(updateFriendPresence));
+            }
+        }
+        renderFriendList(getFilteredFriends());
     } finally {
-        refreshingPresence =
-            false;
+        refreshingPresence = false;
     }
 }
-
 
 /* =========================================
    PRESENCE POLLING
@@ -2384,6 +2432,9 @@ document.addEventListener(
             );
 
             startMessagePolling();
+            if (!liveSocket || liveSocket.readyState !== WebSocket.OPEN) {
+                startLiveChat(normalizeFriendId(selectedFriend));
+            }
             startPresencePolling();
         }
 
@@ -2432,6 +2483,7 @@ window.addEventListener(
         stopMessagePolling();
         stopPresencePolling();
         stopHeartbeat();
+        stopLiveChat();
     }
 );
 

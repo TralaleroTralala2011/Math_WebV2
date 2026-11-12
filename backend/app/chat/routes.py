@@ -444,7 +444,7 @@ def get_messages(
                         sender_id = ?
                         AND receiver_id = ?
                     )
-                ORDER BY id ASC
+                ORDER BY id DESC
                 LIMIT ? OFFSET ?
                 """,
                 (
@@ -458,6 +458,10 @@ def get_messages(
             )
 
         rows = cursor.fetchall()
+        # Initial history returns the most recent messages, but presents them
+        # chronologically. offset now pages backward through older messages.
+        if after_id is None:
+            rows.reverse()
 
         return [
             format_message(row)
@@ -618,9 +622,14 @@ def send_message(
     )
 
 
-    return format_message(
-        message
-    )
+    delivered = format_message(message)
+    try:
+        from .live import push_chat_message
+        push_chat_message(int(user['id']), int(friend_id), delivered)
+    except Exception:
+        # REST remains correct even if a live connection is unavailable.
+        pass
+    return delivered
 
 
 # =========================================================
@@ -689,6 +698,32 @@ def mark_messages_read(
 
     finally:
 
+        connection.close()
+
+
+# =========================================================
+# UNREAD COUNTS IN ONE QUERY
+# =========================================================
+
+@router.get("/unread-by-friend")
+def get_unread_counts_by_friend(
+    authorization: str = Header(default=None)
+):
+    """One grouped request instead of one HTTP request per friend."""
+    user = get_user_from_token(authorization)
+    connection = get_connection()
+    try:
+        rows = connection.execute(
+            """
+            SELECT sender_id, COUNT(*) AS unread
+            FROM messages
+            WHERE receiver_id = ? AND is_read = 0
+            GROUP BY sender_id
+            """,
+            (user["id"],),
+        ).fetchall()
+        return {"counts": {str(row["sender_id"]): int(row["unread"]) for row in rows}}
+    finally:
         connection.close()
 
 

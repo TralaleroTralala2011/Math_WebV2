@@ -1,0 +1,29 @@
+{
+  "version": "V132",
+  "new_candidate_methods": 10,
+  "new_questions": 100,
+  "math_answer_checks_matching": 100,
+  "certified_independent_methods": 0,
+  "normalized_exact_duplicate_hits": 0,
+  "prior_banks_scanned": {
+    "V131_RESEARCH/V131_VERIFIED_QUESTIONS.jsonl": 150,
+    "V123_RESEARCH/V123_10500_WORKED_QUESTIONS.jsonl": 10500
+  },
+  "critical_flags": [],
+  "answer_diversity_by_method": {
+    "v132_00": 10,
+    "v132_01": 10,
+    "v132_02": 8,
+    "v132_03": 3,
+    "v132_04": 10,
+    "v132_05": 9,
+    "v132_06": 10,
+    "v132_07": 9,
+    "v132_08": 10,
+    "v132_09": 9
+  },
+  "quality_alerts": [],
+  "method_novelty_semantic_review": "NOT PERFORMED",
+  "full_backend_frontend_regression": "NOT PERFORMED",
+  "release_status": "RESEARCH_ONLY_PENDING_REVIEW"
+}

@@ -1,0 +1,17 @@
+{
+  "version": "V92",
+  "base": "V91",
+  "fixes": [
+    "Limit graph input to eight curves and 200 points per curve before extent calculations",
+    "Avoid spread-based min/max for large graph arrays",
+    "Reject nonfinite and extreme graph points consistently",
+    "Support named point references in imported geometry polylines",
+    "Include circles in geometry fit bounds to avoid off-screen circles"
+  ],
+  "new_types": 0,
+  "new_questions": 0,
+  "total_types": 33378,
+  "total_questions": 333780,
+  "browser_tested": false,
+  "mathgeo_pro_complete": false
+}

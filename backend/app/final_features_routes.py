@@ -1,5 +1,5 @@
 """Features 10-12: restricted teacher/admin workflow, evidence-based achievements, publication QA."""
-import json, sqlite3, hashlib
+import json, sqlite3, hashlib, threading
 from pathlib import Path
 from datetime import datetime, timezone
 from fastapi import APIRouter, Header, HTTPException
@@ -12,15 +12,37 @@ from .quality_routes import load, assessment
 router=APIRouter(prefix='/api/final-features',tags=['final-features'])
 DB=Path(__file__).resolve().parents[2]/'database'/'final_features.sqlite3'
 def now(): return datetime.now(timezone.utc).isoformat()
+_init_lock = threading.Lock()
+_initialized_databases = set()
+
 def conn():
- DB.parent.mkdir(parents=True,exist_ok=True)
- c=sqlite3.connect(DB);c.row_factory=sqlite3.Row
- c.executescript('''CREATE TABLE IF NOT EXISTS teacher_lessons(id INTEGER PRIMARY KEY,title TEXT NOT NULL,topic TEXT NOT NULL,body TEXT NOT NULL,status TEXT NOT NULL DEFAULT 'draft',created_by INTEGER NOT NULL,created_at TEXT NOT NULL,reviewed_at TEXT);
- CREATE TABLE IF NOT EXISTS teacher_assignments(id INTEGER PRIMARY KEY,title TEXT NOT NULL,topic TEXT NOT NULL,due_at TEXT,created_by INTEGER NOT NULL,created_at TEXT NOT NULL);
- CREATE TABLE IF NOT EXISTS teacher_targets(assignment_id INTEGER NOT NULL,user_id INTEGER NOT NULL,PRIMARY KEY(assignment_id,user_id));
- CREATE TABLE IF NOT EXISTS teacher_feedback(id INTEGER PRIMARY KEY,assignment_id INTEGER NOT NULL,user_id INTEGER NOT NULL,body TEXT NOT NULL,created_at TEXT NOT NULL);
- CREATE TABLE IF NOT EXISTS qa_runs(id INTEGER PRIMARY KEY,created_at TEXT NOT NULL,report TEXT NOT NULL);''')
- return c
+ DB.parent.mkdir(parents=True, exist_ok=True)
+ c = sqlite3.connect(DB, timeout=15)
+ c.row_factory = sqlite3.Row
+ c.execute('PRAGMA busy_timeout=15000')
+ try:
+  stat = DB.stat()
+  key = (str(DB.resolve()), stat.st_dev, stat.st_ino)
+  if key not in _initialized_databases or stat.st_size == 0:
+   with _init_lock:
+    if key not in _initialized_databases or stat.st_size == 0:
+     c.execute('PRAGMA journal_mode=WAL')
+     c.executescript("""CREATE TABLE IF NOT EXISTS teacher_lessons(id INTEGER PRIMARY KEY,title TEXT NOT NULL,topic TEXT NOT NULL,body TEXT NOT NULL,status TEXT NOT NULL DEFAULT 'draft',created_by INTEGER NOT NULL,created_at TEXT NOT NULL,reviewed_at TEXT);
+     CREATE TABLE IF NOT EXISTS teacher_assignments(id INTEGER PRIMARY KEY,title TEXT NOT NULL,topic TEXT NOT NULL,due_at TEXT,created_by INTEGER NOT NULL,created_at TEXT NOT NULL);
+     CREATE TABLE IF NOT EXISTS teacher_targets(assignment_id INTEGER NOT NULL,user_id INTEGER NOT NULL,PRIMARY KEY(assignment_id,user_id));
+     CREATE TABLE IF NOT EXISTS teacher_feedback(id INTEGER PRIMARY KEY,assignment_id INTEGER NOT NULL,user_id INTEGER NOT NULL,body TEXT NOT NULL,created_at TEXT NOT NULL);
+     CREATE TABLE IF NOT EXISTS qa_runs(id INTEGER PRIMARY KEY,created_at TEXT NOT NULL,report TEXT NOT NULL);
+     CREATE INDEX IF NOT EXISTS idx_teacher_targets_user ON teacher_targets(user_id,assignment_id);
+     CREATE INDEX IF NOT EXISTS idx_teacher_feedback_user ON teacher_feedback(user_id,id DESC);
+     CREATE INDEX IF NOT EXISTS idx_teacher_lessons_status ON teacher_lessons(status,id DESC);""")
+     c.execute("PRAGMA user_version=402")
+     c.commit()
+     _initialized_databases.add(key)
+  return c
+ except Exception:
+  c.close()
+  raise
+
 def admin(auth):return require_admin(auth)
 def learner(auth):return int(get_current_user(auth)['id'])
 class Lesson(BaseModel):

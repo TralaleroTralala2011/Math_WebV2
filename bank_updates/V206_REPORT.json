@@ -1,0 +1,13 @@
+{
+  "version": "V206",
+  "new_questions": 40,
+  "candidate_groups": {
+    "two_set_inclusion_exclusion": 10,
+    "arithmetic_sequence_inverse_index": 10,
+    "complex_reciprocal_real_part": 10,
+    "quadratic_vertex_form": 10
+  },
+  "independent_types_certified": 0,
+  "validation": "exact arithmetic derivation; semantic uniqueness not certified",
+  "sqlite_integrity": "ok"
+}

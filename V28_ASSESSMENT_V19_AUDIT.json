@@ -1,0 +1,27 @@
+{
+  "version": "V19",
+  "source": "MATH_WEB_V28_CLASSIC_ASSESSMENT_V18.zip",
+  "authored_questions": 900,
+  "mapped_complete_topics": 150,
+  "grade_questions": {
+    "10": 294,
+    "11": 306,
+    "12": 300
+  },
+  "matrix_validation": "PASS",
+  "mcq_original_correct_position_counts": {
+    "0": 182,
+    "1": 138,
+    "2": 112,
+    "3": 18
+  },
+  "mcq_display": "SHUFFLED per render, original index retained for grading",
+  "short_answer": "numeric equivalence for basic arithmetic, radicals, fractions; symbolic/text exact matching",
+  "v254_bank_records": 4000,
+  "v254_bank_sha256": "6f356f9bede0d79b75bd75a314050dc8bf202a3ccf53297c87dc377cfc26a6a4",
+  "independent_math_review": "NOT_DONE",
+  "independent_pedagogical_review": "NOT_DONE",
+  "battle_two_account_e2e": "NOT_RUN",
+  "browser_20_pages": "NOT_RUN",
+  "notes": "100% structural coverage, not 100% independently validated question quality."
+}

@@ -1,0 +1,15 @@
+{
+  "version": "V204",
+  "source": "V203 bundled ZIP",
+  "before": 11046,
+  "after": 11056,
+  "added_questions": 10,
+  "new_candidate_families": 1,
+  "certified_independent_families": 0,
+  "topic": "to_hop_xac_suat_nang_cao_11",
+  "grade": 11,
+  "verification": "All ten independently cross-checked using derangement recurrence and inclusion-exclusion; exact normalized question dedup checked",
+  "sqlite_integrity": "ok",
+  "production_deployed": false,
+  "note": "Only numerical variations within one candidate family, never counted as separate independent forms."
+}

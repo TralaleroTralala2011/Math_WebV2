@@ -1,0 +1,17 @@
+{
+  "version": "V86",
+  "base": "V85",
+  "changes": [
+    "Block misleading hardcoded SVG for eight geometry diagram types when explicit point coordinates absent",
+    "Prevent MathGeo launch for unsupported insufficient-data geometry",
+    "Preserve existing graph/coordinate rendering and existing project files"
+  ],
+  "added_form_ids": 0,
+  "added_questions": 0,
+  "target_form_ids": 300000,
+  "target_questions": 3000000,
+  "new_ids_per_batch_required": 10000,
+  "target_met": false,
+  "browser_tested": false,
+  "limitation": "Accuracy guard only; MathGeo Studio Pro has not been validated as a distinct library and not all geometry types are constructible."
+}

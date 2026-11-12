@@ -1,0 +1,42 @@
+{
+  "version": "V68",
+  "base": "V67",
+  "new_form_ids": 1000,
+  "new_questions": 10000,
+  "previous_question_records_counted": 93590,
+  "total_question_records": 103590,
+  "previous_distinct_grade_topic_form_ids": 9358,
+  "total_distinct_grade_topic_form_ids": 10358,
+  "new_method_families": 20,
+  "independently_verified_new_method_types": 0,
+  "note": "1,000 new form IDs are grouped into 20 method families, NOT 1,000 genuinely independent mathematical types. Answers are generated from exact arithmetic or symbolic formulas; comprehensive independent pedagogical review and regression testing have not been performed.",
+  "new_by_grade": {
+    "10": 5000,
+    "11": 2500,
+    "12": 2500
+  },
+  "new_by_topic": {
+    "10: Phương trình": 500,
+    "10: Hệ phương trình": 500,
+    "10: Hàm số bậc hai và parabol": 500,
+    "10: Chia dư": 500,
+    "10: Tập hợp": 500,
+    "10: Vectơ": 500,
+    "10: Thống kê": 500,
+    "10: Tổ hợp": 500,
+    "10: Hệ bất phương trình": 500,
+    "10: Hệ thức lượng trong tam giác": 500,
+    "11: Cấp số cộng": 500,
+    "11: Cấp số nhân": 500,
+    "11: Đạo hàm": 500,
+    "11: Giới hạn hàm số": 500,
+    "11: Xác suất": 500,
+    "12: Số phức": 500,
+    "12: Nguyên hàm và tích phân": 500,
+    "12: Hàm số mũ": 500,
+    "12: Tọa độ trong không gian": 500,
+    "12: Mặt phẳng Oxyz": 500
+  },
+  "minimum_questions_per_new_form": 10,
+  "duplicate_new_question_texts": 0
+}

@@ -1,0 +1,18 @@
+/* MATH_WEB V28 Classic polish: additive, low-specificity, preserves original palette. */
+:root{--mw-focus:#2563eb;--mw-radius:14px;--mw-soft-shadow:0 8px 24px rgba(27,52,92,.08)}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{overflow-x:clip;-webkit-font-smoothing:antialiased}
+:where(button,a,input,select,textarea){-webkit-tap-highlight-color:transparent}
+:where(a,button,input,select,textarea,[role="button"]):focus-visible{outline:3px solid var(--mw-focus)!important;outline-offset:3px!important}
+:where(button,[role="button"]):not(:disabled){cursor:pointer}
+:where(button,a,[role="button"]){transition:box-shadow .18s ease,transform .18s ease,background-color .18s ease,border-color .18s ease}
+@media(hover:hover){:where(button,[role="button"]):not(:disabled):hover{filter:brightness(.98)}:where(.feature-card,.topic-card,.grade-card,.mw-v5-card):hover{box-shadow:var(--mw-soft-shadow)}}
+:where(input,textarea,select){max-width:100%;font:inherit}
+:where(img,svg,video,canvas){max-width:100%}
+:where(.container,.main-container,.dashboard-container){max-width:100%}
+:where(.card,.feature-card,.topic-card,.mw-v5-card){overflow-wrap:anywhere}
+:where(.modal,.dialog,[role="dialog"]){max-width:min(96vw,900px);max-height:92dvh;overflow:auto}
+:where(.mathweb-project-footer){font-size:12px;line-height:1.6}
+@media(max-width:768px){html{scroll-padding-top:74px}:where(.modal,.dialog,[role="dialog"]){max-width:calc(100vw - 20px)}:where(input,select,textarea){font-size:16px}:where(.hero,.hero-section){padding-inline:clamp(14px,4vw,24px)}}
+@media(max-width:420px){:where(.mathweb-project-footer){padding:14px 10px!important}:where(.container,.main-container){padding-inline:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

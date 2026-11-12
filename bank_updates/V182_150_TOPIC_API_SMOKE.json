@@ -1,0 +1,10 @@
+{
+  "topics_tested": 150,
+  "curated_questions_returned": 150,
+  "answers_graded_correct": 150,
+  "true_false_topics_tested": 83,
+  "true_false_correct": 83,
+  "bank_count_before": 5355,
+  "failures": [],
+  "bank_count_after": 5355
+}

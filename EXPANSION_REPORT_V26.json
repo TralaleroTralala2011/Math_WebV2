@@ -1,0 +1,62 @@
+{
+  "version": "V26",
+  "base": "V25",
+  "added_form_codes": 36,
+  "added_questions": 360,
+  "total_questions": 5720,
+  "total_form_codes": 571,
+  "grade_new_forms": {
+    "10": 12,
+    "11": 12,
+    "12": 12
+  },
+  "new_form_ids": [
+    "v26_three_set_exact_two",
+    "v26_quadratic_discriminant",
+    "v26_quadratic_axis_symmetry",
+    "v26_vector_linear_combo_norm_sq",
+    "v26_triangle_centroid_coordinate",
+    "v26_line_parallel_through_point",
+    "v26_triangle_cosine_side_sq",
+    "v26_stats_frequency_mode",
+    "v26_count_permutations_repeated",
+    "v26_probability_exactly_one_success",
+    "v26_parabola_two_roots_vertex_y",
+    "v26_circle_tangent_length",
+    "v26_ap_sum_odd_index",
+    "v26_gp_ratio_from_terms",
+    "v26_recurrence_first_difference",
+    "v26_limit_sqrt_rationalized",
+    "v26_derivative_product_at_zero",
+    "v26_derivative_trig_at_zero",
+    "v26_trig_sin_double_from_tan",
+    "v26_prob_union_independent",
+    "v26_combinations_ratio",
+    "v26_limit_polynomial_difference",
+    "v26_gp_sum_first_four",
+    "v26_prism_volume_height",
+    "v26_integral_linear_symmetric",
+    "v26_integral_polynomial_antiderivative",
+    "v26_complex_power_i",
+    "v26_complex_square_imag",
+    "v26_3d_cross_product_norm_sq",
+    "v26_plane_normal_parallel",
+    "v26_exponential_halflife",
+    "v26_logarithm_quotient_identity",
+    "v26_sphere_surface_area_pi",
+    "v26_cubic_stationary_product",
+    "v26_binomial_expectation",
+    "v26_cone_slant_height"
+  ],
+  "checks": [
+    "no exact normalized question duplicates",
+    "no duplicate form ids or signatures",
+    "all new questions have answer and solution",
+    "exact arithmetic identity checked per question"
+  ],
+  "limitations": [
+    "form signatures do not establish genuinely independent mathematical methods",
+    "no full website regression testing",
+    "bank not necessarily wired to practice UI"
+  ]
+}

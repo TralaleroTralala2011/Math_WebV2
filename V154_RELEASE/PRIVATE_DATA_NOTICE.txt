@@ -1,0 +1,4 @@
+WARNING: THE PRIVATE CHECKPOINT ZIP CONTAINS SQLITE DATABASES WITH USER ACCOUNT ROWS.
+DO NOT UPLOAD THIS ARCHIVE TO A PUBLIC GITHUB REPOSITORY OR SHARE IT PUBLICLY.
+Use the source-only ZIP after checking it for other secrets. SQLite data from
+historical extracted copies is not automatically merged with your live server.

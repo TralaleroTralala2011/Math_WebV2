@@ -1,0 +1,17 @@
+{
+  "version": "V199",
+  "new_candidate_groups": 32,
+  "math_oracle_checked_questions": 320,
+  "grade_breakdown": {
+    "10": 100,
+    "11": 100,
+    "12": 120
+  },
+  "formats": {
+    "multiple_choice": 224,
+    "short_answer": 64,
+    "true_false": 32
+  },
+  "independent_certified_forms": 0,
+  "production_deployed": false
+}

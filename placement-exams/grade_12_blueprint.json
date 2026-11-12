@@ -1,0 +1,469 @@
+{
+  "version": "2026.11.11",
+  "grade": 12,
+  "status": "blueprint_only_unpublished",
+  "purpose": "diagnostic_placement_not_high_stakes",
+  "curriculum": "Vietnam general education mathematics curriculum 2018",
+  "framework": "OECD PISA 2022 mathematical reasoning/formulate/employ/interpret (inspiration, not official PISA items)",
+  "min_questions_per_tier": 3,
+  "max_questions_per_tier": 4,
+  "formats_required_per_topic": 2,
+  "tiers": [
+    "nền tảng",
+    "trung cấp",
+    "nâng cao"
+  ],
+  "topics": [
+    {
+      "topic_id": "ung_dung_dao_ham",
+      "title": "Ứng dụng đạo hàm",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "khao_sat_ham_so",
+      "title": "Khảo sát và vẽ đồ thị hàm số",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "nguyen_ham_tich_phan",
+      "title": "Nguyên hàm và tích phân",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "so_phuc",
+      "title": "Số phức",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "hinh_hoc_khong_gian",
+      "title": "Hình học không gian",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "toa_do_khong_gian",
+      "title": "Tọa độ trong không gian",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "xac_suat_12",
+      "title": "Xác suất và biến ngẫu nhiên",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "thong_ke_12",
+      "title": "Các số đặc trưng đo xu thế và độ phân tán",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "tinh_don_dieu",
+      "title": "Tính đơn điệu",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "cuc_tri",
+      "title": "Cực trị",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "gtln_gtnn",
+      "title": "Giá trị lớn nhất và nhỏ nhất",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "tiep_tuyen",
+      "title": "Tiếp tuyến",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "tien_can",
+      "title": "Tiệm cận",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "tuong_giao",
+      "title": "Tương giao đồ thị",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "ham_mu",
+      "title": "Hàm số mũ",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "ham_logarit",
+      "title": "Hàm số logarit",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "pt_mu",
+      "title": "Phương trình mũ",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "pt_logarit",
+      "title": "Phương trình logarit",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "bpt_mu",
+      "title": "Bất phương trình mũ",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "bpt_logarit",
+      "title": "Bất phương trình logarit",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "ung_dung_tich_phan",
+      "title": "Ứng dụng tích phân",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "bieu_dien_so_phuc",
+      "title": "Biểu diễn số phức",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "pt_so_phuc",
+      "title": "Phương trình số phức",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "mat_phang_oxyz",
+      "title": "Mặt phẳng trong Oxyz",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "duong_thang_oxyz",
+      "title": "Đường thẳng trong Oxyz",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "mat_cau",
+      "title": "Mặt cầu",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "goc_khoang_cach_oxyz",
+      "title": "Góc và khoảng cách Oxyz",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "the_tich_khong_gian",
+      "title": "Thể tích hình học không gian",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "tong_hop_thpt",
+      "title": "Bài toán tổng hợp THPT",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "bai_toan_thuc_te_12",
+      "title": "Bài toán thực tế Toán 12",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "hinh_khoi_va_the_tich_co_ban_12",
+      "title": "Hình khối và thể tích cơ bản",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "hinh_hoc_oxyz_van_dung_12",
+      "title": "Vận dụng tọa độ Oxyz",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_vectors_3d",
+      "title": "Vectơ và độ dài trong không gian Oxyz",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_plane_equation",
+      "title": "Phương trình mặt phẳng",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_line_equation_3d",
+      "title": "Phương trình đường thẳng trong Oxyz",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_sphere_equation",
+      "title": "Phương trình mặt cầu và tâm bán kính",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_solid_surface_area",
+      "title": "Diện tích xung quanh và toàn phần hình khối",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_point_plane_distance",
+      "title": "Khoảng cách từ điểm đến mặt phẳng",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_line_plane_angle",
+      "title": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_two_planes_angle",
+      "title": "Góc giữa hai mặt phẳng",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_line_plane_intersection",
+      "title": "Giao điểm đường thẳng và mặt phẳng",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_sphere_tangent_plane",
+      "title": "Mặt phẳng tiếp xúc với mặt cầu",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_skew_line_relation",
+      "title": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_min_distance_3d",
+      "title": "Cực trị khoảng cách trong không gian tọa độ",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_sphere_plane_intersection",
+      "title": "Giao tuyến mặt cầu và mặt phẳng",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_parameter_geometry",
+      "title": "Bài toán tham số hình học Oxyz",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_geom_3d_optimization",
+      "title": "Bài toán tối ưu hình học không gian",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_complex_plane_geometry",
+      "title": "Hình học số phức và quỹ tích",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_integral_optimization",
+      "title": "Tối ưu và cực trị bằng tích phân",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g12_solid_of_revolution",
+      "title": "Thể tích khối tròn xoay và mô hình thực tế",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    }
+  ],
+  "note": "Danh sách vị trí cần thẩm định; KHÔNG phải đề đã có câu hỏi được chứng nhận."
+}

@@ -1,0 +1,25 @@
+{
+  "version": "V99",
+  "base": "V98",
+  "changes": [
+    "Added reproducible targeted Battle/Admin/geometry regression runner and actual test report"
+  ],
+  "results": {
+    "battle_admin_friend_selected": "5 passed, 4 deselected",
+    "api_learning_geometry_subset": "38 passed",
+    "geometry_core": "25 passed",
+    "js_syntax": "battle.js, practise.js, practice-mathgeo-bridge.js passed node --check",
+    "zip_integrity": "pass"
+  },
+  "limitations": [
+    "No browser E2E tests",
+    "No proof all natural-language geometry questions are rendered accurately",
+    "No independent-type certification",
+    "Full test suite not completed within runtime limit"
+  ],
+  "new_form_ids": 0,
+  "new_questions": 0,
+  "total_form_ids": 33378,
+  "total_questions": 333780,
+  "claim_100_percent": false
+}

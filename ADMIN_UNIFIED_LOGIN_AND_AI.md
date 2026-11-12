@@ -17,7 +17,7 @@
 1. Giải nén dự án vào thư mục riêng.
 2. Chạy `START_MATH_WEB.bat` ở thư mục gốc.
 3. Mở `http://127.0.0.1:5500/login.html`.
-4. Đăng nhập bằng tài khoản Admin đã được cấu hình. Trong cơ sở dữ liệu mới, mặc định là `admin19022011`; mật khẩu bootstrap mặc định là `adminsitinh`.
+4. Đăng nhập bằng tài khoản Admin đã được cấu hình. Trong cơ sở dữ liệu mới, mặc định là `admin19022011`; mật khẩu khởi tạo ngẫu nhiên được in trong cửa sổ backend khi tạo tài khoản Admin lần đầu.
 5. Admin sẽ được chuyển tự động đến `admin.html`. Người học vẫn vào trang tài khoản như trước.
 
 Nếu cơ sở dữ liệu đã có Admin từ bản cũ, mật khẩu hash hiện tại được giữ lại khi chuyển đổi. Nếu mật khẩu đã từng đổi, hãy dùng mật khẩu hiện tại thay vì mặc định. Đổi mật khẩu sau khi đăng nhập và không đưa bản đang chạy công khai với mật khẩu mặc định.

@@ -1,0 +1,26 @@
+{
+  "release": "V215",
+  "completed_test_batches": [
+    {
+      "scope": "API/Battle integration, grading, banks, anti-repeat, data persistence, admin, assignments, test suite subsets",
+      "passed": 116,
+      "failed": 0
+    },
+    {
+      "scope": "geometry and question-level tiers",
+      "passed": 39,
+      "failed": 0
+    }
+  ],
+  "total_selected_pytest_tests_passed": 155,
+  "total_selected_pytest_tests_failed": 0,
+  "not_full_test_suite": true,
+  "full_suite_attempt": "Not completed within allotted tool execution time; no full-suite pass claim.",
+  "generated_new_questions": 1020,
+  "active_new_questions_after_semantic_filter": 620,
+  "quarantined_questions": 400,
+  "active_bank_rows": 12266,
+  "certified_independent_types": 0,
+  "true_false_incorrect_answers_rejected": 62,
+  "total_true_false_active_new": 62
+}

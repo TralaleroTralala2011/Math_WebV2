@@ -1,0 +1,58 @@
+{
+  "version": "V229",
+  "base": "V228",
+  "before": 14896,
+  "new_questions": 50,
+  "after": 14946,
+  "candidate_groups": 5,
+  "certified_new_independent_types": 0,
+  "answer_checks_passed": 50,
+  "mcq_single_correct_checks_passed": 50,
+  "limitations": [
+    "Semantic deduplication across all historical mathematical methods is incomplete",
+    "Several groups are likely equivalent to pre-existing types; do not count as independent new types",
+    "No full frontend/Battle regression"
+  ],
+  "candidate_specs": [
+    {
+      "grade": 10,
+      "topic": "toa_do",
+      "candidate_method": "lattice_segment_gcd_count",
+      "method_principle": "integer lattice points via gcd of coordinate differences",
+      "count": 10,
+      "independent_type_certified": false
+    },
+    {
+      "grade": 10,
+      "topic": "quy_tac_dem",
+      "candidate_method": "selection_forbidden_pair",
+      "method_principle": "complement counting with a forbidden pair",
+      "count": 10,
+      "independent_type_certified": false
+    },
+    {
+      "grade": 11,
+      "topic": "day_so",
+      "candidate_method": "arithmetic_recurrence_sum",
+      "method_principle": "sum first n terms of first-order arithmetic recurrence",
+      "count": 10,
+      "independent_type_certified": false
+    },
+    {
+      "grade": 12,
+      "topic": "toa_do_khong_gian",
+      "candidate_method": "vector_squared_norm_3d",
+      "method_principle": "squared Euclidean norm from 3D coordinates",
+      "count": 10,
+      "independent_type_certified": false
+    },
+    {
+      "grade": 12,
+      "topic": "so_phuc",
+      "candidate_method": "complex_modulus_squared",
+      "method_principle": "complex modulus as Euclidean norm in plane",
+      "count": 10,
+      "independent_type_certified": false
+    }
+  ]
+}

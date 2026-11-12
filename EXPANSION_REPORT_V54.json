@@ -1,0 +1,1016 @@
+{
+  "version": "V54",
+  "source": "V53",
+  "old_records": 56687,
+  "new_records": 1380,
+  "total_records": 58067,
+  "old_form_ids": 5811,
+  "new_form_ids": 138,
+  "total_form_ids": 5949,
+  "forms": [
+    {
+      "form_id": "v54_quadratic_transform_00",
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "signature": "Biến đổi đa thức bậc hai: thao tác 1",
+      "count": 10
+    },
+    {
+      "form_id": "v54_quadratic_transform_01",
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "signature": "Biến đổi đa thức bậc hai: thao tác 2",
+      "count": 10
+    },
+    {
+      "form_id": "v54_quadratic_transform_02",
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "signature": "Biến đổi đa thức bậc hai: thao tác 3",
+      "count": 10
+    },
+    {
+      "form_id": "v54_quadratic_transform_03",
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "signature": "Biến đổi đa thức bậc hai: thao tác 4",
+      "count": 10
+    },
+    {
+      "form_id": "v54_quadratic_transform_04",
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "signature": "Biến đổi đa thức bậc hai: thao tác 5",
+      "count": 10
+    },
+    {
+      "form_id": "v54_quadratic_transform_05",
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "signature": "Biến đổi đa thức bậc hai: thao tác 6",
+      "count": 10
+    },
+    {
+      "form_id": "v54_quadratic_transform_06",
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "signature": "Biến đổi đa thức bậc hai: thao tác 7",
+      "count": 10
+    },
+    {
+      "form_id": "v54_quadratic_transform_07",
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "signature": "Biến đổi đa thức bậc hai: thao tác 8",
+      "count": 10
+    },
+    {
+      "form_id": "v54_quadratic_transform_08",
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "signature": "Biến đổi đa thức bậc hai: thao tác 9",
+      "count": 10
+    },
+    {
+      "form_id": "v54_quadratic_transform_09",
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "signature": "Biến đổi đa thức bậc hai: thao tác 10",
+      "count": 10
+    },
+    {
+      "form_id": "v54_quadratic_transform_10",
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "signature": "Biến đổi đa thức bậc hai: thao tác 11",
+      "count": 10
+    },
+    {
+      "form_id": "v54_quadratic_transform_11",
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "signature": "Biến đổi đa thức bậc hai: thao tác 12",
+      "count": 10
+    },
+    {
+      "form_id": "v54_coordinate_tasks_00",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "signature": "Tọa độ mặt phẳng: yêu cầu 1",
+      "count": 10
+    },
+    {
+      "form_id": "v54_coordinate_tasks_01",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "signature": "Tọa độ mặt phẳng: yêu cầu 2",
+      "count": 10
+    },
+    {
+      "form_id": "v54_coordinate_tasks_02",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "signature": "Tọa độ mặt phẳng: yêu cầu 3",
+      "count": 10
+    },
+    {
+      "form_id": "v54_coordinate_tasks_03",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "signature": "Tọa độ mặt phẳng: yêu cầu 4",
+      "count": 10
+    },
+    {
+      "form_id": "v54_coordinate_tasks_04",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "signature": "Tọa độ mặt phẳng: yêu cầu 5",
+      "count": 10
+    },
+    {
+      "form_id": "v54_coordinate_tasks_05",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "signature": "Tọa độ mặt phẳng: yêu cầu 6",
+      "count": 10
+    },
+    {
+      "form_id": "v54_coordinate_tasks_06",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "signature": "Tọa độ mặt phẳng: yêu cầu 7",
+      "count": 10
+    },
+    {
+      "form_id": "v54_coordinate_tasks_07",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "signature": "Tọa độ mặt phẳng: yêu cầu 8",
+      "count": 10
+    },
+    {
+      "form_id": "v54_coordinate_tasks_08",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "signature": "Tọa độ mặt phẳng: yêu cầu 9",
+      "count": 10
+    },
+    {
+      "form_id": "v54_coordinate_tasks_09",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "signature": "Tọa độ mặt phẳng: yêu cầu 10",
+      "count": 10
+    },
+    {
+      "form_id": "v54_coordinate_tasks_10",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "signature": "Tọa độ mặt phẳng: yêu cầu 11",
+      "count": 10
+    },
+    {
+      "form_id": "v54_coordinate_tasks_11",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "signature": "Tọa độ mặt phẳng: yêu cầu 12",
+      "count": 10
+    },
+    {
+      "form_id": "v54_sequence_tasks_00",
+      "grade": 11,
+      "topic": "Dãy số",
+      "signature": "Dãy số và cấp số: yêu cầu 1",
+      "count": 10
+    },
+    {
+      "form_id": "v54_sequence_tasks_01",
+      "grade": 11,
+      "topic": "Dãy số",
+      "signature": "Dãy số và cấp số: yêu cầu 2",
+      "count": 10
+    },
+    {
+      "form_id": "v54_sequence_tasks_02",
+      "grade": 11,
+      "topic": "Dãy số",
+      "signature": "Dãy số và cấp số: yêu cầu 3",
+      "count": 10
+    },
+    {
+      "form_id": "v54_sequence_tasks_03",
+      "grade": 11,
+      "topic": "Dãy số",
+      "signature": "Dãy số và cấp số: yêu cầu 4",
+      "count": 10
+    },
+    {
+      "form_id": "v54_sequence_tasks_04",
+      "grade": 11,
+      "topic": "Dãy số",
+      "signature": "Dãy số và cấp số: yêu cầu 5",
+      "count": 10
+    },
+    {
+      "form_id": "v54_sequence_tasks_05",
+      "grade": 11,
+      "topic": "Dãy số",
+      "signature": "Dãy số và cấp số: yêu cầu 6",
+      "count": 10
+    },
+    {
+      "form_id": "v54_sequence_tasks_06",
+      "grade": 11,
+      "topic": "Dãy số",
+      "signature": "Dãy số và cấp số: yêu cầu 7",
+      "count": 10
+    },
+    {
+      "form_id": "v54_sequence_tasks_07",
+      "grade": 11,
+      "topic": "Dãy số",
+      "signature": "Dãy số và cấp số: yêu cầu 8",
+      "count": 10
+    },
+    {
+      "form_id": "v54_sequence_tasks_08",
+      "grade": 11,
+      "topic": "Dãy số",
+      "signature": "Dãy số và cấp số: yêu cầu 9",
+      "count": 10
+    },
+    {
+      "form_id": "v54_sequence_tasks_09",
+      "grade": 11,
+      "topic": "Dãy số",
+      "signature": "Dãy số và cấp số: yêu cầu 10",
+      "count": 10
+    },
+    {
+      "form_id": "v54_sequence_tasks_10",
+      "grade": 11,
+      "topic": "Dãy số",
+      "signature": "Dãy số và cấp số: yêu cầu 11",
+      "count": 10
+    },
+    {
+      "form_id": "v54_sequence_tasks_11",
+      "grade": 11,
+      "topic": "Dãy số",
+      "signature": "Dãy số và cấp số: yêu cầu 12",
+      "count": 10
+    },
+    {
+      "form_id": "v54_calculus_tasks_00",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Đạo hàm và tích phân đa thức: phép toán 1",
+      "count": 10
+    },
+    {
+      "form_id": "v54_calculus_tasks_01",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Đạo hàm và tích phân đa thức: phép toán 2",
+      "count": 10
+    },
+    {
+      "form_id": "v54_calculus_tasks_02",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Đạo hàm và tích phân đa thức: phép toán 3",
+      "count": 10
+    },
+    {
+      "form_id": "v54_calculus_tasks_03",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Đạo hàm và tích phân đa thức: phép toán 4",
+      "count": 10
+    },
+    {
+      "form_id": "v54_calculus_tasks_04",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Đạo hàm và tích phân đa thức: phép toán 5",
+      "count": 10
+    },
+    {
+      "form_id": "v54_calculus_tasks_05",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "Đạo hàm và tích phân đa thức: phép toán 6",
+      "count": 10
+    },
+    {
+      "form_id": "v54_calculus_tasks_06",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Đạo hàm và tích phân đa thức: phép toán 7",
+      "count": 10
+    },
+    {
+      "form_id": "v54_calculus_tasks_07",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Đạo hàm và tích phân đa thức: phép toán 8",
+      "count": 10
+    },
+    {
+      "form_id": "v54_calculus_tasks_08",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Đạo hàm và tích phân đa thức: phép toán 9",
+      "count": 10
+    },
+    {
+      "form_id": "v54_calculus_tasks_09",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Đạo hàm và tích phân đa thức: phép toán 10",
+      "count": 10
+    },
+    {
+      "form_id": "v54_calculus_tasks_10",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Đạo hàm và tích phân đa thức: phép toán 11",
+      "count": 10
+    },
+    {
+      "form_id": "v54_calculus_tasks_11",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "Đạo hàm và tích phân đa thức: phép toán 12",
+      "count": 10
+    },
+    {
+      "form_id": "v54_combinatorics_tasks_00",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "Tổ hợp đếm cấu hình: điều kiện 1",
+      "count": 10
+    },
+    {
+      "form_id": "v54_combinatorics_tasks_01",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "Tổ hợp đếm cấu hình: điều kiện 2",
+      "count": 10
+    },
+    {
+      "form_id": "v54_combinatorics_tasks_03",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "Tổ hợp đếm cấu hình: điều kiện 4",
+      "count": 10
+    },
+    {
+      "form_id": "v54_combinatorics_tasks_04",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "Tổ hợp đếm cấu hình: điều kiện 5",
+      "count": 10
+    },
+    {
+      "form_id": "v54_combinatorics_tasks_05",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "Tổ hợp đếm cấu hình: điều kiện 6",
+      "count": 10
+    },
+    {
+      "form_id": "v54_combinatorics_tasks_06",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "Tổ hợp đếm cấu hình: điều kiện 7",
+      "count": 10
+    },
+    {
+      "form_id": "v54_combinatorics_tasks_07",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "Tổ hợp đếm cấu hình: điều kiện 8",
+      "count": 10
+    },
+    {
+      "form_id": "v54_combinatorics_tasks_08",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "Tổ hợp đếm cấu hình: điều kiện 9",
+      "count": 10
+    },
+    {
+      "form_id": "v54_combinatorics_tasks_09",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "Tổ hợp đếm cấu hình: điều kiện 10",
+      "count": 10
+    },
+    {
+      "form_id": "v54_space_tasks_00",
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "signature": "Hình học không gian: đại lượng 1",
+      "count": 10
+    },
+    {
+      "form_id": "v54_space_tasks_01",
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "signature": "Hình học không gian: đại lượng 2",
+      "count": 10
+    },
+    {
+      "form_id": "v54_space_tasks_02",
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "signature": "Hình học không gian: đại lượng 3",
+      "count": 10
+    },
+    {
+      "form_id": "v54_space_tasks_03",
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "signature": "Hình học không gian: đại lượng 4",
+      "count": 10
+    },
+    {
+      "form_id": "v54_space_tasks_04",
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "signature": "Hình học không gian: đại lượng 5",
+      "count": 10
+    },
+    {
+      "form_id": "v54_space_tasks_05",
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "signature": "Hình học không gian: đại lượng 6",
+      "count": 10
+    },
+    {
+      "form_id": "v54_space_tasks_06",
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "signature": "Hình học không gian: đại lượng 7",
+      "count": 10
+    },
+    {
+      "form_id": "v54_space_tasks_07",
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "signature": "Hình học không gian: đại lượng 8",
+      "count": 10
+    },
+    {
+      "form_id": "v54_space_tasks_08",
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "signature": "Hình học không gian: đại lượng 9",
+      "count": 10
+    },
+    {
+      "form_id": "v54_space_tasks_09",
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "signature": "Hình học không gian: đại lượng 10",
+      "count": 10
+    },
+    {
+      "form_id": "v54_space_tasks_10",
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "signature": "Hình học không gian: đại lượng 11",
+      "count": 10
+    },
+    {
+      "form_id": "v54_space_tasks_11",
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "signature": "Hình học không gian: đại lượng 12",
+      "count": 10
+    },
+    {
+      "form_id": "v54_probability_tasks_00",
+      "grade": 11,
+      "topic": "Xác suất",
+      "signature": "Xác suất rút bi: biến cố 1",
+      "count": 10
+    },
+    {
+      "form_id": "v54_probability_tasks_01",
+      "grade": 11,
+      "topic": "Xác suất",
+      "signature": "Xác suất rút bi: biến cố 2",
+      "count": 10
+    },
+    {
+      "form_id": "v54_probability_tasks_02",
+      "grade": 11,
+      "topic": "Xác suất",
+      "signature": "Xác suất rút bi: biến cố 3",
+      "count": 10
+    },
+    {
+      "form_id": "v54_probability_tasks_03",
+      "grade": 11,
+      "topic": "Xác suất",
+      "signature": "Xác suất rút bi: biến cố 4",
+      "count": 10
+    },
+    {
+      "form_id": "v54_probability_tasks_04",
+      "grade": 11,
+      "topic": "Xác suất",
+      "signature": "Xác suất rút bi: biến cố 5",
+      "count": 10
+    },
+    {
+      "form_id": "v54_probability_tasks_05",
+      "grade": 11,
+      "topic": "Xác suất",
+      "signature": "Xác suất rút bi: biến cố 6",
+      "count": 10
+    },
+    {
+      "form_id": "v54_probability_tasks_06",
+      "grade": 11,
+      "topic": "Xác suất",
+      "signature": "Xác suất rút bi: biến cố 7",
+      "count": 10
+    },
+    {
+      "form_id": "v54_probability_tasks_07",
+      "grade": 11,
+      "topic": "Xác suất",
+      "signature": "Xác suất rút bi: biến cố 8",
+      "count": 10
+    },
+    {
+      "form_id": "v54_probability_tasks_08",
+      "grade": 11,
+      "topic": "Xác suất",
+      "signature": "Xác suất rút bi: biến cố 9",
+      "count": 10
+    },
+    {
+      "form_id": "v54_probability_tasks_09",
+      "grade": 11,
+      "topic": "Xác suất",
+      "signature": "Xác suất rút bi: biến cố 10",
+      "count": 10
+    },
+    {
+      "form_id": "v54_probability_tasks_10",
+      "grade": 11,
+      "topic": "Xác suất",
+      "signature": "Xác suất rút bi: biến cố 11",
+      "count": 10
+    },
+    {
+      "form_id": "v54_probability_tasks_11",
+      "grade": 11,
+      "topic": "Xác suất",
+      "signature": "Xác suất rút bi: biến cố 12",
+      "count": 10
+    },
+    {
+      "form_id": "v54_complex_tasks_00",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Số phức: phép toán 1",
+      "count": 10
+    },
+    {
+      "form_id": "v54_complex_tasks_01",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Số phức: phép toán 2",
+      "count": 10
+    },
+    {
+      "form_id": "v54_complex_tasks_02",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Số phức: phép toán 3",
+      "count": 10
+    },
+    {
+      "form_id": "v54_complex_tasks_03",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Số phức: phép toán 4",
+      "count": 10
+    },
+    {
+      "form_id": "v54_complex_tasks_04",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Số phức: phép toán 5",
+      "count": 10
+    },
+    {
+      "form_id": "v54_complex_tasks_05",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Số phức: phép toán 6",
+      "count": 10
+    },
+    {
+      "form_id": "v54_complex_tasks_07",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Số phức: phép toán 8",
+      "count": 10
+    },
+    {
+      "form_id": "v54_complex_tasks_08",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Số phức: phép toán 9",
+      "count": 10
+    },
+    {
+      "form_id": "v54_complex_tasks_11",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "Số phức: phép toán 12",
+      "count": 10
+    },
+    {
+      "form_id": "v54_statistics_tasks_00",
+      "grade": 10,
+      "topic": "Thống kê",
+      "signature": "Thống kê mẫu: chỉ tiêu 1",
+      "count": 10
+    },
+    {
+      "form_id": "v54_statistics_tasks_01",
+      "grade": 10,
+      "topic": "Thống kê",
+      "signature": "Thống kê mẫu: chỉ tiêu 2",
+      "count": 10
+    },
+    {
+      "form_id": "v54_statistics_tasks_02",
+      "grade": 10,
+      "topic": "Thống kê",
+      "signature": "Thống kê mẫu: chỉ tiêu 3",
+      "count": 10
+    },
+    {
+      "form_id": "v54_statistics_tasks_03",
+      "grade": 10,
+      "topic": "Thống kê",
+      "signature": "Thống kê mẫu: chỉ tiêu 4",
+      "count": 10
+    },
+    {
+      "form_id": "v54_statistics_tasks_04",
+      "grade": 10,
+      "topic": "Thống kê",
+      "signature": "Thống kê mẫu: chỉ tiêu 5",
+      "count": 10
+    },
+    {
+      "form_id": "v54_statistics_tasks_05",
+      "grade": 10,
+      "topic": "Thống kê",
+      "signature": "Thống kê mẫu: chỉ tiêu 6",
+      "count": 10
+    },
+    {
+      "form_id": "v54_statistics_tasks_06",
+      "grade": 10,
+      "topic": "Thống kê",
+      "signature": "Thống kê mẫu: chỉ tiêu 7",
+      "count": 10
+    },
+    {
+      "form_id": "v54_statistics_tasks_07",
+      "grade": 10,
+      "topic": "Thống kê",
+      "signature": "Thống kê mẫu: chỉ tiêu 8",
+      "count": 10
+    },
+    {
+      "form_id": "v54_statistics_tasks_08",
+      "grade": 10,
+      "topic": "Thống kê",
+      "signature": "Thống kê mẫu: chỉ tiêu 9",
+      "count": 10
+    },
+    {
+      "form_id": "v54_statistics_tasks_09",
+      "grade": 10,
+      "topic": "Thống kê",
+      "signature": "Thống kê mẫu: chỉ tiêu 10",
+      "count": 10
+    },
+    {
+      "form_id": "v54_statistics_tasks_10",
+      "grade": 10,
+      "topic": "Thống kê",
+      "signature": "Thống kê mẫu: chỉ tiêu 11",
+      "count": 10
+    },
+    {
+      "form_id": "v54_statistics_tasks_11",
+      "grade": 10,
+      "topic": "Thống kê",
+      "signature": "Thống kê mẫu: chỉ tiêu 12",
+      "count": 10
+    },
+    {
+      "form_id": "v54_log_exp_tasks_00",
+      "grade": 12,
+      "topic": "Hàm số mũ và logarit",
+      "signature": "Lũy thừa và logarit: yêu cầu 1",
+      "count": 10
+    },
+    {
+      "form_id": "v54_log_exp_tasks_01",
+      "grade": 12,
+      "topic": "Hàm số mũ và logarit",
+      "signature": "Lũy thừa và logarit: yêu cầu 2",
+      "count": 10
+    },
+    {
+      "form_id": "v54_log_exp_tasks_02",
+      "grade": 12,
+      "topic": "Hàm số mũ và logarit",
+      "signature": "Lũy thừa và logarit: yêu cầu 3",
+      "count": 10
+    },
+    {
+      "form_id": "v54_log_exp_tasks_03",
+      "grade": 12,
+      "topic": "Hàm số mũ và logarit",
+      "signature": "Lũy thừa và logarit: yêu cầu 4",
+      "count": 10
+    },
+    {
+      "form_id": "v54_log_exp_tasks_04",
+      "grade": 12,
+      "topic": "Hàm số mũ và logarit",
+      "signature": "Lũy thừa và logarit: yêu cầu 5",
+      "count": 10
+    },
+    {
+      "form_id": "v54_log_exp_tasks_05",
+      "grade": 12,
+      "topic": "Hàm số mũ và logarit",
+      "signature": "Lũy thừa và logarit: yêu cầu 6",
+      "count": 10
+    },
+    {
+      "form_id": "v54_log_exp_tasks_06",
+      "grade": 12,
+      "topic": "Hàm số mũ và logarit",
+      "signature": "Lũy thừa và logarit: yêu cầu 7",
+      "count": 10
+    },
+    {
+      "form_id": "v54_log_exp_tasks_07",
+      "grade": 12,
+      "topic": "Hàm số mũ và logarit",
+      "signature": "Lũy thừa và logarit: yêu cầu 8",
+      "count": 10
+    },
+    {
+      "form_id": "v54_log_exp_tasks_08",
+      "grade": 12,
+      "topic": "Hàm số mũ và logarit",
+      "signature": "Lũy thừa và logarit: yêu cầu 9",
+      "count": 10
+    },
+    {
+      "form_id": "v54_log_exp_tasks_09",
+      "grade": 12,
+      "topic": "Hàm số mũ và logarit",
+      "signature": "Lũy thừa và logarit: yêu cầu 10",
+      "count": 10
+    },
+    {
+      "form_id": "v54_log_exp_tasks_10",
+      "grade": 12,
+      "topic": "Hàm số mũ và logarit",
+      "signature": "Lũy thừa và logarit: yêu cầu 11",
+      "count": 10
+    },
+    {
+      "form_id": "v54_log_exp_tasks_11",
+      "grade": 12,
+      "topic": "Hàm số mũ và logarit",
+      "signature": "Lũy thừa và logarit: yêu cầu 12",
+      "count": 10
+    },
+    {
+      "form_id": "v54_linear_equations_00",
+      "grade": 10,
+      "topic": "Phương trình",
+      "signature": "Phương trình tuyến tính: cấu trúc 1",
+      "count": 10
+    },
+    {
+      "form_id": "v54_linear_equations_01",
+      "grade": 10,
+      "topic": "Phương trình",
+      "signature": "Phương trình tuyến tính: cấu trúc 2",
+      "count": 10
+    },
+    {
+      "form_id": "v54_linear_equations_02",
+      "grade": 10,
+      "topic": "Phương trình",
+      "signature": "Phương trình tuyến tính: cấu trúc 3",
+      "count": 10
+    },
+    {
+      "form_id": "v54_linear_equations_03",
+      "grade": 10,
+      "topic": "Phương trình",
+      "signature": "Phương trình tuyến tính: cấu trúc 4",
+      "count": 10
+    },
+    {
+      "form_id": "v54_linear_equations_04",
+      "grade": 10,
+      "topic": "Phương trình",
+      "signature": "Phương trình tuyến tính: cấu trúc 5",
+      "count": 10
+    },
+    {
+      "form_id": "v54_linear_equations_05",
+      "grade": 10,
+      "topic": "Phương trình",
+      "signature": "Phương trình tuyến tính: cấu trúc 6",
+      "count": 10
+    },
+    {
+      "form_id": "v54_linear_equations_06",
+      "grade": 10,
+      "topic": "Phương trình",
+      "signature": "Phương trình tuyến tính: cấu trúc 7",
+      "count": 10
+    },
+    {
+      "form_id": "v54_linear_equations_07",
+      "grade": 10,
+      "topic": "Phương trình",
+      "signature": "Phương trình tuyến tính: cấu trúc 8",
+      "count": 10
+    },
+    {
+      "form_id": "v54_linear_equations_08",
+      "grade": 10,
+      "topic": "Phương trình",
+      "signature": "Phương trình tuyến tính: cấu trúc 9",
+      "count": 10
+    },
+    {
+      "form_id": "v54_linear_equations_09",
+      "grade": 10,
+      "topic": "Phương trình",
+      "signature": "Phương trình tuyến tính: cấu trúc 10",
+      "count": 10
+    },
+    {
+      "form_id": "v54_linear_equations_10",
+      "grade": 10,
+      "topic": "Phương trình",
+      "signature": "Phương trình tuyến tính: cấu trúc 11",
+      "count": 10
+    },
+    {
+      "form_id": "v54_linear_equations_11",
+      "grade": 10,
+      "topic": "Phương trình",
+      "signature": "Phương trình tuyến tính: cấu trúc 12",
+      "count": 10
+    },
+    {
+      "form_id": "v54_plane_geometry_00",
+      "grade": 10,
+      "topic": "Hình học",
+      "signature": "Hình học phẳng: phép đo 1",
+      "count": 10
+    },
+    {
+      "form_id": "v54_plane_geometry_01",
+      "grade": 10,
+      "topic": "Hình học",
+      "signature": "Hình học phẳng: phép đo 2",
+      "count": 10
+    },
+    {
+      "form_id": "v54_plane_geometry_02",
+      "grade": 10,
+      "topic": "Hình học",
+      "signature": "Hình học phẳng: phép đo 3",
+      "count": 10
+    },
+    {
+      "form_id": "v54_plane_geometry_03",
+      "grade": 10,
+      "topic": "Hình học",
+      "signature": "Hình học phẳng: phép đo 4",
+      "count": 10
+    },
+    {
+      "form_id": "v54_plane_geometry_04",
+      "grade": 10,
+      "topic": "Hình học",
+      "signature": "Hình học phẳng: phép đo 5",
+      "count": 10
+    },
+    {
+      "form_id": "v54_plane_geometry_05",
+      "grade": 10,
+      "topic": "Hình học",
+      "signature": "Hình học phẳng: phép đo 6",
+      "count": 10
+    },
+    {
+      "form_id": "v54_plane_geometry_06",
+      "grade": 10,
+      "topic": "Hình học",
+      "signature": "Hình học phẳng: phép đo 7",
+      "count": 10
+    },
+    {
+      "form_id": "v54_plane_geometry_07",
+      "grade": 10,
+      "topic": "Hình học",
+      "signature": "Hình học phẳng: phép đo 8",
+      "count": 10
+    },
+    {
+      "form_id": "v54_plane_geometry_08",
+      "grade": 10,
+      "topic": "Hình học",
+      "signature": "Hình học phẳng: phép đo 9",
+      "count": 10
+    },
+    {
+      "form_id": "v54_plane_geometry_09",
+      "grade": 10,
+      "topic": "Hình học",
+      "signature": "Hình học phẳng: phép đo 10",
+      "count": 10
+    },
+    {
+      "form_id": "v54_plane_geometry_10",
+      "grade": 10,
+      "topic": "Hình học",
+      "signature": "Hình học phẳng: phép đo 11",
+      "count": 10
+    },
+    {
+      "form_id": "v54_plane_geometry_11",
+      "grade": 10,
+      "topic": "Hình học",
+      "signature": "Hình học phẳng: phép đo 12",
+      "count": 10
+    }
+  ],
+  "skipped": [
+    [
+      "v54_combinatorics_tasks_02",
+      "duplicate"
+    ],
+    [
+      "v54_combinatorics_tasks_10",
+      "duplicate"
+    ],
+    [
+      "v54_combinatorics_tasks_11",
+      "duplicate"
+    ],
+    [
+      "v54_complex_tasks_06",
+      "duplicate"
+    ],
+    [
+      "v54_complex_tasks_09",
+      "duplicate"
+    ],
+    [
+      "v54_complex_tasks_10",
+      "duplicate"
+    ]
+  ],
+  "validation": {
+    "new_answer_checks": 1380,
+    "exact_question_duplicates_total": 0,
+    "zip_integrity": "checked_after_write",
+    "method_independence": "not_certified",
+    "regression_tests": "not_run",
+    "known_limitations": [
+      "Some new form codes share a method family",
+      "Old records not independently revalidated",
+      "Topic taxonomy mapping not fully audited"
+    ]
+  }
+}

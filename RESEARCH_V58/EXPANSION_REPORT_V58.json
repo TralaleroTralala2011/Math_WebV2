@@ -1,0 +1,24 @@
+{
+  "version": "V58",
+  "source": "V57",
+  "old_questions": 68067,
+  "new_questions": 290,
+  "total_questions": 68357,
+  "new_form_ids": 29,
+  "new_ids_not_claimed_independent_methods": true,
+  "validation": "Each new answer checked by a separate exact arithmetic identity; no teacher review, no UI regression test",
+  "sources": [
+    {
+      "title": "OpenStax Precalculus 2e",
+      "url": "https://openstax.org/books/precalculus-2e/pages/preface"
+    },
+    {
+      "title": "OpenStax Chapter 1 exercises",
+      "url": "https://openstax.org/books/precalculus-2e/pages/1-1-functions-and-function-notation"
+    },
+    {
+      "title": "OpenStax trigonometry exercises",
+      "url": "https://openstax.org/books/precalculus-2e/pages/7-5-solving-trigonometric-equations"
+    }
+  ]
+}

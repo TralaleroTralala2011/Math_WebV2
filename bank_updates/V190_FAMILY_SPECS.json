@@ -1,0 +1,42 @@
+[
+  {
+    "family": "polynomial_remainder_linear",
+    "topic": "da_thuc",
+    "grade": 10,
+    "concept": "Định lý số dư đa thức",
+    "method": "Thay nghiệm của đa thức chia vào đa thức bị chia",
+    "conditions": "Đa thức chia có dạng x-r",
+    "question_count": 10,
+    "independent_form_certified": false
+  },
+  {
+    "family": "quadratic_inequality_interval_length",
+    "topic": "bat_phuong_trinh",
+    "grade": 10,
+    "concept": "Xét dấu tam thức bậc hai",
+    "method": "Xét dấu theo hai nghiệm phân biệt",
+    "conditions": "Hệ số đầu dương, hai nghiệm thực phân biệt",
+    "question_count": 10,
+    "independent_form_certified": false
+  },
+  {
+    "family": "orthogonal_projection_coefficient",
+    "topic": "toa_do_oxyz",
+    "grade": 12,
+    "concept": "Hình chiếu trực giao vectơ trong không gian",
+    "method": "Dùng tích vô hướng và điều kiện vuông góc",
+    "conditions": "Vectơ v khác vectơ không",
+    "question_count": 10,
+    "independent_form_certified": false
+  },
+  {
+    "family": "parallelepiped_scalar_triple_product",
+    "topic": "hinh_hoc_khong_gian",
+    "grade": 12,
+    "concept": "Thể tích hình hộp bằng tích hỗn tạp",
+    "method": "Tính định thức ba vectơ cạnh",
+    "conditions": "Ba vectơ không đồng phẳng",
+    "question_count": 10,
+    "independent_form_certified": false
+  }
+]

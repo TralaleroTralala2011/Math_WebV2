@@ -1,0 +1,902 @@
+[
+  {
+    "grade": 10,
+    "topic": "menh_de_tap_hop",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 10,
+    "topic": "bat_phuong_trinh",
+    "db_question_count": 130,
+    "short_of_20000_count_only": 19870
+  },
+  {
+    "grade": 10,
+    "topic": "he_thuc_luong",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 10,
+    "topic": "vector",
+    "db_question_count": 150,
+    "short_of_20000_count_only": 19850
+  },
+  {
+    "grade": 10,
+    "topic": "ham_so_bac_hai",
+    "db_question_count": 190,
+    "short_of_20000_count_only": 19810
+  },
+  {
+    "grade": 10,
+    "topic": "phuong_trinh_he",
+    "db_question_count": 110,
+    "short_of_20000_count_only": 19890
+  },
+  {
+    "grade": 10,
+    "topic": "quy_tac_dem",
+    "db_question_count": 87,
+    "short_of_20000_count_only": 19913
+  },
+  {
+    "grade": 10,
+    "topic": "hoan_vi_chinh_hop_to_hop",
+    "db_question_count": 220,
+    "short_of_20000_count_only": 19780
+  },
+  {
+    "grade": 10,
+    "topic": "xac_suat",
+    "db_question_count": 70,
+    "short_of_20000_count_only": 19930
+  },
+  {
+    "grade": 10,
+    "topic": "thong_ke",
+    "db_question_count": 170,
+    "short_of_20000_count_only": 19830
+  },
+  {
+    "grade": 10,
+    "topic": "menh_de",
+    "db_question_count": 69,
+    "short_of_20000_count_only": 19931
+  },
+  {
+    "grade": 10,
+    "topic": "tap_hop",
+    "db_question_count": 110,
+    "short_of_20000_count_only": 19890
+  },
+  {
+    "grade": 10,
+    "topic": "he_bat_phuong_trinh",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 10,
+    "topic": "ham_so",
+    "db_question_count": 70,
+    "short_of_20000_count_only": 19930
+  },
+  {
+    "grade": 10,
+    "topic": "ham_so_bac_nhat",
+    "db_question_count": 40,
+    "short_of_20000_count_only": 19960
+  },
+  {
+    "grade": 10,
+    "topic": "phuong_trinh",
+    "db_question_count": 240,
+    "short_of_20000_count_only": 19760
+  },
+  {
+    "grade": 10,
+    "topic": "he_phuong_trinh",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 10,
+    "topic": "he_thuc_luong_tam_giac",
+    "db_question_count": 78,
+    "short_of_20000_count_only": 19922
+  },
+  {
+    "grade": 10,
+    "topic": "toa_do_phang",
+    "db_question_count": 130,
+    "short_of_20000_count_only": 19870
+  },
+  {
+    "grade": 10,
+    "topic": "duong_thang",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 10,
+    "topic": "duong_tron",
+    "db_question_count": 68,
+    "short_of_20000_count_only": 19932
+  },
+  {
+    "grade": 10,
+    "topic": "nhi_thuc_newton",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 10,
+    "topic": "hinh_hoc_10",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 10,
+    "topic": "bai_toan_thuc_te_10",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 10,
+    "topic": "hinh_hoc_co_ban_10",
+    "db_question_count": 70,
+    "short_of_20000_count_only": 19930
+  },
+  {
+    "grade": 10,
+    "topic": "tam_giac_tu_giac_10",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 10,
+    "topic": "duong_tron_co_ban_10",
+    "db_question_count": 70,
+    "short_of_20000_count_only": 19930
+  },
+  {
+    "grade": 10,
+    "topic": "he_thuc_luong_van_dung_10",
+    "db_question_count": 64,
+    "short_of_20000_count_only": 19936
+  },
+  {
+    "grade": 10,
+    "topic": "toa_do_hinh_hoc_10",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 10,
+    "topic": "chung_minh_hinh_hoc_10",
+    "db_question_count": 39,
+    "short_of_20000_count_only": 19961
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_angles_parallel",
+    "db_question_count": 40,
+    "short_of_20000_count_only": 19960
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_triangle_congruence",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_special_lines",
+    "db_question_count": 80,
+    "short_of_20000_count_only": 19920
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_quadrilaterals_properties",
+    "db_question_count": 70,
+    "short_of_20000_count_only": 19930
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_circle_chords_arcs",
+    "db_question_count": 70,
+    "short_of_20000_count_only": 19930
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_thales_similarity",
+    "db_question_count": 40,
+    "short_of_20000_count_only": 19960
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_triangle_area_ratio",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_circle_angles",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_coordinate_distance_midpoint",
+    "db_question_count": 69,
+    "short_of_20000_count_only": 19931
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_line_intersections",
+    "db_question_count": 40,
+    "short_of_20000_count_only": 19960
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_locus",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_circle_tangent_chord",
+    "db_question_count": 54,
+    "short_of_20000_count_only": 19946
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_triangle_inequalities",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_vector_proofs",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_coordinate_circle_line",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 10,
+    "topic": "g10_advanced_inequalities",
+    "db_question_count": 60,
+    "short_of_20000_count_only": 19940
+  },
+  {
+    "grade": 10,
+    "topic": "g10_symmetric_systems",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 10,
+    "topic": "g10_radical_equations_advanced",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 10,
+    "topic": "g10_combinatorics_olympiad",
+    "db_question_count": 90,
+    "short_of_20000_count_only": 19910
+  },
+  {
+    "grade": 11,
+    "topic": "ham_so_luong_giac",
+    "db_question_count": 20,
+    "short_of_20000_count_only": 19980
+  },
+  {
+    "grade": 11,
+    "topic": "phuong_trinh_luong_giac",
+    "db_question_count": 30,
+    "short_of_20000_count_only": 19970
+  },
+  {
+    "grade": 11,
+    "topic": "day_so",
+    "db_question_count": 51,
+    "short_of_20000_count_only": 19949
+  },
+  {
+    "grade": 11,
+    "topic": "cap_so_cong",
+    "db_question_count": 240,
+    "short_of_20000_count_only": 19760
+  },
+  {
+    "grade": 11,
+    "topic": "cap_so_nhan",
+    "db_question_count": 330,
+    "short_of_20000_count_only": 19670
+  },
+  {
+    "grade": 11,
+    "topic": "gioi_han",
+    "db_question_count": 75,
+    "short_of_20000_count_only": 19925
+  },
+  {
+    "grade": 11,
+    "topic": "dao_ham",
+    "db_question_count": 260,
+    "short_of_20000_count_only": 19740
+  },
+  {
+    "grade": 11,
+    "topic": "hinh_khong_gian",
+    "db_question_count": 42,
+    "short_of_20000_count_only": 19958
+  },
+  {
+    "grade": 11,
+    "topic": "xac_suat_11",
+    "db_question_count": 116,
+    "short_of_20000_count_only": 19884
+  },
+  {
+    "grade": 11,
+    "topic": "gia_tri_luong_giac",
+    "db_question_count": 51,
+    "short_of_20000_count_only": 19949
+  },
+  {
+    "grade": 11,
+    "topic": "cong_thuc_luong_giac",
+    "db_question_count": 98,
+    "short_of_20000_count_only": 19902
+  },
+  {
+    "grade": 11,
+    "topic": "ham_so_luong_giac_day_du",
+    "db_question_count": 44,
+    "short_of_20000_count_only": 19956
+  },
+  {
+    "grade": 11,
+    "topic": "phuong_trinh_luong_giac_day_du",
+    "db_question_count": 33,
+    "short_of_20000_count_only": 19967
+  },
+  {
+    "grade": 11,
+    "topic": "day_so_tong_quat",
+    "db_question_count": 47,
+    "short_of_20000_count_only": 19953
+  },
+  {
+    "grade": 11,
+    "topic": "gioi_han_ham_so",
+    "db_question_count": 90,
+    "short_of_20000_count_only": 19910
+  },
+  {
+    "grade": 11,
+    "topic": "ham_so_lien_tuc",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 11,
+    "topic": "dao_ham_quy_tac",
+    "db_question_count": 79,
+    "short_of_20000_count_only": 19921
+  },
+  {
+    "grade": 11,
+    "topic": "ung_dung_dao_ham_11",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 11,
+    "topic": "song_song_khong_gian",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 11,
+    "topic": "vuong_goc_khong_gian",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 11,
+    "topic": "goc_khoang_cach_11",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 11,
+    "topic": "thong_ke_11",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 11,
+    "topic": "bai_toan_thuc_te_11",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 11,
+    "topic": "to_hop_xac_suat_nang_cao_11",
+    "db_question_count": 130,
+    "short_of_20000_count_only": 19870
+  },
+  {
+    "grade": 11,
+    "topic": "bien_co_doc_lap_11",
+    "db_question_count": 170,
+    "short_of_20000_count_only": 19830
+  },
+  {
+    "grade": 11,
+    "topic": "day_so_truy_hoi_11",
+    "db_question_count": 60,
+    "short_of_20000_count_only": 19940
+  },
+  {
+    "grade": 11,
+    "topic": "quy_nap_toan_hoc_11",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 11,
+    "topic": "phep_bien_hinh_11",
+    "db_question_count": 58,
+    "short_of_20000_count_only": 19942
+  },
+  {
+    "grade": 11,
+    "topic": "thiet_dien_hinh_khong_gian_11",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 11,
+    "topic": "bai_toan_thuc_te_tong_hop_11",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 11,
+    "topic": "phep_bien_hinh_co_ban_11",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 11,
+    "topic": "nhan_biet_hinh_khong_gian_11",
+    "db_question_count": 46,
+    "short_of_20000_count_only": 19954
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_transform_translation",
+    "db_question_count": 40,
+    "short_of_20000_count_only": 19960
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_transform_reflection",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_space_lines_planes",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_parallel_line_plane",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_prism_pyramid_sections",
+    "db_question_count": 30,
+    "short_of_20000_count_only": 19970
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_rotation_homothety",
+    "db_question_count": 40,
+    "short_of_20000_count_only": 19960
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_parallel_planes",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_perpendicular_line_plane",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_dihedral_angles",
+    "db_question_count": 53,
+    "short_of_20000_count_only": 19947
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_section_construction",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_skew_lines_distance",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_three_perpendiculars",
+    "db_question_count": 45,
+    "short_of_20000_count_only": 19955
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_transform_composition",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_section_ratio",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_space_proof",
+    "db_question_count": 47,
+    "short_of_20000_count_only": 19953
+  },
+  {
+    "grade": 11,
+    "topic": "g11_advanced_trig_equations",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 11,
+    "topic": "g11_sequences_advanced",
+    "db_question_count": 58,
+    "short_of_20000_count_only": 19942
+  },
+  {
+    "grade": 11,
+    "topic": "g11_binomial_advanced",
+    "db_question_count": 58,
+    "short_of_20000_count_only": 19942
+  },
+  {
+    "grade": 11,
+    "topic": "g11_conditional_probability_models",
+    "db_question_count": 68,
+    "short_of_20000_count_only": 19932
+  },
+  {
+    "grade": 12,
+    "topic": "ung_dung_dao_ham",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 12,
+    "topic": "khao_sat_ham_so",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 12,
+    "topic": "nguyen_ham_tich_phan",
+    "db_question_count": 250,
+    "short_of_20000_count_only": 19750
+  },
+  {
+    "grade": 12,
+    "topic": "so_phuc",
+    "db_question_count": 200,
+    "short_of_20000_count_only": 19800
+  },
+  {
+    "grade": 12,
+    "topic": "hinh_hoc_khong_gian",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 12,
+    "topic": "toa_do_khong_gian",
+    "db_question_count": 190,
+    "short_of_20000_count_only": 19810
+  },
+  {
+    "grade": 12,
+    "topic": "xac_suat_12",
+    "db_question_count": 89,
+    "short_of_20000_count_only": 19911
+  },
+  {
+    "grade": 12,
+    "topic": "thong_ke_12",
+    "db_question_count": 56,
+    "short_of_20000_count_only": 19944
+  },
+  {
+    "grade": 12,
+    "topic": "tinh_don_dieu",
+    "db_question_count": 20,
+    "short_of_20000_count_only": 19980
+  },
+  {
+    "grade": 12,
+    "topic": "cuc_tri",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 12,
+    "topic": "gtln_gtnn",
+    "db_question_count": 69,
+    "short_of_20000_count_only": 19931
+  },
+  {
+    "grade": 12,
+    "topic": "tiep_tuyen",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 12,
+    "topic": "tien_can",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 12,
+    "topic": "tuong_giao",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 12,
+    "topic": "ham_mu",
+    "db_question_count": 58,
+    "short_of_20000_count_only": 19942
+  },
+  {
+    "grade": 12,
+    "topic": "ham_logarit",
+    "db_question_count": 51,
+    "short_of_20000_count_only": 19949
+  },
+  {
+    "grade": 12,
+    "topic": "pt_mu",
+    "db_question_count": 110,
+    "short_of_20000_count_only": 19890
+  },
+  {
+    "grade": 12,
+    "topic": "pt_logarit",
+    "db_question_count": 115,
+    "short_of_20000_count_only": 19885
+  },
+  {
+    "grade": 12,
+    "topic": "bpt_mu",
+    "db_question_count": 40,
+    "short_of_20000_count_only": 19960
+  },
+  {
+    "grade": 12,
+    "topic": "bpt_logarit",
+    "db_question_count": 60,
+    "short_of_20000_count_only": 19940
+  },
+  {
+    "grade": 12,
+    "topic": "ung_dung_tich_phan",
+    "db_question_count": 70,
+    "short_of_20000_count_only": 19930
+  },
+  {
+    "grade": 12,
+    "topic": "bieu_dien_so_phuc",
+    "db_question_count": 60,
+    "short_of_20000_count_only": 19940
+  },
+  {
+    "grade": 12,
+    "topic": "pt_so_phuc",
+    "db_question_count": 60,
+    "short_of_20000_count_only": 19940
+  },
+  {
+    "grade": 12,
+    "topic": "mat_phang_oxyz",
+    "db_question_count": 89,
+    "short_of_20000_count_only": 19911
+  },
+  {
+    "grade": 12,
+    "topic": "duong_thang_oxyz",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 12,
+    "topic": "mat_cau",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 12,
+    "topic": "goc_khoang_cach_oxyz",
+    "db_question_count": 69,
+    "short_of_20000_count_only": 19931
+  },
+  {
+    "grade": 12,
+    "topic": "the_tich_khong_gian",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 12,
+    "topic": "tong_hop_thpt",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 12,
+    "topic": "bai_toan_thuc_te_12",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 12,
+    "topic": "hinh_khoi_va_the_tich_co_ban_12",
+    "db_question_count": 60,
+    "short_of_20000_count_only": 19940
+  },
+  {
+    "grade": 12,
+    "topic": "hinh_hoc_oxyz_van_dung_12",
+    "db_question_count": 69,
+    "short_of_20000_count_only": 19931
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_vectors_3d",
+    "db_question_count": 40,
+    "short_of_20000_count_only": 19960
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_plane_equation",
+    "db_question_count": 60,
+    "short_of_20000_count_only": 19940
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_line_equation_3d",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_sphere_equation",
+    "db_question_count": 60,
+    "short_of_20000_count_only": 19940
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_solid_surface_area",
+    "db_question_count": 70,
+    "short_of_20000_count_only": 19930
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_point_plane_distance",
+    "db_question_count": 79,
+    "short_of_20000_count_only": 19921
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_line_plane_angle",
+    "db_question_count": 70,
+    "short_of_20000_count_only": 19930
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_two_planes_angle",
+    "db_question_count": 55,
+    "short_of_20000_count_only": 19945
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_line_plane_intersection",
+    "db_question_count": 50,
+    "short_of_20000_count_only": 19950
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_sphere_tangent_plane",
+    "db_question_count": 60,
+    "short_of_20000_count_only": 19940
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_skew_line_relation",
+    "db_question_count": 58,
+    "short_of_20000_count_only": 19942
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_min_distance_3d",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_sphere_plane_intersection",
+    "db_question_count": 60,
+    "short_of_20000_count_only": 19940
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_parameter_geometry",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_3d_optimization",
+    "db_question_count": 69,
+    "short_of_20000_count_only": 19931
+  },
+  {
+    "grade": 12,
+    "topic": "g12_complex_plane_geometry",
+    "db_question_count": 49,
+    "short_of_20000_count_only": 19951
+  },
+  {
+    "grade": 12,
+    "topic": "g12_integral_optimization",
+    "db_question_count": 59,
+    "short_of_20000_count_only": 19941
+  },
+  {
+    "grade": 12,
+    "topic": "g12_solid_of_revolution",
+    "db_question_count": 64,
+    "short_of_20000_count_only": 19936
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "previous_questions": 2780,
+  "added_questions": 180,
+  "total_questions": 2960,
+  "added_form_ids": 18,
+  "total_form_ids": 295,
+  "validation": "exact answer arithmetic; unique normalized question; explanations present",
+  "limitations": "Mathematical independence and complete website regression not established"
+}

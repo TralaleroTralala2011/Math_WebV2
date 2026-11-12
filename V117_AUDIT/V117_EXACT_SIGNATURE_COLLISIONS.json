@@ -1,0 +1,26 @@
+{
+  "infinite-geometric-series-convergence": [
+    [
+      "infinite_geometric_series",
+      "g11_sequences_advanced",
+      "V114"
+    ],
+    [
+      "v117_geometric_infinite_sum",
+      "cap_so_nhan",
+      "V117"
+    ]
+  ],
+  "plane-parallel-normal-proportionality": [
+    [
+      "parallel_plane_normal_parameter",
+      "g11_geom_parallel_planes",
+      "V114"
+    ],
+    [
+      "v117_plane_parallel_parameter",
+      "g12_geom_plane_equation",
+      "V117"
+    ]
+  ]
+}

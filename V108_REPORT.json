@@ -1,0 +1,17 @@
+{
+  "version": "V108",
+  "base": "V107",
+  "new_main_type_ids": 20,
+  "new_main_questions": 200,
+  "new_supplemental_questions": 10000,
+  "main_type_ids": 33418,
+  "main_questions": 334180,
+  "supplemental_questions_not_integrated": 10000,
+  "new_type_ids_independence_certified": 0,
+  "validation": "Arithmetic results generated from exact Python calculations, text deduplicated by grade/topic against original bank",
+  "limitations": [
+    "20 new IDs are not independently certified as distinct methods against all 33k existing IDs",
+    "10k supplemental questions are NOT 10k new forms and are not automatically served",
+    "Browser MathGeo and Battle/Admin integration not retested"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "version": "V55",
+  "baseline_records": 58067,
+  "baseline_form_ids": 5949,
+  "new_records": 10000,
+  "new_form_ids": 1000,
+  "total_records": 68067,
+  "total_form_ids": 6949,
+  "new_method_families": 25,
+  "independent_types_certified": 0,
+  "warning": "1000 IDs are parameterized variants within 25 method families, not 1000 independent problem types. Formula-consistency checks do not constitute independent mathematical audit.",
+  "grades": {
+    "10": 5600,
+    "11": 2000,
+    "12": 2400
+  },
+  "old_project_files_preserved": true
+}

@@ -1,0 +1,55 @@
+MATH WEB enhancement report
+Base: MATH_WEB_GITHUB_READY_ONLINE_BACKEND.zip
+
+PRESERVATION
+- Existing source files from the base archive: preserved.
+- backend/app/ai/engine/game_bank.py: byte-for-byte unchanged.
+- Existing template-bank games: 45 preserved.
+- Existing template families/contexts/question_styles: preserved; only additional families/contexts were appended.
+- Existing practise knowledge cards: 93 preserved.
+- Existing MCQ / short-answer / true-false engine: preserved.
+- Existing UI structure: preserved; additions are layered onto the current AI question area.
+
+ADDITIVE CHANGES
+1. js/api-config.js
+   - Central API configuration for local/online use.
+   - Supports ?api=..., localStorage override, and production Render fallback.
+   - Sets window.MATHWEB_API_READY.
+
+2. backend/app/ai/engine/extended_bank.py
+   - New additive fallback bank for curriculum/real-life variants.
+   - Adds practical math, algebra/function models, statistics, sequences,
+     derivatives/integrals, coordinate geometry, triangles and circles.
+   - Geometry questions can carry an optional structured diagram payload.
+
+3. backend/app/ai/engine/generator.py
+   - Uses the new bank only when an existing dedicated generator does not exist.
+   - Added a final MCQ safety net so categorical answers still receive 4 choices.
+   - Existing game bank path remains authoritative for selected games.
+
+4. backend/app/ai/knowledge/template_bank.json
+   - Existing 45 games retained.
+   - Existing families/contexts/styles retained.
+   - Added extra families and real-life contexts for more variation.
+
+5. js/practise.js
+   - Existing pre-answer Bỏ qua remains.
+   - After a wrong answer, the existing detailed answer/solution is shown and
+     the action is now "➡️ CÂU TIẾP THEO".
+   - Correct answers still auto-advance.
+   - Added optional structured geometry diagram rendering.
+
+6. css/practise.css
+   - Added only styles needed for optional AI geometry diagrams.
+
+VALIDATION
+- Python compileall: PASS
+- Node syntax check for js/practise.js: PASS
+- Node syntax check for js/api-config.js: PASS
+- Template bank JSON parse: PASS
+- 756 generated topic questions across 84 backend topics × 3 difficulties × 3 question types: PASS
+- 45 legacy game generators: PASS
+- Practice session uniqueness/answer checking: PASS
+- Local /health: HTTP 200
+- Local /api/ai/health: HTTP 200
+- No existing source files removed from the base archive.

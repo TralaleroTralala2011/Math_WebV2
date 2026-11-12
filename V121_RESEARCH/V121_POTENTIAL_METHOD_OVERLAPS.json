@@ -1,0 +1,2116 @@
+{
+  "title_similarity": [
+    {
+      "family": "v121_a_bat_phuong_trinh",
+      "topic_id": "bat_phuong_trinh",
+      "existing_family": "v117_abs_inequality_length",
+      "existing_version": "V117",
+      "score": 0.606,
+      "existing_title": "Đếm nghiệm nguyên bất phương trình giá trị tuyệt đối"
+    },
+    {
+      "family": "v121_b_bat_phuong_trinh",
+      "topic_id": "bat_phuong_trinh",
+      "existing_family": "linear_inequality_bound",
+      "existing_version": "V113",
+      "score": 0.771,
+      "existing_title": "Giải bất phương trình bậc nhất"
+    },
+    {
+      "family": "v121_b_bat_phuong_trinh",
+      "topic_id": "bat_phuong_trinh",
+      "existing_family": "v120_topic_bat_phuong_trinh",
+      "existing_version": "V120",
+      "score": 0.732,
+      "existing_title": "Đếm nghiệm nguyên của bất phương trình kép"
+    },
+    {
+      "family": "v121_b_bat_phuong_trinh",
+      "topic_id": "bat_phuong_trinh",
+      "existing_family": "v117_abs_inequality_length",
+      "existing_version": "V117",
+      "score": 0.609,
+      "existing_title": "Đếm nghiệm nguyên bất phương trình giá trị tuyệt đối"
+    },
+    {
+      "family": "v121_b_he_thuc_luong",
+      "topic_id": "he_thuc_luong",
+      "existing_family": "v117_triangle_inradius",
+      "existing_version": "V117",
+      "score": 0.711,
+      "existing_title": "Bán kính đường tròn nội tiếp từ diện tích"
+    },
+    {
+      "family": "v121_a_ham_so_bac_hai",
+      "topic_id": "ham_so_bac_hai",
+      "existing_family": "quadratic_vertex_x",
+      "existing_version": "V113",
+      "score": 1.0,
+      "existing_title": "Hoành độ đỉnh parabol"
+    },
+    {
+      "family": "v121_a_ham_so_bac_hai",
+      "topic_id": "ham_so_bac_hai",
+      "existing_family": "quadratic_vertex_y",
+      "existing_version": "V113",
+      "score": 0.829,
+      "existing_title": "Tung độ đỉnh parabol"
+    },
+    {
+      "family": "v121_a_xac_suat",
+      "topic_id": "xac_suat",
+      "existing_family": "v116_at_least_one",
+      "existing_version": "V116",
+      "score": 0.576,
+      "existing_title": "Xác suất ít nhất một lần thành công"
+    },
+    {
+      "family": "v121_a_thong_ke",
+      "topic_id": "thong_ke",
+      "existing_family": "v116_three_point_variance",
+      "existing_version": "V116",
+      "score": 0.721,
+      "existing_title": "Phương sai của bộ ba số cách đều"
+    },
+    {
+      "family": "v121_a_thong_ke",
+      "topic_id": "thong_ke",
+      "existing_family": "population_variance",
+      "existing_version": "V113",
+      "score": 0.633,
+      "existing_title": "Phương sai tổng thể của số liệu"
+    },
+    {
+      "family": "v121_b_thong_ke",
+      "topic_id": "thong_ke",
+      "existing_family": "v120_topic_thong_ke",
+      "existing_version": "V120",
+      "score": 0.675,
+      "existing_title": "Khoảng tứ phân vị của dữ liệu cách đều"
+    },
+    {
+      "family": "v121_b_tap_hop",
+      "topic_id": "tap_hop",
+      "existing_family": "v118_cartesian_pair_count",
+      "existing_version": "V118",
+      "score": 0.677,
+      "existing_title": "Số phần tử tích Descartes"
+    },
+    {
+      "family": "v121_a_he_bat_phuong_trinh",
+      "topic_id": "he_bat_phuong_trinh",
+      "existing_family": "v120_topic_he_bat_phuong_trinh",
+      "existing_version": "V120",
+      "score": 0.63,
+      "existing_title": "Đếm cặp nghiệm nguyên dương cho hệ bất phương trình"
+    },
+    {
+      "family": "v121_a_he_bat_phuong_trinh",
+      "topic_id": "he_bat_phuong_trinh",
+      "existing_family": "integer_interval_count",
+      "existing_version": "V114",
+      "score": 0.61,
+      "existing_title": "Số nghiệm nguyên của bất phương trình kép"
+    },
+    {
+      "family": "v121_a_phuong_trinh",
+      "topic_id": "phuong_trinh",
+      "existing_family": "v120_topic_phuong_trinh",
+      "existing_version": "V120",
+      "score": 0.929,
+      "existing_title": "Tích nghiệm phương trình giá trị tuyệt đối"
+    },
+    {
+      "family": "v121_b_phuong_trinh",
+      "topic_id": "phuong_trinh",
+      "existing_family": "v120_topic_phuong_trinh",
+      "existing_version": "V120",
+      "score": 0.647,
+      "existing_title": "Tích nghiệm phương trình giá trị tuyệt đối"
+    },
+    {
+      "family": "v121_a_he_phuong_trinh",
+      "topic_id": "he_phuong_trinh",
+      "existing_family": "system_sum_solution",
+      "existing_version": "V113",
+      "score": 0.675,
+      "existing_title": "Tính tổng nghiệm của hệ hai phương trình"
+    },
+    {
+      "family": "v121_a_toa_do_phang",
+      "topic_id": "toa_do_phang",
+      "existing_family": "distance_2d",
+      "existing_version": "V113",
+      "score": 0.814,
+      "existing_title": "Khoảng cách hai điểm Oxy"
+    },
+    {
+      "family": "v121_b_duong_thang",
+      "topic_id": "duong_thang",
+      "existing_family": "v120_topic_duong_thang",
+      "existing_version": "V120",
+      "score": 0.759,
+      "existing_title": "Khoảng cách giữa hai đường thẳng song song"
+    },
+    {
+      "family": "v121_a_hinh_hoc_co_ban_10",
+      "topic_id": "hinh_hoc_co_ban_10",
+      "existing_family": "v120_topic_hinh_hoc_co_ban_10",
+      "existing_version": "V120",
+      "score": 0.737,
+      "existing_title": "Góc trong của đa giác đều"
+    },
+    {
+      "family": "v121_b_hinh_hoc_co_ban_10",
+      "topic_id": "hinh_hoc_co_ban_10",
+      "existing_family": "v120_topic_hinh_hoc_co_ban_10",
+      "existing_version": "V120",
+      "score": 0.88,
+      "existing_title": "Góc trong của đa giác đều"
+    },
+    {
+      "family": "v121_a_tam_giac_tu_giac_10",
+      "topic_id": "tam_giac_tu_giac_10",
+      "existing_family": "v120_topic_tam_giac_tu_giac_10",
+      "existing_version": "V120",
+      "score": 0.678,
+      "existing_title": "Diện tích hình thoi theo hai đường chéo"
+    },
+    {
+      "family": "v121_b_he_thuc_luong_van_dung_10",
+      "topic_id": "he_thuc_luong_van_dung_10",
+      "existing_family": "v117_triangle_circumradius",
+      "existing_version": "V117",
+      "score": 0.667,
+      "existing_title": "Bán kính ngoại tiếp từ diện tích và cạnh"
+    },
+    {
+      "family": "v121_a_g10_geom_angles_parallel",
+      "topic_id": "g10_geom_angles_parallel",
+      "existing_family": "alternate_interior_angle",
+      "existing_version": "V114",
+      "score": 1.0,
+      "existing_title": "Góc so le trong của hai đường song song"
+    },
+    {
+      "family": "v121_a_g10_geom_angles_parallel",
+      "topic_id": "g10_geom_angles_parallel",
+      "existing_family": "v120_topic_g10_geom_angles_parallel",
+      "existing_version": "V120",
+      "score": 0.705,
+      "existing_title": "Hai góc trong cùng phía khi đường thẳng song song"
+    },
+    {
+      "family": "v121_b_g10_geom_angles_parallel",
+      "topic_id": "g10_geom_angles_parallel",
+      "existing_family": "v120_topic_g10_geom_angles_parallel",
+      "existing_version": "V120",
+      "score": 0.639,
+      "existing_title": "Hai góc trong cùng phía khi đường thẳng song song"
+    },
+    {
+      "family": "v121_a_g10_geom_triangle_congruence",
+      "topic_id": "g10_geom_triangle_congruence",
+      "existing_family": "v120_topic_g10_geom_triangle_congruence",
+      "existing_version": "V120",
+      "score": 0.772,
+      "existing_title": "Chu vi ảnh tam giác bằng nhau"
+    },
+    {
+      "family": "v121_a_g10_geom_triangle_congruence",
+      "topic_id": "g10_geom_triangle_congruence",
+      "existing_family": "congruent_triangle_corresponding",
+      "existing_version": "V114",
+      "score": 0.658,
+      "existing_title": "Tìm cạnh tương ứng của hai tam giác bằng nhau"
+    },
+    {
+      "family": "v121_b_g10_geom_triangle_congruence",
+      "topic_id": "g10_geom_triangle_congruence",
+      "existing_family": "v120_topic_g10_geom_triangle_congruence",
+      "existing_version": "V120",
+      "score": 0.926,
+      "existing_title": "Chu vi ảnh tam giác bằng nhau"
+    },
+    {
+      "family": "v121_b_g10_geom_triangle_congruence",
+      "topic_id": "g10_geom_triangle_congruence",
+      "existing_family": "congruent_triangle_corresponding",
+      "existing_version": "V114",
+      "score": 0.657,
+      "existing_title": "Tìm cạnh tương ứng của hai tam giác bằng nhau"
+    },
+    {
+      "family": "v121_a_g10_geom_special_lines",
+      "topic_id": "g10_geom_special_lines",
+      "existing_family": "right_triangle_median",
+      "existing_version": "V114",
+      "score": 1.0,
+      "existing_title": "Trung tuyến ứng với cạnh huyền"
+    },
+    {
+      "family": "v121_a_g10_geom_quadrilaterals_properties",
+      "topic_id": "g10_geom_quadrilaterals_properties",
+      "existing_family": "parallelogram_area_det",
+      "existing_version": "V113",
+      "score": 0.773,
+      "existing_title": "Diện tích hình bình hành theo định thức"
+    },
+    {
+      "family": "v121_a_g10_geom_quadrilaterals_properties",
+      "topic_id": "g10_geom_quadrilaterals_properties",
+      "existing_family": "rhombus_diagonal_area",
+      "existing_version": "V114",
+      "score": 0.64,
+      "existing_title": "Diện tích hình thoi theo hai đường chéo"
+    },
+    {
+      "family": "v121_b_g10_geom_quadrilaterals_properties",
+      "topic_id": "g10_geom_quadrilaterals_properties",
+      "existing_family": "rhombus_diagonal_area",
+      "existing_version": "V114",
+      "score": 0.633,
+      "existing_title": "Diện tích hình thoi theo hai đường chéo"
+    },
+    {
+      "family": "v121_b_g10_geom_quadrilaterals_properties",
+      "topic_id": "g10_geom_quadrilaterals_properties",
+      "existing_family": "parallelogram_area_det",
+      "existing_version": "V113",
+      "score": 0.608,
+      "existing_title": "Diện tích hình bình hành theo định thức"
+    },
+    {
+      "family": "v121_b_g10_geom_circle_chords_arcs",
+      "topic_id": "g10_geom_circle_chords_arcs",
+      "existing_family": "circle_arc_length",
+      "existing_version": "V113",
+      "score": 0.615,
+      "existing_title": "Tính độ dài cung tròn"
+    },
+    {
+      "family": "v121_a_g10_geom_thales_similarity",
+      "topic_id": "g10_geom_thales_similarity",
+      "existing_family": "v118_similarity_area_scale",
+      "existing_version": "V118",
+      "score": 0.914,
+      "existing_title": "Tỉ số diện tích hai tam giác đồng dạng"
+    },
+    {
+      "family": "v121_a_g10_geom_thales_similarity",
+      "topic_id": "g10_geom_thales_similarity",
+      "existing_family": "thales_similarity_length",
+      "existing_version": "V114",
+      "score": 0.75,
+      "existing_title": "Tính cạnh nhờ tam giác đồng dạng"
+    },
+    {
+      "family": "v121_b_g10_geom_triangle_area_ratio",
+      "topic_id": "g10_geom_triangle_area_ratio",
+      "existing_family": "triangle_area_common_height",
+      "existing_version": "V114",
+      "score": 0.812,
+      "existing_title": "Tỉ số diện tích khi chung chiều cao"
+    },
+    {
+      "family": "v121_b_g10_geom_triangle_area_ratio",
+      "topic_id": "g10_geom_triangle_area_ratio",
+      "existing_family": "v120_topic_g10_geom_triangle_area_ratio",
+      "existing_version": "V120",
+      "score": 0.712,
+      "existing_title": "Tỉ số diện tích cùng chiều cao"
+    },
+    {
+      "family": "v121_a_g10_geom_circle_angles",
+      "topic_id": "g10_geom_circle_angles",
+      "existing_family": "v120_topic_g10_geom_circle_angles",
+      "existing_version": "V120",
+      "score": 0.633,
+      "existing_title": "Góc hai dây cắt nhau trong đường tròn"
+    },
+    {
+      "family": "v121_a_g10_geom_locus",
+      "topic_id": "g10_geom_locus",
+      "existing_family": "perpendicular_bisector_locus",
+      "existing_version": "V114",
+      "score": 0.795,
+      "existing_title": "Quỹ tích cách đều hai điểm nằm trên Ox"
+    },
+    {
+      "family": "v121_a_g10_geom_circle_tangent_chord",
+      "topic_id": "g10_geom_circle_tangent_chord",
+      "existing_family": "v118_external_tangent_length",
+      "existing_version": "V118",
+      "score": 0.954,
+      "existing_title": "Độ dài tiếp tuyến từ điểm ngoài"
+    },
+    {
+      "family": "v121_a_g10_geom_circle_tangent_chord",
+      "topic_id": "g10_geom_circle_tangent_chord",
+      "existing_family": "tangent_segment_length",
+      "existing_version": "V114",
+      "score": 0.816,
+      "existing_title": "Độ dài tiếp tuyến từ điểm ngoài đường tròn"
+    },
+    {
+      "family": "v121_a_g10_geom_triangle_inequalities",
+      "topic_id": "g10_geom_triangle_inequalities",
+      "existing_family": "triangle_inequality_integer_sides",
+      "existing_version": "V114",
+      "score": 0.684,
+      "existing_title": "Đếm cạnh nguyên thỏa bất đẳng thức tam giác"
+    },
+    {
+      "family": "v121_a_g10_geom_triangle_inequalities",
+      "topic_id": "g10_geom_triangle_inequalities",
+      "existing_family": "v120_topic_g10_geom_triangle_inequalities",
+      "existing_version": "V120",
+      "score": 0.657,
+      "existing_title": "Đếm các cạnh nguyên tạo được tam giác"
+    },
+    {
+      "family": "v121_b_g10_geom_triangle_inequalities",
+      "topic_id": "g10_geom_triangle_inequalities",
+      "existing_family": "triangle_inequality_integer_sides",
+      "existing_version": "V114",
+      "score": 0.737,
+      "existing_title": "Đếm cạnh nguyên thỏa bất đẳng thức tam giác"
+    },
+    {
+      "family": "v121_b_g10_geom_triangle_inequalities",
+      "topic_id": "g10_geom_triangle_inequalities",
+      "existing_family": "v120_topic_g10_geom_triangle_inequalities",
+      "existing_version": "V120",
+      "score": 0.657,
+      "existing_title": "Đếm các cạnh nguyên tạo được tam giác"
+    },
+    {
+      "family": "v121_a_g10_geom_vector_proofs",
+      "topic_id": "g10_geom_vector_proofs",
+      "existing_family": "v116_parallelogram_area",
+      "existing_version": "V116",
+      "score": 0.651,
+      "existing_title": "Diện tích hình bình hành bằng định thức vectơ"
+    },
+    {
+      "family": "v121_b_ham_so_luong_giac",
+      "topic_id": "ham_so_luong_giac",
+      "existing_family": "trig_cos_double_angle",
+      "existing_version": "V114",
+      "score": 0.761,
+      "existing_title": "Công thức cosin góc đôi từ cosin góc"
+    },
+    {
+      "family": "v121_b_phuong_trinh_luong_giac",
+      "topic_id": "phuong_trinh_luong_giac",
+      "existing_family": "v118_count_trig_cos_period",
+      "existing_version": "V118",
+      "score": 0.848,
+      "existing_title": "Đếm nghiệm cos x=1 theo chu kỳ"
+    },
+    {
+      "family": "v121_b_phuong_trinh_luong_giac",
+      "topic_id": "phuong_trinh_luong_giac",
+      "existing_family": "v120_topic_phuong_trinh_luong_giac",
+      "existing_version": "V120",
+      "score": 0.816,
+      "existing_title": "Số nghiệm cos x bằng 0 trên nhiều chu kỳ"
+    },
+    {
+      "family": "v121_b_phuong_trinh_luong_giac",
+      "topic_id": "phuong_trinh_luong_giac",
+      "existing_family": "trig_equation_zero_solution_count",
+      "existing_version": "V114",
+      "score": 0.63,
+      "existing_title": "Đếm nghiệm sin x = 0 trên khoảng đóng"
+    },
+    {
+      "family": "v121_b_phuong_trinh_luong_giac",
+      "topic_id": "phuong_trinh_luong_giac",
+      "existing_family": "v117_trig_equation_count",
+      "existing_version": "V117",
+      "score": 0.595,
+      "existing_title": "Đếm nghiệm sin(x)=0 trên một đoạn đóng"
+    },
+    {
+      "family": "v121_a_cap_so_nhan",
+      "topic_id": "cap_so_nhan",
+      "existing_family": "geometric_sequence_nth",
+      "existing_version": "V113",
+      "score": 1.0,
+      "existing_title": "Số hạng thứ n của cấp số nhân"
+    },
+    {
+      "family": "v121_a_cap_so_nhan",
+      "topic_id": "cap_so_nhan",
+      "existing_family": "v120_topic_cap_so_nhan",
+      "existing_version": "V120",
+      "score": 0.732,
+      "existing_title": "Tổng các số hạng chỉ số lẻ của cấp số nhân"
+    },
+    {
+      "family": "v121_a_cap_so_nhan",
+      "topic_id": "cap_so_nhan",
+      "existing_family": "v116_finite_geom_sum",
+      "existing_version": "V116",
+      "score": 0.604,
+      "existing_title": "Tổng hữu hạn cấp số nhân"
+    },
+    {
+      "family": "v121_b_gioi_han",
+      "topic_id": "gioi_han",
+      "existing_family": "v120_topic_gioi_han",
+      "existing_version": "V120",
+      "score": 0.658,
+      "existing_title": "Giới hạn hiệu căn thức ở vô cực"
+    },
+    {
+      "family": "v121_b_gioi_han",
+      "topic_id": "gioi_han",
+      "existing_family": "v116_rational_infinity_limit",
+      "existing_version": "V116",
+      "score": 0.642,
+      "existing_title": "Giới hạn phân thức khi x tiến vô cực"
+    },
+    {
+      "family": "v121_b_dao_ham",
+      "topic_id": "dao_ham",
+      "existing_family": "derivative_product_at",
+      "existing_version": "V114",
+      "score": 0.686,
+      "existing_title": "Đạo hàm tích hai hàm tại một điểm"
+    },
+    {
+      "family": "v121_a_hinh_khong_gian",
+      "topic_id": "hinh_khong_gian",
+      "existing_family": "v120_topic_hinh_khong_gian",
+      "existing_version": "V120",
+      "score": 0.658,
+      "existing_title": "Độ dài đường chéo không gian hình lập phương"
+    },
+    {
+      "family": "v121_a_xac_suat_11",
+      "topic_id": "xac_suat_11",
+      "existing_family": "v120_topic_xac_suat_11",
+      "existing_version": "V120",
+      "score": 0.642,
+      "existing_title": "Xác suất đúng hai lần thành công trong bốn lần"
+    },
+    {
+      "family": "v121_b_gia_tri_luong_giac",
+      "topic_id": "gia_tri_luong_giac",
+      "existing_family": "v117_trig_cos_sum",
+      "existing_version": "V117",
+      "score": 0.596,
+      "existing_title": "Tính cos tổng hai góc đặc biệt"
+    },
+    {
+      "family": "v121_a_cong_thuc_luong_giac",
+      "topic_id": "cong_thuc_luong_giac",
+      "existing_family": "v120_topic_cong_thuc_luong_giac",
+      "existing_version": "V120",
+      "score": 0.723,
+      "existing_title": "Cosin góc đôi theo tang"
+    },
+    {
+      "family": "v121_b_cong_thuc_luong_giac",
+      "topic_id": "cong_thuc_luong_giac",
+      "existing_family": "v116_sin_sum",
+      "existing_version": "V116",
+      "score": 0.605,
+      "existing_title": "Công thức sin tổng hai góc"
+    },
+    {
+      "family": "v121_a_phuong_trinh_luong_giac_day_du",
+      "topic_id": "phuong_trinh_luong_giac_day_du",
+      "existing_family": "v120_topic_phuong_trinh_luong_giac_day_du",
+      "existing_version": "V120",
+      "score": 0.805,
+      "existing_title": "Đếm nghiệm sin x bằng một nửa trên nhiều chu kỳ"
+    },
+    {
+      "family": "v121_a_phuong_trinh_luong_giac_day_du",
+      "topic_id": "phuong_trinh_luong_giac_day_du",
+      "existing_family": "trig_cos_one_root_count",
+      "existing_version": "V114",
+      "score": 0.606,
+      "existing_title": "Đếm nghiệm cos x=1 trong khoảng"
+    },
+    {
+      "family": "v121_b_phuong_trinh_luong_giac_day_du",
+      "topic_id": "phuong_trinh_luong_giac_day_du",
+      "existing_family": "trig_cos_one_root_count",
+      "existing_version": "V114",
+      "score": 0.694,
+      "existing_title": "Đếm nghiệm cos x=1 trong khoảng"
+    },
+    {
+      "family": "v121_a_ham_so_lien_tuc",
+      "topic_id": "ham_so_lien_tuc",
+      "existing_family": "piecewise_continuity_parameter",
+      "existing_version": "V114",
+      "score": 0.892,
+      "existing_title": "Chọn tham số để hàm ghép liên tục"
+    },
+    {
+      "family": "v121_a_ham_so_lien_tuc",
+      "topic_id": "ham_so_lien_tuc",
+      "existing_family": "v117_piecewise_continuity",
+      "existing_version": "V117",
+      "score": 0.771,
+      "existing_title": "Chọn tham số để hàm từng phần liên tục"
+    },
+    {
+      "family": "v121_b_dao_ham_quy_tac",
+      "topic_id": "dao_ham_quy_tac",
+      "existing_family": "derivative_power_at",
+      "existing_version": "V113",
+      "score": 0.655,
+      "existing_title": "Đạo hàm x^n tại một điểm"
+    },
+    {
+      "family": "v121_a_ung_dung_dao_ham_11",
+      "topic_id": "ung_dung_dao_ham_11",
+      "existing_family": "v120_topic_ung_dung_dao_ham_11",
+      "existing_version": "V120",
+      "score": 0.921,
+      "existing_title": "Vận tốc tức thời từ quãng đường bậc ba"
+    },
+    {
+      "family": "v121_b_song_song_khong_gian",
+      "topic_id": "song_song_khong_gian",
+      "existing_family": "v120_topic_song_song_khong_gian",
+      "existing_version": "V120",
+      "score": 0.667,
+      "existing_title": "Diện tích thiết diện song song đáy hình chóp"
+    },
+    {
+      "family": "v121_b_goc_khoang_cach_11",
+      "topic_id": "goc_khoang_cach_11",
+      "existing_family": "vertical_distance_to_floor",
+      "existing_version": "V114",
+      "score": 0.831,
+      "existing_title": "Khoảng cách từ điểm đến mặt phẳng ngang"
+    },
+    {
+      "family": "v121_a_bien_co_doc_lap_11",
+      "topic_id": "bien_co_doc_lap_11",
+      "existing_family": "v119_independent_joint",
+      "existing_version": "V119",
+      "score": 0.886,
+      "existing_title": "Xác suất đồng thời của hai biến cố độc lập"
+    },
+    {
+      "family": "v121_a_bien_co_doc_lap_11",
+      "topic_id": "bien_co_doc_lap_11",
+      "existing_family": "v120_topic_bien_co_doc_lap_11",
+      "existing_version": "V120",
+      "score": 0.775,
+      "existing_title": "Xác suất đúng một trong hai biến cố độc lập"
+    },
+    {
+      "family": "v121_a_bien_co_doc_lap_11",
+      "topic_id": "bien_co_doc_lap_11",
+      "existing_family": "v119_independent_union",
+      "existing_version": "V119",
+      "score": 0.667,
+      "existing_title": "Hợp hai biến cố độc lập"
+    },
+    {
+      "family": "v121_a_bien_co_doc_lap_11",
+      "topic_id": "bien_co_doc_lap_11",
+      "existing_family": "conditional_probability",
+      "existing_version": "V113",
+      "score": 0.641,
+      "existing_title": "Xác suất có điều kiện từ giao hai biến cố"
+    },
+    {
+      "family": "v121_b_bien_co_doc_lap_11",
+      "topic_id": "bien_co_doc_lap_11",
+      "existing_family": "conditional_probability",
+      "existing_version": "V113",
+      "score": 0.702,
+      "existing_title": "Xác suất có điều kiện từ giao hai biến cố"
+    },
+    {
+      "family": "v121_b_bien_co_doc_lap_11",
+      "topic_id": "bien_co_doc_lap_11",
+      "existing_family": "v119_conditional_at_least_one_two_trials",
+      "existing_version": "V119",
+      "score": 0.667,
+      "existing_title": "Xác suất cả hai xảy ra khi biết ít nhất một"
+    },
+    {
+      "family": "v121_b_bien_co_doc_lap_11",
+      "topic_id": "bien_co_doc_lap_11",
+      "existing_family": "v119_conditional_from_counts",
+      "existing_version": "V119",
+      "score": 0.605,
+      "existing_title": "Xác suất có điều kiện từ bảng đếm"
+    },
+    {
+      "family": "v121_b_bien_co_doc_lap_11",
+      "topic_id": "bien_co_doc_lap_11",
+      "existing_family": "v119_conditional_without_replacement",
+      "existing_version": "V119",
+      "score": 0.574,
+      "existing_title": "Xác suất điều kiện rút vật không hoàn lại"
+    },
+    {
+      "family": "v121_b_day_so_truy_hoi_11",
+      "topic_id": "day_so_truy_hoi_11",
+      "existing_family": "recurrence_arithmetic_summation",
+      "existing_version": "V114",
+      "score": 0.586,
+      "existing_title": "Dãy truy hồi cộng dồn cấp số cộng"
+    },
+    {
+      "family": "v121_b_quy_nap_toan_hoc_11",
+      "topic_id": "quy_nap_toan_hoc_11",
+      "existing_family": "v120_topic_quy_nap_toan_hoc_11",
+      "existing_version": "V120",
+      "score": 0.571,
+      "existing_title": "Tổng lập phương và bước quy nạp"
+    },
+    {
+      "family": "v121_a_nhan_biet_hinh_khong_gian_11",
+      "topic_id": "nhan_biet_hinh_khong_gian_11",
+      "existing_family": "v120_topic_nhan_biet_hinh_khong_gian_11",
+      "existing_version": "V120",
+      "score": 0.642,
+      "existing_title": "Đếm cạnh lăng trụ đáy đa giác"
+    },
+    {
+      "family": "v121_b_g11_geom_transform_translation",
+      "topic_id": "g11_geom_transform_translation",
+      "existing_family": "translation_point_2d",
+      "existing_version": "V114",
+      "score": 0.647,
+      "existing_title": "Ảnh điểm qua phép tịnh tiến"
+    },
+    {
+      "family": "v121_b_g11_geom_transform_translation",
+      "topic_id": "g11_geom_transform_translation",
+      "existing_family": "v117_translation_image",
+      "existing_version": "V117",
+      "score": 0.639,
+      "existing_title": "Ảnh của điểm qua phép tịnh tiến"
+    },
+    {
+      "family": "v121_a_g11_geom_transform_reflection",
+      "topic_id": "g11_geom_transform_reflection",
+      "existing_family": "v117_reflect_diag",
+      "existing_version": "V117",
+      "score": 0.682,
+      "existing_title": "Đối xứng qua đường y=x"
+    },
+    {
+      "family": "v121_b_g11_geom_transform_reflection",
+      "topic_id": "g11_geom_transform_reflection",
+      "existing_family": "v117_reflect_diag",
+      "existing_version": "V117",
+      "score": 1.0,
+      "existing_title": "Đối xứng qua đường y=x"
+    },
+    {
+      "family": "v121_a_g11_geom_parallel_line_plane",
+      "topic_id": "g11_geom_parallel_line_plane",
+      "existing_family": "v120_topic_g11_geom_parallel_line_plane",
+      "existing_version": "V120",
+      "score": 0.628,
+      "existing_title": "Khoảng cách đường thẳng song song mặt phẳng"
+    },
+    {
+      "family": "v121_a_g11_geom_prism_pyramid_sections",
+      "topic_id": "g11_geom_prism_pyramid_sections",
+      "existing_family": "v120_topic_g11_geom_prism_pyramid_sections",
+      "existing_version": "V120",
+      "score": 0.61,
+      "existing_title": "Diện tích xung quanh lăng trụ đứng đáy vuông"
+    },
+    {
+      "family": "v121_a_g11_geom_prism_pyramid_sections",
+      "topic_id": "g11_geom_prism_pyramid_sections",
+      "existing_family": "v118_prism_lateral_area",
+      "existing_version": "V118",
+      "score": 0.593,
+      "existing_title": "Diện tích xung quanh lăng trụ đứng đáy tam giác vuông"
+    },
+    {
+      "family": "v121_b_g11_geom_rotation_homothety",
+      "topic_id": "g11_geom_rotation_homothety",
+      "existing_family": "v120_topic_g11_geom_rotation_homothety",
+      "existing_version": "V120",
+      "score": 0.593,
+      "existing_title": "Độ dài ảnh đoạn thẳng qua vị tự"
+    },
+    {
+      "family": "v121_a_g11_geom_parallel_planes",
+      "topic_id": "g11_geom_parallel_planes",
+      "existing_family": "parallel_plane_normal_parameter",
+      "existing_version": "V114",
+      "score": 0.605,
+      "existing_title": "Pháp tuyến của hai mặt phẳng song song"
+    },
+    {
+      "family": "v121_b_g11_geom_perpendicular_line_plane",
+      "topic_id": "g11_geom_perpendicular_line_plane",
+      "existing_family": "line_plane_perp_condition",
+      "existing_version": "V114",
+      "score": 0.721,
+      "existing_title": "Đường thẳng vuông góc mặt phẳng từ pháp tuyến"
+    },
+    {
+      "family": "v121_a_g11_geom_dihedral_angles",
+      "topic_id": "g11_geom_dihedral_angles",
+      "existing_family": "v120_topic_g11_geom_dihedral_angles",
+      "existing_version": "V120",
+      "score": 0.87,
+      "existing_title": "Cos góc giữa đường thẳng và mặt phẳng"
+    },
+    {
+      "family": "v121_a_g11_geom_dihedral_angles",
+      "topic_id": "g11_geom_dihedral_angles",
+      "existing_family": "v117_line_plane_angle",
+      "existing_version": "V117",
+      "score": 0.761,
+      "existing_title": "Góc đường thẳng với mặt phẳng từ độ cao"
+    },
+    {
+      "family": "v121_a_g11_geom_dihedral_angles",
+      "topic_id": "g11_geom_dihedral_angles",
+      "existing_family": "angle_line_plane_right_triangle",
+      "existing_version": "V114",
+      "score": 0.676,
+      "existing_title": "Tính sin góc giữa đường thẳng và đáy"
+    },
+    {
+      "family": "v121_b_g11_geom_dihedral_angles",
+      "topic_id": "g11_geom_dihedral_angles",
+      "existing_family": "v120_topic_g11_geom_dihedral_angles",
+      "existing_version": "V120",
+      "score": 0.738,
+      "existing_title": "Cos góc giữa đường thẳng và mặt phẳng"
+    },
+    {
+      "family": "v121_b_g11_geom_dihedral_angles",
+      "topic_id": "g11_geom_dihedral_angles",
+      "existing_family": "angle_line_plane_right_triangle",
+      "existing_version": "V114",
+      "score": 0.688,
+      "existing_title": "Tính sin góc giữa đường thẳng và đáy"
+    },
+    {
+      "family": "v121_a_g11_geom_section_construction",
+      "topic_id": "g11_geom_section_construction",
+      "existing_family": "tetrahedron_parallel_section_area",
+      "existing_version": "V114",
+      "score": 0.651,
+      "existing_title": "Thiết diện tam giác song song đáy tứ diện"
+    },
+    {
+      "family": "v121_a_g11_geom_section_construction",
+      "topic_id": "g11_geom_section_construction",
+      "existing_family": "v120_topic_g11_geom_section_construction",
+      "existing_version": "V120",
+      "score": 0.636,
+      "existing_title": "Chu vi thiết diện hình chóp đều theo đồng dạng"
+    },
+    {
+      "family": "v121_b_g11_geom_section_construction",
+      "topic_id": "g11_geom_section_construction",
+      "existing_family": "tetrahedron_parallel_section_area",
+      "existing_version": "V114",
+      "score": 0.6,
+      "existing_title": "Thiết diện tam giác song song đáy tứ diện"
+    },
+    {
+      "family": "v121_a_g11_geom_skew_lines_distance",
+      "topic_id": "g11_geom_skew_lines_distance",
+      "existing_family": "skew_axis_distance",
+      "existing_version": "V114",
+      "score": 0.882,
+      "existing_title": "Khoảng cách hai đường thẳng chéo nhau vuông phương"
+    },
+    {
+      "family": "v121_a_g11_geom_skew_lines_distance",
+      "topic_id": "g11_geom_skew_lines_distance",
+      "existing_family": "v118_3d_skew_lines_distance_axes",
+      "existing_version": "V118",
+      "score": 0.817,
+      "existing_title": "Khoảng cách hai đường thẳng chéo nhau theo đoạn vuông góc chung"
+    },
+    {
+      "family": "v121_a_g11_geom_skew_lines_distance",
+      "topic_id": "g11_geom_skew_lines_distance",
+      "existing_family": "v120_topic_g11_geom_skew_lines_distance",
+      "existing_version": "V120",
+      "score": 0.66,
+      "existing_title": "Khoảng cách hai đường chéo nhau dọc hai trục phương"
+    },
+    {
+      "family": "v121_b_g11_geom_skew_lines_distance",
+      "topic_id": "g11_geom_skew_lines_distance",
+      "existing_family": "v120_topic_g11_geom_skew_lines_distance",
+      "existing_version": "V120",
+      "score": 0.769,
+      "existing_title": "Khoảng cách hai đường chéo nhau dọc hai trục phương"
+    },
+    {
+      "family": "v121_b_g11_geom_skew_lines_distance",
+      "topic_id": "g11_geom_skew_lines_distance",
+      "existing_family": "skew_axis_distance",
+      "existing_version": "V114",
+      "score": 0.757,
+      "existing_title": "Khoảng cách hai đường thẳng chéo nhau vuông phương"
+    },
+    {
+      "family": "v121_b_g11_geom_skew_lines_distance",
+      "topic_id": "g11_geom_skew_lines_distance",
+      "existing_family": "v118_3d_skew_lines_distance_axes",
+      "existing_version": "V118",
+      "score": 0.724,
+      "existing_title": "Khoảng cách hai đường thẳng chéo nhau theo đoạn vuông góc chung"
+    },
+    {
+      "family": "v121_a_g11_geom_three_perpendiculars",
+      "topic_id": "g11_geom_three_perpendiculars",
+      "existing_family": "v120_topic_g11_geom_three_perpendiculars",
+      "existing_version": "V120",
+      "score": 0.643,
+      "existing_title": "Đường xiên và hình chiếu vuông góc trên mặt phẳng"
+    },
+    {
+      "family": "v121_a_g11_geom_transform_composition",
+      "topic_id": "g11_geom_transform_composition",
+      "existing_family": "composition_transforms",
+      "existing_version": "V114",
+      "score": 0.746,
+      "existing_title": "Hợp thành đối xứng và tịnh tiến"
+    },
+    {
+      "family": "v121_a_g11_geom_transform_composition",
+      "topic_id": "g11_geom_transform_composition",
+      "existing_family": "v120_topic_g11_geom_transform_composition",
+      "existing_version": "V120",
+      "score": 0.721,
+      "existing_title": "Hợp thành quay 90 độ và tịnh tiến"
+    },
+    {
+      "family": "v121_a_g11_geom_section_ratio",
+      "topic_id": "g11_geom_section_ratio",
+      "existing_family": "v118_pyramid_section_parallel_area",
+      "existing_version": "V118",
+      "score": 0.8,
+      "existing_title": "Tỉ số diện tích thiết diện song song đáy hình chóp"
+    },
+    {
+      "family": "v121_a_g11_geom_section_ratio",
+      "topic_id": "g11_geom_section_ratio",
+      "existing_family": "tetrahedron_section_volume_ratio",
+      "existing_version": "V114",
+      "score": 0.641,
+      "existing_title": "Tỉ số thể tích hai hình chóp đồng dạng"
+    },
+    {
+      "family": "v121_a_g11_geom_section_ratio",
+      "topic_id": "g11_geom_section_ratio",
+      "existing_family": "v120_topic_g11_geom_section_ratio",
+      "existing_version": "V120",
+      "score": 0.605,
+      "existing_title": "Tỉ số thể tích khi cắt hình chóp song song đáy"
+    },
+    {
+      "family": "v121_b_g11_geom_section_ratio",
+      "topic_id": "g11_geom_section_ratio",
+      "existing_family": "tetrahedron_section_volume_ratio",
+      "existing_version": "V114",
+      "score": 1.0,
+      "existing_title": "Tỉ số thể tích hai hình chóp đồng dạng"
+    },
+    {
+      "family": "v121_b_g11_geom_section_ratio",
+      "topic_id": "g11_geom_section_ratio",
+      "existing_family": "v120_topic_g11_geom_section_ratio",
+      "existing_version": "V120",
+      "score": 0.786,
+      "existing_title": "Tỉ số thể tích khi cắt hình chóp song song đáy"
+    },
+    {
+      "family": "v121_a_khao_sat_ham_so",
+      "topic_id": "khao_sat_ham_so",
+      "existing_family": "v118_inflection_cubic",
+      "existing_version": "V118",
+      "score": 0.857,
+      "existing_title": "Hoành độ điểm uốn của hàm bậc ba"
+    },
+    {
+      "family": "v121_a_khao_sat_ham_so",
+      "topic_id": "khao_sat_ham_so",
+      "existing_family": "cubic_inflection_x",
+      "existing_version": "V114",
+      "score": 0.732,
+      "existing_title": "Tọa độ hoành điểm uốn của đa thức bậc ba"
+    },
+    {
+      "family": "v121_a_khao_sat_ham_so",
+      "topic_id": "khao_sat_ham_so",
+      "existing_family": "v120_topic_khao_sat_ham_so",
+      "existing_version": "V120",
+      "score": 0.641,
+      "existing_title": "Khoảng cách giữa hai điểm cực trị đồ thị bậc ba"
+    },
+    {
+      "family": "v121_a_nguyen_ham_tich_phan",
+      "topic_id": "nguyen_ham_tich_phan",
+      "existing_family": "integral_monomial",
+      "existing_version": "V113",
+      "score": 0.721,
+      "existing_title": "Tích phân xác định của đơn thức"
+    },
+    {
+      "family": "v121_a_nguyen_ham_tich_phan",
+      "topic_id": "nguyen_ham_tich_phan",
+      "existing_family": "v117_integral_cos",
+      "existing_version": "V117",
+      "score": 0.613,
+      "existing_title": "Tích phân cos trên đoạn đặc biệt"
+    },
+    {
+      "family": "v121_a_so_phuc",
+      "topic_id": "so_phuc",
+      "existing_family": "v119_complex_product_modulus_squared",
+      "existing_version": "V119",
+      "score": 0.638,
+      "existing_title": "Bình phương môđun tích số phức"
+    },
+    {
+      "family": "v121_a_so_phuc",
+      "topic_id": "so_phuc",
+      "existing_family": "v119_complex_modulus_squared",
+      "existing_version": "V119",
+      "score": 0.619,
+      "existing_title": "Bình phương môđun số phức"
+    },
+    {
+      "family": "v121_a_so_phuc",
+      "topic_id": "so_phuc",
+      "existing_family": "complex_modulus_squared",
+      "existing_version": "V113",
+      "score": 0.619,
+      "existing_title": "Bình phương môđun số phức"
+    },
+    {
+      "family": "v121_a_so_phuc",
+      "topic_id": "so_phuc",
+      "existing_family": "v119_complex_conjugate_imag",
+      "existing_version": "V119",
+      "score": 0.578,
+      "existing_title": "Phần ảo của số phức liên hợp"
+    },
+    {
+      "family": "v121_b_so_phuc",
+      "topic_id": "so_phuc",
+      "existing_family": "v119_complex_quotient_real",
+      "existing_version": "V119",
+      "score": 0.903,
+      "existing_title": "Phần thực của thương hai số phức"
+    },
+    {
+      "family": "v121_b_so_phuc",
+      "topic_id": "so_phuc",
+      "existing_family": "v118_complex_division_real",
+      "existing_version": "V118",
+      "score": 0.828,
+      "existing_title": "Phần thực thương hai số phức"
+    },
+    {
+      "family": "v121_b_so_phuc",
+      "topic_id": "so_phuc",
+      "existing_family": "v119_complex_inverse_real",
+      "existing_version": "V119",
+      "score": 0.806,
+      "existing_title": "Phần thực của nghịch đảo số phức"
+    },
+    {
+      "family": "v121_b_so_phuc",
+      "topic_id": "so_phuc",
+      "existing_family": "v119_complex_quotient_imag",
+      "existing_version": "V119",
+      "score": 0.8,
+      "existing_title": "Phần ảo của thương hai số phức"
+    },
+    {
+      "family": "v121_b_so_phuc",
+      "topic_id": "so_phuc",
+      "existing_family": "v119_complex_inverse_imag",
+      "existing_version": "V119",
+      "score": 0.7,
+      "existing_title": "Phần ảo của nghịch đảo số phức"
+    },
+    {
+      "family": "v121_a_hinh_hoc_khong_gian",
+      "topic_id": "hinh_hoc_khong_gian",
+      "existing_family": "v120_topic_hinh_hoc_khong_gian",
+      "existing_version": "V120",
+      "score": 0.623,
+      "existing_title": "Thể tích lăng trụ đứng đáy tam giác đều"
+    },
+    {
+      "family": "v121_a_toa_do_khong_gian",
+      "topic_id": "toa_do_khong_gian",
+      "existing_family": "v120_topic_toa_do_khong_gian",
+      "existing_version": "V120",
+      "score": 0.571,
+      "existing_title": "Khoảng cách điểm Oxyz tới mặt phẳng chéo"
+    },
+    {
+      "family": "v121_a_thong_ke_12",
+      "topic_id": "thong_ke_12",
+      "existing_family": "v120_topic_thong_ke_12",
+      "existing_version": "V120",
+      "score": 0.71,
+      "existing_title": "Hệ số biến thiên của ba số đối xứng"
+    },
+    {
+      "family": "v121_a_tinh_don_dieu",
+      "topic_id": "tinh_don_dieu",
+      "existing_family": "increasing_quadratic_threshold",
+      "existing_version": "V114",
+      "score": 0.629,
+      "existing_title": "Khoảng đồng biến của hàm bậc hai"
+    },
+    {
+      "family": "v121_a_cuc_tri",
+      "topic_id": "cuc_tri",
+      "existing_family": "v117_cubic_critical_point",
+      "existing_version": "V117",
+      "score": 0.579,
+      "existing_title": "Hoành độ hai điểm tới hạn của hàm bậc ba"
+    },
+    {
+      "family": "v121_a_gtln_gtnn",
+      "topic_id": "gtln_gtnn",
+      "existing_family": "v120_topic_gtln_gtnn",
+      "existing_version": "V120",
+      "score": 0.738,
+      "existing_title": "Giá trị nhỏ nhất tam thức trên đoạn chứa đỉnh"
+    },
+    {
+      "family": "v121_a_gtln_gtnn",
+      "topic_id": "gtln_gtnn",
+      "existing_family": "monotone_cubic_closed_interval_max",
+      "existing_version": "V114",
+      "score": 0.634,
+      "existing_title": "Giá trị lớn nhất trên đoạn của hàm đơn điệu"
+    },
+    {
+      "family": "v121_a_tiep_tuyen",
+      "topic_id": "tiep_tuyen",
+      "existing_family": "tangent_intercept_quadratic",
+      "existing_version": "V114",
+      "score": 0.697,
+      "existing_title": "Tung độ gốc của tiếp tuyến parabol"
+    },
+    {
+      "family": "v121_a_tiep_tuyen",
+      "topic_id": "tiep_tuyen",
+      "existing_family": "v120_topic_tiep_tuyen",
+      "existing_version": "V120",
+      "score": 0.639,
+      "existing_title": "Tung độ gốc của đường tiếp tuyến parabol"
+    },
+    {
+      "family": "v121_a_tien_can",
+      "topic_id": "tien_can",
+      "existing_family": "rational_vertical_asymptote",
+      "existing_version": "V114",
+      "score": 0.806,
+      "existing_title": "Tiệm cận đứng của phân thức bậc nhất"
+    },
+    {
+      "family": "v121_a_tien_can",
+      "topic_id": "tien_can",
+      "existing_family": "v120_topic_tien_can",
+      "existing_version": "V120",
+      "score": 0.571,
+      "existing_title": "Hệ số tự do của tiệm cận xiên phân thức"
+    },
+    {
+      "family": "v121_b_tien_can",
+      "topic_id": "tien_can",
+      "existing_family": "rational_vertical_asymptote",
+      "existing_version": "V114",
+      "score": 0.932,
+      "existing_title": "Tiệm cận đứng của phân thức bậc nhất"
+    },
+    {
+      "family": "v121_a_tuong_giao",
+      "topic_id": "tuong_giao",
+      "existing_family": "v120_topic_tuong_giao",
+      "existing_version": "V120",
+      "score": 0.617,
+      "existing_title": "Tích hoành độ giao điểm parabol và đường thẳng"
+    },
+    {
+      "family": "v121_a_tuong_giao",
+      "topic_id": "tuong_giao",
+      "existing_family": "parabola_horizontal_intersections",
+      "existing_version": "V114",
+      "score": 0.59,
+      "existing_title": "Đếm giao điểm parabol với đường thẳng ngang"
+    },
+    {
+      "family": "v121_b_tuong_giao",
+      "topic_id": "tuong_giao",
+      "existing_family": "v120_topic_tuong_giao",
+      "existing_version": "V120",
+      "score": 0.575,
+      "existing_title": "Tích hoành độ giao điểm parabol và đường thẳng"
+    },
+    {
+      "family": "v121_b_tuong_giao",
+      "topic_id": "tuong_giao",
+      "existing_family": "parabola_horizontal_intersections",
+      "existing_version": "V114",
+      "score": 0.571,
+      "existing_title": "Đếm giao điểm parabol với đường thẳng ngang"
+    },
+    {
+      "family": "v121_a_ham_logarit",
+      "topic_id": "ham_logarit",
+      "existing_family": "log_change_of_base",
+      "existing_version": "V114",
+      "score": 1.0,
+      "existing_title": "Đổi cơ số logarit"
+    },
+    {
+      "family": "v121_a_ham_logarit",
+      "topic_id": "ham_logarit",
+      "existing_family": "v117_log_change_base",
+      "existing_version": "V117",
+      "score": 0.756,
+      "existing_title": "Đổi cơ số logarit và thu gọn"
+    },
+    {
+      "family": "v121_b_ham_logarit",
+      "topic_id": "ham_logarit",
+      "existing_family": "logarithm_power",
+      "existing_version": "V113",
+      "score": 0.638,
+      "existing_title": "Logarit của một lũy thừa"
+    },
+    {
+      "family": "v121_b_ham_logarit",
+      "topic_id": "ham_logarit",
+      "existing_family": "v120_topic_ham_logarit",
+      "existing_version": "V120",
+      "score": 0.571,
+      "existing_title": "Hiệu logarit của hai lũy thừa cùng cơ số"
+    },
+    {
+      "family": "v121_a_pt_mu",
+      "topic_id": "pt_mu",
+      "existing_family": "exponential_equation",
+      "existing_version": "V113",
+      "score": 0.8,
+      "existing_title": "Giải phương trình lũy thừa cùng cơ số"
+    },
+    {
+      "family": "v121_a_pt_mu",
+      "topic_id": "pt_mu",
+      "existing_family": "v117_exponential_quadratic_substitution",
+      "existing_version": "V117",
+      "score": 0.613,
+      "existing_title": "Phương trình bậc hai theo 2^x"
+    },
+    {
+      "family": "v121_a_pt_mu",
+      "topic_id": "pt_mu",
+      "existing_family": "v120_topic_pt_mu",
+      "existing_version": "V120",
+      "score": 0.592,
+      "existing_title": "Giải phương trình mũ với hệ số ở số mũ"
+    },
+    {
+      "family": "v121_a_pt_logarit",
+      "topic_id": "pt_logarit",
+      "existing_family": "logarithm_equation",
+      "existing_version": "V113",
+      "score": 0.915,
+      "existing_title": "Giải phương trình logarit cơ bản"
+    },
+    {
+      "family": "v121_a_pt_logarit",
+      "topic_id": "pt_logarit",
+      "existing_family": "v120_topic_pt_logarit",
+      "existing_version": "V120",
+      "score": 0.676,
+      "existing_title": "Giải phương trình tổng hai logarit chứa x"
+    },
+    {
+      "family": "v121_a_pt_logarit",
+      "topic_id": "pt_logarit",
+      "existing_family": "v116_log_product_equation",
+      "existing_version": "V116",
+      "score": 0.667,
+      "existing_title": "Giải phương trình tổng hai logarit cùng cơ số"
+    },
+    {
+      "family": "v121_b_pt_logarit",
+      "topic_id": "pt_logarit",
+      "existing_family": "logarithm_equation",
+      "existing_version": "V113",
+      "score": 0.623,
+      "existing_title": "Giải phương trình logarit cơ bản"
+    },
+    {
+      "family": "v121_b_pt_logarit",
+      "topic_id": "pt_logarit",
+      "existing_family": "v116_log_product_equation",
+      "existing_version": "V116",
+      "score": 0.6,
+      "existing_title": "Giải phương trình tổng hai logarit cùng cơ số"
+    },
+    {
+      "family": "v121_a_bpt_mu",
+      "topic_id": "bpt_mu",
+      "existing_family": "exponential_inequality_integer",
+      "existing_version": "V114",
+      "score": 0.816,
+      "existing_title": "Nghiệm nguyên của bất phương trình mũ"
+    },
+    {
+      "family": "v121_a_bpt_mu",
+      "topic_id": "bpt_mu",
+      "existing_family": "v120_topic_bpt_mu",
+      "existing_version": "V120",
+      "score": 0.756,
+      "existing_title": "Nghiệm nguyên tối thiểu bất phương trình mũ"
+    },
+    {
+      "family": "v121_a_bpt_mu",
+      "topic_id": "bpt_mu",
+      "existing_family": "v118_exponential_inequality_lower",
+      "existing_version": "V118",
+      "score": 0.627,
+      "existing_title": "Giải bất phương trình mũ với cơ số nhỏ hơn 1"
+    },
+    {
+      "family": "v121_b_bpt_mu",
+      "topic_id": "bpt_mu",
+      "existing_family": "exponential_inequality_integer",
+      "existing_version": "V114",
+      "score": 0.675,
+      "existing_title": "Nghiệm nguyên của bất phương trình mũ"
+    },
+    {
+      "family": "v121_b_bpt_mu",
+      "topic_id": "bpt_mu",
+      "existing_family": "v120_topic_bpt_mu",
+      "existing_version": "V120",
+      "score": 0.627,
+      "existing_title": "Nghiệm nguyên tối thiểu bất phương trình mũ"
+    },
+    {
+      "family": "v121_b_bpt_mu",
+      "topic_id": "bpt_mu",
+      "existing_family": "v118_exponential_inequality_lower",
+      "existing_version": "V118",
+      "score": 0.595,
+      "existing_title": "Giải bất phương trình mũ với cơ số nhỏ hơn 1"
+    },
+    {
+      "family": "v121_a_bpt_logarit",
+      "topic_id": "bpt_logarit",
+      "existing_family": "v120_topic_bpt_logarit",
+      "existing_version": "V120",
+      "score": 0.905,
+      "existing_title": "Đếm nghiệm nguyên bất phương trình logarit"
+    },
+    {
+      "family": "v121_a_bpt_logarit",
+      "topic_id": "bpt_logarit",
+      "existing_family": "logarithm_inequality_integer",
+      "existing_version": "V114",
+      "score": 0.897,
+      "existing_title": "Số nghiệm nguyên của bất phương trình logarit"
+    },
+    {
+      "family": "v121_b_bpt_logarit",
+      "topic_id": "bpt_logarit",
+      "existing_family": "v117_log_inequality_direction",
+      "existing_version": "V117",
+      "score": 0.637,
+      "existing_title": "Đổi chiều bất phương trình logarit khi cơ số nhỏ hơn 1"
+    },
+    {
+      "family": "v121_b_bpt_logarit",
+      "topic_id": "bpt_logarit",
+      "existing_family": "v120_topic_bpt_logarit",
+      "existing_version": "V120",
+      "score": 0.608,
+      "existing_title": "Đếm nghiệm nguyên bất phương trình logarit"
+    },
+    {
+      "family": "v121_b_bpt_logarit",
+      "topic_id": "bpt_logarit",
+      "existing_family": "logarithm_inequality_integer",
+      "existing_version": "V114",
+      "score": 0.585,
+      "existing_title": "Số nghiệm nguyên của bất phương trình logarit"
+    },
+    {
+      "family": "v121_a_ung_dung_tich_phan",
+      "topic_id": "ung_dung_tich_phan",
+      "existing_family": "v116_curves_enclosed_area",
+      "existing_version": "V116",
+      "score": 0.649,
+      "existing_title": "Diện tích miền giới hạn bởi đường thẳng và parabol"
+    },
+    {
+      "family": "v121_a_bieu_dien_so_phuc",
+      "topic_id": "bieu_dien_so_phuc",
+      "existing_family": "v117_complex_modulus",
+      "existing_version": "V117",
+      "score": 0.578,
+      "existing_title": "Môđun số phức"
+    },
+    {
+      "family": "v121_b_pt_so_phuc",
+      "topic_id": "pt_so_phuc",
+      "existing_family": "complex_multiply_imag",
+      "existing_version": "V113",
+      "score": 0.64,
+      "existing_title": "Phần ảo của tích hai số phức"
+    },
+    {
+      "family": "v121_b_mat_phang_oxyz",
+      "topic_id": "mat_phang_oxyz",
+      "existing_family": "v120_topic_mat_phang_oxyz",
+      "existing_version": "V120",
+      "score": 0.58,
+      "existing_title": "Khoảng cách gốc tới mặt phẳng cắt ba trục"
+    },
+    {
+      "family": "v121_a_mat_cau",
+      "topic_id": "mat_cau",
+      "existing_family": "sphere_volume",
+      "existing_version": "V113",
+      "score": 0.588,
+      "existing_title": "Thể tích khối cầu"
+    },
+    {
+      "family": "v121_b_mat_cau",
+      "topic_id": "mat_cau",
+      "existing_family": "sphere_volume",
+      "existing_version": "V113",
+      "score": 0.824,
+      "existing_title": "Thể tích khối cầu"
+    },
+    {
+      "family": "v121_a_the_tich_khong_gian",
+      "topic_id": "the_tich_khong_gian",
+      "existing_family": "cone_volume",
+      "existing_version": "V113",
+      "score": 0.737,
+      "existing_title": "Thể tích khối nón"
+    },
+    {
+      "family": "v121_a_tong_hop_thpt",
+      "topic_id": "tong_hop_thpt",
+      "existing_family": "v120_topic_tong_hop_thpt",
+      "existing_version": "V120",
+      "score": 0.685,
+      "existing_title": "GTNN biểu thức AM-GM có nghịch đảo"
+    },
+    {
+      "family": "v121_a_hinh_khoi_va_the_tich_co_ban_12",
+      "topic_id": "hinh_khoi_va_the_tich_co_ban_12",
+      "existing_family": "cylinder_volume",
+      "existing_version": "V113",
+      "score": 0.824,
+      "existing_title": "Thể tích khối trụ"
+    },
+    {
+      "family": "v121_a_hinh_khoi_va_the_tich_co_ban_12",
+      "topic_id": "hinh_khoi_va_the_tich_co_ban_12",
+      "existing_family": "box_volume",
+      "existing_version": "V113",
+      "score": 0.605,
+      "existing_title": "Thể tích khối hộp chữ nhật"
+    },
+    {
+      "family": "v121_a_hinh_khoi_va_the_tich_co_ban_12",
+      "topic_id": "hinh_khoi_va_the_tich_co_ban_12",
+      "existing_family": "v120_topic_hinh_khoi_va_the_tich_co_ban_12",
+      "existing_version": "V120",
+      "score": 0.595,
+      "existing_title": "Thể tích tứ diện đều"
+    },
+    {
+      "family": "v121_a_hinh_hoc_oxyz_van_dung_12",
+      "topic_id": "hinh_hoc_oxyz_van_dung_12",
+      "existing_family": "v120_topic_hinh_hoc_oxyz_van_dung_12",
+      "existing_version": "V120",
+      "score": 0.632,
+      "existing_title": "Khoảng cách điểm và ảnh phản xạ qua Oxy"
+    },
+    {
+      "family": "v121_b_hinh_hoc_oxyz_van_dung_12",
+      "topic_id": "hinh_hoc_oxyz_van_dung_12",
+      "existing_family": "v120_topic_hinh_hoc_oxyz_van_dung_12",
+      "existing_version": "V120",
+      "score": 0.6,
+      "existing_title": "Khoảng cách điểm và ảnh phản xạ qua Oxy"
+    },
+    {
+      "family": "v121_a_g12_geom_vectors_3d",
+      "topic_id": "g12_geom_vectors_3d",
+      "existing_family": "vector_dot_3d",
+      "existing_version": "V113",
+      "score": 0.828,
+      "existing_title": "Tích vô hướng hai vectơ Oxyz"
+    },
+    {
+      "family": "v121_b_g12_geom_vectors_3d",
+      "topic_id": "g12_geom_vectors_3d",
+      "existing_family": "vector_dot_3d",
+      "existing_version": "V113",
+      "score": 0.6,
+      "existing_title": "Tích vô hướng hai vectơ Oxyz"
+    },
+    {
+      "family": "v121_a_g12_geom_plane_equation",
+      "topic_id": "g12_geom_plane_equation",
+      "existing_family": "plane_constant_from_point",
+      "existing_version": "V114",
+      "score": 0.75,
+      "existing_title": "Hệ số tự do của phương trình mặt phẳng"
+    },
+    {
+      "family": "v121_a_g12_geom_solid_surface_area",
+      "topic_id": "g12_geom_solid_surface_area",
+      "existing_family": "cylinder_surface_area",
+      "existing_version": "V113",
+      "score": 1.0,
+      "existing_title": "Diện tích toàn phần hình trụ"
+    },
+    {
+      "family": "v121_a_g12_geom_solid_surface_area",
+      "topic_id": "g12_geom_solid_surface_area",
+      "existing_family": "v120_topic_g12_geom_solid_surface_area",
+      "existing_version": "V120",
+      "score": 0.623,
+      "existing_title": "Diện tích xung quanh của hình nón"
+    },
+    {
+      "family": "v121_b_g12_geom_solid_surface_area",
+      "topic_id": "g12_geom_solid_surface_area",
+      "existing_family": "cylinder_surface_area",
+      "existing_version": "V113",
+      "score": 0.867,
+      "existing_title": "Diện tích toàn phần hình trụ"
+    },
+    {
+      "family": "v121_b_g12_geom_solid_surface_area",
+      "topic_id": "g12_geom_solid_surface_area",
+      "existing_family": "v117_truncated_cone_volume",
+      "existing_version": "V117",
+      "score": 0.679,
+      "existing_title": "Thể tích hình nón cụt"
+    },
+    {
+      "family": "v121_b_g12_geom_solid_surface_area",
+      "topic_id": "g12_geom_solid_surface_area",
+      "existing_family": "v120_topic_g12_geom_solid_surface_area",
+      "existing_version": "V120",
+      "score": 0.677,
+      "existing_title": "Diện tích xung quanh của hình nón"
+    },
+    {
+      "family": "v121_b_g12_geom_point_plane_distance",
+      "topic_id": "g12_geom_point_plane_distance",
+      "existing_family": "v117_point_plane_foot",
+      "existing_version": "V117",
+      "score": 0.756,
+      "existing_title": "Hình chiếu vuông góc của điểm lên mặt phẳng trục"
+    },
+    {
+      "family": "v121_b_g12_geom_point_plane_distance",
+      "topic_id": "g12_geom_point_plane_distance",
+      "existing_family": "point_plane_distance",
+      "existing_version": "V113",
+      "score": 0.688,
+      "existing_title": "Khoảng cách điểm đến mặt phẳng"
+    },
+    {
+      "family": "v121_a_g12_geom_line_plane_angle",
+      "topic_id": "g12_geom_line_plane_angle",
+      "existing_family": "v120_topic_g12_geom_line_plane_angle",
+      "existing_version": "V120",
+      "score": 0.708,
+      "existing_title": "Sin góc đường thẳng với mặt phẳng x=0"
+    },
+    {
+      "family": "v121_a_g12_geom_line_plane_angle",
+      "topic_id": "g12_geom_line_plane_angle",
+      "existing_family": "line_plane_angle_sin2",
+      "existing_version": "V114",
+      "score": 0.63,
+      "existing_title": "Bình phương sin góc đường thẳng với mặt phẳng"
+    },
+    {
+      "family": "v121_b_g12_geom_line_plane_angle",
+      "topic_id": "g12_geom_line_plane_angle",
+      "existing_family": "v120_topic_g12_geom_line_plane_angle",
+      "existing_version": "V120",
+      "score": 0.719,
+      "existing_title": "Sin góc đường thẳng với mặt phẳng x=0"
+    },
+    {
+      "family": "v121_b_g12_geom_line_plane_angle",
+      "topic_id": "g12_geom_line_plane_angle",
+      "existing_family": "line_plane_angle_sin2",
+      "existing_version": "V114",
+      "score": 0.611,
+      "existing_title": "Bình phương sin góc đường thẳng với mặt phẳng"
+    },
+    {
+      "family": "v121_b_g12_geom_two_planes_angle",
+      "topic_id": "g12_geom_two_planes_angle",
+      "existing_family": "v120_topic_g12_geom_two_planes_angle",
+      "existing_version": "V120",
+      "score": 0.667,
+      "existing_title": "Cos góc giữa hai mặt phẳng có pháp tuyến riêng"
+    },
+    {
+      "family": "v121_b_g12_geom_two_planes_angle",
+      "topic_id": "g12_geom_two_planes_angle",
+      "existing_family": "v118_plane_angle_normal",
+      "existing_version": "V118",
+      "score": 0.647,
+      "existing_title": "Cosin góc nhọn hai mặt phẳng từ pháp tuyến"
+    },
+    {
+      "family": "v121_b_g12_geom_two_planes_angle",
+      "topic_id": "g12_geom_two_planes_angle",
+      "existing_family": "plane_angle_cos2",
+      "existing_version": "V114",
+      "score": 0.644,
+      "existing_title": "Bình phương cos góc hai mặt phẳng"
+    },
+    {
+      "family": "v121_a_g12_geom_line_plane_intersection",
+      "topic_id": "g12_geom_line_plane_intersection",
+      "existing_family": "line_plane_intersection_t",
+      "existing_version": "V114",
+      "score": 0.682,
+      "existing_title": "Tham số giao đường thẳng và mặt phẳng"
+    },
+    {
+      "family": "v121_a_g12_geom_line_plane_intersection",
+      "topic_id": "g12_geom_line_plane_intersection",
+      "existing_family": "v120_topic_g12_geom_line_plane_intersection",
+      "existing_version": "V120",
+      "score": 0.644,
+      "existing_title": "Tham số giao điểm đường thẳng và mặt phẳng"
+    },
+    {
+      "family": "v121_a_g12_geom_line_plane_intersection",
+      "topic_id": "g12_geom_line_plane_intersection",
+      "existing_family": "v117_plane_line_intersection",
+      "existing_version": "V117",
+      "score": 0.617,
+      "existing_title": "Tìm tham số giao điểm đường thẳng và mặt phẳng"
+    },
+    {
+      "family": "v121_b_g12_geom_line_plane_intersection",
+      "topic_id": "g12_geom_line_plane_intersection",
+      "existing_family": "v120_topic_g12_geom_line_plane_intersection",
+      "existing_version": "V120",
+      "score": 0.837,
+      "existing_title": "Tham số giao điểm đường thẳng và mặt phẳng"
+    },
+    {
+      "family": "v121_b_g12_geom_line_plane_intersection",
+      "topic_id": "g12_geom_line_plane_intersection",
+      "existing_family": "v117_plane_line_intersection",
+      "existing_version": "V117",
+      "score": 0.8,
+      "existing_title": "Tìm tham số giao điểm đường thẳng và mặt phẳng"
+    },
+    {
+      "family": "v121_b_g12_geom_line_plane_intersection",
+      "topic_id": "g12_geom_line_plane_intersection",
+      "existing_family": "line_plane_intersection_t",
+      "existing_version": "V114",
+      "score": 0.765,
+      "existing_title": "Tham số giao đường thẳng và mặt phẳng"
+    },
+    {
+      "family": "v121_a_g12_geom_min_distance_3d",
+      "topic_id": "g12_geom_min_distance_3d",
+      "existing_family": "v120_topic_g12_geom_min_distance_3d",
+      "existing_version": "V120",
+      "score": 0.658,
+      "existing_title": "Khoảng cách nhỏ nhất tới đường thẳng Ox"
+    },
+    {
+      "family": "v121_a_g12_geom_min_distance_3d",
+      "topic_id": "g12_geom_min_distance_3d",
+      "existing_family": "v117_point_line_min_distance",
+      "existing_version": "V117",
+      "score": 0.642,
+      "existing_title": "Khoảng cách ngắn nhất từ điểm đến trục Oz"
+    },
+    {
+      "family": "v121_b_g12_geom_min_distance_3d",
+      "topic_id": "g12_geom_min_distance_3d",
+      "existing_family": "v120_topic_g12_geom_min_distance_3d",
+      "existing_version": "V120",
+      "score": 0.81,
+      "existing_title": "Khoảng cách nhỏ nhất tới đường thẳng Ox"
+    },
+    {
+      "family": "v121_b_g12_geom_min_distance_3d",
+      "topic_id": "g12_geom_min_distance_3d",
+      "existing_family": "v117_point_line_min_distance",
+      "existing_version": "V117",
+      "score": 0.667,
+      "existing_title": "Khoảng cách ngắn nhất từ điểm đến trục Oz"
+    },
+    {
+      "family": "v121_a_g12_geom_sphere_plane_intersection",
+      "topic_id": "g12_geom_sphere_plane_intersection",
+      "existing_family": "v117_sphere_plane_circle_radius",
+      "existing_version": "V117",
+      "score": 0.917,
+      "existing_title": "Bán kính đường tròn giao giữa mặt cầu và mặt phẳng"
+    },
+    {
+      "family": "v121_a_g12_geom_sphere_plane_intersection",
+      "topic_id": "g12_geom_sphere_plane_intersection",
+      "existing_family": "v120_topic_g12_geom_sphere_plane_intersection",
+      "existing_version": "V120",
+      "score": 0.87,
+      "existing_title": "Diện tích đường tròn giao mặt cầu và mặt phẳng"
+    },
+    {
+      "family": "v121_a_g12_geom_sphere_plane_intersection",
+      "topic_id": "g12_geom_sphere_plane_intersection",
+      "existing_family": "sphere_plane_section_area",
+      "existing_version": "V114",
+      "score": 0.598,
+      "existing_title": "Diện tích thiết diện mặt cầu và mặt phẳng"
+    },
+    {
+      "family": "v121_b_g12_geom_sphere_plane_intersection",
+      "topic_id": "g12_geom_sphere_plane_intersection",
+      "existing_family": "v120_topic_g12_geom_sphere_plane_intersection",
+      "existing_version": "V120",
+      "score": 0.582,
+      "existing_title": "Diện tích đường tròn giao mặt cầu và mặt phẳng"
+    },
+    {
+      "family": "v121_a_g12_geom_3d_optimization",
+      "topic_id": "g12_geom_3d_optimization",
+      "existing_family": "v116_box_maximization",
+      "existing_version": "V116",
+      "score": 0.689,
+      "existing_title": "Tối ưu thể tích hộp không nắp từ tấm vuông"
+    },
+    {
+      "family": "v121_a_g10_symmetric_systems",
+      "topic_id": "g10_symmetric_systems",
+      "existing_family": "v120_topic_g10_symmetric_systems",
+      "existing_version": "V120",
+      "score": 0.849,
+      "existing_title": "Tổng lập phương nghiệm của hệ đối xứng"
+    },
+    {
+      "family": "v121_b_g10_symmetric_systems",
+      "topic_id": "g10_symmetric_systems",
+      "existing_family": "v120_topic_g10_symmetric_systems",
+      "existing_version": "V120",
+      "score": 0.789,
+      "existing_title": "Tổng lập phương nghiệm của hệ đối xứng"
+    },
+    {
+      "family": "v121_a_g10_radical_equations_advanced",
+      "topic_id": "g10_radical_equations_advanced",
+      "existing_family": "v120_topic_g10_radical_equations_advanced",
+      "existing_version": "V120",
+      "score": 0.609,
+      "existing_title": "Giải phương trình tổng hai căn cùng đối số"
+    },
+    {
+      "family": "v121_b_g10_radical_equations_advanced",
+      "topic_id": "g10_radical_equations_advanced",
+      "existing_family": "v120_topic_g10_radical_equations_advanced",
+      "existing_version": "V120",
+      "score": 0.623,
+      "existing_title": "Giải phương trình tổng hai căn cùng đối số"
+    },
+    {
+      "family": "v121_b_g10_combinatorics_olympiad",
+      "topic_id": "g10_combinatorics_olympiad",
+      "existing_family": "pigeonhole_minimum",
+      "existing_version": "V114",
+      "score": 0.658,
+      "existing_title": "Nguyên lý Dirichlet đảm bảo trùng nhóm"
+    },
+    {
+      "family": "v121_b_g10_combinatorics_olympiad",
+      "topic_id": "g10_combinatorics_olympiad",
+      "existing_family": "v118_pigeonhole_ceil",
+      "existing_version": "V118",
+      "score": 0.623,
+      "existing_title": "Nguyên lý Dirichlet phân vật vào hộp"
+    },
+    {
+      "family": "v121_b_g10_combinatorics_olympiad",
+      "topic_id": "g10_combinatorics_olympiad",
+      "existing_family": "v120_topic_g10_combinatorics_olympiad",
+      "existing_version": "V120",
+      "score": 0.619,
+      "existing_title": "Nguyên lý Dirichlet bảo đảm ba vật cùng hộp"
+    },
+    {
+      "family": "v121_a_g11_advanced_trig_equations",
+      "topic_id": "g11_advanced_trig_equations",
+      "existing_family": "v120_topic_g11_advanced_trig_equations",
+      "existing_version": "V120",
+      "score": 0.62,
+      "existing_title": "Đếm nghiệm sin x = cos x trong nhiều chu kỳ"
+    },
+    {
+      "family": "v121_b_g11_advanced_trig_equations",
+      "topic_id": "g11_advanced_trig_equations",
+      "existing_family": "v120_topic_g11_advanced_trig_equations",
+      "existing_version": "V120",
+      "score": 0.592,
+      "existing_title": "Đếm nghiệm sin x = cos x trong nhiều chu kỳ"
+    },
+    {
+      "family": "v121_a_g11_binomial_advanced",
+      "topic_id": "g11_binomial_advanced",
+      "existing_family": "v120_topic_g11_binomial_advanced",
+      "existing_version": "V120",
+      "score": 0.806,
+      "existing_title": "Tổng các hệ số nhị thức chỉ số chẵn"
+    },
+    {
+      "family": "v121_b_g11_binomial_advanced",
+      "topic_id": "g11_binomial_advanced",
+      "existing_family": "v120_topic_g11_binomial_advanced",
+      "existing_version": "V120",
+      "score": 0.657,
+      "existing_title": "Tổng các hệ số nhị thức chỉ số chẵn"
+    },
+    {
+      "family": "v121_a_g12_complex_plane_geometry",
+      "topic_id": "g12_complex_plane_geometry",
+      "existing_family": "v118_complex_locus_circle",
+      "existing_version": "V118",
+      "score": 0.71,
+      "existing_title": "Quỹ tích số phức có môđun khoảng cách cố định"
+    },
+    {
+      "family": "v121_a_g12_complex_plane_geometry",
+      "topic_id": "g12_complex_plane_geometry",
+      "existing_family": "v120_topic_g12_complex_plane_geometry",
+      "existing_version": "V120",
+      "score": 0.585,
+      "existing_title": "Bán trục nhỏ quỹ tích elip số phức"
+    },
+    {
+      "family": "v121_b_g12_integral_optimization",
+      "topic_id": "g12_integral_optimization",
+      "existing_family": "v120_topic_g12_integral_optimization",
+      "existing_version": "V120",
+      "score": 0.783,
+      "existing_title": "Cực tiểu bình phương sai lệch tích phân"
+    },
+    {
+      "family": "v121_a_g12_solid_of_revolution",
+      "topic_id": "g12_solid_of_revolution",
+      "existing_family": "v117_volume_revolution",
+      "existing_version": "V117",
+      "score": 0.901,
+      "existing_title": "Thể tích vật thể tròn xoay bằng phương pháp đĩa"
+    },
+    {
+      "family": "v121_a_g12_solid_of_revolution",
+      "topic_id": "g12_solid_of_revolution",
+      "existing_family": "volume_revolution_quadratic",
+      "existing_version": "V114",
+      "score": 0.659,
+      "existing_title": "Thể tích khối tròn xoay của đường y=kx"
+    },
+    {
+      "family": "v121_a_g12_solid_of_revolution",
+      "topic_id": "g12_solid_of_revolution",
+      "existing_family": "v120_topic_g12_solid_of_revolution",
+      "existing_version": "V120",
+      "score": 0.635,
+      "existing_title": "Thể tích khối tròn xoay của miền tam giác"
+    },
+    {
+      "family": "v121_b_g12_solid_of_revolution",
+      "topic_id": "g12_solid_of_revolution",
+      "existing_family": "v117_volume_revolution",
+      "existing_version": "V117",
+      "score": 0.723,
+      "existing_title": "Thể tích vật thể tròn xoay bằng phương pháp đĩa"
+    },
+    {
+      "family": "v121_b_g12_solid_of_revolution",
+      "topic_id": "g12_solid_of_revolution",
+      "existing_family": "volume_revolution_quadratic",
+      "existing_version": "V114",
+      "score": 0.682,
+      "existing_title": "Thể tích khối tròn xoay của đường y=kx"
+    },
+    {
+      "family": "v121_b_g12_solid_of_revolution",
+      "topic_id": "g12_solid_of_revolution",
+      "existing_family": "v120_topic_g12_solid_of_revolution",
+      "existing_version": "V120",
+      "score": 0.636,
+      "existing_title": "Thể tích khối tròn xoay của miền tam giác"
+    }
+  ],
+  "formula_groups": [
+    [
+      "v121_a_he_thuc_luong",
+      "v121_a_he_thuc_luong_van_dung_10"
+    ],
+    [
+      "v121_a_ham_so_bac_hai",
+      "v121_a_cuc_tri"
+    ],
+    [
+      "v121_b_ham_so_bac_hai",
+      "v121_b_g10_geom_line_intersections"
+    ],
+    [
+      "v121_a_phuong_trinh_he",
+      "v121_b_duong_thang"
+    ],
+    [
+      "v121_b_phuong_trinh_he",
+      "v121_a_g10_geom_locus",
+      "v121_b_g12_complex_plane_geometry"
+    ],
+    [
+      "v121_b_quy_tac_dem",
+      "v121_a_to_hop_xac_suat_nang_cao_11"
+    ],
+    [
+      "v121_a_hoan_vi_chinh_hop_to_hop",
+      "v121_a_nhi_thuc_newton"
+    ],
+    [
+      "v121_a_he_bat_phuong_trinh",
+      "v121_b_g10_geom_quadrilaterals_properties"
+    ],
+    [
+      "v121_a_phuong_trinh",
+      "v121_b_g10_geom_circle_angles",
+      "v121_b_g10_geom_locus",
+      "v121_a_g11_geom_section_construction",
+      "v121_b_nguyen_ham_tich_phan",
+      "v121_b_bieu_dien_so_phuc",
+      "v121_a_g10_advanced_inequalities"
+    ],
+    [
+      "v121_b_he_thuc_luong_tam_giac",
+      "v121_b_g10_geom_thales_similarity"
+    ],
+    [
+      "v121_b_toa_do_phang",
+      "v121_b_g12_geom_parameter_geometry"
+    ],
+    [
+      "v121_b_hinh_hoc_10",
+      "v121_a_g10_geom_special_lines"
+    ],
+    [
+      "v121_b_duong_tron_co_ban_10",
+      "v121_b_g10_geom_circle_tangent_chord"
+    ],
+    [
+      "v121_b_toa_do_hinh_hoc_10",
+      "v121_a_g11_geom_transform_reflection",
+      "v121_b_g11_geom_transform_composition"
+    ],
+    [
+      "v121_a_g10_geom_angles_parallel",
+      "v121_a_dao_ham",
+      "v121_b_gioi_han_ham_so",
+      "v121_b_g11_geom_transform_reflection",
+      "v121_b_g11_geom_perpendicular_line_plane",
+      "v121_a_g11_geom_skew_lines_distance",
+      "v121_a_tinh_don_dieu",
+      "v121_a_tien_can",
+      "v121_a_ham_mu",
+      "v121_a_pt_so_phuc",
+      "v121_a_hinh_hoc_oxyz_van_dung_12"
+    ],
+    [
+      "v121_a_g10_geom_triangle_congruence",
+      "v121_b_g11_geom_space_proof"
+    ],
+    [
+      "v121_b_g10_geom_triangle_congruence",
+      "v121_b_g11_geom_parallel_line_plane",
+      "v121_a_g11_geom_parallel_planes",
+      "v121_a_mat_phang_oxyz",
+      "v121_a_g12_geom_plane_equation"
+    ],
+    [
+      "v121_a_g10_geom_thales_similarity",
+      "v121_a_g11_geom_section_ratio"
+    ],
+    [
+      "v121_b_g10_geom_coordinate_distance_midpoint",
+      "v121_b_g10_geom_vector_proofs"
+    ],
+    [
+      "v121_a_g10_geom_circle_tangent_chord",
+      "v121_b_g10_geom_coordinate_circle_line",
+      "v121_b_g12_geom_sphere_tangent_plane"
+    ],
+    [
+      "v121_b_ham_so_luong_giac",
+      "v121_a_cong_thuc_luong_giac"
+    ],
+    [
+      "v121_a_phuong_trinh_luong_giac",
+      "v121_a_phuong_trinh_luong_giac_day_du",
+      "v121_a_g11_advanced_trig_equations"
+    ],
+    [
+      "v121_b_phuong_trinh_luong_giac",
+      "v121_b_nhan_biet_hinh_khong_gian_11",
+      "v121_a_bpt_mu",
+      "v121_a_g10_combinatorics_olympiad"
+    ],
+    [
+      "v121_b_gioi_han",
+      "v121_b_tien_can"
+    ],
+    [
+      "v121_a_hinh_khong_gian",
+      "v121_b_g12_geom_3d_optimization"
+    ],
+    [
+      "v121_a_gia_tri_luong_giac",
+      "v121_a_g11_geom_dihedral_angles"
+    ],
+    [
+      "v121_a_gioi_han_ham_so",
+      "v121_b_song_song_khong_gian",
+      "v121_b_g12_integral_optimization"
+    ],
+    [
+      "v121_a_vuong_goc_khong_gian",
+      "v121_a_g11_geom_perpendicular_line_plane",
+      "v121_b_ung_dung_dao_ham",
+      "v121_b_khao_sat_ham_so",
+      "v121_b_cuc_tri",
+      "v121_b_duong_thang_oxyz",
+      "v121_a_g12_geom_line_plane_intersection"
+    ],
+    [
+      "v121_b_vuong_goc_khong_gian",
+      "v121_b_goc_khoang_cach_oxyz"
+    ],
+    [
+      "v121_b_goc_khoang_cach_11",
+      "v121_b_g12_geom_plane_equation"
+    ],
+    [
+      "v121_a_day_so_truy_hoi_11",
+      "v121_b_g11_sequences_advanced"
+    ],
+    [
+      "v121_a_phep_bien_hinh_11",
+      "v121_a_g11_geom_transform_translation"
+    ],
+    [
+      "v121_b_phep_bien_hinh_11",
+      "v121_b_phep_bien_hinh_co_ban_11"
+    ],
+    [
+      "v121_a_thiet_dien_hinh_khong_gian_11",
+      "v121_b_tong_hop_thpt",
+      "v121_a_g12_geom_min_distance_3d"
+    ],
+    [
+      "v121_b_thiet_dien_hinh_khong_gian_11",
+      "v121_b_g11_geom_section_construction"
+    ],
+    [
+      "v121_a_g11_geom_space_lines_planes",
+      "v121_b_g11_geom_space_lines_planes",
+      "v121_b_g11_advanced_trig_equations"
+    ],
+    [
+      "v121_a_g11_geom_three_perpendiculars",
+      "v121_a_so_phuc",
+      "v121_a_bieu_dien_so_phuc",
+      "v121_b_hinh_hoc_oxyz_van_dung_12"
+    ],
+    [
+      "v121_a_g11_geom_space_proof",
+      "v121_b_g12_geom_skew_line_relation"
+    ],
+    [
+      "v121_a_ung_dung_dao_ham",
+      "v121_a_tuong_giao"
+    ],
+    [
+      "v121_a_nguyen_ham_tich_phan",
+      "v121_a_ung_dung_tich_phan"
+    ],
+    [
+      "v121_a_hinh_hoc_khong_gian",
+      "v121_a_hinh_khoi_va_the_tich_co_ban_12"
+    ],
+    [
+      "v121_a_toa_do_khong_gian",
+      "v121_b_g12_geom_line_equation_3d"
+    ],
+    [
+      "v121_a_gtln_gtnn",
+      "v121_b_ham_mu"
+    ],
+    [
+      "v121_b_gtln_gtnn",
+      "v121_a_tong_hop_thpt"
+    ],
+    [
+      "v121_b_ung_dung_tich_phan",
+      "v121_a_g12_solid_of_revolution"
+    ],
+    [
+      "v121_a_mat_cau",
+      "v121_b_the_tich_khong_gian",
+      "v121_b_hinh_khoi_va_the_tich_co_ban_12"
+    ],
+    [
+      "v121_b_mat_cau",
+      "v121_a_g12_geom_sphere_equation"
+    ],
+    [
+      "v121_b_g12_geom_sphere_equation",
+      "v121_a_g12_geom_sphere_tangent_plane"
+    ],
+    [
+      "v121_b_g12_geom_point_plane_distance",
+      "v121_b_g12_geom_line_plane_intersection"
+    ]
+  ]
+}

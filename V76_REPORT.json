@@ -1,0 +1,16 @@
+{
+  "version": "V76_TOPIC_AUDIT",
+  "source": "V75",
+  "total_form_ids": 33358,
+  "total_question_records": 333590,
+  "grade_topic_pairs": 140,
+  "form_ids_with_10_questions": 33357,
+  "form_ids_sharing_method_family": 30366,
+  "new_form_ids_added": 0,
+  "new_questions_added": 0,
+  "independent_types_certified": 0,
+  "target_topics": 147,
+  "target_independent_types_per_topic": 2000,
+  "target_questions_per_type": 10,
+  "warning": "Form IDs and method labels cannot prove independently distinct mathematical problem types. This audit does not certify any form type. Topic coverage is grade/topic pairs, not verified against the authoritative 147-topic catalog."
+}

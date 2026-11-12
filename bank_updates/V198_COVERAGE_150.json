@@ -1,0 +1,1202 @@
+[
+  {
+    "grade": 10,
+    "topic": "menh_de_tap_hop",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "bat_phuong_trinh",
+    "total_db_questions": 120,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19880,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "he_thuc_luong",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "vector",
+    "total_db_questions": 140,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19860,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "ham_so_bac_hai",
+    "total_db_questions": 180,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19820,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "phuong_trinh_he",
+    "total_db_questions": 110,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19890,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "quy_tac_dem",
+    "total_db_questions": 77,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19923,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "hoan_vi_chinh_hop_to_hop",
+    "total_db_questions": 210,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19790,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "xac_suat",
+    "total_db_questions": 60,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19940,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "thong_ke",
+    "total_db_questions": 170,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19830,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "menh_de",
+    "total_db_questions": 69,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19931,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "tap_hop",
+    "total_db_questions": 110,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19890,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "he_bat_phuong_trinh",
+    "total_db_questions": 50,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19950,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "ham_so",
+    "total_db_questions": 60,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19940,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "ham_so_bac_nhat",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "phuong_trinh",
+    "total_db_questions": 240,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19760,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "he_phuong_trinh",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "he_thuc_luong_tam_giac",
+    "total_db_questions": 78,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19922,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "toa_do_phang",
+    "total_db_questions": 130,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19870,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "duong_thang",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "duong_tron",
+    "total_db_questions": 68,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19932,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "nhi_thuc_newton",
+    "total_db_questions": 50,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19950,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "hinh_hoc_10",
+    "total_db_questions": 59,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19941,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "bai_toan_thuc_te_10",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "hinh_hoc_co_ban_10",
+    "total_db_questions": 70,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19930,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "tam_giac_tu_giac_10",
+    "total_db_questions": 59,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19941,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "duong_tron_co_ban_10",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "he_thuc_luong_van_dung_10",
+    "total_db_questions": 44,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19956,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "toa_do_hinh_hoc_10",
+    "total_db_questions": 59,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19941,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "chung_minh_hinh_hoc_10",
+    "total_db_questions": 39,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19961,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_angles_parallel",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_triangle_congruence",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_special_lines",
+    "total_db_questions": 60,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19940,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_quadrilaterals_properties",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_circle_chords_arcs",
+    "total_db_questions": 60,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19940,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_thales_similarity",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_triangle_area_ratio",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_circle_angles",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_coordinate_distance_midpoint",
+    "total_db_questions": 59,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19941,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_line_intersections",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_locus",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_circle_tangent_chord",
+    "total_db_questions": 44,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19956,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_triangle_inequalities",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_vector_proofs",
+    "total_db_questions": 59,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19941,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_coordinate_circle_line",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_advanced_inequalities",
+    "total_db_questions": 50,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19950,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_symmetric_systems",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_radical_equations_advanced",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_combinatorics_olympiad",
+    "total_db_questions": 60,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19940,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "ham_so_luong_giac",
+    "total_db_questions": 20,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19980,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "phuong_trinh_luong_giac",
+    "total_db_questions": 20,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19980,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "day_so",
+    "total_db_questions": 51,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19949,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "cap_so_cong",
+    "total_db_questions": 240,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19760,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "cap_so_nhan",
+    "total_db_questions": 330,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19670,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "gioi_han",
+    "total_db_questions": 65,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19935,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "dao_ham",
+    "total_db_questions": 260,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19740,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "hinh_khong_gian",
+    "total_db_questions": 42,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19958,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "xac_suat_11",
+    "total_db_questions": 106,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19894,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "gia_tri_luong_giac",
+    "total_db_questions": 51,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19949,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "cong_thuc_luong_giac",
+    "total_db_questions": 78,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19922,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "ham_so_luong_giac_day_du",
+    "total_db_questions": 34,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19966,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "phuong_trinh_luong_giac_day_du",
+    "total_db_questions": 33,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19967,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "day_so_tong_quat",
+    "total_db_questions": 37,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19963,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "gioi_han_ham_so",
+    "total_db_questions": 70,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19930,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "ham_so_lien_tuc",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "dao_ham_quy_tac",
+    "total_db_questions": 69,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19931,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "ung_dung_dao_ham_11",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "song_song_khong_gian",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "vuong_goc_khong_gian",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "goc_khoang_cach_11",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "thong_ke_11",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "bai_toan_thuc_te_11",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "to_hop_xac_suat_nang_cao_11",
+    "total_db_questions": 120,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19880,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "bien_co_doc_lap_11",
+    "total_db_questions": 140,
+    "new_V198": 20,
+    "questions_short_of_20k_count_only": 19860,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "day_so_truy_hoi_11",
+    "total_db_questions": 60,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19940,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "quy_nap_toan_hoc_11",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "phep_bien_hinh_11",
+    "total_db_questions": 58,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19942,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "thiet_dien_hinh_khong_gian_11",
+    "total_db_questions": 59,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19941,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "bai_toan_thuc_te_tong_hop_11",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "phep_bien_hinh_co_ban_11",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "nhan_biet_hinh_khong_gian_11",
+    "total_db_questions": 46,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19954,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_transform_translation",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_transform_reflection",
+    "total_db_questions": 50,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19950,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_space_lines_planes",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_parallel_line_plane",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_prism_pyramid_sections",
+    "total_db_questions": 20,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19980,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_rotation_homothety",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_parallel_planes",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_perpendicular_line_plane",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_dihedral_angles",
+    "total_db_questions": 43,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19957,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_section_construction",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_skew_lines_distance",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_three_perpendiculars",
+    "total_db_questions": 45,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19955,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_transform_composition",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_section_ratio",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_space_proof",
+    "total_db_questions": 47,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19953,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_advanced_trig_equations",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_sequences_advanced",
+    "total_db_questions": 48,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19952,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_binomial_advanced",
+    "total_db_questions": 48,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19952,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_conditional_probability_models",
+    "total_db_questions": 58,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19942,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "ung_dung_dao_ham",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "khao_sat_ham_so",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "nguyen_ham_tich_phan",
+    "total_db_questions": 220,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19780,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "so_phuc",
+    "total_db_questions": 200,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19800,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "hinh_hoc_khong_gian",
+    "total_db_questions": 59,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19941,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "toa_do_khong_gian",
+    "total_db_questions": 190,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19810,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "xac_suat_12",
+    "total_db_questions": 69,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19931,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "thong_ke_12",
+    "total_db_questions": 46,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19954,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "tinh_don_dieu",
+    "total_db_questions": 20,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19980,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "cuc_tri",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "gtln_gtnn",
+    "total_db_questions": 59,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19941,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "tiep_tuyen",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "tien_can",
+    "total_db_questions": 50,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19950,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "tuong_giao",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "ham_mu",
+    "total_db_questions": 58,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19942,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "ham_logarit",
+    "total_db_questions": 51,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19949,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "pt_mu",
+    "total_db_questions": 110,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19890,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "pt_logarit",
+    "total_db_questions": 115,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19885,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "bpt_mu",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "bpt_logarit",
+    "total_db_questions": 50,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19950,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "ung_dung_tich_phan",
+    "total_db_questions": 60,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19940,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "bieu_dien_so_phuc",
+    "total_db_questions": 50,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19950,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "pt_so_phuc",
+    "total_db_questions": 60,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19940,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "mat_phang_oxyz",
+    "total_db_questions": 79,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19921,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "duong_thang_oxyz",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "mat_cau",
+    "total_db_questions": 59,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19941,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "goc_khoang_cach_oxyz",
+    "total_db_questions": 59,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19941,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "the_tich_khong_gian",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "tong_hop_thpt",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "bai_toan_thuc_te_12",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "hinh_khoi_va_the_tich_co_ban_12",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "hinh_hoc_oxyz_van_dung_12",
+    "total_db_questions": 69,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19931,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_vectors_3d",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_plane_equation",
+    "total_db_questions": 50,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19950,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_line_equation_3d",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_sphere_equation",
+    "total_db_questions": 50,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19950,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_solid_surface_area",
+    "total_db_questions": 50,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19950,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_point_plane_distance",
+    "total_db_questions": 79,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19921,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_line_plane_angle",
+    "total_db_questions": 60,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19940,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_two_planes_angle",
+    "total_db_questions": 55,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19945,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_line_plane_intersection",
+    "total_db_questions": 50,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19950,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_sphere_tangent_plane",
+    "total_db_questions": 40,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19960,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_skew_line_relation",
+    "total_db_questions": 58,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19942,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_min_distance_3d",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_sphere_plane_intersection",
+    "total_db_questions": 50,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19950,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_parameter_geometry",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_3d_optimization",
+    "total_db_questions": 59,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19941,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_complex_plane_geometry",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_integral_optimization",
+    "total_db_questions": 49,
+    "new_V198": 0,
+    "questions_short_of_20k_count_only": 19951,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_solid_of_revolution",
+    "total_db_questions": 54,
+    "new_V198": 10,
+    "questions_short_of_20k_count_only": 19946,
+    "certified_types": "not established from historical bank; requires semantic classification"
+  }
+]

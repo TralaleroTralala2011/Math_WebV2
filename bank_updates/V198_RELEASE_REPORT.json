@@ -1,0 +1,61 @@
+{
+  "version": "V198",
+  "base": "V197 full bundled website",
+  "catalog_topics": 150,
+  "bank_before": 9636,
+  "bank_after": 9976,
+  "candidate_families_created": 34,
+  "new_math_checked_questions": 340,
+  "new_rows_imported_bundled_sqlite": 340,
+  "verified_independent_new_forms": 0,
+  "production_deployed": false,
+  "grades_10_11_12_new": {
+    "10": 120,
+    "11": 110,
+    "12": 110
+  },
+  "formats_new": {
+    "multiple_choice": 238,
+    "short_answer": 68,
+    "true_false": 34
+  },
+  "topic_ids_repaired_old_questions": 60,
+  "unmapped_invalid_topic_rows_kept": 10,
+  "topics_expanded": 33,
+  "repeated_import_extra_rows": 0,
+  "topic_format_smoke_tests_passed": 102,
+  "topic_format_smoke_tests_total": 102,
+  "exact_duplicate_normalized_new": 0,
+  "family_semantic_review_flagged": 7,
+  "legacy_user_data_table_row_counts_unchanged": {
+    "users": {
+      "before": 1,
+      "after": 1
+    },
+    "friends": {
+      "before": 0,
+      "after": 0
+    },
+    "messages": {
+      "before": 0,
+      "after": 0
+    },
+    "notifications": {
+      "before": 0,
+      "after": 0
+    },
+    "question_sessions": {
+      "before": 0,
+      "after": 0
+    },
+    "game_results": {
+      "before": 0,
+      "after": 0
+    }
+  },
+  "sqlite_integrity": "ok",
+  "remaining_question_count_to_3m_ignoring_quality": 2990024,
+  "remaining_certified_form_count": "not measurable: historical method certification absent",
+  "limitations": "340 math oracle checked and app-grade-checked; full semantic independence not proven, 7 flagged. No production access; only bundled SQLite tested.",
+  "next": "Review 7 semantic flags; use verified production DB before deployment; expand truly distinct methods and ten questions each. Do not silently map grade 10 chia_het."
+}

@@ -1,0 +1,43 @@
+{
+  "project": "MATH_WEB_GITHUB_READY_V113_CURATED_QUESTION_BANK",
+  "source": "MATH_WEB_GITHUB_READY_V112_QUESTION_FACTORY_INTEGRATED.zip",
+  "legacy_questions_audited": 344280,
+  "legacy_raw_signature_groups": 11464,
+  "legacy_digit_normalized_groups": 1691,
+  "blueprints_new": 60,
+  "curated_candidate_questions": 600,
+  "curated_topics_touched": 55,
+  "curated_coarse_concept_groups": 54,
+  "methods_independence_certified": 0,
+  "human_approved_to_publish": 0,
+  "original_assets_modified": [
+    "backend/question_factory/engine.py",
+    "backend/question_factory/storage.py",
+    "backend/question_factory/cli.py"
+  ],
+  "pytest_groups": [
+    {
+      "suite": "V112+V113 question factory",
+      "passed": 25,
+      "failed": 0
+    },
+    {
+      "suite": "verified bank",
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "suite": "all other backend tests",
+      "passed": 114,
+      "failed": 0
+    }
+  ],
+  "pytest_total": 146,
+  "failed": 0,
+  "pending_work": [
+    "300000 independent mathematical forms",
+    "3000000 verified questions",
+    "human content reviews",
+    "always-on cloud server"
+  ]
+}

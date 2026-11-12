@@ -1,0 +1,21 @@
+{
+  "version": "V83",
+  "base": "V82",
+  "added_ids": 0,
+  "added_questions": 0,
+  "goal_topics": 150,
+  "goal_types": 300000,
+  "goal_questions": 3000000,
+  "changes": [
+    "GeoGebra geometry app for diagram.type=geometry with named 2D points, segments, circles, polylines",
+    "GeoGebra 3D app for diagram.coordinates_3d",
+    "SVG fallback retained for offline, unsupported and legacy diagram types",
+    "Graph GeoGebra integration retained"
+  ],
+  "limitations": [
+    "GeoGebra CDN requires internet",
+    "Legacy triangle/circle schematic types not yet converted",
+    "Geometry browser testing and correctness validation not completed",
+    "No 10000 new distinct forms added"
+  ]
+}

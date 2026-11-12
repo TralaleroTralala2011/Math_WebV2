@@ -1,0 +1,49 @@
+{
+  "base_zip": "MATH_WEB_V28_CLASSIC_V27_V23_B54_INTEGRATED.zip",
+  "reference_ui_zip": "MATH_WEB_GITHUB_READY_V28_RESTORED_ACCOUNT_FIX_2026-11-12(3).zip",
+  "output_zip": "MATH_WEB_V28_CLASSIC_V28_UI_RESTORED_B54.zip",
+  "strategy": "Restore all root HTML pages, CSS and UI-only JavaScript from uploaded reference; retain integrated B54 backend, question database, learning path logic, Battle, Chat, authentication and practice",
+  "html_pages_restored": 20,
+  "css_visual_files_added": 0,
+  "css_visual_files_replaced": 0,
+  "modified_html": [
+    "index.html",
+    "geometry-learning.html",
+    "chat.html",
+    "geometry-lab.html",
+    "learning-progress.html",
+    "final-features.html",
+    "curriculum-studio.html",
+    "register.html",
+    "battle.html",
+    "login.html",
+    "trial-practise.html",
+    "learning.html",
+    "practise.html",
+    "geometry-studio.html",
+    "learn.html",
+    "account.html",
+    "learning-path.html",
+    "practice.html",
+    "study-suite.html",
+    "admin.html"
+  ],
+  "unchanged_functional_files_sha256": {
+    "backend/app/ai/storage/v254_candidates.sqlite": "783493c807238561cd525870c16cc54cde64ad3cba2d99cca291cdd88531e5cc",
+    "learning-path.js": "fad17fead670950bc8ae88ebee10dda6578972c06b21a6432dd2e02c6c755696",
+    "js/battle.js": "e6139342367161ddf2b83afd69b95fc239980ed4638995fe0a956dce227cf2ba",
+    "js/chat.js": "0c6ff1730a8ea574258a82f1266b7295afc000ff6085cb98d9d71e0fdfe6d301",
+    "js/account.js": "642efb78b078e800d0eed5d32bfc66accfb3a631cda3f300bbe67bfcfc590e91",
+    "js/main.js": "49da03807d6e92dfdb261042d762ceb6d5b4c7dfb049129336c9b0263bd55683",
+    "js/auth.js": "b8be09cd75781fce6ad324162f9f65661811c2d42c801cecd179192fad2e873b",
+    "js/practise.js": "9e278638cfa6b2df85c92d76f7e21c56c11ff41172259cfca0ffcb3e36dbc58b",
+    "js/matrix-assessment-toggle.js": "22872a4ab649de9e203db39b343e75a77dbe8abf5fcdd78912b380327e096f8f"
+  },
+  "bank_sqlite_sha256": "783493c807238561cd525870c16cc54cde64ad3cba2d99cca291cdd88531e5cc",
+  "missing_local_assets": [],
+  "not_verified": [
+    "browser visual E2E across devices",
+    "full Battle/Chat two browser test",
+    "independent mathematical validation of B54 questions"
+  ]
+}

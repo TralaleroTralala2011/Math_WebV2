@@ -1,0 +1,21 @@
+{
+  "version": "V207",
+  "base": "V206",
+  "before": 11086,
+  "after": 11156,
+  "new_questions": 70,
+  "duplicate_questions_skipped": 0,
+  "candidate_groups": {
+    "quadratic_discriminant": 10,
+    "infinite_geometric_sum": 10,
+    "tangent_line_slope": 10,
+    "vector_squared_length": 10,
+    "logarithm_inverse": 10,
+    "at_least_one_marked": 10,
+    "combinations_with_repetition": 10
+  },
+  "independent_types_certified": 0,
+  "validation": "exact combinatorial and algebraic derivations; semantic uniqueness pending",
+  "sqlite_integrity": "ok",
+  "note": "No claim of full topic or battle regression testing"
+}

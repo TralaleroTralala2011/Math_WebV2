@@ -1,0 +1,15 @@
+{
+  "version": "V122",
+  "source": "V121",
+  "candidate_forms": 300,
+  "questions": 3000,
+  "topics": 150,
+  "families": 300,
+  "independent_oracle_questions": 20,
+  "independent_oracle_scope": "two integer-multiple counting families only",
+  "issues_total": 0,
+  "issues_by_code": {},
+  "issue_examples": [],
+  "certified_new_independent_forms": 0,
+  "status": "candidate_only; independent-method and pedagogical review pending"
+}

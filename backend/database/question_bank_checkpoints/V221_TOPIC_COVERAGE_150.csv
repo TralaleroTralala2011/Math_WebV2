@@ -1,0 +1,151 @@
+﻿grade,topic_id,topic_name,active_question_count,question_target_200x10,question_gap,new_candidate_method_groups_in_V219_to_V221,certified_independent_type_count,type_target_200
+10,menh_de_tap_hop,Mệnh đề và tập hợp,59,2000,1941,0,NOT_SEMANTICALLY_AUDITED,200
+10,bat_phuong_trinh,Bất phương trình và hệ bất phương trình,150,2000,1850,0,NOT_SEMANTICALLY_AUDITED,200
+10,he_thuc_luong,Hệ thức lượng trong tam giác,70,2000,1930,2,NOT_SEMANTICALLY_AUDITED,200
+10,vector,Vectơ,160,2000,1840,0,NOT_SEMANTICALLY_AUDITED,200
+10,ham_so_bac_hai,Hàm số bậc hai và parabol,220,2000,1780,1,NOT_SEMANTICALLY_AUDITED,200
+10,phuong_trinh_he,Phương trình và hệ phương trình,110,2000,1890,0,NOT_SEMANTICALLY_AUDITED,200
+10,quy_tac_dem,Quy tắc đếm,127,2000,1873,1,NOT_SEMANTICALLY_AUDITED,200
+10,hoan_vi_chinh_hop_to_hop,"Hoán vị, chỉnh hợp, tổ hợp",250,2000,1750,2,NOT_SEMANTICALLY_AUDITED,200
+10,xac_suat,Xác suất,80,2000,1920,0,NOT_SEMANTICALLY_AUDITED,200
+10,thong_ke,Thống kê,210,2000,1790,1,NOT_SEMANTICALLY_AUDITED,200
+10,menh_de,Mệnh đề,79,2000,1921,0,NOT_SEMANTICALLY_AUDITED,200
+10,tap_hop,Tập hợp và các phép toán,140,2000,1860,0,NOT_SEMANTICALLY_AUDITED,200
+10,he_bat_phuong_trinh,Hệ bất phương trình,60,2000,1940,0,NOT_SEMANTICALLY_AUDITED,200
+10,ham_so,Hàm số,70,2000,1930,0,NOT_SEMANTICALLY_AUDITED,200
+10,ham_so_bac_nhat,Hàm số bậc nhất,50,2000,1950,1,NOT_SEMANTICALLY_AUDITED,200
+10,phuong_trinh,Phương trình,270,2000,1730,2,NOT_SEMANTICALLY_AUDITED,200
+10,he_phuong_trinh,Hệ phương trình,69,2000,1931,0,NOT_SEMANTICALLY_AUDITED,200
+10,he_thuc_luong_tam_giac,Hệ thức lượng trong tam giác,78,2000,1922,0,NOT_SEMANTICALLY_AUDITED,200
+10,toa_do_phang,Tọa độ trong mặt phẳng,150,2000,1850,0,NOT_SEMANTICALLY_AUDITED,200
+10,duong_thang,Đường thẳng,59,2000,1941,0,NOT_SEMANTICALLY_AUDITED,200
+10,duong_tron,Đường tròn,88,2000,1912,0,NOT_SEMANTICALLY_AUDITED,200
+10,nhi_thuc_newton,Nhị thức Newton,60,2000,1940,0,NOT_SEMANTICALLY_AUDITED,200
+10,hinh_hoc_10,Hình học phẳng,59,2000,1941,0,NOT_SEMANTICALLY_AUDITED,200
+10,bai_toan_thuc_te_10,Bài toán thực tế Toán 10,69,2000,1931,0,NOT_SEMANTICALLY_AUDITED,200
+10,hinh_hoc_co_ban_10,"Hình học cơ bản: góc, cạnh và diện tích",90,2000,1910,1,NOT_SEMANTICALLY_AUDITED,200
+10,tam_giac_tu_giac_10,Tam giác và tứ giác cơ bản,59,2000,1941,0,NOT_SEMANTICALLY_AUDITED,200
+10,duong_tron_co_ban_10,Đường tròn và các góc cơ bản,90,2000,1910,1,NOT_SEMANTICALLY_AUDITED,200
+10,he_thuc_luong_van_dung_10,Hệ thức lượng trong tam giác,74,2000,1926,1,NOT_SEMANTICALLY_AUDITED,200
+10,toa_do_hinh_hoc_10,Tọa độ và đường thẳng trong mặt phẳng,69,2000,1931,1,NOT_SEMANTICALLY_AUDITED,200
+10,chung_minh_hinh_hoc_10,Chứng minh hình học và bài toán tổng hợp,49,2000,1951,1,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_angles_parallel,Góc tạo bởi hai đường thẳng và đường cắt,40,2000,1960,0,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_triangle_congruence,Các trường hợp bằng nhau của tam giác,49,2000,1951,0,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_special_lines,"Đường trung tuyến, phân giác và đường cao",120,2000,1880,4,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_quadrilaterals_properties,Tính chất hình bình hành và hình thoi,90,2000,1910,2,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_circle_chords_arcs,"Dây cung, cung và khoảng cách đến tâm",80,2000,1920,1,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_thales_similarity,Định lý Thales và tam giác đồng dạng,40,2000,1960,0,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_triangle_area_ratio,Tỉ số diện tích tam giác,60,2000,1940,0,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_circle_angles,Góc nội tiếp và góc ở tâm nâng cao,70,2000,1930,1,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_coordinate_distance_midpoint,Trung điểm và khoảng cách trong tọa độ phẳng,89,2000,1911,1,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_line_intersections,Giao điểm và vị trí tương đối của hai đường thẳng,50,2000,1950,1,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_locus,Quỹ tích điểm trong mặt phẳng,69,2000,1931,0,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_circle_tangent_chord,Tiếp tuyến và dây cung của đường tròn,54,2000,1946,0,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_triangle_inequalities,Bất đẳng thức và cực trị trong tam giác,60,2000,1940,0,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_vector_proofs,Chứng minh hình học bằng vectơ,69,2000,1931,0,NOT_SEMANTICALLY_AUDITED,200
+10,g10_geom_coordinate_circle_line,Bài toán tổng hợp đường thẳng và đường tròn tọa độ,79,2000,1921,1,NOT_SEMANTICALLY_AUDITED,200
+10,g10_advanced_inequalities,Bất đẳng thức đại số và cực trị nâng cao,80,2000,1920,1,NOT_SEMANTICALLY_AUDITED,200
+10,g10_symmetric_systems,Hệ phương trình đối xứng và hoán vị,59,2000,1941,0,NOT_SEMANTICALLY_AUDITED,200
+10,g10_radical_equations_advanced,Phương trình chứa căn thức nâng cao,50,2000,1950,0,NOT_SEMANTICALLY_AUDITED,200
+10,g10_combinatorics_olympiad,Tổ hợp và nguyên lý Dirichlet nâng cao,170,2000,1830,7,NOT_SEMANTICALLY_AUDITED,200
+11,ham_so_luong_giac,Hàm số lượng giác,30,2000,1970,1,NOT_SEMANTICALLY_AUDITED,200
+11,phuong_trinh_luong_giac,Phương trình lượng giác,40,2000,1960,0,NOT_SEMANTICALLY_AUDITED,200
+11,day_so,Dãy số,121,2000,1879,3,NOT_SEMANTICALLY_AUDITED,200
+11,cap_so_cong,Cấp số cộng,270,2000,1730,0,NOT_SEMANTICALLY_AUDITED,200
+11,cap_so_nhan,Cấp số nhân,350,2000,1650,0,NOT_SEMANTICALLY_AUDITED,200
+11,gioi_han,Giới hạn,105,2000,1895,1,NOT_SEMANTICALLY_AUDITED,200
+11,dao_ham,Đạo hàm,320,2000,1680,1,NOT_SEMANTICALLY_AUDITED,200
+11,hinh_khong_gian,Quan hệ song song và vuông góc trong không gian,42,2000,1958,0,NOT_SEMANTICALLY_AUDITED,200
+11,xac_suat_11,Xác suất,126,2000,1874,0,NOT_SEMANTICALLY_AUDITED,200
+11,gia_tri_luong_giac,Giá trị lượng giác,61,2000,1939,1,NOT_SEMANTICALLY_AUDITED,200
+11,cong_thuc_luong_giac,Công thức lượng giác,128,2000,1872,1,NOT_SEMANTICALLY_AUDITED,200
+11,ham_so_luong_giac_day_du,Hàm số lượng giác,54,2000,1946,0,NOT_SEMANTICALLY_AUDITED,200
+11,phuong_trinh_luong_giac_day_du,Phương trình lượng giác,43,2000,1957,0,NOT_SEMANTICALLY_AUDITED,200
+11,day_so_tong_quat,Dãy số,57,2000,1943,0,NOT_SEMANTICALLY_AUDITED,200
+11,gioi_han_ham_so,Giới hạn hàm số,120,2000,1880,1,NOT_SEMANTICALLY_AUDITED,200
+11,ham_so_lien_tuc,Hàm số liên tục,70,2000,1930,1,NOT_SEMANTICALLY_AUDITED,200
+11,dao_ham_quy_tac,Quy tắc đạo hàm,139,2000,1861,3,NOT_SEMANTICALLY_AUDITED,200
+11,ung_dung_dao_ham_11,Ứng dụng đạo hàm,79,2000,1921,1,NOT_SEMANTICALLY_AUDITED,200
+11,song_song_khong_gian,Quan hệ song song trong không gian,49,2000,1951,0,NOT_SEMANTICALLY_AUDITED,200
+11,vuong_goc_khong_gian,Quan hệ vuông góc trong không gian,49,2000,1951,0,NOT_SEMANTICALLY_AUDITED,200
+11,goc_khoang_cach_11,Góc và khoảng cách trong không gian,69,2000,1931,1,NOT_SEMANTICALLY_AUDITED,200
+11,thong_ke_11,Thống kê Toán 11,50,2000,1950,0,NOT_SEMANTICALLY_AUDITED,200
+11,bai_toan_thuc_te_11,Bài toán thực tế Toán 11,49,2000,1951,0,NOT_SEMANTICALLY_AUDITED,200
+11,to_hop_xac_suat_nang_cao_11,Tổ hợp và xác suất nâng cao,160,2000,1840,2,NOT_SEMANTICALLY_AUDITED,200
+11,bien_co_doc_lap_11,Biến cố độc lập và xác suất có điều kiện,220,2000,1780,2,NOT_SEMANTICALLY_AUDITED,200
+11,day_so_truy_hoi_11,Dãy số truy hồi,80,2000,1920,1,NOT_SEMANTICALLY_AUDITED,200
+11,quy_nap_toan_hoc_11,Quy nạp toán học,60,2000,1940,1,NOT_SEMANTICALLY_AUDITED,200
+11,phep_bien_hinh_11,Phép biến hình trong mặt phẳng,58,2000,1942,0,NOT_SEMANTICALLY_AUDITED,200
+11,thiet_dien_hinh_khong_gian_11,Thiết diện hình không gian,69,2000,1931,1,NOT_SEMANTICALLY_AUDITED,200
+11,bai_toan_thuc_te_tong_hop_11,Bài toán thực tế tổng hợp Toán 11,49,2000,1951,0,NOT_SEMANTICALLY_AUDITED,200
+11,phep_bien_hinh_co_ban_11,Phép biến hình cơ bản,49,2000,1951,0,NOT_SEMANTICALLY_AUDITED,200
+11,nhan_biet_hinh_khong_gian_11,Nhận biết hình học không gian,56,2000,1944,1,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_transform_translation,Phép tịnh tiến và ảnh của hình,40,2000,1960,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_transform_reflection,Phép đối xứng trục,60,2000,1940,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_space_lines_planes,Nhận biết đường thẳng và mặt phẳng trong không gian,59,2000,1941,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_parallel_line_plane,Đường thẳng song song với mặt phẳng,49,2000,1951,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_prism_pyramid_sections,"Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",30,2000,1970,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_rotation_homothety,Phép quay và phép vị tự,40,2000,1960,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_parallel_planes,Hai mặt phẳng song song,59,2000,1941,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_perpendicular_line_plane,Đường thẳng vuông góc với mặt phẳng,49,2000,1951,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_dihedral_angles,Góc giữa đường thẳng và mặt phẳng,53,2000,1947,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_section_construction,Dựng thiết diện của hình chóp và lăng trụ,49,2000,1951,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_skew_lines_distance,Khoảng cách giữa hai đường thẳng chéo nhau,59,2000,1941,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_three_perpendiculars,Định lý ba đường vuông góc,45,2000,1955,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_transform_composition,Hợp thành các phép biến hình,70,2000,1930,2,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_section_ratio,Thiết diện và tỉ số đoạn trong hình không gian,49,2000,1951,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_geom_space_proof,Chứng minh tổng hợp song song và vuông góc,47,2000,1953,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_advanced_trig_equations,Phương trình lượng giác nâng cao,50,2000,1950,0,NOT_SEMANTICALLY_AUDITED,200
+11,g11_sequences_advanced,Dãy số truy hồi và bài toán cực trị,68,2000,1932,1,NOT_SEMANTICALLY_AUDITED,200
+11,g11_binomial_advanced,Nhị thức Newton và hệ số tổ hợp nâng cao,118,2000,1882,4,NOT_SEMANTICALLY_AUDITED,200
+11,g11_conditional_probability_models,Mô hình xác suất có điều kiện,108,2000,1892,3,NOT_SEMANTICALLY_AUDITED,200
+12,ung_dung_dao_ham,Ứng dụng đạo hàm,59,2000,1941,0,NOT_SEMANTICALLY_AUDITED,200
+12,khao_sat_ham_so,Khảo sát và vẽ đồ thị hàm số,79,2000,1921,1,NOT_SEMANTICALLY_AUDITED,200
+12,nguyen_ham_tich_phan,Nguyên hàm và tích phân,370,2000,1630,4,NOT_SEMANTICALLY_AUDITED,200
+12,so_phuc,Số phức,250,2000,1750,0,NOT_SEMANTICALLY_AUDITED,200
+12,hinh_hoc_khong_gian,Hình học không gian,59,2000,1941,0,NOT_SEMANTICALLY_AUDITED,200
+12,toa_do_khong_gian,Tọa độ trong không gian,190,2000,1810,0,NOT_SEMANTICALLY_AUDITED,200
+12,xac_suat_12,Xác suất và biến ngẫu nhiên,159,2000,1841,5,NOT_SEMANTICALLY_AUDITED,200
+12,thong_ke_12,Các số đặc trưng đo xu thế và độ phân tán,76,2000,1924,2,NOT_SEMANTICALLY_AUDITED,200
+12,tinh_don_dieu,Tính đơn điệu,30,2000,1970,0,NOT_SEMANTICALLY_AUDITED,200
+12,cuc_tri,Cực trị,60,2000,1940,0,NOT_SEMANTICALLY_AUDITED,200
+12,gtln_gtnn,Giá trị lớn nhất và nhỏ nhất,89,2000,1911,1,NOT_SEMANTICALLY_AUDITED,200
+12,tiep_tuyen,Tiếp tuyến,60,2000,1940,0,NOT_SEMANTICALLY_AUDITED,200
+12,tien_can,Tiệm cận,60,2000,1940,1,NOT_SEMANTICALLY_AUDITED,200
+12,tuong_giao,Tương giao đồ thị,59,2000,1941,0,NOT_SEMANTICALLY_AUDITED,200
+12,ham_mu,Hàm số mũ,58,2000,1942,0,NOT_SEMANTICALLY_AUDITED,200
+12,ham_logarit,Hàm số logarit,71,2000,1929,1,NOT_SEMANTICALLY_AUDITED,200
+12,pt_mu,Phương trình mũ,130,2000,1870,0,NOT_SEMANTICALLY_AUDITED,200
+12,pt_logarit,Phương trình logarit,135,2000,1865,0,NOT_SEMANTICALLY_AUDITED,200
+12,bpt_mu,Bất phương trình mũ,50,2000,1950,0,NOT_SEMANTICALLY_AUDITED,200
+12,bpt_logarit,Bất phương trình logarit,70,2000,1930,0,NOT_SEMANTICALLY_AUDITED,200
+12,ung_dung_tich_phan,Ứng dụng tích phân,90,2000,1910,1,NOT_SEMANTICALLY_AUDITED,200
+12,bieu_dien_so_phuc,Biểu diễn số phức,60,2000,1940,0,NOT_SEMANTICALLY_AUDITED,200
+12,pt_so_phuc,Phương trình số phức,80,2000,1920,1,NOT_SEMANTICALLY_AUDITED,200
+12,mat_phang_oxyz,Mặt phẳng trong Oxyz,119,2000,1881,0,NOT_SEMANTICALLY_AUDITED,200
+12,duong_thang_oxyz,Đường thẳng trong Oxyz,49,2000,1951,0,NOT_SEMANTICALLY_AUDITED,200
+12,mat_cau,Mặt cầu,89,2000,1911,0,NOT_SEMANTICALLY_AUDITED,200
+12,goc_khoang_cach_oxyz,Góc và khoảng cách Oxyz,69,2000,1931,0,NOT_SEMANTICALLY_AUDITED,200
+12,the_tich_khong_gian,Thể tích hình học không gian,79,2000,1921,0,NOT_SEMANTICALLY_AUDITED,200
+12,tong_hop_thpt,Bài toán tổng hợp THPT,49,2000,1951,0,NOT_SEMANTICALLY_AUDITED,200
+12,bai_toan_thuc_te_12,Bài toán thực tế Toán 12,49,2000,1951,0,NOT_SEMANTICALLY_AUDITED,200
+12,hinh_khoi_va_the_tich_co_ban_12,Hình khối và thể tích cơ bản,100,2000,1900,2,NOT_SEMANTICALLY_AUDITED,200
+12,hinh_hoc_oxyz_van_dung_12,Vận dụng tọa độ Oxyz,79,2000,1921,1,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_vectors_3d,Vectơ và độ dài trong không gian Oxyz,50,2000,1950,0,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_plane_equation,Phương trình mặt phẳng,70,2000,1930,1,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_line_equation_3d,Phương trình đường thẳng trong Oxyz,49,2000,1951,0,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_sphere_equation,Phương trình mặt cầu và tâm bán kính,80,2000,1920,2,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_solid_surface_area,Diện tích xung quanh và toàn phần hình khối,90,2000,1910,1,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_point_plane_distance,Khoảng cách từ điểm đến mặt phẳng,89,2000,1911,0,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_line_plane_angle,Góc giữa đường thẳng và mặt phẳng Oxyz,80,2000,1920,1,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_two_planes_angle,Góc giữa hai mặt phẳng,75,2000,1925,1,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_line_plane_intersection,Giao điểm đường thẳng và mặt phẳng,60,2000,1940,1,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_sphere_tangent_plane,Mặt phẳng tiếp xúc với mặt cầu,60,2000,1940,0,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_skew_line_relation,Vị trí tương đối của hai đường thẳng trong Oxyz,68,2000,1932,1,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_min_distance_3d,Cực trị khoảng cách trong không gian tọa độ,79,2000,1921,2,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_sphere_plane_intersection,Giao tuyến mặt cầu và mặt phẳng,80,2000,1920,1,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_parameter_geometry,Bài toán tham số hình học Oxyz,69,2000,1931,1,NOT_SEMANTICALLY_AUDITED,200
+12,g12_geom_3d_optimization,Bài toán tối ưu hình học không gian,69,2000,1931,0,NOT_SEMANTICALLY_AUDITED,200
+12,g12_complex_plane_geometry,Hình học số phức và quỹ tích,79,2000,1921,2,NOT_SEMANTICALLY_AUDITED,200
+12,g12_integral_optimization,Tối ưu và cực trị bằng tích phân,79,2000,1921,1,NOT_SEMANTICALLY_AUDITED,200
+12,g12_solid_of_revolution,Thể tích khối tròn xoay và mô hình thực tế,74,2000,1926,1,NOT_SEMANTICALLY_AUDITED,200

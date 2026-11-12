@@ -1,0 +1,12 @@
+{
+  "version": "V226",
+  "base_version": "V225",
+  "base_questions": 13696,
+  "added_questions": 1000,
+  "final_questions": 14696,
+  "candidate_groups": 20,
+  "questions_per_group": 50,
+  "certified_independent_types": 0,
+  "warning": "Groups are NOT certified mathematically independent; several may overlap existing types. Numeric variations are not new types.",
+  "verification": "Arithmetic answer oracles; duplicate exact question checks; SQLite integrity; ZIP CRC. No full semantic audit or end-to-end battle test."
+}

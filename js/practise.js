@@ -5874,9 +5874,7 @@
                                     <button
                                         type="button"
                                         class="mathweb-ai-option"
-                                        data-ai-answer="${escapeHTML(
-                                            option.value
-                                        )}"
+                                        data-ai-choice-index="${index}"
                                     >
                                         <strong>
                                             ${String.fromCharCode(
@@ -5978,6 +5976,24 @@
                 return;
             }
 
+
+            // The backend treats a numeric string as visible option text,
+            // never as its index. An explicit object avoids false negatives,
+            // especially when choices themselves are numbers.
+            const indexedOption = target.closest("[data-ai-choice-index]");
+            if (indexedOption && document.getElementById("mathwebAiAnswerArea")) {
+                const index = Number(indexedOption.getAttribute("data-ai-choice-index"));
+                if (Number.isInteger(index) && index >= 0 && index < 4) {
+                    const currentQuestion = aiQuestions[aiCurrentIndex];
+                    if (currentQuestion && (currentQuestion.id || currentQuestion.question_id)) {
+                        submitAIAnswer({index});
+                    } else {
+                        const original = getQuestionOptions(currentQuestion || {})[index];
+                        submitAIAnswer(original ? original.label : "");
+                    }
+                }
+                return;
+            }
 
             const option =
                 target.closest(

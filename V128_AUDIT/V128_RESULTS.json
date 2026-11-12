@@ -1,0 +1,29 @@
+{
+  "forms": 1050,
+  "questions": 10500,
+  "topics": 150,
+  "min_forms_per_topic": 7,
+  "max_forms_per_topic": 7,
+  "source_methods": 150,
+  "source_reuse_distribution": {
+    "7": 150
+  },
+  "distinct_operators": [
+    "curvature",
+    "delta",
+    "maximum",
+    "median",
+    "range",
+    "threshold",
+    "total",
+    "variance"
+  ],
+  "forms_with_shared_core": 1050,
+  "certified_independent_forms": 0,
+  "publication_and_review_flags": {},
+  "missing_question_families": [],
+  "extra_question_families": [],
+  "families_not_ten_questions": [],
+  "status": "PASS",
+  "note": "Structural and method-reuse audit only. No mathematical independence or solution correctness certification."
+}

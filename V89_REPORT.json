@@ -1,0 +1,19 @@
+{
+  "version": "V89",
+  "base": "V88",
+  "added_forms": 0,
+  "added_questions": 0,
+  "target_150_topics": 150,
+  "target_distinct_types": 300000,
+  "target_questions": 3000000,
+  "new_features": [
+    "MathGeo launch requires structured diagram data",
+    "Batch import preflight checks exact duplicates, 10 exercises per form, signature conflicts with existing bank"
+  ],
+  "limitations": [
+    "Not a full MathGeo Pro renderer",
+    "No 10000 new verified types",
+    "No browser regression test",
+    "Preflight is not semantic proof"
+  ]
+}

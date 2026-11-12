@@ -1,0 +1,106 @@
+/* Local fallback for MathGeo Studio. CDN Tailwind can enhance it, but a network
+   outage must not turn the drawing studio into an unstyled column of controls. */
+body.mw-geometry-studio{margin:0;box-sizing:border-box;display:flex;flex-direction:column;height:100dvh;overflow:hidden;background:#0f172a;color:#e2e8f0;font:13px/1.45 system-ui,Arial,sans-serif}
+body.mw-geometry-studio *,body.mw-geometry-studio *:before,body.mw-geometry-studio *:after{box-sizing:border-box}
+body.mw-geometry-studio .hidden{display:none!important}
+body.mw-geometry-studio .flex{display:flex}
+body.mw-geometry-studio .grid{display:grid}
+body.mw-geometry-studio .flex-col{flex-direction:column}
+body.mw-geometry-studio .flex-wrap{flex-wrap:wrap}
+body.mw-geometry-studio .flex-1{flex:1 1 0%;min-width:0;min-height:0}
+body.mw-geometry-studio .items-center{align-items:center}
+body.mw-geometry-studio .justify-between{justify-content:space-between}
+body.mw-geometry-studio .justify-center{justify-content:center}
+body.mw-geometry-studio .justify-end{justify-content:flex-end}
+body.mw-geometry-studio .relative{position:relative}
+body.mw-geometry-studio .absolute{position:absolute}
+body.mw-geometry-studio .overflow-hidden{overflow:hidden}
+body.mw-geometry-studio .overflow-y-auto{overflow-y:auto}
+body.mw-geometry-studio .w-full{width:100%}
+body.mw-geometry-studio .w-24{width:6rem}
+body.mw-geometry-studio .w-9{width:2.25rem}
+body.mw-geometry-studio .w-8{width:2rem}
+body.mw-geometry-studio .w-7{width:1.75rem}
+body.mw-geometry-studio .h-8{height:2rem}
+body.mw-geometry-studio .h-7{height:1.75rem}
+body.mw-geometry-studio .gap-1{gap:.25rem}
+body.mw-geometry-studio .gap-2{gap:.5rem}
+body.mw-geometry-studio .gap-3{gap:.75rem}
+body.mw-geometry-studio .space-x-1>*+*{margin-left:.25rem}
+body.mw-geometry-studio .space-x-2>*+*{margin-left:.5rem}
+body.mw-geometry-studio .space-x-3>*+*{margin-left:.75rem}
+body.mw-geometry-studio .space-y-1>*+*{margin-top:.25rem}
+body.mw-geometry-studio .space-y-2>*+*{margin-top:.5rem}
+body.mw-geometry-studio .space-y-3>*+*{margin-top:.75rem}
+body.mw-geometry-studio .p-1{padding:.25rem}
+body.mw-geometry-studio .p-2{padding:.5rem}
+body.mw-geometry-studio .p-3{padding:.75rem}
+body.mw-geometry-studio .px-2{padding-left:.5rem;padding-right:.5rem}
+body.mw-geometry-studio .px-3{padding-left:.75rem;padding-right:.75rem}
+body.mw-geometry-studio .px-4{padding-left:1rem;padding-right:1rem}
+body.mw-geometry-studio .py-1{padding-top:.25rem;padding-bottom:.25rem}
+body.mw-geometry-studio .py-2{padding-top:.5rem;padding-bottom:.5rem}
+body.mw-geometry-studio .py-3{padding-top:.75rem;padding-bottom:.75rem}
+body.mw-geometry-studio .text-xs{font-size:.75rem}
+body.mw-geometry-studio .text-sm{font-size:.875rem}
+body.mw-geometry-studio .font-bold{font-weight:750}
+body.mw-geometry-studio .font-semibold{font-weight:650}
+body.mw-geometry-studio .font-mono{font-family:ui-monospace,Consolas,monospace}
+body.mw-geometry-studio .text-white{color:white}
+body.mw-geometry-studio .text-slate-100{color:#f1f5f9}
+body.mw-geometry-studio .text-slate-200{color:#e2e8f0}
+body.mw-geometry-studio .text-slate-300{color:#cbd5e1}
+body.mw-geometry-studio .text-slate-400{color:#94a3b8}
+body.mw-geometry-studio .text-indigo-400{color:#818cf8}
+body.mw-geometry-studio .text-indigo-300{color:#a5b4fc}
+body.mw-geometry-studio .text-amber-400{color:#fbbf24}
+body.mw-geometry-studio .text-amber-300{color:#fcd34d}
+body.mw-geometry-studio .text-emerald-400{color:#34d399}
+body.mw-geometry-studio .text-cyan-400{color:#22d3ee}
+body.mw-geometry-studio .bg-slate-950{background:#020617}
+body.mw-geometry-studio .bg-slate-900{background:#0f172a}
+body.mw-geometry-studio .bg-slate-800{background:#1e293b}
+body.mw-geometry-studio .bg-indigo-600{background:#4f46e5}
+body.mw-geometry-studio .bg-emerald-600{background:#059669}
+body.mw-geometry-studio .rounded{border-radius:.25rem}
+body.mw-geometry-studio .rounded-lg{border-radius:.5rem}
+body.mw-geometry-studio .rounded-xl{border-radius:.75rem}
+body.mw-geometry-studio .border{border-width:1px;border-style:solid}
+body.mw-geometry-studio .border-b{border-bottom-width:1px;border-bottom-style:solid}
+body.mw-geometry-studio .border-r{border-right-width:1px;border-right-style:solid}
+body.mw-geometry-studio .border-t{border-top-width:1px;border-top-style:solid}
+body.mw-geometry-studio .border-slate-800{border-color:#1e293b}
+body.mw-geometry-studio .border-slate-700{border-color:#334155}
+body.mw-geometry-studio button,body.mw-geometry-studio input,body.mw-geometry-studio select{font:inherit;color:inherit}
+body.mw-geometry-studio button{cursor:pointer;border:1px solid #334155;border-radius:7px;background:#1e293b;min-height:32px}
+body.mw-geometry-studio button.bg-indigo-600{background:#4f46e5;border-color:#4f46e5}
+body.mw-geometry-studio button.bg-emerald-600{background:#059669;border-color:#059669}
+body.mw-geometry-studio button:hover{filter:brightness(1.17)}
+body.mw-geometry-studio input,body.mw-geometry-studio select{background:#020617;border:1px solid #334155;border-radius:6px;padding:5px;max-width:100%}
+body.mw-geometry-studio header{display:flex;align-items:center;justify-content:space-between;gap:9px;padding:9px 12px;flex-wrap:wrap;background:#020617;border-bottom:1px solid #1e293b;flex:none;z-index:20}
+body.mw-geometry-studio header h1{margin:0;font-size:14px}
+body.mw-geometry-studio>div.flex-1{display:flex;min-height:0;overflow:hidden}
+body.mw-geometry-studio aside{width:440px;flex:0 0 440px;max-width:46vw;background:#020617;display:flex;flex-direction:column;overflow:hidden}
+body.mw-geometry-studio aside>div[id$="-content"]{min-height:0;overflow-y:auto}
+body.mw-geometry-studio aside .draw-concept-btn,body.mw-geometry-studio aside .tool-btn{width:100%;text-align:left;padding:8px 10px;margin:2px 0;white-space:normal}
+body.mw-geometry-studio main{display:flex;flex-direction:column;flex:1;min-width:0;min-height:0;background:#0f172a}
+body.mw-geometry-studio #geo-canvas{display:block;width:100%;flex:1;min-height:250px;background:#0f172a}
+body.mw-geometry-studio #btn-undo:before{content:'↶'}
+body.mw-geometry-studio #btn-redo:before{content:'↷'}
+body.mw-geometry-studio #btn-zoom-out:before{content:'−'}
+body.mw-geometry-studio #btn-zoom-in:before{content:'+'}
+body.mw-geometry-studio #measure-panel{width:min(340px,94vw)}
+body.mw-geometry-studio #measure-collapse{display:none;border:1px solid #a5b4fc;background:#4338ca;color:white;padding:5px 9px;border-radius:8px;margin-left:10px}
+@media(max-width:850px){
+ body.mw-geometry-studio{height:auto;min-height:100dvh;overflow:auto}
+ body.mw-geometry-studio>div.flex-1{display:flex;flex-direction:column;overflow:visible;min-height:0}
+ body.mw-geometry-studio aside{width:100%;max-width:none;flex:0 0 auto;max-height:42vh;min-height:245px;overflow:auto}
+ body.mw-geometry-studio main{width:100%;flex:auto;min-height:50vh}
+ body.mw-geometry-studio #geo-canvas{min-height:49vh}
+ body.mw-geometry-studio #measure-panel{bottom:65px!important;right:10px!important;width:auto!important;max-width:calc(100vw - 20px)!important}
+ body.mw-geometry-studio #measure-collapse{display:inline-block}
+ body.mw-geometry-studio #measure-controls,body.mw-geometry-studio #measure-result{display:none!important}
+ body.mw-geometry-studio #measure-panel.measure-expanded #measure-controls{display:block!important}
+ body.mw-geometry-studio #measure-panel.measure-expanded #measure-result{display:block!important}
+}
+@media(max-width:450px){body.mw-geometry-studio header>div{max-width:100%}body.mw-geometry-studio #bar-fx-container{flex-wrap:wrap}}

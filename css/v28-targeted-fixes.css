@@ -1,0 +1,14 @@
+
+/* V28 Classic focused navigation and battle refinements */
+body:has(.chat-app) .chat-page, body:has(.chat-app) .chat-layout,
+body:has(.chat-app) main.chat-container {margin-top:0!important}
+body:has(.chat-app) .chat-app {min-height:calc(100dvh - 76px)}
+body:has(.battle-container) .battle-container {margin-top:0!important}
+body:has(.battle-container) :is(button,a,input,select):focus-visible {outline:3px solid #67e8f9;outline-offset:3px}
+@media(max-width:768px) {
+ body:has(.battle-container) .battle-container {max-width:100%;padding-inline:12px}
+ body:has(.chat-app) .chat-app {min-height:calc(100dvh - 70px)}
+}
+@media(prefers-reduced-motion:reduce) {
+ body:has(.battle-container) * {scroll-behavior:auto!important}
+}

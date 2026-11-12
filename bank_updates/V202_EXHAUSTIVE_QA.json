@@ -1,0 +1,60 @@
+{
+  "version": "V202",
+  "base": "V197 bundled full site",
+  "bundled_questions_before": 9636,
+  "bundled_questions_after": 10926,
+  "newly_inserted": 1290,
+  "v198_to_v202_verified_by_app": {
+    "V198": 340,
+    "V199": 320,
+    "V200": 230,
+    "V201": 200,
+    "V202": 200
+  },
+  "candidate_families": 129,
+  "every_family_has_10": true,
+  "distinct_topics_extended": 99,
+  "full_catalog_topics": 150,
+  "format_checks_all_new": 1290,
+  "format_failed": [],
+  "normalized_duplicate_questions_in_full_bank": 0,
+  "normalized_duplicate_questions_among_new": [],
+  "sqlite_integrity": "ok",
+  "non_bank_table_counts_unchanged": {
+    "database_metadata": {
+      "before": 1,
+      "after": 1
+    },
+    "users": {
+      "before": 1,
+      "after": 1
+    },
+    "game_results": {
+      "before": 0,
+      "after": 0
+    },
+    "friends": {
+      "before": 0,
+      "after": 0
+    },
+    "messages": {
+      "before": 0,
+      "after": 0
+    },
+    "notifications": {
+      "before": 0,
+      "after": 0
+    },
+    "question_sessions": {
+      "before": 0,
+      "after": 0
+    },
+    "admin_audit_logs": {
+      "before": 0,
+      "after": 0
+    }
+  },
+  "independent_methods_certified": 0,
+  "production_deployed": false,
+  "limits": "Exact formula/standalone oracle, validator and grading checks are not mathematical-method independence certification; no live production deployment"
+}

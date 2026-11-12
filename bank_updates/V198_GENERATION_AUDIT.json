@@ -1,0 +1,19 @@
+{
+  "version": "V198",
+  "groups": 34,
+  "questions": 340,
+  "per_grade": {
+    "10": 120,
+    "11": 110,
+    "12": 110
+  },
+  "formats": {
+    "multiple_choice": 238,
+    "short_answer": 68,
+    "true_false": 34
+  },
+  "independent_method_certified": 0,
+  "source": "V197 full website ZIP",
+  "oracle_verified_count": 340,
+  "production_deployed": false
+}

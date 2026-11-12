@@ -1,0 +1,14 @@
+{
+  "base": "BATCH_09",
+  "new_topics": [
+    "g10_geom_locus",
+    "g10_geom_circle_tangent_chord",
+    "g10_geom_vector_proofs",
+    "g10_geom_coordinate_circle_line"
+  ],
+  "new_questions": 40,
+  "total_topics": 150,
+  "topics_with_quiz": 51,
+  "verification": "schema and curated answer explanations checked; no browser or full mathematical proof audit",
+  "videos_verified": 0
+}

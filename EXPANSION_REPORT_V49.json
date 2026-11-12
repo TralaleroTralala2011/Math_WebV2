@@ -1,0 +1,18 @@
+{
+  "version": "V49",
+  "base": "V48",
+  "old_records": 35977,
+  "new_records": 10000,
+  "old_form_ids": 3740,
+  "new_form_ids": 1000,
+  "method_families": 20,
+  "new_codes_are_independent_methods": false,
+  "limitations": [
+    "The 1000 new codes are parameterized variants across 20 method families, not 1000 independent problem types.",
+    "Solutions are concise, not independently pedagogically reviewed.",
+    "New topics are provisional and NOT integrated into the official topic catalog or UI.",
+    "No Battle/Admin/UI regression tests."
+  ],
+  "rejected_duplicate_groups": 0,
+  "existing_forms_with_less_than_ten_questions_not_repaired": true
+}

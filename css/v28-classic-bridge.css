@@ -1,0 +1,8 @@
+/* Classic visual bridge. Account dashboard retains its modern functional widgets. */
+body.account-body {background:#f7f9ff;color:#1b2945}
+body.account-body #mw-account-dashboard {margin-top:100px;max-width:1240px}
+body.account-body #mw-account-dashboard .mw-v5-card {border:1px solid #dfe8f5;box-shadow:0 8px 26px rgba(31,64,116,.07);border-radius:18px}
+body.account-body #mw-account-dashboard a,body.account-body #mw-account-dashboard button {transition:filter .15s ease}
+body.account-body #mw-account-dashboard a:hover,body.account-body #mw-account-dashboard button:hover {filter:brightness(.96)}
+#mathwebTrialBanner[hidden]{display:none!important}
+@media(max-width:700px){body.account-body #mw-account-dashboard{width:calc(100% - 24px);margin-top:85px}}

@@ -1,0 +1,28 @@
+{
+  "version": "V103",
+  "based_on": "V102",
+  "mathgeo": [
+    "Embed MathGeo Studio as primary practice diagram for supported coordinate geometry, SSS triangles, and sampled graphs",
+    "Same-origin parent iframe message handshake added",
+    "Do not replace unsupported geometry with guessed generic shapes"
+  ],
+  "bank_pipeline": [
+    "Add 10000-type batch structural validator requiring exactly 10 questions per ID, nonduplicate questions, required fields and no ID collision",
+    "Validator explicitly does not certify mathematical independence or correctness"
+  ],
+  "new_type_ids": 0,
+  "new_questions": 0,
+  "total_type_ids": 33378,
+  "total_questions": 333780,
+  "tests": [
+    "node --check bridge.js passed",
+    "validator fixture passed",
+    "ZIP CRC verification passed"
+  ],
+  "not_verified": [
+    "Browser UI integration",
+    "All geometry types",
+    "Battle/Admin end-to-end",
+    "10k new independent types"
+  ]
+}

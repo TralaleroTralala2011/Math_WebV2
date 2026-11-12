@@ -1,0 +1,901 @@
+﻿grade,topic_id,topic_title,slot,difficulty,context,format,question,answer,solution,verified
+10,menh_de_tap_hop,Mệnh đề và tập hợp,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,menh_de_tap_hop,Mệnh đề và tập hợp,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,menh_de_tap_hop,Mệnh đề và tập hợp,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,menh_de_tap_hop,Mệnh đề và tập hợp,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,menh_de_tap_hop,Mệnh đề và tập hợp,5,kho,ly_thuyet,dung_sai,,,,False
+10,menh_de_tap_hop,Mệnh đề và tập hợp,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,bat_phuong_trinh,Bất phương trình và hệ bất phương trình,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,bat_phuong_trinh,Bất phương trình và hệ bất phương trình,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,bat_phuong_trinh,Bất phương trình và hệ bất phương trình,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,bat_phuong_trinh,Bất phương trình và hệ bất phương trình,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,bat_phuong_trinh,Bất phương trình và hệ bất phương trình,5,kho,ly_thuyet,dung_sai,,,,False
+10,bat_phuong_trinh,Bất phương trình và hệ bất phương trình,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,he_thuc_luong,Hệ thức lượng trong tam giác,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,he_thuc_luong,Hệ thức lượng trong tam giác,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,he_thuc_luong,Hệ thức lượng trong tam giác,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,he_thuc_luong,Hệ thức lượng trong tam giác,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,he_thuc_luong,Hệ thức lượng trong tam giác,5,kho,ly_thuyet,dung_sai,,,,False
+10,he_thuc_luong,Hệ thức lượng trong tam giác,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,vector,Vectơ,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,vector,Vectơ,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,vector,Vectơ,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,vector,Vectơ,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,vector,Vectơ,5,kho,ly_thuyet,dung_sai,,,,False
+10,vector,Vectơ,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,ham_so_bac_hai,Hàm số bậc hai và parabol,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,ham_so_bac_hai,Hàm số bậc hai và parabol,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,ham_so_bac_hai,Hàm số bậc hai và parabol,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,ham_so_bac_hai,Hàm số bậc hai và parabol,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,ham_so_bac_hai,Hàm số bậc hai và parabol,5,kho,ly_thuyet,dung_sai,,,,False
+10,ham_so_bac_hai,Hàm số bậc hai và parabol,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,phuong_trinh_he,Phương trình và hệ phương trình,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,phuong_trinh_he,Phương trình và hệ phương trình,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,phuong_trinh_he,Phương trình và hệ phương trình,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,phuong_trinh_he,Phương trình và hệ phương trình,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,phuong_trinh_he,Phương trình và hệ phương trình,5,kho,ly_thuyet,dung_sai,,,,False
+10,phuong_trinh_he,Phương trình và hệ phương trình,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,quy_tac_dem,Quy tắc đếm,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,quy_tac_dem,Quy tắc đếm,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,quy_tac_dem,Quy tắc đếm,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,quy_tac_dem,Quy tắc đếm,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,quy_tac_dem,Quy tắc đếm,5,kho,ly_thuyet,dung_sai,,,,False
+10,quy_tac_dem,Quy tắc đếm,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,hoan_vi_chinh_hop_to_hop,"Hoán vị, chỉnh hợp, tổ hợp",1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,hoan_vi_chinh_hop_to_hop,"Hoán vị, chỉnh hợp, tổ hợp",2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,hoan_vi_chinh_hop_to_hop,"Hoán vị, chỉnh hợp, tổ hợp",3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,hoan_vi_chinh_hop_to_hop,"Hoán vị, chỉnh hợp, tổ hợp",4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,hoan_vi_chinh_hop_to_hop,"Hoán vị, chỉnh hợp, tổ hợp",5,kho,ly_thuyet,dung_sai,,,,False
+10,hoan_vi_chinh_hop_to_hop,"Hoán vị, chỉnh hợp, tổ hợp",6,kho,thuc_te,tra_loi_ngan,,,,False
+10,xac_suat,Xác suất,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,xac_suat,Xác suất,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,xac_suat,Xác suất,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,xac_suat,Xác suất,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,xac_suat,Xác suất,5,kho,ly_thuyet,dung_sai,,,,False
+10,xac_suat,Xác suất,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,thong_ke,Thống kê,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,thong_ke,Thống kê,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,thong_ke,Thống kê,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,thong_ke,Thống kê,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,thong_ke,Thống kê,5,kho,ly_thuyet,dung_sai,,,,False
+10,thong_ke,Thống kê,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,menh_de,Mệnh đề,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,menh_de,Mệnh đề,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,menh_de,Mệnh đề,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,menh_de,Mệnh đề,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,menh_de,Mệnh đề,5,kho,ly_thuyet,dung_sai,,,,False
+10,menh_de,Mệnh đề,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,tap_hop,Tập hợp và các phép toán,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,tap_hop,Tập hợp và các phép toán,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,tap_hop,Tập hợp và các phép toán,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,tap_hop,Tập hợp và các phép toán,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,tap_hop,Tập hợp và các phép toán,5,kho,ly_thuyet,dung_sai,,,,False
+10,tap_hop,Tập hợp và các phép toán,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,he_bat_phuong_trinh,Hệ bất phương trình,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,he_bat_phuong_trinh,Hệ bất phương trình,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,he_bat_phuong_trinh,Hệ bất phương trình,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,he_bat_phuong_trinh,Hệ bất phương trình,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,he_bat_phuong_trinh,Hệ bất phương trình,5,kho,ly_thuyet,dung_sai,,,,False
+10,he_bat_phuong_trinh,Hệ bất phương trình,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,ham_so,Hàm số,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,ham_so,Hàm số,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,ham_so,Hàm số,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,ham_so,Hàm số,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,ham_so,Hàm số,5,kho,ly_thuyet,dung_sai,,,,False
+10,ham_so,Hàm số,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,ham_so_bac_nhat,Hàm số bậc nhất,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,ham_so_bac_nhat,Hàm số bậc nhất,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,ham_so_bac_nhat,Hàm số bậc nhất,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,ham_so_bac_nhat,Hàm số bậc nhất,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,ham_so_bac_nhat,Hàm số bậc nhất,5,kho,ly_thuyet,dung_sai,,,,False
+10,ham_so_bac_nhat,Hàm số bậc nhất,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,phuong_trinh,Phương trình,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,phuong_trinh,Phương trình,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,phuong_trinh,Phương trình,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,phuong_trinh,Phương trình,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,phuong_trinh,Phương trình,5,kho,ly_thuyet,dung_sai,,,,False
+10,phuong_trinh,Phương trình,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,he_phuong_trinh,Hệ phương trình,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,he_phuong_trinh,Hệ phương trình,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,he_phuong_trinh,Hệ phương trình,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,he_phuong_trinh,Hệ phương trình,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,he_phuong_trinh,Hệ phương trình,5,kho,ly_thuyet,dung_sai,,,,False
+10,he_phuong_trinh,Hệ phương trình,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,he_thuc_luong_tam_giac,Hệ thức lượng trong tam giác,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,he_thuc_luong_tam_giac,Hệ thức lượng trong tam giác,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,he_thuc_luong_tam_giac,Hệ thức lượng trong tam giác,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,he_thuc_luong_tam_giac,Hệ thức lượng trong tam giác,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,he_thuc_luong_tam_giac,Hệ thức lượng trong tam giác,5,kho,ly_thuyet,dung_sai,,,,False
+10,he_thuc_luong_tam_giac,Hệ thức lượng trong tam giác,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,toa_do_phang,Tọa độ trong mặt phẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,toa_do_phang,Tọa độ trong mặt phẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,toa_do_phang,Tọa độ trong mặt phẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,toa_do_phang,Tọa độ trong mặt phẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,toa_do_phang,Tọa độ trong mặt phẳng,5,kho,ly_thuyet,dung_sai,,,,False
+10,toa_do_phang,Tọa độ trong mặt phẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,duong_thang,Đường thẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,duong_thang,Đường thẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,duong_thang,Đường thẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,duong_thang,Đường thẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,duong_thang,Đường thẳng,5,kho,ly_thuyet,dung_sai,,,,False
+10,duong_thang,Đường thẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,duong_tron,Đường tròn,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,duong_tron,Đường tròn,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,duong_tron,Đường tròn,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,duong_tron,Đường tròn,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,duong_tron,Đường tròn,5,kho,ly_thuyet,dung_sai,,,,False
+10,duong_tron,Đường tròn,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,nhi_thuc_newton,Nhị thức Newton,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,nhi_thuc_newton,Nhị thức Newton,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,nhi_thuc_newton,Nhị thức Newton,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,nhi_thuc_newton,Nhị thức Newton,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,nhi_thuc_newton,Nhị thức Newton,5,kho,ly_thuyet,dung_sai,,,,False
+10,nhi_thuc_newton,Nhị thức Newton,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,hinh_hoc_10,Hình học phẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,hinh_hoc_10,Hình học phẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,hinh_hoc_10,Hình học phẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,hinh_hoc_10,Hình học phẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,hinh_hoc_10,Hình học phẳng,5,kho,ly_thuyet,dung_sai,,,,False
+10,hinh_hoc_10,Hình học phẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,bai_toan_thuc_te_10,Bài toán thực tế Toán 10,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,bai_toan_thuc_te_10,Bài toán thực tế Toán 10,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,bai_toan_thuc_te_10,Bài toán thực tế Toán 10,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,bai_toan_thuc_te_10,Bài toán thực tế Toán 10,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,bai_toan_thuc_te_10,Bài toán thực tế Toán 10,5,kho,ly_thuyet,dung_sai,,,,False
+10,bai_toan_thuc_te_10,Bài toán thực tế Toán 10,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,hinh_hoc_co_ban_10,"Hình học cơ bản: góc, cạnh và diện tích",1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,hinh_hoc_co_ban_10,"Hình học cơ bản: góc, cạnh và diện tích",2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,hinh_hoc_co_ban_10,"Hình học cơ bản: góc, cạnh và diện tích",3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,hinh_hoc_co_ban_10,"Hình học cơ bản: góc, cạnh và diện tích",4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,hinh_hoc_co_ban_10,"Hình học cơ bản: góc, cạnh và diện tích",5,kho,ly_thuyet,dung_sai,,,,False
+10,hinh_hoc_co_ban_10,"Hình học cơ bản: góc, cạnh và diện tích",6,kho,thuc_te,tra_loi_ngan,,,,False
+10,tam_giac_tu_giac_10,Tam giác và tứ giác cơ bản,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,tam_giac_tu_giac_10,Tam giác và tứ giác cơ bản,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,tam_giac_tu_giac_10,Tam giác và tứ giác cơ bản,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,tam_giac_tu_giac_10,Tam giác và tứ giác cơ bản,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,tam_giac_tu_giac_10,Tam giác và tứ giác cơ bản,5,kho,ly_thuyet,dung_sai,,,,False
+10,tam_giac_tu_giac_10,Tam giác và tứ giác cơ bản,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,duong_tron_co_ban_10,Đường tròn và các góc cơ bản,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,duong_tron_co_ban_10,Đường tròn và các góc cơ bản,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,duong_tron_co_ban_10,Đường tròn và các góc cơ bản,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,duong_tron_co_ban_10,Đường tròn và các góc cơ bản,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,duong_tron_co_ban_10,Đường tròn và các góc cơ bản,5,kho,ly_thuyet,dung_sai,,,,False
+10,duong_tron_co_ban_10,Đường tròn và các góc cơ bản,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,he_thuc_luong_van_dung_10,Hệ thức lượng trong tam giác,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,he_thuc_luong_van_dung_10,Hệ thức lượng trong tam giác,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,he_thuc_luong_van_dung_10,Hệ thức lượng trong tam giác,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,he_thuc_luong_van_dung_10,Hệ thức lượng trong tam giác,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,he_thuc_luong_van_dung_10,Hệ thức lượng trong tam giác,5,kho,ly_thuyet,dung_sai,,,,False
+10,he_thuc_luong_van_dung_10,Hệ thức lượng trong tam giác,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,toa_do_hinh_hoc_10,Tọa độ và đường thẳng trong mặt phẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,toa_do_hinh_hoc_10,Tọa độ và đường thẳng trong mặt phẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,toa_do_hinh_hoc_10,Tọa độ và đường thẳng trong mặt phẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,toa_do_hinh_hoc_10,Tọa độ và đường thẳng trong mặt phẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,toa_do_hinh_hoc_10,Tọa độ và đường thẳng trong mặt phẳng,5,kho,ly_thuyet,dung_sai,,,,False
+10,toa_do_hinh_hoc_10,Tọa độ và đường thẳng trong mặt phẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,chung_minh_hinh_hoc_10,Chứng minh hình học và bài toán tổng hợp,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,chung_minh_hinh_hoc_10,Chứng minh hình học và bài toán tổng hợp,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,chung_minh_hinh_hoc_10,Chứng minh hình học và bài toán tổng hợp,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,chung_minh_hinh_hoc_10,Chứng minh hình học và bài toán tổng hợp,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,chung_minh_hinh_hoc_10,Chứng minh hình học và bài toán tổng hợp,5,kho,ly_thuyet,dung_sai,,,,False
+10,chung_minh_hinh_hoc_10,Chứng minh hình học và bài toán tổng hợp,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_angles_parallel,Góc tạo bởi hai đường thẳng và đường cắt,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_angles_parallel,Góc tạo bởi hai đường thẳng và đường cắt,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_angles_parallel,Góc tạo bởi hai đường thẳng và đường cắt,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_angles_parallel,Góc tạo bởi hai đường thẳng và đường cắt,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_angles_parallel,Góc tạo bởi hai đường thẳng và đường cắt,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_angles_parallel,Góc tạo bởi hai đường thẳng và đường cắt,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_triangle_congruence,Các trường hợp bằng nhau của tam giác,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_triangle_congruence,Các trường hợp bằng nhau của tam giác,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_triangle_congruence,Các trường hợp bằng nhau của tam giác,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_triangle_congruence,Các trường hợp bằng nhau của tam giác,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_triangle_congruence,Các trường hợp bằng nhau của tam giác,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_triangle_congruence,Các trường hợp bằng nhau của tam giác,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_special_lines,"Đường trung tuyến, phân giác và đường cao",1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_special_lines,"Đường trung tuyến, phân giác và đường cao",2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_special_lines,"Đường trung tuyến, phân giác và đường cao",3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_special_lines,"Đường trung tuyến, phân giác và đường cao",4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_special_lines,"Đường trung tuyến, phân giác và đường cao",5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_special_lines,"Đường trung tuyến, phân giác và đường cao",6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_quadrilaterals_properties,Tính chất hình bình hành và hình thoi,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_quadrilaterals_properties,Tính chất hình bình hành và hình thoi,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_quadrilaterals_properties,Tính chất hình bình hành và hình thoi,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_quadrilaterals_properties,Tính chất hình bình hành và hình thoi,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_quadrilaterals_properties,Tính chất hình bình hành và hình thoi,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_quadrilaterals_properties,Tính chất hình bình hành và hình thoi,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_circle_chords_arcs,"Dây cung, cung và khoảng cách đến tâm",1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_circle_chords_arcs,"Dây cung, cung và khoảng cách đến tâm",2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_circle_chords_arcs,"Dây cung, cung và khoảng cách đến tâm",3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_circle_chords_arcs,"Dây cung, cung và khoảng cách đến tâm",4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_circle_chords_arcs,"Dây cung, cung và khoảng cách đến tâm",5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_circle_chords_arcs,"Dây cung, cung và khoảng cách đến tâm",6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_thales_similarity,Định lý Thales và tam giác đồng dạng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_thales_similarity,Định lý Thales và tam giác đồng dạng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_thales_similarity,Định lý Thales và tam giác đồng dạng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_thales_similarity,Định lý Thales và tam giác đồng dạng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_thales_similarity,Định lý Thales và tam giác đồng dạng,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_thales_similarity,Định lý Thales và tam giác đồng dạng,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_triangle_area_ratio,Tỉ số diện tích tam giác,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_triangle_area_ratio,Tỉ số diện tích tam giác,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_triangle_area_ratio,Tỉ số diện tích tam giác,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_triangle_area_ratio,Tỉ số diện tích tam giác,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_triangle_area_ratio,Tỉ số diện tích tam giác,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_triangle_area_ratio,Tỉ số diện tích tam giác,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_circle_angles,Góc nội tiếp và góc ở tâm nâng cao,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_circle_angles,Góc nội tiếp và góc ở tâm nâng cao,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_circle_angles,Góc nội tiếp và góc ở tâm nâng cao,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_circle_angles,Góc nội tiếp và góc ở tâm nâng cao,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_circle_angles,Góc nội tiếp và góc ở tâm nâng cao,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_circle_angles,Góc nội tiếp và góc ở tâm nâng cao,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_coordinate_distance_midpoint,Trung điểm và khoảng cách trong tọa độ phẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_coordinate_distance_midpoint,Trung điểm và khoảng cách trong tọa độ phẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_coordinate_distance_midpoint,Trung điểm và khoảng cách trong tọa độ phẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_coordinate_distance_midpoint,Trung điểm và khoảng cách trong tọa độ phẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_coordinate_distance_midpoint,Trung điểm và khoảng cách trong tọa độ phẳng,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_coordinate_distance_midpoint,Trung điểm và khoảng cách trong tọa độ phẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_line_intersections,Giao điểm và vị trí tương đối của hai đường thẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_line_intersections,Giao điểm và vị trí tương đối của hai đường thẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_line_intersections,Giao điểm và vị trí tương đối của hai đường thẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_line_intersections,Giao điểm và vị trí tương đối của hai đường thẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_line_intersections,Giao điểm và vị trí tương đối của hai đường thẳng,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_line_intersections,Giao điểm và vị trí tương đối của hai đường thẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_locus,Quỹ tích điểm trong mặt phẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_locus,Quỹ tích điểm trong mặt phẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_locus,Quỹ tích điểm trong mặt phẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_locus,Quỹ tích điểm trong mặt phẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_locus,Quỹ tích điểm trong mặt phẳng,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_locus,Quỹ tích điểm trong mặt phẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_circle_tangent_chord,Tiếp tuyến và dây cung của đường tròn,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_circle_tangent_chord,Tiếp tuyến và dây cung của đường tròn,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_circle_tangent_chord,Tiếp tuyến và dây cung của đường tròn,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_circle_tangent_chord,Tiếp tuyến và dây cung của đường tròn,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_circle_tangent_chord,Tiếp tuyến và dây cung của đường tròn,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_circle_tangent_chord,Tiếp tuyến và dây cung của đường tròn,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_triangle_inequalities,Bất đẳng thức và cực trị trong tam giác,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_triangle_inequalities,Bất đẳng thức và cực trị trong tam giác,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_triangle_inequalities,Bất đẳng thức và cực trị trong tam giác,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_triangle_inequalities,Bất đẳng thức và cực trị trong tam giác,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_triangle_inequalities,Bất đẳng thức và cực trị trong tam giác,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_triangle_inequalities,Bất đẳng thức và cực trị trong tam giác,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_vector_proofs,Chứng minh hình học bằng vectơ,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_vector_proofs,Chứng minh hình học bằng vectơ,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_vector_proofs,Chứng minh hình học bằng vectơ,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_vector_proofs,Chứng minh hình học bằng vectơ,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_vector_proofs,Chứng minh hình học bằng vectơ,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_vector_proofs,Chứng minh hình học bằng vectơ,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_geom_coordinate_circle_line,Bài toán tổng hợp đường thẳng và đường tròn tọa độ,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_coordinate_circle_line,Bài toán tổng hợp đường thẳng và đường tròn tọa độ,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_geom_coordinate_circle_line,Bài toán tổng hợp đường thẳng và đường tròn tọa độ,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_geom_coordinate_circle_line,Bài toán tổng hợp đường thẳng và đường tròn tọa độ,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_geom_coordinate_circle_line,Bài toán tổng hợp đường thẳng và đường tròn tọa độ,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_geom_coordinate_circle_line,Bài toán tổng hợp đường thẳng và đường tròn tọa độ,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,ham_so_luong_giac,Hàm số lượng giác,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,ham_so_luong_giac,Hàm số lượng giác,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,ham_so_luong_giac,Hàm số lượng giác,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,ham_so_luong_giac,Hàm số lượng giác,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,ham_so_luong_giac,Hàm số lượng giác,5,kho,ly_thuyet,dung_sai,,,,False
+11,ham_so_luong_giac,Hàm số lượng giác,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,phuong_trinh_luong_giac,Phương trình lượng giác,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,phuong_trinh_luong_giac,Phương trình lượng giác,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,phuong_trinh_luong_giac,Phương trình lượng giác,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,phuong_trinh_luong_giac,Phương trình lượng giác,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,phuong_trinh_luong_giac,Phương trình lượng giác,5,kho,ly_thuyet,dung_sai,,,,False
+11,phuong_trinh_luong_giac,Phương trình lượng giác,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,day_so,Dãy số,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,day_so,Dãy số,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,day_so,Dãy số,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,day_so,Dãy số,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,day_so,Dãy số,5,kho,ly_thuyet,dung_sai,,,,False
+11,day_so,Dãy số,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,cap_so_cong,Cấp số cộng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,cap_so_cong,Cấp số cộng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,cap_so_cong,Cấp số cộng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,cap_so_cong,Cấp số cộng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,cap_so_cong,Cấp số cộng,5,kho,ly_thuyet,dung_sai,,,,False
+11,cap_so_cong,Cấp số cộng,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,cap_so_nhan,Cấp số nhân,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,cap_so_nhan,Cấp số nhân,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,cap_so_nhan,Cấp số nhân,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,cap_so_nhan,Cấp số nhân,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,cap_so_nhan,Cấp số nhân,5,kho,ly_thuyet,dung_sai,,,,False
+11,cap_so_nhan,Cấp số nhân,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,gioi_han,Giới hạn,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,gioi_han,Giới hạn,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,gioi_han,Giới hạn,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,gioi_han,Giới hạn,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,gioi_han,Giới hạn,5,kho,ly_thuyet,dung_sai,,,,False
+11,gioi_han,Giới hạn,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,dao_ham,Đạo hàm,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,dao_ham,Đạo hàm,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,dao_ham,Đạo hàm,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,dao_ham,Đạo hàm,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,dao_ham,Đạo hàm,5,kho,ly_thuyet,dung_sai,,,,False
+11,dao_ham,Đạo hàm,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,hinh_khong_gian,Quan hệ song song và vuông góc trong không gian,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,hinh_khong_gian,Quan hệ song song và vuông góc trong không gian,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,hinh_khong_gian,Quan hệ song song và vuông góc trong không gian,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,hinh_khong_gian,Quan hệ song song và vuông góc trong không gian,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,hinh_khong_gian,Quan hệ song song và vuông góc trong không gian,5,kho,ly_thuyet,dung_sai,,,,False
+11,hinh_khong_gian,Quan hệ song song và vuông góc trong không gian,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,xac_suat_11,Xác suất,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,xac_suat_11,Xác suất,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,xac_suat_11,Xác suất,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,xac_suat_11,Xác suất,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,xac_suat_11,Xác suất,5,kho,ly_thuyet,dung_sai,,,,False
+11,xac_suat_11,Xác suất,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,gia_tri_luong_giac,Giá trị lượng giác,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,gia_tri_luong_giac,Giá trị lượng giác,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,gia_tri_luong_giac,Giá trị lượng giác,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,gia_tri_luong_giac,Giá trị lượng giác,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,gia_tri_luong_giac,Giá trị lượng giác,5,kho,ly_thuyet,dung_sai,,,,False
+11,gia_tri_luong_giac,Giá trị lượng giác,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,cong_thuc_luong_giac,Công thức lượng giác,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,cong_thuc_luong_giac,Công thức lượng giác,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,cong_thuc_luong_giac,Công thức lượng giác,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,cong_thuc_luong_giac,Công thức lượng giác,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,cong_thuc_luong_giac,Công thức lượng giác,5,kho,ly_thuyet,dung_sai,,,,False
+11,cong_thuc_luong_giac,Công thức lượng giác,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,ham_so_luong_giac_day_du,Hàm số lượng giác,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,ham_so_luong_giac_day_du,Hàm số lượng giác,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,ham_so_luong_giac_day_du,Hàm số lượng giác,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,ham_so_luong_giac_day_du,Hàm số lượng giác,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,ham_so_luong_giac_day_du,Hàm số lượng giác,5,kho,ly_thuyet,dung_sai,,,,False
+11,ham_so_luong_giac_day_du,Hàm số lượng giác,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,phuong_trinh_luong_giac_day_du,Phương trình lượng giác,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,phuong_trinh_luong_giac_day_du,Phương trình lượng giác,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,phuong_trinh_luong_giac_day_du,Phương trình lượng giác,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,phuong_trinh_luong_giac_day_du,Phương trình lượng giác,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,phuong_trinh_luong_giac_day_du,Phương trình lượng giác,5,kho,ly_thuyet,dung_sai,,,,False
+11,phuong_trinh_luong_giac_day_du,Phương trình lượng giác,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,day_so_tong_quat,Dãy số,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,day_so_tong_quat,Dãy số,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,day_so_tong_quat,Dãy số,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,day_so_tong_quat,Dãy số,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,day_so_tong_quat,Dãy số,5,kho,ly_thuyet,dung_sai,,,,False
+11,day_so_tong_quat,Dãy số,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,gioi_han_ham_so,Giới hạn hàm số,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,gioi_han_ham_so,Giới hạn hàm số,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,gioi_han_ham_so,Giới hạn hàm số,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,gioi_han_ham_so,Giới hạn hàm số,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,gioi_han_ham_so,Giới hạn hàm số,5,kho,ly_thuyet,dung_sai,,,,False
+11,gioi_han_ham_so,Giới hạn hàm số,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,ham_so_lien_tuc,Hàm số liên tục,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,ham_so_lien_tuc,Hàm số liên tục,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,ham_so_lien_tuc,Hàm số liên tục,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,ham_so_lien_tuc,Hàm số liên tục,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,ham_so_lien_tuc,Hàm số liên tục,5,kho,ly_thuyet,dung_sai,,,,False
+11,ham_so_lien_tuc,Hàm số liên tục,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,dao_ham_quy_tac,Quy tắc đạo hàm,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,dao_ham_quy_tac,Quy tắc đạo hàm,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,dao_ham_quy_tac,Quy tắc đạo hàm,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,dao_ham_quy_tac,Quy tắc đạo hàm,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,dao_ham_quy_tac,Quy tắc đạo hàm,5,kho,ly_thuyet,dung_sai,,,,False
+11,dao_ham_quy_tac,Quy tắc đạo hàm,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,ung_dung_dao_ham_11,Ứng dụng đạo hàm,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,ung_dung_dao_ham_11,Ứng dụng đạo hàm,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,ung_dung_dao_ham_11,Ứng dụng đạo hàm,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,ung_dung_dao_ham_11,Ứng dụng đạo hàm,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,ung_dung_dao_ham_11,Ứng dụng đạo hàm,5,kho,ly_thuyet,dung_sai,,,,False
+11,ung_dung_dao_ham_11,Ứng dụng đạo hàm,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,song_song_khong_gian,Quan hệ song song trong không gian,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,song_song_khong_gian,Quan hệ song song trong không gian,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,song_song_khong_gian,Quan hệ song song trong không gian,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,song_song_khong_gian,Quan hệ song song trong không gian,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,song_song_khong_gian,Quan hệ song song trong không gian,5,kho,ly_thuyet,dung_sai,,,,False
+11,song_song_khong_gian,Quan hệ song song trong không gian,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,vuong_goc_khong_gian,Quan hệ vuông góc trong không gian,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,vuong_goc_khong_gian,Quan hệ vuông góc trong không gian,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,vuong_goc_khong_gian,Quan hệ vuông góc trong không gian,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,vuong_goc_khong_gian,Quan hệ vuông góc trong không gian,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,vuong_goc_khong_gian,Quan hệ vuông góc trong không gian,5,kho,ly_thuyet,dung_sai,,,,False
+11,vuong_goc_khong_gian,Quan hệ vuông góc trong không gian,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,goc_khoang_cach_11,Góc và khoảng cách trong không gian,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,goc_khoang_cach_11,Góc và khoảng cách trong không gian,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,goc_khoang_cach_11,Góc và khoảng cách trong không gian,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,goc_khoang_cach_11,Góc và khoảng cách trong không gian,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,goc_khoang_cach_11,Góc và khoảng cách trong không gian,5,kho,ly_thuyet,dung_sai,,,,False
+11,goc_khoang_cach_11,Góc và khoảng cách trong không gian,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,thong_ke_11,Thống kê Toán 11,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,thong_ke_11,Thống kê Toán 11,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,thong_ke_11,Thống kê Toán 11,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,thong_ke_11,Thống kê Toán 11,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,thong_ke_11,Thống kê Toán 11,5,kho,ly_thuyet,dung_sai,,,,False
+11,thong_ke_11,Thống kê Toán 11,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,bai_toan_thuc_te_11,Bài toán thực tế Toán 11,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,bai_toan_thuc_te_11,Bài toán thực tế Toán 11,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,bai_toan_thuc_te_11,Bài toán thực tế Toán 11,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,bai_toan_thuc_te_11,Bài toán thực tế Toán 11,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,bai_toan_thuc_te_11,Bài toán thực tế Toán 11,5,kho,ly_thuyet,dung_sai,,,,False
+11,bai_toan_thuc_te_11,Bài toán thực tế Toán 11,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,to_hop_xac_suat_nang_cao_11,Tổ hợp và xác suất nâng cao,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,to_hop_xac_suat_nang_cao_11,Tổ hợp và xác suất nâng cao,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,to_hop_xac_suat_nang_cao_11,Tổ hợp và xác suất nâng cao,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,to_hop_xac_suat_nang_cao_11,Tổ hợp và xác suất nâng cao,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,to_hop_xac_suat_nang_cao_11,Tổ hợp và xác suất nâng cao,5,kho,ly_thuyet,dung_sai,,,,False
+11,to_hop_xac_suat_nang_cao_11,Tổ hợp và xác suất nâng cao,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,bien_co_doc_lap_11,Biến cố độc lập và xác suất có điều kiện,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,bien_co_doc_lap_11,Biến cố độc lập và xác suất có điều kiện,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,bien_co_doc_lap_11,Biến cố độc lập và xác suất có điều kiện,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,bien_co_doc_lap_11,Biến cố độc lập và xác suất có điều kiện,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,bien_co_doc_lap_11,Biến cố độc lập và xác suất có điều kiện,5,kho,ly_thuyet,dung_sai,,,,False
+11,bien_co_doc_lap_11,Biến cố độc lập và xác suất có điều kiện,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,day_so_truy_hoi_11,Dãy số truy hồi,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,day_so_truy_hoi_11,Dãy số truy hồi,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,day_so_truy_hoi_11,Dãy số truy hồi,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,day_so_truy_hoi_11,Dãy số truy hồi,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,day_so_truy_hoi_11,Dãy số truy hồi,5,kho,ly_thuyet,dung_sai,,,,False
+11,day_so_truy_hoi_11,Dãy số truy hồi,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,quy_nap_toan_hoc_11,Quy nạp toán học,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,quy_nap_toan_hoc_11,Quy nạp toán học,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,quy_nap_toan_hoc_11,Quy nạp toán học,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,quy_nap_toan_hoc_11,Quy nạp toán học,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,quy_nap_toan_hoc_11,Quy nạp toán học,5,kho,ly_thuyet,dung_sai,,,,False
+11,quy_nap_toan_hoc_11,Quy nạp toán học,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,phep_bien_hinh_11,Phép biến hình trong mặt phẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,phep_bien_hinh_11,Phép biến hình trong mặt phẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,phep_bien_hinh_11,Phép biến hình trong mặt phẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,phep_bien_hinh_11,Phép biến hình trong mặt phẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,phep_bien_hinh_11,Phép biến hình trong mặt phẳng,5,kho,ly_thuyet,dung_sai,,,,False
+11,phep_bien_hinh_11,Phép biến hình trong mặt phẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,thiet_dien_hinh_khong_gian_11,Thiết diện hình không gian,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,thiet_dien_hinh_khong_gian_11,Thiết diện hình không gian,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,thiet_dien_hinh_khong_gian_11,Thiết diện hình không gian,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,thiet_dien_hinh_khong_gian_11,Thiết diện hình không gian,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,thiet_dien_hinh_khong_gian_11,Thiết diện hình không gian,5,kho,ly_thuyet,dung_sai,,,,False
+11,thiet_dien_hinh_khong_gian_11,Thiết diện hình không gian,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,bai_toan_thuc_te_tong_hop_11,Bài toán thực tế tổng hợp Toán 11,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,bai_toan_thuc_te_tong_hop_11,Bài toán thực tế tổng hợp Toán 11,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,bai_toan_thuc_te_tong_hop_11,Bài toán thực tế tổng hợp Toán 11,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,bai_toan_thuc_te_tong_hop_11,Bài toán thực tế tổng hợp Toán 11,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,bai_toan_thuc_te_tong_hop_11,Bài toán thực tế tổng hợp Toán 11,5,kho,ly_thuyet,dung_sai,,,,False
+11,bai_toan_thuc_te_tong_hop_11,Bài toán thực tế tổng hợp Toán 11,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,phep_bien_hinh_co_ban_11,Phép biến hình cơ bản,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,phep_bien_hinh_co_ban_11,Phép biến hình cơ bản,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,phep_bien_hinh_co_ban_11,Phép biến hình cơ bản,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,phep_bien_hinh_co_ban_11,Phép biến hình cơ bản,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,phep_bien_hinh_co_ban_11,Phép biến hình cơ bản,5,kho,ly_thuyet,dung_sai,,,,False
+11,phep_bien_hinh_co_ban_11,Phép biến hình cơ bản,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,nhan_biet_hinh_khong_gian_11,Nhận biết hình học không gian,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,nhan_biet_hinh_khong_gian_11,Nhận biết hình học không gian,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,nhan_biet_hinh_khong_gian_11,Nhận biết hình học không gian,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,nhan_biet_hinh_khong_gian_11,Nhận biết hình học không gian,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,nhan_biet_hinh_khong_gian_11,Nhận biết hình học không gian,5,kho,ly_thuyet,dung_sai,,,,False
+11,nhan_biet_hinh_khong_gian_11,Nhận biết hình học không gian,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_transform_translation,Phép tịnh tiến và ảnh của hình,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_transform_translation,Phép tịnh tiến và ảnh của hình,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_transform_translation,Phép tịnh tiến và ảnh của hình,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_transform_translation,Phép tịnh tiến và ảnh của hình,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_transform_translation,Phép tịnh tiến và ảnh của hình,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_transform_translation,Phép tịnh tiến và ảnh của hình,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_transform_reflection,Phép đối xứng trục,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_transform_reflection,Phép đối xứng trục,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_transform_reflection,Phép đối xứng trục,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_transform_reflection,Phép đối xứng trục,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_transform_reflection,Phép đối xứng trục,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_transform_reflection,Phép đối xứng trục,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_space_lines_planes,Nhận biết đường thẳng và mặt phẳng trong không gian,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_space_lines_planes,Nhận biết đường thẳng và mặt phẳng trong không gian,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_space_lines_planes,Nhận biết đường thẳng và mặt phẳng trong không gian,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_space_lines_planes,Nhận biết đường thẳng và mặt phẳng trong không gian,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_space_lines_planes,Nhận biết đường thẳng và mặt phẳng trong không gian,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_space_lines_planes,Nhận biết đường thẳng và mặt phẳng trong không gian,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_parallel_line_plane,Đường thẳng song song với mặt phẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_parallel_line_plane,Đường thẳng song song với mặt phẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_parallel_line_plane,Đường thẳng song song với mặt phẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_parallel_line_plane,Đường thẳng song song với mặt phẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_parallel_line_plane,Đường thẳng song song với mặt phẳng,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_parallel_line_plane,Đường thẳng song song với mặt phẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_prism_pyramid_sections,"Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_prism_pyramid_sections,"Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_prism_pyramid_sections,"Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_prism_pyramid_sections,"Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_prism_pyramid_sections,"Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_prism_pyramid_sections,"Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_rotation_homothety,Phép quay và phép vị tự,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_rotation_homothety,Phép quay và phép vị tự,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_rotation_homothety,Phép quay và phép vị tự,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_rotation_homothety,Phép quay và phép vị tự,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_rotation_homothety,Phép quay và phép vị tự,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_rotation_homothety,Phép quay và phép vị tự,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_parallel_planes,Hai mặt phẳng song song,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_parallel_planes,Hai mặt phẳng song song,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_parallel_planes,Hai mặt phẳng song song,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_parallel_planes,Hai mặt phẳng song song,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_parallel_planes,Hai mặt phẳng song song,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_parallel_planes,Hai mặt phẳng song song,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_perpendicular_line_plane,Đường thẳng vuông góc với mặt phẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_perpendicular_line_plane,Đường thẳng vuông góc với mặt phẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_perpendicular_line_plane,Đường thẳng vuông góc với mặt phẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_perpendicular_line_plane,Đường thẳng vuông góc với mặt phẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_perpendicular_line_plane,Đường thẳng vuông góc với mặt phẳng,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_perpendicular_line_plane,Đường thẳng vuông góc với mặt phẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_dihedral_angles,Góc giữa đường thẳng và mặt phẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_dihedral_angles,Góc giữa đường thẳng và mặt phẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_dihedral_angles,Góc giữa đường thẳng và mặt phẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_dihedral_angles,Góc giữa đường thẳng và mặt phẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_dihedral_angles,Góc giữa đường thẳng và mặt phẳng,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_dihedral_angles,Góc giữa đường thẳng và mặt phẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_section_construction,Dựng thiết diện của hình chóp và lăng trụ,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_section_construction,Dựng thiết diện của hình chóp và lăng trụ,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_section_construction,Dựng thiết diện của hình chóp và lăng trụ,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_section_construction,Dựng thiết diện của hình chóp và lăng trụ,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_section_construction,Dựng thiết diện của hình chóp và lăng trụ,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_section_construction,Dựng thiết diện của hình chóp và lăng trụ,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_skew_lines_distance,Khoảng cách giữa hai đường thẳng chéo nhau,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_skew_lines_distance,Khoảng cách giữa hai đường thẳng chéo nhau,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_skew_lines_distance,Khoảng cách giữa hai đường thẳng chéo nhau,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_skew_lines_distance,Khoảng cách giữa hai đường thẳng chéo nhau,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_skew_lines_distance,Khoảng cách giữa hai đường thẳng chéo nhau,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_skew_lines_distance,Khoảng cách giữa hai đường thẳng chéo nhau,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_three_perpendiculars,Định lý ba đường vuông góc,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_three_perpendiculars,Định lý ba đường vuông góc,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_three_perpendiculars,Định lý ba đường vuông góc,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_three_perpendiculars,Định lý ba đường vuông góc,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_three_perpendiculars,Định lý ba đường vuông góc,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_three_perpendiculars,Định lý ba đường vuông góc,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_transform_composition,Hợp thành các phép biến hình,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_transform_composition,Hợp thành các phép biến hình,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_transform_composition,Hợp thành các phép biến hình,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_transform_composition,Hợp thành các phép biến hình,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_transform_composition,Hợp thành các phép biến hình,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_transform_composition,Hợp thành các phép biến hình,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_section_ratio,Thiết diện và tỉ số đoạn trong hình không gian,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_section_ratio,Thiết diện và tỉ số đoạn trong hình không gian,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_section_ratio,Thiết diện và tỉ số đoạn trong hình không gian,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_section_ratio,Thiết diện và tỉ số đoạn trong hình không gian,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_section_ratio,Thiết diện và tỉ số đoạn trong hình không gian,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_section_ratio,Thiết diện và tỉ số đoạn trong hình không gian,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_geom_space_proof,Chứng minh tổng hợp song song và vuông góc,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_space_proof,Chứng minh tổng hợp song song và vuông góc,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_geom_space_proof,Chứng minh tổng hợp song song và vuông góc,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_geom_space_proof,Chứng minh tổng hợp song song và vuông góc,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_geom_space_proof,Chứng minh tổng hợp song song và vuông góc,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_geom_space_proof,Chứng minh tổng hợp song song và vuông góc,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,ung_dung_dao_ham,Ứng dụng đạo hàm,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,ung_dung_dao_ham,Ứng dụng đạo hàm,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,ung_dung_dao_ham,Ứng dụng đạo hàm,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,ung_dung_dao_ham,Ứng dụng đạo hàm,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,ung_dung_dao_ham,Ứng dụng đạo hàm,5,kho,ly_thuyet,dung_sai,,,,False
+12,ung_dung_dao_ham,Ứng dụng đạo hàm,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,khao_sat_ham_so,Khảo sát và vẽ đồ thị hàm số,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,khao_sat_ham_so,Khảo sát và vẽ đồ thị hàm số,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,khao_sat_ham_so,Khảo sát và vẽ đồ thị hàm số,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,khao_sat_ham_so,Khảo sát và vẽ đồ thị hàm số,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,khao_sat_ham_so,Khảo sát và vẽ đồ thị hàm số,5,kho,ly_thuyet,dung_sai,,,,False
+12,khao_sat_ham_so,Khảo sát và vẽ đồ thị hàm số,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,nguyen_ham_tich_phan,Nguyên hàm và tích phân,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,nguyen_ham_tich_phan,Nguyên hàm và tích phân,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,nguyen_ham_tich_phan,Nguyên hàm và tích phân,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,nguyen_ham_tich_phan,Nguyên hàm và tích phân,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,nguyen_ham_tich_phan,Nguyên hàm và tích phân,5,kho,ly_thuyet,dung_sai,,,,False
+12,nguyen_ham_tich_phan,Nguyên hàm và tích phân,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,so_phuc,Số phức,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,so_phuc,Số phức,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,so_phuc,Số phức,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,so_phuc,Số phức,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,so_phuc,Số phức,5,kho,ly_thuyet,dung_sai,,,,False
+12,so_phuc,Số phức,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,hinh_hoc_khong_gian,Hình học không gian,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,hinh_hoc_khong_gian,Hình học không gian,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,hinh_hoc_khong_gian,Hình học không gian,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,hinh_hoc_khong_gian,Hình học không gian,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,hinh_hoc_khong_gian,Hình học không gian,5,kho,ly_thuyet,dung_sai,,,,False
+12,hinh_hoc_khong_gian,Hình học không gian,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,toa_do_khong_gian,Tọa độ trong không gian,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,toa_do_khong_gian,Tọa độ trong không gian,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,toa_do_khong_gian,Tọa độ trong không gian,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,toa_do_khong_gian,Tọa độ trong không gian,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,toa_do_khong_gian,Tọa độ trong không gian,5,kho,ly_thuyet,dung_sai,,,,False
+12,toa_do_khong_gian,Tọa độ trong không gian,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,xac_suat_12,Xác suất và biến ngẫu nhiên,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,xac_suat_12,Xác suất và biến ngẫu nhiên,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,xac_suat_12,Xác suất và biến ngẫu nhiên,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,xac_suat_12,Xác suất và biến ngẫu nhiên,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,xac_suat_12,Xác suất và biến ngẫu nhiên,5,kho,ly_thuyet,dung_sai,,,,False
+12,xac_suat_12,Xác suất và biến ngẫu nhiên,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,thong_ke_12,Các số đặc trưng đo xu thế và độ phân tán,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,thong_ke_12,Các số đặc trưng đo xu thế và độ phân tán,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,thong_ke_12,Các số đặc trưng đo xu thế và độ phân tán,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,thong_ke_12,Các số đặc trưng đo xu thế và độ phân tán,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,thong_ke_12,Các số đặc trưng đo xu thế và độ phân tán,5,kho,ly_thuyet,dung_sai,,,,False
+12,thong_ke_12,Các số đặc trưng đo xu thế và độ phân tán,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,tinh_don_dieu,Tính đơn điệu,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,tinh_don_dieu,Tính đơn điệu,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,tinh_don_dieu,Tính đơn điệu,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,tinh_don_dieu,Tính đơn điệu,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,tinh_don_dieu,Tính đơn điệu,5,kho,ly_thuyet,dung_sai,,,,False
+12,tinh_don_dieu,Tính đơn điệu,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,cuc_tri,Cực trị,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,cuc_tri,Cực trị,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,cuc_tri,Cực trị,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,cuc_tri,Cực trị,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,cuc_tri,Cực trị,5,kho,ly_thuyet,dung_sai,,,,False
+12,cuc_tri,Cực trị,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,gtln_gtnn,Giá trị lớn nhất và nhỏ nhất,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,gtln_gtnn,Giá trị lớn nhất và nhỏ nhất,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,gtln_gtnn,Giá trị lớn nhất và nhỏ nhất,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,gtln_gtnn,Giá trị lớn nhất và nhỏ nhất,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,gtln_gtnn,Giá trị lớn nhất và nhỏ nhất,5,kho,ly_thuyet,dung_sai,,,,False
+12,gtln_gtnn,Giá trị lớn nhất và nhỏ nhất,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,tiep_tuyen,Tiếp tuyến,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,tiep_tuyen,Tiếp tuyến,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,tiep_tuyen,Tiếp tuyến,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,tiep_tuyen,Tiếp tuyến,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,tiep_tuyen,Tiếp tuyến,5,kho,ly_thuyet,dung_sai,,,,False
+12,tiep_tuyen,Tiếp tuyến,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,tien_can,Tiệm cận,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,tien_can,Tiệm cận,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,tien_can,Tiệm cận,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,tien_can,Tiệm cận,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,tien_can,Tiệm cận,5,kho,ly_thuyet,dung_sai,,,,False
+12,tien_can,Tiệm cận,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,tuong_giao,Tương giao đồ thị,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,tuong_giao,Tương giao đồ thị,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,tuong_giao,Tương giao đồ thị,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,tuong_giao,Tương giao đồ thị,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,tuong_giao,Tương giao đồ thị,5,kho,ly_thuyet,dung_sai,,,,False
+12,tuong_giao,Tương giao đồ thị,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,ham_mu,Hàm số mũ,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,ham_mu,Hàm số mũ,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,ham_mu,Hàm số mũ,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,ham_mu,Hàm số mũ,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,ham_mu,Hàm số mũ,5,kho,ly_thuyet,dung_sai,,,,False
+12,ham_mu,Hàm số mũ,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,ham_logarit,Hàm số logarit,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,ham_logarit,Hàm số logarit,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,ham_logarit,Hàm số logarit,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,ham_logarit,Hàm số logarit,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,ham_logarit,Hàm số logarit,5,kho,ly_thuyet,dung_sai,,,,False
+12,ham_logarit,Hàm số logarit,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,pt_mu,Phương trình mũ,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,pt_mu,Phương trình mũ,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,pt_mu,Phương trình mũ,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,pt_mu,Phương trình mũ,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,pt_mu,Phương trình mũ,5,kho,ly_thuyet,dung_sai,,,,False
+12,pt_mu,Phương trình mũ,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,pt_logarit,Phương trình logarit,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,pt_logarit,Phương trình logarit,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,pt_logarit,Phương trình logarit,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,pt_logarit,Phương trình logarit,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,pt_logarit,Phương trình logarit,5,kho,ly_thuyet,dung_sai,,,,False
+12,pt_logarit,Phương trình logarit,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,bpt_mu,Bất phương trình mũ,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,bpt_mu,Bất phương trình mũ,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,bpt_mu,Bất phương trình mũ,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,bpt_mu,Bất phương trình mũ,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,bpt_mu,Bất phương trình mũ,5,kho,ly_thuyet,dung_sai,,,,False
+12,bpt_mu,Bất phương trình mũ,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,bpt_logarit,Bất phương trình logarit,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,bpt_logarit,Bất phương trình logarit,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,bpt_logarit,Bất phương trình logarit,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,bpt_logarit,Bất phương trình logarit,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,bpt_logarit,Bất phương trình logarit,5,kho,ly_thuyet,dung_sai,,,,False
+12,bpt_logarit,Bất phương trình logarit,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,ung_dung_tich_phan,Ứng dụng tích phân,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,ung_dung_tich_phan,Ứng dụng tích phân,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,ung_dung_tich_phan,Ứng dụng tích phân,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,ung_dung_tich_phan,Ứng dụng tích phân,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,ung_dung_tich_phan,Ứng dụng tích phân,5,kho,ly_thuyet,dung_sai,,,,False
+12,ung_dung_tich_phan,Ứng dụng tích phân,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,bieu_dien_so_phuc,Biểu diễn số phức,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,bieu_dien_so_phuc,Biểu diễn số phức,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,bieu_dien_so_phuc,Biểu diễn số phức,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,bieu_dien_so_phuc,Biểu diễn số phức,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,bieu_dien_so_phuc,Biểu diễn số phức,5,kho,ly_thuyet,dung_sai,,,,False
+12,bieu_dien_so_phuc,Biểu diễn số phức,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,pt_so_phuc,Phương trình số phức,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,pt_so_phuc,Phương trình số phức,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,pt_so_phuc,Phương trình số phức,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,pt_so_phuc,Phương trình số phức,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,pt_so_phuc,Phương trình số phức,5,kho,ly_thuyet,dung_sai,,,,False
+12,pt_so_phuc,Phương trình số phức,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,mat_phang_oxyz,Mặt phẳng trong Oxyz,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,mat_phang_oxyz,Mặt phẳng trong Oxyz,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,mat_phang_oxyz,Mặt phẳng trong Oxyz,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,mat_phang_oxyz,Mặt phẳng trong Oxyz,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,mat_phang_oxyz,Mặt phẳng trong Oxyz,5,kho,ly_thuyet,dung_sai,,,,False
+12,mat_phang_oxyz,Mặt phẳng trong Oxyz,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,duong_thang_oxyz,Đường thẳng trong Oxyz,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,duong_thang_oxyz,Đường thẳng trong Oxyz,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,duong_thang_oxyz,Đường thẳng trong Oxyz,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,duong_thang_oxyz,Đường thẳng trong Oxyz,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,duong_thang_oxyz,Đường thẳng trong Oxyz,5,kho,ly_thuyet,dung_sai,,,,False
+12,duong_thang_oxyz,Đường thẳng trong Oxyz,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,mat_cau,Mặt cầu,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,mat_cau,Mặt cầu,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,mat_cau,Mặt cầu,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,mat_cau,Mặt cầu,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,mat_cau,Mặt cầu,5,kho,ly_thuyet,dung_sai,,,,False
+12,mat_cau,Mặt cầu,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,goc_khoang_cach_oxyz,Góc và khoảng cách Oxyz,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,goc_khoang_cach_oxyz,Góc và khoảng cách Oxyz,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,goc_khoang_cach_oxyz,Góc và khoảng cách Oxyz,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,goc_khoang_cach_oxyz,Góc và khoảng cách Oxyz,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,goc_khoang_cach_oxyz,Góc và khoảng cách Oxyz,5,kho,ly_thuyet,dung_sai,,,,False
+12,goc_khoang_cach_oxyz,Góc và khoảng cách Oxyz,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,the_tich_khong_gian,Thể tích hình học không gian,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,the_tich_khong_gian,Thể tích hình học không gian,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,the_tich_khong_gian,Thể tích hình học không gian,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,the_tich_khong_gian,Thể tích hình học không gian,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,the_tich_khong_gian,Thể tích hình học không gian,5,kho,ly_thuyet,dung_sai,,,,False
+12,the_tich_khong_gian,Thể tích hình học không gian,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,tong_hop_thpt,Bài toán tổng hợp THPT,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,tong_hop_thpt,Bài toán tổng hợp THPT,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,tong_hop_thpt,Bài toán tổng hợp THPT,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,tong_hop_thpt,Bài toán tổng hợp THPT,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,tong_hop_thpt,Bài toán tổng hợp THPT,5,kho,ly_thuyet,dung_sai,,,,False
+12,tong_hop_thpt,Bài toán tổng hợp THPT,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,bai_toan_thuc_te_12,Bài toán thực tế Toán 12,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,bai_toan_thuc_te_12,Bài toán thực tế Toán 12,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,bai_toan_thuc_te_12,Bài toán thực tế Toán 12,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,bai_toan_thuc_te_12,Bài toán thực tế Toán 12,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,bai_toan_thuc_te_12,Bài toán thực tế Toán 12,5,kho,ly_thuyet,dung_sai,,,,False
+12,bai_toan_thuc_te_12,Bài toán thực tế Toán 12,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,hinh_khoi_va_the_tich_co_ban_12,Hình khối và thể tích cơ bản,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,hinh_khoi_va_the_tich_co_ban_12,Hình khối và thể tích cơ bản,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,hinh_khoi_va_the_tich_co_ban_12,Hình khối và thể tích cơ bản,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,hinh_khoi_va_the_tich_co_ban_12,Hình khối và thể tích cơ bản,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,hinh_khoi_va_the_tich_co_ban_12,Hình khối và thể tích cơ bản,5,kho,ly_thuyet,dung_sai,,,,False
+12,hinh_khoi_va_the_tich_co_ban_12,Hình khối và thể tích cơ bản,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,hinh_hoc_oxyz_van_dung_12,Vận dụng tọa độ Oxyz,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,hinh_hoc_oxyz_van_dung_12,Vận dụng tọa độ Oxyz,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,hinh_hoc_oxyz_van_dung_12,Vận dụng tọa độ Oxyz,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,hinh_hoc_oxyz_van_dung_12,Vận dụng tọa độ Oxyz,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,hinh_hoc_oxyz_van_dung_12,Vận dụng tọa độ Oxyz,5,kho,ly_thuyet,dung_sai,,,,False
+12,hinh_hoc_oxyz_van_dung_12,Vận dụng tọa độ Oxyz,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_vectors_3d,Vectơ và độ dài trong không gian Oxyz,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_vectors_3d,Vectơ và độ dài trong không gian Oxyz,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_vectors_3d,Vectơ và độ dài trong không gian Oxyz,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_vectors_3d,Vectơ và độ dài trong không gian Oxyz,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_vectors_3d,Vectơ và độ dài trong không gian Oxyz,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_vectors_3d,Vectơ và độ dài trong không gian Oxyz,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_plane_equation,Phương trình mặt phẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_plane_equation,Phương trình mặt phẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_plane_equation,Phương trình mặt phẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_plane_equation,Phương trình mặt phẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_plane_equation,Phương trình mặt phẳng,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_plane_equation,Phương trình mặt phẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_line_equation_3d,Phương trình đường thẳng trong Oxyz,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_line_equation_3d,Phương trình đường thẳng trong Oxyz,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_line_equation_3d,Phương trình đường thẳng trong Oxyz,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_line_equation_3d,Phương trình đường thẳng trong Oxyz,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_line_equation_3d,Phương trình đường thẳng trong Oxyz,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_line_equation_3d,Phương trình đường thẳng trong Oxyz,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_sphere_equation,Phương trình mặt cầu và tâm bán kính,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_sphere_equation,Phương trình mặt cầu và tâm bán kính,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_sphere_equation,Phương trình mặt cầu và tâm bán kính,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_sphere_equation,Phương trình mặt cầu và tâm bán kính,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_sphere_equation,Phương trình mặt cầu và tâm bán kính,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_sphere_equation,Phương trình mặt cầu và tâm bán kính,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_solid_surface_area,Diện tích xung quanh và toàn phần hình khối,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_solid_surface_area,Diện tích xung quanh và toàn phần hình khối,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_solid_surface_area,Diện tích xung quanh và toàn phần hình khối,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_solid_surface_area,Diện tích xung quanh và toàn phần hình khối,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_solid_surface_area,Diện tích xung quanh và toàn phần hình khối,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_solid_surface_area,Diện tích xung quanh và toàn phần hình khối,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_point_plane_distance,Khoảng cách từ điểm đến mặt phẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_point_plane_distance,Khoảng cách từ điểm đến mặt phẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_point_plane_distance,Khoảng cách từ điểm đến mặt phẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_point_plane_distance,Khoảng cách từ điểm đến mặt phẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_point_plane_distance,Khoảng cách từ điểm đến mặt phẳng,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_point_plane_distance,Khoảng cách từ điểm đến mặt phẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_line_plane_angle,Góc giữa đường thẳng và mặt phẳng Oxyz,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_line_plane_angle,Góc giữa đường thẳng và mặt phẳng Oxyz,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_line_plane_angle,Góc giữa đường thẳng và mặt phẳng Oxyz,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_line_plane_angle,Góc giữa đường thẳng và mặt phẳng Oxyz,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_line_plane_angle,Góc giữa đường thẳng và mặt phẳng Oxyz,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_line_plane_angle,Góc giữa đường thẳng và mặt phẳng Oxyz,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_two_planes_angle,Góc giữa hai mặt phẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_two_planes_angle,Góc giữa hai mặt phẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_two_planes_angle,Góc giữa hai mặt phẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_two_planes_angle,Góc giữa hai mặt phẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_two_planes_angle,Góc giữa hai mặt phẳng,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_two_planes_angle,Góc giữa hai mặt phẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_line_plane_intersection,Giao điểm đường thẳng và mặt phẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_line_plane_intersection,Giao điểm đường thẳng và mặt phẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_line_plane_intersection,Giao điểm đường thẳng và mặt phẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_line_plane_intersection,Giao điểm đường thẳng và mặt phẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_line_plane_intersection,Giao điểm đường thẳng và mặt phẳng,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_line_plane_intersection,Giao điểm đường thẳng và mặt phẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_sphere_tangent_plane,Mặt phẳng tiếp xúc với mặt cầu,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_sphere_tangent_plane,Mặt phẳng tiếp xúc với mặt cầu,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_sphere_tangent_plane,Mặt phẳng tiếp xúc với mặt cầu,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_sphere_tangent_plane,Mặt phẳng tiếp xúc với mặt cầu,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_sphere_tangent_plane,Mặt phẳng tiếp xúc với mặt cầu,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_sphere_tangent_plane,Mặt phẳng tiếp xúc với mặt cầu,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_skew_line_relation,Vị trí tương đối của hai đường thẳng trong Oxyz,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_skew_line_relation,Vị trí tương đối của hai đường thẳng trong Oxyz,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_skew_line_relation,Vị trí tương đối của hai đường thẳng trong Oxyz,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_skew_line_relation,Vị trí tương đối của hai đường thẳng trong Oxyz,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_skew_line_relation,Vị trí tương đối của hai đường thẳng trong Oxyz,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_skew_line_relation,Vị trí tương đối của hai đường thẳng trong Oxyz,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_min_distance_3d,Cực trị khoảng cách trong không gian tọa độ,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_min_distance_3d,Cực trị khoảng cách trong không gian tọa độ,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_min_distance_3d,Cực trị khoảng cách trong không gian tọa độ,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_min_distance_3d,Cực trị khoảng cách trong không gian tọa độ,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_min_distance_3d,Cực trị khoảng cách trong không gian tọa độ,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_min_distance_3d,Cực trị khoảng cách trong không gian tọa độ,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_sphere_plane_intersection,Giao tuyến mặt cầu và mặt phẳng,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_sphere_plane_intersection,Giao tuyến mặt cầu và mặt phẳng,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_sphere_plane_intersection,Giao tuyến mặt cầu và mặt phẳng,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_sphere_plane_intersection,Giao tuyến mặt cầu và mặt phẳng,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_sphere_plane_intersection,Giao tuyến mặt cầu và mặt phẳng,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_sphere_plane_intersection,Giao tuyến mặt cầu và mặt phẳng,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_parameter_geometry,Bài toán tham số hình học Oxyz,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_parameter_geometry,Bài toán tham số hình học Oxyz,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_parameter_geometry,Bài toán tham số hình học Oxyz,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_parameter_geometry,Bài toán tham số hình học Oxyz,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_parameter_geometry,Bài toán tham số hình học Oxyz,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_parameter_geometry,Bài toán tham số hình học Oxyz,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_geom_3d_optimization,Bài toán tối ưu hình học không gian,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_3d_optimization,Bài toán tối ưu hình học không gian,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_geom_3d_optimization,Bài toán tối ưu hình học không gian,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_geom_3d_optimization,Bài toán tối ưu hình học không gian,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_geom_3d_optimization,Bài toán tối ưu hình học không gian,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_geom_3d_optimization,Bài toán tối ưu hình học không gian,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_advanced_inequalities,Bất đẳng thức đại số và cực trị nâng cao,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_advanced_inequalities,Bất đẳng thức đại số và cực trị nâng cao,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_advanced_inequalities,Bất đẳng thức đại số và cực trị nâng cao,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_advanced_inequalities,Bất đẳng thức đại số và cực trị nâng cao,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_advanced_inequalities,Bất đẳng thức đại số và cực trị nâng cao,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_advanced_inequalities,Bất đẳng thức đại số và cực trị nâng cao,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_symmetric_systems,Hệ phương trình đối xứng và hoán vị,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_symmetric_systems,Hệ phương trình đối xứng và hoán vị,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_symmetric_systems,Hệ phương trình đối xứng và hoán vị,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_symmetric_systems,Hệ phương trình đối xứng và hoán vị,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_symmetric_systems,Hệ phương trình đối xứng và hoán vị,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_symmetric_systems,Hệ phương trình đối xứng và hoán vị,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_radical_equations_advanced,Phương trình chứa căn thức nâng cao,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_radical_equations_advanced,Phương trình chứa căn thức nâng cao,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_radical_equations_advanced,Phương trình chứa căn thức nâng cao,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_radical_equations_advanced,Phương trình chứa căn thức nâng cao,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_radical_equations_advanced,Phương trình chứa căn thức nâng cao,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_radical_equations_advanced,Phương trình chứa căn thức nâng cao,6,kho,thuc_te,tra_loi_ngan,,,,False
+10,g10_combinatorics_olympiad,Tổ hợp và nguyên lý Dirichlet nâng cao,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+10,g10_combinatorics_olympiad,Tổ hợp và nguyên lý Dirichlet nâng cao,2,nen_tang,ly_thuyet,dung_sai,,,,False
+10,g10_combinatorics_olympiad,Tổ hợp và nguyên lý Dirichlet nâng cao,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+10,g10_combinatorics_olympiad,Tổ hợp và nguyên lý Dirichlet nâng cao,4,trung_cap,thuc_te,trac_nghiem,,,,False
+10,g10_combinatorics_olympiad,Tổ hợp và nguyên lý Dirichlet nâng cao,5,kho,ly_thuyet,dung_sai,,,,False
+10,g10_combinatorics_olympiad,Tổ hợp và nguyên lý Dirichlet nâng cao,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_advanced_trig_equations,Phương trình lượng giác nâng cao,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_advanced_trig_equations,Phương trình lượng giác nâng cao,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_advanced_trig_equations,Phương trình lượng giác nâng cao,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_advanced_trig_equations,Phương trình lượng giác nâng cao,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_advanced_trig_equations,Phương trình lượng giác nâng cao,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_advanced_trig_equations,Phương trình lượng giác nâng cao,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_sequences_advanced,Dãy số truy hồi và bài toán cực trị,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_sequences_advanced,Dãy số truy hồi và bài toán cực trị,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_sequences_advanced,Dãy số truy hồi và bài toán cực trị,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_sequences_advanced,Dãy số truy hồi và bài toán cực trị,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_sequences_advanced,Dãy số truy hồi và bài toán cực trị,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_sequences_advanced,Dãy số truy hồi và bài toán cực trị,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_binomial_advanced,Nhị thức Newton và hệ số tổ hợp nâng cao,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_binomial_advanced,Nhị thức Newton và hệ số tổ hợp nâng cao,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_binomial_advanced,Nhị thức Newton và hệ số tổ hợp nâng cao,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_binomial_advanced,Nhị thức Newton và hệ số tổ hợp nâng cao,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_binomial_advanced,Nhị thức Newton và hệ số tổ hợp nâng cao,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_binomial_advanced,Nhị thức Newton và hệ số tổ hợp nâng cao,6,kho,thuc_te,tra_loi_ngan,,,,False
+11,g11_conditional_probability_models,Mô hình xác suất có điều kiện,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+11,g11_conditional_probability_models,Mô hình xác suất có điều kiện,2,nen_tang,ly_thuyet,dung_sai,,,,False
+11,g11_conditional_probability_models,Mô hình xác suất có điều kiện,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+11,g11_conditional_probability_models,Mô hình xác suất có điều kiện,4,trung_cap,thuc_te,trac_nghiem,,,,False
+11,g11_conditional_probability_models,Mô hình xác suất có điều kiện,5,kho,ly_thuyet,dung_sai,,,,False
+11,g11_conditional_probability_models,Mô hình xác suất có điều kiện,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_complex_plane_geometry,Hình học số phức và quỹ tích,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_complex_plane_geometry,Hình học số phức và quỹ tích,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_complex_plane_geometry,Hình học số phức và quỹ tích,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_complex_plane_geometry,Hình học số phức và quỹ tích,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_complex_plane_geometry,Hình học số phức và quỹ tích,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_complex_plane_geometry,Hình học số phức và quỹ tích,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_integral_optimization,Tối ưu và cực trị bằng tích phân,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_integral_optimization,Tối ưu và cực trị bằng tích phân,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_integral_optimization,Tối ưu và cực trị bằng tích phân,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_integral_optimization,Tối ưu và cực trị bằng tích phân,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_integral_optimization,Tối ưu và cực trị bằng tích phân,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_integral_optimization,Tối ưu và cực trị bằng tích phân,6,kho,thuc_te,tra_loi_ngan,,,,False
+12,g12_solid_of_revolution,Thể tích khối tròn xoay và mô hình thực tế,1,nen_tang,ly_thuyet,trac_nghiem,,,,False
+12,g12_solid_of_revolution,Thể tích khối tròn xoay và mô hình thực tế,2,nen_tang,ly_thuyet,dung_sai,,,,False
+12,g12_solid_of_revolution,Thể tích khối tròn xoay và mô hình thực tế,3,trung_cap,ly_thuyet,trac_nghiem,,,,False
+12,g12_solid_of_revolution,Thể tích khối tròn xoay và mô hình thực tế,4,trung_cap,thuc_te,trac_nghiem,,,,False
+12,g12_solid_of_revolution,Thể tích khối tròn xoay và mô hình thực tế,5,kho,ly_thuyet,dung_sai,,,,False
+12,g12_solid_of_revolution,Thể tích khối tròn xoay và mô hình thực tế,6,kho,thuc_te,tra_loi_ngan,,,,False

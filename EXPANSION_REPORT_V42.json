@@ -1,0 +1,1418 @@
+{
+  "version": "V42",
+  "source": "V41",
+  "new_form_ids": 200,
+  "new_questions": 2000,
+  "total_form_ids": 1549,
+  "total_questions": 15500,
+  "new_questions_by_grade": {
+    "10": 700,
+    "11": 700,
+    "12": 600
+  },
+  "families": 20,
+  "note": "Form IDs are not proof of independently distinct mathematical methods. Existing code is copied without functional regression testing.",
+  "rejected": [],
+  "forms": [
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "form_id": "v42_quadratic_00",
+      "family": "quadratic",
+      "operation": 0
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "form_id": "v42_quadratic_01",
+      "family": "quadratic",
+      "operation": 1
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "form_id": "v42_quadratic_02",
+      "family": "quadratic",
+      "operation": 2
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "form_id": "v42_quadratic_03",
+      "family": "quadratic",
+      "operation": 3
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "form_id": "v42_quadratic_04",
+      "family": "quadratic",
+      "operation": 4
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "form_id": "v42_quadratic_05",
+      "family": "quadratic",
+      "operation": 5
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "form_id": "v42_quadratic_06",
+      "family": "quadratic",
+      "operation": 6
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "form_id": "v42_quadratic_07",
+      "family": "quadratic",
+      "operation": 7
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "form_id": "v42_quadratic_08",
+      "family": "quadratic",
+      "operation": 8
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "form_id": "v42_quadratic_09",
+      "family": "quadratic",
+      "operation": 9
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v42_vieta_00",
+      "family": "vieta",
+      "operation": 0
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v42_vieta_01",
+      "family": "vieta",
+      "operation": 1
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v42_vieta_02",
+      "family": "vieta",
+      "operation": 2
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v42_vieta_03",
+      "family": "vieta",
+      "operation": 3
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v42_vieta_04",
+      "family": "vieta",
+      "operation": 4
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v42_vieta_05",
+      "family": "vieta",
+      "operation": 5
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v42_vieta_06",
+      "family": "vieta",
+      "operation": 6
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v42_vieta_07",
+      "family": "vieta",
+      "operation": 7
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v42_vieta_08",
+      "family": "vieta",
+      "operation": 8
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v42_vieta_09",
+      "family": "vieta",
+      "operation": 9
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình",
+      "form_id": "v42_linear_00",
+      "family": "linear",
+      "operation": 0
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình",
+      "form_id": "v42_linear_01",
+      "family": "linear",
+      "operation": 1
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình",
+      "form_id": "v42_linear_02",
+      "family": "linear",
+      "operation": 2
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình",
+      "form_id": "v42_linear_03",
+      "family": "linear",
+      "operation": 3
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình",
+      "form_id": "v42_linear_04",
+      "family": "linear",
+      "operation": 4
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình",
+      "form_id": "v42_linear_05",
+      "family": "linear",
+      "operation": 5
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình",
+      "form_id": "v42_linear_06",
+      "family": "linear",
+      "operation": 6
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình",
+      "form_id": "v42_linear_07",
+      "family": "linear",
+      "operation": 7
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình",
+      "form_id": "v42_linear_08",
+      "family": "linear",
+      "operation": 8
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình",
+      "form_id": "v42_linear_09",
+      "family": "linear",
+      "operation": 9
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v42_sets_00",
+      "family": "sets",
+      "operation": 0
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v42_sets_01",
+      "family": "sets",
+      "operation": 1
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v42_sets_02",
+      "family": "sets",
+      "operation": 2
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v42_sets_03",
+      "family": "sets",
+      "operation": 3
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v42_sets_04",
+      "family": "sets",
+      "operation": 4
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v42_sets_05",
+      "family": "sets",
+      "operation": 5
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v42_sets_06",
+      "family": "sets",
+      "operation": 6
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v42_sets_07",
+      "family": "sets",
+      "operation": 7
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v42_sets_08",
+      "family": "sets",
+      "operation": 8
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v42_sets_09",
+      "family": "sets",
+      "operation": 9
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v42_coord_00",
+      "family": "coord",
+      "operation": 0
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v42_coord_01",
+      "family": "coord",
+      "operation": 1
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v42_coord_02",
+      "family": "coord",
+      "operation": 2
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v42_coord_03",
+      "family": "coord",
+      "operation": 3
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v42_coord_04",
+      "family": "coord",
+      "operation": 4
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v42_coord_05",
+      "family": "coord",
+      "operation": 5
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v42_coord_06",
+      "family": "coord",
+      "operation": 6
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v42_coord_07",
+      "family": "coord",
+      "operation": 7
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v42_coord_08",
+      "family": "coord",
+      "operation": 8
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v42_coord_09",
+      "family": "coord",
+      "operation": 9
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v42_comb_00",
+      "family": "comb",
+      "operation": 0
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v42_comb_01",
+      "family": "comb",
+      "operation": 1
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v42_comb_02",
+      "family": "comb",
+      "operation": 2
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v42_comb_03",
+      "family": "comb",
+      "operation": 3
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v42_comb_04",
+      "family": "comb",
+      "operation": 4
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v42_comb_05",
+      "family": "comb",
+      "operation": 5
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v42_comb_06",
+      "family": "comb",
+      "operation": 6
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v42_comb_07",
+      "family": "comb",
+      "operation": 7
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v42_comb_08",
+      "family": "comb",
+      "operation": 8
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v42_comb_09",
+      "family": "comb",
+      "operation": 9
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v42_stats_00",
+      "family": "stats",
+      "operation": 0
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v42_stats_01",
+      "family": "stats",
+      "operation": 1
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v42_stats_02",
+      "family": "stats",
+      "operation": 2
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v42_stats_03",
+      "family": "stats",
+      "operation": 3
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v42_stats_04",
+      "family": "stats",
+      "operation": 4
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v42_stats_05",
+      "family": "stats",
+      "operation": 5
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v42_stats_06",
+      "family": "stats",
+      "operation": 6
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v42_stats_07",
+      "family": "stats",
+      "operation": 7
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v42_stats_08",
+      "family": "stats",
+      "operation": 8
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v42_stats_09",
+      "family": "stats",
+      "operation": 9
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v42_ap_00",
+      "family": "ap",
+      "operation": 0
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v42_ap_01",
+      "family": "ap",
+      "operation": 1
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v42_ap_02",
+      "family": "ap",
+      "operation": 2
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v42_ap_03",
+      "family": "ap",
+      "operation": 3
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v42_ap_04",
+      "family": "ap",
+      "operation": 4
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v42_ap_05",
+      "family": "ap",
+      "operation": 5
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v42_ap_06",
+      "family": "ap",
+      "operation": 6
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v42_ap_07",
+      "family": "ap",
+      "operation": 7
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v42_ap_08",
+      "family": "ap",
+      "operation": 8
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v42_ap_09",
+      "family": "ap",
+      "operation": 9
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v42_gp_00",
+      "family": "gp",
+      "operation": 0
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v42_gp_01",
+      "family": "gp",
+      "operation": 1
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v42_gp_02",
+      "family": "gp",
+      "operation": 2
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v42_gp_03",
+      "family": "gp",
+      "operation": 3
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v42_gp_04",
+      "family": "gp",
+      "operation": 4
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v42_gp_05",
+      "family": "gp",
+      "operation": 5
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v42_gp_06",
+      "family": "gp",
+      "operation": 6
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v42_gp_07",
+      "family": "gp",
+      "operation": 7
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v42_gp_08",
+      "family": "gp",
+      "operation": 8
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v42_gp_09",
+      "family": "gp",
+      "operation": 9
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v42_derivative_00",
+      "family": "derivative",
+      "operation": 0
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v42_derivative_01",
+      "family": "derivative",
+      "operation": 1
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v42_derivative_02",
+      "family": "derivative",
+      "operation": 2
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v42_derivative_03",
+      "family": "derivative",
+      "operation": 3
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v42_derivative_04",
+      "family": "derivative",
+      "operation": 4
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v42_derivative_05",
+      "family": "derivative",
+      "operation": 5
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v42_derivative_06",
+      "family": "derivative",
+      "operation": 6
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v42_derivative_07",
+      "family": "derivative",
+      "operation": 7
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v42_derivative_08",
+      "family": "derivative",
+      "operation": 8
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v42_derivative_09",
+      "family": "derivative",
+      "operation": 9
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v42_limits_00",
+      "family": "limits",
+      "operation": 0
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v42_limits_01",
+      "family": "limits",
+      "operation": 1
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v42_limits_02",
+      "family": "limits",
+      "operation": 2
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v42_limits_03",
+      "family": "limits",
+      "operation": 3
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v42_limits_04",
+      "family": "limits",
+      "operation": 4
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v42_limits_05",
+      "family": "limits",
+      "operation": 5
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v42_limits_06",
+      "family": "limits",
+      "operation": 6
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v42_limits_07",
+      "family": "limits",
+      "operation": 7
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v42_limits_08",
+      "family": "limits",
+      "operation": 8
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v42_limits_09",
+      "family": "limits",
+      "operation": 9
+    },
+    {
+      "grade": 11,
+      "topic": "Công thức lượng giác",
+      "form_id": "v42_trig_00",
+      "family": "trig",
+      "operation": 0
+    },
+    {
+      "grade": 11,
+      "topic": "Công thức lượng giác",
+      "form_id": "v42_trig_01",
+      "family": "trig",
+      "operation": 1
+    },
+    {
+      "grade": 11,
+      "topic": "Công thức lượng giác",
+      "form_id": "v42_trig_02",
+      "family": "trig",
+      "operation": 2
+    },
+    {
+      "grade": 11,
+      "topic": "Công thức lượng giác",
+      "form_id": "v42_trig_03",
+      "family": "trig",
+      "operation": 3
+    },
+    {
+      "grade": 11,
+      "topic": "Công thức lượng giác",
+      "form_id": "v42_trig_04",
+      "family": "trig",
+      "operation": 4
+    },
+    {
+      "grade": 11,
+      "topic": "Công thức lượng giác",
+      "form_id": "v42_trig_05",
+      "family": "trig",
+      "operation": 5
+    },
+    {
+      "grade": 11,
+      "topic": "Công thức lượng giác",
+      "form_id": "v42_trig_06",
+      "family": "trig",
+      "operation": 6
+    },
+    {
+      "grade": 11,
+      "topic": "Công thức lượng giác",
+      "form_id": "v42_trig_07",
+      "family": "trig",
+      "operation": 7
+    },
+    {
+      "grade": 11,
+      "topic": "Công thức lượng giác",
+      "form_id": "v42_trig_08",
+      "family": "trig",
+      "operation": 8
+    },
+    {
+      "grade": 11,
+      "topic": "Công thức lượng giác",
+      "form_id": "v42_trig_09",
+      "family": "trig",
+      "operation": 9
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v42_prob_00",
+      "family": "prob",
+      "operation": 0
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v42_prob_01",
+      "family": "prob",
+      "operation": 1
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v42_prob_02",
+      "family": "prob",
+      "operation": 2
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v42_prob_03",
+      "family": "prob",
+      "operation": 3
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v42_prob_04",
+      "family": "prob",
+      "operation": 4
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v42_prob_05",
+      "family": "prob",
+      "operation": 5
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v42_prob_06",
+      "family": "prob",
+      "operation": 6
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v42_prob_07",
+      "family": "prob",
+      "operation": 7
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v42_prob_08",
+      "family": "prob",
+      "operation": 8
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v42_prob_09",
+      "family": "prob",
+      "operation": 9
+    },
+    {
+      "grade": 11,
+      "topic": "Hình học không gian",
+      "form_id": "v42_space_00",
+      "family": "space",
+      "operation": 0
+    },
+    {
+      "grade": 11,
+      "topic": "Hình học không gian",
+      "form_id": "v42_space_01",
+      "family": "space",
+      "operation": 1
+    },
+    {
+      "grade": 11,
+      "topic": "Hình học không gian",
+      "form_id": "v42_space_02",
+      "family": "space",
+      "operation": 2
+    },
+    {
+      "grade": 11,
+      "topic": "Hình học không gian",
+      "form_id": "v42_space_03",
+      "family": "space",
+      "operation": 3
+    },
+    {
+      "grade": 11,
+      "topic": "Hình học không gian",
+      "form_id": "v42_space_04",
+      "family": "space",
+      "operation": 4
+    },
+    {
+      "grade": 11,
+      "topic": "Hình học không gian",
+      "form_id": "v42_space_05",
+      "family": "space",
+      "operation": 5
+    },
+    {
+      "grade": 11,
+      "topic": "Hình học không gian",
+      "form_id": "v42_space_06",
+      "family": "space",
+      "operation": 6
+    },
+    {
+      "grade": 11,
+      "topic": "Hình học không gian",
+      "form_id": "v42_space_07",
+      "family": "space",
+      "operation": 7
+    },
+    {
+      "grade": 11,
+      "topic": "Hình học không gian",
+      "form_id": "v42_space_08",
+      "family": "space",
+      "operation": 8
+    },
+    {
+      "grade": 11,
+      "topic": "Hình học không gian",
+      "form_id": "v42_space_09",
+      "family": "space",
+      "operation": 9
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v42_integral_00",
+      "family": "integral",
+      "operation": 0
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v42_integral_01",
+      "family": "integral",
+      "operation": 1
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v42_integral_02",
+      "family": "integral",
+      "operation": 2
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v42_integral_03",
+      "family": "integral",
+      "operation": 3
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v42_integral_04",
+      "family": "integral",
+      "operation": 4
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v42_integral_05",
+      "family": "integral",
+      "operation": 5
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v42_integral_06",
+      "family": "integral",
+      "operation": 6
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v42_integral_07",
+      "family": "integral",
+      "operation": 7
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v42_integral_08",
+      "family": "integral",
+      "operation": 8
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v42_integral_09",
+      "family": "integral",
+      "operation": 9
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v42_complex_00",
+      "family": "complex",
+      "operation": 0
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v42_complex_01",
+      "family": "complex",
+      "operation": 1
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v42_complex_02",
+      "family": "complex",
+      "operation": 2
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v42_complex_03",
+      "family": "complex",
+      "operation": 3
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v42_complex_04",
+      "family": "complex",
+      "operation": 4
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v42_complex_05",
+      "family": "complex",
+      "operation": 5
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v42_complex_06",
+      "family": "complex",
+      "operation": 6
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v42_complex_07",
+      "family": "complex",
+      "operation": 7
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v42_complex_08",
+      "family": "complex",
+      "operation": 8
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v42_complex_09",
+      "family": "complex",
+      "operation": 9
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v42_oxyz_00",
+      "family": "oxyz",
+      "operation": 0
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v42_oxyz_01",
+      "family": "oxyz",
+      "operation": 1
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v42_oxyz_02",
+      "family": "oxyz",
+      "operation": 2
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v42_oxyz_03",
+      "family": "oxyz",
+      "operation": 3
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v42_oxyz_04",
+      "family": "oxyz",
+      "operation": 4
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v42_oxyz_05",
+      "family": "oxyz",
+      "operation": 5
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v42_oxyz_06",
+      "family": "oxyz",
+      "operation": 6
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v42_oxyz_07",
+      "family": "oxyz",
+      "operation": 7
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v42_oxyz_08",
+      "family": "oxyz",
+      "operation": 8
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v42_oxyz_09",
+      "family": "oxyz",
+      "operation": 9
+    },
+    {
+      "grade": 12,
+      "topic": "Phương trình logarit",
+      "form_id": "v42_exponent_00",
+      "family": "exponent",
+      "operation": 0
+    },
+    {
+      "grade": 12,
+      "topic": "Phương trình logarit",
+      "form_id": "v42_exponent_01",
+      "family": "exponent",
+      "operation": 1
+    },
+    {
+      "grade": 12,
+      "topic": "Phương trình logarit",
+      "form_id": "v42_exponent_02",
+      "family": "exponent",
+      "operation": 2
+    },
+    {
+      "grade": 12,
+      "topic": "Phương trình logarit",
+      "form_id": "v42_exponent_03",
+      "family": "exponent",
+      "operation": 3
+    },
+    {
+      "grade": 12,
+      "topic": "Phương trình logarit",
+      "form_id": "v42_exponent_04",
+      "family": "exponent",
+      "operation": 4
+    },
+    {
+      "grade": 12,
+      "topic": "Phương trình logarit",
+      "form_id": "v42_exponent_05",
+      "family": "exponent",
+      "operation": 5
+    },
+    {
+      "grade": 12,
+      "topic": "Phương trình logarit",
+      "form_id": "v42_exponent_06",
+      "family": "exponent",
+      "operation": 6
+    },
+    {
+      "grade": 12,
+      "topic": "Phương trình logarit",
+      "form_id": "v42_exponent_07",
+      "family": "exponent",
+      "operation": 7
+    },
+    {
+      "grade": 12,
+      "topic": "Phương trình logarit",
+      "form_id": "v42_exponent_08",
+      "family": "exponent",
+      "operation": 8
+    },
+    {
+      "grade": 12,
+      "topic": "Phương trình logarit",
+      "form_id": "v42_exponent_09",
+      "family": "exponent",
+      "operation": 9
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v42_extremum_00",
+      "family": "extremum",
+      "operation": 0
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v42_extremum_01",
+      "family": "extremum",
+      "operation": 1
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v42_extremum_02",
+      "family": "extremum",
+      "operation": 2
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v42_extremum_03",
+      "family": "extremum",
+      "operation": 3
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v42_extremum_04",
+      "family": "extremum",
+      "operation": 4
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v42_extremum_05",
+      "family": "extremum",
+      "operation": 5
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v42_extremum_06",
+      "family": "extremum",
+      "operation": 6
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v42_extremum_07",
+      "family": "extremum",
+      "operation": 7
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v42_extremum_08",
+      "family": "extremum",
+      "operation": 8
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v42_extremum_09",
+      "family": "extremum",
+      "operation": 9
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v42_binomial_00",
+      "family": "binomial",
+      "operation": 0
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v42_binomial_01",
+      "family": "binomial",
+      "operation": 1
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v42_binomial_02",
+      "family": "binomial",
+      "operation": 2
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v42_binomial_03",
+      "family": "binomial",
+      "operation": 3
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v42_binomial_04",
+      "family": "binomial",
+      "operation": 4
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v42_binomial_05",
+      "family": "binomial",
+      "operation": 5
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v42_binomial_06",
+      "family": "binomial",
+      "operation": 6
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v42_binomial_07",
+      "family": "binomial",
+      "operation": 7
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v42_binomial_08",
+      "family": "binomial",
+      "operation": 8
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v42_binomial_09",
+      "family": "binomial",
+      "operation": 9
+    }
+  ]
+}

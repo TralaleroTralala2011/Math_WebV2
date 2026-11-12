@@ -1,0 +1,40 @@
+{
+  "release": "MATH_WEB_GITHUB_READY_V191",
+  "base_full_website": "V182",
+  "last_prior_patch": "V190",
+  "catalog_count": 150,
+  "catalog_audited": 150,
+  "new_candidate_families": 52,
+  "new_questions_oracle_checked": 520,
+  "new_question_types": {
+    "multiple_choice": 364,
+    "short_answer": 104,
+    "true_false": 52
+  },
+  "new_question_grade_distribution": {
+    "10": 160,
+    "11": 140,
+    "12": 220
+  },
+  "new_topics_expanded": 40,
+  "recovered_prior_questions": 360,
+  "quarantined_prior_questions": 20,
+  "cumulative_staged_qa_passed_questions": 7636,
+  "cumulative_staged_topics": 150,
+  "cumulative_min_topic_staged": 10,
+  "cumulative_max_topic_staged": 290,
+  "new_independent_types_certified": 0,
+  "production_insertions_confirmed": 0,
+  "sqlite_sandbox_first_import": 7636,
+  "sqlite_sandbox_second_import": 0,
+  "mathematical_verification": "V191 520 questions SymPy value and app grading tested; prior 7116 questions app QA passed, no full independent proof",
+  "exact_dup_new_vs_prior": 0,
+  "normalized_numeric_pattern_overlaps_new_vs_prior": 0,
+  "semantic_dup_certification": "not completed",
+  "production_before": null,
+  "production_after": null,
+  "production_missing_by_topic": "unknown; production SQLite absent from source ZIP",
+  "target_independent_types": 300000,
+  "target_questions": 3000000,
+  "next": "Import to verified live DB with backup; audit semantic type distinctness; grow 150 topics within mathematical scope."
+}

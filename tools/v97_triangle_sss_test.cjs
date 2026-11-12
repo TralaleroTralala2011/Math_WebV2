@@ -1,0 +1,23 @@
+const fs=require('fs'),vm=require('vm'),assert=require('assert');
+const html=fs.readFileSync(process.argv[2],'utf8');
+const start=html.indexOf('function loadFromPractice(data){');
+const end=html.indexOf("window.addEventListener('message',e=>{",start);
+const ctx={points:{},lines:[],circles:[],functionsData:[],ellipses:[],vectors:[],
+draw(){},updateStats(){},switchMode(){},document:{getElementById(){return {set textContent(v){ctx.error=v}}}}};
+vm.createContext(ctx);vm.runInContext(html.slice(start,end),ctx);
+ctx.loadFromPractice({type:'triangle',sides:{AB:3,BC:5,CA:4}});
+assert.equal(ctx.lines.length,3);
+const A=ctx.points.A,B=ctx.points.B,C=ctx.points.C;
+const dist=(p,q)=>Math.hypot(p.x-q.x,p.y-q.y);
+assert(Math.abs(dist(A,B)/dist(A,C)-3/4)<1e-9);
+assert(Math.abs(dist(B,C)/dist(A,B)-5/3)<1e-9);
+ctx.error='';
+ctx.loadFromPractice({type:'triangle',sides:{AB:1,BC:2,CA:10}});
+assert.match(ctx.error,/bất đẳng thức/);assert.equal(ctx.lines.length,0);
+ctx.error='';
+ctx.loadFromPractice({type:'triangle'});
+assert.match(ctx.error,/chưa có đủ dữ liệu/);
+ctx.error='';
+ctx.loadFromPractice({type:'geometry',points:{A:[0,0],B:[3,0]},segments:[['A','B']]});
+assert.equal(ctx.lines.length,1);
+console.log('PASS SSS 3-4-5 ratios, impossible triangle, missing sides, existing geometry');

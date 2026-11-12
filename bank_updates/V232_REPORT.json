@@ -1,0 +1,304 @@
+{
+  "version": "V232",
+  "source_version": "V231",
+  "baseline_questions": 15106,
+  "accepted_new_questions": 300,
+  "final_questions": 15406,
+  "candidate_method_groups": 30,
+  "certified_new_independent_methods": 0,
+  "topic_count_new": 22,
+  "grade_counts": {
+    "10": 90,
+    "12": 80,
+    "11": 130
+  },
+  "question_types": {
+    "multiple_choice": 210,
+    "short_answer": 60,
+    "true_false": 30
+  },
+  "answer_oracle_passed": 300,
+  "mcq_unique_correct": true,
+  "all_have_explanations": true,
+  "duplicate_exact_old_or_new": 0,
+  "semantic_dedup_audit": "NOT CERTIFIED; methods may overlap historic bank",
+  "full_website_regression": "NOT RUN",
+  "target_1000_genuine_types": "NOT MET",
+  "families": [
+    {
+      "id": "v232_select_nonempty_three_disjoint",
+      "grade": 10,
+      "topic": "menh_de_tap_hop",
+      "method": "quy tắc nhân các tập con không rỗng",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_cross_group_pair_count",
+      "grade": 10,
+      "topic": "quy_tac_dem",
+      "method": "đếm cặp chéo của hai nhóm rời nhau",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_coordinate_three_squared_distances",
+      "grade": 10,
+      "topic": "toa_do_phang",
+      "method": "lập và triệt tiêu các bình phương khoảng cách tọa độ",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_trapezoid_area",
+      "grade": 10,
+      "topic": "g10_geom_quadrilaterals_properties",
+      "method": "diện tích hình thang qua hai đáy và chiều cao",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_pyramid_right_triangle_base_volume",
+      "grade": 12,
+      "topic": "hinh_khoi_va_the_tich_co_ban_12",
+      "method": "thể tích khối chóp trên đáy tam giác vuông",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_pythagorean_hypotenuse_squared",
+      "grade": 10,
+      "topic": "he_thuc_luong_tam_giac",
+      "method": "định lý Pythagore cho bình phương cạnh huyền",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_division_algorithm_reconstruct_dividend",
+      "grade": 10,
+      "topic": "g10_combinatorics_olympiad",
+      "method": "tìm số bị chia từ thương và số dư Euclid",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_sum_arithmetic_multiples",
+      "grade": 11,
+      "topic": "day_so",
+      "method": "tổng bội số nguyên dương dùng công thức Gauss",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_arithmetic_progression_index_gap",
+      "grade": 11,
+      "topic": "cap_so_cong",
+      "method": "hiệu hai số hạng cấp số cộng qua khoảng chỉ số",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_geometric_progression_nth_term",
+      "grade": 11,
+      "topic": "cap_so_nhan",
+      "method": "số hạng thứ n của cấp số nhân",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_quadratic_derivative_at_point",
+      "grade": 11,
+      "topic": "dao_ham",
+      "method": "đạo hàm đa thức bậc hai tại điểm",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_intersections_two_parallel_families",
+      "grade": 11,
+      "topic": "to_hop_xac_suat_nang_cao_11",
+      "method": "đếm giao điểm lưới hai họ đường thẳng song song",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_password_repetition_allowed",
+      "grade": 11,
+      "topic": "to_hop_xac_suat_nang_cao_11",
+      "method": "đếm xâu kí tự có lặp theo quy tắc nhân",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_monomial_derivative_coefficient",
+      "grade": 11,
+      "topic": "dao_ham_quy_tac",
+      "method": "xác định hệ số đa thức sau đạo hàm đơn thức",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_handshake_choose_two",
+      "grade": 11,
+      "topic": "to_hop_xac_suat_nang_cao_11",
+      "method": "chọn hai phần tử không phân biệt thứ tự",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_rectangular_box_surface_area",
+      "grade": 12,
+      "topic": "hinh_hoc_khong_gian",
+      "method": "diện tích toàn phần hình hộp chữ nhật",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_sum_conjugate_complex_real_part",
+      "grade": 12,
+      "topic": "so_phuc",
+      "method": "cộng hai số phức liên hợp",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_right_triangle_area",
+      "grade": 10,
+      "topic": "he_thuc_luong_tam_giac",
+      "method": "diện tích tam giác vuông bằng nửa tích hai cạnh góc vuông",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_parallelogram_perimeter",
+      "grade": 10,
+      "topic": "g10_geom_quadrilaterals_properties",
+      "method": "tính chu vi hình bình hành từ hai cạnh kề",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_point_on_line_unknown_abscissa",
+      "grade": 10,
+      "topic": "duong_thang",
+      "method": "thay tọa độ điểm vào phương trình đường thẳng",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_choose_three_unordered_students",
+      "grade": 11,
+      "topic": "to_hop_xac_suat_nang_cao_11",
+      "method": "tổ hợp chọn ba không xét thứ tự",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_first_order_additive_recurrence",
+      "grade": 11,
+      "topic": "day_so_truy_hoi_11",
+      "method": "giải truy hồi cấp một cộng hằng số",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_first_order_multiplicative_recurrence",
+      "grade": 11,
+      "topic": "day_so_truy_hoi_11",
+      "method": "giải truy hồi cấp một nhân hằng số",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_slope_linear_rational_function",
+      "grade": 11,
+      "topic": "dao_ham",
+      "method": "hệ số góc của hàm bậc nhất chia bởi hằng số",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_probability_with_replacement",
+      "grade": 11,
+      "topic": "xac_suat_11",
+      "method": "xác suất có hoàn lại khi rút vật",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_tri_rectangular_tetrahedron_volume",
+      "grade": 12,
+      "topic": "hinh_hoc_khong_gian",
+      "method": "thể tích tứ diện vuông tại một đỉnh",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_sphere_plane_intersection_circle_radius_sq",
+      "grade": 12,
+      "topic": "g12_geom_sphere_plane_intersection",
+      "method": "bán kính giao tuyến của mặt cầu và mặt phẳng",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_sphere_canonical_equation_radius_sq",
+      "grade": 12,
+      "topic": "g12_geom_sphere_equation",
+      "method": "đọc bán kính từ phương trình chính tắc mặt cầu",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_volume_box_triple_scalar_product",
+      "grade": 12,
+      "topic": "toa_do_khong_gian",
+      "method": "thể tích khối hộp bằng định thức ba vectơ",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    },
+    {
+      "id": "v232_plane_intercept_form_axis_segments",
+      "grade": 12,
+      "topic": "mat_phang_oxyz",
+      "method": "đọc giao điểm mặt phẳng với các trục tọa độ",
+      "count": 10,
+      "verified_count": 10,
+      "certified_independent": false
+    }
+  ],
+  "limitations": [
+    "Method independence not certified",
+    "Original frontend/backend files unchanged apart from bundled SQLite",
+    "Question distribution only short_answer; other formats not introduced"
+  ]
+}

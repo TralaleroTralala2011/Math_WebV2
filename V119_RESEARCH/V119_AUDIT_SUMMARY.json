@@ -1,0 +1,55 @@
+{
+  "version": "V119",
+  "requested_topics": 150,
+  "requested_new_forms_per_topic": 10,
+  "requested_new_forms_total": 1500,
+  "requested_new_questions": 15000,
+  "authored_new_candidate_forms": 30,
+  "authored_new_questions_with_math_checks": 300,
+  "topics_with_ten_new_candidate_forms": 3,
+  "topics_with_no_new_candidate_forms": 147,
+  "total_preexisting_candidate_forms": 290,
+  "total_candidate_forms_after": 320,
+  "independence_certified": 0,
+  "new_approved_for_publication": 0,
+  "new_question_formats": {
+    "tra_loi_ngan": 60,
+    "trac_nghiem": 60,
+    "dung_sai": 60,
+    "tu_luan_ngan": 60,
+    "van_dung": 52,
+    "toan_thuc_te": 8
+  },
+  "source_rows_checked": [
+    {
+      "file": "backend/app/ai/verified_seed/verified_seed_bank.jsonl",
+      "rows": 344280,
+      "missing": false
+    },
+    {
+      "file": "V114_AUDIT/V114_1650_MATH_VERIFIED_PENDING_REVIEW.jsonl",
+      "rows": 1650,
+      "missing": false
+    },
+    {
+      "file": "V116_RESEARCH/V116_NEW_QUESTIONS_10_EACH.jsonl",
+      "rows": 310,
+      "missing": false
+    },
+    {
+      "file": "V117_AUDIT/V117_NEW_QUESTIONS.jsonl",
+      "rows": 560,
+      "missing": false
+    },
+    {
+      "file": "V118_AUDIT/V118_NEW_QUESTIONS.jsonl",
+      "rows": 380,
+      "missing": false
+    }
+  ],
+  "invalid_old_source_json_lines": 0,
+  "exact_question_collisions_with_sources": 0,
+  "exact_method_signature_collision_groups": 0,
+  "new_methods_with_near_same_topic_method_warning": 14,
+  "important_limitation": "A correct numeric answer and distinct text cannot certify an independent mathematical method. Method overlap needs expert validation. 147/150 topics have no V119 methods yet."
+}

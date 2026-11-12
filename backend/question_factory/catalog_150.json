@@ -1,0 +1,752 @@
+[
+  {
+    "id": "menh_de_tap_hop",
+    "grade": 10,
+    "name": "Mệnh đề và tập hợp"
+  },
+  {
+    "id": "bat_phuong_trinh",
+    "grade": 10,
+    "name": "Bất phương trình và hệ bất phương trình"
+  },
+  {
+    "id": "he_thuc_luong",
+    "grade": 10,
+    "name": "Hệ thức lượng trong tam giác"
+  },
+  {
+    "id": "vector",
+    "grade": 10,
+    "name": "Vectơ"
+  },
+  {
+    "id": "ham_so_bac_hai",
+    "grade": 10,
+    "name": "Hàm số bậc hai và parabol"
+  },
+  {
+    "id": "phuong_trinh_he",
+    "grade": 10,
+    "name": "Phương trình và hệ phương trình"
+  },
+  {
+    "id": "quy_tac_dem",
+    "grade": 10,
+    "name": "Quy tắc đếm"
+  },
+  {
+    "id": "hoan_vi_chinh_hop_to_hop",
+    "grade": 10,
+    "name": "Hoán vị, chỉnh hợp, tổ hợp"
+  },
+  {
+    "id": "xac_suat",
+    "grade": 10,
+    "name": "Xác suất"
+  },
+  {
+    "id": "thong_ke",
+    "grade": 10,
+    "name": "Thống kê"
+  },
+  {
+    "id": "menh_de",
+    "grade": 10,
+    "name": "Mệnh đề"
+  },
+  {
+    "id": "tap_hop",
+    "grade": 10,
+    "name": "Tập hợp và các phép toán"
+  },
+  {
+    "id": "he_bat_phuong_trinh",
+    "grade": 10,
+    "name": "Hệ bất phương trình"
+  },
+  {
+    "id": "ham_so",
+    "grade": 10,
+    "name": "Hàm số"
+  },
+  {
+    "id": "ham_so_bac_nhat",
+    "grade": 10,
+    "name": "Hàm số bậc nhất"
+  },
+  {
+    "id": "phuong_trinh",
+    "grade": 10,
+    "name": "Phương trình"
+  },
+  {
+    "id": "he_phuong_trinh",
+    "grade": 10,
+    "name": "Hệ phương trình"
+  },
+  {
+    "id": "he_thuc_luong_tam_giac",
+    "grade": 10,
+    "name": "Hệ thức lượng trong tam giác"
+  },
+  {
+    "id": "toa_do_phang",
+    "grade": 10,
+    "name": "Tọa độ trong mặt phẳng"
+  },
+  {
+    "id": "duong_thang",
+    "grade": 10,
+    "name": "Đường thẳng"
+  },
+  {
+    "id": "duong_tron",
+    "grade": 10,
+    "name": "Đường tròn"
+  },
+  {
+    "id": "nhi_thuc_newton",
+    "grade": 10,
+    "name": "Nhị thức Newton"
+  },
+  {
+    "id": "hinh_hoc_10",
+    "grade": 10,
+    "name": "Hình học phẳng"
+  },
+  {
+    "id": "bai_toan_thuc_te_10",
+    "grade": 10,
+    "name": "Bài toán thực tế Toán 10"
+  },
+  {
+    "id": "hinh_hoc_co_ban_10",
+    "grade": 10,
+    "name": "Hình học cơ bản: góc, cạnh và diện tích"
+  },
+  {
+    "id": "tam_giac_tu_giac_10",
+    "grade": 10,
+    "name": "Tam giác và tứ giác cơ bản"
+  },
+  {
+    "id": "duong_tron_co_ban_10",
+    "grade": 10,
+    "name": "Đường tròn và các góc cơ bản"
+  },
+  {
+    "id": "he_thuc_luong_van_dung_10",
+    "grade": 10,
+    "name": "Hệ thức lượng trong tam giác"
+  },
+  {
+    "id": "toa_do_hinh_hoc_10",
+    "grade": 10,
+    "name": "Tọa độ và đường thẳng trong mặt phẳng"
+  },
+  {
+    "id": "chung_minh_hinh_hoc_10",
+    "grade": 10,
+    "name": "Chứng minh hình học và bài toán tổng hợp"
+  },
+  {
+    "id": "g10_geom_angles_parallel",
+    "grade": 10,
+    "name": "Góc tạo bởi hai đường thẳng và đường cắt"
+  },
+  {
+    "id": "g10_geom_triangle_congruence",
+    "grade": 10,
+    "name": "Các trường hợp bằng nhau của tam giác"
+  },
+  {
+    "id": "g10_geom_special_lines",
+    "grade": 10,
+    "name": "Đường trung tuyến, phân giác và đường cao"
+  },
+  {
+    "id": "g10_geom_quadrilaterals_properties",
+    "grade": 10,
+    "name": "Tính chất hình bình hành và hình thoi"
+  },
+  {
+    "id": "g10_geom_circle_chords_arcs",
+    "grade": 10,
+    "name": "Dây cung, cung và khoảng cách đến tâm"
+  },
+  {
+    "id": "g10_geom_thales_similarity",
+    "grade": 10,
+    "name": "Định lý Thales và tam giác đồng dạng"
+  },
+  {
+    "id": "g10_geom_triangle_area_ratio",
+    "grade": 10,
+    "name": "Tỉ số diện tích tam giác"
+  },
+  {
+    "id": "g10_geom_circle_angles",
+    "grade": 10,
+    "name": "Góc nội tiếp và góc ở tâm nâng cao"
+  },
+  {
+    "id": "g10_geom_coordinate_distance_midpoint",
+    "grade": 10,
+    "name": "Trung điểm và khoảng cách trong tọa độ phẳng"
+  },
+  {
+    "id": "g10_geom_line_intersections",
+    "grade": 10,
+    "name": "Giao điểm và vị trí tương đối của hai đường thẳng"
+  },
+  {
+    "id": "g10_geom_locus",
+    "grade": 10,
+    "name": "Quỹ tích điểm trong mặt phẳng"
+  },
+  {
+    "id": "g10_geom_circle_tangent_chord",
+    "grade": 10,
+    "name": "Tiếp tuyến và dây cung của đường tròn"
+  },
+  {
+    "id": "g10_geom_triangle_inequalities",
+    "grade": 10,
+    "name": "Bất đẳng thức và cực trị trong tam giác"
+  },
+  {
+    "id": "g10_geom_vector_proofs",
+    "grade": 10,
+    "name": "Chứng minh hình học bằng vectơ"
+  },
+  {
+    "id": "g10_geom_coordinate_circle_line",
+    "grade": 10,
+    "name": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ"
+  },
+  {
+    "id": "ham_so_luong_giac",
+    "grade": 11,
+    "name": "Hàm số lượng giác"
+  },
+  {
+    "id": "phuong_trinh_luong_giac",
+    "grade": 11,
+    "name": "Phương trình lượng giác"
+  },
+  {
+    "id": "day_so",
+    "grade": 11,
+    "name": "Dãy số"
+  },
+  {
+    "id": "cap_so_cong",
+    "grade": 11,
+    "name": "Cấp số cộng"
+  },
+  {
+    "id": "cap_so_nhan",
+    "grade": 11,
+    "name": "Cấp số nhân"
+  },
+  {
+    "id": "gioi_han",
+    "grade": 11,
+    "name": "Giới hạn"
+  },
+  {
+    "id": "dao_ham",
+    "grade": 11,
+    "name": "Đạo hàm"
+  },
+  {
+    "id": "hinh_khong_gian",
+    "grade": 11,
+    "name": "Quan hệ song song và vuông góc trong không gian"
+  },
+  {
+    "id": "xac_suat_11",
+    "grade": 11,
+    "name": "Xác suất"
+  },
+  {
+    "id": "gia_tri_luong_giac",
+    "grade": 11,
+    "name": "Giá trị lượng giác"
+  },
+  {
+    "id": "cong_thuc_luong_giac",
+    "grade": 11,
+    "name": "Công thức lượng giác"
+  },
+  {
+    "id": "ham_so_luong_giac_day_du",
+    "grade": 11,
+    "name": "Hàm số lượng giác"
+  },
+  {
+    "id": "phuong_trinh_luong_giac_day_du",
+    "grade": 11,
+    "name": "Phương trình lượng giác"
+  },
+  {
+    "id": "day_so_tong_quat",
+    "grade": 11,
+    "name": "Dãy số"
+  },
+  {
+    "id": "gioi_han_ham_so",
+    "grade": 11,
+    "name": "Giới hạn hàm số"
+  },
+  {
+    "id": "ham_so_lien_tuc",
+    "grade": 11,
+    "name": "Hàm số liên tục"
+  },
+  {
+    "id": "dao_ham_quy_tac",
+    "grade": 11,
+    "name": "Quy tắc đạo hàm"
+  },
+  {
+    "id": "ung_dung_dao_ham_11",
+    "grade": 11,
+    "name": "Ứng dụng đạo hàm"
+  },
+  {
+    "id": "song_song_khong_gian",
+    "grade": 11,
+    "name": "Quan hệ song song trong không gian"
+  },
+  {
+    "id": "vuong_goc_khong_gian",
+    "grade": 11,
+    "name": "Quan hệ vuông góc trong không gian"
+  },
+  {
+    "id": "goc_khoang_cach_11",
+    "grade": 11,
+    "name": "Góc và khoảng cách trong không gian"
+  },
+  {
+    "id": "thong_ke_11",
+    "grade": 11,
+    "name": "Thống kê Toán 11"
+  },
+  {
+    "id": "bai_toan_thuc_te_11",
+    "grade": 11,
+    "name": "Bài toán thực tế Toán 11"
+  },
+  {
+    "id": "to_hop_xac_suat_nang_cao_11",
+    "grade": 11,
+    "name": "Tổ hợp và xác suất nâng cao"
+  },
+  {
+    "id": "bien_co_doc_lap_11",
+    "grade": 11,
+    "name": "Biến cố độc lập và xác suất có điều kiện"
+  },
+  {
+    "id": "day_so_truy_hoi_11",
+    "grade": 11,
+    "name": "Dãy số truy hồi"
+  },
+  {
+    "id": "quy_nap_toan_hoc_11",
+    "grade": 11,
+    "name": "Quy nạp toán học"
+  },
+  {
+    "id": "phep_bien_hinh_11",
+    "grade": 11,
+    "name": "Phép biến hình trong mặt phẳng"
+  },
+  {
+    "id": "thiet_dien_hinh_khong_gian_11",
+    "grade": 11,
+    "name": "Thiết diện hình không gian"
+  },
+  {
+    "id": "bai_toan_thuc_te_tong_hop_11",
+    "grade": 11,
+    "name": "Bài toán thực tế tổng hợp Toán 11"
+  },
+  {
+    "id": "phep_bien_hinh_co_ban_11",
+    "grade": 11,
+    "name": "Phép biến hình cơ bản"
+  },
+  {
+    "id": "nhan_biet_hinh_khong_gian_11",
+    "grade": 11,
+    "name": "Nhận biết hình học không gian"
+  },
+  {
+    "id": "g11_geom_transform_translation",
+    "grade": 11,
+    "name": "Phép tịnh tiến và ảnh của hình"
+  },
+  {
+    "id": "g11_geom_transform_reflection",
+    "grade": 11,
+    "name": "Phép đối xứng trục"
+  },
+  {
+    "id": "g11_geom_space_lines_planes",
+    "grade": 11,
+    "name": "Nhận biết đường thẳng và mặt phẳng trong không gian"
+  },
+  {
+    "id": "g11_geom_parallel_line_plane",
+    "grade": 11,
+    "name": "Đường thẳng song song với mặt phẳng"
+  },
+  {
+    "id": "g11_geom_prism_pyramid_sections",
+    "grade": 11,
+    "name": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp"
+  },
+  {
+    "id": "g11_geom_rotation_homothety",
+    "grade": 11,
+    "name": "Phép quay và phép vị tự"
+  },
+  {
+    "id": "g11_geom_parallel_planes",
+    "grade": 11,
+    "name": "Hai mặt phẳng song song"
+  },
+  {
+    "id": "g11_geom_perpendicular_line_plane",
+    "grade": 11,
+    "name": "Đường thẳng vuông góc với mặt phẳng"
+  },
+  {
+    "id": "g11_geom_dihedral_angles",
+    "grade": 11,
+    "name": "Góc giữa đường thẳng và mặt phẳng"
+  },
+  {
+    "id": "g11_geom_section_construction",
+    "grade": 11,
+    "name": "Dựng thiết diện của hình chóp và lăng trụ"
+  },
+  {
+    "id": "g11_geom_skew_lines_distance",
+    "grade": 11,
+    "name": "Khoảng cách giữa hai đường thẳng chéo nhau"
+  },
+  {
+    "id": "g11_geom_three_perpendiculars",
+    "grade": 11,
+    "name": "Định lý ba đường vuông góc"
+  },
+  {
+    "id": "g11_geom_transform_composition",
+    "grade": 11,
+    "name": "Hợp thành các phép biến hình"
+  },
+  {
+    "id": "g11_geom_section_ratio",
+    "grade": 11,
+    "name": "Thiết diện và tỉ số đoạn trong hình không gian"
+  },
+  {
+    "id": "g11_geom_space_proof",
+    "grade": 11,
+    "name": "Chứng minh tổng hợp song song và vuông góc"
+  },
+  {
+    "id": "ung_dung_dao_ham",
+    "grade": 12,
+    "name": "Ứng dụng đạo hàm"
+  },
+  {
+    "id": "khao_sat_ham_so",
+    "grade": 12,
+    "name": "Khảo sát và vẽ đồ thị hàm số"
+  },
+  {
+    "id": "nguyen_ham_tich_phan",
+    "grade": 12,
+    "name": "Nguyên hàm và tích phân"
+  },
+  {
+    "id": "so_phuc",
+    "grade": 12,
+    "name": "Số phức"
+  },
+  {
+    "id": "hinh_hoc_khong_gian",
+    "grade": 12,
+    "name": "Hình học không gian"
+  },
+  {
+    "id": "toa_do_khong_gian",
+    "grade": 12,
+    "name": "Tọa độ trong không gian"
+  },
+  {
+    "id": "xac_suat_12",
+    "grade": 12,
+    "name": "Xác suất và biến ngẫu nhiên"
+  },
+  {
+    "id": "thong_ke_12",
+    "grade": 12,
+    "name": "Các số đặc trưng đo xu thế và độ phân tán"
+  },
+  {
+    "id": "tinh_don_dieu",
+    "grade": 12,
+    "name": "Tính đơn điệu"
+  },
+  {
+    "id": "cuc_tri",
+    "grade": 12,
+    "name": "Cực trị"
+  },
+  {
+    "id": "gtln_gtnn",
+    "grade": 12,
+    "name": "Giá trị lớn nhất và nhỏ nhất"
+  },
+  {
+    "id": "tiep_tuyen",
+    "grade": 12,
+    "name": "Tiếp tuyến"
+  },
+  {
+    "id": "tien_can",
+    "grade": 12,
+    "name": "Tiệm cận"
+  },
+  {
+    "id": "tuong_giao",
+    "grade": 12,
+    "name": "Tương giao đồ thị"
+  },
+  {
+    "id": "ham_mu",
+    "grade": 12,
+    "name": "Hàm số mũ"
+  },
+  {
+    "id": "ham_logarit",
+    "grade": 12,
+    "name": "Hàm số logarit"
+  },
+  {
+    "id": "pt_mu",
+    "grade": 12,
+    "name": "Phương trình mũ"
+  },
+  {
+    "id": "pt_logarit",
+    "grade": 12,
+    "name": "Phương trình logarit"
+  },
+  {
+    "id": "bpt_mu",
+    "grade": 12,
+    "name": "Bất phương trình mũ"
+  },
+  {
+    "id": "bpt_logarit",
+    "grade": 12,
+    "name": "Bất phương trình logarit"
+  },
+  {
+    "id": "ung_dung_tich_phan",
+    "grade": 12,
+    "name": "Ứng dụng tích phân"
+  },
+  {
+    "id": "bieu_dien_so_phuc",
+    "grade": 12,
+    "name": "Biểu diễn số phức"
+  },
+  {
+    "id": "pt_so_phuc",
+    "grade": 12,
+    "name": "Phương trình số phức"
+  },
+  {
+    "id": "mat_phang_oxyz",
+    "grade": 12,
+    "name": "Mặt phẳng trong Oxyz"
+  },
+  {
+    "id": "duong_thang_oxyz",
+    "grade": 12,
+    "name": "Đường thẳng trong Oxyz"
+  },
+  {
+    "id": "mat_cau",
+    "grade": 12,
+    "name": "Mặt cầu"
+  },
+  {
+    "id": "goc_khoang_cach_oxyz",
+    "grade": 12,
+    "name": "Góc và khoảng cách Oxyz"
+  },
+  {
+    "id": "the_tich_khong_gian",
+    "grade": 12,
+    "name": "Thể tích hình học không gian"
+  },
+  {
+    "id": "tong_hop_thpt",
+    "grade": 12,
+    "name": "Bài toán tổng hợp THPT"
+  },
+  {
+    "id": "bai_toan_thuc_te_12",
+    "grade": 12,
+    "name": "Bài toán thực tế Toán 12"
+  },
+  {
+    "id": "hinh_khoi_va_the_tich_co_ban_12",
+    "grade": 12,
+    "name": "Hình khối và thể tích cơ bản"
+  },
+  {
+    "id": "hinh_hoc_oxyz_van_dung_12",
+    "grade": 12,
+    "name": "Vận dụng tọa độ Oxyz"
+  },
+  {
+    "id": "g12_geom_vectors_3d",
+    "grade": 12,
+    "name": "Vectơ và độ dài trong không gian Oxyz"
+  },
+  {
+    "id": "g12_geom_plane_equation",
+    "grade": 12,
+    "name": "Phương trình mặt phẳng"
+  },
+  {
+    "id": "g12_geom_line_equation_3d",
+    "grade": 12,
+    "name": "Phương trình đường thẳng trong Oxyz"
+  },
+  {
+    "id": "g12_geom_sphere_equation",
+    "grade": 12,
+    "name": "Phương trình mặt cầu và tâm bán kính"
+  },
+  {
+    "id": "g12_geom_solid_surface_area",
+    "grade": 12,
+    "name": "Diện tích xung quanh và toàn phần hình khối"
+  },
+  {
+    "id": "g12_geom_point_plane_distance",
+    "grade": 12,
+    "name": "Khoảng cách từ điểm đến mặt phẳng"
+  },
+  {
+    "id": "g12_geom_line_plane_angle",
+    "grade": 12,
+    "name": "Góc giữa đường thẳng và mặt phẳng Oxyz"
+  },
+  {
+    "id": "g12_geom_two_planes_angle",
+    "grade": 12,
+    "name": "Góc giữa hai mặt phẳng"
+  },
+  {
+    "id": "g12_geom_line_plane_intersection",
+    "grade": 12,
+    "name": "Giao điểm đường thẳng và mặt phẳng"
+  },
+  {
+    "id": "g12_geom_sphere_tangent_plane",
+    "grade": 12,
+    "name": "Mặt phẳng tiếp xúc với mặt cầu"
+  },
+  {
+    "id": "g12_geom_skew_line_relation",
+    "grade": 12,
+    "name": "Vị trí tương đối của hai đường thẳng trong Oxyz"
+  },
+  {
+    "id": "g12_geom_min_distance_3d",
+    "grade": 12,
+    "name": "Cực trị khoảng cách trong không gian tọa độ"
+  },
+  {
+    "id": "g12_geom_sphere_plane_intersection",
+    "grade": 12,
+    "name": "Giao tuyến mặt cầu và mặt phẳng"
+  },
+  {
+    "id": "g12_geom_parameter_geometry",
+    "grade": 12,
+    "name": "Bài toán tham số hình học Oxyz"
+  },
+  {
+    "id": "g12_geom_3d_optimization",
+    "grade": 12,
+    "name": "Bài toán tối ưu hình học không gian"
+  },
+  {
+    "id": "g10_advanced_inequalities",
+    "grade": 10,
+    "name": "Bất đẳng thức đại số và cực trị nâng cao"
+  },
+  {
+    "id": "g10_symmetric_systems",
+    "grade": 10,
+    "name": "Hệ phương trình đối xứng và hoán vị"
+  },
+  {
+    "id": "g10_radical_equations_advanced",
+    "grade": 10,
+    "name": "Phương trình chứa căn thức nâng cao"
+  },
+  {
+    "id": "g10_combinatorics_olympiad",
+    "grade": 10,
+    "name": "Tổ hợp và nguyên lý Dirichlet nâng cao"
+  },
+  {
+    "id": "g11_advanced_trig_equations",
+    "grade": 11,
+    "name": "Phương trình lượng giác nâng cao"
+  },
+  {
+    "id": "g11_sequences_advanced",
+    "grade": 11,
+    "name": "Dãy số truy hồi và bài toán cực trị"
+  },
+  {
+    "id": "g11_binomial_advanced",
+    "grade": 11,
+    "name": "Nhị thức Newton và hệ số tổ hợp nâng cao"
+  },
+  {
+    "id": "g11_conditional_probability_models",
+    "grade": 11,
+    "name": "Mô hình xác suất có điều kiện"
+  },
+  {
+    "id": "g12_complex_plane_geometry",
+    "grade": 12,
+    "name": "Hình học số phức và quỹ tích"
+  },
+  {
+    "id": "g12_integral_optimization",
+    "grade": 12,
+    "name": "Tối ưu và cực trị bằng tích phân"
+  },
+  {
+    "id": "g12_solid_of_revolution",
+    "grade": 12,
+    "name": "Thể tích khối tròn xoay và mô hình thực tế"
+  }
+]

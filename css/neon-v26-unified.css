@@ -1,0 +1,85 @@
+/* NEON V26: one visual language for learner pages, separate light Admin workspace.
+   Visual-only. Business handlers, roles and question banks remain on the server. */
+:root{--mw26-night:#030c1e;--mw26-blue:#0e97ef;--mw26-teal:#13e5ea;--mw26-border:#23648b;--mw26-muted:#a8c8db;--mw26-focus:#43f5ff}
+html{scroll-padding-top:90px}*,*::before,*::after{box-sizing:border-box}
+body.mw-v5:not(.mw-v5-admin){background:radial-gradient(ellipse 40% 22% at 90% 2%,#104c8b77,transparent 95%),radial-gradient(ellipse 30% 28% at 0% 35%,#0e406c77,transparent 95%),#030c1e!important;overflow-x:clip}
+body.mw-v5:not(.mw-v5-admin) #mw-v5-header{backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid #187db250!important;box-shadow:0 12px 35px #0004}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-logo{letter-spacing:-.045em}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-nav a.active{background:#0c395c!important;color:#a5ffff!important;box-shadow:inset 0 0 0 1px #1ad7e080}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-canvas{max-width:1480px}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-card,.mw-v6-topic,.mw-v6-lock){border-radius:19px!important;border:1px solid #277ba565!important;background-image:linear-gradient(160deg,#0b2a4b 0%,#06172f 90%)!important;box-shadow:0 16px 40px #0005,inset 0 1px #4cbae526!important}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-card,.mw-v6-topic,.mw-v6-lock):hover{border-color:#25bddbbb!important}
+body.mw-v5:not(.mw-v5-admin) :is(h1,h2,h3){text-wrap:balance}
+body.mw-v5:not(.mw-v5-admin) :is(p,small,li){overflow-wrap:anywhere}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-btn,button,.mw-v6-learning-actions button){touch-action:manipulation}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-btn,button,a):focus-visible{outline:3px solid var(--mw26-focus)!important;outline-offset:3px!important}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v6-learning-hero,.mw-v6-learning-panels,.mw-v6-hero-grid,.mw-v6-bottom,.mw-v6-roadmap-grid)>*{min-width:0}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-hero{background:radial-gradient(circle at 0% 15%,#144e7799,transparent 46%),linear-gradient(130deg,#0b2549,#05132c)!important;overflow:hidden}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-hero .mw-v6-math-visual{box-shadow:inset 0 0 50px #053d6c,0 0 18px #05def025}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-actions{gap:12px}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-actions button{border:1px solid #2a7ca1;box-shadow:inset 0 1px #4fcdeb22;transition:transform .15s ease,border-color .15s ease;background:linear-gradient(160deg,#0c3253,#071b34)!important}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-actions button:hover{transform:translateY(-2px);border-color:#14ecf3}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-actions button small{font-size:12px!important;line-height:1.35;color:#b5cddb!important}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-grade-buttons .mw-v5-btn{font-weight:750}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-review article{border-radius:12px;background:#0d2a47;margin-bottom:8px}
+body.mw-v5:not(.mw-v5-admin) :is(table,.tablewrap){max-width:100%}
+body.mw-v5:not(.mw-v5-admin) .tablewrap{overflow-x:auto}
+body.mw-v5:not(.mw-v5-admin) :is(input,textarea,select){min-width:0}
+body.mw-v5:not(.mw-v5-admin) .mathweb-project-footer{border-top:1px solid #225e8055}
+/* Lesson engine sidebar remains fully functional; on mobile it precedes content. */
+body.mw-v5:not(.mw-v5-admin) main.wrap .layout{align-items:start}
+body.mw-v5:not(.mw-v5-admin) main.wrap .side{max-width:100%}
+body.mw-v5:not(.mw-v5-admin) main.wrap .panel{overflow-wrap:anywhere}
+/* Student and Admin must be distinct: suppress legacy Admin navigation only, not server access checks. */
+body.mw-v5:not(.mw-v5-admin) a[href="admin.html"],body.mw-v5:not(.mw-v5-admin) a[href$="/admin.html"]{display:none!important}
+/* Admin reference image #3: luminous dashboard, airy panels and dark side rail. */
+body.mw-v26-admin{--bg:#f2f7fc;--panel:#fff;--ink:#102d4c;--muted:#5d768e;--blue:#077fcb;--line:#d9e8f2;background:linear-gradient(130deg,#e8f3ff,#f7fbff 47%,#edfaff)!important;color:#183c59}
+body.mw-v26-admin #appView>.top{background:linear-gradient(110deg,#052341,#0a3b62)!important;color:#f2fbff!important;border-bottom:2px solid #13d5ed;box-shadow:0 10px 35px #09334c26}
+body.mw-v26-admin #appView>.top :is(h1,p){color:#f3fbff!important}
+body.mw-v26-admin .layout>.side{background:linear-gradient(180deg,#072a4a,#061c36)!important;border:1px solid #0a4a74;border-radius:0 16px 16px 0;box-shadow:6px 15px 28px #09354b14}
+body.mw-v26-admin .layout>.side .navbtn{color:#c1dcef!important;border:1px solid transparent;border-radius:12px!important;margin-bottom:5px;min-height:43px;text-align:left}
+body.mw-v26-admin .layout>.side .navbtn:hover{background:#114c70!important;color:#fff!important}
+body.mw-v26-admin .layout>.side .navbtn.active{background:linear-gradient(90deg,#00a6d8,#0d73bf)!important;color:#fff!important;border-color:#6bdffb55;box-shadow:0 8px 18px #00aeec24}
+body.mw-v26-admin .content .panel,body.mw-v26-admin .content .mini,body.mw-v26-admin .content .stat{border:1px solid #d9e7f1!important;border-radius:17px!important;box-shadow:0 12px 30px #0b467110!important}
+body.mw-v26-admin .content .pagehead h2{color:#153b60}
+body.mw-v26-admin .content table{border-collapse:collapse;width:100%}
+body.mw-v26-admin .content .tablewrap{overflow-x:auto;max-width:100%}
+body.mw-v26-admin .content :is(input,select,textarea){max-width:100%;border-color:#bcd5e5;border-radius:10px}
+body.mw-v26-admin .content :is(input,select,textarea):focus-visible{outline:2px solid #099ed3;outline-offset:1px}
+body.mw-v26-admin .content :is(button,a):focus-visible{outline:3px solid #007db5;outline-offset:3px}
+body.mw-v26-admin .mw26-admin-menu{display:none}
+.mw26-skip{position:fixed;top:-70px;left:12px;z-index:99999;background:#fff;color:#053456!important;padding:12px 17px;border:2px solid #15ccdf;border-radius:12px;text-decoration:none;font-weight:700}
+.mw26-skip:focus{top:12px}
+@media(max-width:1100px){
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-hero-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-bottom{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-hero{grid-template-columns:minmax(160px,230px) minmax(0,1fr)}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-hero>:last-child{grid-column:1/-1}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-actions{grid-template-columns:repeat(3,minmax(0,1fr))}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-panels{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+ body.mw-v5:not(.mw-v5-admin) .mw-v5-canvas,body.mw-v5:not(.mw-v5-admin) main.wrap{width:calc(100% - 28px)!important;max-width:100%!important}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-welcome,body.mw-v5:not(.mw-v5-admin) .mw-v6-hero-grid,body.mw-v5:not(.mw-v5-admin) .mw-v6-bottom,body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-panels{grid-template-columns:1fr!important}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-hero{grid-template-columns:1fr!important;gap:13px;padding:17px}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-hero>:last-child{grid-column:auto}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-hero .mw-v6-math-visual svg{height:120px}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-actions{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-actions button{min-height:99px;padding:10px 5px;font-size:12px}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-actions svg{width:24px;height:24px}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-grade-buttons{grid-template-columns:repeat(3,minmax(0,1fr))}
+ body.mw-v5:not(.mw-v5-admin) main.wrap .layout{grid-template-columns:1fr!important}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-quick{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body.mw-v5:not(.mw-v5-admin) .mw-v6-quick a{min-height:100px;padding:15px}
+ body.mw-v26-admin #appView .layout{display:block}
+ body.mw-v26-admin #appView>.top{padding:12px!important;gap:8px;flex-wrap:wrap}
+ body.mw-v26-admin .mw26-admin-menu{display:inline-flex;align-items:center;gap:9px;padding:10px 15px;min-height:44px;border-radius:10px;background:#097db4;color:#fff}
+ body.mw-v26-admin #appView .layout>.side{display:none!important;position:static!important;max-height:55vh;overflow-y:auto;width:auto!important;margin:8px 12px!important;border-radius:15px!important;padding:12px!important}
+ body.mw-v26-admin.mw26-admin-open #appView .layout>.side{display:block!important}
+ body.mw-v26-admin #appView .layout>.content{width:100%!important;max-width:100%!important;min-width:0;padding:12px!important}
+ body.mw-v26-admin #appView .layout>.side .navbtn{width:100%}
+ body.mw-v26-admin .content .stats{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ body.mw-v26-admin .content .grid2{grid-template-columns:1fr!important}
+}
+@media(max-width:400px){body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-actions{grid-template-columns:repeat(2,minmax(0,1fr))}body.mw-v26-admin .content .stats{grid-template-columns:1fr!important}}
+@media(prefers-reduced-motion:reduce){body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-actions button{transition:none}html{scroll-behavior:auto}}

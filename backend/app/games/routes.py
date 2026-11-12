@@ -1437,6 +1437,39 @@ def get_learning_streak(authorization: str = Header(default=None)):
         return {"current":row["current_streak"],"longest":row["longest_streak"],"last_activity_date":row["last_activity_date"],"active_today":row["last_activity_date"]==today}
     finally: conn.close()
 
+@router.get("/activity-heatmap")
+def get_activity_heatmap(authorization: str = Header(default=None)):
+    """Real completed practice sessions, grouped by Vietnam local date (84 days)."""
+    from collections import defaultdict
+    from datetime import datetime, timedelta, timezone
+    user=get_user_from_token(authorization)
+    local_tz=timezone(timedelta(hours=7))
+    today=datetime.now(local_tz).date()
+    first=today-timedelta(days=83)
+    counts=defaultdict(lambda:{'sessions':0,'questions':0})
+    conn=get_connection()
+    try:
+        rows=conn.execute("SELECT created_at,total_questions FROM game_results WHERE user_id=? AND created_at>=? ORDER BY created_at DESC LIMIT 20001",
+                          (user['id'],(datetime.now(timezone.utc)-timedelta(days=85)).isoformat())).fetchall()
+    finally:conn.close()
+    truncated=len(rows)>20000
+    for row in rows[:20000]:
+        try:
+            stamp=datetime.fromisoformat(str(row['created_at']).replace('Z','+00:00'))
+            if stamp.tzinfo is None:stamp=stamp.replace(tzinfo=timezone.utc)
+            day=stamp.astimezone(local_tz).date()
+        except (ValueError,TypeError):continue
+        if first<=day<=today:
+            key=day.isoformat();counts[key]['sessions']+=1
+            counts[key]['questions']+=max(0,int(row['total_questions'] or 0))
+    days=[]
+    for i in range(84):
+        day=(first+timedelta(days=i)).isoformat();value=counts[day]
+        days.append({'date':day,'sessions':value['sessions'],'questions':value['questions']})
+    return {'days':days,'timezone':'Asia/Ho_Chi_Minh','truncated':truncated,
+            'note':'Chỉ tính lượt luyện tập đã được lưu trên máy chủ.'}
+
+
 @router.get("/xp")
 def get_current_xp(
     authorization: str = Header(

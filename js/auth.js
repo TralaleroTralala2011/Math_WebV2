@@ -345,8 +345,18 @@ function clearAuthData() {
 
 function logout() {
 
+    const tokenToRevoke = localStorage.getItem("mathweb_token");
+    if (tokenToRevoke) {
+        fetch((window.MATHWEB_API_URL || "http://127.0.0.1:8000") + "/api/auth/logout", {
+            method: "POST", headers: {Authorization: "Bearer " + tokenToRevoke}, keepalive: true
+        }).catch(() => {});
+    }
     clearAuthData();
-
+    // Clear stale trial snapshots only on explicit logout.
+    for(const key of ["mathweb_trial_mode","mathweb_trial_profile","mathweb_trial_started_at",
+      "mathweb_pretrial_mathweb_token","mathweb_pretrial_mathweb_user","mathweb_pretrial_mathweb_profile"]){
+      localStorage.removeItem(key);
+    }
 
     window.location.replace(
         "login.html"

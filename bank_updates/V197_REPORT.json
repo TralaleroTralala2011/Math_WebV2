@@ -1,0 +1,9 @@
+{
+  "version": "V197",
+  "new_questions": 100,
+  "new_candidate_forms": 10,
+  "certified_independent_forms": 0,
+  "validation": "formula derivation, exact answer generation, exact text deduplication against V196; no full semantic independence certification",
+  "production_integrated": false,
+  "database_integrity": "ok"
+}

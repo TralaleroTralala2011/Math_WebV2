@@ -1,0 +1,16 @@
+{
+  "counts": {
+    "total": 10500,
+    "direct_answer": 6300,
+    "multiple_choice": 2100,
+    "true_false": 2100,
+    "expected_display_numeric_difference": 2100
+  },
+  "topics": 150,
+  "topic_min": 70,
+  "topic_max": 70,
+  "issues_count": 0,
+  "issues_sample": [],
+  "new_independent_types_certified": 0,
+  "scope": "type-aware display/metadata consistency only; mathematical truth and novelty not certified"
+}

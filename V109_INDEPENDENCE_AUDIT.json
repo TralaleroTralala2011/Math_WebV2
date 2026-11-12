@@ -1,0 +1,45 @@
+{
+  "version": "V109",
+  "purpose": "Audit mathematical-independence risk before claiming 10,000 new types",
+  "records": 334180,
+  "stored_type_ids": 33418,
+  "grade_topic_pairs": 140,
+  "literal_duplicate_questions": 0,
+  "all_type_ids_have_10_questions": true,
+  "signature_categories_by_question": {
+    "other": 231040,
+    "numbered_batch": 32000,
+    "explicit_not_independent": 39140,
+    "parameter_regime": 32000
+  },
+  "signature_examples": {
+    "other": [
+      "ax+b=c -> solve x",
+      "given output of affine function recover input",
+      "monic quadratic with two integer roots -> find roots",
+      "solve symmetric sum difference system"
+    ],
+    "numbered_batch": [
+      "V43 / poly / operation 00",
+      "V43 / poly / operation 01",
+      "V43 / poly / operation 02",
+      "V43 / poly / operation 03"
+    ],
+    "explicit_not_independent": [
+      "V44 / archetype 00 / structure 00; method-family is NOT independent",
+      "V44 / archetype 00 / structure 01; method-family is NOT independent",
+      "V44 / archetype 00 / structure 02; method-family is NOT independent",
+      "V44 / archetype 00 / structure 03; method-family is NOT independent"
+    ],
+    "parameter_regime": [
+      "V55 family 00: parameter subgroup 00",
+      "V55 family 00: parameter subgroup 01",
+      "V55 family 00: parameter subgroup 02",
+      "V55 family 00: parameter subgroup 03"
+    ]
+  },
+  "warning": "These pattern flags are screening indicators, not proof of mathematical equivalence or independence. Stored IDs are not independently certified problem types.",
+  "new_type_ids": 0,
+  "new_questions": 0,
+  "mathgeo": "Preserved unchanged from V108"
+}

@@ -1,0 +1,234 @@
+{
+  "version": "V29",
+  "base": "V28",
+  "previous_questions": 6470,
+  "previous_unique_form_ids": 646,
+  "added_questions": 300,
+  "added_form_ids": 30,
+  "total_questions": 6770,
+  "total_unique_form_ids": 676,
+  "counts_by_grade": {
+    "10": 100,
+    "11": 100,
+    "12": 100
+  },
+  "tests": {
+    "unique_normalized_question_text": true,
+    "new_answers_independently_recalculated_exact_rational": 300,
+    "new_nonempty_explanations": true,
+    "preserved_source_files_except_bank": true
+  },
+  "caveat": "Distinct IDs and signatures do not prove independent mathematical methods. No end-to-end UI or Battle regression performed.",
+  "catalog": [
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v29_three_set_exactly_two",
+      "signature": "three sets exactly two from pairwise and triple intersections",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v29_three_set_at_least_two",
+      "signature": "three sets at least two from pairwise and triple intersections",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v29_quadratic_roots_distance",
+      "signature": "quadratic root separation via discriminant",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v29_quadratic_root_reciprocal_sum",
+      "signature": "sum of reciprocals of roots via Vieta",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Vectơ",
+      "form_id": "v29_vector_dot_angle_cos",
+      "signature": "cosine angle from vectors with exact Pythagorean norm",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v29_line_intersection_axis",
+      "signature": "intersection of two symmetric lines",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v29_triangle_centroid_missing_vertex",
+      "signature": "recover missing triangle vertex coordinate from centroid",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v29_pooled_mean",
+      "signature": "pooled mean of two groups",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v29_distribute_identical_positive",
+      "signature": "positive integer solutions stars and bars",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Xác suất",
+      "form_id": "v29_probability_exactly_two_independent",
+      "signature": "exactly two successes among three independent trials",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v29_ap_sum_even_indexed",
+      "signature": "sum even-indexed AP terms",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v29_ap_midpoint_property",
+      "signature": "arithmetic progression midpoint recover",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v29_gp_product_first_three",
+      "signature": "product of first three GP terms",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số",
+      "form_id": "v29_recurrence_affine_fixed_point",
+      "signature": "affine recurrence closed form after shifts",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v29_limit_polynomial_factor_cancellation",
+      "signature": "limit removable discontinuity polynomial factor",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v29_limit_sequence_geometric_decay",
+      "signature": "limit geometric decay plus constant",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v29_derivative_power_chain_at_one",
+      "signature": "derivative polynomial power of affine at one",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v29_derivative_inverse_slope",
+      "signature": "derivative inverse function at image",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v29_bayes_two_machines",
+      "signature": "Bayes posterior two sources",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Tổ hợp",
+      "form_id": "v29_choose_nonadjacent",
+      "signature": "nonadjacent selections on a line",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v29_integral_linear_times_exp",
+      "signature": "integrate x exp(x) over log-free integer endpoints",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v29_integral_absolute_linear",
+      "signature": "integral absolute centered linear",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v29_complex_inverse_modulus_squared",
+      "signature": "inverse complex modulus squared",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v29_complex_rotation_quarter_turn",
+      "signature": "multiplication by i rotates complex coordinate",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v29_plane_intercept_volume",
+      "signature": "tetrahedron volume coordinate intercepts",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v29_sphere_center_distance_squared",
+      "signature": "distance squared between sphere centers",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số mũ",
+      "form_id": "v29_exponential_growth_ratio",
+      "signature": "growth ratio after time interval",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "form_id": "v29_log_equation_difference",
+      "signature": "difference of logarithms solve linear argument",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v29_quadratic_max_interval_endpoint",
+      "signature": "maximum convex quadratic on closed interval",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v29_bernoulli_variance",
+      "signature": "Bernoulli variance from rational p",
+      "count": 10
+    }
+  ]
+}

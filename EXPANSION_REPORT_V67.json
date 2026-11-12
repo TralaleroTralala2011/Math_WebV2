@@ -1,0 +1,37 @@
+{
+  "version": "V67",
+  "base": "V65",
+  "new_form_ids": 1000,
+  "new_questions": 10000,
+  "total_form_ids": 9358,
+  "total_questions": 93590,
+  "minimum_new_questions_per_form": 10,
+  "new_method_families": 10,
+  "independently_verified_new_method_types": 0,
+  "notes": "1,000 new task-regime IDs across 10 method families; NOT 1,000 mathematically independent types. Numeric answer checks performed; no pedagogical review, integration test, or exhaustive historical audit.",
+  "topics_new": {
+    "10: Phương trình": 1000,
+    "10: Hàm số bậc hai và parabol": 1000,
+    "11: Cấp số cộng": 1000,
+    "11: Cấp số nhân": 1000,
+    "10: Tổ hợp": 1000,
+    "11: Xác suất": 1000,
+    "12: Số phức": 1000,
+    "11: Đạo hàm": 1000,
+    "12: Nguyên hàm và tích phân": 1000,
+    "12: Tọa độ trong không gian": 1000
+  },
+  "families_new": {
+    "v67_family_00": 100,
+    "v67_family_01": 100,
+    "v67_family_02": 100,
+    "v67_family_03": 100,
+    "v67_family_04": 100,
+    "v67_family_05": 100,
+    "v67_family_06": 100,
+    "v67_family_07": 100,
+    "v67_family_08": 100,
+    "v67_family_09": 100
+  },
+  "duplicate_questions_rejected": 0
+}

@@ -1,0 +1,31 @@
+{
+  "checkpoint": "MATH_WEB_GITHUB_READY_V192",
+  "base_zip": "MATH_WEB_GITHUB_READY_V191_FULL_WEB_BANK_QA_IMPORT.zip",
+  "base_sha256": "ca7c50d58bb1c9858ac110c1c4ba37fe70aee25678e4ff6380dd15fc315a61cd",
+  "base_zip_size": 47683055,
+  "created_at_utc": "2026-11-09T18:44:51.399761+00:00",
+  "base_files_modified_in_full_v192": [
+    "backend/database/mathweb.db"
+  ],
+  "unchanged_original_files": "all other 2,425 V191 zip entries preserve exact CRC32 content",
+  "new_question_count": 1500,
+  "new_candidate_family_count": 150,
+  "catalog_topics_covered_new": 150,
+  "staging_cumulative_count": 9136,
+  "local_bundle_db_count": 9136,
+  "remote_production_write": false,
+  "new_questions_sha256": "666898c5eb7c6d06d030d5a339cc9ca73dddb81c28bcdac0ece3a5fc9e62d0b8",
+  "new_specs_sha256": "31aa1ff8e7eb9e7500dab516e0e1aab0ca64abca96d83cb7327e701fbf24f8f1",
+  "cumulative_questions_sha256": "16f3602569e45ee7fee69e03a74a5187b5a2510290af0728be5d2e2a9b28c4e3",
+  "local_bundle_sqlite_sha256": "45d23127ee9a117eb3c54af109f92c123480822ed0d549c65adbf3574f985991",
+  "certified_independent_forms": 0,
+  "unmodified_user_tables": [
+    "users",
+    "game_results",
+    "friends",
+    "messages",
+    "notifications",
+    "question_sessions"
+  ],
+  "original_entry_count": 2426
+}

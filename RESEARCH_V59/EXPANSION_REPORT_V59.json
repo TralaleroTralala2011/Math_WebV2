@@ -1,0 +1,22 @@
+{
+  "version": "V59",
+  "base": "V58",
+  "old_questions": 68357,
+  "new_questions": 1000,
+  "total_questions": 69357,
+  "old_form_ids": 6978,
+  "new_form_ids": 100,
+  "total_form_ids": 7078,
+  "new_method_families": 10,
+  "new_forms_per_family": 10,
+  "new_questions_per_form": 10,
+  "old_form_ids_below_10": 241,
+  "all_new_answers": "constructively derived from stated exact formulas; NOT independent teacher review",
+  "no_exact_question_collisions": true,
+  "status": "PARTIAL: form IDs not equal independent mathematical methods; no UI regression run; old data not fully audited",
+  "sources_research": [
+    "https://openstax.org/books/precalculus-2e/pages/1-introduction-to-functions",
+    "https://openstax.org/books/introductory-statistics-2e/pages/3-introduction",
+    "https://www.khanacademy.org/math"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": "V84",
+  "base": "V83",
+  "new_type_ids": 0,
+  "new_questions": 0,
+  "goal_type_ids": 300000,
+  "batch_minimum": 10000,
+  "batch_minimum_met": false,
+  "change": "Integrates existing bundled MathGeo Studio v25.0 with practice diagram UI via same-origin popup message bridge; supports graph samples and selected diagram templates, preserves fallback SVG",
+  "limitations": [
+    "Does not implement full MathGeo Studio Pro (only existing v25.0 included in project)",
+    "Diagram templates may not exactly match original problem constraints",
+    "No browser end-to-end testing",
+    "No 10000 independent new mathematical types"
+  ]
+}

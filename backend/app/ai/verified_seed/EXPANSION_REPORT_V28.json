@@ -1,0 +1,347 @@
+{
+  "version": "V28",
+  "source_version": "V27",
+  "previous_questions": 6010,
+  "new_questions": 460,
+  "total_questions": 6470,
+  "previous_form_codes": 600,
+  "new_form_codes": 46,
+  "total_form_codes": 646,
+  "new_forms": [
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v28_three_sets_exact_two",
+      "signature": "three-set membership exactly two via pairwise minus triple",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v28_symmetric_difference",
+      "signature": "symmetric difference cardinality from overlap",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v28_quadratic_roots_opposite",
+      "signature": "quadratic opposite roots coefficient condition",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Parabol",
+      "form_id": "v28_parabola_intersections_horizontal",
+      "signature": "parabola horizontal line intersection count",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v28_reflect_point_over_y_equals_x",
+      "signature": "coordinate reflection across y=x",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v28_triangle_area_shoelace_axis",
+      "signature": "triangle coordinate area determinant",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Vectơ",
+      "form_id": "v28_vector_linear_combination_length",
+      "signature": "vector norm from linear combination orthogonal axes",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Đường tròn",
+      "form_id": "v28_circle_tangent_length_power",
+      "signature": "tangent length from point power circle",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v28_combinations_with_mandatory_people",
+      "signature": "selection fixed mandatory members",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v28_arrange_no_adjacent_two",
+      "signature": "permutation two named people not adjacent",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Xác suất",
+      "form_id": "v28_probability_at_least_one_success",
+      "signature": "complement probability at least one success independent trials",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v28_median_after_appending_extreme",
+      "signature": "median sorted odd sample after append maximum",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Bất phương trình",
+      "form_id": "v28_absolute_value_interval_count",
+      "signature": "integer solutions absolute value inequality",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v28_parallel_line_intercept",
+      "signature": "line through point parallel to given slope",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v28_arithmetic_progression_three_terms_sum",
+      "signature": "AP recover first term from sum and difference",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v28_ap_number_terms_threshold",
+      "signature": "AP count terms bounded by threshold",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v28_gp_geometric_mean",
+      "signature": "GP geometric middle positive term",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v28_gp_find_ratio_from_two_terms",
+      "signature": "GP recover ratio from separated terms",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số",
+      "form_id": "v28_telescoping_fraction_sum",
+      "signature": "telescoping sum reciprocal consecutive integers",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v28_limit_rational_same_degree",
+      "signature": "limit rational polynomial leading coefficient ratio",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v28_limit_root_rationalization",
+      "signature": "limit sqrt difference rationalization",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v28_derivative_log_chain",
+      "signature": "logarithmic derivative linear inner function",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v28_derivative_product_exponential",
+      "signature": "derivative x exp(ax) at zero",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v28_derivative_quotient_at_zero",
+      "signature": "derivative quotient affine rational at zero",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Lượng giác",
+      "form_id": "v28_sine_double_from_tangent",
+      "signature": "sin double angle from tangent positive",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Lượng giác",
+      "form_id": "v28_cos_double_from_tangent",
+      "signature": "cos double angle from tangent",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v28_hypergeometric_exact_one",
+      "signature": "hypergeometric exactly one red two draws",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v28_conditional_first_draw_given_second",
+      "signature": "conditional probability first red given second red without replacement",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Tổ hợp và xác suất nâng cao",
+      "form_id": "v28_distribution_onto_two_boxes",
+      "signature": "surjective assignments to two labelled boxes",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Hình học không gian",
+      "form_id": "v28_prism_volume_from_area_height",
+      "signature": "right prism volume given base area and height",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v28_integral_odd_symmetric",
+      "signature": "odd integrand symmetric interval zero",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v28_integral_even_symmetric",
+      "signature": "even quadratic symmetric definite integral",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v28_integral_log_one_over_x",
+      "signature": "definite integral reciprocal on exponential endpoints",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v28_integral_exp_linear",
+      "signature": "definite integral exponential linear coefficient",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v28_complex_modulus_product",
+      "signature": "complex product modulus squared",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v28_complex_square_real",
+      "signature": "real part of square complex number",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v28_cross_product_norm_squared",
+      "signature": "cross product norm squared axis vectors",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v28_sphere_plane_tangent",
+      "signature": "sphere tangent plane distance radius",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v28_plane_through_three_axis_intercepts",
+      "signature": "intercept plane normal coefficient",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số mũ",
+      "form_id": "v28_exponential_equation_both_sides",
+      "signature": "exponential equality same base linear exponents",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "form_id": "v28_log_equation_sum",
+      "signature": "logarithm sum equation positive roots",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "form_id": "v28_log_base_power_change",
+      "signature": "logarithm base power change of base",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v28_quadratic_min_unbounded",
+      "signature": "quadratic vertex minimum on real line",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "form_id": "v28_cone_lateral_area_pi_coefficient",
+      "signature": "cone lateral area coefficient of pi",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "form_id": "v28_cylinder_total_area_pi_coefficient",
+      "signature": "cylinder total surface area coefficient of pi",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v28_binomial_expected_value",
+      "signature": "binomial expectation from n and p",
+      "questions": 10
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "form_id": "v28_quadratic_discriminant_zero_parameter",
+      "reason": "duplicate_question",
+      "example": "Tìm m để phương trình x²−4x+m=0 có nghiệm kép."
+    },
+    {
+      "form_id": "v28_law_cosines_right_angle",
+      "reason": "duplicate_question",
+      "example": "Tam giác có hai cạnh kề góc 60° dài 4 và 6. Tính bình phương cạnh đối diện góc 60°."
+    }
+  ],
+  "verification_scope": "Exact arithmetic checks on 480 new answers, nonempty solution, exact normalized text deduplication; not a semantic uniqueness proof or whole-site regression test."
+}

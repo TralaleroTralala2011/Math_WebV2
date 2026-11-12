@@ -1,0 +1,99 @@
+{
+  "version": "V221",
+  "base_verified": "V218",
+  "intermediate_versions": [
+    "V219",
+    "V220"
+  ],
+  "timestamp_utc": "2026-11-10T08:09:05.790160+00:00",
+  "base_questions": 12386,
+  "final_questions": 13416,
+  "total_new_active_questions": 1030,
+  "new_active_questions_by_version": {
+    "V219": 510,
+    "V220": 310,
+    "V221": 210
+  },
+  "new_candidate_methods": 103,
+  "new_candidate_groups_by_grade": {
+    "10": 34,
+    "11": 33,
+    "12": 36
+  },
+  "new_question_counts_by_grade": {
+    "10": 340,
+    "11": 330,
+    "12": 360
+  },
+  "new_question_formats": {
+    "multiple_choice": 721,
+    "short_answer": 206,
+    "true_false": 103
+  },
+  "candidate_groups_at_least_10_questions": true,
+  "certified_independent_new_types": 0,
+  "question_target": 300000,
+  "remaining_question_gap": 286584,
+  "target_types_per_topic": 200,
+  "target_total_types": 30000,
+  "topic_count_verified": 150,
+  "mapped_catalog_questions": 13196,
+  "legacy_or_unmapped_topic_questions": [
+    {
+      "grade": 10,
+      "topic": "chia_du",
+      "count": 60
+    },
+    {
+      "grade": 10,
+      "topic": "chia_het",
+      "count": 40
+    },
+    {
+      "grade": 10,
+      "topic": "phuong_trinh_bac_hai",
+      "count": 40
+    },
+    {
+      "grade": 10,
+      "topic": "vec_to",
+      "count": 20
+    },
+    {
+      "grade": 11,
+      "topic": "quy_tac_dem",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "xac_suat",
+      "count": 40
+    },
+    {
+      "grade": 12,
+      "topic": "phuong_trinh_logarit",
+      "count": 10
+    }
+  ],
+  "covered_catalog_topics_with_new_questions": 66,
+  "checks": {
+    "explanation_nonempty": 1030,
+    "accepted_correct_answers": 1030,
+    "unique_mcq_correct": 721,
+    "wrong_mcq_rejected": 2163,
+    "wrong_short_answers_rejected": 206,
+    "wrong_tf_rejected": 103
+  },
+  "all_original_question_rows_preserved": true,
+  "all_original_non_database_zip_members_unchanged": 3068,
+  "zip_member_count_unchanged_until_checkpoint_report_append": true,
+  "crc_check_ok": true,
+  "sqlite_integrity_check": "ok",
+  "exact_question_duplicates": 0,
+  "limitations": [
+    "103 method groups are only candidates; semantic equivalence against entire existing bank not certified.",
+    "Mathematical correctness tested by secondary arithmetic/identity checks and backend positive/negative grading; manual proof review incomplete.",
+    "No full browser UI test or end-to-end Battle multiplayer test.",
+    "No production/GitHub deployment."
+  ]
+}

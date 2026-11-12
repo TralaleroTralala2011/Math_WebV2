@@ -1,0 +1,27 @@
+MATH_WEB_GITHUB_READY_LINKS_FIXED • BẢN NÂNG CẤP
+
+Các thay đổi chính
+1. Sửa lỗi bộ sinh câu hỏi: các chuyên đề không có hàm riêng trước đây có thể rơi về mẫu “lựa chọn A/B, quy tắc nhân”. Đã bổ sung bộ sinh cho Đường tròn và nhiều chuyên đề đại số, lượng giác, giới hạn, hàm mũ/logarit, hình học tọa độ và không gian; các topic đã khai báo được ánh xạ về đúng nhóm kiến thức thay vì dùng mẫu mặc định không liên quan.
+2. Đường tròn có các dạng câu hỏi riêng theo cấp độ: phương trình đường tròn, xác định tâm/bán kính, tiếp tuyến, và vị trí tương đối của điểm. Hình minh họa SVG được dựng từ chính tâm, bán kính và tọa độ của câu hỏi.
+3. Game “Bản đồ hình học” nhận topic/lớp từ URL, gửi đúng lớp tới backend, có hình minh họa tọa độ A/B hoặc đường tròn tương ứng. Khi chơi Đường tròn, bộ câu hỏi được khóa theo chuyên đề đó.
+4. Những chuyên đề chưa có đủ ba game riêng dùng ba mode dự phòng với ba cấp độ: Nền tảng, Trung cấp, Nâng cao. Các game chuyên biệt hiện có vẫn được giữ nguyên giao diện và cơ chế.
+5. Nâng chuẩn difficulty để `foundation` → easy, `advanced` → expert; tăng độ khó cho nhiều dạng bài vận dụng và bổ sung phương án nhiễu khi câu hỏi có đáp án ký hiệu.
+6. Sửa lỗi sinh trắc nghiệm: đáp án đúng luôn được giữ trong bốn lựa chọn; trước đây việc xáo trộn rồi cắt danh sách có thể vô tình loại mất đáp án đúng.
+
+Kiểm tra đã chạy
+- Python compileall cho backend/app: đạt.
+- 84 chuyên đề × 10 câu mỗi bộ, ở từng cấp easy/medium/hard/expert: đạt, không lỗi sinh bộ.
+- 84 chuyên đề × 5 câu, dạng tự luận ngắn và đúng/sai ở cấp expert: đạt.
+- 1008 trường hợp sinh câu đơn (84 chuyên đề × 4 cấp độ × 3 dạng câu): đạt.
+- Kiểm tra cú pháp JavaScript: đạt.
+- Kiểm tra liên kết nội bộ trong HTML: 54 file HTML, không phát hiện đường dẫn cục bộ bị thiếu.
+
+Lưu ý
+Đây là bản nâng cấp mã nguồn và kiểm tra tự động. Vẫn nên chạy website/backend trên máy của bạn và thử trực tiếp luồng đăng nhập, lưu thành tích, đấu mạng và từng game trước khi triển khai công khai.
+
+
+CẬP NHẬT GIAO DIỆN ĐỒNG BỘ (2026-10-12)
+1. Lấy giao diện Bốc bi làm chuẩn thiết kế chung cho 45 trang game chuyên biệt.
+2. Chuyển CSS lặp lại trong từng trang sang games/core/game-style.css để mọi game dùng cùng một nguồn kiểu dáng.
+3. Chỉnh games/universal/index.html và games/universal/game.css để các chế độ dự phòng dùng cùng bảng màu, thẻ, nút, tiến độ và phản hồi; giữ nguyên cơ chế HP/combo/điểm/thời gian.
+4. Chạy kiểm tra cấu trúc HTML, đường dẫn cục bộ, cú pháp JavaScript và biên dịch Python sau khi cập nhật.

@@ -1,0 +1,66 @@
+{
+  "test_scope": "isolated copy of bundled MATH_WEB SQLite, not user production",
+  "v181_v182_imports": {
+    "V182_TEST_IMPORT_V181.json": {
+      "mode": "write",
+      "input_records": 3695,
+      "bank_before": 0,
+      "potential_new": 3695,
+      "certified_independent_types": 0,
+      "inserted": 3695,
+      "already_present": 0,
+      "bank_after": 3695,
+      "ledger_confirmed": 3695,
+      "sqlite_integrity": "ok"
+    },
+    "V182_TEST_IMPORT_V182.json": {
+      "mode": "write",
+      "input_records": 1660,
+      "bank_before": 3695,
+      "potential_new": 1660,
+      "certified_independent_types": 0,
+      "inserted": 1660,
+      "already_present": 0,
+      "bank_after": 5355,
+      "ledger_confirmed": 1660,
+      "sqlite_integrity": "ok"
+    },
+    "V182_TEST_REPEAT_WRITE.json": {
+      "mode": "write",
+      "input_records": 1660,
+      "bank_before": 5355,
+      "potential_new": 0,
+      "certified_independent_types": 0,
+      "inserted": 0,
+      "already_present": 1660,
+      "bank_after": 5355,
+      "ledger_confirmed": 1660,
+      "sqlite_integrity": "ok"
+    }
+  },
+  "sqlite_integrity": "ok",
+  "total_questions_after_import": 5355,
+  "topics_with_stored_questions": 150,
+  "raw_question_shortfall_to_300000_in_test_db": 294645,
+  "api_smoke": {
+    "topics_tested": 150,
+    "curated_questions_returned": 150,
+    "answers_graded_correct": 150,
+    "true_false_topics_tested": 83,
+    "true_false_correct": 83,
+    "bank_count_before": 5355,
+    "failures": [],
+    "bank_count_after": 5355
+  },
+  "pytest_regressions": {
+    "passed": 35,
+    "warnings": 6,
+    "failed": 0
+  },
+  "new_v182_formula_crosschecks": 1660,
+  "new_v182_app_grader_checks": 1660,
+  "exact_duplicate_against_344280_seed": 0,
+  "method_independence_certified": 0,
+  "production_imported": 0,
+  "full_semantic_solution_audit": false
+}

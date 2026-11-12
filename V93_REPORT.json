@@ -1,0 +1,19 @@
+{
+  "version": "V93",
+  "base": "V92",
+  "fixes": [
+    "Import geometry consisting only of circles, without named points",
+    "Include circle centers in geometry bounds and coordinate conversion",
+    "Prevent unvalidated question commands from being executed automatically by MathGeo Studio"
+  ],
+  "new_form_ids": 0,
+  "new_questions": 0,
+  "total_form_ids": 33378,
+  "total_questions": 333780,
+  "browser_tested": false,
+  "remaining": [
+    "Need actual geometry problem-to-constraints converter",
+    "Need browser regression tests for practice, battle and admin",
+    "Need independently verified new mathematical types"
+  ]
+}

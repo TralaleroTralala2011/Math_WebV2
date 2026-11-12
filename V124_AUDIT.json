@@ -1,0 +1,16 @@
+{
+  "release": "V124",
+  "source": "V123",
+  "candidate_records": 1050,
+  "question_records": 10500,
+  "topics": 150,
+  "questions_per_candidate_valid": true,
+  "source_method_clusters": 150,
+  "largest_shared_core_cluster": 7,
+  "independent_arithmetic_oracle_checked": 10,
+  "independent_arithmetic_oracle_passed": 10,
+  "new_independent_methods_certified": 0,
+  "novelty_assessment": "NOT CERTIFIED: shared core method and generic operators",
+  "violations": [],
+  "pass": true
+}

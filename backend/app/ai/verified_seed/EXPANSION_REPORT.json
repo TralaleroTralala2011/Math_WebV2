@@ -1,0 +1,9 @@
+{
+  "total_forms": 45,
+  "total_questions": 450,
+  "added_forms": 20,
+  "added_questions": 200,
+  "questions_per_form": 10,
+  "unique_question_texts": 450,
+  "caveat": "Distinct signatures are not proof of independent mathematical problem types. New data uses computed numeric answers; full independent symbolic verification and integration UI tests not performed."
+}

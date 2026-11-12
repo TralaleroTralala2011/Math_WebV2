@@ -1,0 +1,39 @@
+{
+  "version": "V213",
+  "base_version": "V211",
+  "base_questions": 11646,
+  "final_questions": 12366,
+  "new_questions_since_V211": 720,
+  "added_by_upgrade": {
+    "V212": 420,
+    "V213": 300
+  },
+  "new_candidate_method_groups": 72,
+  "certified_independent_types": 0,
+  "by_grade": {
+    "10": 240,
+    "11": 240,
+    "12": 240
+  },
+  "by_format": {
+    "multiple_choice": 504,
+    "short_answer": 144,
+    "true_false": 72
+  },
+  "preservation_tests": {
+    "unchanged_preexisting_question_rows": 11646,
+    "modified_old_rows": 0,
+    "missing_old_rows": 0,
+    "unchanged_non_database_archive_files": 3048,
+    "modified_non_database_files": 0
+  },
+  "validations": {
+    "sqlite_integrity": "ok",
+    "zip_testzip": "ok",
+    "unique_new_question_stems": 720,
+    "new_questions_with_complete_4_option_mcq_and_one_correct": 504,
+    "new_question_groups_have_exactly_ten_questions": true,
+    "grade_topic_pairs_with_questions": 156
+  },
+  "scope_note": "New 720 questions undergo generator-specific exact mathematical checks; manual semantic independence review against 11,646 prior exercises is not complete. Web UI and Battle regression not run."
+}

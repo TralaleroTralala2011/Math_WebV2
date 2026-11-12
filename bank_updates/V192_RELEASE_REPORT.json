@@ -1,0 +1,99 @@
+{
+  "version": "MATH_WEB_GITHUB_READY_V192",
+  "base": "MATH_WEB_GITHUB_READY_V191_FULL_WEB_BANK_QA_IMPORT.zip",
+  "catalog_checked": 150,
+  "new_candidate_family_count": 150,
+  "new_questions_exact_math_and_grader_checked": 1500,
+  "new_questions_by_grade": {
+    "10": 490,
+    "11": 510,
+    "12": 500
+  },
+  "new_question_types": {
+    "multiple_choice": 1050,
+    "short_answer": 300,
+    "true_false": 150
+  },
+  "new_topics_expanded": 150,
+  "qa_staging_total": 9136,
+  "new_independent_family_certifications": 0,
+  "remote_production_new_questions_confirmed": 0,
+  "web_bundle_sqlite_before": 0,
+  "web_bundle_sqlite_imported": 9136,
+  "web_bundle_sqlite_after": 9136,
+  "web_bundle_sqlite_second_import_added": 0,
+  "new_V192_rows_in_bundle_sqlite": 1500,
+  "nonbank_tables_verified_unchanged": [
+    "users",
+    "game_results",
+    "friends",
+    "messages",
+    "notifications",
+    "question_sessions"
+  ],
+  "web_bundle_application_retrieval_grade_samples": [
+    {
+      "grade": 10,
+      "topic": "menh_de",
+      "question_type": "multiple_choice",
+      "success": true
+    },
+    {
+      "grade": 10,
+      "topic": "menh_de",
+      "question_type": "short_answer",
+      "success": true
+    },
+    {
+      "grade": 10,
+      "topic": "menh_de",
+      "question_type": "true_false",
+      "success": true
+    },
+    {
+      "grade": 11,
+      "topic": "ham_so_luong_giac",
+      "question_type": "multiple_choice",
+      "success": true
+    },
+    {
+      "grade": 11,
+      "topic": "ham_so_luong_giac",
+      "question_type": "short_answer",
+      "success": true
+    },
+    {
+      "grade": 11,
+      "topic": "ham_so_luong_giac",
+      "question_type": "true_false",
+      "success": true
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_sphere_plane_intersection",
+      "question_type": "multiple_choice",
+      "success": true
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_sphere_plane_intersection",
+      "question_type": "short_answer",
+      "success": true
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_sphere_plane_intersection",
+      "question_type": "true_false",
+      "success": true
+    }
+  ],
+  "web_bundle_sqlite_integrity": "ok",
+  "source_db_backup_outside_zip": "/mnt/data/MATHWEB_V192_WORK/V191_SQLITE_ORIGINAL_BACKUP_RECHECK.sqlite",
+  "global_semantic_dedup": "not certified; exact and numeric-template overlap tests only",
+  "missing_per_topic_production": "unknown; production SQLite inaccessible",
+  "target_new_families_per_session": 10000,
+  "target_new_questions_per_session": 100000,
+  "target_final_families": 300000,
+  "target_final_questions": 3000000,
+  "note": "Bundled copy of active MATH_WEB SQLite was populated. No remote production database was accessed."
+}

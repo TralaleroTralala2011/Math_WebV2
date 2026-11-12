@@ -1,0 +1,13 @@
+{
+  "source": "MATH_WEB_V28_CLASSIC_V254_B25_UI_POLISHED.zip",
+  "bank_records": 4000,
+  "bank_mapped_topic_keys": 134,
+  "records_missing_question_answer_solution": 0,
+  "html_pages": 20,
+  "local_asset_missing_count": 0,
+  "local_asset_missing_examples": [],
+  "battle_two_account_e2e": "NOT_RUN",
+  "visual_browser_test": "NOT_RUN",
+  "diagnostic": "merged from V28 diagnostic package",
+  "note": "Bank topic mapping and answer correctness not independently certified."
+}

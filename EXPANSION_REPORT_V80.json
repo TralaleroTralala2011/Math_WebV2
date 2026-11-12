@@ -1,0 +1,18 @@
+{
+  "version": "V80",
+  "base": "V79",
+  "target_topics": 150,
+  "target_independent_types_per_topic": 2000,
+  "target_questions_per_type": 10,
+  "target_independent_types": 300000,
+  "target_questions": 3000000,
+  "current_form_ids": 33378,
+  "current_question_records": 333790,
+  "new_form_ids": 0,
+  "new_questions": 0,
+  "existing_grade_topic_pairs": 140,
+  "certified_independent_types": 0,
+  "pipeline": "tools/type_pipeline.py",
+  "why_no_10000_ids": "No 10,000 independently distinct reviewed mathematical task specifications are available. Generating numeric variants and labeling them new types would misrepresent the user requirement.",
+  "limitations": "Signature checking is a duplicate screen, not a mathematical proof. Manual independent review and domain-specific answer validation still required."
+}

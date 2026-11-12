@@ -1,0 +1,204 @@
+{
+  "version": "V31",
+  "base": "V30",
+  "old_questions": 7010,
+  "added_questions": 350,
+  "total_questions": 7360,
+  "old_form_ids": 700,
+  "new_form_ids": 35,
+  "total_form_ids": 735,
+  "added_by_grade": {
+    "10": 120,
+    "11": 120,
+    "12": 110
+  },
+  "checks": [
+    "new question text uniqueness against full bank",
+    "new form_id and signature uniqueness",
+    "exact rational arithmetic cross-check for each answer",
+    "required fields and explanations"
+  ],
+  "limitations": [
+    "Distinct form IDs and signatures do not prove distinct mathematical methods",
+    "Not a full independent proof of all written solutions",
+    "Website/Battle regression not executed",
+    "Bank not integrated into practice UI"
+  ],
+  "forms": [
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v31_exactly_one_three_sets"
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v31_exactly_two_three_sets"
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "form_id": "v31_vertex_value_parameter"
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "form_id": "v31_quadratic_axis_intercept_distance"
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v31_line_intersection_sum"
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v31_triangle_area_determinant"
+    },
+    {
+      "grade": 10,
+      "topic": "Vectơ",
+      "form_id": "v31_dot_product_from_lengths_angle_60"
+    },
+    {
+      "grade": 10,
+      "topic": "Hệ thức lượng trong tam giác",
+      "form_id": "v31_cosine_rule_opposite_side_squared"
+    },
+    {
+      "grade": 10,
+      "topic": "Xác suất",
+      "form_id": "v31_without_replacement_both_red"
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v31_weighted_mean_three_groups"
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v31_nonadjacent_selections"
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v31_quadratic_roots_reciprocal_sum"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v31_arithmetic_middle_term_sum"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v31_arithmetic_index_from_two_terms"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v31_geometric_even_index_sum"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v31_geometric_missing_term_product"
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn hàm số",
+      "form_id": "v31_rational_infinity_ratio"
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn hàm số",
+      "form_id": "v31_radical_rationalization_limit"
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v31_product_rule_at_point"
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v31_chain_rule_power_at_one"
+    },
+    {
+      "grade": 11,
+      "topic": "Phương trình lượng giác",
+      "form_id": "v31_cos_equation_count_interval"
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v31_binomial_exact_two_successes"
+    },
+    {
+      "grade": 11,
+      "topic": "Tổ hợp và xác suất nâng cao",
+      "form_id": "v31_arrangements_repeated_letters"
+    },
+    {
+      "grade": 11,
+      "topic": "Hình học không gian",
+      "form_id": "v31_rectangular_box_space_diagonal_squared"
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v31_integral_linear_power"
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v31_integral_even_symmetry"
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v31_complex_product_imaginary"
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v31_plane_normal_vector_dot"
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v31_midpoint_three_dimensions"
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số mũ",
+      "form_id": "v31_compound_growth_recover_principal"
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "form_id": "v31_log_change_base_ratio"
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v31_quadratic_minimum_on_positive_interval"
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v31_bernoulli_variance_fraction"
+    },
+    {
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "form_id": "v31_cylinder_surface_lateral"
+    },
+    {
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "form_id": "v31_sphere_volume_coefficient"
+    }
+  ]
+}

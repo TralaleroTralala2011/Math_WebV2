@@ -1,0 +1,121 @@
+{
+  "preview": {
+    "mode": "preview",
+    "db": "/mnt/data/MATHWEB_V192_WORK/MATH_WEB_GITHUB_READY/backend/database/mathweb.db",
+    "input_records": 9136,
+    "bank_before": 0,
+    "potential_new": 9136,
+    "certified_independent_types": 0
+  },
+  "first_import": {
+    "mode": "write",
+    "db": "/mnt/data/MATHWEB_V192_WORK/MATH_WEB_GITHUB_READY/backend/database/mathweb.db",
+    "input_records": 9136,
+    "bank_before": 0,
+    "potential_new": 9136,
+    "certified_independent_types": 0,
+    "inserted": 9136,
+    "already_present": 0,
+    "bank_after": 9136,
+    "ledger_confirmed": 9136,
+    "backup": "/mnt/data/MATHWEB_V192_WORK/V191_SQLITE_ORIGINAL_BACKUP_RECHECK.sqlite",
+    "sqlite_integrity": "ok"
+  },
+  "second_import": {
+    "mode": "write",
+    "db": "/mnt/data/MATHWEB_V192_WORK/MATH_WEB_GITHUB_READY/backend/database/mathweb.db",
+    "input_records": 9136,
+    "bank_before": 9136,
+    "potential_new": 0,
+    "certified_independent_types": 0,
+    "inserted": 0,
+    "already_present": 9136,
+    "bank_after": 9136,
+    "ledger_confirmed": 9136,
+    "backup": "/mnt/data/MATHWEB_V192_WORK/V192_SQLITE_SECOND_IMPORT_BACKUP_RECHECK.sqlite",
+    "sqlite_integrity": "ok"
+  },
+  "retrieval_samples": [
+    {
+      "grade": 10,
+      "topic": "menh_de",
+      "question_type": "multiple_choice",
+      "success": true
+    },
+    {
+      "grade": 10,
+      "topic": "menh_de",
+      "question_type": "short_answer",
+      "success": true
+    },
+    {
+      "grade": 10,
+      "topic": "menh_de",
+      "question_type": "true_false",
+      "success": true
+    },
+    {
+      "grade": 11,
+      "topic": "ham_so_luong_giac",
+      "question_type": "multiple_choice",
+      "success": true
+    },
+    {
+      "grade": 11,
+      "topic": "ham_so_luong_giac",
+      "question_type": "short_answer",
+      "success": true
+    },
+    {
+      "grade": 11,
+      "topic": "ham_so_luong_giac",
+      "question_type": "true_false",
+      "success": true
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_sphere_plane_intersection",
+      "question_type": "multiple_choice",
+      "success": true
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_sphere_plane_intersection",
+      "question_type": "short_answer",
+      "success": true
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_sphere_plane_intersection",
+      "question_type": "true_false",
+      "success": true
+    }
+  ],
+  "nonbank_invariants": {
+    "users": [
+      1,
+      "25995793f5957e937c2e5a306f1a8dac471fd38837db3382118c82edae54ecd9"
+    ],
+    "game_results": [
+      0,
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "friends": [
+      0,
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "messages": [
+      0,
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "notifications": [
+      0,
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ],
+    "question_sessions": [
+      0,
+      "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    ]
+  },
+  "production_write": false
+}

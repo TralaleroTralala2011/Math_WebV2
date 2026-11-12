@@ -1,0 +1,107 @@
+{
+  "audit_type": "Static HTML only, not visual/browser or JS runtime testing",
+  "pages": 20,
+  "issues": 0,
+  "page_results": [
+    {
+      "page": "account.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "admin.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "battle.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "chat.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "curriculum-studio.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "final-features.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "geometry-lab.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "geometry-learning.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "geometry-studio.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "index.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "learn.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "learning-path.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "learning-progress.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "learning.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "login.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "practice.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "practise.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "register.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "study-suite.html",
+      "viewport": true,
+      "problems": []
+    },
+    {
+      "page": "trial-practise.html",
+      "viewport": true,
+      "problems": []
+    }
+  ]
+}

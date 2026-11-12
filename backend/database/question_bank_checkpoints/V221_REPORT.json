@@ -1,0 +1,36 @@
+{
+  "version": "V221",
+  "based_on": "V220",
+  "base_count_verified": 13206,
+  "new_questions_imported": 210,
+  "final_sqlite_count_verified_from_zip": 13416,
+  "new_method_candidate_groups": 21,
+  "certified_new_independent_types": 0,
+  "new_count_by_grade": {
+    "10": 70,
+    "11": 70,
+    "12": 70
+  },
+  "new_question_types": {
+    "multiple_choice": 147,
+    "short_answer": 42,
+    "true_false": 21
+  },
+  "new_catalog_topic_coverage": 18,
+  "checks": {
+    "independent_arithmetic_oracle": 210,
+    "single_unique_correct_option": 147,
+    "four_checked_true_false": 21
+  },
+  "source_preservation_sha256": "c66a5264e016f5bd1472548556422f3212309d41bf62f112d57285dd4d22fdca",
+  "source_preservation_verified": true,
+  "zip_integrity_crc_ok": true,
+  "sqlite_integrity_ok": true,
+  "limitations": [
+    "Method groups remain candidates: total-bank semantic distinctness has not been certified.",
+    "No deployment to production.",
+    "Full UI and Battle integration regression tests not yet run.",
+    "All answers checked with secondary math oracles on generation but not all manually proof-reviewed."
+  ],
+  "new_questions_needed_for_300000_target": 286584
+}

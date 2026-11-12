@@ -1,0 +1,134 @@
+[
+  {
+    "family": "absolute_value_linear_equation",
+    "topic": "phuong_trinh",
+    "grade": 10,
+    "difficulty": "nền tảng",
+    "concept": "Giải phương trình trị tuyệt đối",
+    "method": "Tách hai trường hợp dấu và kiểm tra nghiệm",
+    "conditions": "Hệ số a khác 0",
+    "count": 10,
+    "independence_status": "candidate_requires_semantic_bank_audit"
+  },
+  {
+    "family": "quadratic_vertex_minimum",
+    "topic": "ham_so_bac_hai",
+    "grade": 10,
+    "difficulty": "trung cấp",
+    "concept": "Giá trị nhỏ nhất tam thức bậc hai",
+    "method": "Hoàn thành bình phương",
+    "conditions": "Hệ số bậc hai dương",
+    "count": 10,
+    "independence_status": "candidate_requires_semantic_bank_audit"
+  },
+  {
+    "family": "arithmetic_sequence_partial_sum",
+    "topic": "cap_so_cong",
+    "grade": 11,
+    "difficulty": "nền tảng",
+    "concept": "Tổng n số hạng cấp số cộng",
+    "method": "Dùng S_n=n(2u1+(n−1)d)/2",
+    "conditions": "n nguyên dương",
+    "count": 10,
+    "independence_status": "candidate_requires_semantic_bank_audit"
+  },
+  {
+    "family": "geometric_sequence_sum",
+    "topic": "cap_so_nhan",
+    "grade": 11,
+    "difficulty": "trung cấp",
+    "concept": "Tổng hữu hạn cấp số nhân",
+    "method": "S_n=u1(q^n−1)/(q−1)",
+    "conditions": "q khác 1",
+    "count": 10,
+    "independence_status": "candidate_requires_semantic_bank_audit"
+  },
+  {
+    "family": "trigonometric_cosine_double_angle",
+    "topic": "cong_thuc_luong_giac",
+    "grade": 11,
+    "difficulty": "trung cấp",
+    "concept": "Tính cos 2α từ cos α",
+    "method": "Áp dụng cos2α=2cos²α−1",
+    "conditions": "α góc thực",
+    "count": 10,
+    "independence_status": "candidate_requires_semantic_bank_audit"
+  },
+  {
+    "family": "derivative_polynomial_evaluation",
+    "topic": "dao_ham",
+    "grade": 11,
+    "difficulty": "nền tảng",
+    "concept": "Đạo hàm đa thức tại điểm",
+    "method": "Lấy đạo hàm từng đơn thức",
+    "conditions": "Đa thức xác định trên R",
+    "count": 10,
+    "independence_status": "candidate_requires_semantic_bank_audit"
+  },
+  {
+    "family": "independent_events_union",
+    "topic": "xac_suat",
+    "grade": 11,
+    "difficulty": "trung cấp",
+    "concept": "Hợp hai biến cố độc lập",
+    "method": "P(A∪B)=P(A)+P(B)−P(A)P(B)",
+    "conditions": "A,B độc lập",
+    "count": 10,
+    "independence_status": "candidate_requires_semantic_bank_audit"
+  },
+  {
+    "family": "definite_integral_polynomial",
+    "topic": "nguyen_ham_tich_phan",
+    "grade": 12,
+    "difficulty": "trung cấp",
+    "concept": "Tích phân xác định đa thức",
+    "method": "Tìm nguyên hàm và áp dụng Newton–Leibniz",
+    "conditions": "Đa thức liên tục",
+    "count": 10,
+    "independence_status": "candidate_requires_semantic_bank_audit"
+  },
+  {
+    "family": "vector_dot_product_3d",
+    "topic": "toa_do_oxyz",
+    "grade": 12,
+    "difficulty": "nền tảng",
+    "concept": "Tích vô hướng hai vectơ trong Oxyz",
+    "method": "Nhân các tọa độ tương ứng rồi cộng",
+    "conditions": "Hai vectơ trong R³",
+    "count": 10,
+    "independence_status": "candidate_requires_semantic_bank_audit"
+  },
+  {
+    "family": "logarithm_product_rule",
+    "topic": "ham_mu_logarit",
+    "grade": 12,
+    "difficulty": "nền tảng",
+    "concept": "Rút gọn tổng logarit cùng cơ số",
+    "method": "log_a u+log_a v=log_a(uv)",
+    "conditions": "Cơ số dương khác 1, đối số dương",
+    "count": 10,
+    "independence_status": "candidate_requires_semantic_bank_audit"
+  },
+  {
+    "family": "combinations_selection",
+    "topic": "to_hop",
+    "grade": 10,
+    "difficulty": "trung cấp",
+    "concept": "Chọn k phần tử không xét thứ tự",
+    "method": "Áp dụng tổ hợp C(n,k)",
+    "conditions": "0≤k≤n",
+    "count": 10,
+    "independence_status": "candidate_requires_semantic_bank_audit"
+  },
+  {
+    "family": "circle_equation_radius",
+    "topic": "duong_tron",
+    "grade": 10,
+    "difficulty": "nền tảng",
+    "concept": "Xác định bán kính đường tròn từ phương trình chính tắc",
+    "method": "So sánh với (x−a)²+(y−b)²=R²",
+    "conditions": "R>0",
+    "count": 10,
+    "independence_status": "candidate_requires_semantic_bank_audit"
+  }
+]

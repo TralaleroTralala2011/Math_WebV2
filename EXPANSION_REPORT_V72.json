@@ -1,0 +1,15 @@
+{
+  "version": "V72",
+  "base": "V71",
+  "new_form_ids": 1000,
+  "new_question_records": 10000,
+  "total_form_ids": 23358,
+  "total_question_records": 233590,
+  "new_method_families": 10,
+  "new_independent_types_verified": 0,
+  "min_questions_per_new_form": 10,
+  "new_question_text_duplicates": 0,
+  "new_question_text_overlaps_with_base": 0,
+  "overlaps_replaced": 1,
+  "limitations": "1,000 form IDs represent 10 authored method families, not 1,000 independent mathematical problem types. No full independent mathematical audit or website regression tests."
+}

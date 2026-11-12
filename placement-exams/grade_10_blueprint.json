@@ -1,0 +1,460 @@
+{
+  "version": "2026.11.11",
+  "grade": 10,
+  "status": "blueprint_only_unpublished",
+  "purpose": "diagnostic_placement_not_high_stakes",
+  "curriculum": "Vietnam general education mathematics curriculum 2018",
+  "framework": "OECD PISA 2022 mathematical reasoning/formulate/employ/interpret (inspiration, not official PISA items)",
+  "min_questions_per_tier": 3,
+  "max_questions_per_tier": 4,
+  "formats_required_per_topic": 2,
+  "tiers": [
+    "nền tảng",
+    "trung cấp",
+    "nâng cao"
+  ],
+  "topics": [
+    {
+      "topic_id": "menh_de_tap_hop",
+      "title": "Mệnh đề và tập hợp",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "bat_phuong_trinh",
+      "title": "Bất phương trình và hệ bất phương trình",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "he_thuc_luong",
+      "title": "Hệ thức lượng trong tam giác",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "vector",
+      "title": "Vectơ",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "ham_so_bac_hai",
+      "title": "Hàm số bậc hai và parabol",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "phuong_trinh_he",
+      "title": "Phương trình và hệ phương trình",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "quy_tac_dem",
+      "title": "Quy tắc đếm",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "hoan_vi_chinh_hop_to_hop",
+      "title": "Hoán vị, chỉnh hợp, tổ hợp",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "xac_suat",
+      "title": "Xác suất",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "thong_ke",
+      "title": "Thống kê",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "menh_de",
+      "title": "Mệnh đề",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "tap_hop",
+      "title": "Tập hợp và các phép toán",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "he_bat_phuong_trinh",
+      "title": "Hệ bất phương trình",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "ham_so",
+      "title": "Hàm số",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "ham_so_bac_nhat",
+      "title": "Hàm số bậc nhất",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "phuong_trinh",
+      "title": "Phương trình",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "he_phuong_trinh",
+      "title": "Hệ phương trình",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "he_thuc_luong_tam_giac",
+      "title": "Hệ thức lượng trong tam giác",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "toa_do_phang",
+      "title": "Tọa độ trong mặt phẳng",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "duong_thang",
+      "title": "Đường thẳng",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "duong_tron",
+      "title": "Đường tròn",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "nhi_thuc_newton",
+      "title": "Nhị thức Newton",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "hinh_hoc_10",
+      "title": "Hình học phẳng",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "bai_toan_thuc_te_10",
+      "title": "Bài toán thực tế Toán 10",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "hinh_hoc_co_ban_10",
+      "title": "Hình học cơ bản: góc, cạnh và diện tích",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "tam_giac_tu_giac_10",
+      "title": "Tam giác và tứ giác cơ bản",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "duong_tron_co_ban_10",
+      "title": "Đường tròn và các góc cơ bản",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "he_thuc_luong_van_dung_10",
+      "title": "Hệ thức lượng trong tam giác",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "toa_do_hinh_hoc_10",
+      "title": "Tọa độ và đường thẳng trong mặt phẳng",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "chung_minh_hinh_hoc_10",
+      "title": "Chứng minh hình học và bài toán tổng hợp",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_angles_parallel",
+      "title": "Góc tạo bởi hai đường thẳng và đường cắt",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_triangle_congruence",
+      "title": "Các trường hợp bằng nhau của tam giác",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_special_lines",
+      "title": "Đường trung tuyến, phân giác và đường cao",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_quadrilaterals_properties",
+      "title": "Tính chất hình bình hành và hình thoi",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_circle_chords_arcs",
+      "title": "Dây cung, cung và khoảng cách đến tâm",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_thales_similarity",
+      "title": "Định lý Thales và tam giác đồng dạng",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_triangle_area_ratio",
+      "title": "Tỉ số diện tích tam giác",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_circle_angles",
+      "title": "Góc nội tiếp và góc ở tâm nâng cao",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_coordinate_distance_midpoint",
+      "title": "Trung điểm và khoảng cách trong tọa độ phẳng",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_line_intersections",
+      "title": "Giao điểm và vị trí tương đối của hai đường thẳng",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_locus",
+      "title": "Quỹ tích điểm trong mặt phẳng",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_circle_tangent_chord",
+      "title": "Tiếp tuyến và dây cung của đường tròn",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_triangle_inequalities",
+      "title": "Bất đẳng thức và cực trị trong tam giác",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_vector_proofs",
+      "title": "Chứng minh hình học bằng vectơ",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_geom_coordinate_circle_line",
+      "title": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_advanced_inequalities",
+      "title": "Bất đẳng thức đại số và cực trị nâng cao",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_symmetric_systems",
+      "title": "Hệ phương trình đối xứng và hoán vị",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_radical_equations_advanced",
+      "title": "Phương trình chứa căn thức nâng cao",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    },
+    {
+      "topic_id": "g10_combinatorics_olympiad",
+      "title": "Tổ hợp và nguyên lý Dirichlet nâng cao",
+      "tiers": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      }
+    }
+  ],
+  "note": "Danh sách vị trí cần thẩm định; KHÔNG phải đề đã có câu hỏi được chứng nhận."
+}

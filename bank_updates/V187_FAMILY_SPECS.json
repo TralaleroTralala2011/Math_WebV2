@@ -1,0 +1,82 @@
+[
+  {
+    "family": "union_root_sets",
+    "topic": "tap_hop",
+    "grade": 10,
+    "concept": "Hợp hai tập nghiệm phương trình bậc hai",
+    "method": "Giải hai phương trình rồi lấy hợp không lặp",
+    "certified": false
+  },
+  {
+    "family": "arithmetic_progression_nth",
+    "topic": "cap_so_cong",
+    "grade": 11,
+    "concept": "Số hạng tổng quát cấp số cộng",
+    "method": "Dùng u_n=u_1+(n−1)d",
+    "certified": false
+  },
+  {
+    "family": "geometric_progression_nth",
+    "topic": "cap_so_nhan",
+    "grade": 11,
+    "concept": "Số hạng tổng quát cấp số nhân",
+    "method": "Dùng u_n=u_1q^(n−1)",
+    "certified": false
+  },
+  {
+    "family": "limit_difference_squares",
+    "topic": "gioi_han",
+    "grade": 11,
+    "concept": "Giới hạn 0/0 bằng phân tích hiệu hai bình phương",
+    "method": "Phân tích và khử nhân tử",
+    "certified": false
+  },
+  {
+    "family": "tangent_quadratic_slope",
+    "topic": "dao_ham",
+    "grade": 11,
+    "concept": "Hệ số góc tiếp tuyến qua đạo hàm",
+    "method": "Tính đạo hàm tại hoành độ tiếp xúc",
+    "certified": false
+  },
+  {
+    "family": "point_line_distance",
+    "topic": "toa_do",
+    "grade": 10,
+    "concept": "Khoảng cách từ điểm đến đường thẳng",
+    "method": "Công thức khoảng cách tọa độ",
+    "certified": false
+  },
+  {
+    "family": "rectangle_area",
+    "topic": "hinh_hoc_co_ban",
+    "grade": 10,
+    "concept": "Diện tích hình chữ nhật",
+    "method": "Nhân hai cạnh kề",
+    "certified": false
+  },
+  {
+    "family": "mean_two_numbers",
+    "topic": "thong_ke",
+    "grade": 10,
+    "concept": "Trung bình cộng của mẫu hai số",
+    "method": "Tổng chia số quan sát",
+    "certified": false
+  },
+  {
+    "family": "single_draw_probability",
+    "topic": "xac_suat",
+    "grade": 10,
+    "concept": "Xác suất cổ điển một lần rút",
+    "method": "Số kết quả thuận lợi chia tổng kết quả",
+    "certified": false
+  },
+  {
+    "family": "product_zero_equation",
+    "topic": "phuong_trinh",
+    "grade": 10,
+    "concept": "Phương trình tích bằng không",
+    "method": "Xét từng thừa số bằng 0",
+    "certified": false
+  }
+]

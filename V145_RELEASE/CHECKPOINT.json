@@ -1,0 +1,24 @@
+{
+  "version": "V145",
+  "base": "MATH_WEB_GITHUB_READY_V144_CERTIFICATE_JSON_AUDIT.zip",
+  "changed": [
+    "backend/question_factory/storage.py"
+  ],
+  "added": [
+    "backend/tests/test_v145_evidence_diagnostics.py"
+  ],
+  "focused_tests_passed": 17,
+  "focused_tests_failed": 0,
+  "full_regression": "attempted, timed out after reaching approximately 32% of suite; not certified",
+  "new_certified_independent_types": 0,
+  "new_published_questions": 0,
+  "pending_candidates_carried": 11,
+  "pending_research_questions_carried": 110,
+  "note": "New diagnostic counts certificate records missing compared_method_ids array and >=20-character independence_reason. Does not change legacy certification eligibility or imply automatic mathematical validation.",
+  "next": [
+    "review evidence quality and mathematical independence manually",
+    "investigate full-suite runtime and six prior setup errors",
+    "Battle and Admin integration testing",
+    "add genuine independent methods and verified exercises"
+  ]
+}

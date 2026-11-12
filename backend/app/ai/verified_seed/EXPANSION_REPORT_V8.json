@@ -1,0 +1,8 @@
+{
+  "previous_questions": 1110,
+  "new_forms": 20,
+  "new_questions": 200,
+  "total_questions": 1310,
+  "total_form_ids": 131,
+  "note": "Form signatures are descriptive, not a proof of semantic independence; verify mathematical correctness and app integration separately."
+}

@@ -1,0 +1,16 @@
+{
+  "database": "/mnt/data/v215_runtime/MATH_WEB_GITHUB_READY/backend/database/mathweb.db",
+  "new_rows": 620,
+  "pass_format": {
+    "multiple_choice": 434,
+    "short_answer": 124,
+    "true_false": 62
+  },
+  "pass_grade": {
+    "10": 230,
+    "11": 180,
+    "12": 210
+  },
+  "issues": [],
+  "site_battle_regression_run": false
+}

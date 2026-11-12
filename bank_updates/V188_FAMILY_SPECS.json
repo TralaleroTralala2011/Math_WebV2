@@ -1,0 +1,52 @@
+[
+  {
+    "family": "quadratic_parameter_double_root",
+    "topic": "phuong_trinh_bac_hai",
+    "grade": 10,
+    "concept": "Tham số để phương trình bậc hai có nghiệm kép",
+    "method": "Dùng biệt thức Δ=0",
+    "conditions": "Hệ số x² khác 0",
+    "question_count": 10,
+    "independent_form_certified": false
+  },
+  {
+    "family": "inverse_mobius_value",
+    "topic": "ham_so",
+    "grade": 10,
+    "concept": "Tìm giá trị hàm ngược của phân thức bậc nhất",
+    "method": "Giải f(x)=y và kiểm tra mẫu",
+    "conditions": "ad−bc khác 0; y thuộc tập giá trị",
+    "question_count": 10,
+    "independent_form_certified": false
+  },
+  {
+    "family": "hypergeometric_exactly_one",
+    "topic": "xac_suat",
+    "grade": 10,
+    "concept": "Xác suất siêu bội đúng một phần tử loại A",
+    "method": "Đếm tổ hợp thuận lợi và tổng tổ hợp",
+    "conditions": "Rút không hoàn lại; số lượng đủ",
+    "question_count": 10,
+    "independent_form_certified": false
+  },
+  {
+    "family": "binomial_target_coefficient",
+    "topic": "nhi_thuc_newton",
+    "grade": 10,
+    "concept": "Hệ số của lũy thừa chỉ định trong nhị thức",
+    "method": "Chọn số hạng theo công thức nhị thức Newton",
+    "conditions": "n nguyên không âm; k từ 0 đến n",
+    "question_count": 10,
+    "independent_form_certified": false
+  },
+  {
+    "family": "log_inequality_integer_count",
+    "topic": "phuong_trinh_logarit",
+    "grade": 12,
+    "concept": "Đếm nghiệm nguyên của bất phương trình logarit",
+    "method": "Đổi sang bất đẳng thức mũ và đếm số nguyên",
+    "conditions": "Cơ số >1; đối số dương",
+    "question_count": 10,
+    "independent_form_certified": false
+  }
+]

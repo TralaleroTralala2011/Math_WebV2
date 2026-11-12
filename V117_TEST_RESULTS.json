@@ -1,0 +1,17 @@
+{
+  "version":"V117",
+  "base":"MATH_WEB_GITHUB_READY_V116_RESEARCH_500_TARGET.zip",
+  "test_groups":[
+    {"name":"Question Factory + Operations","passed":46,"failed":0},
+    {"name":"Verified Bank API + Quality","passed":7,"failed":0},
+    {"name":"Remaining backend tests","passed":114,"failed":0}
+  ],
+  "total_passed":167,
+  "total_failed":0,
+  "all_in_one_run":false,
+  "production_tests":false,
+  "human_method_review_count":0,
+  "new_candidate_forms":56,
+  "new_exact_answer_oracle_checked_examples":560,
+  "notes":"All cases passed in separate groups. This does not certify type independence or pedagogical correctness."
+}

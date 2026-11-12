@@ -1,0 +1,35 @@
+{
+  "input": {
+    "V181_IMPORT_READY.jsonl": {
+      "source_rows": 3695,
+      "accepted": 3695,
+      "duplicates": 0
+    },
+    "V182_IMPORT_READY.jsonl": {
+      "source_rows": 1660,
+      "accepted": 1660,
+      "duplicates": 0
+    },
+    "V183_IMPORT_READY.jsonl": {
+      "source_rows": 755,
+      "accepted": 755,
+      "duplicates": 0
+    },
+    "V184_IMPORT_READY.jsonl": {
+      "source_rows": 830,
+      "accepted": 718,
+      "duplicates": 112
+    }
+  },
+  "accepted_rows": 6828,
+  "duplicate_rows": 112,
+  "catalog_topics": 150,
+  "topics_with_candidates": 150,
+  "sum_candidate_question_shortfall_to_300000": 293172,
+  "certified_new_types": 0,
+  "production_integrated": 0,
+  "limitations": "No production database in source ZIP. Arithmetic verification and semantic uniqueness not established by consolidation.",
+  "structural_grader_passed": 6756,
+  "structural_grader_rejected": 72,
+  "verified_math_independently": 0
+}

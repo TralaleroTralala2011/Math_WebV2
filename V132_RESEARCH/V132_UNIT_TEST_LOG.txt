@@ -1,0 +1,17 @@
+test_checked_answer (test_v132.Tests.test_checked_answer) ... ok
+test_one_hundred_questions (test_v132.Tests.test_one_hundred_questions) ... ok
+test_recalculate_all_questions (test_v132.Tests.test_recalculate_all_questions) ... ok
+test_solutions (test_v132.Tests.test_solutions) ... ok
+test_ten_distinct_candidate_methods (test_v132.Tests.test_ten_distinct_candidate_methods) ... ok
+test_ten_per_method (test_v132.Tests.test_ten_per_method) ... ok
+test_topics (test_v132.Tests.test_topics) ... ok
+test_uncertified (test_v132.Tests.test_uncertified) ... ok
+test_unique_stems (test_v132.Tests.test_unique_stems) ... ok
+test_unpublished (test_v132.Tests.test_unpublished) ... ok
+test_wrong_answer_detection (test_v132.Tests.test_wrong_answer_detection) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 1.030s
+
+OK
+Created 10 candidate methods and 100 arithmetically verified questions.

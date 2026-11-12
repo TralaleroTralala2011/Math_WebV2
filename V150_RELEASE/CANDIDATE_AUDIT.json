@@ -1,0 +1,222 @@
+{
+  "candidate_files": 10,
+  "candidate_records": 1609,
+  "records_with_method_and_topic": 1609,
+  "exact_topic_method_collision_groups": 0,
+  "exact_topic_method_collisions": [],
+  "duplicate_candidate_id_groups": 0,
+  "duplicate_candidate_ids": [],
+  "missing_candidate_ids": 0,
+  "identity_source_counts": {
+    "method_id": 79,
+    "form_id": 0,
+    "id": 0,
+    "signature": 1530
+  },
+  "shared_core_method_candidates": 1050,
+  "shared_core_method_examples": [
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 1,
+      "id": "v123:difference-of-two-scenario-results:v121:menh_de_tap_hop:a:kiểm-tra-phần-tử-bội-của-a-không-thuộc-bội-của-b",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "menh_de_tap_hop",
+      "method": "kiến thức nguồn kiểm tra phần tử bội của a không thuộc bội của b phương pháp bổ sung biến thiên tuyệt đối giữa hai bộ dữ kiện",
+      "title": "biến thiên tuyệt đối giữa hai bộ dữ kiện kiểm tra phần tử bội của a không thuộc bội của b"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 2,
+      "id": "v123:aggregation-sum-three-scenarios:v121:menh_de_tap_hop:a:kiểm-tra-phần-tử-bội-của-a-không-thuộc-bội-của-b",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "menh_de_tap_hop",
+      "method": "kiến thức nguồn kiểm tra phần tử bội của a không thuộc bội của b phương pháp bổ sung tổng kết quả từ ba tình huống",
+      "title": "tổng kết quả từ ba tình huống kiểm tra phần tử bội của a không thuộc bội của b"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 3,
+      "id": "v123:finite-optimization-max-three-scenarios:v121:menh_de_tap_hop:a:kiểm-tra-phần-tử-bội-của-a-không-thuộc-bội-của-b",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "menh_de_tap_hop",
+      "method": "kiến thức nguồn kiểm tra phần tử bội của a không thuộc bội của b phương pháp bổ sung tối ưu kết quả trong ba phương án",
+      "title": "tối ưu kết quả trong ba phương án kiểm tra phần tử bội của a không thuộc bội của b"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 4,
+      "id": "v123:order-statistic-median-three-scenarios:v121:menh_de_tap_hop:a:kiểm-tra-phần-tử-bội-của-a-không-thuộc-bội-của-b",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "menh_de_tap_hop",
+      "method": "kiến thức nguồn kiểm tra phần tử bội của a không thuộc bội của b phương pháp bổ sung trung vị của ba kết quả",
+      "title": "trung vị của ba kết quả kiểm tra phần tử bội của a không thuộc bội của b"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 5,
+      "id": "v123:second-finite-difference-three-scenarios:v121:menh_de_tap_hop:a:kiểm-tra-phần-tử-bội-của-a-không-thuộc-bội-của-b",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "menh_de_tap_hop",
+      "method": "kiến thức nguồn kiểm tra phần tử bội của a không thuộc bội của b phương pháp bổ sung đánh giá độ biến thiên bậc hai",
+      "title": "đánh giá độ biến thiên bậc hai kiểm tra phần tử bội của a không thuộc bội của b"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 6,
+      "id": "v123:count-strict-inequality-four-scenarios:v121:menh_de_tap_hop:a:kiểm-tra-phần-tử-bội-của-a-không-thuộc-bội-của-b",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "menh_de_tap_hop",
+      "method": "kiến thức nguồn kiểm tra phần tử bội của a không thuộc bội của b phương pháp bổ sung đếm phương án vượt mức chuẩn",
+      "title": "đếm phương án vượt mức chuẩn kiểm tra phần tử bội của a không thuộc bội của b"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 7,
+      "id": "v123:dispersion-mean-square-three-scenarios:v121:menh_de_tap_hop:a:kiểm-tra-phần-tử-bội-của-a-không-thuộc-bội-của-b",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "menh_de_tap_hop",
+      "method": "kiến thức nguồn kiểm tra phần tử bội của a không thuộc bội của b phương pháp bổ sung phương sai của ba kết quả",
+      "title": "phương sai của ba kết quả kiểm tra phần tử bội của a không thuộc bội của b"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 8,
+      "id": "v123:difference-of-two-scenario-results:v121:bat_phuong_trinh:a:bất-phương-trình-trị-tuyệt-đối-và-nghiệm-nguyên",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "bat_phuong_trinh",
+      "method": "kiến thức nguồn bất phương trình trị tuyệt đối và nghiệm nguyên phương pháp bổ sung biến thiên tuyệt đối giữa hai bộ dữ kiện",
+      "title": "biến thiên tuyệt đối giữa hai bộ dữ kiện bất phương trình trị tuyệt đối và nghiệm nguyên"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 9,
+      "id": "v123:aggregation-sum-three-scenarios:v121:bat_phuong_trinh:a:bất-phương-trình-trị-tuyệt-đối-và-nghiệm-nguyên",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "bat_phuong_trinh",
+      "method": "kiến thức nguồn bất phương trình trị tuyệt đối và nghiệm nguyên phương pháp bổ sung tổng kết quả từ ba tình huống",
+      "title": "tổng kết quả từ ba tình huống bất phương trình trị tuyệt đối và nghiệm nguyên"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 10,
+      "id": "v123:finite-optimization-max-three-scenarios:v121:bat_phuong_trinh:a:bất-phương-trình-trị-tuyệt-đối-và-nghiệm-nguyên",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "bat_phuong_trinh",
+      "method": "kiến thức nguồn bất phương trình trị tuyệt đối và nghiệm nguyên phương pháp bổ sung tối ưu kết quả trong ba phương án",
+      "title": "tối ưu kết quả trong ba phương án bất phương trình trị tuyệt đối và nghiệm nguyên"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 11,
+      "id": "v123:order-statistic-median-three-scenarios:v121:bat_phuong_trinh:a:bất-phương-trình-trị-tuyệt-đối-và-nghiệm-nguyên",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "bat_phuong_trinh",
+      "method": "kiến thức nguồn bất phương trình trị tuyệt đối và nghiệm nguyên phương pháp bổ sung trung vị của ba kết quả",
+      "title": "trung vị của ba kết quả bất phương trình trị tuyệt đối và nghiệm nguyên"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 12,
+      "id": "v123:second-finite-difference-three-scenarios:v121:bat_phuong_trinh:a:bất-phương-trình-trị-tuyệt-đối-và-nghiệm-nguyên",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "bat_phuong_trinh",
+      "method": "kiến thức nguồn bất phương trình trị tuyệt đối và nghiệm nguyên phương pháp bổ sung đánh giá độ biến thiên bậc hai",
+      "title": "đánh giá độ biến thiên bậc hai bất phương trình trị tuyệt đối và nghiệm nguyên"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 13,
+      "id": "v123:count-strict-inequality-four-scenarios:v121:bat_phuong_trinh:a:bất-phương-trình-trị-tuyệt-đối-và-nghiệm-nguyên",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "bat_phuong_trinh",
+      "method": "kiến thức nguồn bất phương trình trị tuyệt đối và nghiệm nguyên phương pháp bổ sung đếm phương án vượt mức chuẩn",
+      "title": "đếm phương án vượt mức chuẩn bất phương trình trị tuyệt đối và nghiệm nguyên"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 14,
+      "id": "v123:dispersion-mean-square-three-scenarios:v121:bat_phuong_trinh:a:bất-phương-trình-trị-tuyệt-đối-và-nghiệm-nguyên",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "bat_phuong_trinh",
+      "method": "kiến thức nguồn bất phương trình trị tuyệt đối và nghiệm nguyên phương pháp bổ sung phương sai của ba kết quả",
+      "title": "phương sai của ba kết quả bất phương trình trị tuyệt đối và nghiệm nguyên"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 15,
+      "id": "v123:difference-of-two-scenario-results:v121:he_thuc_luong:a:cạnh-thứ-ba-theo-định-lý-cosin",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "he_thuc_luong",
+      "method": "kiến thức nguồn cạnh thứ ba theo định lý cosin phương pháp bổ sung biến thiên tuyệt đối giữa hai bộ dữ kiện",
+      "title": "biến thiên tuyệt đối giữa hai bộ dữ kiện cạnh thứ ba theo định lý cosin"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 16,
+      "id": "v123:aggregation-sum-three-scenarios:v121:he_thuc_luong:a:cạnh-thứ-ba-theo-định-lý-cosin",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "he_thuc_luong",
+      "method": "kiến thức nguồn cạnh thứ ba theo định lý cosin phương pháp bổ sung tổng kết quả từ ba tình huống",
+      "title": "tổng kết quả từ ba tình huống cạnh thứ ba theo định lý cosin"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 17,
+      "id": "v123:finite-optimization-max-three-scenarios:v121:he_thuc_luong:a:cạnh-thứ-ba-theo-định-lý-cosin",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "he_thuc_luong",
+      "method": "kiến thức nguồn cạnh thứ ba theo định lý cosin phương pháp bổ sung tối ưu kết quả trong ba phương án",
+      "title": "tối ưu kết quả trong ba phương án cạnh thứ ba theo định lý cosin"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 18,
+      "id": "v123:order-statistic-median-three-scenarios:v121:he_thuc_luong:a:cạnh-thứ-ba-theo-định-lý-cosin",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "he_thuc_luong",
+      "method": "kiến thức nguồn cạnh thứ ba theo định lý cosin phương pháp bổ sung trung vị của ba kết quả",
+      "title": "trung vị của ba kết quả cạnh thứ ba theo định lý cosin"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 19,
+      "id": "v123:second-finite-difference-three-scenarios:v121:he_thuc_luong:a:cạnh-thứ-ba-theo-định-lý-cosin",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "he_thuc_luong",
+      "method": "kiến thức nguồn cạnh thứ ba theo định lý cosin phương pháp bổ sung đánh giá độ biến thiên bậc hai",
+      "title": "đánh giá độ biến thiên bậc hai cạnh thứ ba theo định lý cosin"
+    },
+    {
+      "file": "V123_RESEARCH/V123_1050_CANDIDATE_OBJECTIVES.jsonl",
+      "line": 20,
+      "id": "v123:count-strict-inequality-four-scenarios:v121:he_thuc_luong:a:cạnh-thứ-ba-theo-định-lý-cosin",
+      "identity_source": "signature",
+      "shared_core_method": true,
+      "topic": "he_thuc_luong",
+      "method": "kiến thức nguồn cạnh thứ ba theo định lý cosin phương pháp bổ sung đếm phương án vượt mức chuẩn",
+      "title": "đếm phương án vượt mức chuẩn cạnh thứ ba theo định lý cosin"
+    }
+  ],
+  "invalid_or_unsafe_count": 0,
+  "invalid_or_unsafe": [],
+  "limitation": "Exact normalized method labels only. Not semantic equivalence; no independent forms certified."
+}

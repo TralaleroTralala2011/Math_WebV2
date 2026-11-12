@@ -1,0 +1,18 @@
+/* V29 user-approved structure: original desktop taskbar; dashboard is Account-only. */
+[hidden]{display:none!important}
+@media(min-width:1101px){
+ body.mw-v5:not(.mw-v5-admin)>header.navbar:not(#mw-v5-header){display:flex!important}
+ body.mw-v5:not(.mw-v5-admin)>header#mw-v5-header{display:none!important}
+ body.mw-v5.mw-v29-account-dashboard:not(.mw-v5-admin)>div.mw-v6-home.mw-v5-canvas{margin-top:105px!important}
+}
+body.mw-v29-account-dashboard>.mw-v6-home{position:relative;z-index:1}
+body.mw-v29-account-dashboard #accountPage{position:relative;z-index:1}
+body.mw-v29-account-dashboard #mw-v27-notification .notification-badge{top:-3px;right:-3px}
+@media(max-width:1100px){
+ body.mw-v5.mw-v29-account-dashboard:not(.mw-v5-admin)>div.mw-v6-home.mw-v5-canvas{margin-top:22px!important}
+ body.mw-v5:not(.mw-v5-admin)>header.navbar{display:none!important}
+}
+@media(max-width:760px){
+ body.mw-v29-account-dashboard>.mw-v6-home{width:calc(100% - 24px)!important}
+ body.mw-v29-account-dashboard #accountPage{padding-top:0!important}
+}

@@ -1,0 +1,88 @@
+"""Curated, topic-specific mathematical methods, not numerical restylings.
+
+Each entry describes a distinct mathematical objective/invariant and an
+independently checked generator. The list is finite by design: do NOT fabricate
+2000 near-identical IDs per topic to achieve a vanity target.
+"""
+BLUEPRINTS = [
+# family, topic_id, display name, signature, difficulty
+('set_intersection_from_union','tap_hop','Tìm số phần tử giao từ hợp và hai tập','inclusion-exclusion-inverse','nền tảng'),
+('set_difference_size','menh_de_tap_hop','Đếm phần tử chỉ thuộc một tập','set-difference-cardinality','nền tảng'),
+('set_symmetric_difference','tap_hop','Đếm phần tử thuộc đúng một trong hai tập','symmetric-difference-cardinality','trung cấp'),
+('set_power_set','menh_de_tap_hop','Đếm số tập con của tập hữu hạn','power-set-cardinality','nền tảng'),
+('linear_inequality_bound','bat_phuong_trinh','Giải bất phương trình bậc nhất','linear-inequality-bound','nền tảng'),
+('quadratic_discriminant','phuong_trinh','Tính biệt thức tam thức bậc hai','quadratic-discriminant','nền tảng'),
+('quadratic_vertex_x','ham_so_bac_hai','Hoành độ đỉnh parabol','parabola-vertex-x','nền tảng'),
+('quadratic_vertex_y','ham_so_bac_hai','Tung độ đỉnh parabol','parabola-vertex-y','trung cấp'),
+('system_sum_solution','he_phuong_trinh','Tính tổng nghiệm của hệ hai phương trình','linear-system-sum-elimination','trung cấp'),
+('polynomial_remainder','phuong_trinh_he','Dùng định lý dư khi chia đa thức','polynomial-remainder-theorem','trung cấp'),
+('circle_area','duong_tron','Tính diện tích hình tròn','circle-area-radius','nền tảng'),
+('circle_circumference','duong_tron_co_ban_10','Tính chu vi đường tròn','circle-circumference','nền tảng'),
+('circle_sector_area','g10_geom_circle_angles','Tính diện tích hình quạt','circle-sector-area','trung cấp'),
+('circle_arc_length','g10_geom_circle_chords_arcs','Tính độ dài cung tròn','circle-arc-length','trung cấp'),
+('pythagoras_hypotenuse','he_thuc_luong_tam_giac','Tính cạnh huyền theo Pythagoras','pythagoras-hypotenuse','nền tảng'),
+('pythagoras_missing_leg','tam_giac_tu_giac_10','Tính cạnh góc vuông còn lại','pythagoras-missing-leg','nền tảng'),
+('trapezoid_area','hinh_hoc_co_ban_10','Diện tích hình thang từ hai đáy','trapezoid-area','nền tảng'),
+('heron_area','he_thuc_luong_van_dung_10','Diện tích tam giác theo Heron','heron-area','trung cấp'),
+('cosine_rule_side_square','he_thuc_luong','Định lý cosin tìm bình phương cạnh','law-of-cosines-side-square','trung cấp'),
+('midpoint_x_2d','g10_geom_coordinate_distance_midpoint','Hoành độ trung điểm hai điểm','midpoint-coordinate-x','nền tảng'),
+('distance_2d','toa_do_phang','Khoảng cách hai điểm Oxy','coordinate-2d-distance','nền tảng'),
+('slope_2d','duong_thang','Hệ số góc từ hai điểm','line-slope-two-points','nền tảng'),
+('line_intersection_x','g10_geom_line_intersections','Hoành độ giao điểm hai đường thẳng','line-intersection-solve','trung cấp'),
+('vector_dot_2d','vector','Tích vô hướng hai vectơ Oxy','vector-2d-dot-product','nền tảng'),
+('vector_norm_sq_2d','g10_geom_vector_proofs','Bình phương độ dài vectơ','vector-2d-norm-square','nền tảng'),
+('parallelogram_area_det','g10_geom_quadrilaterals_properties','Diện tích hình bình hành theo định thức','parallelogram-det-area','trung cấp'),
+('triangle_area_coords','hinh_hoc_10','Diện tích tam giác từ tọa độ ba đỉnh','triangle-coordinate-determinant','trung cấp'),
+('binomial_coefficient','nhi_thuc_newton','Hệ số một hạng tử trong khai triển Newton','binomial-coefficient','trung cấp'),
+('permutation_count','quy_tac_dem','Đếm thứ tự sắp xếp của n đối tượng','permutations-factorial','nền tảng'),
+('combination_count','hoan_vi_chinh_hop_to_hop','Chọn nhóm không xét thứ tự','combinations-choose','nền tảng'),
+('classical_probability','xac_suat','Xác suất cổ điển từ số kết quả thuận lợi','classical-probability-ratio','nền tảng'),
+('urn_two_success','g10_combinatorics_olympiad','Rút hai vật không hoàn lại cùng loại','hypergeometric-two-success','nâng cao'),
+('arithmetic_mean','thong_ke','Trung bình cộng dãy số liệu','arithmetic-mean','nền tảng'),
+('population_variance','thong_ke','Phương sai tổng thể của số liệu','population-variance','trung cấp'),
+('geometric_sequence_nth','cap_so_nhan','Số hạng thứ n của cấp số nhân','geometric-sequence-nth','nền tảng'),
+('geometric_sequence_sum','day_so','Tổng hữu hạn cấp số nhân','geometric-sequence-sum','trung cấp'),
+('polynomial_limit','gioi_han','Giới hạn đa thức tại điểm liên tục','limit-polynomial-continuity','nền tảng'),
+('derivative_power_at','dao_ham_quy_tac','Đạo hàm x^n tại một điểm','power-rule-derivative-point','nền tảng'),
+('quadratic_second_derivative','ung_dung_dao_ham_11','Đạo hàm cấp hai của tam thức bậc hai','quadratic-second-derivative','trung cấp'),
+('conditional_probability','bien_co_doc_lap_11','Xác suất có điều kiện từ giao hai biến cố','conditional-probability-division','trung cấp'),
+('special_angle_sine','gia_tri_luong_giac','Sin của góc lượng giác đặc biệt','special-angles-sine','nền tảng'),
+('trig_pythagorean_cos2','cong_thuc_luong_giac','Tính cos² từ sin bằng hệ thức cơ bản','trig-identity-sin2-cos2','trung cấp'),
+('exponential_equation','pt_mu','Giải phương trình lũy thừa cùng cơ số','exponential-equation-same-base','nền tảng'),
+('logarithm_equation','pt_logarit','Giải phương trình logarit cơ bản','logarithm-definition-equation','nền tảng'),
+('logarithm_power','ham_logarit','Logarit của một lũy thừa','logarithm-of-power','nền tảng'),
+('complex_modulus_squared','so_phuc','Bình phương môđun số phức','complex-modulus-squared','nền tảng'),
+('complex_add_real','bieu_dien_so_phuc','Phần thực của tổng hai số phức','complex-real-sum','nền tảng'),
+('complex_multiply_imag','pt_so_phuc','Phần ảo của tích hai số phức','complex-product-imaginary','trung cấp'),
+('integral_monomial','nguyen_ham_tich_phan','Tích phân xác định của đơn thức','fundamental-theorem-monomial','nền tảng'),
+('integral_mean_value','ung_dung_tich_phan','Giá trị trung bình của hàm trên đoạn','integral-average-value','trung cấp'),
+('cylinder_volume','hinh_khoi_va_the_tich_co_ban_12','Thể tích khối trụ','cylinder-volume','nền tảng'),
+('cone_volume','the_tich_khong_gian','Thể tích khối nón','cone-volume','nền tảng'),
+('sphere_volume','mat_cau','Thể tích khối cầu','sphere-volume','nền tảng'),
+('cylinder_surface_area','g12_geom_solid_surface_area','Diện tích toàn phần hình trụ','cylinder-total-area','nền tảng'),
+('sphere_surface_area','hinh_hoc_khong_gian','Diện tích mặt cầu','sphere-surface-area','nền tảng'),
+('point_plane_distance','g12_geom_point_plane_distance','Khoảng cách điểm đến mặt phẳng','point-plane-distance','trung cấp'),
+('vector_dot_3d','g12_geom_vectors_3d','Tích vô hướng hai vectơ Oxyz','vector-dot-3d','nền tảng'),
+('midpoint_z_3d','toa_do_khong_gian','Tung độ không gian z của trung điểm','midpoint-coordinate-z-3d','nền tảng'),
+('sphere_radius_from_eq','g12_geom_sphere_equation','Bán kính mặt cầu từ phương trình','sphere-radius-from-equation','trung cấp'),
+('box_volume','hinh_khoi_va_the_tich_co_ban_12','Thể tích khối hộp chữ nhật','box-volume','nền tảng'),
+]
+assert len({b[0] for b in BLUEPRINTS}) == len(BLUEPRINTS)
+
+# Conservative same-reasoning warnings. These templates represent different
+# objectives or domains, but are NOT automatically distinct global methods.
+# Shared conceptual groups must be adjudicated before the 300k-type claim.
+CONCEPT_COLLISIONS = {
+    'quadratic_vertex_x': 'quadratic-vertex-via-completing-square-or-axis',
+    'quadratic_vertex_y': 'quadratic-vertex-via-completing-square-or-axis',
+    'binomial_coefficient': 'combinations-n-choose-k',
+    'combination_count': 'combinations-n-choose-k',
+    'midpoint_x_2d': 'coordinate-midpoint',
+    'midpoint_z_3d': 'coordinate-midpoint',
+    'vector_dot_2d': 'component-dot-product',
+    'vector_dot_3d': 'component-dot-product',
+    'circle_arc_length': 'central-angle-fraction-of-circle',
+    'circle_sector_area': 'central-angle-fraction-of-circle',
+    'logarithm_equation': 'log-exponential-inverse-basic',
+    'logarithm_power': 'log-exponential-inverse-basic',
+}

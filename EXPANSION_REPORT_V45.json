@@ -1,0 +1,158 @@
+{
+  "version": "V45",
+  "base_version": "V44",
+  "existing_questions": 27500,
+  "existing_form_ids": 2749,
+  "new_questions": 200,
+  "new_form_ids": 20,
+  "total_questions": 27700,
+  "total_form_ids": 2769,
+  "independent_secondary_arithmetic_checks": 200,
+  "important_limitations": [
+    "20 mathematical archetypes, not 10000 independent types",
+    "No website integration or regression test",
+    "Previous bank has not been independently audited"
+  ],
+  "new_forms": [
+    {
+      "form_id": "v45_independent_three_sets_exact_two",
+      "grade": 10,
+      "topic": "Tập hợp",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_discriminant_parameter",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_parabola_intersection_distance",
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_parallelogram_fourth_vertex",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_committee_at_least_two_girls",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_urn_without_replacement_exact",
+      "grade": 10,
+      "topic": "Xác suất",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_ap_sum_from_nonconsecutive",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_gp_sum_alternating",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_tangent_parallel_line",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_limit_conjugate",
+      "grade": 11,
+      "topic": "Giới hạn",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_conditional_bayes_two_boxes",
+      "grade": 11,
+      "topic": "Xác suất",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_integer_solutions_bounded",
+      "grade": 11,
+      "topic": "Tổ hợp",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_integral_area_between_curves",
+      "grade": 12,
+      "topic": "Tích phân",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_complex_reciprocal_real",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_plane_normal_distance",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_exponential_equal_base",
+      "grade": 12,
+      "topic": "Hàm số mũ",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_logarithm_domain_intersection",
+      "grade": 12,
+      "topic": "Logarit",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_sphere_volume_ratio",
+      "grade": 12,
+      "topic": "Hình học không gian",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_variance_population",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10,
+      "independent_checks_passed": 10
+    },
+    {
+      "form_id": "v45_independent_sin_double_angle_given_tan",
+      "grade": 11,
+      "topic": "Lượng giác",
+      "questions": 10,
+      "independent_checks_passed": 10
+    }
+  ]
+}

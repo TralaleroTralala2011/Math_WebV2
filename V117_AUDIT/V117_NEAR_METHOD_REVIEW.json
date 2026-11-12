@@ -1,0 +1,407 @@
+[
+  {
+    "family": "v117_de_morgan_3",
+    "topic": "tap_hop",
+    "similar_candidates": [
+      [
+        0.716,
+        "set_intersection_from_union",
+        "V113"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_exactly_two",
+    "topic": "menh_de_tap_hop",
+    "similar_candidates": [
+      [
+        0.699,
+        "set_symmetric_difference",
+        "V113"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_abs_inequality_length",
+    "topic": "bat_phuong_trinh",
+    "similar_candidates": [
+      [
+        0.722,
+        "logarithm_inequality_integer",
+        "V114"
+      ],
+      [
+        0.697,
+        "exponential_inequality_integer",
+        "V114"
+      ],
+      [
+        0.688,
+        "integer_interval_count",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_quadratic_root_count",
+    "topic": "phuong_trinh",
+    "similar_candidates": [
+      [
+        0.77,
+        "quadratic_discriminant",
+        "V113"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_triangle_inradius",
+    "topic": "he_thuc_luong",
+    "similar_candidates": [
+      [
+        0.741,
+        "v117_triangle_circumradius",
+        "V117"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_triangle_circumradius",
+    "topic": "he_thuc_luong_van_dung_10",
+    "similar_candidates": [
+      [
+        0.741,
+        "v117_triangle_inradius",
+        "V117"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_hypergeometric_selection",
+    "topic": "xac_suat",
+    "similar_candidates": [
+      [
+        0.71,
+        "hypergeometric_expected",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_weighted_mean",
+    "topic": "thong_ke",
+    "similar_candidates": [
+      [
+        0.764,
+        "arithmetic_mean",
+        "V113"
+      ],
+      [
+        0.73,
+        "weighted_mean_frequency",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_trig_equation_count",
+    "topic": "phuong_trinh_luong_giac",
+    "similar_candidates": [
+      [
+        0.86,
+        "trig_equation_zero_solution_count",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_geometric_infinite_sum",
+    "topic": "cap_so_nhan",
+    "similar_candidates": [
+      [
+        1.0,
+        "infinite_geometric_series",
+        "V114"
+      ],
+      [
+        0.698,
+        "v116_finite_geom_sum",
+        "V116"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_removable_limit",
+    "topic": "gioi_han_ham_so",
+    "similar_candidates": [
+      [
+        0.727,
+        "removable_limit_difference_squares",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_piecewise_continuity",
+    "topic": "ham_so_lien_tuc",
+    "similar_candidates": [
+      [
+        0.933,
+        "piecewise_continuity_parameter",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_product_derivative",
+    "topic": "dao_ham_quy_tac",
+    "similar_candidates": [
+      [
+        0.693,
+        "v116_chain_rule",
+        "V116"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_tangent_slope_normal",
+    "topic": "ung_dung_dao_ham_11",
+    "similar_candidates": [
+      [
+        0.798,
+        "tangent_slope_cubic",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_translation_image",
+    "topic": "g11_geom_transform_translation",
+    "similar_candidates": [
+      [
+        0.991,
+        "translation_point_2d",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_rotation_90",
+    "topic": "g11_geom_rotation_homothety",
+    "similar_candidates": [
+      [
+        0.93,
+        "rotation_quarter_turn",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_reflect_diag",
+    "topic": "g11_geom_transform_reflection",
+    "similar_candidates": [
+      [
+        0.875,
+        "reflection_diagonal",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_3d_prism_diagonal",
+    "topic": "nhan_biet_hinh_khong_gian_11",
+    "similar_candidates": [
+      [
+        0.771,
+        "rectangular_prism_diagonal",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_line_plane_angle",
+    "topic": "g11_geom_dihedral_angles",
+    "similar_candidates": [
+      [
+        0.935,
+        "angle_line_plane_right_triangle",
+        "V114"
+      ],
+      [
+        0.69,
+        "line_plane_angle_sin2",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_cubic_critical_point",
+    "topic": "cuc_tri",
+    "similar_candidates": [
+      [
+        0.78,
+        "cubic_stationary_positive",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_log_change_base",
+    "topic": "ham_logarit",
+    "similar_candidates": [
+      [
+        0.816,
+        "log_change_of_base",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_complex_modulus",
+    "topic": "bieu_dien_so_phuc",
+    "similar_candidates": [
+      [
+        0.76,
+        "complex_modulus_squared",
+        "V113"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_complex_quadratic_real_part",
+    "topic": "pt_so_phuc",
+    "similar_candidates": [
+      [
+        0.682,
+        "radical_equation_isolation",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_complex_conjugate_norm_sq",
+    "topic": "so_phuc",
+    "similar_candidates": [
+      [
+        0.758,
+        "complex_modulus_squared",
+        "V113"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_point_plane_foot",
+    "topic": "g12_geom_point_plane_distance",
+    "similar_candidates": [
+      [
+        0.763,
+        "line_projection_parameter",
+        "V114"
+      ],
+      [
+        0.716,
+        "projection_3d_coordinate",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_plane_line_intersection",
+    "topic": "g12_geom_line_plane_intersection",
+    "similar_candidates": [
+      [
+        0.952,
+        "line_plane_intersection_t",
+        "V114"
+      ],
+      [
+        0.681,
+        "line_plane_angle_sin2",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_plane_parallel_parameter",
+    "topic": "g12_geom_plane_equation",
+    "similar_candidates": [
+      [
+        1.0,
+        "parallel_plane_normal_parameter",
+        "V114"
+      ],
+      [
+        0.681,
+        "line_plane_parallel_condition",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_3d_cross_product_norm",
+    "topic": "g12_geom_vectors_3d",
+    "similar_candidates": [
+      [
+        0.691,
+        "parallelogram_area_det",
+        "V113"
+      ],
+      [
+        0.69,
+        "v116_parallelogram_area",
+        "V116"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_truncated_cone_volume",
+    "topic": "g12_geom_solid_surface_area",
+    "similar_candidates": [
+      [
+        0.737,
+        "cone_volume",
+        "V113"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  },
+  {
+    "family": "v117_sphere_plane_circle_radius",
+    "topic": "g12_geom_sphere_plane_intersection",
+    "similar_candidates": [
+      [
+        0.792,
+        "sphere_plane_section_area",
+        "V114"
+      ]
+    ],
+    "needs_comparative_method_review": true
+  }
+]

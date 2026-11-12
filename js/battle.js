@@ -27,9 +27,9 @@
 
         ONLINE_TIMEOUT: 30000,
 
-        MAX_MATCH_WAIT_SECONDS: 3600,
+        MAX_MATCH_WAIT_SECONDS: 600,
 
-        MAX_GAME_TIME_SECONDS: 3600,
+        MAX_GAME_TIME_SECONDS: 1800,
 
         MAX_QUESTIONS: 100,
 
@@ -353,19 +353,19 @@
 
 
     function getProfile() {
-
-        try {
-
-            return JSON.parse(
-                localStorage.getItem(
-                    "mathweb_profile"
-                ) || "{}"
-            );
-
-        } catch {
-
-            return {};
+        // Old sessions or lightweight clients may only have mathweb_user.
+        // Prefer the fresh profile but never classify a logged-in player as ID 0.
+        for (const key of ["mathweb_profile", "mathweb_user"]) {
+            try {
+                const profile = JSON.parse(localStorage.getItem(key) || "null");
+                if (profile && typeof profile === "object" && Number(profile.id) > 0) {
+                    return profile;
+                }
+            } catch {
+                // Try the next compatible cache key.
+            }
         }
+        return {};
     }
 
 
@@ -1018,17 +1018,18 @@
                 }
             )
             .map(
-                function (question) {
+                function (question, index) {
 
                     const normalized = {
 
                         id:
                             question.id ??
-                            null,
+                            question.battle_index ??
+                            index,
 
                         type:
                             normalizeQuestionType(
-                                question.type
+                                question.type || question.question_type
                             ),
 
                         topic:
@@ -1048,6 +1049,9 @@
                                 question.question ||
                                 ""
                             ),
+
+                        statements: Array.isArray(question.statements)
+                            ? question.statements.map(String) : [],
 
                         options:
                             Array.isArray(
@@ -3215,7 +3219,7 @@
        GAME START
     ===================================================== */
 
-    function startGame() {
+    async function startGame() {
 
         if (
             !currentMatch
@@ -3313,14 +3317,34 @@
                 "00:00";
         }
 
-        showScreen(
-            gameScreen
-        );
+        showScreen(gameScreen);
 
+        // On refresh/reconnect, resume at the server's next unanswered item.
+        // Without this, a returning player repeats question 0 and receives 409.
+        try {
+            const response = await apiFetch(
+                `${BATTLE_API_URL}/api/matchmaking/match/${encodeURIComponent(currentMatchId)}/progress`,
+                { headers: authHeaders() }
+            );
+            if (response.ok) {
+                const progress = await readJSON(response);
+                const mine = progress?.you || {};
+                currentQuestionIndex = Math.min(questions.length,
+                    Math.max(0, safeInteger(mine.current, 0)));
+                correct = safeInteger(mine.correct, 0);
+                wrong = safeInteger(mine.wrong, 0);
+                blank = safeInteger(mine.blank, 0);
+                if (normalizeMatchStatus(progress.status) === 'FINISHED' ||
+                    currentQuestionIndex >= questions.length) {
+                    finishGame();
+                    return;
+                }
+            }
+        } catch {
+            // Network error: keep the existing fallback, do not expose answers.
+        }
         connectBattleSocket();
-
         startGameTimer();
-
         renderQuestion();
     }
 
@@ -3393,24 +3417,9 @@
 
 
     function handleGameTimeout() {
-
-        if (
-            gameFinished ||
-            finishingGame
-        ) {
-
-            return;
-        }
-
-        if (
-            !selectedAnswer
-        ) {
-
-            submitAnswerToServer(
-                null,
-                true
-            );
-        }
+        if (gameFinished || finishingGame) return;
+        // The server settles expired matches and supplies the authoritative result.
+        finishGame();
     }
 
 
@@ -3591,7 +3600,50 @@
                 false;
         }
 
-        if (
+        if (question.type === "true_false" &&
+            Array.isArray(question.statements) && question.statements.length) {
+            if (!options) return;
+            options.classList.remove("hidden");
+            const judgments = new Array(question.statements.length).fill(null);
+            question.statements.forEach(function (statement, index) {
+                const entry = document.createElement("div");
+                entry.className = "battle-tf-statement";
+                entry.style.cssText = "padding:10px 12px;margin-bottom:10px;border:1px solid #cbd5e1;border-radius:10px";
+                const text = document.createElement("p");
+                text.textContent = `${index + 1}. ${statement}`;
+                entry.appendChild(text);
+                [true, false].forEach(function (choice) {
+                    const control = document.createElement("button");
+                    control.type = "button";
+                    control.className = "question-option";
+                    control.textContent = choice ? "Đúng" : "Sai";
+                    control.style.cssText = "display:inline-block;width:auto;min-width:72px;margin:5px 8px 0 0";
+                    control.setAttribute("aria-pressed", "false");
+                    control.addEventListener("click", function () {
+                        judgments[index] = choice;
+                        entry.querySelectorAll("button").forEach(function (b) {
+                            b.setAttribute("aria-pressed", String(b === control));
+                            b.style.outline = b === control ? "2px solid #0d9488" : "";
+                        });
+                    });
+                    entry.appendChild(control);
+                });
+                options.appendChild(entry);
+            });
+            const send = document.createElement("button");
+            send.type = "button";
+            send.className = "battle-tf-submit";
+            send.textContent = "Nộp đáp án Đúng / Sai";
+            send.style.cssText = "padding:10px 15px;border-radius:10px;background:#0d9488;color:white;cursor:pointer";
+            send.addEventListener("click", function () {
+                if (judgments.some(function (v) { return v === null; })) {
+                    showToast("Hãy chọn Đúng hoặc Sai cho cả 4 nhận định.", "error");
+                    return;
+                }
+                answerQuestion(judgments);
+            });
+            options.appendChild(send);
+        } else         if (
             question.type ===
                 "choice" &&
             Array.isArray(
@@ -3633,7 +3685,7 @@
                         function () {
 
                             answerQuestion(
-                                index
+                                option
                             );
                         }
                     );
@@ -3874,59 +3926,35 @@
 
         try {
 
-            const response =
-                await apiFetch(
-                    `${BATTLE_API_URL}/api/matchmaking/match/${encodeURIComponent(currentMatchId)}/answer`,
-                    {
-                        method:
-                            "POST",
-
-                        headers:
-                            authHeaders(
-                                true
-                            ),
-
-                        body:
-                            JSON.stringify(
-                                {
-                                    question_id:
-                                        String(
-                                            question.id
-                                        ),
-
-                                    answer:
-                                        skipped
-                                            ? null
-                                            : normalizeSubmittedAnswer(
-                                                answer
-                                            ),
-
-                                    skipped:
-                                        Boolean(
-                                            skipped
-                                        ),
-
-                                    client_response_time:
-                                        responseTime
-                                }
-                            )
-                    }
-                );
+            const endpoint = skipped ? "skip" : "answer";
+            const body = skipped
+                ? { question_index: currentQuestionIndex }
+                : {
+                    question_index: currentQuestionIndex,
+                    answer: normalizeSubmittedAnswer(answer)
+                };
+            const response = await apiFetch(
+                `${BATTLE_API_URL}/api/matchmaking/match/${encodeURIComponent(currentMatchId)}/${endpoint}`,
+                {
+                    method: "POST",
+                    headers: authHeaders(true),
+                    body: JSON.stringify(body)
+                }
+            );
 
             const data =
                 await readJSON(
                     response
                 );
 
-            if (
-                !response.ok
-            ) {
-
+            if (!response.ok) {
+                if (response.status === 409 &&
+                    /hết thời gian/i.test(String(data?.detail || ""))) {
+                    finishGame();
+                    return;
+                }
                 throw new Error(
-                    getAPIErrorMessage(
-                        data,
-                        "Không thể gửi câu trả lời."
-                    )
+                    getAPIErrorMessage(data, "Không thể gửi câu trả lời.")
                 );
             }
 
@@ -3934,6 +3962,8 @@
                 data,
                 skipped
             );
+            // Notify the opponent to refresh server-graded progress.
+            sendSocketEvent({ type: "progress" });
 
         } catch (error) {
 
@@ -4047,7 +4077,8 @@
         );
 
         if (
-            data.finished
+            data.finished ||
+            normalizeMatchStatus(data.status) === "FINISHED"
         ) {
 
             setTimeout(
@@ -4270,7 +4301,7 @@
             )}/` +
             `${encodeURIComponent(
                 userId
-            )}`
+            )}?token=${encodeURIComponent(getToken() || "")}`
         );
     }
 
@@ -4322,8 +4353,14 @@
             return;
         }
 
+        // Bind callbacks to this connection to avoid stale WebSocket events
+        // overwriting the current connection after a reconnect.
+        const openedSocket = battleSocket;
+
         battleSocket.onopen =
             function () {
+
+                if (openedSocket !== battleSocket) return;
 
                 socketReconnectAttempts =
                     0;
@@ -4342,6 +4379,7 @@
         battleSocket.onmessage =
             function (event) {
 
+                if (openedSocket !== battleSocket) return;
                 handleSocketMessage(
                     event
                 );
@@ -4357,6 +4395,8 @@
         battleSocket.onclose =
             function () {
 
+                // Closing an old connection must not close the replacement.
+                if (openedSocket !== battleSocket) return;
                 battleSocket =
                     null;
 
@@ -4431,6 +4471,13 @@
             type ===
                 "sync"
         ) {
+
+            // The backend sends {type:'sync'} as a prompt to re-fetch state.
+            // A progress-free sync packet is not the progress update itself.
+            if (type === "sync" && !data.progress) {
+                sendSocketEvent({ type: "sync" });
+                return;
+            }
 
             if (
                 data.progress
@@ -4925,6 +4972,27 @@
     }
 
 
+    async function getDetailedMatchResult(match) {
+        const response = await apiFetch(
+            `${BATTLE_API_URL}/api/matchmaking/match/${encodeURIComponent(currentMatchId)}/result`,
+            { headers: authHeaders() }
+        );
+        if (!response.ok) return match;
+        const data = await readJSON(response);
+        return {
+            ...match,
+            winner_id: data.winner_id,
+            player1_correct: data.player1?.correct ?? 0,
+            player1_wrong: data.player1?.wrong ?? 0,
+            player1_blank: data.player1?.blank ?? 0,
+            player1_time: data.player1?.time ?? 0,
+            player2_correct: data.player2?.correct ?? 0,
+            player2_wrong: data.player2?.wrong ?? 0,
+            player2_blank: data.player2?.blank ?? 0,
+            player2_time: data.player2?.time ?? 0
+        };
+    }
+
     async function loadFinishedMatchResult() {
 
         if (
@@ -4946,14 +5014,13 @@
             return;
         }
 
-        if (
-            finalResultData
-        ) {
-
-            showResult(
-                finalResultData
-            );
-
+        if (finalResultData) {
+            try {
+                const detail = await getDetailedMatchResult(currentMatch || {});
+                showResult({ ...finalResultData, ...detail });
+            } catch {
+                showResult(finalResultData);
+            }
             return;
         }
 
@@ -5009,20 +5076,16 @@
                 null;
         }
 
-        let resultElapsed =
-            0;
+        // The other player can legally use the full 30-minute match duration.
+        // Do not give up after 600 polling ticks (~18 minutes).
+        const resultDeadline = Date.now() +
+            (BATTLE_CONFIG.MAX_GAME_TIME_SECONDS + 60) * 1000;
 
         matchPollTimer =
             setInterval(
                 async function () {
 
-                    resultElapsed++;
-
-                    if (
-                        resultElapsed >
-                        BATTLE_CONFIG
-                            .MAX_MATCH_WAIT_SECONDS
-                    ) {
+                    if (Date.now() > resultDeadline) {
 
                         clearInterval(
                             matchPollTimer
@@ -5099,9 +5162,11 @@
                             matchPollTimer =
                                 null;
 
-                            showResult(
-                                match
-                            );
+                            try {
+                                showResult(await getDetailedMatchResult(match));
+                            } catch {
+                                showResult(match);
+                            }
 
                             return;
                         }

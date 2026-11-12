@@ -1,0 +1,15 @@
+{
+  "V202_inserted_rows": 200,
+  "bank_total": 10926,
+  "qa_pairs_expected": 60,
+  "qa_pairs_passed": 60,
+  "failed": [],
+  "sqlite_integrity": "ok",
+  "formats": {
+    "multiple_choice": 20,
+    "short_answer": 20,
+    "true_false": 20
+  },
+  "provenance": "bundled local SQLite; no production access",
+  "production_verified": false
+}

@@ -1,0 +1,19 @@
+{
+  "version": "V205",
+  "baseline": "V204",
+  "before": 11046,
+  "added_questions": 60,
+  "after": 11106,
+  "candidate_groups": {
+    "cramer_2x2": 10,
+    "geometric_partial_sum": 10,
+    "complex_modulus_squared": 10,
+    "definite_polynomial_integral": 10,
+    "hypergeometric_exact_two": 10,
+    "coordinate_dot_product": 10
+  },
+  "certified_semantically_independent_new_types": 0,
+  "math_verification": "symbolic or exact integer/rational independent checks",
+  "sqlite_integrity": "ok",
+  "production_deployed": false
+}

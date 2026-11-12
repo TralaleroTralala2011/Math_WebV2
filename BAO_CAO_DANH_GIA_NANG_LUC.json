@@ -1,0 +1,32 @@
+{
+  "topics_total": 150,
+  "matrix_slots": 900,
+  "completed_seed_questions": 18,
+  "seed_topics": 3,
+  "remaining_empty_slots": 882,
+  "grades": [
+    10,
+    11,
+    12
+  ],
+  "matrix_per_topic": {
+    "difficulty": {
+      "nen_tang": 2,
+      "trung_cap": 2,
+      "kho": 2
+    },
+    "context": {
+      "ly_thuyet": 4,
+      "thuc_te": 2
+    },
+    "format": {
+      "trac_nghiem": 3,
+      "dung_sai": 2,
+      "tra_loi_ngan": 1
+    }
+  },
+  "browser_end_to_end": "not_run",
+  "battle_two_users": "not_run",
+  "bank_4000": "retained_from_base_not_revalidated",
+  "limitations": "18 original seed questions are not independently reviewed. Only 3 topics have complete 6-question assessments. No claim of 150/150 complete."
+}

@@ -1,0 +1,14 @@
+{
+  "base": "MATH_WEB_GITHUB_READY_KNOWLEDGE_QUALITY_BATCH_23.zip",
+  "topics_updated": [
+    "g11_geom_three_perpendiculars",
+    "g12_geom_line_plane_angle",
+    "g11_conditional_probability_models",
+    "hinh_hoc_10"
+  ],
+  "topic_count": 150,
+  "with_quiz": 123,
+  "without_quiz": 27,
+  "total_questions": 1292,
+  "scope": "four expanded lessons, 40 new questions; structural checks only; not an independent mathematical proof or UI test"
+}

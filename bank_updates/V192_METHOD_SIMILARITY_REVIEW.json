@@ -1,0 +1,245 @@
+{
+  "new_families": 150,
+  "baseline_family_specs_compared": 52,
+  "method_string_similarity_only_not_proof": true,
+  "threshold": 0.62,
+  "potential_overlaps_total": 26,
+  "potential_overlaps": [
+    {
+      "score": 0.909,
+      "scope": "cross-topic",
+      "a": "v191_reflection_point_across_plane",
+      "b": "v191_perpendicular_foot_to_plane_coordinate",
+      "a_name": "Tìm hình chiếu đối xứng của điểm qua mặt phẳng",
+      "b_name": "Tọa độ chân đường vuông góc tới mặt phẳng",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.9,
+      "scope": "cross-topic",
+      "a": "v192_pyramid_volume",
+      "b": "v192_prism_volume_base_area",
+      "a_name": "Thể tích hình chóp bằng một phần ba diện tích đáy nhân chiều cao",
+      "b_name": "Thể tích lăng trụ từ diện tích đáy và chiều cao",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.836,
+      "scope": "cross-topic",
+      "a": "v192_parallelogram_vector_norm",
+      "b": "v192_cross_norm_via_gram",
+      "a_name": "Tính bình phương độ dài tổng hai vectơ từ độ dài và tích vô hướng",
+      "b_name": "Độ dài tích có hướng qua định thức Gram",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.815,
+      "scope": "cross-topic",
+      "a": "v192_angle_between_line_plane_sin_squared",
+      "b": "v192_line_line_angle_dot_square",
+      "a_name": "Bình phương sin góc giữa đường thẳng và mặt phẳng",
+      "b_name": "Bình phương cos góc giữa hai đường thẳng theo vectơ chỉ phương",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.815,
+      "scope": "cross-topic",
+      "a": "v192_reflection_across_horizontal",
+      "b": "v192_homothety_center_origin",
+      "a_name": "Ảnh điểm qua trục đối xứng là đường thẳng y=c",
+      "b_name": "Phép vị tự tâm O tỉ số k đối với điểm P(x,y)",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.793,
+      "scope": "cross-topic",
+      "a": "v192_angle_between_planes_cos_squared",
+      "b": "v192_angle_between_line_plane_sin_squared",
+      "a_name": "Bình phương cos góc nhọn giữa hai mặt phẳng",
+      "b_name": "Bình phương sin góc giữa đường thẳng và mặt phẳng",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.759,
+      "scope": "cross-topic",
+      "a": "v192_angle_between_planes_cos_squared",
+      "b": "v192_line_line_angle_dot_square",
+      "a_name": "Bình phương cos góc nhọn giữa hai mặt phẳng",
+      "b_name": "Bình phương cos góc giữa hai đường thẳng theo vectơ chỉ phương",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.75,
+      "scope": "cross-topic",
+      "a": "v191_polygon_diagonals",
+      "b": "v191_stars_bars_three",
+      "a_name": "Đếm đường chéo của đa giác lồi",
+      "b_name": "Đếm nghiệm nguyên không âm của x+y+z=N",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.688,
+      "scope": "same-topic",
+      "a": "v192_coordinate_midpoint_x",
+      "b": "v191_projection_on_sloped_line",
+      "a_name": "Hoành độ trung điểm của đoạn trong Oxy",
+      "b_name": "Hình chiếu vuông góc của điểm lên y=x+b",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.667,
+      "scope": "cross-topic",
+      "a": "v192_reflect_across_y_eq_x",
+      "b": "v192_homothety_center_origin",
+      "a_name": "Phép đối xứng qua đường thẳng y=x hoán đổi tọa độ",
+      "b_name": "Phép vị tự tâm O tỉ số k đối với điểm P(x,y)",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.667,
+      "scope": "cross-topic",
+      "a": "v192_right_prism_lateral_area",
+      "b": "v192_prism_volume_base_area",
+      "a_name": "Diện tích xung quanh lăng trụ đứng theo chu vi đáy",
+      "b_name": "Thể tích lăng trụ từ diện tích đáy và chiều cao",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.667,
+      "scope": "cross-topic",
+      "a": "v192_population_variance_two_values",
+      "b": "v191_binomial_variance",
+      "a_name": "Phương sai mẫu với hai giá trị có tần số",
+      "b_name": "Phương sai của biến ngẫu nhiên nhị thức",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.667,
+      "scope": "cross-topic",
+      "a": "v192_polynomial_difference_quotient",
+      "b": "v192_exp_zero_limit",
+      "a_name": "Giới hạn của thương (x^n−1)/(x−1) tại x=1",
+      "b_name": "Giới hạn cơ bản của hàm mũ tự nhiên ở 0",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.667,
+      "scope": "cross-topic",
+      "a": "v191_stars_bars_three",
+      "b": "v191_no_adjacent_selections",
+      "a_name": "Đếm nghiệm nguyên không âm của x+y+z=N",
+      "b_name": "Chọn k vị trí không có hai vị trí liên tiếp",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.651,
+      "scope": "same-topic",
+      "a": "v191_limit_sin_over_x",
+      "b": "v191_limit_cos_1_over_x_squared",
+      "a_name": "Giới hạn lượng giác cơ bản sin(ax)/(bx)",
+      "b_name": "Giới hạn (1−cos(ax))/x²",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.645,
+      "scope": "cross-topic",
+      "a": "v192_parallel_lines_distance",
+      "b": "v192_box_space_diagonal",
+      "a_name": "Khoảng cách giữa hai đường thẳng song song ở dạng tổng quát",
+      "b_name": "Đường chéo không gian hình hộp chữ nhật theo định lý Pythagore ba chiều",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.64,
+      "scope": "cross-topic",
+      "a": "v192_reflect_across_y_eq_x",
+      "b": "v192_reflection_across_horizontal",
+      "a_name": "Phép đối xứng qua đường thẳng y=x hoán đổi tọa độ",
+      "b_name": "Ảnh điểm qua trục đối xứng là đường thẳng y=c",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.64,
+      "scope": "cross-topic",
+      "a": "v192_cartesian_product_cardinality",
+      "b": "v192_complex_modulus_multiplicative",
+      "a_name": "Số cặp có thứ tự trong tích Descartes hai tập hữu hạn",
+      "b_name": "Môđun của tích hai số phức theo tính nhân",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.64,
+      "scope": "cross-topic",
+      "a": "v192_trapezoid_area",
+      "b": "v192_coordinate_midpoint_x",
+      "a_name": "Diện tích hình thang theo tổng hai đáy và chiều cao",
+      "b_name": "Hoành độ trung điểm của đoạn trong Oxy",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.638,
+      "scope": "cross-topic",
+      "a": "v192_decreasing_cubic_interval",
+      "b": "v192_quadratic_between_roots",
+      "a_name": "Độ dài khoảng nghịch biến của hàm bậc ba đặc biệt",
+      "b_name": "Đếm nghiệm nguyên của bất phương trình tam thức âm giữa hai nghiệm",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.634,
+      "scope": "cross-topic",
+      "a": "v192_sine_definite_integral",
+      "b": "v191_parabola_line_enclosed_area",
+      "a_name": "Tích phân sin(ax) trên nửa chu kỳ",
+      "b_name": "Diện tích hình phẳng giữa y=ax² và y=bx",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.629,
+      "scope": "cross-topic",
+      "a": "v192_line_plane_angle_sine_squared",
+      "b": "v191_complex_line_locus_min_modulus",
+      "a_name": "Bình phương sin góc giữa cạnh xiên và mặt phẳng đáy",
+      "b_name": "Cực tiểu môđun số phức với điều kiện đường thẳng",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.627,
+      "scope": "cross-topic",
+      "a": "v192_set_complement_union_count",
+      "b": "v191_symmetric_difference",
+      "a_name": "Số phần tử ngoài hợp hai tập trong vũ trụ hữu hạn",
+      "b_name": "Đếm phần tử thuộc đúng một trong hai tập",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.625,
+      "scope": "cross-topic",
+      "a": "v192_lattice_shortest_paths",
+      "b": "v191_polygon_diagonals",
+      "a_name": "Đếm đường đi ngắn nhất trên lưới ô vuông",
+      "b_name": "Đếm đường chéo của đa giác lồi",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.625,
+      "scope": "cross-topic",
+      "a": "v192_lattice_shortest_paths",
+      "b": "v191_stars_bars_three",
+      "a_name": "Đếm đường đi ngắn nhất trên lưới ô vuông",
+      "b_name": "Đếm nghiệm nguyên không âm của x+y+z=N",
+      "review_status": "candidate_semantic_independence_not_certified"
+    },
+    {
+      "score": 0.621,
+      "scope": "cross-topic",
+      "a": "v192_two_lines_intersect",
+      "b": "v191_quotient_rule_derivative",
+      "a_name": "Tìm hoành độ giao điểm hai đường thẳng từ hệ số góc",
+      "b_name": "Đạo hàm thương hai hàm bậc nhất",
+      "review_status": "candidate_semantic_independence_not_certified"
+    }
+  ],
+  "manual_review_required": true,
+  "globally_certified_independent_types": 0
+}

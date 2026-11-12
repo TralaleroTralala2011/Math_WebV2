@@ -1,0 +1,30 @@
+{
+  "version": "V47",
+  "previous_records": 28270,
+  "new_records": 10000,
+  "total_records": 38270,
+  "previous_form_ids": 2826,
+  "new_form_ids": 1000,
+  "total_form_ids": 3826,
+  "new_method_families": 10,
+  "new_independent_methods_verified": 0,
+  "whole_bank_duplicate_question_texts": 2293,
+  "grade_new_forms": {
+    "10": 400,
+    "11": 300,
+    "12": 300
+  },
+  "method_family_counts": {
+    "0": 100,
+    "1": 100,
+    "2": 100,
+    "3": 100,
+    "4": 100,
+    "5": 100,
+    "6": 100,
+    "7": 100,
+    "8": 100,
+    "9": 100
+  },
+  "quality_warning": "1000 IDs are parameterized variants of 10 solution families, NOT 1000 independent mathematical problem types. Some prompts include dataset markers to avoid identical strings; this is not pedagogical diversity. No regression tests of web app."
+}

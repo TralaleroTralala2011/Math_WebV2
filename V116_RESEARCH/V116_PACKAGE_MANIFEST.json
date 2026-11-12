@@ -1,0 +1,23 @@
+{
+  "source": "V115_LOCAL_AUTOMATION",
+  "replaced_original_files": [
+    "MATH_WEB_GITHUB_READY/backend/question_factory/storage.py",
+    "MATH_WEB_GITHUB_READY/backend/question_factory/engine.py",
+    "MATH_WEB_GITHUB_READY/backend/question_factory/cli.py",
+    "MATH_WEB_GITHUB_READY/backend/question_factory/operations.py",
+    "MATH_WEB_GITHUB_READY/backend/tests/test_question_factory_operations_v115.py"
+  ],
+  "new_files": [
+    "MATH_WEB_GITHUB_READY/backend/question_factory/v116_research.py",
+    "MATH_WEB_GITHUB_READY/backend/question_factory/v116_audit.py",
+    "MATH_WEB_GITHUB_READY/backend/tests/test_question_factory_v116.py",
+    "MATH_WEB_GITHUB_READY/V116_DEVELOPMENT_REPORT.md",
+    "MATH_WEB_GITHUB_READY/V116_RESEARCH/README.md",
+    "MATH_WEB_GITHUB_READY/V116_RESEARCH/V116_NEW_METHODS_PENDING_REVIEW.jsonl",
+    "MATH_WEB_GITHUB_READY/V116_RESEARCH/V116_NEW_QUESTIONS_10_EACH.jsonl",
+    "MATH_WEB_GITHUB_READY/V116_RESEARCH/V116_150_TOPIC_PROGRESS.json",
+    "MATH_WEB_GITHUB_READY/V116_RESEARCH/V116_AUDIT_SUMMARY.json",
+    "MATH_WEB_GITHUB_READY/V116_RESEARCH/V116_TEST_RESULTS.json"
+  ],
+  "verified_methods_certified": 0
+}

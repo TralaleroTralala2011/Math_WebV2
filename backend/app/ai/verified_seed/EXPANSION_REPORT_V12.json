@@ -1,0 +1,10 @@
+{
+  "version": "V12",
+  "previous_questions": 1810,
+  "added_questions": 120,
+  "total_questions": 1930,
+  "added_form_ids": 12,
+  "total_distinct_form_ids": 192,
+  "new_questions_exact_checks_passed": 120,
+  "caveat": "Distinct form IDs do not prove independent mathematical types; no full system regression performed."
+}

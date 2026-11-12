@@ -1,0 +1,45 @@
+........................................................................ [ 25%]
+........................................................................ [ 51%]
+........................................................................ [ 77%]
+...............................................................   [100%]
+=============================== warnings summary ===============================
+app/main.py:136
+  /mnt/data/v154work/MATH_WEB_GITHUB_READY/backend/app/main.py:136: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @app.on_event("startup")
+
+../../../../../opt/pyvenv/lib/python3.13/site-packages/fastapi/applications.py:4579
+../../../../../opt/pyvenv/lib/python3.13/site-packages/fastapi/applications.py:4579
+../../../../../opt/pyvenv/lib/python3.13/site-packages/fastapi/applications.py:4579
+  /opt/pyvenv/lib/python3.13/site-packages/fastapi/applications.py:4579: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    return self.router.on_event(event_type)
+
+app/main.py:142
+  /mnt/data/v154work/MATH_WEB_GITHUB_READY/backend/app/main.py:142: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @app.on_event("shutdown")
+
+app/main.py:154
+  /mnt/data/v154work/MATH_WEB_GITHUB_READY/backend/app/main.py:154: DeprecationWarning: 
+          on_event is deprecated, use lifespan event handlers instead.
+  
+          Read more about it in the
+          [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+          
+    @app.on_event("startup")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+279 passed, 6 warnings, 7 subtests passed in 97.76s (0:01:37)

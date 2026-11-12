@@ -1,0 +1,9 @@
+{
+  "candidate_files": 9,
+  "candidate_records": 1598,
+  "records_with_method_and_topic": 1598,
+  "exact_topic_method_collision_groups": 0,
+  "exact_topic_method_collisions": [],
+  "invalid_or_unsafe": [],
+  "limitation": "Exact normalized method labels only. Not semantic equivalence; no independent forms certified."
+}

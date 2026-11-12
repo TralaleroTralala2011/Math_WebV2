@@ -1,0 +1,832 @@
+[
+  {
+    "form_id": "v182_set_intersection",
+    "topic": "menh_de_tap_hop",
+    "grade": 10,
+    "concept": "Công thức bao hàm–loại trừ",
+    "method": "|A∩B|=|A|+|B|−|A∪B|",
+    "conditions": "A,B hữu hạn",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_count_outfits",
+    "topic": "quy_tac_dem",
+    "grade": 10,
+    "concept": "Quy tắc đếm nhân",
+    "method": "m lựa chọn độc lập nhân n lựa chọn",
+    "conditions": "Hai công đoạn độc lập",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_divisibility_truth",
+    "topic": "menh_de",
+    "grade": 10,
+    "concept": "Mệnh đề đúng sai",
+    "method": "Kiểm tra phần dư",
+    "conditions": "Các mệnh đề số học xác định",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_linear_system_sum",
+    "topic": "he_phuong_trinh",
+    "grade": 10,
+    "concept": "Phép cộng và trừ hệ",
+    "method": "x=(s+d)/2",
+    "conditions": "Tổng và hiệu cùng tính chẵn lẻ",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_cosine_law",
+    "topic": "he_thuc_luong_tam_giac",
+    "grade": 10,
+    "concept": "Hệ thức lượng tam giác",
+    "method": "c²=a²+b²−2ab cos C",
+    "conditions": "Góc xen giữa 60° hoặc 120°",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_line_slope",
+    "topic": "duong_thang",
+    "grade": 10,
+    "concept": "Tọa độ đường thẳng",
+    "method": "k=(y₂−y₁)/(x₂−x₁)",
+    "conditions": "Hai điểm khác hoành độ",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_tangent_length_squared",
+    "topic": "duong_tron",
+    "grade": 10,
+    "concept": "Tam giác vuông với bán kính",
+    "method": "PT²=PO²−R²",
+    "conditions": "P ngoài đường tròn",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_pythagorean_squared",
+    "topic": "hinh_hoc_10",
+    "grade": 10,
+    "concept": "Tam giác vuông",
+    "method": "c²=a²+b²",
+    "conditions": "Hai cạnh góc vuông dương",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_linear_breakeven",
+    "topic": "bai_toan_thuc_te_10",
+    "grade": 10,
+    "concept": "Phương trình tuyến tính",
+    "method": "số lượng=chi phí cố định/(giá bán−chi phí biến đổi)",
+    "conditions": "Lãi trên mỗi sản phẩm dương",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_trapezoid_area",
+    "topic": "tam_giac_tu_giac_10",
+    "grade": 10,
+    "concept": "Diện tích tứ giác",
+    "method": "S=(a+b)h/2",
+    "conditions": "Hai đáy song song, h>0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_inscribed_angle",
+    "topic": "duong_tron_co_ban_10",
+    "grade": 10,
+    "concept": "Góc ở tâm và góc nội tiếp",
+    "method": "góc nội tiếp bằng nửa góc ở tâm",
+    "conditions": "Cùng chắn một cung nhỏ",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_distance_squared_2d",
+    "topic": "toa_do_hinh_hoc_10",
+    "grade": 10,
+    "concept": "Tọa độ mặt phẳng",
+    "method": "AB²=(Δx)²+(Δy)²",
+    "conditions": "A,B khác nhau",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_sas_matching_side",
+    "topic": "g10_geom_triangle_congruence",
+    "grade": 10,
+    "concept": "Trường hợp cạnh–góc–cạnh",
+    "method": "SAS => cạnh thứ ba bằng nhau",
+    "conditions": "Hai cạnh và góc xen giữa tương ứng bằng nhau",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_midpoint_sum_2d",
+    "topic": "g10_geom_coordinate_distance_midpoint",
+    "grade": 10,
+    "concept": "Trung điểm đoạn thẳng",
+    "method": "M=((x₁+x₂)/2,(y₁+y₂)/2)",
+    "conditions": "A,B thuộc mặt phẳng tọa độ",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_perp_bisector_vertical",
+    "topic": "g10_geom_locus",
+    "grade": 10,
+    "concept": "Điểm cách đều hai điểm",
+    "method": "Trung trực của đoạn thẳng nằm ngang là x=(a+b)/2",
+    "conditions": "A,B cùng tung độ, khác hoành độ",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_tangent_chord_angle",
+    "topic": "g10_geom_circle_tangent_chord",
+    "grade": 10,
+    "concept": "Định lý góc tạo bởi tiếp tuyến và dây",
+    "method": "Góc tiếp tuyến–dây bằng góc nội tiếp chắn cùng cung",
+    "conditions": "Tiếp tuyến tại đầu dây",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_symmetric_difference_squared",
+    "topic": "g10_symmetric_systems",
+    "grade": 10,
+    "concept": "Hệ thức Viète",
+    "method": "(x−y)²=(x+y)²−4xy",
+    "conditions": "Biết tổng và tích hai nghiệm thực",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_sum_square_sequence",
+    "topic": "day_so",
+    "grade": 11,
+    "concept": "Tổng bình phương",
+    "method": "S=n(n+1)(2n+1)/6",
+    "conditions": "n nguyên dương",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_removable_limit",
+    "topic": "gioi_han",
+    "grade": 11,
+    "concept": "Phân tích đa thức",
+    "method": "(x²−a²)/(x−a)=x+a",
+    "conditions": "x tiến tới a, x≠a",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_prism_edges",
+    "topic": "hinh_khong_gian",
+    "grade": 11,
+    "concept": "Cấu trúc lăng trụ n-gon",
+    "method": "3n cạnh",
+    "conditions": "Lăng trụ có hai đáy n-gon",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_two_red_without_replacement",
+    "topic": "xac_suat_11",
+    "grade": 11,
+    "concept": "Quy tắc nhân xác suất phụ thuộc",
+    "method": "r(r−1)/(n(n−1))",
+    "conditions": "Rút hai lần không hoàn lại",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_cos_from_sin",
+    "topic": "gia_tri_luong_giac",
+    "grade": 11,
+    "concept": "Hệ thức lượng giác cơ bản",
+    "method": "cos²=1−sin²",
+    "conditions": "Góc nhọn, sin là phân số tam giác Pythagore",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_cos_double_angle",
+    "topic": "cong_thuc_luong_giac",
+    "grade": 11,
+    "concept": "Lượng giác",
+    "method": "cos(2a)=2cos²(a)−1",
+    "conditions": "Biết cos(a)",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_sine_zero_count",
+    "topic": "ham_so_luong_giac_day_du",
+    "grade": 11,
+    "concept": "Chu kỳ và nghiệm lượng giác",
+    "method": "sin(kx)=0 ⇔ kx=mπ",
+    "conditions": "k nguyên dương, 0≤x<2π",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_cosine_one_count",
+    "topic": "phuong_trinh_luong_giac_day_du",
+    "grade": 11,
+    "concept": "Phương trình lượng giác",
+    "method": "cos(kx)=1 ⇔ kx=2mπ",
+    "conditions": "k nguyên dương, 0≤x<2π",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_odd_increment_recurrence",
+    "topic": "day_so_tong_quat",
+    "grade": 11,
+    "concept": "Dãy số quy nạp",
+    "method": "1+3+…+(2n−1)=n²",
+    "conditions": "u₁=1, uₙ=uₙ₋₁+(2n−1)",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_product_rule",
+    "topic": "dao_ham_quy_tac",
+    "grade": 11,
+    "concept": "Đạo hàm hàm tích",
+    "method": "(uv)′=u′v+uv′",
+    "conditions": "u,v là đa thức",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_normal_slope",
+    "topic": "ung_dung_dao_ham_11",
+    "grade": 11,
+    "concept": "Tiếp tuyến và pháp tuyến",
+    "method": "k_pháp=−1/f′(x₀)",
+    "conditions": "f′(x₀)≠0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_compound_growth",
+    "topic": "bai_toan_thuc_te_11",
+    "grade": 11,
+    "concept": "Cấp số nhân thực tế",
+    "method": "Aₙ=A₀qⁿ",
+    "conditions": "Lãi suất kỳ cố định",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_rotation_90",
+    "topic": "phep_bien_hinh_11",
+    "grade": 11,
+    "concept": "Phép biến hình mặt phẳng",
+    "method": "(x,y)↦(−y,x)",
+    "conditions": "Quay quanh gốc O ngược chiều kim đồng hồ",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_pyramid_edges",
+    "topic": "nhan_biet_hinh_khong_gian_11",
+    "grade": 11,
+    "concept": "Nhận dạng hình chóp",
+    "method": "2n cạnh",
+    "conditions": "Hình chóp đáy n-gon",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_parallel_planes_distance",
+    "topic": "g11_geom_parallel_planes",
+    "grade": 11,
+    "concept": "Hình học không gian",
+    "method": "d=|a−b| cho x=a, x=b",
+    "conditions": "Hai mặt phẳng phân biệt",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_skew_perpendicular_distance",
+    "topic": "g11_geom_skew_lines_distance",
+    "grade": 11,
+    "concept": "Hình học không gian tọa độ",
+    "method": "Khoảng cách hai đường vuông góc chéo nhau bằng độ lệch theo trục chung",
+    "conditions": "Hai đường song song với Ox và Oy tại độ cao khác nhau",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_affine_recurrence",
+    "topic": "g11_sequences_advanced",
+    "grade": 11,
+    "concept": "Giải truy hồi tuyến tính",
+    "method": "uₙ=2ⁿ⁻¹(u₁+1)−1",
+    "conditions": "uₙ=2uₙ₋₁+1",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_binomial_coefficient",
+    "topic": "g11_binomial_advanced",
+    "grade": 11,
+    "concept": "Khai triển nhị thức",
+    "method": "[x^k](1+ax)^n=C(n,k)a^k",
+    "conditions": "n nguyên không âm, 0≤k≤n",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_conditional_count",
+    "topic": "g11_conditional_probability_models",
+    "grade": 11,
+    "concept": "Xác suất có điều kiện",
+    "method": "P(A|B)=n(A∩B)/n(B)",
+    "conditions": "n(B)>0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_quadratic_stationary_point",
+    "topic": "ung_dung_dao_ham",
+    "grade": 12,
+    "concept": "Đạo hàm",
+    "method": "f′(x)=2ax+b=0",
+    "conditions": "a≠0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_cubic_stationary_count",
+    "topic": "khao_sat_ham_so",
+    "grade": 12,
+    "concept": "Khảo sát hàm số",
+    "method": "Đạo hàm bậc hai có 2 nghiệm phân biệt khi Δ>0",
+    "conditions": "Hệ số bậc ba khác 0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_prism_volume",
+    "topic": "hinh_hoc_khong_gian",
+    "grade": 12,
+    "concept": "Hình khối",
+    "method": "V=S_đáy h",
+    "conditions": "Đáy và chiều cao dương",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_discrete_expectation",
+    "topic": "xac_suat_12",
+    "grade": 12,
+    "concept": "Xác suất rời rạc",
+    "method": "E(X)=Σxᵢpᵢ",
+    "conditions": "Các xác suất không âm, tổng 1",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_population_variance",
+    "topic": "thong_ke_12",
+    "grade": 12,
+    "concept": "Các số đặc trưng",
+    "method": "V=(1/n)Σ(xᵢ−x̄)²",
+    "conditions": "Mẫu gồm các số thực",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_parabola_minimum",
+    "topic": "gtln_gtnn",
+    "grade": 12,
+    "concept": "Hoàn thành bình phương",
+    "method": "a(x−h)²+k ≥ k khi a>0",
+    "conditions": "a>0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_line_parabola_intersections",
+    "topic": "tuong_giao",
+    "grade": 12,
+    "concept": "Giải phương trình hoành độ giao điểm",
+    "method": "Δ quyết định số nghiệm thực",
+    "conditions": "Đường thẳng và parabol",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_exponential_growth",
+    "topic": "ham_mu",
+    "grade": 12,
+    "concept": "Hàm số mũ",
+    "method": "f(t)=A b^t",
+    "conditions": "b>1, t nguyên không âm",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_logarithm_of_power",
+    "topic": "ham_logarit",
+    "grade": 12,
+    "concept": "Định nghĩa logarit",
+    "method": "log_b(b^n)=n",
+    "conditions": "b>0,b≠1",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_plane_normal_sum",
+    "topic": "mat_phang_oxyz",
+    "grade": 12,
+    "concept": "Phương trình mặt phẳng",
+    "method": "(a,b,c) là VTPT của ax+by+cz+d=0",
+    "conditions": "(a,b,c) khác 0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_line_parametric_point",
+    "topic": "duong_thang_oxyz",
+    "grade": 12,
+    "concept": "Tọa độ Oxyz",
+    "method": "M=P+t v",
+    "conditions": "v khác 0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_sphere_radius_squared",
+    "topic": "mat_cau",
+    "grade": 12,
+    "concept": "Phương trình mặt cầu",
+    "method": "R²=a²+b²+c²−d",
+    "conditions": "R²>0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_axis_plane_distance",
+    "topic": "goc_khoang_cach_oxyz",
+    "grade": 12,
+    "concept": "Khoảng cách Oxyz",
+    "method": "d(M,x=k)=|x_M−k|",
+    "conditions": "M bất kỳ, x=k là mặt phẳng",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_pyramid_volume",
+    "topic": "the_tich_khong_gian",
+    "grade": 12,
+    "concept": "Thể tích khối đa diện",
+    "method": "V=(1/3)S_đáy h",
+    "conditions": "S_đáy>0,h>0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_profit_maximum",
+    "topic": "bai_toan_thuc_te_12",
+    "grade": 12,
+    "concept": "Ứng dụng đạo hàm thực tế",
+    "method": "P(x)=−a(x−h)²+k đạt max k",
+    "conditions": "a>0, x≥0, h≥0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_line_direction_sum",
+    "topic": "g12_geom_line_equation_3d",
+    "grade": 12,
+    "concept": "Phương trình đường thẳng",
+    "method": "v=B−A",
+    "conditions": "A≠B",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_point_plane_345",
+    "topic": "g12_geom_point_plane_distance",
+    "grade": 12,
+    "concept": "Công thức khoảng cách Oxyz",
+    "method": "|3x+4y−d|/5",
+    "conditions": "Pháp tuyến (3,4,0)",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_plane_parameter",
+    "topic": "g12_geom_parameter_geometry",
+    "grade": 12,
+    "concept": "Điều kiện điểm thuộc mặt phẳng",
+    "method": "Thế tọa độ vào ax+ky+z=0",
+    "conditions": "y≠0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_distance_to_axis_min",
+    "topic": "g12_geom_3d_optimization",
+    "grade": 12,
+    "concept": "Tối ưu hình học tọa độ",
+    "method": "min_{t}[(x−t)²+y²+z²]=y²+z²",
+    "conditions": "Đường thẳng là trục Ox",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_integral_maximum",
+    "topic": "g12_integral_optimization",
+    "grade": 12,
+    "concept": "Tích phân và đạo hàm",
+    "method": "F(t)=∫₀ᵗ(c−2ax)dx=ct−at²",
+    "conditions": "a,c>0, t≥0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_revolution_cone",
+    "topic": "g12_solid_of_revolution",
+    "grade": 12,
+    "concept": "Phương pháp đĩa",
+    "method": "V=π∫₀ᵇ(kx)²dx=πk²b³/3",
+    "conditions": "k,b>0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_sine_rule_diameter",
+    "topic": "he_thuc_luong_van_dung_10",
+    "grade": 10,
+    "concept": "Hệ thức lượng nâng cao",
+    "method": "2R=a/sin A",
+    "conditions": "Tam giác có cạnh a đối diện góc A",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_triangle_midsegment",
+    "topic": "chung_minh_hinh_hoc_10",
+    "grade": 10,
+    "concept": "Định lý đường trung bình",
+    "method": "MN=BC/2",
+    "conditions": "M,N là trung điểm hai cạnh",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_parallelogram_fourth_vertex",
+    "topic": "g10_geom_vector_proofs",
+    "grade": 10,
+    "concept": "Quan hệ vectơ và đường chéo",
+    "method": "D=A+C−B",
+    "conditions": "A,B,C là ba đỉnh liên tiếp",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_circle_vertical_chord",
+    "topic": "g10_geom_coordinate_circle_line",
+    "grade": 10,
+    "concept": "Tọa độ đường tròn",
+    "method": "(y−k)²=r²−(x−h)²",
+    "conditions": "Đường thẳng cắt đường tròn tại hai điểm",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_parallel_line_plane_distance",
+    "topic": "song_song_khong_gian",
+    "grade": 11,
+    "concept": "Quan hệ song song trong không gian",
+    "method": "d(d,z=k)=|h−k|",
+    "conditions": "d nằm trong mặt phẳng z=h, phương Ox",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_perpendicular_vectors_parameter",
+    "topic": "vuong_goc_khong_gian",
+    "grade": 11,
+    "concept": "Tích vô hướng",
+    "method": "u·v=0",
+    "conditions": "Hai vectơ khác 0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_space_point_plane_distance",
+    "topic": "goc_khoang_cach_11",
+    "grade": 11,
+    "concept": "Khoảng cách trong không gian",
+    "method": "d(M,z=k)=|z−k|",
+    "conditions": "M bất kỳ, mặt phẳng song song Oxy",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_pyramid_parallel_section_area",
+    "topic": "thiet_dien_hinh_khong_gian_11",
+    "grade": 11,
+    "concept": "Tam giác đồng dạng trong không gian",
+    "method": "S_section/S_base=(h/H)²",
+    "conditions": "Mặt phẳng cắt song song đáy",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_savings_arithmetic_total",
+    "topic": "bai_toan_thuc_te_tong_hop_11",
+    "grade": 11,
+    "concept": "Cấp số cộng thực tế",
+    "method": "S=n(2a+(n−1)d)/2",
+    "conditions": "Tiết kiệm tăng đều từng năm",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_reflection_x_axis",
+    "topic": "phep_bien_hinh_co_ban_11",
+    "grade": 11,
+    "concept": "Phép biến hình cơ bản",
+    "method": "(x,y)↦(x,−y)",
+    "conditions": "Đối xứng qua trục Ox",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_plane_intercept_evaluation",
+    "topic": "g11_geom_space_lines_planes",
+    "grade": 11,
+    "concept": "Hình học không gian",
+    "method": "x/a+y/b+z/c=1",
+    "conditions": "a,b,c khác 0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_direction_parallel_plane",
+    "topic": "g11_geom_parallel_line_plane",
+    "grade": 11,
+    "concept": "Tích vô hướng với pháp tuyến",
+    "method": "n·v=0",
+    "conditions": "v khác 0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_direction_normal_plane",
+    "topic": "g11_geom_perpendicular_line_plane",
+    "grade": 11,
+    "concept": "Phương vectơ pháp tuyến",
+    "method": "v=k n",
+    "conditions": "n khác 0, k khác 0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_line_plane_sine_angle",
+    "topic": "g11_geom_dihedral_angles",
+    "grade": 11,
+    "concept": "Tích vô hướng với pháp tuyến",
+    "method": "sin θ=|v·n|/(|v||n|)",
+    "conditions": "Góc giữa đường thẳng và Oxy",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_prism_horizontal_section_perimeter",
+    "topic": "g11_geom_section_construction",
+    "grade": 11,
+    "concept": "Thiết diện song song đáy",
+    "method": "P=2(a+b)",
+    "conditions": "Thiết diện bởi mặt phẳng ngang cắt lăng trụ",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_three_perpendicular_distance",
+    "topic": "g11_geom_three_perpendiculars",
+    "grade": 11,
+    "concept": "Hình chiếu và khoảng cách",
+    "method": "d(P,l)²=h²+d(H,l)²",
+    "conditions": "H là hình chiếu P xuống mặt phẳng",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_pyramid_section_perimeter",
+    "topic": "g11_geom_section_ratio",
+    "grade": 11,
+    "concept": "Hình đồng dạng",
+    "method": "P_section/P_base=t",
+    "conditions": "Thiết diện song song đáy, t trong (0,1)",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_orthogonal_basis_proof",
+    "topic": "g11_geom_space_proof",
+    "grade": 11,
+    "concept": "Hai phương độc lập trong mặt phẳng",
+    "method": "u·v=0 và u·w=0",
+    "conditions": "v,w độc lập trong mặt phẳng",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_intercept_triangle_area",
+    "topic": "tong_hop_thpt",
+    "grade": 12,
+    "concept": "Tổng hợp tọa độ và hình học",
+    "method": "S=|ab|/2",
+    "conditions": "Đường thẳng cắt hai trục tại a,b khác 0",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_reflection_horizontal_plane",
+    "topic": "hinh_hoc_oxyz_van_dung_12",
+    "grade": 12,
+    "concept": "Phép đối xứng Oxyz",
+    "method": "(x,y,z)↦(x,y,2k−z)",
+    "conditions": "Đối xứng qua z=k",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_plane_plane_cosine",
+    "topic": "g12_geom_two_planes_angle",
+    "grade": 12,
+    "concept": "Góc giữa pháp tuyến",
+    "method": "cos θ=|n1·n2|/(|n1||n2|)",
+    "conditions": "Hai mặt phẳng không song song",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_skew_vs_intersect",
+    "topic": "g12_geom_skew_line_relation",
+    "grade": 12,
+    "concept": "Giao và chéo nhau trong Oxyz",
+    "method": "Khoảng cách theo phương chung bằng 0 ⇔ cắt nhau",
+    "conditions": "Hai đường có phương Ox và Oy",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_line_distance_min_squared",
+    "topic": "g12_geom_min_distance_3d",
+    "grade": 12,
+    "concept": "Khoảng cách từ điểm đến đường",
+    "method": "min PM²=(x−a)²+(y−b)²",
+    "conditions": "Đường thẳng song song Oz",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_radical_extraneous_root",
+    "topic": "g10_radical_equations_advanced",
+    "grade": 10,
+    "concept": "Bình phương và thử nghiệm",
+    "method": "√(x+t(t−1))=x",
+    "conditions": "x≥0, t≥2",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_advanced_sin_double_count",
+    "topic": "g11_advanced_trig_equations",
+    "grade": 11,
+    "concept": "Biến đổi tích",
+    "method": "sin(2kx)=sin(kx) ⇔ sin(kx)(2cos(kx)−1)=0",
+    "conditions": "k nguyên dương, x∈[0,2π)",
+    "questions_added": 10,
+    "independence_certified": false
+  },
+  {
+    "form_id": "v182_complex_circle_max_real",
+    "topic": "g12_complex_plane_geometry",
+    "grade": 12,
+    "concept": "Hình học số phức",
+    "method": "|z−(a+bi)|=r ⇒ max Re(z)=a+r",
+    "conditions": "r>0",
+    "questions_added": 10,
+    "independence_certified": false
+  }
+]

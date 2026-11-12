@@ -1,0 +1,241 @@
+{
+  "version": "V37",
+  "base": "V36",
+  "previous_questions": 9540,
+  "added_questions": 350,
+  "total_questions": 9890,
+  "previous_form_ids": 953,
+  "added_form_ids": 35,
+  "total_form_ids": 988,
+  "added_by_grade": {
+    "10": 130,
+    "11": 80,
+    "12": 140
+  },
+  "forms": [
+    {
+      "form_id": "v37_exactly_one_of_three_disjoint_pairwise",
+      "grade": 10,
+      "topic": "Tập hợp"
+    },
+    {
+      "form_id": "v37_exactly_two_three_sets",
+      "grade": 10,
+      "topic": "Tập hợp"
+    },
+    {
+      "form_id": "v37_quadratic_roots_difference_squared",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v37_quadratic_above_axis_condition",
+      "grade": 10,
+      "topic": "Hàm số bậc hai"
+    },
+    {
+      "form_id": "v37_triangle_area_determinant",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v37_point_divides_segment_ratio",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v37_parallelogram_fourth_vertex_abscissa",
+      "grade": 10,
+      "topic": "Vectơ"
+    },
+    {
+      "form_id": "v37_permutations_no_fixed_first",
+      "grade": 10,
+      "topic": "Tổ hợp"
+    },
+    {
+      "form_id": "v37_choose_group_at_least_one_special",
+      "grade": 10,
+      "topic": "Tổ hợp"
+    },
+    {
+      "form_id": "v37_hypergeometric_exactly_one_red",
+      "grade": 10,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v37_weighted_mean_merge_groups",
+      "grade": 10,
+      "topic": "Thống kê"
+    },
+    {
+      "form_id": "v37_right_triangle_inradius",
+      "grade": 10,
+      "topic": "Hệ thức lượng trong tam giác"
+    },
+    {
+      "form_id": "v37_absolute_value_integer_solution_count",
+      "grade": 10,
+      "topic": "Bất phương trình"
+    },
+    {
+      "form_id": "v37_gp_product_first_three",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v37_tangent_intercept_polynomial",
+      "grade": 11,
+      "topic": "Đạo hàm"
+    },
+    {
+      "form_id": "v37_derivative_trigonometric_at_zero",
+      "grade": 11,
+      "topic": "Đạo hàm"
+    },
+    {
+      "form_id": "v37_integer_solutions_lower_bounds",
+      "grade": 11,
+      "topic": "Tổ hợp"
+    },
+    {
+      "form_id": "v37_bayes_two_factories",
+      "grade": 11,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v37_expected_trials_until_first_success",
+      "grade": 11,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v37_rectangular_prism_space_diagonal_squared",
+      "grade": 11,
+      "topic": "Hình học không gian"
+    },
+    {
+      "form_id": "v37_pyramid_volume_from_base_area",
+      "grade": 11,
+      "topic": "Hình học không gian"
+    },
+    {
+      "form_id": "v37_integral_polynomial_by_antiderivative",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v37_integral_substitution_linear_power",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v37_area_between_parabola_and_axis",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v37_complex_square_real_part",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v37_cross_product_norm_squared",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v37_plane_intercept_z",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v37_distance_skew_lines_parallel_axis",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v37_exponential_equation_different_bases",
+      "grade": 12,
+      "topic": "Hàm số mũ"
+    },
+    {
+      "form_id": "v37_logarithm_equation_product",
+      "grade": 12,
+      "topic": "Hàm số logarit"
+    },
+    {
+      "form_id": "v37_optimization_rectangle_fixed_perimeter",
+      "grade": 12,
+      "topic": "Cực trị"
+    },
+    {
+      "form_id": "v37_expectation_linear_transform",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên"
+    },
+    {
+      "form_id": "v37_variance_linear_transform",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên"
+    },
+    {
+      "form_id": "v37_sphere_volume_coefficient_pi",
+      "grade": 12,
+      "topic": "Hình học không gian"
+    },
+    {
+      "form_id": "v37_frustum_volume_from_two_radii",
+      "grade": 12,
+      "topic": "Hình học không gian"
+    }
+  ],
+  "rejected": [
+    [
+      "v37_quadratic_roots_reciprocals_sum",
+      "duplicate question"
+    ],
+    [
+      "v37_tangent_length_squared_from_external_point",
+      "existing signature"
+    ],
+    [
+      "v37_ap_sum_even_indexed",
+      "existing signature"
+    ],
+    [
+      "v37_linear_recurrence_fixed_point",
+      "existing signature"
+    ],
+    [
+      "v37_limit_difference_of_squares",
+      "duplicate question"
+    ],
+    [
+      "v37_limit_cube_difference",
+      "existing signature"
+    ],
+    [
+      "v37_product_rule_at_one",
+      "duplicate question"
+    ],
+    [
+      "v37_sin_sum_angle_45",
+      "duplicate question"
+    ],
+    [
+      "v37_complex_product_imag_part",
+      "existing signature"
+    ]
+  ],
+  "checks": {
+    "independent_fraction_or_combinatorial_identity_check": 350,
+    "unique_question_text": true,
+    "all_new_have_solutions": true
+  },
+  "limitations": [
+    "Form IDs and signatures do not prove conceptual independence",
+    "Old content not independently audited",
+    "Main practice UI and battle not regression tested",
+    "Bank not connected to practice UI"
+  ]
+}

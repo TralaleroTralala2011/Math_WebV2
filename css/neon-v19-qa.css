@@ -1,0 +1,5 @@
+/* Placement result transparency without changing global NEON theme. */
+.mw-v19-all-diagnostics{margin-top:18px;border:1px solid rgba(38,217,245,.3);border-radius:14px;padding:12px 15px}
+.mw-v19-all-diagnostics>summary{cursor:pointer;font-weight:700;padding:7px 3px;color:var(--mw-neon-cyan,#30e5f5)}
+.mw-v19-all-diagnostics .mw-v5-grid{margin-top:16px}
+@media(max-width:700px){.mw-v19-all-diagnostics{padding:10px}.mw-v19-all-diagnostics .mw-v5-grid{grid-template-columns:minmax(0,1fr)}}

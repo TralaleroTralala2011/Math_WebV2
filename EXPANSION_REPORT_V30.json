@@ -1,0 +1,191 @@
+{
+  "version": "V30",
+  "base": "V29",
+  "previous_questions": 6770,
+  "new_questions": 240,
+  "total_questions": 7010,
+  "previous_form_codes": 676,
+  "new_form_codes": 24,
+  "total_form_codes": 700,
+  "new_forms": [
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v30_set_complement_union",
+      "form_signature": "complement of union within finite universe",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v30_set_a_minus_b",
+      "form_signature": "cardinality of set difference from intersection",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v30_quadratic_sum_cubes",
+      "form_signature": "sum of cubes of roots using Vieta",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v30_quadratic_root_ratio",
+      "form_signature": "ratio of positive integer roots from quadratic",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Vectơ",
+      "form_id": "v30_vector_midpoint_norm",
+      "form_signature": "midpoint vector norm from coordinates",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v30_triangle_area_base_height",
+      "form_signature": "area from axis aligned coordinate base and height",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Quy tắc đếm",
+      "form_id": "v30_count_license_plate",
+      "form_signature": "product rule with repetition restriction",
+      "count": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Xác suất",
+      "form_id": "v30_dice_sum_seven",
+      "form_signature": "probability sum seven on two fair dice with independent repeats",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v30_ap_sum_odd_positions",
+      "form_signature": "sum odd indexed arithmetic progression terms",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v30_gp_sum_from_n_to_2n",
+      "form_signature": "sum geometric progression over shifted block",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v30_limit_trig_sin_ratio",
+      "form_signature": "limit sin(ax) over x cos(bx) near zero",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v30_limit_exponential_difference",
+      "form_signature": "limit (exp(ax)-1)/x near zero",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v30_derivative_sqrt_linear",
+      "form_signature": "derivative of square root of affine at integer square",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v30_tangent_normal_slope",
+      "form_signature": "normal line slope from polynomial derivative",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v30_binomial_zero_success",
+      "form_signature": "probability zero successes in n Bernoulli trials",
+      "count": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Tổ hợp",
+      "form_id": "v30_committee_at_least_one",
+      "form_signature": "committee at least one special member",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v30_integral_polynomial_0_1",
+      "form_signature": "integral polynomial powers on unit interval",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v30_integral_sin_full_period",
+      "form_signature": "integral sin(ax) on full periods",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v30_complex_conjugate_product",
+      "form_signature": "product of complex conjugate pair",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v30_complex_quadratic_roots",
+      "form_signature": "solve z squared negative real number",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v30_distance_two_points_3d",
+      "form_signature": "distance between two points in 3d coordinates",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v30_plane_normal_vector",
+      "form_signature": "normal vector of coordinate plane equation",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số mũ",
+      "form_id": "v30_compound_interest_growth",
+      "form_signature": "compound interest annual growth exact integer final balance",
+      "count": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v30_uniform_discrete_variance",
+      "form_signature": "variance of discrete uniform 1 through n",
+      "count": 10
+    }
+  ],
+  "checks": {
+    "unique_normalized_question": true,
+    "new_answers_solutions_present": true,
+    "new_exact_formula_identity": true,
+    "zip_integrity": null
+  },
+  "limitations": [
+    "Distinct form IDs/signatures do not prove mathematically independent solution methods.",
+    "No end-to-end battle/UI regression testing.",
+    "Question bank integration with practice UI not implemented."
+  ]
+}

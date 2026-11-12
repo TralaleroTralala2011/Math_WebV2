@@ -1,6 +1,7 @@
 """Administrative API for MATH WEB. All authorization is enforced server-side."""
 import json
 import os
+import secrets
 import sqlite3
 import csv
 import io
@@ -22,7 +23,10 @@ from app.ai.archive import archive_questions
 
 router = APIRouter(prefix="/api/admin", tags=["Administration"])
 ADMIN_USERNAME = "admin19022011"
-BOOTSTRAP_PASSWORD = os.getenv("MATHWEB_BOOTSTRAP_ADMIN_PASSWORD", "adminsitinh")
+# No default administrator password is embedded in downloadable source code.
+# On first run only, an auto-generated password is shown in the backend log
+# unless the operator provided MATHWEB_BOOTSTRAP_ADMIN_PASSWORD.
+BOOTSTRAP_PASSWORD = os.getenv("MATHWEB_BOOTSTRAP_ADMIN_PASSWORD")
 
 
 def now_iso():
@@ -94,8 +98,15 @@ def ensure_admin_schema_and_account():
                 conn.execute("INSERT INTO admin_accounts(username,password_hash,status,auth_version,created_at) VALUES(?,?,?,?,?)",
                              (ADMIN_USERNAME, admin["password_hash"], "active", 0, admin["created_at"] or now_iso()))
             else:
+                initial_password = BOOTSTRAP_PASSWORD or secrets.token_urlsafe(24)
+                if len(initial_password) < 8:
+                    raise RuntimeError("MATHWEB_BOOTSTRAP_ADMIN_PASSWORD must contain at least 8 characters.")
                 conn.execute("INSERT INTO admin_accounts(username,password_hash,status,auth_version,created_at) VALUES(?,?,?,?,?)",
-                             (ADMIN_USERNAME, hash_password(BOOTSTRAP_PASSWORD), "active", 0, now_iso()))
+                             (ADMIN_USERNAME, hash_password(initial_password), "active", 0, now_iso()))
+                # Only printed for newly created admins, not on every restart.
+                print("[MATH_WEB ADMIN SETUP] Initial username:", ADMIN_USERNAME, flush=True)
+                print("[MATH_WEB ADMIN SETUP] Initial password:", initial_password, flush=True)
+                print("[MATH_WEB ADMIN SETUP] Change this password immediately after signing in.", flush=True)
         # Keep old audit/user references safe, but hide the legacy shadow from learner lists.
         conn.execute("DROP INDEX IF EXISTS idx_single_admin_role")
         if admin:
@@ -979,19 +990,19 @@ def submit_my_assignment(assignment_id:int,data:AssignmentSubmitRequest,authoriz
         if t['status']=='submitted': raise HTTPException(status_code=409,detail="Bài đã được nộp.")
         qs=json.loads(t['questions_json'] or '[]')
         if not qs: raise HTTPException(status_code=409,detail="Hãy bắt đầu làm bài trước khi nộp.")
-        norm=lambda v: ''.join(str(v or '').strip().casefold().split());out=[];correct=0
+        from .questions.answer_checker import grade_answer
+        out=[];correct=0
         for i,q in enumerate(qs):
-            ans=data.answers.get(str(i),'');expected=q.get('answer',q.get('correct_answer',''));opts=q.get('options') or q.get('statements') or q.get('choices') or []
-            def option_text(opt):
-                return str(opt.get('value',opt.get('text',opt.get('label',''))) if isinstance(opt,dict) else opt)
-            ok=bool(norm(ans)) and norm(ans)==norm(expected)
-            if not ok and isinstance(expected,str) and expected.strip().upper() in ('A','B','C','D') and isinstance(opts,list):
-                idx=ord(expected.strip().upper())-ord('A')
-                if idx<len(opts): ok=norm(ans)==norm(option_text(opts[idx]))
-            if not ok and isinstance(ans,str) and ans.strip().upper() in ('A','B','C','D') and isinstance(opts,list):
-                idx=ord(ans.strip().upper())-ord('A')
-                if idx<len(opts): ok=norm(option_text(opts[idx]))==norm(expected)
-            correct+=int(ok);out.append({"id":str(i),"question":q.get('question',''),"answer":ans,"correct_answer":expected,"is_correct":ok,"explanation":q.get('solution') or q.get('explanation') or ''})
+            ans=data.answers.get(str(i), '')
+            expected=q.get('answer', q.get('correct_answer'))
+            options=q.get('options') or q.get('statements') or q.get('choices') or []
+            kind=q.get('question_type') or ('multiple_choice' if options else 'short_answer')
+            question={**q,'question_type':kind,'options':options}
+            ok=bool(str(ans).strip()) and grade_answer(question,ans,expected)
+            correct+=int(ok)
+            out.append({'id':str(i),'question':q.get('question',''),'answer':ans,
+                        'correct_answer':expected,'is_correct':ok,
+                        'explanation':q.get('solution') or q.get('explanation') or ''})
         score=round(100*correct/max(1,len(qs)),1);feedback={"results":out,"message":"Hoàn thành tốt!" if score>=85 else "Hãy xem lời giải và củng cố phần còn yếu." if score<70 else "Bạn đang tiến bộ, hãy rà soát câu sai."}
         submission={"answers":data.answers,"reasoning":data.reasoning}
         # Award homework XP exactly once; the submitted status guard above prevents replay farming.

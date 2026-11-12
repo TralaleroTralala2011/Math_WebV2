@@ -1,0 +1,148 @@
+﻿grade,level,topic,source_ordinal,questions_exact_title,form_ids_exact_title,target_form_ids,target_questions,status
+10,Nền tảng,Chia dư,01,0,0,2000,20000,no exact-match questions
+10,Nền tảng,Chia hết,02,420,42,2000,20000,requires independent-method audit
+10,Nền tảng,Hàm số,03,1120,112,2000,20000,requires independent-method audit
+10,Nền tảng,Hàm số bậc nhất,04,30,3,2000,20000,requires independent-method audit
+10,Nền tảng,Hệ phương trình,05,140,14,2000,20000,requires independent-method audit
+10,Nền tảng,Hệ phương trình,06,140,14,2000,20000,requires independent-method audit
+10,Nền tảng,Mệnh đề,07,0,0,2000,20000,no exact-match questions
+10,Nền tảng,Thống kê,08,3100,310,2000,20000,requires independent-method audit
+10,Nền tảng,Tập hợp và các phép toán,09,0,0,2000,20000,no exact-match questions
+10,Nền tảng,Vectơ,10,2898,360,2000,20000,requires independent-method audit
+10,Nền tảng,Xác suất,11,610,61,2000,20000,requires independent-method audit
+10,Nền tảng,"Hình học cơ bản: góc, cạnh và diện tích",12,0,0,2000,20000,no exact-match questions
+10,Nền tảng,Tam giác và tứ giác cơ bản,13,10,1,2000,20000,requires independent-method audit
+10,Nền tảng,Đường tròn và các góc cơ bản,14,0,0,2000,20000,no exact-match questions
+10,Nền tảng,Góc tạo bởi hai đường thẳng và đường cắt,15,0,0,2000,20000,no exact-match questions
+10,Nền tảng,Các trường hợp bằng nhau của tam giác,16,0,0,2000,20000,no exact-match questions
+10,Nền tảng,"Đường trung tuyến, phân giác và đường cao",17,0,0,2000,20000,no exact-match questions
+10,Nền tảng,Tính chất hình bình hành và hình thoi,18,0,0,2000,20000,no exact-match questions
+10,Nền tảng,"Dây cung, cung và khoảng cách đến tâm",19,0,0,2000,20000,no exact-match questions
+10,Trung cấp,Căn thức,01,0,0,2000,20000,no exact-match questions
+10,Trung cấp,Dãy số,02,0,0,2000,20000,no exact-match questions
+10,Trung cấp,Hình học,03,160,16,2000,20000,requires independent-method audit
+10,Trung cấp,Mệnh đề và tập hợp,04,10,1,2000,20000,requires independent-method audit
+10,Trung cấp,Phương trình,05,1660,166,2000,20000,requires independent-method audit
+10,Trung cấp,Phương trình bậc hai,06,1880,188,2000,20000,requires independent-method audit
+10,Trung cấp,Tọa độ trong mặt phẳng,07,2850,285,2000,20000,requires independent-method audit
+10,Trung cấp,Tổ hợp,08,2530,253,2000,20000,requires independent-method audit
+10,Trung cấp,Đường thẳng,09,80,8,2000,20000,requires independent-method audit
+10,Trung cấp,Đường tròn,10,760,76,2000,20000,requires independent-method audit
+10,Trung cấp,Hệ thức lượng trong tam giác,11,70,7,2000,20000,requires independent-method audit
+10,Trung cấp,Tọa độ và đường thẳng trong mặt phẳng,12,0,0,2000,20000,no exact-match questions
+10,Trung cấp,Định lý Thales và tam giác đồng dạng,13,0,0,2000,20000,no exact-match questions
+10,Trung cấp,Tỉ số diện tích tam giác,14,0,0,2000,20000,no exact-match questions
+10,Trung cấp,Góc nội tiếp và góc ở tâm nâng cao,15,0,0,2000,20000,no exact-match questions
+10,Trung cấp,Trung điểm và khoảng cách trong tọa độ phẳng,16,0,0,2000,20000,no exact-match questions
+10,Trung cấp,Giao điểm và vị trí tương đối của hai đường thẳng,17,0,0,2000,20000,no exact-match questions
+10,Nâng cao,Bài toán thực tế Toán 10,01,0,0,2000,20000,no exact-match questions
+10,Nâng cao,Bất phương trình,02,50,5,2000,20000,requires independent-method audit
+10,Nâng cao,Chỉnh hợp,03,520,52,2000,20000,requires independent-method audit
+10,Nâng cao,Hàm số bậc hai và parabol,04,1720,172,2000,20000,requires independent-method audit
+10,Nâng cao,Hằng đẳng thức,05,0,0,2000,20000,no exact-match questions
+10,Nâng cao,Hệ bất phương trình,06,10,1,2000,20000,requires independent-method audit
+10,Nâng cao,Hệ thức lượng trong tam giác,07,70,7,2000,20000,requires independent-method audit
+10,Nâng cao,Hệ thức lượng trong tam giác,08,70,7,2000,20000,requires independent-method audit
+10,Nâng cao,Nhị thức Newton,09,0,0,2000,20000,no exact-match questions
+10,Nâng cao,Phân thức đại số,10,0,0,2000,20000,no exact-match questions
+10,Nâng cao,Quy tắc đếm,11,2020,202,2000,20000,requires independent-method audit
+10,Nâng cao,Chứng minh hình học và bài toán tổng hợp,12,0,0,2000,20000,no exact-match questions
+10,Nâng cao,Quỹ tích điểm trong mặt phẳng,13,0,0,2000,20000,no exact-match questions
+10,Nâng cao,Tiếp tuyến và dây cung của đường tròn,14,0,0,2000,20000,no exact-match questions
+10,Nâng cao,Bất đẳng thức và cực trị trong tam giác,15,0,0,2000,20000,no exact-match questions
+10,Nâng cao,Chứng minh hình học bằng vectơ,16,0,0,2000,20000,no exact-match questions
+10,Nâng cao,Bài toán tổng hợp đường thẳng và đường tròn tọa độ,17,0,0,2000,20000,no exact-match questions
+11,Nền tảng,Công thức lượng giác,01,130,13,2000,20000,requires independent-method audit
+11,Nền tảng,Cấp số cộng,02,4570,457,2000,20000,requires independent-method audit
+11,Nền tảng,Cấp số nhân,03,3510,351,2000,20000,requires independent-method audit
+11,Nền tảng,Dãy số,04,380,38,2000,20000,requires independent-method audit
+11,Nền tảng,Giá trị lượng giác,05,10,1,2000,20000,requires independent-method audit
+11,Nền tảng,Giới hạn,06,900,90,2000,20000,requires independent-method audit
+11,Nền tảng,Hàm số lượng giác,07,0,0,2000,20000,no exact-match questions
+11,Nền tảng,Thống kê Toán 11,08,0,0,2000,20000,no exact-match questions
+11,Nền tảng,Xác suất,09,1230,123,2000,20000,requires independent-method audit
+11,Nền tảng,Đạo hàm,10,5180,518,2000,20000,requires independent-method audit
+11,Nền tảng,Phép biến hình cơ bản,11,0,0,2000,20000,no exact-match questions
+11,Nền tảng,Nhận biết hình học không gian,12,0,0,2000,20000,no exact-match questions
+11,Nền tảng,Phép tịnh tiến và ảnh của hình,13,0,0,2000,20000,no exact-match questions
+11,Nền tảng,Phép đối xứng trục,14,0,0,2000,20000,no exact-match questions
+11,Nền tảng,Nhận biết đường thẳng và mặt phẳng trong không gian,15,0,0,2000,20000,no exact-match questions
+11,Nền tảng,Đường thẳng song song với mặt phẳng,16,0,0,2000,20000,no exact-match questions
+11,Nền tảng,"Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",17,0,0,2000,20000,no exact-match questions
+11,Trung cấp,Bài toán thực tế Toán 11,01,0,0,2000,20000,no exact-match questions
+11,Trung cấp,Dãy số,02,380,38,2000,20000,requires independent-method audit
+11,Trung cấp,Giới hạn hàm số,03,570,57,2000,20000,requires independent-method audit
+11,Trung cấp,Góc và khoảng cách trong không gian,04,0,0,2000,20000,no exact-match questions
+11,Trung cấp,Hàm số liên tục,05,10,1,2000,20000,requires independent-method audit
+11,Trung cấp,Phương trình lượng giác,06,60,6,2000,20000,requires independent-method audit
+11,Trung cấp,Quan hệ song song trong không gian,07,0,0,2000,20000,no exact-match questions
+11,Trung cấp,Quan hệ vuông góc trong không gian,08,10,1,2000,20000,requires independent-method audit
+11,Trung cấp,Quy tắc đạo hàm,09,50,5,2000,20000,requires independent-method audit
+11,Trung cấp,Ứng dụng đạo hàm,10,10,1,2000,20000,requires independent-method audit
+11,Trung cấp,Phép quay và phép vị tự,11,0,0,2000,20000,no exact-match questions
+11,Trung cấp,Hai mặt phẳng song song,12,0,0,2000,20000,no exact-match questions
+11,Trung cấp,Đường thẳng vuông góc với mặt phẳng,13,0,0,2000,20000,no exact-match questions
+11,Trung cấp,Góc giữa đường thẳng và mặt phẳng,14,0,0,2000,20000,no exact-match questions
+11,Trung cấp,Dựng thiết diện của hình chóp và lăng trụ,15,0,0,2000,20000,no exact-match questions
+11,Nâng cao,Biến cố độc lập và xác suất có điều kiện,01,0,0,2000,20000,no exact-match questions
+11,Nâng cao,Bài toán thực tế tổng hợp Toán 11,02,0,0,2000,20000,no exact-match questions
+11,Nâng cao,Dãy số truy hồi,03,0,0,2000,20000,no exact-match questions
+11,Nâng cao,Hàm số lượng giác,04,0,0,2000,20000,no exact-match questions
+11,Nâng cao,Phép biến hình trong mặt phẳng,05,0,0,2000,20000,no exact-match questions
+11,Nâng cao,Phương trình lượng giác,06,60,6,2000,20000,requires independent-method audit
+11,Nâng cao,Quan hệ song song và vuông góc trong không gian,07,0,0,2000,20000,no exact-match questions
+11,Nâng cao,Quy nạp toán học,08,0,0,2000,20000,no exact-match questions
+11,Nâng cao,Thiết diện hình không gian,09,0,0,2000,20000,no exact-match questions
+11,Nâng cao,Tổ hợp và xác suất nâng cao,10,40,4,2000,20000,requires independent-method audit
+11,Nâng cao,Khoảng cách giữa hai đường thẳng chéo nhau,11,0,0,2000,20000,no exact-match questions
+11,Nâng cao,Định lý ba đường vuông góc,12,0,0,2000,20000,no exact-match questions
+11,Nâng cao,Hợp thành các phép biến hình,13,0,0,2000,20000,no exact-match questions
+11,Nâng cao,Thiết diện và tỉ số đoạn trong hình không gian,14,0,0,2000,20000,no exact-match questions
+11,Nâng cao,Chứng minh tổng hợp song song và vuông góc,15,0,0,2000,20000,no exact-match questions
+12,Nền tảng,Các số đặc trưng đo xu thế và độ phân tán,01,0,0,2000,20000,no exact-match questions
+12,Nền tảng,Cực trị,02,290,29,2000,20000,requires independent-method audit
+12,Nền tảng,Giá trị lớn nhất và nhỏ nhất,03,0,0,2000,20000,no exact-match questions
+12,Nền tảng,Hàm số logarit,04,1220,122,2000,20000,requires independent-method audit
+12,Nền tảng,Hàm số mũ,05,270,27,2000,20000,requires independent-method audit
+12,Nền tảng,Hình học không gian,06,750,75,2000,20000,requires independent-method audit
+12,Nền tảng,Số phức,07,3690,368,2000,20000,requires independent-method audit
+12,Nền tảng,Tính đơn điệu,08,10,1,2000,20000,requires independent-method audit
+12,Nền tảng,Tọa độ trong không gian,09,2940,294,2000,20000,requires independent-method audit
+12,Nền tảng,Xác suất và biến ngẫu nhiên,10,540,54,2000,20000,requires independent-method audit
+12,Nền tảng,Hình khối và thể tích cơ bản,11,490,49,2000,20000,requires independent-method audit
+12,Nền tảng,Vectơ và độ dài trong không gian Oxyz,12,0,0,2000,20000,no exact-match questions
+12,Nền tảng,Phương trình mặt phẳng,13,0,0,2000,20000,no exact-match questions
+12,Nền tảng,Phương trình đường thẳng trong Oxyz,14,0,0,2000,20000,no exact-match questions
+12,Nền tảng,Phương trình mặt cầu và tâm bán kính,15,0,0,2000,20000,no exact-match questions
+12,Nền tảng,Diện tích xung quanh và toàn phần hình khối,16,0,0,2000,20000,no exact-match questions
+12,Trung cấp,Biểu diễn số phức,01,0,0,2000,20000,no exact-match questions
+12,Trung cấp,Khảo sát và vẽ đồ thị hàm số,02,0,0,2000,20000,no exact-match questions
+12,Trung cấp,Mặt phẳng trong Oxyz,03,0,0,2000,20000,no exact-match questions
+12,Trung cấp,Nguyên hàm và tích phân,04,3300,330,2000,20000,requires independent-method audit
+12,Trung cấp,Phương trình logarit,05,150,15,2000,20000,requires independent-method audit
+12,Trung cấp,Phương trình mũ,06,40,4,2000,20000,requires independent-method audit
+12,Trung cấp,Tiếp tuyến,07,10,1,2000,20000,requires independent-method audit
+12,Trung cấp,Tiệm cận,08,0,0,2000,20000,no exact-match questions
+12,Trung cấp,Đường thẳng trong Oxyz,09,0,0,2000,20000,no exact-match questions
+12,Trung cấp,Ứng dụng đạo hàm,10,0,0,2000,20000,no exact-match questions
+12,Trung cấp,Vận dụng tọa độ Oxyz,11,0,0,2000,20000,no exact-match questions
+12,Trung cấp,Khoảng cách từ điểm đến mặt phẳng,12,0,0,2000,20000,no exact-match questions
+12,Trung cấp,Góc giữa đường thẳng và mặt phẳng Oxyz,13,0,0,2000,20000,no exact-match questions
+12,Trung cấp,Góc giữa hai mặt phẳng,14,0,0,2000,20000,no exact-match questions
+12,Trung cấp,Giao điểm đường thẳng và mặt phẳng,15,0,0,2000,20000,no exact-match questions
+12,Trung cấp,Mặt phẳng tiếp xúc với mặt cầu,16,0,0,2000,20000,no exact-match questions
+12,Nâng cao,Bài toán thực tế Toán 12,01,0,0,2000,20000,no exact-match questions
+12,Nâng cao,Bài toán tổng hợp THPT,02,0,0,2000,20000,no exact-match questions
+12,Nâng cao,Bất phương trình logarit,03,0,0,2000,20000,no exact-match questions
+12,Nâng cao,Bất phương trình mũ,04,0,0,2000,20000,no exact-match questions
+12,Nâng cao,Góc và khoảng cách Oxyz,05,0,0,2000,20000,no exact-match questions
+12,Nâng cao,Mặt cầu,06,30,3,2000,20000,requires independent-method audit
+12,Nâng cao,Phương trình số phức,07,0,0,2000,20000,no exact-match questions
+12,Nâng cao,Thể tích hình học không gian,08,0,0,2000,20000,no exact-match questions
+12,Nâng cao,Tương giao đồ thị,09,0,0,2000,20000,no exact-match questions
+12,Nâng cao,Ứng dụng tích phân,10,0,0,2000,20000,no exact-match questions
+12,Nâng cao,Vị trí tương đối của hai đường thẳng trong Oxyz,11,0,0,2000,20000,no exact-match questions
+12,Nâng cao,Cực trị khoảng cách trong không gian tọa độ,12,0,0,2000,20000,no exact-match questions
+12,Nâng cao,Giao tuyến mặt cầu và mặt phẳng,13,0,0,2000,20000,no exact-match questions
+12,Nâng cao,Bài toán tham số hình học Oxyz,14,0,0,2000,20000,no exact-match questions
+12,Nâng cao,Bài toán tối ưu hình học không gian,15,0,0,2000,20000,no exact-match questions

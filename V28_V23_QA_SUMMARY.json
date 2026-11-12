@@ -1,0 +1,12 @@
+{
+  "version": "V23",
+  "backend_tests_passed": 26,
+  "backend_tests_failed": 0,
+  "browser_visual_tests": "not possible: Chromium ERR_BLOCKED_BY_ADMINISTRATOR",
+  "independent_pedagogical_review": "not performed",
+  "assessment_items": 900,
+  "static_html_pages_checked": 20,
+  "html_asset_issues": 0,
+  "battle_browser_ui": "not verified",
+  "chat_browser_ui": "not verified"
+}

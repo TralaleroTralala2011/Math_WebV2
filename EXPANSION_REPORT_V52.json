@@ -1,0 +1,14 @@
+{
+  "version": "V52",
+  "source": "V51",
+  "added_form_ids": 18,
+  "added_questions": 180,
+  "fixed_topic_list_records": 360,
+  "total_form_ids": 5785,
+  "total_questions": 56427,
+  "notes": [
+    "New form IDs are not certified as independent methods.",
+    "No UI/Battle regression test was performed.",
+    "Legacy incomplete forms retained unchanged."
+  ]
+}

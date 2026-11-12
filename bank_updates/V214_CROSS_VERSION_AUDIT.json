@@ -1,0 +1,54 @@
+{
+  "release": "V214",
+  "base": "V211",
+  "sqlite_questions_before": 11646,
+  "sqlite_questions_after": 12666,
+  "new_questions": 1020,
+  "upgrade_counts": {
+    "V212": 420,
+    "V213": 300,
+    "V214": 300
+  },
+  "new_method_candidate_groups": 102,
+  "certified_independent_types": 0,
+  "new_by_grade": {
+    "10": 340,
+    "11": 340,
+    "12": 340
+  },
+  "new_by_format": {
+    "multiple_choice": 714,
+    "short_answer": 204,
+    "true_false": 102
+  },
+  "preservation": {
+    "original_rows_unchanged": 11646,
+    "old_rows_modified": 0,
+    "old_rows_missing": 0,
+    "non_database_files_unchanged": 3048,
+    "non_database_files_changed": 0
+  },
+  "structural_validation": {
+    "all_new_stems_unique_exact": 1020,
+    "groups_exactly_ten": true,
+    "mcq_exactly_one_correct_option": 714,
+    "sql_integrity": "ok",
+    "zip_integrity": "ok",
+    "python_files_parse_checked": 461,
+    "python_files_parse_failures": []
+  },
+  "topic_coverage": {
+    "canonical_grade_topic_pairs": 150,
+    "current_sqlite_grade_topic_pairs": 156,
+    "all_canonical_150_have_questions": true,
+    "new_in_canonical_topics": 960,
+    "new_in_legacy_topics": 60
+  },
+  "not_yet_verified": [
+    "semantic independent types across entire existing bank",
+    "manual mathematical proofreading of every question/explanation",
+    "Battle and website runtime regression",
+    "deployment to production",
+    "one hour uninterrupted compute commitment"
+  ]
+}

@@ -1,0 +1,363 @@
+{
+  "version": "V46",
+  "previous_questions": 27700,
+  "previous_form_ids": 2769,
+  "added_questions": 570,
+  "added_form_ids": 57,
+  "grade_additions": {
+    "10": 20,
+    "11": 19,
+    "12": 18
+  },
+  "total_questions": 28270,
+  "total_form_ids": 2826,
+  "new_forms": [
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_quadratic_00",
+      "signature": "Viète: tổng bình phương hai nghiệm"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_quadratic_01",
+      "signature": "Viète: bình phương hiệu hai nghiệm"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_quadratic_02",
+      "signature": "Viète: tổng lập phương hai nghiệm"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_quadratic_03",
+      "signature": "Viète: tổng nghịch đảo hai nghiệm"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_quadratic_04",
+      "signature": "Viète: tổng bình phương nghịch đảo"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_quadratic_05",
+      "signature": "Viète: tổng hai nghiệm chia tích"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_parabola_06",
+      "signature": "Trục đối xứng parabol từ hệ số"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_parabola_07",
+      "signature": "Tung độ đỉnh parabol dạng chính tắc"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_parabola_08",
+      "signature": "Giá trị nhỏ nhất của tam thức dạng bình phương"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_vectors_09",
+      "signature": "Tích vô hướng hai vectơ phẳng"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_vectors_10",
+      "signature": "Bình phương độ dài vectơ"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_coordinates_11",
+      "signature": "Trung điểm đoạn thẳng: tổng hai tọa độ"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_coordinates_12",
+      "signature": "Khoảng cách bình phương giữa hai điểm"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_coordinates_13",
+      "signature": "Định thức hai vectơ phẳng"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_sets_14",
+      "signature": "Số phần tử hợp hai tập"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_sets_15",
+      "signature": "Số phần tử chỉ thuộc tập A"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_probability_16",
+      "signature": "Xác suất rút hai viên cùng màu không hoàn lại"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_combinatorics_17",
+      "signature": "Chọn hai người có thứ tự"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_statistics_18",
+      "signature": "Trung bình của dãy số cách đều"
+    },
+    {
+      "grade": 10,
+      "topic": "Toán đại số và thống kê",
+      "form_id": "v46_g10_statistics_19",
+      "signature": "Khoảng biến thiên dữ liệu"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_ap_00",
+      "signature": "Số hạng thứ n của cấp số cộng"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_ap_01",
+      "signature": "Tổng n số hạng đầu cấp số cộng"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_ap_02",
+      "signature": "Công sai từ hai số hạng"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_ap_03",
+      "signature": "Truy tìm số hạng đầu từ số hạng sau"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_ap_04",
+      "signature": "Trung bình cộng hai số hạng cách đều"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_gp_05",
+      "signature": "Số hạng thứ n cấp số nhân"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_gp_06",
+      "signature": "Tổng năm số hạng cấp số nhân"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_gp_07",
+      "signature": "Công bội từ hai số hạng liên tiếp"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_gp_08",
+      "signature": "Số hạng đầu cấp số nhân"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_limits_09",
+      "signature": "Giới hạn thương đa thức bậc hai"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_limits_10",
+      "signature": "Giới hạn thương đa thức bậc ba"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_limits_11",
+      "signature": "Giới hạn hiệu hai bình phương rút gọn"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_derivatives_12",
+      "signature": "Đạo hàm đa thức bậc ba tại điểm"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_derivatives_13",
+      "signature": "Đạo hàm của hàm phân thức 1/x"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_derivatives_14",
+      "signature": "Hệ số góc tiếp tuyến đồ thị bậc hai"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_derivatives_15",
+      "signature": "Hoành độ điểm có tiếp tuyến song song Ox"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_probability_16",
+      "signature": "Xác suất có điều kiện từ bảng đếm"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_combinatorics_17",
+      "signature": "Số cách xếp n người trên một hàng"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số, giải tích và xác suất",
+      "form_id": "v46_g11_trigonometry_18",
+      "signature": "Tính cos 2x từ cos x"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_integrals_01",
+      "signature": "Tích phân đa thức bậc hai trên đoạn"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_integrals_02",
+      "signature": "Tích phân hàm mũ cơ số e"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_integrals_03",
+      "signature": "Diện tích dưới đường thẳng trên đoạn"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_integrals_04",
+      "signature": "Diện tích giữa hai đường thẳng trên đoạn"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_complex_05",
+      "signature": "Môđun bình phương số phức"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_complex_06",
+      "signature": "Phần thực tích hai số phức"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_complex_07",
+      "signature": "Phần ảo tích hai số phức"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_complex_08",
+      "signature": "Phần thực thương số phức"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_complex_09",
+      "signature": "Phần ảo thương số phức"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_space_11",
+      "signature": "Khoảng cách bình phương Oxyz"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_space_12",
+      "signature": "Tích vô hướng vectơ Oxyz"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_space_13",
+      "signature": "Trung điểm Oxyz: tổng tọa độ"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_space_14",
+      "signature": "Khoảng cách từ điểm đến mặt phẳng tọa độ Oxy"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_space_15",
+      "signature": "Khoảng cách từ điểm đến mặt phẳng tọa độ Oyz"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_exponent_16",
+      "signature": "Giải phương trình mũ cùng cơ số"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_logarithm_17",
+      "signature": "Giải phương trình logarit cơ số 10"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_extrema_18",
+      "signature": "Cực tiểu của hàm bậc hai"
+    },
+    {
+      "grade": 12,
+      "topic": "Giải tích, số phức và Oxyz",
+      "form_id": "v46_g12_statistics_19",
+      "signature": "Kỳ vọng biến ngẫu nhiên Bernoulli"
+    }
+  ],
+  "caveats": [
+    "Form identifiers are not proof of independent solution methods.",
+    "Arithmetic checks validate generated answers, not independent pedagogical review.",
+    "Existing application functionality not regression tested."
+  ]
+}

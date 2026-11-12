@@ -1,0 +1,19 @@
+{
+  "scenario": "local bundled SQLite DB, not live production",
+  "catalog_topics_tested": 150,
+  "topic_format_pairs_expected": 450,
+  "topic_format_pairs_passed": 450,
+  "failed": [],
+  "question_types": {
+    "multiple_choice": 150,
+    "short_answer": 150,
+    "true_false": 150
+  },
+  "per_grade": {
+    "10": 147,
+    "11": 153,
+    "12": 150
+  },
+  "grade_and_answer_equivalence_tested": true,
+  "production_verified": false
+}

@@ -1,0 +1,63 @@
+/* V27: usability fixes, preserve established student theme and admin separation. */
+body.mw-v5:not(.mw-v5-admin) #mw-v5-header {
+  position:relative!important;top:auto!important;left:auto!important;transform:none!important;
+  width:100%!important;max-width:none!important;margin:0!important;border-radius:0 0 16px 16px!important;
+}
+body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-inner{max-width:1500px;margin:auto}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-canvas{margin-top:22px!important}
+/* Prevent the narrow vertical letter stacking caused by grid min-content sizing. */
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-card,.mw-v6-lock,.mw-v6-roadmap-intro,.mw-v5-review,.mw-v5-row,article,section){min-width:0}
+body.mw-v5:not(.mw-v5-admin) :is(h1,h2,h3,p,small,li,button,label){overflow-wrap:break-word!important;word-break:normal!important;hyphens:none}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-grid,.mw-v6-roadmap-grid,.mw-v6-hero-grid,.mw-v6-learning-panels){min-width:0;grid-auto-columns:minmax(0,1fr)}
+body.mw-v5:not(.mw-v5-admin) #mw-v5-roadmap{position:relative;z-index:1;min-height:250px;padding-top:12px!important;margin-top:16px!important;overflow:visible!important}
+body.mw-v5:not(.mw-v5-admin) #mw-v5-roadmap .mw-v6-roadmap-intro{display:flex;align-items:center;flex-wrap:wrap;gap:14px}
+body.mw-v5:not(.mw-v5-admin) #mw-v5-roadmap .mw-v6-roadmap-intro>*{flex:1 1 260px;min-width:0}
+body.mw-v5:not(.mw-v5-admin) #mw-v5-roadmap .mw-v5-card{min-width:0}
+/* The old page shell can stay mounted for JS compatibility, but should never cover V27. */
+body.mw-v5:not(.mw-v5-admin) #mw-v5-old-path[hidden]{display:none!important}
+/* Functional notification popover moved out of the hidden legacy header. */
+#mw-v27-notification{display:flex;align-items:center;position:relative;flex:none}
+#mw-v27-notification .notification-button{position:relative;width:42px;height:42px;min-width:42px;border-radius:11px;color:#dcf7ff;background:#102945;border:1px solid #326d9a;font-size:19px;cursor:pointer}
+#mw-v27-notification .notification-badge{position:absolute;top:-4px;right:-4px}
+body #notificationPanel.mw-v27-panel{position:fixed!important;top:72px!important;right:clamp(9px,3vw,40px)!important;left:auto!important;width:min(390px,calc(100vw - 18px))!important;min-width:0!important;height:min(590px,calc(100dvh - 90px))!important;max-height:calc(100dvh - 85px)!important;z-index:2147481000!important;overflow:hidden;display:flex;flex-direction:column;background:#09182c;border:1px solid #2b86aa;border-radius:16px;box-shadow:0 28px 65px #0009}
+body #notificationPanel.mw-v27-panel .notification-list{flex:1;overflow-y:auto;min-height:0}
+body #notificationPanel.mw-v27-panel:not(.active){pointer-events:none}
+body #notificationPanel.mw-v27-panel.active{pointer-events:auto}
+.mw-v27-geometry{width:min(100%,690px);margin:12px 0;padding:12px;background:#071e35;border:1px solid #277ba5;border-radius:15px;overflow:hidden}
+.mw-v27-geometry svg{display:block;width:100%;max-height:270px;margin:auto;aspect-ratio:16/9}
+.mw-v27-geometry figcaption{color:#a8d7ed;font-size:12px;line-height:1.45;margin-top:5px}
+/* Battle is a stateful single-screen arena on desktop. Content-heavy mobile layouts may scroll within arena only. */
+@media(min-width:851px) and (min-height:610px){
+ body.mw-v27-battle{height:100dvh!important;overflow:hidden!important;display:flex;flex-direction:column}
+ body.mw-v27-battle #mw-v5-header{flex:0 0 auto}
+ body.mw-v27-battle .battle-container{flex:1;min-height:0!important;height:auto!important;max-width:1100px;padding:12px 0!important;margin:auto;display:grid;align-items:center;overflow:hidden}
+ body.mw-v27-battle .battle-screen:not(.hidden){max-height:100%;min-height:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+ body.mw-v27-battle .battle-hero{margin:0 auto 18px}
+ body.mw-v27-battle .battle-hero-icon{width:56px;height:56px;font-size:26px;margin-bottom:7px}
+ body.mw-v27-battle .battle-hero h1{font-size:clamp(24px,3vw,35px)!important;text-shadow:none}
+ body.mw-v27-battle .battle-hero p{font-size:13px;margin-top:4px;line-height:1.45}
+ body.mw-v27-battle .battle-choice-grid{gap:13px;grid-template-columns:repeat(3,minmax(0,1fr))}
+ body.mw-v27-battle .battle-choice{min-height:155px!important;padding:17px!important;border-radius:16px!important;box-shadow:none!important}
+ body.mw-v27-battle .choice-icon{font-size:29px;margin-bottom:10px}
+ body.mw-v27-battle .choice-description{margin-top:6px;font-size:12px;line-height:1.45}
+ body.mw-v27-battle .battle-rules{margin-top:14px;gap:12px}
+ body.mw-v27-battle .battle-wait-card{margin:12px auto;padding:20px 22px}
+ body.mw-v27-battle .battle-back-button{margin-bottom:10px}
+ body.mw-v27-battle .screen-heading{margin-bottom:12px}
+ body.mw-v27-battle .question-card{padding:12px 18px}
+ body.mw-v27-battle .question-options{gap:8px}
+ body.mw-v27-battle .mathweb-project-footer{flex:0 0 auto;padding:4px 8px!important;font-size:10px!important}
+ body.mw-v27-battle .mathweb-quicknav{display:none!important}
+}
+@media(max-width:850px){
+ body.mw-v27-battle .battle-container{width:calc(100% - 20px);min-height:0;padding:14px 0 90px!important}
+ body.mw-v27-battle .battle-hero{margin-bottom:15px}
+ body.mw-v27-battle .battle-hero-icon{width:56px;height:56px;font-size:27px;margin-bottom:6px}
+ body.mw-v27-battle .battle-hero h1{font-size:27px}
+ body.mw-v27-battle .battle-choice-grid{grid-template-columns:1fr;gap:10px}
+ body.mw-v27-battle .battle-choice{min-height:96px!important;padding:13px 54px 13px 14px!important}
+ body.mw-v27-battle .choice-icon{display:inline-block;font-size:26px;float:left;margin:4px 13px 0 0}
+ body.mw-v27-battle .battle-rules{margin-top:15px;gap:8px}
+ body.mw-v5:not(.mw-v5-admin) #mw-v5-roadmap .mw-v6-roadmap-intro{display:block}
+}
+@media(min-width:851px) and (max-height:610px){body.mw-v27-battle .battle-container{padding:12px 0!important}}

@@ -3,7 +3,7 @@
 'use strict';
 const ID='mathweb-quicknav';
 const shortcuts=[['learning-path.html','🧭','Lộ trình học','mw-path'],['geometry-studio.html','📐','Vẽ hình','mw-geometry'],['learn.html','📘','Học bài','mw-learn']];
-const hiddenPages=new Set(['learning-path.html','geometry-studio.html','learn.html','learning.html','geometry-learning.html','login.html','register.html','game.html','games.html','game-play.html','play.html']);
+const hiddenPages=new Set(['learning-path.html','geometry-studio.html','learn.html','learning.html','geometry-learning.html','login.html','register.html','admin.html','trial-practise.html','game.html','games.html','game-play.html','play.html']);
 function page(){return (location.pathname.split('/').pop()||'index.html').toLowerCase()}
 function account(){try{const token=(localStorage.getItem('mathweb_token')||'').trim();return Boolean(token&&token!=='null'&&token!=='undefined')}catch(e){return false}}
 function isGame(){const p=page();return hiddenPages.has(p)||/^(game[-_]|play[-_]|mini[-_])/.test(p)||location.pathname.toLowerCase().split('/').includes('games')}
@@ -22,14 +22,20 @@ function sync(){
   if(!account()||isGame()||gameOpen()) {if(old)old.remove();return}
   if(old||!document.body)return;
   const nav=document.createElement('nav');nav.id=ID;nav.className='mathweb-quicknav';nav.setAttribute('aria-label','Truy cập nhanh công cụ học tập');
-  for(const [url,emoji,title,cls] of shortcuts){const a=document.createElement('a');a.href=url;a.className=cls;a.setAttribute('aria-label',title);a.innerHTML='<span class="mw-quick-icon" aria-hidden="true">'+emoji+'</span><span>'+title+'</span>';nav.appendChild(a)}
+  // A collapsed mobile button keeps the shortcuts available without covering
+  // chat messages, battle controls, account fields or the geometry canvas.
+  const toggle=document.createElement('button');toggle.type='button';toggle.className='mw-quick-toggle';toggle.setAttribute('aria-label','Mở công cụ học tập');toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-controls',ID+'-links');toggle.textContent='☰ Công cụ học';
+  const links=document.createElement('div');links.id=ID+'-links';links.className='mw-quick-links';
+  toggle.addEventListener('click',()=>{const open=nav.classList.toggle('mw-quick-open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Đóng công cụ học tập':'Mở công cụ học tập');toggle.textContent=open?'✕ Đóng công cụ':'☰ Công cụ học'});
+  nav.appendChild(toggle);nav.appendChild(links);
+  for(const [url,emoji,title,cls] of shortcuts){const a=document.createElement('a');a.href=url;a.className=cls;a.setAttribute('aria-label',title);a.innerHTML='<span class="mw-quick-icon" aria-hidden="true">'+emoji+'</span><span>'+title+'</span>';links.appendChild(a)}
   document.body.appendChild(nav);
 }
 let queued=false;function schedule(){if(queued)return;queued=true;requestAnimationFrame(()=>{queued=false;sync()})}
 function start(){
  sync();
  // Observe DOM changes only on the practice page; other pages use navigation/auth events.
- if(page()==='practise.html'){
+ if(page()==='practise.html'||page()==='practice.html'){
   const overlay=document.querySelector('#practiceOverlay');
   if(overlay)new MutationObserver(schedule).observe(overlay,{attributes:true,attributeFilter:['class','style','hidden','aria-hidden']});
   for(const el of document.querySelectorAll('#gameOverlay,.game-overlay,.game-modal')){

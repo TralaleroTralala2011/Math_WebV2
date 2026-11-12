@@ -1,0 +1,266 @@
+{
+  "version": "V35",
+  "based_on": "V34",
+  "previous_questions": 8590,
+  "added_questions": 440,
+  "total_questions": 9030,
+  "previous_form_ids": 858,
+  "added_form_ids": 44,
+  "total_form_ids": 902,
+  "grade_added": {
+    "10": 150,
+    "11": 140,
+    "12": 150
+  },
+  "families": [
+    {
+      "form_id": "v35_three_only_one",
+      "grade": 10,
+      "topic": "Tập hợp"
+    },
+    {
+      "form_id": "v35_three_exactly_two",
+      "grade": 10,
+      "topic": "Tập hợp"
+    },
+    {
+      "form_id": "v35_three_at_least_two",
+      "grade": 10,
+      "topic": "Tập hợp"
+    },
+    {
+      "form_id": "v35_union_three",
+      "grade": 10,
+      "topic": "Tập hợp"
+    },
+    {
+      "form_id": "v35_vieta_reciprocal",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v35_vieta_root_squares",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v35_vieta_root_cubes",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v35_vieta_root_difference_square",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v35_point_line_signed",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v35_parallelogram_diagonal_squared",
+      "grade": 10,
+      "topic": "Vectơ"
+    },
+    {
+      "form_id": "v35_vector_linear_combo_dot",
+      "grade": 10,
+      "topic": "Vectơ"
+    },
+    {
+      "form_id": "v35_tangent_length_squared",
+      "grade": 10,
+      "topic": "Đường tròn"
+    },
+    {
+      "form_id": "v35_committees_at_least_one_girl",
+      "grade": 10,
+      "topic": "Tổ hợp"
+    },
+    {
+      "form_id": "v35_committees_exact_one",
+      "grade": 10,
+      "topic": "Tổ hợp"
+    },
+    {
+      "form_id": "v35_weighted_mean_two_groups",
+      "grade": 10,
+      "topic": "Thống kê"
+    },
+    {
+      "form_id": "v35_ap_sum_odd_positions",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v35_ap_sum_even_positions",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v35_ap_middle_term",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v35_gp_product_symmetric",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v35_gp_sum_first_three",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v35_limit_cubic_difference",
+      "grade": 11,
+      "topic": "Giới hạn"
+    },
+    {
+      "form_id": "v35_limit_sine_scaled",
+      "grade": 11,
+      "topic": "Giới hạn"
+    },
+    {
+      "form_id": "v35_limit_one_minus_cos",
+      "grade": 11,
+      "topic": "Giới hạn"
+    },
+    {
+      "form_id": "v35_product_rule_at_zero",
+      "grade": 11,
+      "topic": "Đạo hàm"
+    },
+    {
+      "form_id": "v35_quotient_rule_at_zero",
+      "grade": 11,
+      "topic": "Đạo hàm"
+    },
+    {
+      "form_id": "v35_chain_rule_cube",
+      "grade": 11,
+      "topic": "Đạo hàm"
+    },
+    {
+      "form_id": "v35_without_replacement_both_red",
+      "grade": 11,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v35_without_replacement_different",
+      "grade": 11,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v35_sin_squared_from_cos",
+      "grade": 11,
+      "topic": "Lượng giác"
+    },
+    {
+      "form_id": "v35_integral_linear",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v35_integral_symmetry_odd",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v35_integral_symmetry_even",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v35_integral_reciprocal_log",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v35_complex_sum_modulus_squared",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v35_complex_product_real",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v35_distance_two_points_squared",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v35_midpoint_coordinate_sum",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v35_plane_axis_intercept",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v35_sphere_radius_from_standard",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v35_exp_equal_powers",
+      "grade": 12,
+      "topic": "Hàm số mũ"
+    },
+    {
+      "form_id": "v35_log_sum_power",
+      "grade": 12,
+      "topic": "Hàm số logarit"
+    },
+    {
+      "form_id": "v35_quadratic_max_concave",
+      "grade": 12,
+      "topic": "Cực trị"
+    },
+    {
+      "form_id": "v35_binomial_expectation",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên"
+    },
+    {
+      "form_id": "v35_bernoulli_second_moment",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên"
+    }
+  ],
+  "rejected": [
+    [
+      "v35_line_intercept_area",
+      "duplicate text"
+    ],
+    [
+      "v35_limit_square_difference",
+      "duplicate text"
+    ],
+    [
+      "v35_integral_linear_substitution",
+      "duplicate text"
+    ],
+    [
+      "v35_complex_product_imag",
+      "id/signature"
+    ]
+  ],
+  "checks": {
+    "answers_checked_against_independent_exact_identity": 440,
+    "unique_question_text": true,
+    "nonempty_solution": true
+  },
+  "limitations": [
+    "form IDs are not proof of conceptual independence",
+    "some old questions may contain errors",
+    "not integrated with main practice UI",
+    "no website regression tests"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "base": "THEORY_UPGRADE_17",
+  "new_version": "THEORY_UPGRADE_18",
+  "updated_topic_ids": [
+    "ham_so_luong_giac_day_du",
+    "phuong_trinh_luong_giac_day_du",
+    "ung_dung_dao_ham_11",
+    "day_so_truy_hoi_11",
+    "ung_dung_dao_ham",
+    "khao_sat_ham_so",
+    "xac_suat_12",
+    "thong_ke_12"
+  ],
+  "new_questions": 80,
+  "total_topics": 150,
+  "topics_with_quiz": 87,
+  "topics_without_quiz": 63,
+  "total_quiz_items": 932,
+  "scope": "8 detailed lessons with concept explanations, conditions, common mistakes, 3-level sections, worked examples and 7:2:1 quiz sets",
+  "limitations": [
+    "Not a 100% complete curriculum",
+    "No independent mathematical proof checking for every existing question",
+    "No verified educational video coverage",
+    "No browser end-to-end testing"
+  ]
+}

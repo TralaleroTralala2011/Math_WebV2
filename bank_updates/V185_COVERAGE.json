@@ -1,0 +1,1052 @@
+[
+  {
+    "grade": 10,
+    "topic": "menh_de_tap_hop",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "bat_phuong_trinh",
+    "import_candidate_questions": 100,
+    "shortfall_to_2000_questions": 1900,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "he_thuc_luong",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "vector",
+    "import_candidate_questions": 100,
+    "shortfall_to_2000_questions": 1900,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "ham_so_bac_hai",
+    "import_candidate_questions": 130,
+    "shortfall_to_2000_questions": 1870,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "phuong_trinh_he",
+    "import_candidate_questions": 100,
+    "shortfall_to_2000_questions": 1900,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "quy_tac_dem",
+    "import_candidate_questions": 37,
+    "shortfall_to_2000_questions": 1963,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "hoan_vi_chinh_hop_to_hop",
+    "import_candidate_questions": 160,
+    "shortfall_to_2000_questions": 1840,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "xac_suat",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "thong_ke",
+    "import_candidate_questions": 130,
+    "shortfall_to_2000_questions": 1870,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "menh_de",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "tap_hop",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "he_bat_phuong_trinh",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "ham_so",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "ham_so_bac_nhat",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "phuong_trinh",
+    "import_candidate_questions": 160,
+    "shortfall_to_2000_questions": 1840,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "he_phuong_trinh",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "he_thuc_luong_tam_giac",
+    "import_candidate_questions": 39,
+    "shortfall_to_2000_questions": 1961,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "toa_do_phang",
+    "import_candidate_questions": 100,
+    "shortfall_to_2000_questions": 1900,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "duong_thang",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "duong_tron",
+    "import_candidate_questions": 38,
+    "shortfall_to_2000_questions": 1962,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "nhi_thuc_newton",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "hinh_hoc_10",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "bai_toan_thuc_te_10",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "hinh_hoc_co_ban_10",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "tam_giac_tu_giac_10",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "duong_tron_co_ban_10",
+    "import_candidate_questions": 31,
+    "shortfall_to_2000_questions": 1969,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "he_thuc_luong_van_dung_10",
+    "import_candidate_questions": 35,
+    "shortfall_to_2000_questions": 1965,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "toa_do_hinh_hoc_10",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "chung_minh_hinh_hoc_10",
+    "import_candidate_questions": 29,
+    "shortfall_to_2000_questions": 1971,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_angles_parallel",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_triangle_congruence",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_special_lines",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_quadrilaterals_properties",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_circle_chords_arcs",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_thales_similarity",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_triangle_area_ratio",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_circle_angles",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_coordinate_distance_midpoint",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_line_intersections",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_locus",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_circle_tangent_chord",
+    "import_candidate_questions": 35,
+    "shortfall_to_2000_questions": 1965,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_triangle_inequalities",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_vector_proofs",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_coordinate_circle_line",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_advanced_inequalities",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_symmetric_systems",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_radical_equations_advanced",
+    "import_candidate_questions": 31,
+    "shortfall_to_2000_questions": 1969,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_combinatorics_olympiad",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "ham_so_luong_giac",
+    "import_candidate_questions": 10,
+    "shortfall_to_2000_questions": 1990,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "phuong_trinh_luong_giac",
+    "import_candidate_questions": 10,
+    "shortfall_to_2000_questions": 1990,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "day_so",
+    "import_candidate_questions": 32,
+    "shortfall_to_2000_questions": 1968,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "cap_so_cong",
+    "import_candidate_questions": 160,
+    "shortfall_to_2000_questions": 1840,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "cap_so_nhan",
+    "import_candidate_questions": 260,
+    "shortfall_to_2000_questions": 1740,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "gioi_han",
+    "import_candidate_questions": 25,
+    "shortfall_to_2000_questions": 1975,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "dao_ham",
+    "import_candidate_questions": 160,
+    "shortfall_to_2000_questions": 1840,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "hinh_khong_gian",
+    "import_candidate_questions": 33,
+    "shortfall_to_2000_questions": 1967,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "xac_suat_11",
+    "import_candidate_questions": 37,
+    "shortfall_to_2000_questions": 1963,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "gia_tri_luong_giac",
+    "import_candidate_questions": 32,
+    "shortfall_to_2000_questions": 1968,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "cong_thuc_luong_giac",
+    "import_candidate_questions": 39,
+    "shortfall_to_2000_questions": 1961,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "ham_so_luong_giac_day_du",
+    "import_candidate_questions": 24,
+    "shortfall_to_2000_questions": 1976,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "phuong_trinh_luong_giac_day_du",
+    "import_candidate_questions": 24,
+    "shortfall_to_2000_questions": 1976,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "day_so_tong_quat",
+    "import_candidate_questions": 27,
+    "shortfall_to_2000_questions": 1973,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "gioi_han_ham_so",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "ham_so_lien_tuc",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "dao_ham_quy_tac",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "ung_dung_dao_ham_11",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "song_song_khong_gian",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "vuong_goc_khong_gian",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "goc_khoang_cach_11",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "thong_ke_11",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "bai_toan_thuc_te_11",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "to_hop_xac_suat_nang_cao_11",
+    "import_candidate_questions": 80,
+    "shortfall_to_2000_questions": 1920,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "bien_co_doc_lap_11",
+    "import_candidate_questions": 100,
+    "shortfall_to_2000_questions": 1900,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "day_so_truy_hoi_11",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "quy_nap_toan_hoc_11",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "phep_bien_hinh_11",
+    "import_candidate_questions": 39,
+    "shortfall_to_2000_questions": 1961,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "thiet_dien_hinh_khong_gian_11",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "bai_toan_thuc_te_tong_hop_11",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "phep_bien_hinh_co_ban_11",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "nhan_biet_hinh_khong_gian_11",
+    "import_candidate_questions": 37,
+    "shortfall_to_2000_questions": 1963,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_transform_translation",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_transform_reflection",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_space_lines_planes",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_parallel_line_plane",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_prism_pyramid_sections",
+    "import_candidate_questions": 10,
+    "shortfall_to_2000_questions": 1990,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_rotation_homothety",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_parallel_planes",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_perpendicular_line_plane",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_dihedral_angles",
+    "import_candidate_questions": 34,
+    "shortfall_to_2000_questions": 1966,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_section_construction",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_skew_lines_distance",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_three_perpendiculars",
+    "import_candidate_questions": 36,
+    "shortfall_to_2000_questions": 1964,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_transform_composition",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_section_ratio",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_space_proof",
+    "import_candidate_questions": 38,
+    "shortfall_to_2000_questions": 1962,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_advanced_trig_equations",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_sequences_advanced",
+    "import_candidate_questions": 39,
+    "shortfall_to_2000_questions": 1961,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_binomial_advanced",
+    "import_candidate_questions": 39,
+    "shortfall_to_2000_questions": 1961,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_conditional_probability_models",
+    "import_candidate_questions": 39,
+    "shortfall_to_2000_questions": 1961,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "ung_dung_dao_ham",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "khao_sat_ham_so",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "nguyen_ham_tich_phan",
+    "import_candidate_questions": 100,
+    "shortfall_to_2000_questions": 1900,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "so_phuc",
+    "import_candidate_questions": 100,
+    "shortfall_to_2000_questions": 1900,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "hinh_hoc_khong_gian",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "toa_do_khong_gian",
+    "import_candidate_questions": 160,
+    "shortfall_to_2000_questions": 1840,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "xac_suat_12",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "thong_ke_12",
+    "import_candidate_questions": 37,
+    "shortfall_to_2000_questions": 1963,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "tinh_don_dieu",
+    "import_candidate_questions": 10,
+    "shortfall_to_2000_questions": 1990,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "cuc_tri",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "gtln_gtnn",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "tiep_tuyen",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "tien_can",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "tuong_giao",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "ham_mu",
+    "import_candidate_questions": 38,
+    "shortfall_to_2000_questions": 1962,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "ham_logarit",
+    "import_candidate_questions": 31,
+    "shortfall_to_2000_questions": 1969,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "pt_mu",
+    "import_candidate_questions": 100,
+    "shortfall_to_2000_questions": 1900,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "pt_logarit",
+    "import_candidate_questions": 85,
+    "shortfall_to_2000_questions": 1915,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "bpt_mu",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "bpt_logarit",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "ung_dung_tich_phan",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "bieu_dien_so_phuc",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "pt_so_phuc",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "mat_phang_oxyz",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "duong_thang_oxyz",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "mat_cau",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "goc_khoang_cach_oxyz",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "the_tich_khong_gian",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "tong_hop_thpt",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "bai_toan_thuc_te_12",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "hinh_khoi_va_the_tich_co_ban_12",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "hinh_hoc_oxyz_van_dung_12",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_vectors_3d",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_plane_equation",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_line_equation_3d",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_sphere_equation",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_solid_surface_area",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_point_plane_distance",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_line_plane_angle",
+    "import_candidate_questions": 50,
+    "shortfall_to_2000_questions": 1950,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_two_planes_angle",
+    "import_candidate_questions": 35,
+    "shortfall_to_2000_questions": 1965,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_line_plane_intersection",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_sphere_tangent_plane",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_skew_line_relation",
+    "import_candidate_questions": 39,
+    "shortfall_to_2000_questions": 1961,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_min_distance_3d",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_sphere_plane_intersection",
+    "import_candidate_questions": 30,
+    "shortfall_to_2000_questions": 1970,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_parameter_geometry",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_3d_optimization",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_complex_plane_geometry",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_integral_optimization",
+    "import_candidate_questions": 40,
+    "shortfall_to_2000_questions": 1960,
+    "certified_independent_types": "unverified"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_solid_of_revolution",
+    "import_candidate_questions": 34,
+    "shortfall_to_2000_questions": 1966,
+    "certified_independent_types": "unverified"
+  }
+]

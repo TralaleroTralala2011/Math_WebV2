@@ -1,0 +1,151 @@
+﻿grade,topic,topic_name,qa_staging_previous_v191,v192_new_oracle_checked_questions,staged_qa_total,v192_candidate_families,certified_independent_families,live_production_question_count,missing_independent_families_in_production,missing_verified_questions_in_production,target_independent_families,target_questions
+10,menh_de_tap_hop,Mệnh đề và tập hợp,39,10,49,1,0,,,,2000,20000
+10,bat_phuong_trinh,Bất phương trình và hệ bất phương trình,110,10,120,1,0,,,,2000,20000
+10,he_thuc_luong,Hệ thức lượng trong tam giác,30,10,40,1,0,,,,2000,20000
+10,vector,Vectơ,100,10,110,1,0,,,,2000,20000
+10,ham_so_bac_hai,Hàm số bậc hai và parabol,150,10,160,1,0,,,,2000,20000
+10,phuong_trinh_he,Phương trình và hệ phương trình,100,10,110,1,0,,,,2000,20000
+10,quy_tac_dem,Quy tắc đếm,47,10,57,1,0,,,,2000,20000
+10,hoan_vi_chinh_hop_to_hop,"Hoán vị, chỉnh hợp, tổ hợp",180,10,190,1,0,,,,2000,20000
+10,xac_suat,Xác suất,50,10,60,1,0,,,,2000,20000
+10,thong_ke,Thống kê,140,10,150,1,0,,,,2000,20000
+10,menh_de,Mệnh đề,39,10,49,1,0,,,,2000,20000
+10,tap_hop,Tập hợp và các phép toán,60,10,70,1,0,,,,2000,20000
+10,he_bat_phuong_trinh,Hệ bất phương trình,30,10,40,1,0,,,,2000,20000
+10,ham_so,Hàm số,50,10,60,1,0,,,,2000,20000
+10,ham_so_bac_nhat,Hàm số bậc nhất,30,10,40,1,0,,,,2000,20000
+10,phuong_trinh,Phương trình,190,10,200,1,0,,,,2000,20000
+10,he_phuong_trinh,Hệ phương trình,39,10,49,1,0,,,,2000,20000
+10,he_thuc_luong_tam_giac,Hệ thức lượng trong tam giác,58,10,68,1,0,,,,2000,20000
+10,toa_do_phang,Tọa độ trong mặt phẳng,120,10,130,1,0,,,,2000,20000
+10,duong_thang,Đường thẳng,39,10,49,1,0,,,,2000,20000
+10,duong_tron,Đường tròn,48,10,58,1,0,,,,2000,20000
+10,nhi_thuc_newton,Nhị thức Newton,40,10,50,1,0,,,,2000,20000
+10,hinh_hoc_10,Hình học phẳng,39,10,49,1,0,,,,2000,20000
+10,bai_toan_thuc_te_10,Bài toán thực tế Toán 10,39,10,49,1,0,,,,2000,20000
+10,hinh_hoc_co_ban_10,"Hình học cơ bản: góc, cạnh và diện tích",60,10,70,1,0,,,,2000,20000
+10,tam_giac_tu_giac_10,Tam giác và tứ giác cơ bản,49,10,59,1,0,,,,2000,20000
+10,duong_tron_co_ban_10,Đường tròn và các góc cơ bản,30,10,40,1,0,,,,2000,20000
+10,he_thuc_luong_van_dung_10,Hệ thức lượng trong tam giác,34,10,44,1,0,,,,2000,20000
+10,toa_do_hinh_hoc_10,Tọa độ và đường thẳng trong mặt phẳng,39,10,49,1,0,,,,2000,20000
+10,chung_minh_hinh_hoc_10,Chứng minh hình học và bài toán tổng hợp,29,10,39,1,0,,,,2000,20000
+10,g10_geom_angles_parallel,Góc tạo bởi hai đường thẳng và đường cắt,30,10,40,1,0,,,,2000,20000
+10,g10_geom_triangle_congruence,Các trường hợp bằng nhau của tam giác,39,10,49,1,0,,,,2000,20000
+10,g10_geom_special_lines,"Đường trung tuyến, phân giác và đường cao",50,10,60,1,0,,,,2000,20000
+10,g10_geom_quadrilaterals_properties,Tính chất hình bình hành và hình thoi,30,10,40,1,0,,,,2000,20000
+10,g10_geom_circle_chords_arcs,"Dây cung, cung và khoảng cách đến tâm",40,10,50,1,0,,,,2000,20000
+10,g10_geom_thales_similarity,Định lý Thales và tam giác đồng dạng,30,10,40,1,0,,,,2000,20000
+10,g10_geom_triangle_area_ratio,Tỉ số diện tích tam giác,30,10,40,1,0,,,,2000,20000
+10,g10_geom_circle_angles,Góc nội tiếp và góc ở tâm nâng cao,30,10,40,1,0,,,,2000,20000
+10,g10_geom_coordinate_distance_midpoint,Trung điểm và khoảng cách trong tọa độ phẳng,49,10,59,1,0,,,,2000,20000
+10,g10_geom_line_intersections,Giao điểm và vị trí tương đối của hai đường thẳng,30,10,40,1,0,,,,2000,20000
+10,g10_geom_locus,Quỹ tích điểm trong mặt phẳng,39,10,49,1,0,,,,2000,20000
+10,g10_geom_circle_tangent_chord,Tiếp tuyến và dây cung của đường tròn,34,10,44,1,0,,,,2000,20000
+10,g10_geom_triangle_inequalities,Bất đẳng thức và cực trị trong tam giác,30,10,40,1,0,,,,2000,20000
+10,g10_geom_vector_proofs,Chứng minh hình học bằng vectơ,39,10,49,1,0,,,,2000,20000
+10,g10_geom_coordinate_circle_line,Bài toán tổng hợp đường thẳng và đường tròn tọa độ,39,10,49,1,0,,,,2000,20000
+10,g10_advanced_inequalities,Bất đẳng thức đại số và cực trị nâng cao,40,10,50,1,0,,,,2000,20000
+10,g10_symmetric_systems,Hệ phương trình đối xứng và hoán vị,39,10,49,1,0,,,,2000,20000
+10,g10_radical_equations_advanced,Phương trình chứa căn thức nâng cao,30,10,40,1,0,,,,2000,20000
+10,g10_combinatorics_olympiad,Tổ hợp và nguyên lý Dirichlet nâng cao,40,10,50,1,0,,,,2000,20000
+11,ham_so_luong_giac,Hàm số lượng giác,10,10,20,1,0,,,,2000,20000
+11,phuong_trinh_luong_giac,Phương trình lượng giác,10,10,20,1,0,,,,2000,20000
+11,day_so,Dãy số,31,10,41,1,0,,,,2000,20000
+11,cap_so_cong,Cấp số cộng,190,10,200,1,0,,,,2000,20000
+11,cap_so_nhan,Cấp số nhân,290,10,300,1,0,,,,2000,20000
+11,gioi_han,Giới hạn,55,10,65,1,0,,,,2000,20000
+11,dao_ham,Đạo hàm,190,10,200,1,0,,,,2000,20000
+11,hinh_khong_gian,Quan hệ song song và vuông góc trong không gian,32,10,42,1,0,,,,2000,20000
+11,xac_suat_11,Xác suất,66,10,76,1,0,,,,2000,20000
+11,gia_tri_luong_giac,Giá trị lượng giác,31,10,41,1,0,,,,2000,20000
+11,cong_thuc_luong_giac,Công thức lượng giác,58,10,68,1,0,,,,2000,20000
+11,ham_so_luong_giac_day_du,Hàm số lượng giác,24,10,34,1,0,,,,2000,20000
+11,phuong_trinh_luong_giac_day_du,Phương trình lượng giác,23,10,33,1,0,,,,2000,20000
+11,day_so_tong_quat,Dãy số,27,10,37,1,0,,,,2000,20000
+11,gioi_han_ham_so,Giới hạn hàm số,60,10,70,1,0,,,,2000,20000
+11,ham_so_lien_tuc,Hàm số liên tục,30,10,40,1,0,,,,2000,20000
+11,dao_ham_quy_tac,Quy tắc đạo hàm,49,10,59,1,0,,,,2000,20000
+11,ung_dung_dao_ham_11,Ứng dụng đạo hàm,39,10,49,1,0,,,,2000,20000
+11,song_song_khong_gian,Quan hệ song song trong không gian,39,10,49,1,0,,,,2000,20000
+11,vuong_goc_khong_gian,Quan hệ vuông góc trong không gian,39,10,49,1,0,,,,2000,20000
+11,goc_khoang_cach_11,Góc và khoảng cách trong không gian,39,10,49,1,0,,,,2000,20000
+11,thong_ke_11,Thống kê Toán 11,30,10,40,1,0,,,,2000,20000
+11,bai_toan_thuc_te_11,Bài toán thực tế Toán 11,39,10,49,1,0,,,,2000,20000
+11,to_hop_xac_suat_nang_cao_11,Tổ hợp và xác suất nâng cao,110,10,120,1,0,,,,2000,20000
+11,bien_co_doc_lap_11,Biến cố độc lập và xác suất có điều kiện,110,10,120,1,0,,,,2000,20000
+11,day_so_truy_hoi_11,Dãy số truy hồi,40,10,50,1,0,,,,2000,20000
+11,quy_nap_toan_hoc_11,Quy nạp toán học,30,10,40,1,0,,,,2000,20000
+11,phep_bien_hinh_11,Phép biến hình trong mặt phẳng,38,10,48,1,0,,,,2000,20000
+11,thiet_dien_hinh_khong_gian_11,Thiết diện hình không gian,39,10,49,1,0,,,,2000,20000
+11,bai_toan_thuc_te_tong_hop_11,Bài toán thực tế tổng hợp Toán 11,39,10,49,1,0,,,,2000,20000
+11,phep_bien_hinh_co_ban_11,Phép biến hình cơ bản,39,10,49,1,0,,,,2000,20000
+11,nhan_biet_hinh_khong_gian_11,Nhận biết hình học không gian,36,10,46,1,0,,,,2000,20000
+11,g11_geom_transform_translation,Phép tịnh tiến và ảnh của hình,30,10,40,1,0,,,,2000,20000
+11,g11_geom_transform_reflection,Phép đối xứng trục,30,10,40,1,0,,,,2000,20000
+11,g11_geom_space_lines_planes,Nhận biết đường thẳng và mặt phẳng trong không gian,39,10,49,1,0,,,,2000,20000
+11,g11_geom_parallel_line_plane,Đường thẳng song song với mặt phẳng,39,10,49,1,0,,,,2000,20000
+11,g11_geom_prism_pyramid_sections,"Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",10,10,20,1,0,,,,2000,20000
+11,g11_geom_rotation_homothety,Phép quay và phép vị tự,30,10,40,1,0,,,,2000,20000
+11,g11_geom_parallel_planes,Hai mặt phẳng song song,39,10,49,1,0,,,,2000,20000
+11,g11_geom_perpendicular_line_plane,Đường thẳng vuông góc với mặt phẳng,39,10,49,1,0,,,,2000,20000
+11,g11_geom_dihedral_angles,Góc giữa đường thẳng và mặt phẳng,33,10,43,1,0,,,,2000,20000
+11,g11_geom_section_construction,Dựng thiết diện của hình chóp và lăng trụ,39,10,49,1,0,,,,2000,20000
+11,g11_geom_skew_lines_distance,Khoảng cách giữa hai đường thẳng chéo nhau,39,10,49,1,0,,,,2000,20000
+11,g11_geom_three_perpendiculars,Định lý ba đường vuông góc,35,10,45,1,0,,,,2000,20000
+11,g11_geom_transform_composition,Hợp thành các phép biến hình,30,10,40,1,0,,,,2000,20000
+11,g11_geom_section_ratio,Thiết diện và tỉ số đoạn trong hình không gian,39,10,49,1,0,,,,2000,20000
+11,g11_geom_space_proof,Chứng minh tổng hợp song song và vuông góc,37,10,47,1,0,,,,2000,20000
+11,g11_advanced_trig_equations,Phương trình lượng giác nâng cao,30,10,40,1,0,,,,2000,20000
+11,g11_sequences_advanced,Dãy số truy hồi và bài toán cực trị,38,10,48,1,0,,,,2000,20000
+11,g11_binomial_advanced,Nhị thức Newton và hệ số tổ hợp nâng cao,38,10,48,1,0,,,,2000,20000
+11,g11_conditional_probability_models,Mô hình xác suất có điều kiện,38,10,48,1,0,,,,2000,20000
+12,ung_dung_dao_ham,Ứng dụng đạo hàm,39,10,49,1,0,,,,2000,20000
+12,khao_sat_ham_so,Khảo sát và vẽ đồ thị hàm số,39,10,49,1,0,,,,2000,20000
+12,nguyen_ham_tich_phan,Nguyên hàm và tích phân,160,10,170,1,0,,,,2000,20000
+12,so_phuc,Số phức,120,10,130,1,0,,,,2000,20000
+12,hinh_hoc_khong_gian,Hình học không gian,49,10,59,1,0,,,,2000,20000
+12,toa_do_khong_gian,Tọa độ trong không gian,180,10,190,1,0,,,,2000,20000
+12,xac_suat_12,Xác suất và biến ngẫu nhiên,49,10,59,1,0,,,,2000,20000
+12,thong_ke_12,Các số đặc trưng đo xu thế và độ phân tán,36,10,46,1,0,,,,2000,20000
+12,tinh_don_dieu,Tính đơn điệu,10,10,20,1,0,,,,2000,20000
+12,cuc_tri,Cực trị,30,10,40,1,0,,,,2000,20000
+12,gtln_gtnn,Giá trị lớn nhất và nhỏ nhất,49,10,59,1,0,,,,2000,20000
+12,tiep_tuyen,Tiếp tuyến,30,10,40,1,0,,,,2000,20000
+12,tien_can,Tiệm cận,30,10,40,1,0,,,,2000,20000
+12,tuong_giao,Tương giao đồ thị,39,10,49,1,0,,,,2000,20000
+12,ham_mu,Hàm số mũ,48,10,58,1,0,,,,2000,20000
+12,ham_logarit,Hàm số logarit,41,10,51,1,0,,,,2000,20000
+12,pt_mu,Phương trình mũ,100,10,110,1,0,,,,2000,20000
+12,pt_logarit,Phương trình logarit,85,10,95,1,0,,,,2000,20000
+12,bpt_mu,Bất phương trình mũ,30,10,40,1,0,,,,2000,20000
+12,bpt_logarit,Bất phương trình logarit,40,10,50,1,0,,,,2000,20000
+12,ung_dung_tich_phan,Ứng dụng tích phân,50,10,60,1,0,,,,2000,20000
+12,bieu_dien_so_phuc,Biểu diễn số phức,40,10,50,1,0,,,,2000,20000
+12,pt_so_phuc,Phương trình số phức,40,10,50,1,0,,,,2000,20000
+12,mat_phang_oxyz,Mặt phẳng trong Oxyz,49,10,59,1,0,,,,2000,20000
+12,duong_thang_oxyz,Đường thẳng trong Oxyz,39,10,49,1,0,,,,2000,20000
+12,mat_cau,Mặt cầu,49,10,59,1,0,,,,2000,20000
+12,goc_khoang_cach_oxyz,Góc và khoảng cách Oxyz,49,10,59,1,0,,,,2000,20000
+12,the_tich_khong_gian,Thể tích hình học không gian,39,10,49,1,0,,,,2000,20000
+12,tong_hop_thpt,Bài toán tổng hợp THPT,39,10,49,1,0,,,,2000,20000
+12,bai_toan_thuc_te_12,Bài toán thực tế Toán 12,39,10,49,1,0,,,,2000,20000
+12,hinh_khoi_va_the_tich_co_ban_12,Hình khối và thể tích cơ bản,30,10,40,1,0,,,,2000,20000
+12,hinh_hoc_oxyz_van_dung_12,Vận dụng tọa độ Oxyz,49,10,59,1,0,,,,2000,20000
+12,g12_geom_vectors_3d,Vectơ và độ dài trong không gian Oxyz,30,10,40,1,0,,,,2000,20000
+12,g12_geom_plane_equation,Phương trình mặt phẳng,40,10,50,1,0,,,,2000,20000
+12,g12_geom_line_equation_3d,Phương trình đường thẳng trong Oxyz,39,10,49,1,0,,,,2000,20000
+12,g12_geom_sphere_equation,Phương trình mặt cầu và tâm bán kính,40,10,50,1,0,,,,2000,20000
+12,g12_geom_solid_surface_area,Diện tích xung quanh và toàn phần hình khối,40,10,50,1,0,,,,2000,20000
+12,g12_geom_point_plane_distance,Khoảng cách từ điểm đến mặt phẳng,49,10,59,1,0,,,,2000,20000
+12,g12_geom_line_plane_angle,Góc giữa đường thẳng và mặt phẳng Oxyz,50,10,60,1,0,,,,2000,20000
+12,g12_geom_two_planes_angle,Góc giữa hai mặt phẳng,35,10,45,1,0,,,,2000,20000
+12,g12_geom_line_plane_intersection,Giao điểm đường thẳng và mặt phẳng,30,10,40,1,0,,,,2000,20000
+12,g12_geom_sphere_tangent_plane,Mặt phẳng tiếp xúc với mặt cầu,30,10,40,1,0,,,,2000,20000
+12,g12_geom_skew_line_relation,Vị trí tương đối của hai đường thẳng trong Oxyz,38,10,48,1,0,,,,2000,20000
+12,g12_geom_min_distance_3d,Cực trị khoảng cách trong không gian tọa độ,39,10,49,1,0,,,,2000,20000
+12,g12_geom_sphere_plane_intersection,Giao tuyến mặt cầu và mặt phẳng,30,10,40,1,0,,,,2000,20000
+12,g12_geom_parameter_geometry,Bài toán tham số hình học Oxyz,39,10,49,1,0,,,,2000,20000
+12,g12_geom_3d_optimization,Bài toán tối ưu hình học không gian,49,10,59,1,0,,,,2000,20000
+12,g12_complex_plane_geometry,Hình học số phức và quỹ tích,39,10,49,1,0,,,,2000,20000
+12,g12_integral_optimization,Tối ưu và cực trị bằng tích phân,39,10,49,1,0,,,,2000,20000
+12,g12_solid_of_revolution,Thể tích khối tròn xoay và mô hình thực tế,34,10,44,1,0,,,,2000,20000

@@ -1,0 +1,166 @@
+[
+  {
+    "family": "v119_set_triple_union",
+    "topic": "tap_hop",
+    "closest": [
+      {
+        "other": "three_set_union",
+        "version": "V114",
+        "similarity": 0.839
+      }
+    ]
+  },
+  {
+    "family": "v119_set_exactly_one_of_three",
+    "topic": "tap_hop",
+    "closest": [
+      {
+        "other": "set_symmetric_difference",
+        "version": "V113",
+        "similarity": 0.962
+      }
+    ]
+  },
+  {
+    "family": "v119_set_universe_complement_union",
+    "topic": "tap_hop",
+    "closest": [
+      {
+        "other": "v117_de_morgan_3",
+        "version": "V117",
+        "similarity": 0.857
+      }
+    ]
+  },
+  {
+    "family": "v119_set_union_difference_count",
+    "topic": "tap_hop",
+    "closest": [
+      {
+        "other": "set_symmetric_difference",
+        "version": "V113",
+        "similarity": 0.684
+      }
+    ]
+  },
+  {
+    "family": "v119_conditional_from_counts",
+    "topic": "bien_co_doc_lap_11",
+    "closest": [
+      {
+        "other": "conditional_probability",
+        "version": "V113",
+        "similarity": 0.757
+      }
+    ]
+  },
+  {
+    "family": "v119_total_prob_two_sources",
+    "topic": "bien_co_doc_lap_11",
+    "closest": [
+      {
+        "other": "v116_total_probability",
+        "version": "V116",
+        "similarity": 0.676
+      }
+    ]
+  },
+  {
+    "family": "v119_independent_joint",
+    "topic": "bien_co_doc_lap_11",
+    "closest": [
+      {
+        "other": "conditional_probability",
+        "version": "V113",
+        "similarity": 0.651
+      }
+    ]
+  },
+  {
+    "family": "v119_complex_modulus_squared",
+    "topic": "so_phuc",
+    "closest": [
+      {
+        "other": "complex_modulus_squared",
+        "version": "V113",
+        "similarity": 1.0
+      }
+    ]
+  },
+  {
+    "family": "v119_complex_conjugate_imag",
+    "topic": "so_phuc",
+    "closest": [
+      {
+        "other": "v117_complex_conjugate_norm_sq",
+        "version": "V117",
+        "similarity": 0.679
+      }
+    ]
+  },
+  {
+    "family": "v119_complex_product_modulus_squared",
+    "topic": "so_phuc",
+    "closest": [
+      {
+        "other": "complex_modulus_squared",
+        "version": "V113",
+        "similarity": 0.909
+      }
+    ]
+  },
+  {
+    "family": "v119_complex_quotient_real",
+    "topic": "so_phuc",
+    "closest": [
+      {
+        "other": "v118_complex_division_real",
+        "version": "V118",
+        "similarity": 0.933
+      },
+      {
+        "other": "v116_complex_reciprocal",
+        "version": "V116",
+        "similarity": 0.656
+      }
+    ]
+  },
+  {
+    "family": "v119_complex_quotient_imag",
+    "topic": "so_phuc",
+    "closest": [
+      {
+        "other": "v118_complex_division_real",
+        "version": "V118",
+        "similarity": 0.862
+      }
+    ]
+  },
+  {
+    "family": "v119_complex_inverse_real",
+    "topic": "so_phuc",
+    "closest": [
+      {
+        "other": "v116_complex_reciprocal",
+        "version": "V116",
+        "similarity": 0.875
+      },
+      {
+        "other": "v118_complex_division_real",
+        "version": "V118",
+        "similarity": 0.7
+      }
+    ]
+  },
+  {
+    "family": "v119_complex_inverse_imag",
+    "topic": "so_phuc",
+    "closest": [
+      {
+        "other": "v116_complex_reciprocal",
+        "version": "V116",
+        "similarity": 0.806
+      }
+    ]
+  }
+]

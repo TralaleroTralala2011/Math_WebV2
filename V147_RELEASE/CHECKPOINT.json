@@ -1,0 +1,14 @@
+{
+  "version": "V147",
+  "base": "MATH_WEB_GITHUB_READY_V146_STRICT_COMPARISON_ELIGIBILITY.zip",
+  "candidate_methods_retained": 11,
+  "questions_retained": 110,
+  "new_certified_independent_methods": 0,
+  "new_published_questions": 0,
+  "structural_issues": 0,
+  "tests_new": "4/4",
+  "tests_selected_backend": "15/15",
+  "full_backend": "not run",
+  "browser_e2e": "not run",
+  "pending": "semantic independent-method review, math oracle verification, broader regression"
+}

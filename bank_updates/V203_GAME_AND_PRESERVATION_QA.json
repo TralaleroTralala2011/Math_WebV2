@@ -1,0 +1,71 @@
+{
+  "version": "V203",
+  "families": 141,
+  "test_matrix": {
+    "practice_and_battle_by_family_and_format": 846,
+    "passed": 846,
+    "failed": []
+  },
+  "nonbank_tables_content_unchanged": 8,
+  "metadata_timestamp_note": "database_metadata.updated_at changes on application connection, while schema_version key/value are unchanged",
+  "nonbank_content_checks": {
+    "database_metadata": {
+      "rows_before": 1,
+      "rows_after": 1,
+      "sha256_before": "0ffd627ac864d7f09eadeaf785393d2d0160a47e0d9293c0847f97a6e9e961fa",
+      "sha256_after": "0ffd627ac864d7f09eadeaf785393d2d0160a47e0d9293c0847f97a6e9e961fa",
+      "equal": true
+    },
+    "users": {
+      "rows_before": 1,
+      "rows_after": 1,
+      "sha256_before": "f89106d29b6043091db89f5b7e12e95f8f6e780ac189513590133597c5a1f465",
+      "sha256_after": "f89106d29b6043091db89f5b7e12e95f8f6e780ac189513590133597c5a1f465",
+      "equal": true
+    },
+    "game_results": {
+      "rows_before": 0,
+      "rows_after": 0,
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "equal": true
+    },
+    "friends": {
+      "rows_before": 0,
+      "rows_after": 0,
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "equal": true
+    },
+    "messages": {
+      "rows_before": 0,
+      "rows_after": 0,
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "equal": true
+    },
+    "notifications": {
+      "rows_before": 0,
+      "rows_after": 0,
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "equal": true
+    },
+    "question_sessions": {
+      "rows_before": 0,
+      "rows_after": 0,
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "equal": true
+    },
+    "admin_audit_logs": {
+      "rows_before": 0,
+      "rows_after": 0,
+      "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "equal": true
+    }
+  },
+  "production_verified": false,
+  "limitations": "Games inspected through curated loading/building path only; no external live UI deployment."
+}

@@ -1,0 +1,19 @@
+{
+  "version": "V146",
+  "base": "V145_CERTIFICATE_COMPARISON_AUDIT",
+  "change": "require method-comparison evidence before milestone counting",
+  "new_independently_certified_types": 0,
+  "new_published_questions": 0,
+  "pending_research_candidates_carried": 11,
+  "pending_research_questions_carried": 110,
+  "focused_tests_passed": 23,
+  "selected_regression_tests_passed": 33,
+  "full_regression": "not run",
+  "browser_e2e": "not run",
+  "next": [
+    "independent math review",
+    "semantic dedup",
+    "full regression",
+    "Battle/Admin E2E"
+  ]
+}

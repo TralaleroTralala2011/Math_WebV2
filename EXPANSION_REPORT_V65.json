@@ -1,0 +1,17 @@
+{
+  "version": "V65",
+  "base": "V64",
+  "new_form_ids": 200,
+  "new_questions": 2000,
+  "total_form_ids": 7358,
+  "total_questions": 73590,
+  "minimum_questions_per_id": 10,
+  "new_method_families": 20,
+  "verified_independent_new_methods": 0,
+  "important_note": "200 new IDs are parameter regimes of 20 methods; they are NOT 200 independent mathematical problem types. No teacher review or integration test performed.",
+  "grade_distribution": {
+    "10": 800,
+    "11": 600,
+    "12": 600
+  }
+}

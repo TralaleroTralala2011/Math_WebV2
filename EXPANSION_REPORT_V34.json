@@ -1,0 +1,213 @@
+{
+  "version": "V34",
+  "based_on": "V33",
+  "previous_questions": 8220,
+  "added_questions": 370,
+  "total_questions": 8590,
+  "previous_form_ids": 821,
+  "added_form_ids": 37,
+  "total_form_ids": 858,
+  "grade_added": {
+    "10": 130,
+    "11": 130,
+    "12": 110
+  },
+  "families": [
+    {
+      "form_id": "v34_symmetric_difference",
+      "grade": 10,
+      "topic": "Tập hợp"
+    },
+    {
+      "form_id": "v34_complement_union",
+      "grade": 10,
+      "topic": "Tập hợp"
+    },
+    {
+      "form_id": "v34_quadratic_vertex_value",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v34_quadratic_axis",
+      "grade": 10,
+      "topic": "Phương trình bậc hai"
+    },
+    {
+      "form_id": "v34_point_reflection_line_x",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v34_triangle_centroid_coordinate",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng"
+    },
+    {
+      "form_id": "v34_dot_product_from_norms",
+      "grade": 10,
+      "topic": "Vectơ"
+    },
+    {
+      "form_id": "v34_circle_center_from_equation",
+      "grade": 10,
+      "topic": "Đường tròn"
+    },
+    {
+      "form_id": "v34_circle_radius_squared",
+      "grade": 10,
+      "topic": "Đường tròn"
+    },
+    {
+      "form_id": "v34_variance_shift",
+      "grade": 10,
+      "topic": "Thống kê"
+    },
+    {
+      "form_id": "v34_variance_scale",
+      "grade": 10,
+      "topic": "Thống kê"
+    },
+    {
+      "form_id": "v34_choose_complement",
+      "grade": 10,
+      "topic": "Tổ hợp"
+    },
+    {
+      "form_id": "v34_at_least_one_success",
+      "grade": 10,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v34_arithmetic_term_difference",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v34_arithmetic_sum_reverse",
+      "grade": 11,
+      "topic": "Cấp số cộng"
+    },
+    {
+      "form_id": "v34_geometric_ratio_from_terms",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v34_geometric_product_three",
+      "grade": 11,
+      "topic": "Cấp số nhân"
+    },
+    {
+      "form_id": "v34_limit_polynomial_ratio",
+      "grade": 11,
+      "topic": "Giới hạn"
+    },
+    {
+      "form_id": "v34_limit_rationalization",
+      "grade": 11,
+      "topic": "Giới hạn"
+    },
+    {
+      "form_id": "v34_derivative_log_chain",
+      "grade": 11,
+      "topic": "Đạo hàm"
+    },
+    {
+      "form_id": "v34_derivative_exp_chain",
+      "grade": 11,
+      "topic": "Đạo hàm"
+    },
+    {
+      "form_id": "v34_normal_line_slope",
+      "grade": 11,
+      "topic": "Đạo hàm"
+    },
+    {
+      "form_id": "v34_hypergeometric_exact_two",
+      "grade": 11,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v34_binomial_exact_two",
+      "grade": 11,
+      "topic": "Xác suất"
+    },
+    {
+      "form_id": "v34_trig_sin_double",
+      "grade": 11,
+      "topic": "Lượng giác"
+    },
+    {
+      "form_id": "v34_trig_cos_double",
+      "grade": 11,
+      "topic": "Lượng giác"
+    },
+    {
+      "form_id": "v34_integral_power",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v34_integral_exp",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v34_integral_reversal",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân"
+    },
+    {
+      "form_id": "v34_complex_reciprocal_real",
+      "grade": 12,
+      "topic": "Số phức"
+    },
+    {
+      "form_id": "v34_sphere_center_distance",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v34_plane_normal_dot",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian"
+    },
+    {
+      "form_id": "v34_exp_equation_different_bases",
+      "grade": 12,
+      "topic": "Hàm số mũ"
+    },
+    {
+      "form_id": "v34_log_change_base",
+      "grade": 12,
+      "topic": "Hàm số logarit"
+    },
+    {
+      "form_id": "v34_cubic_derivative_critical_sum",
+      "grade": 12,
+      "topic": "Cực trị"
+    },
+    {
+      "form_id": "v34_binomial_variance",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên"
+    },
+    {
+      "form_id": "v34_bernoulli_variance",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên"
+    }
+  ],
+  "checks": {
+    "new_answer_exact_arithmetic": 370,
+    "no_duplicate_question_text": true,
+    "no_duplicate_new_form_id": true,
+    "preserved_old_members": true
+  },
+  "limitations": [
+    "form IDs are not proof of conceptual independence",
+    "no full website regression tests",
+    "verified_seed bank may not be integrated with practice UI"
+  ]
+}

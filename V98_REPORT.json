@@ -1,0 +1,23 @@
+{
+  "version": "V98",
+  "base": "V97",
+  "changes": [
+    "Connect structured triangle SSS givens in practice.js to exact-proportion SVG preview",
+    "Permit MathGeo launch for valid SSS triangles even when no explicit coordinate points exist",
+    "Keep invalid or unsupported triangle diagrams hidden rather than guessing",
+    "Preserve all other ZIP members unchanged"
+  ],
+  "test_results": {
+    "node_check_practise_js": "pass",
+    "zip_integrity": "pass"
+  },
+  "limitations": [
+    "Not all Vietnamese natural-language geometry questions are parsed",
+    "Battle/Admin/browser regression tests not completed",
+    "No independent mathematical types added"
+  ],
+  "new_type_ids": 0,
+  "new_questions": 0,
+  "total_type_ids": 33378,
+  "total_questions": 333780
+}

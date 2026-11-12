@@ -1,0 +1,34 @@
+{
+  "version": "V182",
+  "base_zip": "MATH_WEB_GITHUB_READY_V181_FULL_WEB_INTEGRATED_BANK_PATCH.zip",
+  "base_zip_sha256": "10f7ce03536ccf142c383ff9829e490c6bf01b35312d88a84231d0663e2bc728",
+  "checkpoint_utc": "2026-11-09T14:42:38.783908+00:00",
+  "new_files": {
+    "README_V182_START_HERE.md": "0b6e7baa16dec488bb4874a4caa4366d3738574bb8ff669bb672df853e32e765",
+    "IMPORT_BANK_V182.bat": "78df0ab645f16f5e1ac2fbbe978b04ba9424427e1b592bd7be99df6422188656",
+    "V182_BANK_CODE_DIFF.patch": "68680f3bcc499420d48a58a892017da8524e59184eda2adcfddb731ee1c2ebf3",
+    "backend/scripts/bank_coverage_v182.py": "4214da1b2d98df35e5d5f7912de32ed462144d64fe63377322b6c8fa911fd101",
+    "backend/tests/test_v182_bank_integration.py": "45df9bf5e96e7bc72cba7b0ed44c5f0da80a57ea7d673abab6ca07456364b554",
+    "backend/question_factory/v182_generate.py": "6be2b9a0f37ff1c5714496f65029c9b6b31c6ae1af4736ee538108ce7452ce33",
+    "bank_updates/README_V182.md": "b5baf754583ef133cc62f6a1f836e8accf6177f6b9605bc64457196277bcd3de",
+    "bank_updates/V182_IMPORT_READY.jsonl": "b56a410588464cb54b0d6a90500db91462439fc79859696a316c5bd47eb919a9",
+    "bank_updates/V182_FORM_SPECS.json": "e858a420d8455d0ab086c69d3532f49e48a65e232313766bfd4a0efc9ec2b456",
+    "bank_updates/V182_ORACLE_AUDIT.jsonl": "816e0ae3842018f674213131fb3a6eb51ec0dac06c5d7dc7a1a8729fa3b30e20",
+    "bank_updates/V182_150_TOPIC_COVERAGE.json": "9e26c37e3ea0c73652b4edd1ed667dea0d8a09a0de0f3ce4dd7837655f12b271",
+    "bank_updates/V182_REPORT.json": "bbd51e76527ac89cee70eba439cfe96b76d4e42bdcc5fefee67a2fcdf217f5b6",
+    "bank_updates/V182_SEED_BANK_DEDUP.json": "2ce67c1c19eb8088c812a060044c8184be09b5a5ffdc2db7b956bac870a0f68f",
+    "bank_updates/V182_QA_TEST_REPORT.json": "4c9c422809bb0dcf8a76cecf2e1aa5cc75cf0428645e0702c813bdda62788714",
+    "bank_updates/V182_150_TOPIC_API_SMOKE.json": "f0e0018bc086a48b56eec8407c2cd03af16b3602389aef8ba81a4ea9ddc3f0c4",
+    "bank_updates/V182_COVERAGE_AFTER_TEST_IMPORT.json": "693a9877eea088baa0a5c7b14c5f5a79101ff9da84eb6c3630847bb7240e3eda"
+  },
+  "modified_files": {
+    "backend/scripts/import_bank_updates.py": "67601bda0c955fc56414008b896f26a2ead300084e9d0cfab1bb0cfa1ff5accd",
+    "backend/app/ai/engine/service.py": "367af7a146e4ae363b60ce4dcee3bf7c51ffa053fcd4312dac0292215c302c25"
+  },
+  "candidate_forms": 83,
+  "new_questions": 1660,
+  "import_ready_total": 5355,
+  "production_integrated": 0,
+  "certified_independent_types": 0,
+  "notes": "This is a full web code artifact plus an opt-in import patch; no user DB is shipped or overwritten."
+}

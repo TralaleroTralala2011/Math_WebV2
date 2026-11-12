@@ -1,0 +1,15 @@
+test_math_arithmetic (V133_RESEARCH.audit.QA.test_math_arithmetic) ... ok
+test_new_candidates (V133_RESEARCH.audit.QA.test_new_candidates) ... ok
+test_new_questions (V133_RESEARCH.audit.QA.test_new_questions) ... ok
+test_no_errors (V133_RESEARCH.audit.QA.test_no_errors) ... ok
+test_no_id_collision (V133_RESEARCH.audit.QA.test_no_id_collision) ... ok
+test_not_certified (V133_RESEARCH.audit.QA.test_not_certified) ... ok
+test_not_published (V133_RESEARCH.audit.QA.test_not_published) ... ok
+test_old_exact_collision (V133_RESEARCH.audit.QA.test_old_exact_collision) ... ok
+test_per_method_10 (V133_RESEARCH.audit.QA.test_per_method_10) ... ok
+test_tamper_detected (V133_RESEARCH.audit.QA.test_tamper_detected) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.922s
+
+OK

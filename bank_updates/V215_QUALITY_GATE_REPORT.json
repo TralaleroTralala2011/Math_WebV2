@@ -1,0 +1,1157 @@
+{
+  "version": "V215",
+  "type": "quality_gate_semantic_quarantine",
+  "base_zip": "V214 FULL",
+  "rows_before_qa": 12666,
+  "quarantined_questions": 400,
+  "quarantined_candidate_groups": 40,
+  "rows_after_qa": 12266,
+  "active_new_questions_since_V211": 620,
+  "active_candidate_groups_since_V211": 62,
+  "new_independent_types_certified": 0,
+  "source_V211_rows_preserved_exactly": 11646,
+  "quarantine_by_version": {
+    "V212": 130,
+    "V213": 90,
+    "V214": 180
+  },
+  "active_new_by_grade": {
+    "10": 230,
+    "11": 180,
+    "12": 210
+  },
+  "active_new_by_question_format": {
+    "multiple_choice": 434,
+    "short_answer": 124,
+    "true_false": 62
+  },
+  "status": "Conservative quarantine for manual semantic review; not all quarantined candidates are proven equivalent.",
+  "quarantine_groups": [
+    {
+      "version": "V212",
+      "group": "area_between_parabola_and_line_first_quadrant",
+      "reason": "same_curve_area_integral_method",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Tính diện tích hình phẳng giới hạn bởi hai đồ thị y=x² và y=2x.",
+          "closest_prior_question": {
+            "id": 7352,
+            "grade": 12,
+            "topic": "ung_dung_tich_phan",
+            "score": 0.9386,
+            "question_excerpt": "Tính diện tích hình phẳng giới hạn bởi hai đồ thị y=6x² và y=42x."
+          }
+        },
+        {
+          "new_example_excerpt": "Tính diện tích hình phẳng giới hạn bởi hai đồ thị y=x² và y=7x.",
+          "closest_prior_question": {
+            "id": 7352,
+            "grade": 12,
+            "topic": "ung_dung_tich_phan",
+            "score": 0.9386,
+            "question_excerpt": "Tính diện tích hình phẳng giới hạn bởi hai đồ thị y=6x² và y=42x."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V212",
+      "group": "cosine_sum_pythagorean_ratios",
+      "reason": "same_cosine_sum_formula",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Cho hai góc nhọn α,β với cosα=3/5, sinα=4/5, cosβ=3/5, sinβ=4/5. Tính cos(α+β).",
+          "closest_prior_question": {
+            "id": 10411,
+            "grade": 11,
+            "topic": "cong_thuc_luong_giac",
+            "score": 0.7622,
+            "question_excerpt": "Biết α,β nhọn, sinα=20/29, cosα=21/29, sinβ=11/61, cosβ=60/61. Tính cos(α+β)."
+          }
+        },
+        {
+          "new_example_excerpt": "Cho hai góc nhọn α,β với cosα=3/5, sinα=4/5, cosβ=9/41, sinβ=40/41. Tính cos(α+β).",
+          "closest_prior_question": {
+            "id": 10411,
+            "grade": 11,
+            "topic": "cong_thuc_luong_giac",
+            "score": 0.7622,
+            "question_excerpt": "Biết α,β nhọn, sinα=20/29, cosα=21/29, sinβ=11/61, cosβ=60/61. Tính cos(α+β)."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V212",
+      "group": "exact_successes_independent_bernoulli",
+      "reason": "same_binomial_probability_model",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Thực hiện 5 phép thử độc lập, mỗi phép thử thành công với xác suất 1/4. Tính xác suất có đúng 1 lần thành công.",
+          "closest_prior_question": {
+            "id": 7287,
+            "grade": 11,
+            "topic": "to_hop_xac_suat_nang_cao_11",
+            "score": 0.7599,
+            "question_excerpt": "Có 4 phép thử Bernoulli độc lập, mỗi phép thử thành công với xác suất 1/5. Tính xác suất thành công đúng 2 lần."
+          }
+        },
+        {
+          "new_example_excerpt": "Thực hiện 5 phép thử độc lập, mỗi phép thử thành công với xác suất 1/2. Tính xác suất có đúng 2 lần thành công.",
+          "closest_prior_question": {
+            "id": 7287,
+            "grade": 11,
+            "topic": "to_hop_xac_suat_nang_cao_11",
+            "score": 0.7599,
+            "question_excerpt": "Có 4 phép thử Bernoulli độc lập, mỗi phép thử thành công với xác suất 1/5. Tính xác suất thành công đúng 2 lần."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V212",
+      "group": "heron_triangle_area_squared",
+      "reason": "same_heron_method_output_rephrased",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Tam giác có độ dài ba cạnh 13, 14, 15. Tính bình phương diện tích của tam giác.",
+          "closest_prior_question": {
+            "id": 7166,
+            "grade": 10,
+            "topic": "he_thuc_luong_tam_giac",
+            "score": 0.6864,
+            "question_excerpt": "Tam giác có độ dài ba cạnh lần lượt 130, 140, 150. Tính diện tích tam giác."
+          }
+        },
+        {
+          "new_example_excerpt": "Tam giác có độ dài ba cạnh 9, 10, 17. Tính bình phương diện tích của tam giác.",
+          "closest_prior_question": {
+            "id": 7166,
+            "grade": 10,
+            "topic": "he_thuc_luong_tam_giac",
+            "score": 0.6864,
+            "question_excerpt": "Tam giác có độ dài ba cạnh lần lượt 130, 140, 150. Tính diện tích tam giác."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V212",
+      "group": "internal_angle_bisector_segment_fraction",
+      "reason": "same_internal_angle_bisector_theorem",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Trong tam giác ABC có AB=3, AC=4, BC=5. Tia phân giác trong góc A cắt BC tại D. Tìm BD.",
+          "closest_prior_question": {
+            "id": 7464,
+            "grade": 10,
+            "topic": "g10_geom_special_lines",
+            "score": 0.7719,
+            "question_excerpt": "Tam giác ABC có AB=24, AC=32, BC=40. Đường phân giác trong của góc A cắt BC tại D. Tính BD."
+          }
+        },
+        {
+          "new_example_excerpt": "Trong tam giác ABC có AB=8, AC=9, BC=15. Tia phân giác trong góc A cắt BC tại D. Tìm BD.",
+          "closest_prior_question": {
+            "id": 7464,
+            "grade": 10,
+            "topic": "g10_geom_special_lines",
+            "score": 0.7719,
+            "question_excerpt": "Tam giác ABC có AB=24, AC=32, BC=40. Đường phân giác trong của góc A cắt BC tại D. Tính BD."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V212",
+      "group": "line_plane_intersection_parameter_t",
+      "reason": "same_line_plane_substitution",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Đường thẳng d: (x;y;z)=(-4;-3;4)+t(1;2;1) cắt mặt phẳng (P): 1x+2y+1z+(-6)=0. Tìm t tại giao điểm.",
+          "closest_prior_question": {
+            "id": 3362,
+            "grade": 12,
+            "topic": "g12_geom_line_plane_intersection",
+            "score": 0.4529,
+            "question_excerpt": "Đường thẳng d: (x,y,z)=(-4,3,1)+t(1,5,-2); mặt phẳng P: 2x+(5)y+(-1)z+(52)=0. Tìm tham số t tại giao điểm d∩P."
+          }
+        },
+        {
+          "new_example_excerpt": "Đường thẳng d: (x;y;z)=(1;7;-1)+t(3;2;2) cắt mặt phẳng (P): 2x+4y+1z+(-1)=0. Tìm t tại giao điểm.",
+          "closest_prior_question": {
+            "id": 3350,
+            "grade": 12,
+            "topic": "g12_geom_line_plane_intersection",
+            "score": 0.4562,
+            "question_excerpt": "Đường thẳng d: (x,y,z)=(3,0,1)+t(2,-4,3); mặt phẳng P: 2x+(6)y+(4)z+(-50)=0. Tìm tham số t tại giao điểm d∩P."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V212",
+      "group": "oblique_asymptote_rational_quadratic",
+      "reason": "same_polynomial_division_asymptote",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Đồ thị y=(2x²+(-4)x+1)/(x+1) có tiệm cận xiên y=mx+n. Tìm n.",
+          "closest_prior_question": {
+            "id": 9875,
+            "grade": 12,
+            "topic": "tien_can",
+            "score": 0.5667,
+            "question_excerpt": "Hàm số y=(5x²+11x+13)/(x+4) có tiệm cận xiên y=5x+β. Tính β."
+          }
+        },
+        {
+          "new_example_excerpt": "Đồ thị y=(7x²+(11)x+26)/(x+2) có tiệm cận xiên y=mx+n. Tìm n.",
+          "closest_prior_question": {
+            "id": 9869,
+            "grade": 12,
+            "topic": "tien_can",
+            "score": 0.5689,
+            "question_excerpt": "Hàm số y=(4x²+5x+7)/(x+4) có tiệm cận xiên y=4x+β. Tính β."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V212",
+      "group": "pyramid_parallel_cross_section_area_ratio",
+      "reason": "same_similar_pyramid_area_scale",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Hình chóp S.ABC có diện tích đáy ABC bằng 12. M thuộc SA với SM/SA=2/6; mặt phẳng qua M song song (ABC) cắt SB,SC tại N,P. Tính diện tích tam giác MNP.",
+          "closest_prior_question": {
+            "id": 9012,
+            "grade": 11,
+            "topic": "thiet_dien_hinh_khong_gian_11",
+            "score": 0.3303,
+            "question_excerpt": "Tứ diện đều S.ABC có cạnh a=20. Mặt phẳng qua trung điểm SA,SB,SC tạo thiết diện tam giác MNP. Tính chu vi MNP."
+          }
+        },
+        {
+          "new_example_excerpt": "Hình chóp S.ABC có diện tích đáy ABC bằng 27. M thuộc SA với SM/SA=3/11; mặt phẳng qua M song song (ABC) cắt SB,SC tại N,P. Tính diện tích tam giác MNP.",
+          "closest_prior_question": {
+            "id": 9012,
+            "grade": 11,
+            "topic": "thiet_dien_hinh_khong_gian_11",
+            "score": 0.3303,
+            "question_excerpt": "Tứ diện đều S.ABC có cạnh a=20. Mặt phẳng qua trung điểm SA,SB,SC tạo thiết diện tam giác MNP. Tính chu vi MNP."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V212",
+      "group": "radical_equation_extraneous_root_filter",
+      "reason": "same_squaring_and_extraneous_root_method",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Giải phương trình √(x+(8))=x−(-6). Hãy cho biết nghiệm thực duy nhất x.",
+          "closest_prior_question": {
+            "id": 7768,
+            "grade": 10,
+            "topic": "g10_radical_equations_advanced",
+            "score": 0.6026,
+            "question_excerpt": "Giải phương trình √(x+(9))=x−(3). Tìm nghiệm thực x."
+          }
+        },
+        {
+          "new_example_excerpt": "Giải phương trình √(x+(43))=x−(-1). Hãy cho biết nghiệm thực duy nhất x.",
+          "closest_prior_question": {
+            "id": 7768,
+            "grade": 10,
+            "topic": "g10_radical_equations_advanced",
+            "score": 0.6026,
+            "question_excerpt": "Giải phương trình √(x+(9))=x−(3). Tìm nghiệm thực x."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V212",
+      "group": "revolution_linear_function_disk_integral_pi_coefficient",
+      "reason": "same_disk_revolution_method",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Quay miền phẳng giới hạn bởi y=1x, trục Ox, x=0, x=2 quanh trục Ox. Thể tích V=Kπ; hãy tính K.",
+          "closest_prior_question": {
+            "id": 4827,
+            "grade": 12,
+            "topic": "g12_solid_of_revolution",
+            "score": 0.6596,
+            "question_excerpt": "Quay hình phẳng giới hạn bởi y=5x, trục Ox, x=0 và x=15 quanh Ox. Thể tích bằng V=Kπ. Tìm K."
+          }
+        },
+        {
+          "new_example_excerpt": "Quay miền phẳng giới hạn bởi y=6x, trục Ox, x=0, x=7 quanh trục Ox. Thể tích V=Kπ; hãy tính K.",
+          "closest_prior_question": {
+            "id": 4827,
+            "grade": 12,
+            "topic": "g12_solid_of_revolution",
+            "score": 0.6596,
+            "question_excerpt": "Quay hình phẳng giới hạn bởi y=5x, trục Ox, x=0 và x=15 quanh Ox. Thể tích bằng V=Kπ. Tìm K."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V212",
+      "group": "sine_ratio_at_zero",
+      "reason": "same_fundamental_sine_limit",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Tính lim x→0 của sin(2x)/sin(3x).",
+          "closest_prior_question": {
+            "id": 7257,
+            "grade": 11,
+            "topic": "gioi_han_ham_so",
+            "score": 0.6666,
+            "question_excerpt": "Tính lim khi x→0 của sin(3x)/(2x)."
+          }
+        },
+        {
+          "new_example_excerpt": "Tính lim x→0 của sin(7x)/sin(3x).",
+          "closest_prior_question": {
+            "id": 7257,
+            "grade": 11,
+            "topic": "gioi_han_ham_so",
+            "score": 0.6666,
+            "question_excerpt": "Tính lim khi x→0 của sin(3x)/(2x)."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V212",
+      "group": "squared_cosine_angle_between_planes",
+      "reason": "same_plane_normal_angle_method",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Cho hai mặt phẳng có pháp tuyến n₁=(1;2;1) và n₂=(2;1;3). Gọi θ là góc nhọn hoặc vuông giữa hai mặt phẳng. Tính cos²θ.",
+          "closest_prior_question": {
+            "id": 9970,
+            "grade": 12,
+            "topic": "g12_geom_two_planes_angle",
+            "score": 0.7742,
+            "question_excerpt": "Hai mặt phẳng có vectơ pháp tuyến n₁=(5,1,0), n₂=(0,1,5). Tính cos²θ, với θ là góc nhọn hoặc vuông giữa hai mặt phẳng."
+          }
+        },
+        {
+          "new_example_excerpt": "Cho hai mặt phẳng có pháp tuyến n₁=(3;2;2) và n₂=(3;2;3). Gọi θ là góc nhọn hoặc vuông giữa hai mặt phẳng. Tính cos²θ.",
+          "closest_prior_question": {
+            "id": 9970,
+            "grade": 12,
+            "topic": "g12_geom_two_planes_angle",
+            "score": 0.7742,
+            "question_excerpt": "Hai mặt phẳng có vectơ pháp tuyến n₁=(5,1,0), n₂=(0,1,5). Tính cos²θ, với θ là góc nhọn hoặc vuông giữa hai mặt phẳng."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V212",
+      "group": "tangent_sum_rational",
+      "reason": "same_tangent_addition_formula",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Biết tan α=1/3, tan β=1/5 và α+β không là góc có tang không xác định. Tìm tan(α+β).",
+          "closest_prior_question": {
+            "id": 9787,
+            "grade": 11,
+            "topic": "cong_thuc_luong_giac",
+            "score": 0.5923,
+            "question_excerpt": "Biết tan α=1/2 và tan β=1/3, cả hai góc có tang xác định và cos(α+β)≠0. Tính tan(α+β)."
+          }
+        },
+        {
+          "new_example_excerpt": "Biết tan α=2/3, tan β=1/2 và α+β không là góc có tang không xác định. Tìm tan(α+β).",
+          "closest_prior_question": {
+            "id": 9787,
+            "grade": 11,
+            "topic": "cong_thuc_luong_giac",
+            "score": 0.5923,
+            "question_excerpt": "Biết tan α=1/2 và tan β=1/3, cả hai góc có tang xác định và cos(α+β)≠0. Tính tan(α+β)."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V213",
+      "group": "distance_skew_lines_squared_triple_product",
+      "reason": "same_skew_lines_triple_product_formula",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Trong Oxyz, d₁ qua P(-3, 1, 0) có vectơ chỉ phương u(1, 1, 0); d₂ qua Q(1, -1, 4) có vectơ chỉ phương v(0, 1, 2). Tính bình phương khoảng cách hai đường thẳng.",
+          "closest_prior_question": {
+            "id": 9947,
+            "grade": 12,
+            "topic": "g12_geom_skew_line_relation",
+            "score": 0.4949,
+            "question_excerpt": "Trong Oxyz, d₁ đi qua O(0,0,0) có vectơ chỉ phương (1,1,0); d₂ đi qua A(2,0,0) có vectơ chỉ phương (0,1,1). Gọi d là khoảng cách giữa d₁,d₂. Tính 3d²."
+          }
+        },
+        {
+          "new_example_excerpt": "Trong Oxyz, d₁ qua P(2, 1, -5) có vectơ chỉ phương u(1, 2, 0); d₂ qua Q(6, 9, 4) có vectơ chỉ phương v(0, 1, 4). Tính bình phương khoảng cách hai đường thẳng.",
+          "closest_prior_question": {
+            "id": 9955,
+            "grade": 12,
+            "topic": "g12_geom_skew_line_relation",
+            "score": 0.4973,
+            "question_excerpt": "Trong Oxyz, d₁ đi qua O(0,0,0) có vectơ chỉ phương (1,1,0); d₂ đi qua A(10,0,0) có vectơ chỉ phương (0,1,1). Gọi d là khoảng cách giữa d₁,d₂. Tính 3d²."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V213",
+      "group": "global_maximum_cubic_closed_interval",
+      "reason": "same_derivative_endpoint_extrema_comparison",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Tìm GTLN của f(x)=x³−3x trên đoạn [-2;2].",
+          "closest_prior_question": {
+            "id": 10500,
+            "grade": 12,
+            "topic": "gtln_gtnn",
+            "score": 0.722,
+            "question_excerpt": "Tìm giá trị lớn nhất của f(x)=x³−75x trên đoạn [−7,7]."
+          }
+        },
+        {
+          "new_example_excerpt": "Tìm GTLN của f(x)=x³−108x trên đoạn [-12;12].",
+          "closest_prior_question": {
+            "id": 10500,
+            "grade": 12,
+            "topic": "gtln_gtnn",
+            "score": 0.722,
+            "question_excerpt": "Tìm giá trị lớn nhất của f(x)=x³−75x trên đoạn [−7,7]."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V213",
+      "group": "grouped_frequency_population_variance",
+      "reason": "same_weighted_variance_formula",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Mẫu gồm các giá trị -2, 1, 5 có tần số tương ứng 2, 4, 3. Tính phương sai của mẫu theo công thức chia cho n (không chia cho n−1).",
+          "closest_prior_question": {
+            "id": 9176,
+            "grade": 10,
+            "topic": "thong_ke",
+            "score": 0.5552,
+            "question_excerpt": "Mẫu số liệu gồm 11, 14, 17. Tính phương sai theo công thức chia cho n."
+          }
+        },
+        {
+          "new_example_excerpt": "Mẫu gồm các giá trị 3, 6, 10 có tần số tương ứng 4, 5, 3. Tính phương sai của mẫu theo công thức chia cho n (không chia cho n−1).",
+          "closest_prior_question": {
+            "id": 9176,
+            "grade": 10,
+            "topic": "thong_ke",
+            "score": 0.5589,
+            "question_excerpt": "Mẫu số liệu gồm 11, 14, 17. Tính phương sai theo công thức chia cho n."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V213",
+      "group": "internal_division_point_x_coordinate",
+      "reason": "same_segment_section_coordinate_formula",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Cho A(-5;-3), B(8;5). Điểm M thuộc AB sao cho AM:MB=2:3. Tính hoành độ xM.",
+          "closest_prior_question": {
+            "id": 7494,
+            "grade": 10,
+            "topic": "toa_do_phang",
+            "score": 0.5502,
+            "question_excerpt": "Trong Oxy, A có hoành độ 8, B có hoành độ 21. Điểm M nằm trong AB sao cho AM:MB=4:3. Tính hoành độ M."
+          }
+        },
+        {
+          "new_example_excerpt": "Cho A(0;2), B(18;0). Điểm M thuộc AB sao cho AM:MB=3:5. Tính hoành độ xM.",
+          "closest_prior_question": {
+            "id": 7493,
+            "grade": 10,
+            "topic": "toa_do_phang",
+            "score": 0.5514,
+            "question_excerpt": "Trong Oxy, A có hoành độ 7, B có hoành độ 19. Điểm M nằm trong AB sao cho AM:MB=3:2. Tính hoành độ M."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V213",
+      "group": "inverse_function_derivative_cubic",
+      "reason": "same_inverse_derivative_relation_with_different_f",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Hàm f(x)=x³+1x đồng biến trên ℝ và g=f⁻¹. Tính g′(2), biết f(1)=2.",
+          "closest_prior_question": {
+            "id": 10659,
+            "grade": 12,
+            "topic": "ung_dung_dao_ham",
+            "score": 0.5396,
+            "question_excerpt": "Cho f(x)=5x+6 và g=f⁻¹. Tính g′(21)."
+          }
+        },
+        {
+          "new_example_excerpt": "Hàm f(x)=x³+6x đồng biến trên ℝ và g=f⁻¹. Tính g′(20), biết f(2)=20.",
+          "closest_prior_question": {
+            "id": 10659,
+            "grade": 12,
+            "topic": "ung_dung_dao_ham",
+            "score": 0.5396,
+            "question_excerpt": "Cho f(x)=5x+6 và g=f⁻¹. Tính g′(21)."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V213",
+      "group": "removable_discontinuity_parameter_value",
+      "reason": "same_removable_discontinuity_limit",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Cho f(x)=(x²−(-4)²)/(x−(-4)) khi x≠-4, và f(-4)=k. Tìm k để f liên tục tại x=-4.",
+          "closest_prior_question": {
+            "id": 2812,
+            "grade": 11,
+            "topic": "ham_so_lien_tuc",
+            "score": 0.5638,
+            "question_excerpt": "Cho f(x)=4x+(-12) khi x<-3 và f(x)=k khi x≥-3. Tìm k để f liên tục tại x=-3."
+          }
+        },
+        {
+          "new_example_excerpt": "Cho f(x)=(x²−(1)²)/(x−(1)) khi x≠1, và f(1)=k. Tìm k để f liên tục tại x=1.",
+          "closest_prior_question": {
+            "id": 7939,
+            "grade": 11,
+            "topic": "ham_so_lien_tuc",
+            "score": 0.6688,
+            "question_excerpt": "Hàm f(x)=(x²−16)/(x−4) khi x≠4 và f(4)=m. Tìm m để f liên tục tại x=4."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V213",
+      "group": "right_triangle_incircle_radius_squared",
+      "reason": "same_right_triangle_inradius_method",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Tam giác vuông có hai cạnh góc vuông dài 3 và 4, cạnh huyền dài 5. Tính bình phương bán kính đường tròn nội tiếp.",
+          "closest_prior_question": {
+            "id": 9695,
+            "grade": 10,
+            "topic": "he_thuc_luong_tam_giac",
+            "score": 0.896,
+            "question_excerpt": "Tam giác vuông có hai cạnh góc vuông dài 28 và 45, cạnh huyền 53. Tính bán kính đường tròn nội tiếp."
+          }
+        },
+        {
+          "new_example_excerpt": "Tam giác vuông có hai cạnh góc vuông dài 6 và 8, cạnh huyền dài 10. Tính bình phương bán kính đường tròn nội tiếp.",
+          "closest_prior_question": {
+            "id": 9695,
+            "grade": 10,
+            "topic": "he_thuc_luong_tam_giac",
+            "score": 0.896,
+            "question_excerpt": "Tam giác vuông có hai cạnh góc vuông dài 28 và 45, cạnh huyền 53. Tính bán kính đường tròn nội tiếp."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V213",
+      "group": "squared_sine_angle_line_plane",
+      "reason": "same_line_plane_angle_dot_norm",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Đường thẳng d có vectơ chỉ phương u=(1;2;1); mặt phẳng (P) có pháp tuyến n=(2;1;3). Tính sin² góc giữa d và (P).",
+          "closest_prior_question": {
+            "id": 8284,
+            "grade": 12,
+            "topic": "g12_geom_line_plane_angle",
+            "score": 0.7615,
+            "question_excerpt": "Đường thẳng d có vectơ chỉ phương u=(3;4;8), mặt phẳng (P): z=0. Tính sin² góc giữa d và (P)."
+          }
+        },
+        {
+          "new_example_excerpt": "Đường thẳng d có vectơ chỉ phương u=(2;2;3); mặt phẳng (P) có pháp tuyến n=(2;1;3). Tính sin² góc giữa d và (P).",
+          "closest_prior_question": {
+            "id": 8284,
+            "grade": 12,
+            "topic": "g12_geom_line_plane_angle",
+            "score": 0.7615,
+            "question_excerpt": "Đường thẳng d có vectơ chỉ phương u=(3;4;8), mặt phẳng (P): z=0. Tính sin² góc giữa d và (P)."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V213",
+      "group": "sum_first_n_squares_induction",
+      "reason": "same_natural_squares_sum",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Tính chính xác 1²+2²+...+5².",
+          "closest_prior_question": {
+            "id": 4037,
+            "grade": 11,
+            "topic": "day_so",
+            "score": 0.5928,
+            "question_excerpt": "Tính S=1²+2²+3²+…+22²."
+          }
+        },
+        {
+          "new_example_excerpt": "Tính chính xác 1²+2²+...+10².",
+          "closest_prior_question": {
+            "id": 4037,
+            "grade": 11,
+            "topic": "day_so",
+            "score": 0.5928,
+            "question_excerpt": "Tính S=1²+2²+3²+…+22²."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "discrete_half_life_remaining_quantity",
+      "reason": "same_halving_geometric_decay",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Một lượng chất ban đầu có khối lượng 1024 gam và cứ sau mỗi giờ còn đúng một nửa. Sau 2 giờ, khối lượng còn lại là bao nhiêu gam?",
+          "closest_prior_question": {
+            "id": 8885,
+            "grade": 12,
+            "topic": "bai_toan_thuc_te_12",
+            "score": 0.4971,
+            "question_excerpt": "Một lượng chất ban đầu có 32768 đơn vị, cứ sau mỗi chu kỳ bán rã lượng chất còn lại bằng một nửa. Sau 10 chu kỳ, còn bao nhiêu đơn vị?"
+          }
+        },
+        {
+          "new_example_excerpt": "Một lượng chất ban đầu có khối lượng 32768 gam và cứ sau mỗi giờ còn đúng một nửa. Sau 7 giờ, khối lượng còn lại là bao nhiêu gam?",
+          "closest_prior_question": {
+            "id": 8885,
+            "grade": 12,
+            "topic": "bai_toan_thuc_te_12",
+            "score": 0.4971,
+            "question_excerpt": "Một lượng chất ban đầu có 32768 đơn vị, cứ sau mỗi chu kỳ bán rã lượng chất còn lại bằng một nửa. Sau 10 chu kỳ, còn bao nhiêu đơn vị?"
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "fundamental_period_sine_affine_argument",
+      "reason": "same_sine_period_formula",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Hàm số f(x)=sin(2x+(-4)) có chu kỳ dương nhỏ nhất T. Tính T/π.",
+          "closest_prior_question": {
+            "id": 7883,
+            "grade": 11,
+            "topic": "ham_so_luong_giac",
+            "score": 0.7729,
+            "question_excerpt": "Hàm y=sin(8x+7) có chu kỳ dương nhỏ nhất T. Tính T/π."
+          }
+        },
+        {
+          "new_example_excerpt": "Hàm số f(x)=sin(7x+(1)) có chu kỳ dương nhỏ nhất T. Tính T/π.",
+          "closest_prior_question": {
+            "id": 7878,
+            "grade": 11,
+            "topic": "ham_so_luong_giac",
+            "score": 0.7763,
+            "question_excerpt": "Hàm y=sin(3x+2) có chu kỳ dương nhỏ nhất T. Tính T/π."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "homothety_nonorigin_center_x_coordinate",
+      "reason": "same_homothety_definition_extended_center",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Phép vị tự tâm C(-4;2), tỉ số k=-2 biến P(3;0) thành P′. Tính hoành độ P′.",
+          "closest_prior_question": {
+            "id": 8771,
+            "grade": 11,
+            "topic": "phep_bien_hinh_11",
+            "score": 0.7723,
+            "question_excerpt": "Phép vị tự tâm O, tỉ số k=6 biến P(5;11) thành P′. Tìm hoành độ P′."
+          }
+        },
+        {
+          "new_example_excerpt": "Phép vị tự tâm C(1;2), tỉ số k=-2 biến P(8;-5) thành P′. Tính hoành độ P′.",
+          "closest_prior_question": {
+            "id": 8772,
+            "grade": 11,
+            "topic": "phep_bien_hinh_11",
+            "score": 0.7726,
+            "question_excerpt": "Phép vị tự tâm O, tỉ số k=7 biến P(6;13) thành P′. Tìm hoành độ P′."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "parallel_lines_same_side_supplementary_angles",
+      "reason": "same_cointerior_parallel_angle",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Hai đường thẳng a và b song song, đường thẳng c cắt chúng. Một cặp góc trong cùng phía có góc thứ nhất 28°. Tính góc thứ hai (độ).",
+          "closest_prior_question": {
+            "id": 2721,
+            "grade": 10,
+            "topic": "g10_geom_angles_parallel",
+            "score": 0.4301,
+            "question_excerpt": "Hai đường thẳng song song a và b cắt bởi đường thẳng t. Hai góc trong cùng phía tạo với t gồm một góc 74°. Góc trong cùng phía còn lại bằng bao nhiêu độ?"
+          }
+        },
+        {
+          "new_example_excerpt": "Hai đường thẳng a và b song song, đường thẳng c cắt chúng. Một cặp góc trong cùng phía có góc thứ nhất 83°. Tính góc thứ hai (độ).",
+          "closest_prior_question": {
+            "id": 2721,
+            "grade": 10,
+            "topic": "g10_geom_angles_parallel",
+            "score": 0.4301,
+            "question_excerpt": "Hai đường thẳng song song a và b cắt bởi đường thẳng t. Hai góc trong cùng phía tạo với t gồm một góc 74°. Góc trong cùng phía còn lại bằng bao nhiêu độ?"
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "point_line_distance_squared_projection_3d",
+      "reason": "same_3d_point_line_distance_projection",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Cho điểm P(2, 1, 4) và đường thẳng d qua A(-4, 2, 1) theo vectơ u(1, 2, 1). Tính bình phương khoảng cách nhỏ nhất từ P đến d.",
+          "closest_prior_question": {
+            "id": 10199,
+            "grade": 12,
+            "topic": "g12_geom_min_distance_3d",
+            "score": 0.4934,
+            "question_excerpt": "Trong Oxyz, đường thẳng d qua O(0,0,0) có vectơ chỉ phương u=(1,2,2). Cho P(4,5,6). Tính bình phương khoảng cách từ P đến d."
+          }
+        },
+        {
+          "new_example_excerpt": "Cho điểm P(7, 6, 4) và đường thẳng d qua A(1, 2, -4) theo vectơ u(3, 2, 1). Tính bình phương khoảng cách nhỏ nhất từ P đến d.",
+          "closest_prior_question": {
+            "id": 10201,
+            "grade": 12,
+            "topic": "g12_geom_min_distance_3d",
+            "score": 0.4921,
+            "question_excerpt": "Trong Oxyz, đường thẳng d qua O(0,0,0) có vectơ chỉ phương u=(1,2,2). Cho P(6,3,3). Tính bình phương khoảng cách từ P đến d."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "point_translation_coordinate_action",
+      "reason": "same_vector_translation_coordinates",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Phép tịnh tiến theo vectơ v=(1;3) biến điểm M(-5;3) thành M′. Tìm hoành độ của M′.",
+          "closest_prior_question": {
+            "id": 2893,
+            "grade": 11,
+            "topic": "g11_geom_transform_translation",
+            "score": 0.8796,
+            "question_excerpt": "Phép tịnh tiến theo vectơ v=(11;14) biến điểm M(-12;15) thành M′. Hoành độ của M′ bằng bao nhiêu?"
+          }
+        },
+        {
+          "new_example_excerpt": "Phép tịnh tiến theo vectơ v=(1;-2) biến điểm M(0;13) thành M′. Tìm hoành độ của M′.",
+          "closest_prior_question": {
+            "id": 2892,
+            "grade": 11,
+            "topic": "g11_geom_transform_translation",
+            "score": 0.8786,
+            "question_excerpt": "Phép tịnh tiến theo vectơ v=(4;-15) biến điểm M(5;1) thành M′. Hoành độ của M′ bằng bao nhiêu?"
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "pyramid_edges_count_n_sided_base",
+      "reason": "same_pyramid_edges_count",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Hình chóp có đáy là đa giác 3 cạnh. Hỏi hình chóp có tất cả bao nhiêu cạnh?",
+          "closest_prior_question": {
+            "id": 4310,
+            "grade": 11,
+            "topic": "nhan_biet_hinh_khong_gian_11",
+            "score": 0.9316,
+            "question_excerpt": "Hình chóp có đáy là đa giác 16 cạnh. Hình chóp có tất cả bao nhiêu cạnh?"
+          }
+        },
+        {
+          "new_example_excerpt": "Hình chóp có đáy là đa giác 8 cạnh. Hỏi hình chóp có tất cả bao nhiêu cạnh?",
+          "closest_prior_question": {
+            "id": 4310,
+            "grade": 11,
+            "topic": "nhan_biet_hinh_khong_gian_11",
+            "score": 0.9316,
+            "question_excerpt": "Hình chóp có đáy là đa giác 16 cạnh. Hình chóp có tất cả bao nhiêu cạnh?"
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "pyramid_parallel_section_volume_ratio_cube",
+      "reason": "likely_same_pyramid_similarity_scaling_review",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Mặt phẳng (α) cắt hình chóp S.ABCD theo một tiết diện song song đáy tại các điểm cách đỉnh S một tỉ số 1/5 chiều cao. Tính tỉ số thể tích chóp nhỏ phía trên (α) so với chóp ban đầu.",
+          "closest_prior_question": {
+            "id": 9823,
+            "grade": 11,
+            "topic": "thiet_dien_hinh_khong_gian_11",
+            "score": 0.3693,
+            "question_excerpt": "Mặt phẳng song song với đáy cắt hình chóp, tạo hình chóp nhỏ cùng đỉnh có chiều cao 1; hình chóp lớn có chiều cao 5. Tính tỉ số thể tích hình chóp nhỏ so với hình chóp lớn."
+          }
+        },
+        {
+          "new_example_excerpt": "Mặt phẳng (α) cắt hình chóp S.ABCD theo một tiết diện song song đáy tại các điểm cách đỉnh S một tỉ số 2/10 chiều cao. Tính tỉ số thể tích chóp nhỏ phía trên (α) so với chóp ban đầu.",
+          "closest_prior_question": {
+            "id": 9823,
+            "grade": 11,
+            "topic": "thiet_dien_hinh_khong_gian_11",
+            "score": 0.3693,
+            "question_excerpt": "Mặt phẳng song song với đáy cắt hình chóp, tạo hình chóp nhỏ cùng đỉnh có chiều cao 1; hình chóp lớn có chiều cao 5. Tính tỉ số thể tích hình chóp nhỏ so với hình chóp lớn."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "quarter_turn_rotation_counterclockwise",
+      "reason": "same_quarter_turn_coordinate_transform",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Quay điểm M(-5;-2) quanh O(0;0) một góc 90° ngược chiều kim đồng hồ thu được M′. Hỏi hoành độ M′ bằng bao nhiêu?",
+          "closest_prior_question": {
+            "id": 6319,
+            "grade": 11,
+            "topic": "phep_bien_hinh_11",
+            "score": 0.6439,
+            "question_excerpt": "Quay điểm M(-3;-10) quanh O một góc 90° ngược chiều kim đồng hồ, được M′. Tính x_M′+y_M′."
+          }
+        },
+        {
+          "new_example_excerpt": "Quay điểm M(0;13) quanh O(0;0) một góc 90° ngược chiều kim đồng hồ thu được M′. Hỏi hoành độ M′ bằng bao nhiêu?",
+          "closest_prior_question": {
+            "id": 6318,
+            "grade": 11,
+            "topic": "phep_bien_hinh_11",
+            "score": 0.644,
+            "question_excerpt": "Quay điểm M(10;17) quanh O một góc 90° ngược chiều kim đồng hồ, được M′. Tính x_M′+y_M′."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "reflection_across_diagonal_y_equals_x",
+      "reason": "likely_same_coordinate_reflection_family_review",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Cho điểm M(-7;4). Phép đối xứng qua đường thẳng y=x biến M thành M′. Tính hoành độ của M′.",
+          "closest_prior_question": {
+            "id": 2917,
+            "grade": 11,
+            "topic": "g11_geom_transform_reflection",
+            "score": 0.5056,
+            "question_excerpt": "Lấy điểm M(-22;12) đối xứng qua đường thẳng y=x, thu được M′. Hoành độ của M′ là bao nhiêu?"
+          }
+        },
+        {
+          "new_example_excerpt": "Cho điểm M(8;14). Phép đối xứng qua đường thẳng y=x biến M thành M′. Tính hoành độ của M′.",
+          "closest_prior_question": {
+            "id": 2921,
+            "grade": 11,
+            "topic": "g11_geom_transform_reflection",
+            "score": 0.502,
+            "question_excerpt": "Lấy điểm M(6;24) đối xứng qua đường thẳng y=x, thu được M′. Hoành độ của M′ là bao nhiêu?"
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "slope_affine_function_two_points",
+      "reason": "same_two_point_slope",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Đường thẳng đi qua A(-7;-3) và B(-5;1) có hệ số góc k bằng bao nhiêu?",
+          "closest_prior_question": {
+            "id": 6153,
+            "grade": 10,
+            "topic": "duong_thang",
+            "score": 0.5761,
+            "question_excerpt": "Đường thẳng qua A(-8;8) và B(-17;-55). Tìm hệ số góc của đường thẳng."
+          }
+        },
+        {
+          "new_example_excerpt": "Đường thẳng đi qua A(-2;7) và B(0;26) có hệ số góc k bằng bao nhiêu?",
+          "closest_prior_question": {
+            "id": 3800,
+            "grade": 10,
+            "topic": "duong_thang",
+            "score": 0.544,
+            "question_excerpt": "Đường thẳng qua A(-4;-14) và B(2;34). Tìm hệ số góc của đường thẳng."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "sphere_general_equation_constant_term",
+      "reason": "same_sphere_equation_expansion",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Mặt cầu tâm I(-4;2;1), bán kính 2, có phương trình x²+y²+z²+Ax+By+Cz+D=0. Tìm hệ số D.",
+          "closest_prior_question": {
+            "id": 3281,
+            "grade": 12,
+            "topic": "g12_geom_sphere_equation",
+            "score": 0.6118,
+            "question_excerpt": "Mặt cầu có tâm I(-1;12;13) bán kính R=6. Viết dạng khai triển x²+y²+z²+Ax+By+Cz+D=0. Hỏi hệ số D bằng bao nhiêu?"
+          }
+        },
+        {
+          "new_example_excerpt": "Mặt cầu tâm I(1;-3;3), bán kính 3, có phương trình x²+y²+z²+Ax+By+Cz+D=0. Tìm hệ số D.",
+          "closest_prior_question": {
+            "id": 3277,
+            "grade": 12,
+            "topic": "g12_geom_sphere_equation",
+            "score": 0.6089,
+            "question_excerpt": "Mặt cầu có tâm I(7;-5;13) bán kính R=6. Viết dạng khai triển x²+y²+z²+Ax+By+Cz+D=0. Hỏi hệ số D bằng bao nhiêu?"
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "sphere_tangent_plane_axis_parallel",
+      "reason": "same_sphere_axis_tangent_plane",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Mặt cầu tâm I(-4;2;3), bán kính R=2. Gọi M(-2;2;3) thuộc mặt cầu. Mặt phẳng tiếp xúc tại M có dạng x+D=0. Tính D.",
+          "closest_prior_question": {
+            "id": 3368,
+            "grade": 12,
+            "topic": "g12_geom_sphere_tangent_plane",
+            "score": 0.6505,
+            "question_excerpt": "Mặt cầu tâm I(-5;6;0) bán kính 7; điểm T(2;6;0) nằm trên mặt cầu. Mặt phẳng tiếp xúc tại T có dạng X+D=0. Tìm D."
+          }
+        },
+        {
+          "new_example_excerpt": "Mặt cầu tâm I(1;7;-2), bán kính R=7. Gọi M(8;7;-2) thuộc mặt cầu. Mặt phẳng tiếp xúc tại M có dạng x+D=0. Tính D.",
+          "closest_prior_question": {
+            "id": 3389,
+            "grade": 12,
+            "topic": "g12_geom_sphere_tangent_plane",
+            "score": 0.6566,
+            "question_excerpt": "Mặt cầu tâm I(3;-9;8) bán kính 11; điểm T(14;-9;8) nằm trên mặt cầu. Mặt phẳng tiếp xúc tại T có dạng X+D=0. Tìm D."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "square_sequence_recursion_odd_increments",
+      "reason": "same_odd_increment_square_recurrence",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Dãy (uₙ) xác định bởi u₀=0, uₙ=uₙ₋₁+(2n−1) với n≥1. Tính u_5.",
+          "closest_prior_question": {
+            "id": 5569,
+            "grade": 11,
+            "topic": "day_so_tong_quat",
+            "score": 0.7095,
+            "question_excerpt": "Dãy số xác định u₁=1, uₙ=uₙ₋₁+(2n−1) với n≥2. Tính u_20."
+          }
+        },
+        {
+          "new_example_excerpt": "Dãy (uₙ) xác định bởi u₀=0, uₙ=uₙ₋₁+(2n−1) với n≥1. Tính u_10.",
+          "closest_prior_question": {
+            "id": 5569,
+            "grade": 11,
+            "topic": "day_so_tong_quat",
+            "score": 0.7095,
+            "question_excerpt": "Dãy số xác định u₁=1, uₙ=uₙ₋₁+(2n−1) với n≥2. Tính u_20."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "symmetric_sum_squares_from_sum_product",
+      "reason": "same_symmetric_polynomial_identity",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Cho hai số thực x,y thỏa x+y=-2, xy=-15. Tính x²+y² (không cần tìm riêng x,y).",
+          "closest_prior_question": {
+            "id": 10026,
+            "grade": 10,
+            "topic": "g10_symmetric_systems",
+            "score": 0.5885,
+            "question_excerpt": "Hai số thực x,y thỏa x+y=-5, xy=-84. Tính |x−y|."
+          }
+        },
+        {
+          "new_example_excerpt": "Cho hai số thực x,y thỏa x+y=13, xy=0. Tính x²+y² (không cần tìm riêng x,y).",
+          "closest_prior_question": {
+            "id": 10017,
+            "grade": 10,
+            "topic": "g10_symmetric_systems",
+            "score": 0.5283,
+            "question_excerpt": "Hai số thực x,y thỏa x+y=3, xy=-18. Tính |x−y|."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "tangent_chord_angle_equals_inscribed_angle",
+      "reason": "same_alternate_segment_tangent_chord",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Tại A thuộc đường tròn, tia At là một tiếp tuyến. Góc giữa tia At và dây AB ở phía chứa cung lớn AB được xác định cùng một cung AB với góc nội tiếp ACB=19°. Tính góc giữa At và AB tương ứng (độ).",
+          "closest_prior_question": {
+            "id": 4003,
+            "grade": 10,
+            "topic": "g10_geom_circle_tangent_chord",
+            "score": 0.3254,
+            "question_excerpt": "Đường tròn có tiếp tuyến tại A và dây AB. Một góc nội tiếp chắn cung AB bằng 35°. Góc nhọn giữa tiếp tuyến tại A và dây AB cùng chắn cung đó bằng bao nhiêu độ?"
+          }
+        },
+        {
+          "new_example_excerpt": "Tại A thuộc đường tròn, tia At là một tiếp tuyến. Góc giữa tia At và dây AB ở phía chứa cung lớn AB được xác định cùng một cung AB với góc nội tiếp ACB=49°. Tính góc giữa At và AB tương ứng (độ).",
+          "closest_prior_question": {
+            "id": 4003,
+            "grade": 10,
+            "topic": "g10_geom_circle_tangent_chord",
+            "score": 0.3254,
+            "question_excerpt": "Đường tròn có tiếp tuyến tại A và dây AB. Một góc nội tiếp chắn cung AB bằng 35°. Góc nhọn giữa tiếp tuyến tại A và dây AB cùng chắn cung đó bằng bao nhiêu độ?"
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "thales_parallel_cutting_triangle_side",
+      "reason": "same_thales_proportion",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Trong tam giác ABC, D nằm trên AB, E nằm trên AC, DE ∥ BC. Biết AB=8, AC=9, AD=2. Tính AE.",
+          "closest_prior_question": {
+            "id": 2425,
+            "grade": 10,
+            "topic": "g10_geom_thales_similarity",
+            "score": 0.4923,
+            "question_excerpt": "Trong tam giác ABC, D thuộc AB và E thuộc AC, DE ∥ BC. Biết AD=11, AB=88 và DE=11. Tính BC."
+          }
+        },
+        {
+          "new_example_excerpt": "Trong tam giác ABC, D nằm trên AB, E nằm trên AC, DE ∥ BC. Biết AB=13, AC=19, AD=2. Tính AE.",
+          "closest_prior_question": {
+            "id": 2425,
+            "grade": 10,
+            "topic": "g10_geom_thales_similarity",
+            "score": 0.4923,
+            "question_excerpt": "Trong tam giác ABC, D thuộc AB và E thuộc AC, DE ∥ BC. Biết AD=11, AB=88 và DE=11. Tính BC."
+          }
+        }
+      ]
+    },
+    {
+      "version": "V214",
+      "group": "third_triangle_side_integer_count",
+      "reason": "same_integer_triangle_inequality",
+      "quarantined_rows": 10,
+      "prior_comparison_examples": [
+        {
+          "new_example_excerpt": "Hai cạnh một tam giác có độ dài 3 và 6. Có bao nhiêu số nguyên dương c có thể là độ dài cạnh thứ ba?",
+          "closest_prior_question": {
+            "id": 7762,
+            "grade": 10,
+            "topic": "g10_geom_triangle_inequalities",
+            "score": 0.4935,
+            "question_excerpt": "Cho hai cạnh của một tam giác dài 9 và 17. Có bao nhiêu giá trị nguyên dương của cạnh thứ ba c để tam giác không suy biến?"
+          }
+        },
+        {
+          "new_example_excerpt": "Hai cạnh một tam giác có độ dài 8 và 11. Có bao nhiêu số nguyên dương c có thể là độ dài cạnh thứ ba?",
+          "closest_prior_question": {
+            "id": 7762,
+            "grade": 10,
+            "topic": "g10_geom_triangle_inequalities",
+            "score": 0.4935,
+            "question_excerpt": "Cho hai cạnh của một tam giác dài 9 và 17. Có bao nhiêu giá trị nguyên dương của cạnh thứ ba c để tam giác không suy biến?"
+          }
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "New 620 active questions still require full semantic distinction review and human proofreading.",
+    "No new fully certified independent mathematical types.",
+    "Website and Battle integration tests not executed.",
+    "V212-V214 historical reports remain in the archive but V215 supersedes their active-bank totals."
+  ]
+}

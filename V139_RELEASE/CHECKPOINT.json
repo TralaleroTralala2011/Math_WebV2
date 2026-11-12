@@ -1,0 +1,18 @@
+{
+  "version": "V139",
+  "base_archive": "MATH_WEB_GITHUB_READY_V138_EQUIVALENCE_AUDIT.zip",
+  "release_archive": "MATH_WEB_GITHUB_READY_V139_ANTI_REPEAT_RETRY_FIX.zip",
+  "status": "partial_not_final",
+  "new_certified_distinct_forms": 0,
+  "new_questions": 0,
+  "target_topics": 150,
+  "target_certified_forms_per_topic": 2000,
+  "target_certified_forms_total": 300000,
+  "target_verified_questions_total": 3000000,
+  "full_backend_previous_run_passed": 202,
+  "full_backend_previous_run_warnings": 6,
+  "latest_targeted_tests_passed": 10,
+  "qa_limitations": ["no browser-to-browser Battle E2E", "no semantic certification of forms", "no UI client integration of optional sequence key"],
+  "changed_runtime_files": ["backend/question_factory/storage.py", "backend/question_factory/api.py"],
+  "added_test_file": "backend/tests/test_v139_sequence_anti_repeat.py"
+}

@@ -1,0 +1,14 @@
+{
+  "version": "V105",
+  "base": "V104",
+  "new_type_ids": 8,
+  "new_questions": 80,
+  "total_type_ids": 33386,
+  "total_questions_main_bank": 333860,
+  "supplemental_questions_unchanged": 10000,
+  "independence_certified": false,
+  "scope": "8 distinct logic exercise families; each has 10 questions; no mathematical independence audit against all prior families",
+  "mathgeo": "V104 integration retained",
+  "target_new_type_ids_per_batch": 10000,
+  "target_total_type_ids": 300000
+}

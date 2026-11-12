@@ -1,0 +1,432 @@
+{
+  "blueprint_count": 60,
+  "question_count": 600,
+  "topics_touched": 55,
+  "questions_with_verified_math": 600,
+  "methods_independence_certified": 0,
+  "coarse_new_concept_groups": 54,
+  "human_approved_to_publish": 0,
+  "note": "All questions are review candidates, not authorized to leak into live games.",
+  "methods": [
+    {
+      "family": "set_intersection_from_union",
+      "topic_id": "tap_hop",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "set_difference_size",
+      "topic_id": "menh_de_tap_hop",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "set_symmetric_difference",
+      "topic_id": "tap_hop",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "set_power_set",
+      "topic_id": "menh_de_tap_hop",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "linear_inequality_bound",
+      "topic_id": "bat_phuong_trinh",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "quadratic_discriminant",
+      "topic_id": "phuong_trinh",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "quadratic_vertex_x",
+      "topic_id": "ham_so_bac_hai",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "quadratic_vertex_y",
+      "topic_id": "ham_so_bac_hai",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "system_sum_solution",
+      "topic_id": "he_phuong_trinh",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "polynomial_remainder",
+      "topic_id": "phuong_trinh_he",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "circle_area",
+      "topic_id": "duong_tron",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "circle_circumference",
+      "topic_id": "duong_tron_co_ban_10",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "circle_sector_area",
+      "topic_id": "g10_geom_circle_angles",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "circle_arc_length",
+      "topic_id": "g10_geom_circle_chords_arcs",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "pythagoras_hypotenuse",
+      "topic_id": "he_thuc_luong_tam_giac",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "pythagoras_missing_leg",
+      "topic_id": "tam_giac_tu_giac_10",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "trapezoid_area",
+      "topic_id": "hinh_hoc_co_ban_10",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "heron_area",
+      "topic_id": "he_thuc_luong_van_dung_10",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "cosine_rule_side_square",
+      "topic_id": "he_thuc_luong",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "midpoint_x_2d",
+      "topic_id": "g10_geom_coordinate_distance_midpoint",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "distance_2d",
+      "topic_id": "toa_do_phang",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "slope_2d",
+      "topic_id": "duong_thang",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "line_intersection_x",
+      "topic_id": "g10_geom_line_intersections",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "vector_dot_2d",
+      "topic_id": "vector",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "vector_norm_sq_2d",
+      "topic_id": "g10_geom_vector_proofs",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "parallelogram_area_det",
+      "topic_id": "g10_geom_quadrilaterals_properties",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "triangle_area_coords",
+      "topic_id": "hinh_hoc_10",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "binomial_coefficient",
+      "topic_id": "nhi_thuc_newton",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "permutation_count",
+      "topic_id": "quy_tac_dem",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "combination_count",
+      "topic_id": "hoan_vi_chinh_hop_to_hop",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "classical_probability",
+      "topic_id": "xac_suat",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "urn_two_success",
+      "topic_id": "g10_combinatorics_olympiad",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "arithmetic_mean",
+      "topic_id": "thong_ke",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "population_variance",
+      "topic_id": "thong_ke",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "geometric_sequence_nth",
+      "topic_id": "cap_so_nhan",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "geometric_sequence_sum",
+      "topic_id": "day_so",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "polynomial_limit",
+      "topic_id": "gioi_han",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "derivative_power_at",
+      "topic_id": "dao_ham_quy_tac",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "quadratic_second_derivative",
+      "topic_id": "ung_dung_dao_ham_11",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "conditional_probability",
+      "topic_id": "bien_co_doc_lap_11",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "special_angle_sine",
+      "topic_id": "gia_tri_luong_giac",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "trig_pythagorean_cos2",
+      "topic_id": "cong_thuc_luong_giac",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "exponential_equation",
+      "topic_id": "pt_mu",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "logarithm_equation",
+      "topic_id": "pt_logarit",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "logarithm_power",
+      "topic_id": "ham_logarit",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "complex_modulus_squared",
+      "topic_id": "so_phuc",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "complex_add_real",
+      "topic_id": "bieu_dien_so_phuc",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "complex_multiply_imag",
+      "topic_id": "pt_so_phuc",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "integral_monomial",
+      "topic_id": "nguyen_ham_tich_phan",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "integral_mean_value",
+      "topic_id": "ung_dung_tich_phan",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "cylinder_volume",
+      "topic_id": "hinh_khoi_va_the_tich_co_ban_12",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "cone_volume",
+      "topic_id": "the_tich_khong_gian",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "sphere_volume",
+      "topic_id": "mat_cau",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "cylinder_surface_area",
+      "topic_id": "g12_geom_solid_surface_area",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "sphere_surface_area",
+      "topic_id": "hinh_hoc_khong_gian",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "point_plane_distance",
+      "topic_id": "g12_geom_point_plane_distance",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "vector_dot_3d",
+      "topic_id": "g12_geom_vectors_3d",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "midpoint_z_3d",
+      "topic_id": "toa_do_khong_gian",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "sphere_radius_from_eq",
+      "topic_id": "g12_geom_sphere_equation",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    },
+    {
+      "family": "box_volume",
+      "topic_id": "hinh_khoi_va_the_tich_co_ban_12",
+      "count": 10,
+      "validation": "symbolically-verified",
+      "method_independence": "not-certified"
+    }
+  ]
+}

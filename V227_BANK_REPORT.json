@@ -1,0 +1,25 @@
+{
+  "version": "V227",
+  "base": "V226",
+  "base_count": 14696,
+  "new_questions": 100,
+  "final_count": 14796,
+  "candidate_methods": 10,
+  "certified_independent_types": 0,
+  "limitations": "No full semantic deduplication or full website regression; 100 candidate questions with exact answers and worked solutions. 10 candidate methods, not certified independent.",
+  "topics": [
+    "10:chia_het",
+    "10:he_thuc_luong",
+    "10:phuong_trinh_bac_hai",
+    "10:tap_hop",
+    "11:cap_so_nhan",
+    "11:dao_ham",
+    "11:xac_suat_11",
+    "12:so_phuc",
+    "12:thong_ke_12",
+    "12:toa_do_khong_gian"
+  ],
+  "question_types": {
+    "multiple_choice": 100
+  }
+}

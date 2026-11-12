@@ -1,0 +1,15 @@
+{
+  "base": "BATCH_07",
+  "new_topics": [
+    "g10_geom_quadrilaterals_properties",
+    "g10_geom_circle_angles",
+    "g10_geom_line_intersections",
+    "g11_geom_transform_translation",
+    "g12_geom_vectors_3d",
+    "g12_geom_plane_equation"
+  ],
+  "new_questions": 60,
+  "topics_with_quiz": 42,
+  "tests": "schema, unique multiple choice options, correct index, answer explanations, zip CRC",
+  "limitations": "No browser integration test, no verified video, no claim of full math review."
+}

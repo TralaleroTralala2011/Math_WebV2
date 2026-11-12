@@ -1,0 +1,5812 @@
+[
+  {
+    "id": "v184_set_intersection_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_set_intersection_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_set_intersection_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_set_intersection_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_set_intersection_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_set_intersection_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_set_intersection_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_set_intersection_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_set_intersection_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_set_intersection_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_count_outfits_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_count_outfits_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_count_outfits_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_count_outfits_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_count_outfits_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_count_outfits_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_count_outfits_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_count_outfits_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_count_outfits_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_count_outfits_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_divisibility_truth_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_divisibility_truth_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_divisibility_truth_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_divisibility_truth_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_divisibility_truth_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_divisibility_truth_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_divisibility_truth_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_divisibility_truth_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_divisibility_truth_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_divisibility_truth_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_linear_system_sum_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_linear_system_sum_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_linear_system_sum_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_linear_system_sum_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_linear_system_sum_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_linear_system_sum_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_linear_system_sum_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_linear_system_sum_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_linear_system_sum_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_linear_system_sum_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cosine_law_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cosine_law_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cosine_law_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cosine_law_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cosine_law_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cosine_law_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cosine_law_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cosine_law_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cosine_law_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cosine_law_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_slope_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_slope_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_slope_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_slope_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_slope_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_slope_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_slope_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_slope_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_slope_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_slope_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_tangent_length_squared_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_tangent_length_squared_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_tangent_length_squared_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_tangent_length_squared_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_tangent_length_squared_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_tangent_length_squared_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_tangent_length_squared_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_tangent_length_squared_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_tangent_length_squared_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_tangent_length_squared_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pythagorean_squared_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pythagorean_squared_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pythagorean_squared_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pythagorean_squared_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pythagorean_squared_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pythagorean_squared_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pythagorean_squared_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pythagorean_squared_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pythagorean_squared_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pythagorean_squared_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_linear_breakeven_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_linear_breakeven_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_linear_breakeven_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_linear_breakeven_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_linear_breakeven_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_linear_breakeven_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_linear_breakeven_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_linear_breakeven_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_linear_breakeven_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_linear_breakeven_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_trapezoid_area_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_trapezoid_area_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_trapezoid_area_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_trapezoid_area_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_trapezoid_area_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_trapezoid_area_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_trapezoid_area_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_trapezoid_area_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_trapezoid_area_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_trapezoid_area_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_inscribed_angle_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_inscribed_angle_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_inscribed_angle_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_inscribed_angle_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_inscribed_angle_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_inscribed_angle_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_inscribed_angle_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_inscribed_angle_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_inscribed_angle_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_inscribed_angle_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_distance_squared_2d_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_distance_squared_2d_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_distance_squared_2d_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_distance_squared_2d_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_distance_squared_2d_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_distance_squared_2d_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_distance_squared_2d_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_distance_squared_2d_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_distance_squared_2d_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_distance_squared_2d_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sas_matching_side_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sas_matching_side_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sas_matching_side_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sas_matching_side_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sas_matching_side_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sas_matching_side_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sas_matching_side_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sas_matching_side_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sas_matching_side_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sas_matching_side_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_midpoint_sum_2d_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_midpoint_sum_2d_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_midpoint_sum_2d_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_midpoint_sum_2d_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_midpoint_sum_2d_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_midpoint_sum_2d_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_midpoint_sum_2d_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_midpoint_sum_2d_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_midpoint_sum_2d_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_midpoint_sum_2d_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_perp_bisector_vertical_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_perp_bisector_vertical_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_perp_bisector_vertical_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_perp_bisector_vertical_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_perp_bisector_vertical_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_perp_bisector_vertical_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_perp_bisector_vertical_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_perp_bisector_vertical_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_perp_bisector_vertical_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_perp_bisector_vertical_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_tangent_chord_angle_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_tangent_chord_angle_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_tangent_chord_angle_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_tangent_chord_angle_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_tangent_chord_angle_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_tangent_chord_angle_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_tangent_chord_angle_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_tangent_chord_angle_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_tangent_chord_angle_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_tangent_chord_angle_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_symmetric_difference_squared_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_symmetric_difference_squared_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_symmetric_difference_squared_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_symmetric_difference_squared_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_symmetric_difference_squared_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_symmetric_difference_squared_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_symmetric_difference_squared_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_symmetric_difference_squared_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_symmetric_difference_squared_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_symmetric_difference_squared_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sum_square_sequence_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sum_square_sequence_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sum_square_sequence_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sum_square_sequence_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sum_square_sequence_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sum_square_sequence_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sum_square_sequence_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sum_square_sequence_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sum_square_sequence_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sum_square_sequence_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_removable_limit_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_removable_limit_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_removable_limit_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_removable_limit_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_removable_limit_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_removable_limit_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_removable_limit_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_removable_limit_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_removable_limit_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_removable_limit_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_prism_edges_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_edges_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_edges_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_edges_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_edges_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_edges_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_edges_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_edges_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_prism_edges_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_prism_edges_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_two_red_without_replacement_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_two_red_without_replacement_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_two_red_without_replacement_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_two_red_without_replacement_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_two_red_without_replacement_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_two_red_without_replacement_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_two_red_without_replacement_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_two_red_without_replacement_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_two_red_without_replacement_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_two_red_without_replacement_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cos_from_sin_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cos_from_sin_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cos_from_sin_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cos_from_sin_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cos_from_sin_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cos_from_sin_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cos_from_sin_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cos_from_sin_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cos_from_sin_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cos_from_sin_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cos_double_angle_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cos_double_angle_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cos_double_angle_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cos_double_angle_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cos_double_angle_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cos_double_angle_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cos_double_angle_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cos_double_angle_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cos_double_angle_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cos_double_angle_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sine_zero_count_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sine_zero_count_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sine_zero_count_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sine_zero_count_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sine_zero_count_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sine_zero_count_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sine_zero_count_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sine_zero_count_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sine_zero_count_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sine_zero_count_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cosine_one_count_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cosine_one_count_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cosine_one_count_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cosine_one_count_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cosine_one_count_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cosine_one_count_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cosine_one_count_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cosine_one_count_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cosine_one_count_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cosine_one_count_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_odd_increment_recurrence_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_odd_increment_recurrence_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_odd_increment_recurrence_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_odd_increment_recurrence_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_odd_increment_recurrence_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_odd_increment_recurrence_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_odd_increment_recurrence_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_odd_increment_recurrence_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_odd_increment_recurrence_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_odd_increment_recurrence_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_product_rule_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_product_rule_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_product_rule_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_product_rule_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_product_rule_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_product_rule_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_product_rule_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_product_rule_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_product_rule_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_product_rule_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_normal_slope_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_normal_slope_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_normal_slope_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_normal_slope_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_normal_slope_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_normal_slope_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_normal_slope_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_normal_slope_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_normal_slope_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_normal_slope_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_compound_growth_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_compound_growth_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_compound_growth_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_compound_growth_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_compound_growth_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_compound_growth_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_compound_growth_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_compound_growth_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_compound_growth_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_compound_growth_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_rotation_90_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_rotation_90_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_rotation_90_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_rotation_90_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_rotation_90_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_rotation_90_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_rotation_90_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_rotation_90_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_rotation_90_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_rotation_90_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pyramid_edges_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_edges_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_edges_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_edges_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_edges_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_edges_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_edges_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_edges_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pyramid_edges_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pyramid_edges_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_parallel_planes_distance_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallel_planes_distance_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallel_planes_distance_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallel_planes_distance_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallel_planes_distance_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallel_planes_distance_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallel_planes_distance_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallel_planes_distance_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_parallel_planes_distance_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_parallel_planes_distance_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_skew_perpendicular_distance_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_skew_perpendicular_distance_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_skew_perpendicular_distance_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_skew_perpendicular_distance_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_skew_perpendicular_distance_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_skew_perpendicular_distance_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_skew_perpendicular_distance_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_skew_perpendicular_distance_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_skew_perpendicular_distance_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_skew_perpendicular_distance_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_affine_recurrence_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_affine_recurrence_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_affine_recurrence_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_affine_recurrence_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_affine_recurrence_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_affine_recurrence_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_affine_recurrence_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_affine_recurrence_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_affine_recurrence_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_affine_recurrence_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_binomial_coefficient_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_binomial_coefficient_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_binomial_coefficient_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_binomial_coefficient_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_binomial_coefficient_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_binomial_coefficient_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_binomial_coefficient_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_binomial_coefficient_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_binomial_coefficient_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_binomial_coefficient_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_conditional_count_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_conditional_count_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_conditional_count_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_conditional_count_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_conditional_count_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_conditional_count_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_conditional_count_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_conditional_count_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_conditional_count_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_conditional_count_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_quadratic_stationary_point_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_quadratic_stationary_point_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_quadratic_stationary_point_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_quadratic_stationary_point_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_quadratic_stationary_point_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_quadratic_stationary_point_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_quadratic_stationary_point_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_quadratic_stationary_point_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_quadratic_stationary_point_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_quadratic_stationary_point_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cubic_stationary_count_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cubic_stationary_count_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cubic_stationary_count_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cubic_stationary_count_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cubic_stationary_count_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cubic_stationary_count_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cubic_stationary_count_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_cubic_stationary_count_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cubic_stationary_count_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_cubic_stationary_count_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_prism_volume_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_volume_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_volume_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_volume_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_volume_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_volume_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_volume_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_volume_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_prism_volume_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_prism_volume_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_discrete_expectation_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_discrete_expectation_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_discrete_expectation_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_discrete_expectation_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_discrete_expectation_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_discrete_expectation_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_discrete_expectation_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_discrete_expectation_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_discrete_expectation_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_discrete_expectation_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_population_variance_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_population_variance_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_population_variance_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_population_variance_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_population_variance_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_population_variance_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_population_variance_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_population_variance_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_population_variance_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_population_variance_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_parabola_minimum_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parabola_minimum_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parabola_minimum_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parabola_minimum_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parabola_minimum_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parabola_minimum_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parabola_minimum_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parabola_minimum_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_parabola_minimum_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_parabola_minimum_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_parabola_intersections_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_parabola_intersections_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_parabola_intersections_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_parabola_intersections_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_parabola_intersections_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_parabola_intersections_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_parabola_intersections_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_parabola_intersections_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_parabola_intersections_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_parabola_intersections_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_exponential_growth_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_exponential_growth_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_exponential_growth_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_exponential_growth_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_exponential_growth_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_exponential_growth_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_exponential_growth_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_exponential_growth_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_exponential_growth_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_exponential_growth_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_logarithm_of_power_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_logarithm_of_power_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_logarithm_of_power_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_logarithm_of_power_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_logarithm_of_power_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_logarithm_of_power_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_logarithm_of_power_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_logarithm_of_power_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_logarithm_of_power_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_logarithm_of_power_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_plane_normal_sum_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_normal_sum_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_normal_sum_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_normal_sum_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_normal_sum_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_normal_sum_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_normal_sum_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_normal_sum_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_plane_normal_sum_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_plane_normal_sum_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_parametric_point_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_parametric_point_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_parametric_point_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_parametric_point_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_parametric_point_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_parametric_point_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_parametric_point_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_parametric_point_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_parametric_point_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_parametric_point_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sphere_radius_squared_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sphere_radius_squared_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sphere_radius_squared_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sphere_radius_squared_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sphere_radius_squared_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sphere_radius_squared_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sphere_radius_squared_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sphere_radius_squared_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sphere_radius_squared_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sphere_radius_squared_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_axis_plane_distance_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_axis_plane_distance_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_axis_plane_distance_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_axis_plane_distance_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_axis_plane_distance_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_axis_plane_distance_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_axis_plane_distance_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_axis_plane_distance_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_axis_plane_distance_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_axis_plane_distance_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pyramid_volume_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_volume_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_volume_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_volume_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_volume_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_volume_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_volume_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_volume_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pyramid_volume_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pyramid_volume_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_profit_maximum_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_profit_maximum_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_profit_maximum_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_profit_maximum_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_profit_maximum_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_profit_maximum_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_profit_maximum_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_profit_maximum_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_profit_maximum_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_profit_maximum_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_direction_sum_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_direction_sum_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_direction_sum_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_direction_sum_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_direction_sum_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_direction_sum_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_direction_sum_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_direction_sum_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_direction_sum_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_direction_sum_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_point_plane_345_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_point_plane_345_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_point_plane_345_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_point_plane_345_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_point_plane_345_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_point_plane_345_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_point_plane_345_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_point_plane_345_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_point_plane_345_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_point_plane_345_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_plane_parameter_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_parameter_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_parameter_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_parameter_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_parameter_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_parameter_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_parameter_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_parameter_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_plane_parameter_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_plane_parameter_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_distance_to_axis_min_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_distance_to_axis_min_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_distance_to_axis_min_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_distance_to_axis_min_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_distance_to_axis_min_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_distance_to_axis_min_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_distance_to_axis_min_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_distance_to_axis_min_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_distance_to_axis_min_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_distance_to_axis_min_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_integral_maximum_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_integral_maximum_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_integral_maximum_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_integral_maximum_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_integral_maximum_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_integral_maximum_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_integral_maximum_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_integral_maximum_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_integral_maximum_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_integral_maximum_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_revolution_cone_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_revolution_cone_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_revolution_cone_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_revolution_cone_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_revolution_cone_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_revolution_cone_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_revolution_cone_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_revolution_cone_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_revolution_cone_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_revolution_cone_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sine_rule_diameter_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sine_rule_diameter_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sine_rule_diameter_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sine_rule_diameter_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sine_rule_diameter_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sine_rule_diameter_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sine_rule_diameter_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_sine_rule_diameter_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sine_rule_diameter_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_sine_rule_diameter_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_triangle_midsegment_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_triangle_midsegment_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_triangle_midsegment_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_triangle_midsegment_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_triangle_midsegment_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_triangle_midsegment_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_triangle_midsegment_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_triangle_midsegment_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_triangle_midsegment_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_triangle_midsegment_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_parallelogram_fourth_vertex_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallelogram_fourth_vertex_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallelogram_fourth_vertex_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallelogram_fourth_vertex_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallelogram_fourth_vertex_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallelogram_fourth_vertex_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallelogram_fourth_vertex_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallelogram_fourth_vertex_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_parallelogram_fourth_vertex_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_parallelogram_fourth_vertex_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_circle_vertical_chord_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_circle_vertical_chord_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_circle_vertical_chord_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_circle_vertical_chord_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_circle_vertical_chord_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_circle_vertical_chord_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_circle_vertical_chord_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_circle_vertical_chord_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_circle_vertical_chord_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_circle_vertical_chord_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_parallel_line_plane_distance_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallel_line_plane_distance_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallel_line_plane_distance_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallel_line_plane_distance_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallel_line_plane_distance_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallel_line_plane_distance_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallel_line_plane_distance_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_parallel_line_plane_distance_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_parallel_line_plane_distance_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_parallel_line_plane_distance_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_perpendicular_vectors_parameter_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_perpendicular_vectors_parameter_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_perpendicular_vectors_parameter_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_perpendicular_vectors_parameter_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_perpendicular_vectors_parameter_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_perpendicular_vectors_parameter_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_perpendicular_vectors_parameter_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_perpendicular_vectors_parameter_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_perpendicular_vectors_parameter_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_perpendicular_vectors_parameter_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_space_point_plane_distance_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_space_point_plane_distance_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_space_point_plane_distance_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_space_point_plane_distance_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_space_point_plane_distance_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_space_point_plane_distance_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_space_point_plane_distance_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_space_point_plane_distance_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_space_point_plane_distance_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_space_point_plane_distance_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pyramid_parallel_section_area_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_parallel_section_area_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_parallel_section_area_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_parallel_section_area_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_parallel_section_area_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_parallel_section_area_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_parallel_section_area_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_parallel_section_area_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pyramid_parallel_section_area_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pyramid_parallel_section_area_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_savings_arithmetic_total_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_savings_arithmetic_total_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_savings_arithmetic_total_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_savings_arithmetic_total_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_savings_arithmetic_total_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_savings_arithmetic_total_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_savings_arithmetic_total_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_savings_arithmetic_total_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_savings_arithmetic_total_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_savings_arithmetic_total_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_reflection_x_axis_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_reflection_x_axis_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_reflection_x_axis_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_reflection_x_axis_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_reflection_x_axis_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_reflection_x_axis_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_reflection_x_axis_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_reflection_x_axis_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_reflection_x_axis_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_reflection_x_axis_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_plane_intercept_evaluation_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_intercept_evaluation_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_intercept_evaluation_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_intercept_evaluation_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_intercept_evaluation_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_intercept_evaluation_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_intercept_evaluation_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_intercept_evaluation_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_plane_intercept_evaluation_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_plane_intercept_evaluation_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_direction_parallel_plane_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_direction_parallel_plane_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_direction_parallel_plane_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_direction_parallel_plane_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_direction_parallel_plane_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_direction_parallel_plane_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_direction_parallel_plane_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_direction_parallel_plane_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_direction_parallel_plane_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_direction_parallel_plane_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_direction_normal_plane_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_direction_normal_plane_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_direction_normal_plane_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_direction_normal_plane_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_direction_normal_plane_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_direction_normal_plane_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_direction_normal_plane_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_direction_normal_plane_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_direction_normal_plane_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_direction_normal_plane_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_plane_sine_angle_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_plane_sine_angle_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_plane_sine_angle_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_plane_sine_angle_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_plane_sine_angle_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_plane_sine_angle_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_plane_sine_angle_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_plane_sine_angle_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_plane_sine_angle_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_plane_sine_angle_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_prism_horizontal_section_perimeter_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_horizontal_section_perimeter_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_horizontal_section_perimeter_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_horizontal_section_perimeter_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_horizontal_section_perimeter_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_horizontal_section_perimeter_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_horizontal_section_perimeter_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_prism_horizontal_section_perimeter_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_prism_horizontal_section_perimeter_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_prism_horizontal_section_perimeter_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_three_perpendicular_distance_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_three_perpendicular_distance_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_three_perpendicular_distance_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_three_perpendicular_distance_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_three_perpendicular_distance_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_three_perpendicular_distance_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_three_perpendicular_distance_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_three_perpendicular_distance_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_three_perpendicular_distance_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_three_perpendicular_distance_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pyramid_section_perimeter_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_section_perimeter_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_section_perimeter_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_section_perimeter_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_section_perimeter_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_section_perimeter_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_section_perimeter_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_pyramid_section_perimeter_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pyramid_section_perimeter_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_pyramid_section_perimeter_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_orthogonal_basis_proof_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_orthogonal_basis_proof_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_orthogonal_basis_proof_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_orthogonal_basis_proof_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_orthogonal_basis_proof_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_orthogonal_basis_proof_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_orthogonal_basis_proof_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_orthogonal_basis_proof_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_orthogonal_basis_proof_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_orthogonal_basis_proof_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_intercept_triangle_area_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_intercept_triangle_area_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_intercept_triangle_area_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_intercept_triangle_area_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_intercept_triangle_area_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_intercept_triangle_area_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_intercept_triangle_area_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_intercept_triangle_area_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_intercept_triangle_area_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_intercept_triangle_area_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_reflection_horizontal_plane_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_reflection_horizontal_plane_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_reflection_horizontal_plane_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_reflection_horizontal_plane_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_reflection_horizontal_plane_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_reflection_horizontal_plane_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_reflection_horizontal_plane_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_reflection_horizontal_plane_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_reflection_horizontal_plane_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_reflection_horizontal_plane_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_plane_plane_cosine_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_plane_cosine_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_plane_cosine_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_plane_cosine_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_plane_cosine_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_plane_cosine_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_plane_cosine_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_plane_plane_cosine_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_plane_plane_cosine_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_plane_plane_cosine_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_skew_vs_intersect_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_skew_vs_intersect_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_skew_vs_intersect_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_skew_vs_intersect_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_skew_vs_intersect_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_skew_vs_intersect_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_skew_vs_intersect_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_skew_vs_intersect_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_skew_vs_intersect_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_skew_vs_intersect_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_distance_min_squared_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_distance_min_squared_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_distance_min_squared_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_distance_min_squared_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_distance_min_squared_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_distance_min_squared_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_distance_min_squared_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_line_distance_min_squared_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_distance_min_squared_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_line_distance_min_squared_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_radical_extraneous_root_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_radical_extraneous_root_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_radical_extraneous_root_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_radical_extraneous_root_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_radical_extraneous_root_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_radical_extraneous_root_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_radical_extraneous_root_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_radical_extraneous_root_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_radical_extraneous_root_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_radical_extraneous_root_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_advanced_sin_double_count_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_advanced_sin_double_count_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_advanced_sin_double_count_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_advanced_sin_double_count_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_advanced_sin_double_count_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_advanced_sin_double_count_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_advanced_sin_double_count_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_advanced_sin_double_count_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_advanced_sin_double_count_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_advanced_sin_double_count_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_complex_circle_max_real_001",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_complex_circle_max_real_002",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_complex_circle_max_real_003",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_complex_circle_max_real_004",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_complex_circle_max_real_005",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_complex_circle_max_real_006",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_complex_circle_max_real_007",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": true
+  },
+  {
+    "id": "v184_complex_circle_max_real_008",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_complex_circle_max_real_009",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  },
+  {
+    "id": "v184_complex_circle_max_real_010",
+    "oracle_pass": true,
+    "unique_prompt": true,
+    "answer_in_solution": true,
+    "unique_mcq": null
+  }
+]

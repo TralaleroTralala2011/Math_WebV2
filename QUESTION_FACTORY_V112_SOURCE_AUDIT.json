@@ -1,0 +1,116 @@
+{
+  "scope": "structural and exact linear-equation checks; NOT independent-form certification",
+  "source_bank": "verified_seed_bank.jsonl",
+  "source_question_rows": 344280,
+  "invalid_json_rows": 0,
+  "rows_missing_required_fields": 0,
+  "duplicate_stems_by_grade_and_topic": 0,
+  "solutions_under_25_characters": 10303,
+  "rows_without_proof_field": 240300,
+  "valid_linear_proofs": 10,
+  "invalid_linear_proofs": 0,
+  "grade_topic_pairs": 140,
+  "canonical_topic_count": 150,
+  "canonical_grade_title_matches": 89,
+  "grouped_form_signatures": 11464,
+  "signature_groups_with_at_least_10_rows": 11464,
+  "distinct_grade_topic_family_ids": 34428,
+  "top_family_groups": [
+    {
+      "grade": 10,
+      "topic": "Phương trình",
+      "family": "linear_isolate",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc nhất",
+      "family": "inverse_linear_model",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "family": "quadratic_vieta_roots",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Hệ phương trình",
+      "family": "system_sum_difference",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Đường tròn",
+      "family": "circle_area_from_radius",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "family": "arithmetic_sequence_nth",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "family": "geometric_sequence_nth",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "family": "derivative_quadratic_at_point",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "family": "definite_integral_linear",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "family": "vector_norm_squared_3d",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "family": "set_union_count",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Vectơ",
+      "family": "vector_dot_product_2d",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "family": "mean_from_frequency",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "family": "quadratic_vertex_abscissa",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Bất phương trình",
+      "family": "linear_inequality_boundary",
+      "questions": 10
+    }
+  ],
+  "type_statuses": {
+    "unspecified": 334280,
+    "structural_variant_requires_method_independence_review": 10000
+  },
+  "certified_independent_form_count": null,
+  "note": "An ID or parameter variation never establishes a genuinely new problem type."
+}

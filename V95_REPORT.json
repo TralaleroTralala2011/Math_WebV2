@@ -1,0 +1,21 @@
+{
+  "version": "V95",
+  "base": "V94",
+  "fixes": [
+    "Allow point-only geometry imports rather than requiring at least one segment or circle",
+    "Detect invalid geometry fit scale",
+    "Detect synthetic circle center name collision",
+    "Add reproducible ZIP and bank smoke test script"
+  ],
+  "new_form_ids": 0,
+  "new_questions": 0,
+  "total_form_ids": 33378,
+  "total_questions": 333780,
+  "browser_tested": false,
+  "independent_types_certified": 0,
+  "remaining": [
+    "Live browser and Battle/Admin integration testing",
+    "Geometry parsing from natural-language givens",
+    "10,000 mathematically independent types per batch"
+  ]
+}

@@ -1,0 +1,8 @@
+/* NEON V15: evidence-aware placement status and mobile review. */
+.mw-v15-provisional{margin-top:18px!important;border-color:#e8b563!important;background:linear-gradient(125deg,#221d3b,#152742)!important;box-shadow:0 8px 28px #0003}
+.mw-v15-provisional h2{color:#ffdd91!important}
+.mw-v15-provisional .mw-v15-evidence{font-weight:700;color:#8cf3f4!important}
+#mw-v5-roadmap .mw-v5-review article{overflow-wrap:anywhere}
+#mw-v5-roadmap .mw-v5-options button{min-height:48px;text-align:left;white-space:normal;overflow-wrap:anywhere}
+#mw-v5-roadmap .mw-v5-card{max-width:100%;min-width:0}
+@media(max-width:640px){#mw-v5-roadmap .mw-v5-row{flex-wrap:wrap}#mw-v5-roadmap .mw-v5-options{grid-template-columns:1fr!important}#mw-v5-roadmap .mw-v5-review article{padding:12px!important}#mw-v5-roadmap .mw-v5-kpi{font-size:clamp(20px,6vw,28px)}}

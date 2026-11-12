@@ -1,0 +1,17 @@
+{
+  "version": "V201",
+  "new_candidates": 20,
+  "math_oracle_checked": 200,
+  "grades": {
+    "10": 80,
+    "11": 40,
+    "12": 80
+  },
+  "formats": {
+    "multiple_choice": 140,
+    "short_answer": 40,
+    "true_false": 20
+  },
+  "independent_certified": 0,
+  "production_deployed": false
+}

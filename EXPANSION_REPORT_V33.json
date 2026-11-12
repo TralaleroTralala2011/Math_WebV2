@@ -1,0 +1,240 @@
+{
+  "version": "V33",
+  "base": "V32",
+  "added_form_ids": 34,
+  "added_questions": 340,
+  "total_form_ids": 821,
+  "total_questions": 8220,
+  "by_grade": {
+    "10": 120,
+    "11": 120,
+    "12": 100
+  },
+  "forms": [
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v33_two_sets_symmetric_difference",
+      "signature": "cardinality symmetric difference two sets"
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v33_cartesian_product",
+      "signature": "cardinality of cartesian product"
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v33_root_difference_squared",
+      "signature": "squared difference of roots using discriminant"
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v33_root_cubes_sum",
+      "signature": "sum cubes roots via vieta"
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "form_id": "v33_quadratic_sign_interval",
+      "signature": "quadratic sign interval between roots"
+    },
+    {
+      "grade": 10,
+      "topic": "Vectơ",
+      "form_id": "v33_vector_parallelogram_identity",
+      "signature": "parallelogram vector squared norm identity"
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v33_line_intersection",
+      "signature": "intersection of two axis aligned lines"
+    },
+    {
+      "grade": 10,
+      "topic": "Đường tròn",
+      "form_id": "v33_central_angle_chord",
+      "signature": "chord length central angle sixty"
+    },
+    {
+      "grade": 10,
+      "topic": "Quy tắc đếm",
+      "form_id": "v33_permutation_repeated_letters",
+      "signature": "multiset permutations two repeated pairs"
+    },
+    {
+      "grade": 10,
+      "topic": "Quy tắc đếm",
+      "form_id": "v33_choose_committee_at_least_one",
+      "signature": "complement counting choose at least one special"
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v33_variance_shift_invariant",
+      "signature": "variance invariant under data translation"
+    },
+    {
+      "grade": 10,
+      "topic": "Xác suất",
+      "form_id": "v33_prob_two_dice_sum_target",
+      "signature": "two fair dice count given sum via convolution"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v33_ap_index_from_term",
+      "signature": "index of target arithmetic progression term"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v33_ap_sum_last_terms",
+      "signature": "sum final k arithmetic terms"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v33_gp_product_symmetric",
+      "signature": "product symmetric terms geometric progression"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số",
+      "form_id": "v33_recurrence_fibonacci_variant",
+      "signature": "second order additive recurrence compute fifth term"
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v33_limit_exponential_ratio",
+      "signature": "limit ratio exponential dominant bases"
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v33_limit_sin_over_x",
+      "signature": "limit sin kx divided by x at zero"
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v33_derivative_logarithm",
+      "signature": "derivative natural logarithm at positive argument"
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v33_derivative_sine_chain",
+      "signature": "derivative sine composite at zero"
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v33_stationary_point_cubic",
+      "signature": "stationary point of shifted cubic"
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v33_bayes_medical_screen",
+      "signature": "bayes posterior probability with integer counts"
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v33_prob_without_replacement",
+      "signature": "probability consecutive draws different colors"
+    },
+    {
+      "grade": 11,
+      "topic": "Lượng giác",
+      "form_id": "v33_trig_sin_sum_special",
+      "signature": "sin addition for angle 30 degrees"
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v33_integral_exponential",
+      "signature": "definite integral exponential base e"
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v33_integral_trig_cos",
+      "signature": "integral cosine between zero and pi over two"
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v33_integral_substitution_linear",
+      "signature": "definite integral affine composition square"
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v33_complex_imag_square",
+      "signature": "imaginary part of squared complex number"
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v33_complex_inverse_imag",
+      "signature": "imaginary part inverse complex"
+    },
+    {
+      "grade": 12,
+      "topic": "Mặt phẳng Oxyz",
+      "form_id": "v33_plane_normal_coefficient",
+      "signature": "distance between parallel planes"
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số mũ",
+      "form_id": "v33_exponential_decay_half_life",
+      "signature": "exponential decay half life integer periods"
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "form_id": "v33_log_product_telescoping",
+      "signature": "logarithm telescoping product"
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v33_quadratic_max_negative",
+      "signature": "maximum downward parabola by vertex"
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v33_binomial_expectation",
+      "signature": "expectation binomial number of successes"
+    }
+  ],
+  "rejected": [
+    [
+      "cross_product_norm_sq",
+      "duplicate question"
+    ],
+    [
+      "sphere_equation_complete_squares",
+      "existing signature"
+    ]
+  ],
+  "checks": {
+    "new_answers_independently_recomputed_with_exact_arithmetic": 340,
+    "normalized_question_duplicates": 0,
+    "missing_answer_solution": 0,
+    "new_forms_have_ten_questions": true
+  },
+  "limitations": [
+    "Mathematical equivalence of form methods not fully audited",
+    "Independent check verifies numerical results, not prose solution semantics",
+    "Practice UI and full Battle regression not tested"
+  ]
+}

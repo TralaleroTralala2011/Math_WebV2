@@ -9,3 +9,8 @@ env/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Do not publish per-installation auth secrets
+.mathweb_hmac_secret
+.env
+.env.*

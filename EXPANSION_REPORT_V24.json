@@ -1,0 +1,33 @@
+{
+  "version": "V24",
+  "previous_questions": 4900,
+  "added_questions": 180,
+  "total_questions": 5080,
+  "new_form_codes": 18,
+  "total_distinct_form_codes": 507,
+  "new_form_ids": [
+    "v24_discriminant_parameter",
+    "v24_midpoint_reverse",
+    "v24_choose_committee",
+    "v24_vertex_minimum",
+    "v24_parallelogram_fourth",
+    "v24_complement_at_least_one",
+    "v24_nth_from_two_terms",
+    "v24_geometric_ratio_two_terms",
+    "v24_derivative_at_point",
+    "v24_limit_rational_infty",
+    "v24_hypergeometric_two_red",
+    "v24_sin_from_cos_quadrant",
+    "v24_integral_linear_bounds",
+    "v24_complex_modulus_square",
+    "v24_distance_point_axis",
+    "v24_exponential_equal_base",
+    "v24_sphere_radius_equation",
+    "v24_logarithm_power"
+  ],
+  "limitations": [
+    "Distinct codes do not prove distinct mathematical solution methods",
+    "Full website regression testing not performed",
+    "Seed bank not necessarily connected to practice UI"
+  ]
+}

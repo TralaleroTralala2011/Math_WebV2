@@ -1,0 +1,23 @@
+{
+  "version": "V28 Classic assessment matrix audit patch",
+  "source": "MATH_WEB_V28_CLASSIC_DANH_GIA_NANG_LUC_V2.zip",
+  "question_bank_records": 4000,
+  "matrix_slots": 900,
+  "authored_matrix_questions": 18,
+  "topics_with_six_authored": 3,
+  "topics_total": 150,
+  "matrix_mismatch_ids": [],
+  "battle_two_account_real_test": "NOT RUN",
+  "visual_browser_test": "NOT RUN",
+  "question_bank_semantic_mapping": "NOT FULLY VERIFIED",
+  "changes": [
+    "Enforce exact 6-slot matrix at runtime",
+    "Reject invalid/mismatched answer choices",
+    "Accept any order of question slots in source",
+    "Preserve V28 Classic UI and 4000 candidate records"
+  ],
+  "limitations": [
+    "Only 18 authored assessment questions; 882 remain",
+    "No claim of 150-topic diagnostic coverage"
+  ]
+}

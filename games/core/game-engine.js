@@ -632,58 +632,9 @@
          * ========================================================
          */
 
-        compareChoiceAnswer(
-            userAnswer,
-            correctAnswer
-        ) {
-
-            if (
-                userAnswer === null ||
-                userAnswer === undefined
-            ) {
-
-                return false;
-            }
-
-
-            /*
-             * Nếu cả hai là số
-             */
-
-            const userNumber =
-                Number(userAnswer);
-
-            const correctNumber =
-                Number(correctAnswer);
-
-
-            if (
-                Number.isFinite(userNumber) &&
-                Number.isFinite(correctNumber)
-            ) {
-
-                return (
-                    userNumber ===
-                    correctNumber
-                );
-            }
-
-
-            /*
-             * Nếu là text
-             */
-
-            return (
-                String(userAnswer)
-                    .trim()
-                    .toLowerCase()
-                ===
-                String(correctAnswer)
-                    .trim()
-                    .toLowerCase()
-            );
+        compareChoiceAnswer(userAnswer, correctAnswer) {
+            return equivalentLegacyAnswers(userAnswer, correctAnswer);
         }
-
 
         /*
          * ========================================================
@@ -691,34 +642,9 @@
          * ========================================================
          */
 
-        compareInputAnswer(
-            userAnswer,
-            correctAnswer
-        ) {
-
-            if (
-                userAnswer === null ||
-                userAnswer === undefined
-            ) {
-
-                return false;
-            }
-
-
-            const user =
-                normalizeMathAnswer(
-                    userAnswer
-                );
-
-            const correct =
-                normalizeMathAnswer(
-                    correctAnswer
-                );
-
-
-            return user === correct;
+        compareInputAnswer(userAnswer, correctAnswer) {
+            return equivalentLegacyAnswers(userAnswer, correctAnswer);
         }
-
 
         /*
          * ========================================================
@@ -1175,6 +1101,36 @@
             .toLowerCase();
     }
 
+
+    // Accept equivalent ordinary numbers and fractions in the legacy game
+    // widgets, without evaluating arbitrary JavaScript expressions.
+    function safeAnswerNumber(value) {
+        if (value === null || value === undefined || typeof value === 'boolean') return null;
+        const text = String(value).trim().replace(/−/g, '-').replace(',', '.');
+        if (!text) return null;
+        if (/^[+-]?(?:\d+(?:\.\d+)?|\.\d+)$/.test(text)) {
+            const result = Number(text);
+            return Number.isFinite(result) ? result : null;
+        }
+        const fraction = /^([+-]?\d+)\s*\/\s*([+-]?\d+)$/.exec(text);
+        if (fraction && Number(fraction[2]) !== 0) {
+            const result = Number(fraction[1]) / Number(fraction[2]);
+            return Number.isFinite(result) ? result : null;
+        }
+        return null;
+    }
+
+    function equivalentLegacyAnswers(left, right) {
+        if (left == null || right == null) return false;
+        const a = normalizeMathAnswer(left).replace(/−/g, '-');
+        const b = normalizeMathAnswer(right).replace(/−/g, '-');
+        if (!a || !b) return false;
+        if (a === b) return true;
+        const numberA = safeAnswerNumber(left);
+        const numberB = safeAnswerNumber(right);
+        return numberA !== null && numberB !== null &&
+            Math.abs(numberA - numberB) <= 1e-9 * Math.max(1, Math.abs(numberA), Math.abs(numberB));
+    }
 
     /*
      * ============================================================

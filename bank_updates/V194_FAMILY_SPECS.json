@@ -1,0 +1,82 @@
+[
+  {
+    "form_id": "v194_quadratic_vertex",
+    "grade": 10,
+    "topic": "ham_so_bac_hai",
+    "concept": "Tìm tung độ đỉnh parabol từ dạng tổng quát",
+    "method": "Hoàn thành bình phương",
+    "independence_certified": false
+  },
+  {
+    "form_id": "v194_quadratic_root_sum",
+    "grade": 10,
+    "topic": "phuong_trinh",
+    "concept": "Tính tổng bình phương hai nghiệm không giải trực tiếp",
+    "method": "Định lý Viète kết hợp hằng đẳng thức",
+    "independence_certified": false
+  },
+  {
+    "form_id": "v194_vector_dot",
+    "grade": 10,
+    "topic": "vector",
+    "concept": "Tích vô hướng hai vectơ từ tọa độ",
+    "method": "Nhân từng thành phần và cộng",
+    "independence_certified": false
+  },
+  {
+    "form_id": "v194_combinations_nonadjacent",
+    "grade": 10,
+    "topic": "quy_tac_dem",
+    "concept": "Chọn vị trí không kề nhau",
+    "method": "Phép đổi biến vị trí thành tổ hợp",
+    "independence_certified": false
+  },
+  {
+    "form_id": "v194_arithmetic_inverse",
+    "grade": 11,
+    "topic": "cap_so_cong",
+    "concept": "Tìm công sai từ hai số hạng cách xa",
+    "method": "Hiệu hai số hạng cấp số cộng",
+    "independence_certified": false
+  },
+  {
+    "form_id": "v194_geometric_ratio",
+    "grade": 11,
+    "topic": "cap_so_nhan",
+    "concept": "Tìm công bội từ ba số hạng liên tiếp",
+    "method": "Tỉ số các số hạng liên tiếp",
+    "independence_certified": false
+  },
+  {
+    "form_id": "v194_derivative_product",
+    "grade": 11,
+    "topic": "dao_ham",
+    "concept": "Đạo hàm tích hai đa thức tại một điểm",
+    "method": "Quy tắc đạo hàm tích",
+    "independence_certified": false
+  },
+  {
+    "form_id": "v194_complex_product_modulus",
+    "grade": 12,
+    "topic": "so_phuc",
+    "concept": "Môđun tích hai số phức",
+    "method": "Tính chất |zw|=|z||w|",
+    "independence_certified": false
+  },
+  {
+    "form_id": "v194_integral_polynomial",
+    "grade": 12,
+    "topic": "nguyen_ham_tich_phan",
+    "concept": "Tích phân xác định đa thức",
+    "method": "Nguyên hàm và định lý Newton–Leibniz",
+    "independence_certified": false
+  },
+  {
+    "form_id": "v194_plane_point_distance",
+    "grade": 12,
+    "topic": "mat_phang_oxyz",
+    "concept": "Khoảng cách từ điểm tới mặt phẳng",
+    "method": "Công thức khoảng cách điểm–mặt phẳng",
+    "independence_certified": false
+  }
+]

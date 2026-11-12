@@ -4,7 +4,7 @@
 1. Giải nén toàn bộ ZIP vào một thư mục.
 2. Nhấn đúp `CHAY_ADMIN_MATH_WEB.bat`.
 3. Chờ hai cửa sổ server mở, sau đó trang quản trị tự mở tại `http://127.0.0.1:5500/admin.html`.
-4. Đăng nhập bằng tài khoản quản trị đã được cấu hình trong backend. Mật khẩu khởi tạo mặc định hiện tại là `adminsitinh` nếu chưa đổi qua biến môi trường hoặc trong trang Admin.
+4. Đăng nhập bằng tài khoản quản trị đã được cấu hình trong backend. Mật khẩu khởi tạo được sinh ngẫu nhiên và hiển thị trong cửa sổ backend một lần khi tài khoản mới được tạo. Có thể đặt trước bằng `MATHWEB_BOOTSTRAP_ADMIN_PASSWORD`; nên đổi ngay sau đăng nhập.
 5. Giữ hai cửa sổ server mở khi dùng hệ thống.
 
 Không mở `admin.html` bằng cách nhấn đúp trực tiếp (địa chỉ `file://`). Trang phải được phục vụ qua HTTP để trình duyệt gọi API backend.

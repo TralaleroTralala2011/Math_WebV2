@@ -1,0 +1,334 @@
+{
+  "version": "V32",
+  "base": "V31",
+  "new_form_ids": 52,
+  "new_questions": 520,
+  "total_questions": 7880,
+  "total_form_ids": 787,
+  "new_forms": [
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v32_set_exactly_one",
+      "signature": "three sets exactly one inclusion exclusion"
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v32_set_none",
+      "signature": "three sets outside union"
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "form_id": "v32_quad_vertex_value",
+      "signature": "quadratic vertex minimum via completing square"
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai",
+      "form_id": "v32_quad_axis",
+      "signature": "quadratic symmetry axis from two roots"
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v32_vieta_inverse",
+      "signature": "sum reciprocals of quadratic roots"
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v32_distance_point_line",
+      "signature": "distance point vertical line"
+    },
+    {
+      "grade": 10,
+      "topic": "Vectơ",
+      "form_id": "v32_centroid_coord",
+      "signature": "centroid coordinate sum of three vertices"
+    },
+    {
+      "grade": 10,
+      "topic": "Vectơ",
+      "form_id": "v32_vector_perpendicular",
+      "signature": "solve unknown vector component from dot zero"
+    },
+    {
+      "grade": 10,
+      "topic": "Đường thẳng",
+      "form_id": "v32_line_intercept_area",
+      "signature": "triangle area line intercepts"
+    },
+    {
+      "grade": 10,
+      "topic": "Đường tròn",
+      "form_id": "v32_circle_chord",
+      "signature": "circle chord length from center distance"
+    },
+    {
+      "grade": 10,
+      "topic": "Đường tròn",
+      "form_id": "v32_circle_tangent",
+      "signature": "tangent length from exterior point power"
+    },
+    {
+      "grade": 10,
+      "topic": "Quy tắc đếm",
+      "form_id": "v32_count_no_adjacent",
+      "signature": "binary strings without consecutive ones fixed weight"
+    },
+    {
+      "grade": 10,
+      "topic": "Quy tắc đếm",
+      "form_id": "v32_count_divisible",
+      "signature": "count integers divisible by a or b inclusion exclusion"
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v32_weighted_variance",
+      "signature": "variance for two equally frequent values"
+    },
+    {
+      "grade": 10,
+      "topic": "Xác suất",
+      "form_id": "v32_prob_complement",
+      "signature": "probability at least one success independent events"
+    },
+    {
+      "grade": 10,
+      "topic": "Hệ thức lượng",
+      "form_id": "v32_heron_345",
+      "signature": "triangle area via scaled heron triple"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v32_ap_nth_from_two",
+      "signature": "arithmetic progression interpolate from two indexed terms"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v32_ap_sum_odd_index",
+      "signature": "sum of odd indexed arithmetic sequence terms"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v32_ap_insert_means",
+      "signature": "arithmetic means between two endpoints"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v32_gp_nth_ratio",
+      "signature": "geometric progression infer ratio from two terms"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v32_gp_sum",
+      "signature": "finite geometric sum ratio three"
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v32_gp_infinite",
+      "signature": "infinite geometric series ratio one half"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số",
+      "form_id": "v32_recurrence_affine",
+      "signature": "first order affine recurrence fixed point shift"
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số",
+      "form_id": "v32_telescoping_frac",
+      "signature": "telescoping harmonic rational sum"
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v32_limit_leading",
+      "signature": "limit rational polynomial same degree"
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v32_limit_diff_squares",
+      "signature": "limit difference radicals rationalization"
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v32_derivative_product",
+      "signature": "derivative product polynomial evaluate at one"
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v32_derivative_quotient",
+      "signature": "derivative rational linear function at zero"
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v32_derivative_chain",
+      "signature": "derivative cubic composition at one"
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v32_tangent_slope",
+      "signature": "tangent slope polynomial at specified point"
+    },
+    {
+      "grade": 11,
+      "topic": "Lượng giác",
+      "form_id": "v32_trig_tan_sum",
+      "signature": "tangent addition from two tangent values"
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v32_prob_hypergeom",
+      "signature": "hypergeometric exactly two successes"
+    },
+    {
+      "grade": 11,
+      "topic": "Hình học không gian",
+      "form_id": "v32_space_cube_diagonal",
+      "signature": "cube space diagonal squared"
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v32_integral_polynomial",
+      "signature": "definite integral polynomial power"
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v32_integral_symmetry",
+      "signature": "odd function integral symmetric interval"
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v32_integral_absolute",
+      "signature": "integral absolute value centered"
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v32_integral_average",
+      "signature": "average value of linear function on interval"
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v32_complex_mod_sq",
+      "signature": "complex modulus squared"
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v32_complex_real_product",
+      "signature": "real part complex multiplication"
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v32_complex_div_real",
+      "signature": "real part complex division rationalization"
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v32_complex_roots",
+      "signature": "solve quadratic with negative discriminant modulus"
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v32_space_distance",
+      "signature": "distance squared two 3d points"
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v32_space_midpoint",
+      "signature": "sum coordinates of 3d midpoint"
+    },
+    {
+      "grade": 12,
+      "topic": "Mặt phẳng Oxyz",
+      "form_id": "v32_space_plane_distance",
+      "signature": "distance point to plane normal axis"
+    },
+    {
+      "grade": 12,
+      "topic": "Mặt cầu",
+      "form_id": "v32_space_sphere_radius",
+      "signature": "sphere radius from standard equation"
+    },
+    {
+      "grade": 12,
+      "topic": "Vectơ Oxyz",
+      "form_id": "v32_space_dot",
+      "signature": "dot product three dimensional vectors"
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số mũ",
+      "form_id": "v32_exponential_growth",
+      "signature": "doubling discrete exponential model"
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "form_id": "v32_log_change_base",
+      "signature": "log base a of power of a"
+    },
+    {
+      "grade": 12,
+      "topic": "Phương trình logarit",
+      "form_id": "v32_log_equation",
+      "signature": "log equation linear argument"
+    },
+    {
+      "grade": 12,
+      "topic": "Giá trị lớn nhất nhỏ nhất",
+      "form_id": "v32_optimization_rectangle",
+      "signature": "maximum rectangle area fixed perimeter"
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v32_prob_expectation",
+      "signature": "expectation two point distribution"
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v32_prob_variance",
+      "signature": "variance bernoulli scaled two point distribution"
+    }
+  ],
+  "checks": {
+    "no_exact_normalized_question_duplicate": true,
+    "new_forms_ten_questions_each": true,
+    "answers_and_solutions_present": true,
+    "zip_integrity": null
+  },
+  "limitations": [
+    "Distinct form_id does not prove conceptually distinct methods",
+    "Answers constructed from formulas; no independent audit of all mathematical claims",
+    "Full web regression and battle tests not run",
+    "Seed bank remains separate from practice UI"
+  ]
+}

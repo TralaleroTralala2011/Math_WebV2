@@ -1,0 +1,15 @@
+/* V30: spacing and readability, no color/theme rewrite. */
+.chat-page, body .chat-page {margin-top:0!important;padding-top:0!important;}
+.chat-app {margin-top:0!important;border-top-left-radius:0!important;border-top-right-radius:0!important;}
+body:has(.chat-page) {overflow-x:hidden;}
+body:has(.chat-page) #mw-v5-header {margin-bottom:0!important;}
+body:has(.chat-page) .chat-page {height:calc(100dvh - 76px)!important;}
+/* Readable learning notes instead of an unbroken formula wall. */
+#knowledge {line-height:1.85!important;max-width:100%;}
+#knowledge h3 {margin:28px 0 14px!important;font-size:clamp(18px,2vw,23px)!important;line-height:1.35!important;}
+#knowledge :is(#goals,#formulas,#subtopics) {margin:0 0 24px!important;padding-left:24px!important;}
+#knowledge :is(#goals,#formulas,#subtopics)>li {padding:12px 14px!important;margin-bottom:9px!important;line-height:1.8!important;border:1px solid rgba(106,147,192,.24);border-radius:10px;background:rgba(120,159,199,.075);overflow-wrap:anywhere;}
+#knowledge #formulas>li {font-size:clamp(15px,1.2vw,17px);line-height:1.9!important;}
+#knowledge :is(p,li) {letter-spacing:0!important;}
+#heading, #summary {overflow-wrap:anywhere;}
+@media(max-width:780px){body:has(.chat-page) .chat-page{height:calc(100dvh - 68px)!important;}#knowledge :is(#goals,#formulas,#subtopics){padding-left:16px!important;}#knowledge :is(#goals,#formulas,#subtopics)>li{padding:10px!important;}}

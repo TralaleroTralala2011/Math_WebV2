@@ -1,0 +1,50 @@
+{
+  "version": "V130",
+  "base": "V129",
+  "scope": "V123 candidate datasets; not a complete inventory of all versions",
+  "candidate_forms": 1050,
+  "candidate_questions": 10500,
+  "topics_represented": 150,
+  "source_method_groups": 150,
+  "source_reuse_distribution": {
+    "7": 150
+  },
+  "questions_by_type": {
+    "tra_loi_ngan": 2100,
+    "trac_nghiem": 2100,
+    "dung_sai": 2100,
+    "tu_luan_ngan": 2100,
+    "van_dung": 2100
+  },
+  "forms_per_topic_distribution": {
+    "7": 150
+  },
+  "new_candidates": 0,
+  "new_questions": 0,
+  "new_certified_independent_methods": 0,
+  "issues_count": 0,
+  "issues_sample": [],
+  "checks": [
+    "candidate and question family consistency",
+    "10 questions per candidate",
+    "nonempty question/answer/solution",
+    "topic linkage",
+    "pending review and unpublished status",
+    "arithmetic-check flag (metadata only)",
+    "source method reuse counts"
+  ],
+  "not_checked": [
+    "independent mathematical correctness of every answer",
+    "semantic originality against external bank",
+    "full backend/frontend integration regression",
+    "pedagogical suitability of all candidate forms"
+  ],
+  "regression_tests": {
+    "baseline": true,
+    "missing_question": true,
+    "published": true,
+    "certified": true,
+    "orphan": true,
+    "empty_solution": true
+  }
+}

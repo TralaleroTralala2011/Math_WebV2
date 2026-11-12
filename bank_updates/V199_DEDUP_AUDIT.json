@@ -1,0 +1,153 @@
+{
+  "verified_new_count": 320,
+  "duplicate_normalized_question_count": 0,
+  "family_candidates": 32,
+  "flagged_for_manual_semantic_review": [
+    {
+      "form": "v199_rhombus_diagonals_area",
+      "score": 0.742,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Diện tích hình thoi bằng nửa tích hai đường chéo",
+        "method": "S=d₁d₂/2",
+        "grade": 10,
+        "topic": "tam_giac_tu_giac_10"
+      }
+    },
+    {
+      "form": "v199_triangle_centroid_x",
+      "score": 0.565,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Hoành độ trung điểm của đoạn trong Oxy",
+        "method": "x_M=(x_A+x_B)/2",
+        "grade": 10,
+        "topic": "g10_geom_coordinate_distance_midpoint"
+      }
+    },
+    {
+      "form": "v199_trig_linear_amplitude",
+      "score": 0.567,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Giá trị nhỏ nhất của hàm y=a sin x+b",
+        "method": "min y=b−|a|",
+        "grade": 11,
+        "topic": "ham_so_luong_giac_day_du"
+      }
+    },
+    {
+      "form": "v199_conditional_union_independent",
+      "score": 0.684,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Xác suất giao hai biến cố độc lập",
+        "method": "P(A∩B)=P(A)P(B)",
+        "grade": 11,
+        "topic": "bien_co_doc_lap_11"
+      }
+    },
+    {
+      "form": "v199_parallel_planes_distance",
+      "score": 0.703,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Khoảng cách giữa hai mặt phẳng song song có phương trình z=a, z=b",
+        "method": "d=|a−b|",
+        "grade": 11,
+        "topic": "g11_geom_parallel_planes"
+      }
+    },
+    {
+      "form": "v199_angle_line_plane_tangent",
+      "score": 0.565,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Bình phương sin góc giữa cạnh xiên và mặt phẳng đáy",
+        "method": "sin²θ=h²/(h²+d²)",
+        "grade": 11,
+        "topic": "g11_geom_dihedral_angles"
+      }
+    },
+    {
+      "form": "v199_plane_three_intercepts",
+      "score": 0.758,
+      "possible_prior": {
+        "source": "V191_FAMILY_SPECS.json",
+        "name": "Phương trình mặt phẳng qua ba giao điểm trục tọa độ",
+        "method": "x/a+y/b+z/c=1",
+        "grade": 12,
+        "topic": "mat_phang_oxyz"
+      }
+    },
+    {
+      "form": "v199_point_line_distance_sq",
+      "score": 0.87,
+      "possible_prior": {
+        "source": "V191_FAMILY_SPECS.json",
+        "name": "Khoảng cách từ điểm đến đường thẳng trong Oxyz",
+        "method": "d²=||AP×u||²/||u||²",
+        "grade": 12,
+        "topic": "goc_khoang_cach_oxyz"
+      }
+    },
+    {
+      "form": "v199_cone_lateral_area_over_pi",
+      "score": 0.715,
+      "possible_prior": {
+        "source": "V191_FAMILY_SPECS.json",
+        "name": "Tính diện tích xung quanh nón từ bán kính và chiều cao",
+        "method": "S_xq=πr√(r²+h²)",
+        "grade": 12,
+        "topic": "g12_geom_solid_surface_area"
+      }
+    },
+    {
+      "form": "v199_substitution_integral",
+      "score": 0.613,
+      "possible_prior": {
+        "source": "V191_FAMILY_SPECS.json",
+        "name": "Tích phân đặt ẩn phụ u=x²+c",
+        "method": "∫2x(x²+c)² dx=(x²+c)³/3",
+        "grade": 12,
+        "topic": "nguyen_ham_tich_phan"
+      }
+    },
+    {
+      "form": "v199_three_dim_plane_angle_line",
+      "score": 0.946,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Bình phương sin góc giữa đường thẳng và mặt phẳng",
+        "method": "sin²φ=(u·n)²/(||u||²||n||²)",
+        "grade": 12,
+        "topic": "g12_geom_line_plane_angle"
+      }
+    },
+    {
+      "form": "v199_sphere_cap_area_over_pi",
+      "score": 0.625,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Diện tích mặt cầu theo bán kính",
+        "method": "S=4πR²",
+        "grade": 12,
+        "topic": "mat_cau"
+      }
+    },
+    {
+      "form": "v199_quadratic_area_between",
+      "score": 0.597,
+      "possible_prior": {
+        "source": "V191_FAMILY_SPECS.json",
+        "name": "Diện tích hình phẳng giữa y=ax² và y=bx",
+        "method": "∫₀^(b/a)(bx−ax²) dx",
+        "grade": 12,
+        "topic": "ung_dung_tich_phan"
+      }
+    }
+  ],
+  "method_independence_certified": 0,
+  "remaining_invalid_topic_rows": 10,
+  "warning": "heuristic similarity is not proof of mathematical independence"
+}

@@ -1,0 +1,37 @@
+{
+  "version": "V141",
+  "method_candidates": 11,
+  "questions_generated": 110,
+  "formats": {
+    "trac_nghiem": 77,
+    "tra_loi_ngan": 22,
+    "dung_sai": 11
+  },
+  "topics_covered": [
+    "bpt_mu",
+    "cap_so_cong",
+    "dao_ham",
+    "duong_tron",
+    "g12_solid_of_revolution",
+    "gioi_han",
+    "ham_so_bac_hai",
+    "mat_phang_oxyz",
+    "nguyen_ham_tich_phan",
+    "quy_tac_dem",
+    "xac_suat_11"
+  ],
+  "math_oracle_checks": 110,
+  "historical_question_records_scanned": 649483,
+  "historical_jsonl_files_scanned": 44,
+  "historical_literal_duplicates": [],
+  "possible_semantic_method_overlap": [],
+  "failures": [],
+  "independent_methods_certified": 0,
+  "published_into_production": 0,
+  "notes": [
+    "No numeric reparameterization is counted as an independent new mathematical method.",
+    "Mathematical novelty across all existing method catalogs remains unverified.",
+    "Only static question files were produced, not published in the application.",
+    "Independent oracles check computational answers, not prose completeness or curricular certification."
+  ]
+}

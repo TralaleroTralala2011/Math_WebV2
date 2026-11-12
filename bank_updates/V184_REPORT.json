@@ -1,0 +1,16 @@
+{
+  "base": "V183 patch",
+  "new_question_rows": 830,
+  "families_extended": 83,
+  "families_full_10": 83,
+  "topics_extended": 83,
+  "mcq": 581,
+  "short_answer": 166,
+  "true_false": 83,
+  "new_certified_independent_forms": 0,
+  "production_integrated": 0,
+  "validation": "generator arithmetic oracle, unique text, solution contains answer, MCQ unique; no production grader available",
+  "failures": {},
+  "previous_v183_import_ready": 755,
+  "full_bank_inventory_unavailable": true
+}

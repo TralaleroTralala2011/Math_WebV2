@@ -1,0 +1,17 @@
+{
+  "version": "V63",
+  "base": "V62",
+  "new_form_ids": 24,
+  "new_questions": 240,
+  "total_form_ids": 7146,
+  "total_questions": 71470,
+  "minimum_questions_per_form": 10,
+  "all_form_ids_at_least_10": true,
+  "new_question_exact_duplicates": 0,
+  "new_math_checks": 240,
+  "independent_method_certification": "NOT DONE; objectives are not necessarily independent methods",
+  "teacher_review": "NOT DONE",
+  "regression_tests": "NOT DONE",
+  "preserved_existing_files": true,
+  "coverage": "24 distinct objectives across 24 topic labels; not exhaustive"
+}

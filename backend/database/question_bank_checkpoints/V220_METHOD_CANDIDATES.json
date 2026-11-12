@@ -1,0 +1,227 @@
+{
+  "version": "V220",
+  "base": "V219",
+  "group_count": 31,
+  "groups": {
+    "v220_ceva_concurrent_cevians": {
+      "grade": 10,
+      "topic": "g10_geom_special_lines",
+      "method_signature": "ceva_product_three_side_ratios",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_menelaus_exterior_transversal": {
+      "grade": 10,
+      "topic": "chung_minh_hinh_hoc_10",
+      "method_signature": "menelaus_product_collinear_transversal",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_stewart_cevian_length_squared": {
+      "grade": 10,
+      "topic": "g10_geom_special_lines",
+      "method_signature": "stewart_theorem_nonmedian_cevian",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_pitot_tangential_quadrilateral": {
+      "grade": 10,
+      "topic": "g10_geom_quadrilaterals_properties",
+      "method_signature": "pitot_opposite_side_sum_tangent_segments",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_nonattacking_rooks_chessboard": {
+      "grade": 10,
+      "topic": "g10_combinatorics_olympiad",
+      "method_signature": "choose_rows_columns_then_permutation_rooks",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_rencontres_exact_fixed_points": {
+      "grade": 10,
+      "topic": "hoan_vi_chinh_hop_to_hop",
+      "method_signature": "choose_fixed_subset_then_derange_complement",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_triangle_area_from_included_sine": {
+      "grade": 10,
+      "topic": "he_thuc_luong_van_dung_10",
+      "method_signature": "two_sides_included_angle_sine_area",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_circle_sector_area_pi_coefficient": {
+      "grade": 10,
+      "topic": "duong_tron_co_ban_10",
+      "method_signature": "sector_fraction_full_disk_area",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_quadratic_coefficient_three_samples": {
+      "grade": 10,
+      "topic": "ham_so_bac_hai",
+      "method_signature": "quadratic_second_centered_finite_difference",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_affine_inverse_value": {
+      "grade": 10,
+      "topic": "ham_so_bac_nhat",
+      "method_signature": "solve_inverse_linear_map",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_two_circles_intersection_count": {
+      "grade": 10,
+      "topic": "g10_geom_coordinate_circle_line",
+      "method_signature": "two_circle_center_distance_classification",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_fixed_perimeter_rectangle_max_area": {
+      "grade": 10,
+      "topic": "g10_advanced_inequalities",
+      "method_signature": "amgm_two_sides_fixed_sum_product",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_telescoping_product_ratio": {
+      "grade": 11,
+      "topic": "day_so",
+      "method_signature": "product_telescoping_neighboring_factors",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_inverse_second_derivative": {
+      "grade": 11,
+      "topic": "dao_ham_quy_tac",
+      "method_signature": "second_order_inverse_function_derivative_formula",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_variance_sum_independent_bernoulli": {
+      "grade": 11,
+      "topic": "bien_co_doc_lap_11",
+      "method_signature": "variance_additivity_independent_variables",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_negative_hypergeometric_wait_rank": {
+      "grade": 11,
+      "topic": "to_hop_xac_suat_nang_cao_11",
+      "method_signature": "expected_rth_success_without_replacement",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_rotation_composition_same_center": {
+      "grade": 11,
+      "topic": "g11_geom_transform_composition",
+      "method_signature": "compose_rotations_by_adding_signed_angles",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_double_reflection_parallel_axes": {
+      "grade": 11,
+      "topic": "g11_geom_transform_composition",
+      "method_signature": "compose_parallel_axis_reflections_translation",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_catalan_lattice_paths_not_above_diagonal": {
+      "grade": 11,
+      "topic": "g11_binomial_advanced",
+      "method_signature": "reflection_principle_ballot_catalan",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_weighted_binomial_factorial_moment": {
+      "grade": 11,
+      "topic": "g11_binomial_advanced",
+      "method_signature": "binomial_second_falling_factorial_identity",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_frustum_lateral_surface_area": {
+      "grade": 12,
+      "topic": "g12_geom_solid_surface_area",
+      "method_signature": "unroll_frustum_sector_lateral_area",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_arctan_integral_pi_coefficient": {
+      "grade": 12,
+      "topic": "nguyen_ham_tich_phan",
+      "method_signature": "inverse_tangent_quadratic_denominator_integral",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_reflected_complementary_integral_symmetry": {
+      "grade": 12,
+      "topic": "nguyen_ham_tich_phan",
+      "method_signature": "substitute_x_to_a_minus_x_integrand_pair",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_floor_function_piecewise_integral": {
+      "grade": 12,
+      "topic": "nguyen_ham_tich_phan",
+      "method_signature": "split_integral_unit_step_floor",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_sphere_four_axis_points": {
+      "grade": 12,
+      "topic": "g12_geom_sphere_equation",
+      "method_signature": "sphere_equation_from_four_non_coplanar_points",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_apollonius_complex_circle_radius_squared": {
+      "grade": 12,
+      "topic": "g12_complex_plane_geometry",
+      "method_signature": "complex_distance_ratio_circle_complete_square",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_line_parallel_plane_parameter": {
+      "grade": 12,
+      "topic": "g12_geom_parameter_geometry",
+      "method_signature": "dot_direction_normal_zero_parameter",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_binomial_distribution_variance": {
+      "grade": 12,
+      "topic": "xac_suat_12",
+      "method_signature": "sum_independent_bernoulli_variances",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_variance_linear_transformation": {
+      "grade": 12,
+      "topic": "thong_ke_12",
+      "method_signature": "variance_affine_scale_squared",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_point_to_finite_segment_distance_squared": {
+      "grade": 12,
+      "topic": "g12_geom_min_distance_3d",
+      "method_signature": "orthogonal_projection_clamped_to_segment",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "v220_expected_distinct_coupons_after_n_draws": {
+      "grade": 12,
+      "topic": "xac_suat_12",
+      "method_signature": "indicator_expectation_distinct_categories",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    }
+  },
+  "certified_independent_forms": 0,
+  "semantic_review_required": true,
+  "definition": "One group is a method candidate, not a certified independent type; changing numeric data does not count as a new type."
+}

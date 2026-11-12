@@ -1,0 +1,142 @@
+{
+  "verified_new_count": 200,
+  "duplicate_normalized_question_count": 0,
+  "family_candidates": 20,
+  "flagged_for_manual_semantic_review": [
+    {
+      "form": "v202_polygon_diagonals",
+      "score": 0.584,
+      "possible_prior": {
+        "source": "V191_FAMILY_SPECS.json",
+        "name": "Đếm đường chéo của đa giác lồi",
+        "method": "C(n,2)-n",
+        "grade": 10,
+        "topic": "hinh_hoc_co_ban_10"
+      }
+    },
+    {
+      "form": "v202_chord_from_radius_distance",
+      "score": 0.638,
+      "possible_prior": {
+        "source": "V198_FAMILY_SPECS.json",
+        "name": "Độ dài dây cung khi biết bán kính và khoảng cách đến tâm",
+        "method": "Dây cung bằng 2sqrt(R²-d²)",
+        "grade": 10,
+        "topic": "g10_geom_circle_chords_arcs"
+      }
+    },
+    {
+      "form": "v202_multiset_permutation_count",
+      "score": 0.621,
+      "possible_prior": {
+        "source": "V191_FAMILY_SPECS.json",
+        "name": "Hoán vị đa tập có ký hiệu trùng",
+        "method": "(a+b+c)!/(a!b!c!)",
+        "grade": 10,
+        "topic": "hoan_vi_chinh_hop_to_hop"
+      }
+    },
+    {
+      "form": "v202_sector_area_over_pi",
+      "score": 0.711,
+      "possible_prior": {
+        "source": "V199_FAMILY_SPECS.json",
+        "name": "Diện tích quạt tròn chia π",
+        "method": "S/π=R²θ/360°",
+        "grade": 10,
+        "topic": "duong_tron_co_ban_10"
+      }
+    },
+    {
+      "form": "v202_tangent_segment_length",
+      "score": 0.803,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Tính đoạn tiếp tuyến từ một điểm ngoài đường tròn bằng Pythagore",
+        "method": "PT=√(OP²−R²)",
+        "grade": 10,
+        "topic": "duong_tron_co_ban_10"
+      }
+    },
+    {
+      "form": "v202_similar_area_scale",
+      "score": 0.61,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Tỉ số diện tích của hai tam giác đồng dạng tạo bởi đường song song",
+        "method": "S_ADE/S_ABC=(AD/AB)²",
+        "grade": 10,
+        "topic": "g10_geom_thales_similarity"
+      }
+    },
+    {
+      "form": "v202_cos_zeros_interval",
+      "score": 0.667,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Đếm nghiệm cos(mx)=0 trên chu kỳ 2π",
+        "method": "mx=π/2+jπ",
+        "grade": 11,
+        "topic": "phuong_trinh_luong_giac_day_du"
+      }
+    },
+    {
+      "form": "v202_rational_derivative_point",
+      "score": 0.621,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Đạo hàm tích hai đa thức tại điểm cho trước",
+        "method": "(uv)′=u′v+uv′",
+        "grade": 11,
+        "topic": "dao_ham_quy_tac"
+      }
+    },
+    {
+      "form": "v202_binomial_exact_success_count",
+      "score": 0.947,
+      "possible_prior": {
+        "source": "V198_FAMILY_SPECS.json",
+        "name": "Xác suất đúng k thành công trong n phép thử độc lập",
+        "method": "P=C(n,k)p^k(1-p)^(n-k)",
+        "grade": 11,
+        "topic": "bien_co_doc_lap_11"
+      }
+    },
+    {
+      "form": "v202_sphere_plane_section_radius",
+      "score": 0.575,
+      "possible_prior": {
+        "source": "V198_FAMILY_SPECS.json",
+        "name": "Bình phương bán kính đường tròn giao mặt cầu và mặt phẳng",
+        "method": "r²=R²−d² với d là khoảng cách từ tâm đến mặt phẳng",
+        "grade": 12,
+        "topic": "g12_geom_sphere_plane_intersection"
+      }
+    },
+    {
+      "form": "v202_cubic_local_max",
+      "score": 0.683,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Giá trị cực đại địa phương của f(x)=x³−3a²x",
+        "method": "Cực đại tại x=−a, f(−a)=2a³",
+        "grade": 12,
+        "topic": "cuc_tri"
+      }
+    },
+    {
+      "form": "v202_cone_lateral_area_over_pi",
+      "score": 0.748,
+      "possible_prior": {
+        "source": "V201_FAMILY_SPECS.json",
+        "name": "Diện tích xung quanh hình trụ chia π",
+        "method": "S/π=2rh",
+        "grade": 12,
+        "topic": "hinh_khoi_va_the_tich_co_ban_12"
+      }
+    }
+  ],
+  "method_independence_certified": 0,
+  "remaining_invalid_topic_rows": 10,
+  "warning": "heuristic similarity is not proof of mathematical independence"
+}

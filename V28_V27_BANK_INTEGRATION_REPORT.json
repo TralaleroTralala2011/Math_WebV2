@@ -1,0 +1,30 @@
+{
+  "base_zip": "MATH_WEB_V28_CLASSIC_V23_BATTLE_QA(1).zip",
+  "bank_source_zip": "MATH_WEB_V28_CLASSIC_V25_B54_95514_INTEGRATED.zip",
+  "replacement": "backend/app/ai/engine/service.py + backend/app/ai/storage/v254_candidates.sqlite",
+  "database_integrity": "ok",
+  "active_candidate_questions": 83298,
+  "b54_word_labels_staged": 95514,
+  "mapped_grade_topic_keys": 147,
+  "grade_distribution": {
+    "10": 24557,
+    "11": 29474,
+    "12": 29267
+  },
+  "b54_statuses": {
+    "candidate_unverified": 77059,
+    "duplicate_exact": 14290,
+    "incomplete": 331,
+    "unmapped": 3834
+  },
+  "source_word_zip_included": true,
+  "old_4000_backup_included": true,
+  "staged_b54_promoted_to_active": false,
+  "independently_verified_questions": "not established",
+  "ui": "base V23 unchanged",
+  "limitations": [
+    "B54 labels are staged and unverified",
+    "not 7500 independently certified forms",
+    "not verified across real two-browser end-to-end workflow"
+  ]
+}

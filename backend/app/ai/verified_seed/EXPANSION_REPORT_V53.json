@@ -1,0 +1,144 @@
+{
+  "version": "V53",
+  "source": "V52",
+  "added_form_ids": 26,
+  "added_questions": 260,
+  "grade_counts": {
+    "10": 100,
+    "11": 90,
+    "12": 70
+  },
+  "quality_note": "Unique form IDs are not proof of independent solution methods. New answers checked by a second arithmetic path, not full external audit.",
+  "forms": [
+    [
+      "v53_ordered_distinct_three",
+      10,
+      "Quy tắc đếm"
+    ],
+    [
+      "v53_choose_three",
+      10,
+      "Tổ hợp"
+    ],
+    [
+      "v53_choose_two_exclude_pair",
+      10,
+      "Tổ hợp"
+    ],
+    [
+      "v53_choose_two_include_a",
+      10,
+      "Tổ hợp"
+    ],
+    [
+      "v53_two_dice_sum_seven",
+      10,
+      "Xác suất"
+    ],
+    [
+      "v53_range_remove_min",
+      10,
+      "Thống kê"
+    ],
+    [
+      "v53_weighted_mean",
+      10,
+      "Thống kê"
+    ],
+    [
+      "v53_quadratic_roots_gap",
+      10,
+      "Phương trình bậc hai"
+    ],
+    [
+      "v53_vertex_min_value",
+      10,
+      "Hàm số bậc hai và parabol"
+    ],
+    [
+      "v53_parallelogram_fourth",
+      10,
+      "Vectơ"
+    ],
+    [
+      "v53_ap_missing_middle",
+      11,
+      "Cấp số cộng"
+    ],
+    [
+      "v53_ap_sum_first_n",
+      11,
+      "Cấp số cộng"
+    ],
+    [
+      "v53_gp_term_positive",
+      11,
+      "Cấp số nhân"
+    ],
+    [
+      "v53_gp_sum_four",
+      11,
+      "Cấp số nhân"
+    ],
+    [
+      "v53_limit_cancel_linear",
+      11,
+      "Giới hạn hàm số"
+    ],
+    [
+      "v53_derivative_at_one_cubic",
+      11,
+      "Đạo hàm"
+    ],
+    [
+      "v53_tangent_slope_quadratic",
+      11,
+      "Đạo hàm"
+    ],
+    [
+      "v53_independent_two_success",
+      11,
+      "Xác suất"
+    ],
+    [
+      "v53_sin_double_from_sin_cos",
+      11,
+      "Lượng giác"
+    ],
+    [
+      "v53_definite_linear",
+      12,
+      "Tích phân"
+    ],
+    [
+      "v53_definite_quadratic",
+      12,
+      "Tích phân"
+    ],
+    [
+      "v53_complex_conjugate_product",
+      12,
+      "Số phức"
+    ],
+    [
+      "v53_distance_squared_3d",
+      12,
+      "Tọa độ trong không gian"
+    ],
+    [
+      "v53_plane_eval",
+      12,
+      "Tọa độ trong không gian"
+    ],
+    [
+      "v53_log_power",
+      12,
+      "Hàm số logarit"
+    ],
+    [
+      "v53_exponential_ratio",
+      12,
+      "Hàm số mũ"
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "version": "V104",
+  "based_on": "V103",
+  "new_verified_questions": 10000,
+  "new_independent_type_ids": 0,
+  "supplemental_file": "backend/app/ai/verified_seed/v104_supplemental_verified_questions.jsonl",
+  "note": "Questions are distinct and answer-verified, but are parameter variants of five known method families, NOT 10,000 independent types. Stored separately to avoid corrupting 10-question-per-form core bank. Not automatically loaded into production question API.",
+  "mathgeo": "V103 unchanged",
+  "existing_core_form_ids": 33378,
+  "existing_core_questions": 333780,
+  "test": "10000 unique question strings and 10000 exact-arithmetic answer checks passed"
+}

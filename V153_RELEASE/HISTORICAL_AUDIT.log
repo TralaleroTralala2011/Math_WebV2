@@ -1,0 +1,12 @@
+{
+  "historical_jsonl_files_scanned": 52,
+  "historical_lines_scanned": 665249,
+  "historical_json_dict_records": 665249,
+  "candidate_methods": 4,
+  "candidate_questions": 40,
+  "exact_normalized_question_collisions": 0,
+  "exact_normalized_topic_method_collisions": 0,
+  "question_collision_examples": [],
+  "method_collision_examples": [],
+  "limitations": "Exact textual equality after normalization only; semantic duplication and independent mathematical novelty NOT certified."
+}

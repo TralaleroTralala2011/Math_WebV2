@@ -1,0 +1,28 @@
+{
+  "version": "V150",
+  "base": "MATH_WEB_GITHUB_READY_V149_CANDIDATE_IDENTITY_AUDIT.zip",
+  "candidate_records": 1609,
+  "candidate_ids_recognized": 1609,
+  "missing_candidate_ids": 0,
+  "shared_core_method_candidates": 1050,
+  "new_certified_independent_methods": 0,
+  "new_published_questions": 0,
+  "tests": {
+    "candidate_schema": "7/7 passed",
+    "scripts_suite": "17/17 passed",
+    "backend_full": "not run",
+    "browser_e2e": "not run"
+  },
+  "next": [
+    "review 1050 shared-core candidate methods",
+    "verify question linkage and mathematical correctness",
+    "run backend and E2E tests"
+  ],
+  "files_changed": [
+    "scripts/audit_research_method_collisions.py"
+  ],
+  "files_added": [
+    "scripts/test_v150_candidate_schema.py",
+    "V150_RELEASE/*"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "version": "V141",
+  "source_zip": "MATH_WEB_GITHUB_READY_V140_GRADING_V122_SAFE.zip",
+  "date_utc": "2026-11-08T16:42:26.230453+00:00",
+  "new_method_candidates": 11,
+  "new_questions_researched": 110,
+  "new_independent_methods_certified": 0,
+  "new_questions_published": 0,
+  "format_counts": {
+    "trac_nghiem": 77,
+    "tra_loi_ngan": 22,
+    "dung_sai": 11
+  },
+  "mathematical_oracle_checks_passed": 110,
+  "historical_questions_compared": 649483,
+  "historical_literal_duplicates_found": 0,
+  "existing_sqlite_modified_in_package": false,
+  "production_source_edits": [
+    "backend/question_factory/storage.py",
+    "backend/question_factory/api.py"
+  ],
+  "new_files": [
+    "backend/tests/test_v141_independence_certification_reporting.py",
+    "V141_RESEARCH/build.py",
+    "V141_RESEARCH/audit.py",
+    "V141_RESEARCH/test_v141.py",
+    "V141_RESEARCH/V141_CANDIDATE_METHODS.jsonl",
+    "V141_RESEARCH/V141_VERIFIED_QUESTIONS.jsonl",
+    "V141_RESEARCH/V141_RESULTS.json",
+    "V141_RELEASE/V141_REPORT.md",
+    "V141_RELEASE/CHECKPOINT.json",
+    "V141_RELEASE/BROAD_REGRESSION.log",
+    "V141_RELEASE/V141_RESEARCH_TESTS.log",
+    "V141_RELEASE/V141_FINAL_SMOKE.log",
+    "V141_RELEASE/INTEGRATION_REGRESSION.log"
+  ],
+  "tests": {
+    "backend_broad_excluding_v120": "208 passed, 6 warnings",
+    "research_v141": "9 passed",
+    "api_integration_selected": "33 passed",
+    "latest_patch_smoke": "11 passed",
+    "full_all_tests": "not run (slow V120 excluded)",
+    "frontend_browser_e2e": "not run"
+  },
+  "next_actions": [
+    "review semantic novelty vs entire catalog",
+    "continue developing genuine new mathematical methods",
+    "run V120 slow test",
+    "E2E Battle with two browsers",
+    "integrate only reviewed questions"
+  ],
+  "completion_claim": false,
+  "automation_duration_60m_guaranteed": false
+}

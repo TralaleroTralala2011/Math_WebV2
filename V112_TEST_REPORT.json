@@ -1,0 +1,46 @@
+{
+  "release": "V112_QUESTION_FACTORY_INTEGRATED",
+  "source": "MATH_WEB_GITHUB_READY_RESEARCH_V111_10000_VERIFIED_CORE_QUESTIONS(1).zip",
+  "test_execution": "Three isolated pytest groups on final code; monolithic rerun timed out in sandbox",
+  "pytest_groups": [
+    {
+      "suite": "backend/tests/test_question_factory_v112.py",
+      "passed": 18,
+      "failed": 0
+    },
+    {
+      "suite": "backend/tests/test_verified_bank_api.py + test_verified_bank_quality.py",
+      "passed": 7,
+      "failed": 0
+    },
+    {
+      "suite": "backend/tests excluding factory and verified bank files",
+      "passed": 114,
+      "failed": 0
+    }
+  ],
+  "pytest_total_passed": 139,
+  "pytest_total_failed": 0,
+  "js_checks": [
+    "node --check js/battle.js",
+    "node --check js/practise.js",
+    "node --check js/practice-mathgeo-bridge.js"
+  ],
+  "mathgeo_node_runtime_checks": [
+    "tools/v96_mathgeo_runtime_test.cjs",
+    "tools/v97_triangle_sss_test.cjs"
+  ],
+  "zip_integrity": "PASS",
+  "existing_entries_preserved": 3714,
+  "new_entries": 25,
+  "original_core_database_unchanged": true,
+  "original_verified_bank_unchanged": true,
+  "not_tested": [
+    "actual cloud deployment",
+    "live Docker containers",
+    "browser E2E on two devices",
+    "production backup recovery",
+    "high load",
+    "semantic independence 300000 types"
+  ]
+}

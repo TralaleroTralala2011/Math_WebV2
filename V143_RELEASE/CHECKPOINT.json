@@ -1,0 +1,20 @@
+{
+  "version": "V143",
+  "source_zip": "MATH_WEB_GITHUB_READY_V142_CERTIFICATION_INTEGRITY.zip",
+  "timestamp_utc": "2026-11-08T18:31:49.259834+00:00",
+  "changed": [
+    "backend/question_factory/storage.py"
+  ],
+  "added": [
+    "backend/tests/test_v143_eligible_certificate_counts.py"
+  ],
+  "new_independent_methods_certified": 0,
+  "new_questions_published": 0,
+  "candidate_methods_carried_forward": 11,
+  "candidate_questions_carried_forward": 110,
+  "focused_tests": "3 passed",
+  "legacy_tests": "4 passed, 3 failed because V141 tests assume unapproved/empty certificate rows count toward target; behavior intentionally tightened",
+  "full_regression": "not run",
+  "battle_e2e": "not run",
+  "completion_claim": false
+}

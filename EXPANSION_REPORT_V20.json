@@ -1,0 +1,19 @@
+{
+  "version": "V20",
+  "previous_records": 3340,
+  "added_forms": 45,
+  "added_questions": 450,
+  "total_records": 3790,
+  "distinct_form_ids": 378,
+  "unique_question_texts": 3790,
+  "new_forms_by_grade": {
+    "10": 150,
+    "11": 150,
+    "12": 150
+  },
+  "caveats": [
+    "Distinct form IDs do not prove pedagogically distinct solution methods",
+    "No full UI/Battle regression test",
+    "Verified seed bank may not be integrated with practice UI"
+  ]
+}

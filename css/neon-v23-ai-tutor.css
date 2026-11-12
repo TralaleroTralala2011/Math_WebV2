@@ -1,0 +1,25 @@
+/* V23: Responsive, accessible adaptive learning plans. */
+.mw-v23-ai-panel{border:1px solid #8ee8d8!important;background:linear-gradient(145deg,#f0fffd,#f8f7ff)!important}
+.mw-v23-summary{display:flex;flex-wrap:wrap;gap:10px;margin:13px 0 15px}
+.mw-v23-tutor-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}
+.mw-v23-topic-card{min-width:0;border:1px solid #d1e6ee;background:#fff}
+.mw-v23-topic-card h2{overflow-wrap:anywhere}
+.mw-v23-reason{font-weight:600;line-height:1.6;color:#264c63}
+.mw-v23-steps{padding-left:21px;color:#32536d;font-size:14px;line-height:1.75}
+.mw-v23-steps li{margin:4px 0}
+.mw-v23-topic-card .mw-v5-row{display:flex;flex-wrap:wrap;gap:9px}
+.mw-v23-topic-card .mw-v5-btn{white-space:normal;text-align:center}
+@media(max-width:1000px){.mw-v23-tutor-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.mw-v23-tutor-grid{grid-template-columns:minmax(0,1fr)}.mw-v23-summary{gap:7px}}
+
+/* V24: uncalibrated probabilities are explanations, never high-stakes grades. */
+.mw-v24-prediction{font-size:.84rem;line-height:1.55;white-space:normal;color:#acd9f5;
+ padding:9px 12px;border:1px dashed rgba(103,199,255,.4);border-radius:12px;
+ background:rgba(26,99,152,.12);margin:8px 0;}
+@media(max-width:680px){.mw-v24-prediction{padding:8px 10px;font-size:.82rem}}
+
+/* V25: explain evidence quality without overwhelming mobile users. */
+.mw-v25-evidence-details{padding:10px 12px;border-radius:12px;border:1px solid #9bc7d7;margin:10px 0 14px;max-width:100%;overflow-wrap:anywhere}
+.mw-v25-evidence-details>summary{cursor:pointer;font-weight:700;line-height:1.5}
+.mw-v25-readiness-note{font-size:.87rem;line-height:1.5;margin:7px 0}
+@media(max-width:680px){.mw-v25-evidence-details{padding:9px 10px}.mw-v25-evidence-details>summary{font-size:.93rem}}

@@ -1,0 +1,15 @@
+{
+  "version": "V61",
+  "base": "V60",
+  "new_form_ids": 32,
+  "new_questions": 320,
+  "total_form_ids": 7110,
+  "total_questions": 71110,
+  "new_form_min_questions": 10,
+  "all_form_ids_at_least_10": true,
+  "new_unique_questions": 320,
+  "new_qa": "320 exact arithmetic crosschecks; teacher review not done",
+  "method_independence": "32 distinct task objectives; not independently certified as distinct solution methods",
+  "regression_tests": "not run",
+  "existing_files_preserved": true
+}

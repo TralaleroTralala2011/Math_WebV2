@@ -1,0 +1,417 @@
+{
+  "grade": 11,
+  "status": "CANDIDATE_NOT_IN_OFFICIAL_EXAM",
+  "question_count": 30,
+  "form_count": 3,
+  "forms": [
+    {
+      "grade": 11,
+      "topic_id": "cap_so_cong",
+      "title": "Tìm số hạng thứ n của cấp số cộng",
+      "concept": "Công thức số hạng tổng quát của cấp số cộng",
+      "method": "Thay u₁, công sai d và chỉ số n vào uₙ=u₁+(n−1)d",
+      "conditions": "n nguyên dương, công sai và số hạng đầu nguyên",
+      "distinguishing": "Tìm một số hạng cụ thể, không phải tổng n số hạng hay suy ra công sai",
+      "questions": [
+        {
+          "question": "Cấp số cộng có u₁=2, công sai d=3. Tính u_4.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "11",
+            "12",
+            "9",
+            "14"
+          ],
+          "correct_index": 0,
+          "answer": "11",
+          "explanation": "Áp dụng uₙ=u₁+(n−1)d: u_4=2+(4−1)×(3)=11."
+        },
+        {
+          "question": "Cấp số cộng có u₁=1, công sai d=4. Tính u_5.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "18",
+            "15",
+            "20",
+            "17"
+          ],
+          "correct_index": 3,
+          "answer": "17",
+          "explanation": "Áp dụng uₙ=u₁+(n−1)d: u_5=1+(5−1)×(4)=17."
+        },
+        {
+          "question": "Cấp số cộng có u₁=5, công sai d=2. Tính u_6.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "13",
+            "18",
+            "15",
+            "16"
+          ],
+          "correct_index": 2,
+          "answer": "15",
+          "explanation": "Áp dụng uₙ=u₁+(n−1)d: u_6=5+(6−1)×(2)=15."
+        },
+        {
+          "question": "Cấp số cộng có u₁=-2, công sai d=3. Tính u_4.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "10",
+            "7",
+            "8",
+            "5"
+          ],
+          "correct_index": 1,
+          "answer": "7",
+          "explanation": "Áp dụng uₙ=u₁+(n−1)d: u_4=-2+(4−1)×(3)=7."
+        },
+        {
+          "question": "Cấp số cộng có u₁=7, công sai d=-1. Tính u_5.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "3",
+            "4",
+            "1",
+            "6"
+          ],
+          "correct_index": 0,
+          "answer": "3",
+          "explanation": "Áp dụng uₙ=u₁+(n−1)d: u_5=7+(5−1)×(-1)=3."
+        },
+        {
+          "question": "Cấp số cộng có u₁=3, công sai d=5. Tính u_8.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "39",
+            "36",
+            "41",
+            "38"
+          ],
+          "correct_index": 3,
+          "answer": "38",
+          "explanation": "Áp dụng uₙ=u₁+(n−1)d: u_8=3+(8−1)×(5)=38."
+        },
+        {
+          "question": "Cấp số cộng có u₁=-4, công sai d=2. Tính u_10.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "12",
+            "17",
+            "14",
+            "15"
+          ],
+          "correct_index": 2,
+          "answer": "14",
+          "explanation": "Áp dụng uₙ=u₁+(n−1)d: u_10=-4+(10−1)×(2)=14."
+        },
+        {
+          "question": "Cấp số cộng có u₁=8, công sai d=-3. Tính u_9.",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "-16",
+          "explanation": "Áp dụng uₙ=u₁+(n−1)d: u_9=8+(9−1)×(-3)=-16."
+        },
+        {
+          "question": "Cấp số cộng có u₁=-7, công sai d=4. Tính u_12.",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "37",
+          "explanation": "Áp dụng uₙ=u₁+(n−1)d: u_12=-7+(12−1)×(4)=37."
+        },
+        {
+          "question": "Cấp số cộng có u₁=11, công sai d=-5. Tính u_15. Khẳng định đáp án là -59. Đúng hay sai?",
+          "question_type": "true_false",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "Đúng",
+          "explanation": "Áp dụng uₙ=u₁+(n−1)d: u_15=11+(15−1)×(-5)=-59. Khẳng định là đúng."
+        }
+      ]
+    },
+    {
+      "grade": 11,
+      "topic_id": "cap_so_cong",
+      "title": "Tính tổng n số hạng đầu của cấp số cộng",
+      "concept": "Tổng n số hạng đầu của cấp số cộng",
+      "method": "Áp dụng công thức Sₙ=n(2u₁+(n−1)d)/2 và rút gọn",
+      "conditions": "n nguyên dương, cấp số cộng có số hạng đầu và công sai nguyên",
+      "distinguishing": "Tính tổng dãy, khác tìm số hạng uₙ hoặc tìm công sai",
+      "questions": [
+        {
+          "question": "Cấp số cộng có u₁=1, d=2. Tính tổng 5 số hạng đầu S_5.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "25",
+            "26",
+            "23",
+            "28"
+          ],
+          "correct_index": 0,
+          "answer": "25",
+          "explanation": "Áp dụng Sₙ=n[2u₁+(n−1)d]/2: S_5=5×[2×(1)+(5−1)×(2)]/2=25."
+        },
+        {
+          "question": "Cấp số cộng có u₁=2, d=3. Tính tổng 4 số hạng đầu S_4.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "27",
+            "24",
+            "29",
+            "26"
+          ],
+          "correct_index": 3,
+          "answer": "26",
+          "explanation": "Áp dụng Sₙ=n[2u₁+(n−1)d]/2: S_4=4×[2×(2)+(4−1)×(3)]/2=26."
+        },
+        {
+          "question": "Cấp số cộng có u₁=5, d=1. Tính tổng 6 số hạng đầu S_6.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "43",
+            "48",
+            "45",
+            "46"
+          ],
+          "correct_index": 2,
+          "answer": "45",
+          "explanation": "Áp dụng Sₙ=n[2u₁+(n−1)d]/2: S_6=6×[2×(5)+(6−1)×(1)]/2=45."
+        },
+        {
+          "question": "Cấp số cộng có u₁=-1, d=4. Tính tổng 5 số hạng đầu S_5.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "38",
+            "35",
+            "36",
+            "33"
+          ],
+          "correct_index": 1,
+          "answer": "35",
+          "explanation": "Áp dụng Sₙ=n[2u₁+(n−1)d]/2: S_5=5×[2×(-1)+(5−1)×(4)]/2=35."
+        },
+        {
+          "question": "Cấp số cộng có u₁=7, d=-2. Tính tổng 7 số hạng đầu S_7.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "7",
+            "8",
+            "5",
+            "10"
+          ],
+          "correct_index": 0,
+          "answer": "7",
+          "explanation": "Áp dụng Sₙ=n[2u₁+(n−1)d]/2: S_7=7×[2×(7)+(7−1)×(-2)]/2=7."
+        },
+        {
+          "question": "Cấp số cộng có u₁=3, d=5. Tính tổng 8 số hạng đầu S_8.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "165",
+            "162",
+            "167",
+            "164"
+          ],
+          "correct_index": 3,
+          "answer": "164",
+          "explanation": "Áp dụng Sₙ=n[2u₁+(n−1)d]/2: S_8=8×[2×(3)+(8−1)×(5)]/2=164."
+        },
+        {
+          "question": "Cấp số cộng có u₁=-4, d=2. Tính tổng 10 số hạng đầu S_10.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "48",
+            "53",
+            "50",
+            "51"
+          ],
+          "correct_index": 2,
+          "answer": "50",
+          "explanation": "Áp dụng Sₙ=n[2u₁+(n−1)d]/2: S_10=10×[2×(-4)+(10−1)×(2)]/2=50."
+        },
+        {
+          "question": "Cấp số cộng có u₁=8, d=-3. Tính tổng 9 số hạng đầu S_9.",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "-36",
+          "explanation": "Áp dụng Sₙ=n[2u₁+(n−1)d]/2: S_9=9×[2×(8)+(9−1)×(-3)]/2=-36."
+        },
+        {
+          "question": "Cấp số cộng có u₁=-7, d=4. Tính tổng 12 số hạng đầu S_12.",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "180",
+          "explanation": "Áp dụng Sₙ=n[2u₁+(n−1)d]/2: S_12=12×[2×(-7)+(12−1)×(4)]/2=180."
+        },
+        {
+          "question": "Cấp số cộng có u₁=11, d=-5. Tính tổng 15 số hạng đầu S_15. Khẳng định đáp án là -360. Đúng hay sai?",
+          "question_type": "true_false",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "Đúng",
+          "explanation": "Áp dụng Sₙ=n[2u₁+(n−1)d]/2: S_15=15×[2×(11)+(15−1)×(-5)]/2=-360. Khẳng định là đúng."
+        }
+      ]
+    },
+    {
+      "grade": 11,
+      "topic_id": "cap_so_cong",
+      "title": "Suy ra công sai từ hai số hạng bất kỳ",
+      "concept": "Quan hệ hiệu hai số hạng trong cấp số cộng",
+      "method": "Lấy (u_q−u_p)/(q−p) để suy ra công sai d",
+      "conditions": "p và q nguyên dương, p nhỏ hơn q, các số hạng thuộc cùng cấp số cộng",
+      "distinguishing": "Suy ra tham số công sai từ dữ kiện gián tiếp, không tính uₙ hoặc Sₙ",
+      "questions": [
+        {
+          "question": "Cấp số cộng có u_2=5 và u_5=14. Tìm công sai d.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "3",
+            "4",
+            "1",
+            "6"
+          ],
+          "correct_index": 0,
+          "answer": "3",
+          "explanation": "Ta có u_5−u_2=(5−2)d, nên d=(14−(5))/(5−2)=3."
+        },
+        {
+          "question": "Cấp số cộng có u_3=9 và u_7=25. Tìm công sai d.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "5",
+            "2",
+            "7",
+            "4"
+          ],
+          "correct_index": 3,
+          "answer": "4",
+          "explanation": "Ta có u_7−u_3=(7−3)d, nên d=(25−(9))/(7−3)=4."
+        },
+        {
+          "question": "Cấp số cộng có u_1=5 và u_6=15. Tìm công sai d.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "0",
+            "5",
+            "2",
+            "3"
+          ],
+          "correct_index": 2,
+          "answer": "2",
+          "explanation": "Ta có u_6−u_1=(6−1)d, nên d=(15−(5))/(6−1)=2."
+        },
+        {
+          "question": "Cấp số cộng có u_4=7 và u_9=22. Tìm công sai d.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "6",
+            "3",
+            "4",
+            "1"
+          ],
+          "correct_index": 1,
+          "answer": "3",
+          "explanation": "Ta có u_9−u_4=(9−4)d, nên d=(22−(7))/(9−4)=3."
+        },
+        {
+          "question": "Cấp số cộng có u_2=6 và u_8=0. Tìm công sai d.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "-1",
+            "0",
+            "-3",
+            "2"
+          ],
+          "correct_index": 0,
+          "answer": "-1",
+          "explanation": "Ta có u_8−u_2=(8−2)d, nên d=(0−(6))/(8−2)=-1."
+        },
+        {
+          "question": "Cấp số cộng có u_5=23 và u_11=53. Tìm công sai d.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "6",
+            "3",
+            "8",
+            "5"
+          ],
+          "correct_index": 3,
+          "answer": "5",
+          "explanation": "Ta có u_11−u_5=(11−5)d, nên d=(53−(23))/(11−5)=5."
+        },
+        {
+          "question": "Cấp số cộng có u_6=6 và u_13=20. Tìm công sai d.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "0",
+            "5",
+            "2",
+            "3"
+          ],
+          "correct_index": 2,
+          "answer": "2",
+          "explanation": "Ta có u_13−u_6=(13−6)d, nên d=(20−(6))/(13−6)=2."
+        },
+        {
+          "question": "Cấp số cộng có u_2=5 và u_10=-19. Tìm công sai d.",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "-3",
+          "explanation": "Ta có u_10−u_2=(10−2)d, nên d=(-19−(5))/(10−2)=-3."
+        },
+        {
+          "question": "Cấp số cộng có u_3=1 và u_12=37. Tìm công sai d.",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "4",
+          "explanation": "Ta có u_12−u_3=(12−3)d, nên d=(37−(1))/(12−3)=4."
+        },
+        {
+          "question": "Cấp số cộng có u_7=-19 và u_15=-59. Tìm công sai d. Khẳng định đáp án là -5. Đúng hay sai?",
+          "question_type": "true_false",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "Đúng",
+          "explanation": "Ta có u_15−u_7=(15−7)d, nên d=(-59−(-19))/(15−7)=-5. Khẳng định là đúng."
+        }
+      ]
+    }
+  ],
+  "limitations": "Chỉ xác minh tính toán nội bộ của bộ sinh; giáo viên phải kiểm tra nội dung, độ khó và đáp án độc lập trước khi phê duyệt."
+}

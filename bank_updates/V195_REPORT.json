@@ -1,0 +1,13 @@
+{
+  "checkpoint": "V195",
+  "baseline": "V194_FULL_WEB_BANK_INTEGRATED",
+  "baseline_questions": 9336,
+  "added_questions": 100,
+  "total_sqlite_questions": 9436,
+  "candidate_families": 10,
+  "independent_types_certified": 0,
+  "production_integrated": 0,
+  "sqlite_integrity": "ok",
+  "user_table_row_counts_unchanged": true,
+  "validation": "Formula-based independent arithmetic oracle; semantic independence not certified; no production deployment"
+}

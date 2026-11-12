@@ -1,0 +1,97 @@
+{
+  "version": "V203",
+  "base_source": "V197 full bundled website, accessed 2026-11-10",
+  "bundled_bank_before": 9636,
+  "bundled_bank_after": 11046,
+  "new_integrated_bundled_sqlite": 1410,
+  "new_by_cycle": {
+    "V198": 340,
+    "V199": 320,
+    "V200": 230,
+    "V201": 200,
+    "V202": 200,
+    "V203": 120
+  },
+  "new_method_candidates": 141,
+  "all_candidates_have_ten_questions": true,
+  "question_formats": {
+    "multiple_choice": 987,
+    "short_answer": 282,
+    "true_false": 141
+  },
+  "grade_distribution": {
+    "10": 500,
+    "11": 430,
+    "12": 480
+  },
+  "catalog_topics": 150,
+  "topics_with_new_questions": 101,
+  "topics_with_any_valid_bundled_data": 150,
+  "method_independence_certified": 0,
+  "math_oracle_checked": 1410,
+  "all_new_questions_app_graded_and_structurally_valid": 1410,
+  "new_normalized_duplicate_questions": 0,
+  "semantic_review_flagged_by_cycle": {
+    "V198": 7,
+    "V199": 13,
+    "V200": 8,
+    "V201": 11,
+    "V202": 12,
+    "V203": 6
+  },
+  "semantic_review_flag_count": 57,
+  "smoke_topic_format_passed": 423,
+  "smoke_topic_format_total": 423,
+  "sqlite_integrity": "ok",
+  "practice_and_battle_curated_reader_tests_passed": 846,
+  "practice_and_battle_curated_reader_tests_total": 846,
+  "nonbank_table_content_hashes_equal": 8,
+  "volatile_metadata_timestamp_changed_only": true,
+  "user_and_other_tables_unchanged": {
+    "database_metadata": {
+      "before": 1,
+      "after": 1
+    },
+    "users": {
+      "before": 1,
+      "after": 1
+    },
+    "game_results": {
+      "before": 0,
+      "after": 0
+    },
+    "friends": {
+      "before": 0,
+      "after": 0
+    },
+    "messages": {
+      "before": 0,
+      "after": 0
+    },
+    "notifications": {
+      "before": 0,
+      "after": 0
+    },
+    "question_sessions": {
+      "before": 0,
+      "after": 0
+    },
+    "admin_audit_logs": {
+      "before": 0,
+      "after": 0
+    }
+  },
+  "legacy_invalid_topic_rows_not_repaired": 10,
+  "remaining_questions_count_to_3m_all_sqlite_rows_only": 2988954,
+  "remaining_questions_count_across_150_valid_topics_only": 2988964,
+  "unmapped_questions_excluded_from_topic_coverage": 10,
+  "certified_types_remaining": "unknown; historical form-level semantic certification unavailable",
+  "production_deployed": false,
+  "work_limit": "Source is a local bundled SQLite copy, not the running production database. Some 141 candidates may overlap methods of older sources: none counted as certified independent forms.",
+  "next_steps": [
+    "Expert semantic independence audit of all 141 candidate methods against entire legacy bank",
+    "Resolve 10 old questions with nonexistent chia_het topic without mapping arbitrarily",
+    "Deploy only checked new rows with backups into the actual production bank and verify retrieval",
+    "Continue adding genuinely distinct problem strategies and varied questions"
+  ]
+}

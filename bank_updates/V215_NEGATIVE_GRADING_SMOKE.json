@@ -1,0 +1,9 @@
+{
+  "tested": {
+    "multiple_choice": 434,
+    "short_answer": 124
+  },
+  "incorrect_short_answer_rejected": 124,
+  "all_mcq_exactly_3_incorrect": 434,
+  "failures": []
+}

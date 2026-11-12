@@ -1,0 +1,17 @@
+{
+  "version": "V78",
+  "base": "V77",
+  "added_form_ids": 10,
+  "added_question_records": 100,
+  "total_form_ids": 33368,
+  "total_question_records": 333690,
+  "new_topic": "Toán 10 / Phương trình bậc hai",
+  "distinct_task_archetypes_authored": 10,
+  "independently_certified_distinct_types": 0,
+  "all_new_ids_have_exactly_10_questions": true,
+  "unique_new_question_texts": 100,
+  "exact_text_overlap_with_existing_topic": 0,
+  "quality_note": "10 distinct mathematical task specifications were authored. Their mathematical independence under the strict 2,000-types-per-topic criterion and detailed solutions have not undergone independent pedagogical certification.",
+  "target_10000_new_ids_met": false,
+  "target_100_percent_met": false
+}

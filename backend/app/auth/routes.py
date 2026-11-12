@@ -4,13 +4,16 @@ import hmac
 import json
 import os
 import secrets
+import sqlite3
 
 from datetime import datetime, timedelta, timezone
+from pathlib import Path
+import time
 
 from fastapi import APIRouter, Header, HTTPException
 from pydantic import BaseModel, Field
 
-from database.database import get_connection
+from database.database import get_connection, DATABASE_PATH
 
 
 router = APIRouter(
@@ -23,12 +26,37 @@ router = APIRouter(
 # CONFIG
 # =========================================================
 
-# Có thể đặt MATH_WEB_SECRET_KEY trong biến môi trường khi deploy.
-# Nếu chưa đặt thì dùng key local để giữ khả năng chạy ngay trên máy.
-SECRET_KEY = os.getenv(
-    "MATH_WEB_SECRET_KEY",
-    "MATH_WEB_LOCAL_SECRET"
-)
+# Never sign login/admin tokens with a publicly known key. Keep a stable,
+# per-installation secret beside the SQLite database. Production can provide
+# MATH_WEB_SECRET_KEY using its secret manager.
+def _load_secret_key() -> str:
+    configured = os.getenv("MATH_WEB_SECRET_KEY", "")
+    if configured:
+        if len(configured) < 32:
+            raise RuntimeError("MATH_WEB_SECRET_KEY must contain at least 32 characters.")
+        return configured
+    secret_path = Path(os.getenv("MATH_WEB_SECRET_FILE", str(DATABASE_PATH.parent / ".mathweb_hmac_secret")))
+    secret_path.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        fd = os.open(secret_path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)
+    except FileExistsError:
+        fd = None
+    if fd is not None:
+        with os.fdopen(fd, "w", encoding="ascii") as handle:
+            handle.write(secrets.token_urlsafe(48))
+    # A second uvicorn worker can start while the first is creating the file.
+    for _ in range(20):
+        try:
+            key = secret_path.read_text(encoding="ascii").strip()
+            if len(key) >= 32:
+                return key
+        except FileNotFoundError:
+            pass
+        time.sleep(0.05)
+    raise RuntimeError("Unable to read MATH WEB signing key. Check directory permissions.")
+
+
+SECRET_KEY = _load_secret_key()
 
 TOKEN_EXPIRE_DAYS = 7
 
@@ -1137,10 +1165,18 @@ def login(
         cursor = connection.cursor()
 
         # Admin identity lives in admin_accounts, not in the learner users table.
-        admin = cursor.execute(
-            "SELECT id, username, password_hash, status, auth_version FROM admin_accounts WHERE username=? COLLATE NOCASE LIMIT 1",
-            (username,)
-        ).fetchone()
+        try:
+            admin = cursor.execute(
+                "SELECT id, username, password_hash, status, auth_version FROM admin_accounts WHERE username=? COLLATE NOCASE LIMIT 1",
+                (username,)
+            ).fetchone()
+        except sqlite3.OperationalError as error:
+            # A learner must still be able to log in when an older/incomplete
+            # database lacks the admin_accounts migration. Never make learner
+            # authentication depend on an optional Admin table.
+            if 'no such table: admin_accounts' not in str(error):
+                raise
+            admin = None
         if admin:
             if not verify_password(password, admin["password_hash"]):
                 raise HTTPException(status_code=401, detail="Sai tên tài khoản hoặc mật khẩu.")
@@ -1322,39 +1358,37 @@ def me(
 # =========================================================
 
 @router.post("/logout")
-def logout(
-    authorization: str | None = Header(
-        default=None
-    )
-):
+def logout(authorization: str | None = Header(default=None)):
+    """Revoke the current account's existing tokens on logout.
+
+    Previous versions only instructed the browser to erase local storage,
+    leaving a copied token fully usable until its seven-day expiry.
     """
-    Logout phía API.
-
-    Kiến trúc token hiện tại là stateless HMAC token.
-    Vì vậy server không lưu session/token trong database.
-
-    Endpoint này xác nhận token hiện tại hợp lệ và yêu cầu
-    frontend xóa token khỏi localStorage/sessionStorage/cookie.
-
-    Sau khi frontend xóa token, các request tiếp theo sẽ
-    không còn được xác thực.
-    """
-
-    token = extract_bearer_token(
-        authorization
-    )
-
-    payload = verify_token(
-        token
-    )
-
+    token = extract_bearer_token(authorization)
+    payload = verify_token(token)
     if not payload:
-        raise HTTPException(
-            status_code=401,
-            detail="Token không hợp lệ hoặc đã hết hạn."
-        )
-
-    return {
-        "message": "Đăng xuất thành công.",
-        "logged_out": True
-    }
+        raise HTTPException(status_code=401, detail="Token không hợp lệ hoặc đã hết hạn.")
+    if payload.get("role") == "admin":
+        conn = get_connection()
+        try:
+            admin = conn.execute(
+                "SELECT username,status,auth_version FROM admin_accounts WHERE id=?",
+                (payload["user_id"],),
+            ).fetchone()
+            if (not admin or admin["status"] != "active"
+                    or admin["username"] != payload.get("admin_username")
+                    or int(admin["auth_version"]) != payload["auth_version"]):
+                raise HTTPException(status_code=401, detail="Phiên quản trị không hợp lệ.")
+            conn.execute("UPDATE admin_accounts SET auth_version=auth_version+1 WHERE id=?", (payload["user_id"],))
+            conn.commit()
+        finally:
+            conn.close()
+    else:
+        user = get_current_user(authorization)
+        conn = get_connection()
+        try:
+            conn.execute("UPDATE users SET auth_version=auth_version+1 WHERE id=?", (user["id"],))
+            conn.commit()
+        finally:
+            conn.close()
+    return {"message": "Đăng xuất thành công.", "logged_out": True}

@@ -1,0 +1,522 @@
+[
+  {
+    "grade": 10,
+    "topic": "tap_hop",
+    "key": "v191_symmetric_difference",
+    "name": "Đếm phần tử thuộc đúng một trong hai tập",
+    "method": "|A Δ B| = |A|+|B|-2|A∩B|",
+    "knowledge": "Phép toán tập hợp, đếm phần tử",
+    "conditions": "Hai tập hữu hạn",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 10,
+    "topic": "hinh_hoc_co_ban_10",
+    "key": "v191_polygon_diagonals",
+    "name": "Đếm đường chéo của đa giác lồi",
+    "method": "C(n,2)-n",
+    "knowledge": "Đa giác, đếm cặp đỉnh",
+    "conditions": "n>=3 là số đỉnh",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "hinh_hoc_co_ban_10",
+    "key": "v191_polygon_angle_sum",
+    "name": "Tổng góc trong của đa giác n cạnh",
+    "method": "(n-2)×180°",
+    "knowledge": "Chia đa giác thành n−2 tam giác",
+    "conditions": "Đa giác đơn lồi, n≥3",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_special_lines",
+    "key": "v191_apollonius_median",
+    "name": "Bình phương trung tuyến theo ba cạnh",
+    "method": "m_a²=(2b²+2c²−a²)/4",
+    "knowledge": "Định lý Apollonius",
+    "conditions": "Ba cạnh hợp lệ tạo thành tam giác",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "he_thuc_luong_tam_giac",
+    "key": "v191_heron_area",
+    "name": "Diện tích tam giác theo công thức Heron",
+    "method": "S²=p(p−a)(p−b)(p−c)",
+    "knowledge": "Nửa chu vi và định lý Heron",
+    "conditions": "Ba cạnh thỏa bất đẳng thức tam giác",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_circle_chords_arcs",
+    "key": "v191_intersecting_chords",
+    "name": "Dây cung cắt nhau trong đường tròn",
+    "method": "PA·PB=PC·PD",
+    "knowledge": "Định lý hai dây cung cắt nhau",
+    "conditions": "P trong đường tròn, độ dài dương",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_coordinate_distance_midpoint",
+    "key": "v191_projection_on_sloped_line",
+    "name": "Hình chiếu vuông góc của điểm lên y=x+b",
+    "method": "H_x=(x_0+y_0−b)/2",
+    "knowledge": "Điểm đối xứng qua đường thẳng",
+    "conditions": "Đường thẳng có hệ số góc 1",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "quy_tac_dem",
+    "key": "v191_stars_bars_three",
+    "name": "Đếm nghiệm nguyên không âm của x+y+z=N",
+    "method": "C(N+2,2)",
+    "knowledge": "Phương pháp chia kẹo Euler / stars and bars",
+    "conditions": "x,y,z là số nguyên không âm",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_combinatorics_olympiad",
+    "key": "v191_linear_diophantine_nonnegative",
+    "name": "Đếm nghiệm nguyên không âm của x+2y=N",
+    "method": "y∈[0,⌊N/2⌋]",
+    "knowledge": "Giải phương trình Diophantine với điều kiện không âm",
+    "conditions": "N là số nguyên không âm",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_advanced_inequalities",
+    "key": "v191_quadratic_nonnegative_all_real",
+    "name": "Điều kiện để tam thức luôn dương trên R",
+    "method": "a>0 và Δ<0",
+    "knowledge": "Biệt thức và dấu tam thức",
+    "conditions": "Hệ số x² dương; bất đẳng thức nghiêm ngặt",
+    "difficulty": "nâng cao"
+  },
+  {
+    "grade": 11,
+    "topic": "cap_so_nhan",
+    "key": "v191_infinite_geometric_series",
+    "name": "Tổng cấp số nhân vô hạn hội tụ",
+    "method": "S=a₁/(1−q)",
+    "knowledge": "Giới hạn cấp số nhân",
+    "conditions": "|q|<1",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "gioi_han",
+    "key": "v191_telescopic_rational_sum",
+    "name": "Tính tổng rút gọn bằng phân tích thành phân số đơn",
+    "method": "Σ1/[j(j+1)]=1−1/(n+1)",
+    "knowledge": "Tổng lồng nhau / telescoping",
+    "conditions": "j=1..n",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "dao_ham_quy_tac",
+    "key": "v191_chain_power_derivative",
+    "name": "Đạo hàm hợp lũy thừa (ax+b)^m",
+    "method": "d/dx (ax+b)^m = ma(ax+b)^(m−1)",
+    "knowledge": "Quy tắc dây chuyền",
+    "conditions": "m nguyên dương",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "dao_ham",
+    "key": "v191_quotient_rule_derivative",
+    "name": "Đạo hàm thương hai hàm bậc nhất",
+    "method": "((ax+b)/(cx+d))′=(ad−bc)/(cx+d)²",
+    "knowledge": "Quy tắc đạo hàm thương",
+    "conditions": "cx+d khác 0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "gioi_han_ham_so",
+    "key": "v191_limit_sin_over_x",
+    "name": "Giới hạn lượng giác cơ bản sin(ax)/(bx)",
+    "method": "lim sin(ax)/(bx)=a/b",
+    "knowledge": "Giới hạn lượng giác",
+    "conditions": "x→0, b khác 0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "gioi_han_ham_so",
+    "key": "v191_limit_cos_1_over_x_squared",
+    "name": "Giới hạn (1−cos(ax))/x²",
+    "method": "lim (1−cos(ax))/x²=a²/2",
+    "knowledge": "Hằng đẳng thức 1−cos t=2sin²(t/2)",
+    "conditions": "x→0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "bien_co_doc_lap_11",
+    "key": "v191_bayes_two_urns",
+    "name": "Định lý Bayes trong mô hình chọn hộp",
+    "method": "P(H|R)=P(R|H)P(H)/P(R)",
+    "knowledge": "Xác suất có điều kiện, xác suất toàn phần",
+    "conditions": "Hai hộp được chọn với xác suất bằng nhau",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "to_hop_xac_suat_nang_cao_11",
+    "key": "v191_binomial_exactly_two",
+    "name": "Phân phối nhị thức: đúng 2 lần thành công",
+    "method": "P(X=2)=C(n,2)p²(1−p)^(n−2)",
+    "knowledge": "Đếm số vị trí thành công độc lập",
+    "conditions": "n lần thử độc lập, xác suất p",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "day_so_truy_hoi_11",
+    "key": "v191_second_order_fibonacci_recurrence",
+    "name": "Dãy truy hồi tuyến tính bậc hai dạng Fibonacci",
+    "method": "u_(n+2)=u_(n+1)+u_n",
+    "knowledge": "Hai điều kiện đầu và tính chất số Fibonacci",
+    "conditions": "u0,u1 cho trước, n>=2",
+    "difficulty": "nâng cao"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_sphere_equation",
+    "key": "v191_sphere_diameter_endpoints",
+    "name": "Mặt cầu có đường kính AB",
+    "method": "R²=AB²/4",
+    "knowledge": "Định lý đường kính mặt cầu và công thức khoảng cách",
+    "conditions": "A,B khác nhau trong Oxyz",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "goc_khoang_cach_oxyz",
+    "key": "v191_line_point_distance_cross",
+    "name": "Khoảng cách từ điểm đến đường thẳng trong Oxyz",
+    "method": "d²=||AP×u||²/||u||²",
+    "knowledge": "Tích có hướng và hình chiếu vuông góc",
+    "conditions": "Vectơ chỉ phương u≠0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_plane_equation",
+    "key": "v191_two_plane_intersection_direction",
+    "name": "Vectơ chỉ phương giao tuyến hai mặt phẳng",
+    "method": "u=n₁×n₂",
+    "knowledge": "Tích có hướng hai vectơ pháp tuyến",
+    "conditions": "Hai mặt phẳng không song song",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "nguyen_ham_tich_phan",
+    "key": "v191_substitution_polynomial_integral",
+    "name": "Tích phân đặt ẩn phụ u=x²+c",
+    "method": "∫2x(x²+c)² dx=(x²+c)³/3",
+    "knowledge": "Đổi biến và định lý Newton–Leibniz",
+    "conditions": "a>0,c>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "ung_dung_tich_phan",
+    "key": "v191_parabola_line_enclosed_area",
+    "name": "Diện tích hình phẳng giữa y=ax² và y=bx",
+    "method": "∫₀^(b/a)(bx−ax²) dx",
+    "knowledge": "Tìm giao điểm và tích phân hiệu hai đồ thị",
+    "conditions": "a,b>0, miền kín",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "gtln_gtnn",
+    "key": "v191_quadratic_min_closed_interval",
+    "name": "Cực tiểu tam thức bậc hai trên đoạn kín",
+    "method": "min tại đỉnh nếu thuộc đoạn, ngược lại tại đầu mút",
+    "knowledge": "Xét đỉnh và hai đầu mút",
+    "conditions": "Đoạn [0,L] đóng",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "xac_suat_12",
+    "key": "v191_binomial_variance",
+    "name": "Phương sai của biến ngẫu nhiên nhị thức",
+    "method": "Var(X)=np(1−p)",
+    "knowledge": "Tổng các Bernoulli độc lập",
+    "conditions": "X∼Binomial(n,p), 0<p<1",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "mat_cau",
+    "key": "v191_sphere_secant_chord_length",
+    "name": "Dây cung của mặt cầu theo khoảng cách tới tâm",
+    "method": "L²=4(R²−d²)",
+    "knowledge": "Tam giác vuông tại chân đường vuông góc",
+    "conditions": "0≤d<R",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "so_phuc",
+    "key": "v191_complex_geometric_rotation",
+    "name": "Quay số phức bằng phép nhân i",
+    "method": "i(a+bi)=−b+ai",
+    "knowledge": "Nhân đơn vị ảo ứng với phép quay 90°",
+    "conditions": "a,b là số thực",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_3d_optimization",
+    "key": "v191_min_distance_to_plane_on_segment",
+    "name": "Khoảng cách tối thiểu từ đoạn thẳng tới mặt phẳng",
+    "method": "min_{0≤z≤L}(z−d)²/6",
+    "knowledge": "Hình chiếu có điều kiện, xét đầu mút hoặc điểm trong đoạn",
+    "conditions": "P=(a,2,z), 0≤z≤L, mặt phẳng x+2y+z=T",
+    "difficulty": "nâng cao"
+  },
+  {
+    "grade": 12,
+    "topic": "bieu_dien_so_phuc",
+    "key": "v191_complex_line_locus_min_modulus",
+    "name": "Cực tiểu môđun số phức với điều kiện đường thẳng",
+    "method": "min |z|²=d²/(a²+b²)",
+    "knowledge": "Khoảng cách từ O tới đường thẳng biểu diễn z",
+    "conditions": "z=x+yi, a²+b²>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_solid_surface_area",
+    "key": "v191_cone_generatrix_pythagorean",
+    "name": "Tính diện tích xung quanh nón từ bán kính và chiều cao",
+    "method": "S_xq=πr√(r²+h²)",
+    "knowledge": "Định lý Pythagore trong tiết diện qua trục",
+    "conditions": "Hình nón tròn xoay r,h>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "nguyen_ham_tich_phan",
+    "key": "v191_integral_by_parts_x_exp",
+    "name": "Tìm hệ số trong kết quả tích phân từng phần x·e^x",
+    "method": "∫₀ⁿ x e^x dx=(n−1)e^n+1",
+    "knowledge": "Chọn u=x, dv=e^x dx",
+    "conditions": "n là số nguyên dương",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "nguyen_ham_tich_phan",
+    "key": "v191_integration_by_parts_ln",
+    "name": "Tìm hệ số của logarit sau tích phân từng phần",
+    "method": "∫₁ᵃ ln x dx=a ln a−a+1",
+    "knowledge": "Chọn u=ln x, dv=dx",
+    "conditions": "a nguyên, a>1",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "hoan_vi_chinh_hop_to_hop",
+    "key": "v191_multinomial_repeated_letters",
+    "name": "Hoán vị đa tập có ký hiệu trùng",
+    "method": "(a+b+c)!/(a!b!c!)",
+    "knowledge": "Đếm hoán vị của các ký tự lặp lại",
+    "conditions": "a,b,c là số nguyên dương",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_special_lines",
+    "key": "v191_angle_bisector_side_division",
+    "name": "Định lý đường phân giác trong tam giác",
+    "method": "BD/DC=AB/AC",
+    "knowledge": "Tỉ số cạnh kề của đường phân giác",
+    "conditions": "Tam giác không suy biến, D thuộc BC",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "he_thuc_luong_tam_giac",
+    "key": "v191_excircle_radius_heron",
+    "name": "Bán kính đường tròn bàng tiếp đối diện góc A",
+    "method": "r_a=S/(p−a)",
+    "knowledge": "Diện tích tam giác và tiếp xúc ba cạnh",
+    "conditions": "Tam giác có cạnh 13t,14t,15t",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "tam_giac_tu_giac_10",
+    "key": "v191_incircle_tangent_length",
+    "name": "Độ dài tiếp tuyến từ đỉnh đến tiếp điểm đường tròn nội tiếp",
+    "method": "Đoạn tiếp tuyến từ A=s−a",
+    "knowledge": "Các tiếp tuyến từ cùng một điểm bằng nhau",
+    "conditions": "Tam giác có đường tròn nội tiếp",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "toa_do_phang",
+    "key": "v191_internal_section_point",
+    "name": "Tọa độ điểm chia đoạn theo tỉ số cho trước",
+    "method": "M=(nA+mB)/(m+n)",
+    "knowledge": "Công thức chia trong đoạn thẳng",
+    "conditions": "A,B phân biệt, AM:MB=m:n với m,n>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "ham_so_bac_hai",
+    "key": "v191_parabola_leading_coefficient_from_vertex",
+    "name": "Tìm tham số a của parabol biết đỉnh và một điểm",
+    "method": "y=a(x−h)²+k",
+    "knowledge": "Dạng đỉnh của hàm bậc hai",
+    "conditions": "Điểm đã cho không trùng đỉnh",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "cong_thuc_luong_giac",
+    "key": "v191_cosine_addition_acute_angles",
+    "name": "Công thức cos(α+β) từ các tỉ số lượng giác",
+    "method": "cos(α+β)=cosα cosβ−sinα sinβ",
+    "knowledge": "Công thức cộng hai góc",
+    "conditions": "α,β nhọn, cos sin dương",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "to_hop_xac_suat_nang_cao_11",
+    "key": "v191_adjacent_permutations",
+    "name": "Xếp hai người quy định đứng cạnh nhau",
+    "method": "2(n−1)!",
+    "knowledge": "Gộp hai người thành một khối",
+    "conditions": "n người phân biệt, n≥2",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "to_hop_xac_suat_nang_cao_11",
+    "key": "v191_no_adjacent_selections",
+    "name": "Chọn k vị trí không có hai vị trí liên tiếp",
+    "method": "C(n−k+1,k)",
+    "knowledge": "Biến đổi chỉ số vị trí x_i thành y_i=x_i−i+1",
+    "conditions": "n vị trí liên tiếp, 1≤k≤(n+1)/2",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "gioi_han_ham_so",
+    "key": "v191_rational_function_limit_at_infinity",
+    "name": "Giới hạn tỉ số hai đa thức cùng bậc tại vô cực",
+    "method": "lim(a x³+...)/(c x³+...) = a/c",
+    "knowledge": "Chia tử và mẫu cho x³",
+    "conditions": "x→+∞, hệ số bậc cao nhất của mẫu khác 0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "xac_suat_11",
+    "key": "v191_two_different_color_without_replacement",
+    "name": "Rút hai viên khác màu, không hoàn lại",
+    "method": "P=2RB/[(R+B)(R+B−1)]",
+    "knowledge": "Đếm cặp chọn theo màu / không thứ tự",
+    "conditions": "R,B nguyên dương, rút hai viên cùng lúc",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "hinh_hoc_oxyz_van_dung_12",
+    "key": "v191_reflection_point_across_plane",
+    "name": "Tìm hình chiếu đối xứng của điểm qua mặt phẳng",
+    "method": "P′=P−2((n·P−d)/||n||²)n",
+    "knowledge": "Phép đối xứng qua mặt phẳng",
+    "conditions": "Mặt phẳng x+y+z=d",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "mat_phang_oxyz",
+    "key": "v191_plane_3_intercepts_equation",
+    "name": "Phương trình mặt phẳng qua ba giao điểm trục tọa độ",
+    "method": "x/a+y/b+z/c=1",
+    "knowledge": "Mặt phẳng dạng đoạn chắn",
+    "conditions": "a,b,c đều khác 0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "nguyen_ham_tich_phan",
+    "key": "v191_partial_fractions_log_argument",
+    "name": "Tìm đối số logarit sau tích phân phân thức",
+    "method": "∫[1/(x+1)−1/(x+2)]dx=ln[(x+1)/(x+2)]",
+    "knowledge": "Tách phân thức và đổi cận",
+    "conditions": "Tích phân trên [0,n], n>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "ung_dung_tich_phan",
+    "key": "v191_average_value_polynomial_interval",
+    "name": "Giá trị trung bình của hàm trên đoạn",
+    "method": "f_tb=(1/(b−a))∫_a^b f(x)dx",
+    "knowledge": "Tích phân xác định và giá trị trung bình",
+    "conditions": "Hàm liên tục trên [0,T]",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "so_phuc",
+    "key": "v191_complex_reciprocal_real",
+    "name": "Phần thực nghịch đảo số phức",
+    "method": "Re[1/(a+bi)]=a/(a²+b²)",
+    "knowledge": "Nhân liên hợp mẫu số",
+    "conditions": "a²+b²>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "pt_so_phuc",
+    "key": "v191_complex_quadratic_imaginary_roots",
+    "name": "Nghiệm của tam thức bậc hai có biệt thức âm",
+    "method": "z=−a±bi nếu z²+2az+a²+b²=0",
+    "knowledge": "Hoàn bình phương trên C",
+    "conditions": "b>0, hệ số thực",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_point_plane_distance",
+    "key": "v191_perpendicular_foot_to_plane_coordinate",
+    "name": "Tọa độ chân đường vuông góc tới mặt phẳng",
+    "method": "H=P−((n·P−d)/||n||²)n",
+    "knowledge": "Hình chiếu trực giao lên mặt phẳng",
+    "conditions": "Mặt phẳng x+y+z=d",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "ham_mu",
+    "key": "v191_derivative_exponential_chain_coefficient",
+    "name": "Hệ số trong đạo hàm hàm mũ hợp",
+    "method": "(e^(ax+b))′=a e^(ax+b)",
+    "knowledge": "Đạo hàm hợp và đạo hàm e^x",
+    "conditions": "a,b nguyên",
+    "difficulty": "trung cấp"
+  }
+]

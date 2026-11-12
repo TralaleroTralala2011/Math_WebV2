@@ -1,0 +1,1201 @@
+{
+  "grade": 10,
+  "status": "coverage_blueprint_not_a_completed_exam",
+  "requirements": {
+    "tiers": [
+      "nền tảng",
+      "trung cấp",
+      "nâng cao"
+    ],
+    "min_per_tier": 3,
+    "max_per_tier": 4,
+    "topic_exam_questions": 30,
+    "topic_exam_pass": 25
+  },
+  "topic_count": 49,
+  "candidate_questions": 523,
+  "reviewed_questions": 0,
+  "topics_ready_for_placement": 0,
+  "topics_ready_for_30_question_exam": 0,
+  "missing_reviewed_tier_slots": 441,
+  "missing_reviewed_exam_slots": 1470,
+  "topics": [
+    {
+      "topic_id": "menh_de_tap_hop",
+      "title": "Mệnh đề và tập hợp",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 20,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "bat_phuong_trinh",
+      "title": "Bất phương trình và hệ bất phương trình",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 4,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "he_thuc_luong",
+      "title": "Hệ thức lượng trong tam giác",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "vector",
+      "title": "Vectơ",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 4,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "ham_so_bac_hai",
+      "title": "Hàm số bậc hai và parabol",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 32,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "phuong_trinh_he",
+      "title": "Phương trình và hệ phương trình",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 20,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "quy_tac_dem",
+      "title": "Quy tắc đếm",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 4,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "hoan_vi_chinh_hop_to_hop",
+      "title": "Hoán vị, chỉnh hợp, tổ hợp",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 30,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "xac_suat",
+      "title": "Xác suất",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 4,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "thong_ke",
+      "title": "Thống kê",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "menh_de",
+      "title": "Mệnh đề",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "tap_hop",
+      "title": "Tập hợp và các phép toán",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "he_bat_phuong_trinh",
+      "title": "Hệ bất phương trình",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "ham_so",
+      "title": "Hàm số",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "ham_so_bac_nhat",
+      "title": "Hàm số bậc nhất",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 20,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "phuong_trinh",
+      "title": "Phương trình",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "he_phuong_trinh",
+      "title": "Hệ phương trình",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "he_thuc_luong_tam_giac",
+      "title": "Hệ thức lượng trong tam giác",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "toa_do_phang",
+      "title": "Tọa độ trong mặt phẳng",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "duong_thang",
+      "title": "Đường thẳng",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "duong_tron",
+      "title": "Đường tròn",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "nhi_thuc_newton",
+      "title": "Nhị thức Newton",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 4,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "hinh_hoc_10",
+      "title": "Hình học phẳng",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "bai_toan_thuc_te_10",
+      "title": "Bài toán thực tế Toán 10",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "hinh_hoc_co_ban_10",
+      "title": "Hình học cơ bản: góc, cạnh và diện tích",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "tam_giac_tu_giac_10",
+      "title": "Tam giác và tứ giác cơ bản",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "duong_tron_co_ban_10",
+      "title": "Đường tròn và các góc cơ bản",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "he_thuc_luong_van_dung_10",
+      "title": "Hệ thức lượng trong tam giác",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "toa_do_hinh_hoc_10",
+      "title": "Tọa độ và đường thẳng trong mặt phẳng",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "chung_minh_hinh_hoc_10",
+      "title": "Chứng minh hình học và bài toán tổng hợp",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 1,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_angles_parallel",
+      "title": "Góc tạo bởi hai đường thẳng và đường cắt",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_triangle_congruence",
+      "title": "Các trường hợp bằng nhau của tam giác",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_special_lines",
+      "title": "Đường trung tuyến, phân giác và đường cao",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_quadrilaterals_properties",
+      "title": "Tính chất hình bình hành và hình thoi",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_circle_chords_arcs",
+      "title": "Dây cung, cung và khoảng cách đến tâm",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_thales_similarity",
+      "title": "Định lý Thales và tam giác đồng dạng",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_triangle_area_ratio",
+      "title": "Tỉ số diện tích tam giác",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_circle_angles",
+      "title": "Góc nội tiếp và góc ở tâm nâng cao",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_coordinate_distance_midpoint",
+      "title": "Trung điểm và khoảng cách trong tọa độ phẳng",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_line_intersections",
+      "title": "Giao điểm và vị trí tương đối của hai đường thẳng",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_locus",
+      "title": "Quỹ tích điểm trong mặt phẳng",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_circle_tangent_chord",
+      "title": "Tiếp tuyến và dây cung của đường tròn",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_triangle_inequalities",
+      "title": "Bất đẳng thức và cực trị trong tam giác",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_vector_proofs",
+      "title": "Chứng minh hình học bằng vectơ",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_geom_coordinate_circle_line",
+      "title": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_advanced_inequalities",
+      "title": "Bất đẳng thức đại số và cực trị nâng cao",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_symmetric_systems",
+      "title": "Hệ phương trình đối xứng và hoán vị",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_radical_equations_advanced",
+      "title": "Phương trình chứa căn thức nâng cao",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    },
+    {
+      "topic_id": "g10_combinatorics_olympiad",
+      "title": "Tổ hợp và nguyên lý Dirichlet nâng cao",
+      "target": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "approved_by_tier": {
+        "nền tảng": 0,
+        "trung cấp": 0,
+        "nâng cao": 0
+      },
+      "missing_by_tier": {
+        "nền tảng": 3,
+        "trung cấp": 3,
+        "nâng cao": 3
+      },
+      "reviewed_total": 0,
+      "candidate_total": 10,
+      "missing_to_30_question_exam": 30,
+      "ready_for_placement": false,
+      "ready_for_topic_exam": false
+    }
+  ],
+  "warning": "Không tính câu chưa được duyệt là câu đã kiểm chứng. Dữ liệu có thể thay đổi sau khi Admin duyệt."
+}

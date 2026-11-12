@@ -1,0 +1,131 @@
+{
+  "verified_new_count": 200,
+  "duplicate_normalized_question_count": 0,
+  "family_candidates": 20,
+  "flagged_for_manual_semantic_review": [
+    {
+      "form": "v201_de_morgan_complement",
+      "score": 0.912,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Số phần tử ngoài hợp hai tập trong vũ trụ hữu hạn",
+        "method": "|U\\(A∪B)|=|U|−|A|−|B|+|A∩B|",
+        "grade": 10,
+        "topic": "menh_de_tap_hop"
+      }
+    },
+    {
+      "form": "v201_rational_inequality_integers",
+      "score": 0.724,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Đếm nghiệm nguyên của bất phương trình tam thức âm giữa hai nghiệm",
+        "method": "(x−a)(x−b)<0 ⇔ a<x<b",
+        "grade": 10,
+        "topic": "bat_phuong_trinh"
+      }
+    },
+    {
+      "form": "v201_triangle_area_sin_30",
+      "score": 0.844,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Diện tích tam giác từ hai cạnh kề và sin góc xen giữa",
+        "method": "S=ab·sin C/2",
+        "grade": 10,
+        "topic": "he_thuc_luong_van_dung_10"
+      }
+    },
+    {
+      "form": "v201_fourth_parallelogram_vertex",
+      "score": 0.823,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Khôi phục đỉnh thứ tư hình bình hành bằng vectơ",
+        "method": "D=A+C−B đối với ABCD thứ tự liên tiếp",
+        "grade": 10,
+        "topic": "g10_geom_vector_proofs"
+      }
+    },
+    {
+      "form": "v201_prism_edge_count",
+      "score": 0.58,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Đếm số mặt của lăng trụ đáy n giác",
+        "method": "F=n+2: n mặt bên và 2 mặt đáy",
+        "grade": 11,
+        "topic": "g11_geom_space_lines_planes"
+      }
+    },
+    {
+      "form": "v201_parabola_line_intersection_count",
+      "score": 0.573,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Đếm giao điểm parabol và đường thẳng ngang theo dấu biệt thức",
+        "method": "x²+a=m => có 0,1,2 nghiệm tùy dấu m−a",
+        "grade": 12,
+        "topic": "tuong_giao"
+      }
+    },
+    {
+      "form": "v201_inverse_linear_derivative",
+      "score": 0.748,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Đạo hàm hàm ngược tại một giá trị từ đạo hàm hàm gốc",
+        "method": "(f⁻¹)′(f(a))=1/f′(a)",
+        "grade": 12,
+        "topic": "tong_hop_thpt"
+      }
+    },
+    {
+      "form": "v201_horizontal_asymptote_ratio",
+      "score": 0.56,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Tiệm cận đứng của phân thức bậc nhất/bậc nhất",
+        "method": "x=−d/c nếu mẫu bằng 0 nhưng tử khác 0",
+        "grade": 12,
+        "topic": "tien_can"
+      }
+    },
+    {
+      "form": "v201_cylinder_lateral_area",
+      "score": 0.825,
+      "possible_prior": {
+        "source": "V199_FAMILY_SPECS.json",
+        "name": "Diện tích xung quanh hình nón chia π",
+        "method": "S_xq/π=r√(r²+h²)",
+        "grade": 12,
+        "topic": "g12_geom_solid_surface_area"
+      }
+    },
+    {
+      "form": "v201_bernoulli_variance",
+      "score": 0.763,
+      "possible_prior": {
+        "source": "V191_FAMILY_SPECS.json",
+        "name": "Phương sai của biến ngẫu nhiên nhị thức",
+        "method": "Var(X)=np(1−p)",
+        "grade": 12,
+        "topic": "xac_suat_12"
+      }
+    },
+    {
+      "form": "v201_normal_plane_constant",
+      "score": 0.744,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Tìm hệ số tự do D trong phương trình mặt phẳng qua điểm với pháp tuyến",
+        "method": "ax+by+cz+D=0 ⇒ D=−(ax₀+by₀+cz₀)",
+        "grade": 12,
+        "topic": "mat_phang_oxyz"
+      }
+    }
+  ],
+  "method_independence_certified": 0,
+  "remaining_invalid_topic_rows": 10,
+  "warning": "heuristic similarity is not proof of mathematical independence"
+}

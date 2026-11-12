@@ -1,0 +1,12 @@
+{
+  "version": 18,
+  "new_forms": 26,
+  "new_questions": 260,
+  "total_records": 3220,
+  "distinct_form_ids": 321,
+  "limitations": [
+    "new form signatures do not prove semantic uniqueness",
+    "some question families contain constant answers",
+    "not integrated into practice frontend"
+  ]
+}

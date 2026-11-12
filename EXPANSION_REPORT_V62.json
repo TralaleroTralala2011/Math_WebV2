@@ -1,0 +1,100 @@
+{
+  "version": "V62",
+  "base_version": "V61",
+  "old_form_ids": 7110,
+  "old_question_count": 71110,
+  "new_form_ids": 12,
+  "new_questions": 120,
+  "total_form_ids": 7122,
+  "total_questions": 71230,
+  "all_form_ids_at_least_10": true,
+  "new_method_families": 12,
+  "independence_caveat": "12 distinct task families; not certified mathematically independent from all existing forms",
+  "qa_scope": "new records exact arithmetic checked; not full teacher review or functional regression",
+  "new_forms": [
+    {
+      "form_id": "v62_method_001",
+      "grade": 10,
+      "topic": "Hàm số bậc nhất",
+      "method_family": "inverse_linear_function",
+      "questions": 10
+    },
+    {
+      "form_id": "v62_method_002",
+      "grade": 10,
+      "topic": "Thống kê",
+      "method_family": "arithmetic_mean",
+      "questions": 10
+    },
+    {
+      "form_id": "v62_method_003",
+      "grade": 10,
+      "topic": "Vectơ",
+      "method_family": "dot_product_2d",
+      "questions": 10
+    },
+    {
+      "form_id": "v62_method_004",
+      "grade": 10,
+      "topic": "Chia hết",
+      "method_family": "euclidean_gcd",
+      "questions": 10
+    },
+    {
+      "form_id": "v62_method_005",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "method_family": "arithmetic_sequence_nth",
+      "questions": 10
+    },
+    {
+      "form_id": "v62_method_006",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "method_family": "geometric_sequence_nth",
+      "questions": 10
+    },
+    {
+      "form_id": "v62_method_007",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "method_family": "polynomial_derivative_evaluation",
+      "questions": 10
+    },
+    {
+      "form_id": "v62_method_008",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "method_family": "combinations_unordered",
+      "questions": 10
+    },
+    {
+      "form_id": "v62_method_009",
+      "grade": 12,
+      "topic": "Số phức",
+      "method_family": "complex_modulus_squared",
+      "questions": 10
+    },
+    {
+      "form_id": "v62_method_010",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "method_family": "definite_integral_linear",
+      "questions": 10
+    },
+    {
+      "form_id": "v62_method_011",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "method_family": "cross_product_z_component",
+      "questions": 10
+    },
+    {
+      "form_id": "v62_method_012",
+      "grade": 12,
+      "topic": "Mặt cầu",
+      "method_family": "sphere_surface_area",
+      "questions": 10
+    }
+  ]
+}

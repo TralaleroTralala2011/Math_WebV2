@@ -1,0 +1,45 @@
+{
+  "version": "V210",
+  "base": "V209 full ZIP with V209 patch restored",
+  "v209_zip_actual_before_repair": 11236,
+  "v209_restored_patch_questions": 80,
+  "v209_reconciled_count": 11316,
+  "v210_added_questions": 130,
+  "v210_candidate_groups": 13,
+  "v210_total_questions": 11446,
+  "certified_new_independent_types": 0,
+  "exact_group_id_collision": [],
+  "grade_distribution": {
+    "10": 50,
+    "11": 40,
+    "12": 40
+  },
+  "group_ids": [
+    "bezout_integral_solvability",
+    "symmetric_difference_cardinality",
+    "vector_projection_coefficient",
+    "quadratic_double_root_parameter",
+    "affine_recurrence_fixed_point",
+    "binomial_polynomial_coefficient",
+    "product_rule_linear_factors",
+    "bayes_two_sources",
+    "sphere_plane_section_radius_squared",
+    "complex_reciprocal_imaginary",
+    "odd_integrand_symmetric_interval",
+    "log_chain_rule_at_point",
+    "cross_product_squared_norm"
+  ],
+  "tests": [
+    "all 130 deterministic exact answer assertions passed",
+    "10 questions in each of 13 groups",
+    "exact question deduplication against extracted V209 plus restored patch",
+    "SQLite PRAGMA integrity_check passed",
+    "V209 restored and database checkpointed before ZIP embedding"
+  ],
+  "limitations": [
+    "semantic independence against full bank not certified",
+    "full web/Battle regression not run",
+    "not a 60-minute execution"
+  ],
+  "timestamp": "2026-11-10"
+}

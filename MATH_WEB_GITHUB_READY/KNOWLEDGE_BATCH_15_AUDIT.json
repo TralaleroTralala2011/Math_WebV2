@@ -1,0 +1,21 @@
+{
+  "base": "BATCH_14",
+  "batch": "BATCH_15",
+  "updated_topics": [
+    "duong_tron_co_ban_10",
+    "toa_do_hinh_hoc_10",
+    "he_thuc_luong_van_dung_10",
+    "hinh_khong_gian",
+    "song_song_khong_gian"
+  ],
+  "total_topic_records": 150,
+  "topics_with_quiz": 73,
+  "new_questions": 50,
+  "new_question_types": {
+    "multiple_choice": 35,
+    "short_answer": 10,
+    "true_false": 5
+  },
+  "verified": "JSON shape, answer index, distinct MC options, elementary formulas manually checked; ZIP integrity",
+  "not_verified": "full independent mathematical audit, browser rendering, learning path integration, verified videos, advanced coverage"
+}

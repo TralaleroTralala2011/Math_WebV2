@@ -1,0 +1,22 @@
+{
+  "version": "V71",
+  "base": "V70",
+  "new_form_ids": 1000,
+  "new_questions": 10000,
+  "previous_questions": 213590,
+  "total_questions": 223590,
+  "previous_form_ids": 21358,
+  "total_form_ids": 22358,
+  "method_families_reused": 20,
+  "verified_independent_types": 0,
+  "questions_per_new_id": 10,
+  "duplicate_questions_within_new": 0,
+  "question_collisions_with_previous": 0,
+  "collisions_repaired": 8,
+  "new_by_grade": {
+    "10": 5000,
+    "11": 2500,
+    "12": 2500
+  },
+  "note": "1000 new IDs distributed across 20 pre-existing methods; not 1000 independently distinct problem types. Arithmetic/formula-derived answers; full independent verification and pedagogy audit not completed."
+}

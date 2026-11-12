@@ -1,0 +1,7 @@
+/* V17: fixed placement exam navigation; responsive, accessible and readable */
+.mw-v17-exam-nav{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:14px 18px;border:1px solid rgba(71,156,206,.24);border-radius:16px;background:rgba(16,78,110,.07);margin:14px 0}
+.mw-v17-exam-nav p{margin:0;flex:1 1 210px}
+.mw-v17-topic-jump{flex:2 1 260px;min-width:0;max-width:100%;padding:11px 12px;border:1px solid #aacbd9;border-radius:12px;background:#fff;color:#143b50;font:inherit}
+.mw-v17-topic-jump:focus-visible{outline:3px solid #18a4d3;outline-offset:2px}
+.mw-v17-jump{flex:0 1 auto}
+@media(max-width:650px){.mw-v17-exam-nav{flex-direction:column;align-items:stretch}.mw-v17-exam-nav p{flex:auto}.mw-v17-topic-jump{flex:auto;width:100%}.mw-v17-jump{width:100%}}

@@ -19,3 +19,24 @@ MATH_WEB build: 2026-10-29 social matchmaking fix + topic/game question studio +
 - Added Admin topic → game → question workspace with smooth topic/game cards, in-place add/edit/delete, and a structured-file question importer for JSON/CSV/TXT/MD. Ambiguous topic routing is sent to review rather than silently assigned.
 - Added learner-facing study companion on regular and trial practice pages. It uses recorded accuracy to recommend review/difficulty, saves user-selected difficulty per account, and applies the chosen/recommended level to generated knowledge-game questions.
 - Fixed the user-profile auth helper checking `"id" in sqlite3.Row` as a value rather than a column key, which blocked the learning coach endpoint.
+
+MATH_WEB NEON V7 | 2026-11-11
+- Continued from NEON V6, retained all existing project files and functionality.
+- Unified all 529 active games with isolated NEON V7 responsive navigation and styling.
+- Added real server-backed XP/streak/activity and progress to student dashboard.
+- Added admin-only batch generation of nine candidate types / 90 exercises across grades 10-12, without auto-approval.
+- Added admin review queue for existing lesson questions with explicit tier certification and rejection.
+- Added placement draft persistence, secure resume and stronger numeric/true-false/complex grading.
+- Added Chat WebSocket ping/visibility reconnection and new regression tests.
+- Tests: 163 passing; full cross-device end-to-end and all-topic question certification remain outstanding.
+
+NEON V8 (2026-11-11): 169 tests passed; official 30-question
+roadmap exams require 30 independently reviewed questions. Initial
+assessments show actual evidence counts. Admin has 150-topic deficit
+JSON export. Static server blocks private DB/secrets/backend files.
+Common responsive UI refined for 20 pages, shared game CSS for 529.
+
+NEON V24 (2026-11-12): Added truly trainable per-user online logistic AI predictor
+(updated by verified first answers), deterministic private model retrain,
+uncalibrated prediction safeguards, adaptive subject-tier suggestions, and UI.
+Tests: 203 core + 13 trigonometry = 216 passing in two groups.

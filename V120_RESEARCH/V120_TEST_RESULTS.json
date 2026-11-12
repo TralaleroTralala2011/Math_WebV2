@@ -1,0 +1,21 @@
+{
+  "version": "V120",
+  "date": "2026-11-08",
+  "new_candidate_forms": 150,
+  "new_questions_symbolic_check_passed": 1500,
+  "topic_coverage": 150,
+  "test_groups": [
+    {"group": "V120", "passed": 5, "failed": 0},
+    {"group": "operations_and_V119", "passed": 11, "failed": 0},
+    {"group": "V118", "passed": 5, "failed": 0},
+    {"group": "V112_V113_V114_V116_V117_except_large_audit", "passed": 39, "failed": 0}
+  ],
+  "total_confirmed_passed": 60,
+  "total_confirmed_failed": 0,
+  "excluded_or_unconfirmed": ["test_v117_audit_150_topic_gap: full-corpus legacy test timed out in combined run"],
+  "exact_collision_previous_rows": 0,
+  "previous_rows_scanned": 347480,
+  "methods_flagged_similarity": 58,
+  "independence_certified": 0,
+  "production_published": 0
+}

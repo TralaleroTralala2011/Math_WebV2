@@ -1,0 +1,129 @@
+{
+  "version": "V211",
+  "base": "V210 FULL ZIP",
+  "base_question_count": 11446,
+  "added_question_count": 200,
+  "final_question_count": 11646,
+  "candidate_groups": 20,
+  "new_certified_independent_types": 0,
+  "grades": {
+    "10": 70,
+    "11": 60,
+    "12": 70
+  },
+  "groups": {
+    "modular_multiplicative_inverse_prime": {
+      "grade": 10,
+      "topic": "chia_du",
+      "question_count": 10
+    },
+    "midpoint_distance_squared_origin": {
+      "grade": 10,
+      "topic": "g10_geom_coordinate_distance_midpoint",
+      "question_count": 10
+    },
+    "point_line_distance_squared_2d": {
+      "grade": 10,
+      "topic": "toa_do_phang",
+      "question_count": 10
+    },
+    "inscribed_to_central_angle": {
+      "grade": 10,
+      "topic": "g10_geom_circle_angles",
+      "question_count": 10
+    },
+    "vieta_sum_root_reciprocals": {
+      "grade": 10,
+      "topic": "phuong_trinh_bac_hai",
+      "question_count": 10
+    },
+    "frequency_table_median": {
+      "grade": 10,
+      "topic": "thong_ke",
+      "question_count": 10
+    },
+    "linear_system_intersection_x_cramer": {
+      "grade": 10,
+      "topic": "he_phuong_trinh",
+      "question_count": 10
+    },
+    "double_angle_cos_from_cos": {
+      "grade": 11,
+      "topic": "cong_thuc_luong_giac",
+      "question_count": 10
+    },
+    "telescoping_unit_fraction_adjacent": {
+      "grade": 11,
+      "topic": "day_so",
+      "question_count": 10
+    },
+    "geometric_growth_threshold_first_index": {
+      "grade": 11,
+      "topic": "cap_so_nhan",
+      "question_count": 10
+    },
+    "rational_limit_equal_degrees_infinity": {
+      "grade": 11,
+      "topic": "gioi_han_ham_so",
+      "question_count": 10
+    },
+    "count_terms_arithmetic_interval": {
+      "grade": 11,
+      "topic": "cap_so_cong",
+      "question_count": 10
+    },
+    "independent_event_conditional_probability": {
+      "grade": 11,
+      "topic": "bien_co_doc_lap_11",
+      "question_count": 10
+    },
+    "point_sphere_minimum_distance": {
+      "grade": 12,
+      "topic": "mat_cau",
+      "question_count": 10
+    },
+    "log_change_inverse_power": {
+      "grade": 12,
+      "topic": "ham_logarit",
+      "question_count": 10
+    },
+    "vertical_asymptote_reciprocal_shift": {
+      "grade": 12,
+      "topic": "khao_sat_ham_so",
+      "question_count": 10
+    },
+    "integration_by_parts_x_exp": {
+      "grade": 12,
+      "topic": "nguyen_ham_tich_phan",
+      "question_count": 10
+    },
+    "cylinder_volume_pi_coefficient": {
+      "grade": 12,
+      "topic": "hinh_khoi_va_the_tich_co_ban_12",
+      "question_count": 10
+    },
+    "sphere_volume_pi_coefficient": {
+      "grade": 12,
+      "topic": "hinh_khoi_va_the_tich_co_ban_12",
+      "question_count": 10
+    },
+    "coordinate_axis_tetrahedron_volume": {
+      "grade": 12,
+      "topic": "mat_phang_oxyz",
+      "question_count": 10
+    }
+  },
+  "tests": {
+    "independent_formula_check_each_question": 200,
+    "sqlite_integrity_check": "ok",
+    "exact_question_duplicate_against_previous_bank": 0,
+    "group_id_collision_with_previous_candidate_tags": 0,
+    "questions_per_candidate_group": 10
+  },
+  "limitations": [
+    "independence of mathematical methods not fully audited against entire bank",
+    "sympy checks cover mathematical computations but not manual proofreading every explanation",
+    "site/Battle regression not run",
+    "not a 60 minute uninterrupted execution"
+  ]
+}

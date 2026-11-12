@@ -1,0 +1,15 @@
+{
+  "version": "V94",
+  "base": "V93",
+  "fixes": [
+    "Avoid prototype-key collisions in imported point dictionaries",
+    "Validate both circle center coordinates and reject extreme out-of-range centers",
+    "Do not show incorrectly centered Oxy axes on translated graph imports"
+  ],
+  "total_form_ids": 33378,
+  "total_questions": 333780,
+  "new_form_ids": 0,
+  "new_questions": 0,
+  "browser_tested": false,
+  "target_met": false
+}

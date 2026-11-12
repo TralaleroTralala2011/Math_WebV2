@@ -1,0 +1,13 @@
+{
+  "base": "V208",
+  "version": "V209",
+  "base_question_count": 11236,
+  "added_questions": 80,
+  "total_questions": 11316,
+  "candidate_groups": 8,
+  "certified_independent_groups": 0,
+  "semantic_dedup": "not certified",
+  "sqlite_integrity": "ok",
+  "exact_text_duplicates_added": 0,
+  "notes": "Question arithmetic independently spot/recomputed; semantic independence and full regression pending."
+}

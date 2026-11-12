@@ -1,0 +1,417 @@
+{
+  "grade": 12,
+  "status": "CANDIDATE_NOT_IN_OFFICIAL_EXAM",
+  "question_count": 30,
+  "form_count": 3,
+  "forms": [
+    {
+      "grade": 12,
+      "topic_id": "so_phuc",
+      "title": "Cộng hai số phức ở dạng đại số",
+      "concept": "Phép cộng hai số phức a+bi",
+      "method": "Cộng phần thực với phần thực, phần ảo với phần ảo",
+      "conditions": "Các hệ số thực và ảo nguyên, i²=−1",
+      "distinguishing": "Phép cộng số phức, khác phép nhân và phép tính môđun",
+      "questions": [
+        {
+          "question": "Cho z₁=1+2i, z₂=3+4i. Tính z₁+z₂.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "4+6i",
+            "5+6i",
+            "4+7i",
+            "2+5i"
+          ],
+          "correct_index": 0,
+          "answer": "4+6i",
+          "explanation": "Cộng từng phần thực và ảo: z₁+z₂=(1+(3))+(2+(4))i=4+6i."
+        },
+        {
+          "question": "Cho z₁=2-1i, z₂=4+3i. Tính z₁+z₂.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "7+2i",
+            "6+3i",
+            "4+1i",
+            "6+2i"
+          ],
+          "correct_index": 3,
+          "answer": "6+2i",
+          "explanation": "Cộng từng phần thực và ảo: z₁+z₂=(2+(4))+(-1+(3))i=6+2i."
+        },
+        {
+          "question": "Cho z₁=-3+2i, z₂=5-1i. Tính z₁+z₂.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "2+2i",
+            "0",
+            "2+1i",
+            "3+1i"
+          ],
+          "correct_index": 2,
+          "answer": "2+1i",
+          "explanation": "Cộng từng phần thực và ảo: z₁+z₂=(-3+(5))+(2+(-1))i=2+1i."
+        },
+        {
+          "question": "Cho z₁=4-5i, z₂=-2+3i. Tính z₁+z₂.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "0-3i",
+            "2-2i",
+            "3-2i",
+            "2-1i"
+          ],
+          "correct_index": 1,
+          "answer": "2-2i",
+          "explanation": "Cộng từng phần thực và ảo: z₁+z₂=(4+(-2))+(-5+(3))i=2-2i."
+        },
+        {
+          "question": "Cho z₁=5+6i, z₂=-3-2i. Tính z₁+z₂.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "2+4i",
+            "3+4i",
+            "2+5i",
+            "0+3i"
+          ],
+          "correct_index": 0,
+          "answer": "2+4i",
+          "explanation": "Cộng từng phần thực và ảo: z₁+z₂=(5+(-3))+(6+(-2))i=2+4i."
+        },
+        {
+          "question": "Cho z₁=-7+4i, z₂=2-6i. Tính z₁+z₂.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "-4-2i",
+            "-5-1i",
+            "-7-3i",
+            "-5-2i"
+          ],
+          "correct_index": 3,
+          "answer": "-5-2i",
+          "explanation": "Cộng từng phần thực và ảo: z₁+z₂=(-7+(2))+(4+(-6))i=-5-2i."
+        },
+        {
+          "question": "Cho z₁=8-3i, z₂=-5+7i. Tính z₁+z₂.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "3+5i",
+            "1+3i",
+            "3+4i",
+            "4+4i"
+          ],
+          "correct_index": 2,
+          "answer": "3+4i",
+          "explanation": "Cộng từng phần thực và ảo: z₁+z₂=(8+(-5))+(-3+(7))i=3+4i."
+        },
+        {
+          "question": "Cho z₁=-4-8i, z₂=6+9i. Tính z₁+z₂.",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "2+1i",
+          "explanation": "Cộng từng phần thực và ảo: z₁+z₂=(-4+(6))+(-8+(9))i=2+1i."
+        },
+        {
+          "question": "Cho z₁=12-7i, z₂=-9+5i. Tính z₁+z₂.",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "3-2i",
+          "explanation": "Cộng từng phần thực và ảo: z₁+z₂=(12+(-9))+(-7+(5))i=3-2i."
+        },
+        {
+          "question": "Cho z₁=-11+10i, z₂=8-12i. Tính z₁+z₂. Khẳng định đáp án là -2-2i. Đúng hay sai?",
+          "question_type": "true_false",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "Sai",
+          "explanation": "Cộng từng phần thực và ảo: z₁+z₂=(-11+(8))+(10+(-12))i=-3-2i. Khẳng định là sai; kết quả đúng phải là -3-2i."
+        }
+      ]
+    },
+    {
+      "grade": 12,
+      "topic_id": "so_phuc",
+      "title": "Nhân hai số phức bằng khai triển đại số",
+      "concept": "Phép nhân hai số phức a+bi",
+      "method": "Khai triển tích rồi thay i²=−1, gom phần thực và phần ảo",
+      "conditions": "Các hệ số nguyên, i²=−1",
+      "distinguishing": "Phép nhân số phức, khác phép cộng và môđun",
+      "questions": [
+        {
+          "question": "Cho z₁=1+2i, z₂=3+4i. Tính z₁×z₂.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "-5+10i",
+            "-4+10i",
+            "-5+11i",
+            "-7+9i"
+          ],
+          "correct_index": 0,
+          "answer": "-5+10i",
+          "explanation": "Nhân và dùng i²=−1: phần thực=1×(3)−(2)×(4)=-5; phần ảo=1×(4)+(2)×(3)=10; kết quả -5+10i."
+        },
+        {
+          "question": "Cho z₁=2-1i, z₂=4+3i. Tính z₁×z₂.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "12+2i",
+            "11+3i",
+            "9+1i",
+            "11+2i"
+          ],
+          "correct_index": 3,
+          "answer": "11+2i",
+          "explanation": "Nhân và dùng i²=−1: phần thực=2×(4)−(-1)×(3)=11; phần ảo=2×(3)+(-1)×(4)=2; kết quả 11+2i."
+        },
+        {
+          "question": "Cho z₁=-3+2i, z₂=5-1i. Tính z₁×z₂.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "-13+14i",
+            "-15+12i",
+            "-13+13i",
+            "-12+13i"
+          ],
+          "correct_index": 2,
+          "answer": "-13+13i",
+          "explanation": "Nhân và dùng i²=−1: phần thực=-3×(5)−(2)×(-1)=-13; phần ảo=-3×(-1)+(2)×(5)=13; kết quả -13+13i."
+        },
+        {
+          "question": "Cho z₁=4-5i, z₂=-2+3i. Tính z₁×z₂.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "5+21i",
+            "7+22i",
+            "8+22i",
+            "7+23i"
+          ],
+          "correct_index": 1,
+          "answer": "7+22i",
+          "explanation": "Nhân và dùng i²=−1: phần thực=4×(-2)−(-5)×(3)=7; phần ảo=4×(3)+(-5)×(-2)=22; kết quả 7+22i."
+        },
+        {
+          "question": "Cho z₁=5+6i, z₂=-3-2i. Tính z₁×z₂.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "-3-28i",
+            "-2-28i",
+            "-3-27i",
+            "-5-29i"
+          ],
+          "correct_index": 0,
+          "answer": "-3-28i",
+          "explanation": "Nhân và dùng i²=−1: phần thực=5×(-3)−(6)×(-2)=-3; phần ảo=5×(-2)+(6)×(-3)=-28; kết quả -3-28i."
+        },
+        {
+          "question": "Cho z₁=-7+4i, z₂=2-6i. Tính z₁×z₂.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "11+50i",
+            "10+51i",
+            "8+49i",
+            "10+50i"
+          ],
+          "correct_index": 3,
+          "answer": "10+50i",
+          "explanation": "Nhân và dùng i²=−1: phần thực=-7×(2)−(4)×(-6)=10; phần ảo=-7×(-6)+(4)×(2)=50; kết quả 10+50i."
+        },
+        {
+          "question": "Cho z₁=8-3i, z₂=-5+7i. Tính z₁×z₂.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "-19+72i",
+            "-21+70i",
+            "-19+71i",
+            "-18+71i"
+          ],
+          "correct_index": 2,
+          "answer": "-19+71i",
+          "explanation": "Nhân và dùng i²=−1: phần thực=8×(-5)−(-3)×(7)=-19; phần ảo=8×(7)+(-3)×(-5)=71; kết quả -19+71i."
+        },
+        {
+          "question": "Cho z₁=-4-8i, z₂=6+9i. Tính z₁×z₂.",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "48-84i",
+          "explanation": "Nhân và dùng i²=−1: phần thực=-4×(6)−(-8)×(9)=48; phần ảo=-4×(9)+(-8)×(6)=-84; kết quả 48-84i."
+        },
+        {
+          "question": "Cho z₁=12-7i, z₂=-9+5i. Tính z₁×z₂.",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "-73+123i",
+          "explanation": "Nhân và dùng i²=−1: phần thực=12×(-9)−(-7)×(5)=-73; phần ảo=12×(5)+(-7)×(-9)=123; kết quả -73+123i."
+        },
+        {
+          "question": "Cho z₁=-11+10i, z₂=8-12i. Tính z₁×z₂. Khẳng định đáp án là 33+212i. Đúng hay sai?",
+          "question_type": "true_false",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "Sai",
+          "explanation": "Nhân và dùng i²=−1: phần thực=-11×(8)−(10)×(-12)=32; phần ảo=-11×(-12)+(10)×(8)=212; kết quả 32+212i. Khẳng định là sai; kết quả đúng phải là 32+212i."
+        }
+      ]
+    },
+    {
+      "grade": 12,
+      "topic_id": "so_phuc",
+      "title": "Tính môđun số phức theo định lý Pythagore",
+      "concept": "Môđun |a+bi| của số phức",
+      "method": "Áp dụng |z|=√(a²+b²) và khai căn không âm",
+      "conditions": "Số phức có phần thực và ảo nguyên, môđun không âm",
+      "distinguishing": "Tính độ dài vectơ biểu diễn số phức, không phải cộng hoặc nhân",
+      "questions": [
+        {
+          "question": "Cho số phức z=3+4i. Tính môđun |z|.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "5",
+            "6",
+            "3",
+            "8"
+          ],
+          "correct_index": 0,
+          "answer": "5",
+          "explanation": "Theo công thức |a+bi|=√(a²+b²), |z|=√((3)²+(4)²)=√25=5."
+        },
+        {
+          "question": "Cho số phức z=5+12i. Tính môđun |z|.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "14",
+            "11",
+            "16",
+            "13"
+          ],
+          "correct_index": 3,
+          "answer": "13",
+          "explanation": "Theo công thức |a+bi|=√(a²+b²), |z|=√((5)²+(12)²)=√169=13."
+        },
+        {
+          "question": "Cho số phức z=8+15i. Tính môđun |z|.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "15",
+            "20",
+            "17",
+            "18"
+          ],
+          "correct_index": 2,
+          "answer": "17",
+          "explanation": "Theo công thức |a+bi|=√(a²+b²), |z|=√((8)²+(15)²)=√289=17."
+        },
+        {
+          "question": "Cho số phức z=7+24i. Tính môđun |z|.",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "28",
+            "25",
+            "26",
+            "23"
+          ],
+          "correct_index": 1,
+          "answer": "25",
+          "explanation": "Theo công thức |a+bi|=√(a²+b²), |z|=√((7)²+(24)²)=√625=25."
+        },
+        {
+          "question": "Cho số phức z=20+21i. Tính môđun |z|.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "29",
+            "30",
+            "27",
+            "32"
+          ],
+          "correct_index": 0,
+          "answer": "29",
+          "explanation": "Theo công thức |a+bi|=√(a²+b²), |z|=√((20)²+(21)²)=√841=29."
+        },
+        {
+          "question": "Cho số phức z=-3+4i. Tính môđun |z|.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "6",
+            "3",
+            "8",
+            "5"
+          ],
+          "correct_index": 3,
+          "answer": "5",
+          "explanation": "Theo công thức |a+bi|=√(a²+b²), |z|=√((-3)²+(4)²)=√25=5."
+        },
+        {
+          "question": "Cho số phức z=9+12i. Tính môđun |z|.",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "13",
+            "18",
+            "15",
+            "16"
+          ],
+          "correct_index": 2,
+          "answer": "15",
+          "explanation": "Theo công thức |a+bi|=√(a²+b²), |z|=√((9)²+(12)²)=√225=15."
+        },
+        {
+          "question": "Cho số phức z=-10-24i. Tính môđun |z|.",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "26",
+          "explanation": "Theo công thức |a+bi|=√(a²+b²), |z|=√((-10)²+(-24)²)=√676=26."
+        },
+        {
+          "question": "Cho số phức z=15-20i. Tính môđun |z|.",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "25",
+          "explanation": "Theo công thức |a+bi|=√(a²+b²), |z|=√((15)²+(-20)²)=√625=25."
+        },
+        {
+          "question": "Cho số phức z=-12+35i. Tính môđun |z|. Khẳng định đáp án là 38. Đúng hay sai?",
+          "question_type": "true_false",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "Sai",
+          "explanation": "Theo công thức |a+bi|=√(a²+b²), |z|=√((-12)²+(35)²)=√1369=37. Khẳng định là sai; kết quả đúng phải là 37."
+        }
+      ]
+    }
+  ],
+  "limitations": "Chỉ xác minh tính toán nội bộ của bộ sinh; giáo viên phải kiểm tra nội dung, độ khó và đáp án độc lập trước khi phê duyệt."
+}

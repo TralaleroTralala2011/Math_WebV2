@@ -1,0 +1,76 @@
+{
+  "release": "V123",
+  "source_version": "V122",
+  "new_composite_candidate_objectives": 1050,
+  "new_worked_questions": 10500,
+  "topics_covered": 150,
+  "new_candidate_objectives_per_topic": 7,
+  "new_questions_per_topic": 70,
+  "old_candidate_count_recorded_v122": 793,
+  "candidate_objects_after_v123_including_shared_core": 1843,
+  "question_samples_after_v123_including_shared_core": 18430,
+  "certified_new_independent_mathematical_methods": 0,
+  "validated_new_topic_specific_independent_methods": 0,
+  "new_auto_published_questions": 0,
+  "arithmetic_and_record_integrity_checks": 10500,
+  "within_batch_exact_duplicate_prompts": 0,
+  "exact_duplicate_prompts_with_prior": 0,
+  "format_counts": {
+    "tra_loi_ngan": 2100,
+    "trac_nghiem": 2100,
+    "dung_sai": 2100,
+    "tu_luan_ngan": 2100,
+    "van_dung": 2100
+  },
+  "source_method_clusters_reused": 150,
+  "operator_templates_reused": 7,
+  "candidate_independence_risk": "HIGH: all 1050 candidates share underlying V121 core methods and seven generic operations. Many may overlap with earlier material or be poorly aligned with topic objectives.",
+  "pedagogical_review": "NOT COMPLETED; cross-topic operator suitability requires human inspection",
+  "old_corpus": {
+    "backend/app/ai/verified_seed/verified_seed_bank.jsonl": {
+      "rows": 344280,
+      "present": true
+    },
+    "V114_AUDIT/V114_1650_MATH_VERIFIED_PENDING_REVIEW.jsonl": {
+      "rows": 1650,
+      "present": true
+    },
+    "V116_RESEARCH/V116_NEW_QUESTIONS_10_EACH.jsonl": {
+      "rows": 310,
+      "present": true
+    },
+    "V117_AUDIT/V117_NEW_QUESTIONS.jsonl": {
+      "rows": 560,
+      "present": true
+    },
+    "V118_AUDIT/V118_NEW_QUESTIONS.jsonl": {
+      "rows": 380,
+      "present": true
+    },
+    "V119_RESEARCH/V119_NEW_QUESTIONS.jsonl": {
+      "rows": 300,
+      "present": true
+    },
+    "V120_RESEARCH/V120_1500_NEW_QUESTIONS.jsonl": {
+      "rows": 1500,
+      "present": true
+    },
+    "V121_RESEARCH/V121_3000_NEW_QUESTIONS.jsonl": {
+      "rows": 3000,
+      "present": true
+    },
+    "V122_RESEARCH/V122_NEW_QUESTIONS.jsonl": {
+      "rows": 230,
+      "present": true
+    }
+  },
+  "old_json_parse_errors": {},
+  "published": "NO",
+  "operational_note": "Optional registration QF_ENABLE_V123_CANDIDATES=1; only pending, not auto-approved.",
+  "limitations": [
+    "Question counts reflect multi-scenario composite problems, not newly independently authored base mathematical archetypes.",
+    "Numeric cross-check verifies the combination operator, not all narrative source formulas or full pedagogical validity.",
+    "Zero globally independent mathematical methods certified in this release.",
+    "Literal deduplication does not imply semantic or method uniqueness."
+  ]
+}

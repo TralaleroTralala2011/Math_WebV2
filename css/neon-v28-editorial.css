@@ -1,0 +1,35 @@
+/* V28 editorial refinement: quieter, human-designed visual rhythm. Visual-only layer. */
+:root{--mw28-ink:#e8eef5;--mw28-muted:#a9b8ca;--mw28-accent:#66c9d7;--mw28-line:#28425d}
+body.mw-v5:not(.mw-v5-admin){background:#0a1423!important;color:var(--mw28-ink);font-family:Inter,'Segoe UI',system-ui,sans-serif!important}
+body.mw-v5:not(.mw-v5-admin) #mw-v5-header{background:#101e31!important;border-bottom:1px solid #293c52!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:0!important}
+body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-inner{gap:14px}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-logo{letter-spacing:-.035em;font-weight:760}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-nav a{border-radius:8px!important;transition:background .15s ease,color .15s ease}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-nav a.active{background:#21394c!important;color:#e2f7f7!important;box-shadow:none!important}
+body.mw-v5:not(.mw-v5-admin) .mw-v5-canvas{max-width:1280px!important}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-card,.mw-v6-topic,.mw-v6-lock){background:#12243a!important;background-image:none!important;border:1px solid #304760!important;border-radius:13px!important;box-shadow:none!important;transition:border-color .18s ease,background .18s ease}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-card,.mw-v6-topic,.mw-v6-lock):hover{border-color:#60879b!important;background:#172d45!important;transform:none!important;box-shadow:none!important}
+body.mw-v5:not(.mw-v5-admin) :is(h1,h2,h3){letter-spacing:-.025em;text-shadow:none!important}
+body.mw-v5:not(.mw-v5-admin) h1{font-weight:760;line-height:1.16}
+body.mw-v5:not(.mw-v5-admin) h2{font-weight:720;line-height:1.25}
+body.mw-v5:not(.mw-v5-admin) :is(p,li,small){line-height:1.6}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v6-learning-hero,.mw-v6-roadmap-intro){background:#12253b!important;background-image:none!important;border:1px solid #304760!important;box-shadow:none!important;border-radius:14px!important}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-hero .mw-v6-math-visual{box-shadow:none!important;background:#192f46!important}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-actions button{background:#1a344c!important;background-image:none!important;border:1px solid #3c5a70!important;border-radius:10px!important;box-shadow:none!important;transform:none!important;transition:background .16s ease,border-color .16s ease}
+body.mw-v5:not(.mw-v5-admin) .mw-v6-learning-actions button:hover{background:#24475e!important;border-color:#76a5b3!important;transform:none!important}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-btn,.mw-v6-grade-buttons button){box-shadow:none!important;text-shadow:none!important;border-radius:9px!important}
+body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-btn,.mw-v6-grade-buttons button):hover{filter:brightness(1.08)}
+body.mw-v5:not(.mw-v5-admin) :is(input,textarea,select){border-radius:9px!important;box-shadow:none!important}
+body.mw-v5:not(.mw-v5-admin) :is(.battle-choice,.battle-wait-card,.question-card){background:#13253b!important;background-image:none!important;border:1px solid #344b62!important;border-radius:13px!important;box-shadow:none!important;text-shadow:none!important}
+body.mw-v5:not(.mw-v5-admin) .battle-choice:hover{background:#1a344c!important;border-color:#668c9c!important;transform:none!important}
+body.mw-v5:not(.mw-v5-admin) :is(.battle-hero h1,.battle-hero-icon){filter:none!important;text-shadow:none!important}
+body.mw-v5:not(.mw-v5-admin) .mw-v27-geometry{background:#13273c;border-color:#344d63;border-radius:10px}
+body.mw-v5:not(.mw-v5-admin) .mathweb-quicknav a{box-shadow:none!important;filter:none!important}
+body.mw-v5:not(.mw-v5-admin) .mathweb-project-footer{background:#0c1726!important;border-color:#263d53!important;color:#98aabd!important}
+body.mw-v26-admin{background:#f4f6f8!important;background-image:none!important;color:#23364a}
+body.mw-v26-admin #appView>.top{background:#18324b!important;background-image:none!important;border-bottom:1px solid #d3e0e8!important;box-shadow:none!important}
+body.mw-v26-admin .layout>.side{background:#1c354b!important;background-image:none!important;box-shadow:none!important;border-radius:0 10px 10px 0!important}
+body.mw-v26-admin .layout>.side .navbtn.active{background:#30617c!important;background-image:none!important;box-shadow:none!important}
+body.mw-v26-admin .content :is(.panel,.mini,.stat){border-radius:11px!important;box-shadow:0 2px 8px #1730470a!important}
+@media(max-width:760px){body.mw-v5:not(.mw-v5-admin) .mw-v5-canvas{margin-top:16px!important}body.mw-v5:not(.mw-v5-admin) :is(.mw-v5-card,.mw-v6-topic,.mw-v6-lock){border-radius:11px!important}body.mw-v5:not(.mw-v5-admin) h1{font-size:clamp(26px,7vw,36px)!important}}
+@media(prefers-reduced-motion:reduce){body.mw-v5:not(.mw-v5-admin) *{transition:none!important;animation:none!important}}

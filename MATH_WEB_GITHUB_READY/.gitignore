@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.db
+*.sqlite
+*.sqlite3
+.venv/
+venv/
+env/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Do not publish per-installation auth secrets
+.mathweb_hmac_secret
+.env
+.env.*

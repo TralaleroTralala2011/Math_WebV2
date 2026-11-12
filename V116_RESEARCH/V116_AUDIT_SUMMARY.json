@@ -1,0 +1,40 @@
+{
+  "version": "V116",
+  "target_topics": 150,
+  "target_types_per_topic": 500,
+  "target_total_independent_types": 75000,
+  "target_total_questions": 750000,
+  "old_candidates": 165,
+  "new_v116_candidates": 31,
+  "all_candidate_blueprints": 196,
+  "new_math_checked_exercises": 310,
+  "all_candidate_exercises": 1960,
+  "new_exact_collisions_with_165_older_candidate_questions": 0,
+  "legacy_questions_checked": 344280,
+  "legacy_invalid_json_lines": 0,
+  "new_exact_collisions_with_legacy_questions": 0,
+  "distinct_methods_globally_certified": 0,
+  "possible_candidate_gap_if_all_pass": 74804,
+  "certified_methods_gap": 75000,
+  "quality_note": "An equation/answer check and absence of exact wording duplicates do NOT certify a distinct mathematical method or topic-level pedagogical fitness.",
+  "research_sources": [
+    {
+      "title": "Vietnam general education curricula (Circular 32/2018/TT-BGDDT)",
+      "url": "https://vbpl.moj.gov.vn/bogiaoducdaotao/Pages/vbpq-toanvan.aspx?ItemID=146721"
+    },
+    {
+      "title": "OpenStax Algebra and Trigonometry 2e",
+      "url": "https://openstax.org/books/algebra-and-trigonometry-2e/pages/preface"
+    },
+    {
+      "title": "Khan Academy high school mathematics curriculum outlines",
+      "url": "https://www.khanacademy.org/math"
+    }
+  ],
+  "source_policy": "References used only for content taxonomy; new problems and explanations were authored originally, not copied.",
+  "coverage": {
+    "topics_with_v116_new_content": 31,
+    "topics_with_some_candidates": 150,
+    "topics_reaching_500_candidates": 0
+  }
+}

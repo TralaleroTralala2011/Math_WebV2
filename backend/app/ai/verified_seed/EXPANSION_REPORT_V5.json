@@ -1,0 +1,11 @@
+{
+  "previous_rows": 450,
+  "added_rows": 200,
+  "total_rows": 650,
+  "previous_distinct_form_ids": 45,
+  "added_distinct_form_ids": 20,
+  "total_distinct_form_ids": 65,
+  "all_questions_unique_exact": true,
+  "independent_arithmetic_checks_new": 200,
+  "warning": "Form IDs are not proof of 2000 independent forms per topic. Existing rows have repeated form IDs; no end-to-end UI test."
+}

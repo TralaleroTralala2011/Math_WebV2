@@ -1,0 +1,274 @@
+{
+  "version": "V23",
+  "previous_records": 4540,
+  "added_records": 360,
+  "total_records": 4900,
+  "previous_form_ids": 453,
+  "added_form_ids": 36,
+  "total_form_ids": 489,
+  "new_forms": [
+    {
+      "grade": 10,
+      "topic": "Mệnh đề và tập hợp",
+      "form_id": "v23_set_only_a",
+      "signature": "count elements exclusively in A of two overlapping sets",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tập hợp",
+      "form_id": "v23_set_none",
+      "signature": "count neither of two sets using union formula",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "form_id": "v23_quadratic_integer_root_parameter",
+      "signature": "parameter chosen so specified number is quadratic root",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Hàm số bậc hai và parabol",
+      "form_id": "v23_parabola_vertex_abscissa",
+      "signature": "recover linear coefficient from vertex x-coordinate",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Vectơ",
+      "form_id": "v23_vector_parallelogram_diagonal",
+      "signature": "parallelogram diagonal squared from adjacent side vectors",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "form_id": "v23_point_reflection_x_axis",
+      "signature": "reflection across horizontal axis",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Đường thẳng",
+      "form_id": "v23_line_intersection_x",
+      "signature": "find x-coordinate intersection of two affine lines",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Đường tròn",
+      "form_id": "v23_circle_diameter_endpoints",
+      "signature": "radius squared from diameter endpoints",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "form_id": "v23_choose_with_exclusion",
+      "signature": "choose committee with one excluded member",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Xác suất",
+      "form_id": "v23_two_dice_sum_seven",
+      "signature": "probability sum of two dice equals seven after choosing dice sides",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Thống kê",
+      "form_id": "v23_median_odd_ordered",
+      "signature": "median of odd arithmetic sequence",
+      "questions": 10
+    },
+    {
+      "grade": 10,
+      "topic": "Hệ thức lượng trong tam giác",
+      "form_id": "v23_cosine_law_opposite_square",
+      "signature": "third side squared using cosine 60 degrees",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "form_id": "v23_ap_difference_of_sums",
+      "signature": "difference between two partial sums of arithmetic progression",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "form_id": "v23_gp_ratio_from_sum_first_two",
+      "signature": "recover geometric ratio from first two terms sum",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Dãy số",
+      "form_id": "v23_recurrence_second_order",
+      "signature": "evaluate Fibonacci-type recurrence from initial conditions",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn",
+      "form_id": "v23_limit_geometric_sequence",
+      "signature": "limit of decaying geometric sequence with offset",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Giới hạn hàm số",
+      "form_id": "v23_limit_trig_sin_ratio",
+      "signature": "limit sin(ax)/sin(bx) near zero",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v23_derivative_exp_at_zero",
+      "signature": "derivative exponential function at zero",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "form_id": "v23_derivative_log_at_one",
+      "signature": "derivative natural logarithm of shifted linear at zero",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Phương trình lượng giác",
+      "form_id": "v23_sin_equation_count_period",
+      "signature": "count sin x = 0 in bounded closed interval",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Lượng giác",
+      "form_id": "v23_cos_difference_special",
+      "signature": "cosine of angle difference with special angles",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Tổ hợp và xác suất nâng cao",
+      "form_id": "v23_probability_exact_one_of_two",
+      "signature": "exactly one of two independent events",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Xác suất",
+      "form_id": "v23_sampling_two_same_color",
+      "signature": "two same color from equal colored groups",
+      "questions": 10
+    },
+    {
+      "grade": 11,
+      "topic": "Quan hệ vuông góc trong không gian",
+      "form_id": "v23_cube_space_diagonal_square",
+      "signature": "space diagonal squared of cube",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v23_integral_odd_power_symmetric",
+      "signature": "integral odd polynomial over asymmetric interval",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "form_id": "v23_integral_constant_shift",
+      "signature": "integral of affine function on symmetric interval",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v23_complex_argument_quadrant",
+      "signature": "quadrant of complex number with signed real imaginary parts",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Số phức",
+      "form_id": "v23_complex_pure_real_condition",
+      "signature": "parameter making complex number real",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "form_id": "v23_3d_reflection_oxy",
+      "signature": "reflect point across Oxy and find z",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Mặt phẳng Oxyz",
+      "form_id": "v23_plane_normal_norm_sq",
+      "signature": "squared norm of normal vector from plane coefficients",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Đường thẳng Oxyz",
+      "form_id": "v23_line_param_point_z",
+      "signature": "z coordinate of point on parametric line",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số mũ",
+      "form_id": "v23_exponential_equation_shift",
+      "signature": "solve exponential equality after translating exponent",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "form_id": "v23_log_domain_parameter",
+      "signature": "integer lower bound for log domain",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Cực trị",
+      "form_id": "v23_critical_points_quartic",
+      "signature": "count stationary points of even quartic double well",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Hình khối và thể tích cơ bản",
+      "form_id": "v23_pyramid_volume_square_base",
+      "signature": "square pyramid volume",
+      "questions": 10
+    },
+    {
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "form_id": "v23_bernoulli_variance",
+      "signature": "variance of Bernoulli variable with rational probability",
+      "questions": 10
+    }
+  ],
+  "checks": {
+    "no_exact_normalized_duplicate_questions": true,
+    "new_forms_have_ten_questions": true,
+    "new_rows_have_answers_and_solutions": true,
+    "archive_integrity": "pending"
+  },
+  "limitations": [
+    "Form IDs are not proof of mathematically independent types.",
+    "Formula-generated answers are not an independent audit of every solution.",
+    "Existing practice UI and Battle were not regression tested."
+  ]
+}

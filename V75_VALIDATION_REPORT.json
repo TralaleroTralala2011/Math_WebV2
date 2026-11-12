@@ -1,0 +1,23 @@
+{
+  "total_records": 333590,
+  "form_ids": 33358,
+  "grade_topic_pairs": 140,
+  "form_ids_not_exactly_10_valid_unique_questions": 1,
+  "examples_of_failing_forms": [
+    {
+      "grade": "12",
+      "topic": "Số phức",
+      "form_id": "complex_modulus_squared",
+      "count": 20,
+      "unique_questions": 20,
+      "missing_fields": 0
+    }
+  ],
+  "method_family_clusters": 3247,
+  "form_ids_in_shared_method_families": 30366,
+  "topics_with_at_least_2000_form_ids": 0,
+  "missing_topics_vs_target_147": 7,
+  "malformed_json_lines": [],
+  "independent_types_certified": 0,
+  "certification_note": "Structural validation only. Different IDs, family names or question texts do NOT establish distinct mathematical problem types. Independent mathematical and pedagogical review is still required."
+}

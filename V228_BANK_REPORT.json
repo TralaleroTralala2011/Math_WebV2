@@ -1,0 +1,23 @@
+{
+  "version": "V228",
+  "base": "V227",
+  "previous_questions": 14796,
+  "added_questions": 100,
+  "total_questions": 14896,
+  "candidate_method_families": 10,
+  "certified_new_independent_types": 0,
+  "answer_checks": 100,
+  "limitations": "Candidate methods may overlap pre-existing methods. Numeric variants are not independent types. Full semantic deduplication and regression not completed.",
+  "topics": [
+    "10:chia_het",
+    "10:ham_so_bac_nhat",
+    "10:vector",
+    "11:dao_ham",
+    "11:day_so",
+    "11:gioi_han",
+    "11:quy_tac_dem",
+    "12:nguyen_ham_tich_phan",
+    "12:so_phuc",
+    "12:toa_do_khong_gian"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": "V140",
+  "based_on": "MATH_WEB_GITHUB_READY_V139_ANTI_REPEAT_RETRY_FIX.zip",
+  "date": "2026-11-08",
+  "modified": [
+    "backend/question_factory/grading.py",
+    "backend/question_factory/storage.py",
+    "backend/question_factory/operations.py"
+  ],
+  "new": [
+    "backend/tests/test_v140_factory_grading_and_optional_v122.py",
+    "V140_RELEASE/V140_REPORT.md",
+    "V140_RELEASE/CHECKPOINT.json"
+  ],
+  "new_independent_methods_certified": 0,
+  "new_questions_authored": 0,
+  "tests_targeted_passed": 44,
+  "tests_full_suite_status": "not_completed_timeout",
+  "automation_hourly_enabled_checked": true,
+  "source_sqlite_changed": false
+}

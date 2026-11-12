@@ -1,0 +1,39 @@
+{
+  "version": "V158",
+  "source_archive": "MATH_WEB_GITHUB_READY_V157_PRIVATE_CHECKPOINT.zip",
+  "source_sha256": "670fc22ae66e67ba1c2b63f346262d45abba2757fdcc5e80a14e82448bc1fce2",
+  "created_utc": "2026-11-09T06:33:15.984210+00:00",
+  "scope": "question-bank-research-only",
+  "new_candidate_methods": 6,
+  "new_questions_with_answer_and_worked_solution": 60,
+  "new_questions_independently_checked_answers": 60,
+  "new_certified_independent_methods": 0,
+  "new_published_questions": 0,
+  "cumulative_certified_methods": "not_audited",
+  "historical_exact_question_records_scanned": 649653,
+  "historical_question_exact_collisions": 0,
+  "historical_method_title_exact_collisions": 0,
+  "source_sqlite_files_sha256_preserved": {
+    "MATH_WEB_GITHUB_READY/MATH_WEB/backend/database/mathweb.db": "83e24951f2ab10a2d18a8be20bbdb9950aa32c66cc18d1ac84d654d2a80218f2",
+    "MATH_WEB_GITHUB_READY/backend/database/mathweb.db": "73586b3e07756265d22da3ee66f8a933323f0676a542b5c08ec995e63e406937",
+    "MATH_WEB_GITHUB_READY/backend/database/mathweb_ai_history.sqlite3": "d1f1e19f6d136a6ee5f7e555b5b302d491ad88be35646f73e4848fb53657eaec",
+    "MATH_WEB_GITHUB_READY/backend/database/question_factory.sqlite3": "8d9440bb9066e3ac89a390b1329a63e99396fbf05b1e2ce60cca3e2b18c00c51",
+    "MATH_WEB_GITHUB_READY/database/study_suite.sqlite3": "612a00df5c7b9980d3731c7bb2d321b7c0dacb4925ee85e0c006527be03dc304",
+    "MATH_WEB_GITHUB_READY/mathweb_work/backend/database/mathweb.db": "18835010f61a77c252b83802d7242b614861ffc48b5fa07ad0e9e44e6e161b87"
+  },
+  "tests": {
+    "V158_research": "6 passed",
+    "V157_full_regression": "not rerun",
+    "E2E": "not run"
+  },
+  "notes": [
+    "Expert method-independence review pending",
+    "Historical exact-text scan is not semantic equivalence audit",
+    "No production database or application changed"
+  ],
+  "next": [
+    "review historical method families for novelty",
+    "topic-specific verification before bank publication",
+    "run staging E2E and large-scale benchmark"
+  ]
+}

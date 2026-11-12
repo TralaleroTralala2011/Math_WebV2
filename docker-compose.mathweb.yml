@@ -1,0 +1,71 @@
+# MATH_WEB V115 single-VPS or local pilot. NOT a multi-host HA cluster.
+# Default web/API binding is LOOPBACK ONLY. Use a TLS reverse proxy with a
+# real domain, firewall, and security review before exposing this publicly.
+# Set QF_ADMIN_TOKEN and MATHWEB_BOOTSTRAP_ADMIN_PASSWORD in .env first.
+services:
+  mathweb-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.mathweb
+    restart: unless-stopped
+    init: true
+    environment:
+      QF_ADMIN_TOKEN: ${QF_ADMIN_TOKEN:?QF_ADMIN_TOKEN must be set}
+      MATHWEB_BOOTSTRAP_ADMIN_PASSWORD: ${MATHWEB_BOOTSTRAP_ADMIN_PASSWORD:?Admin password must be set}
+      QF_DB_PATH: /data/question_factory.sqlite3
+      MATHWEB_DB_PATH: /data/mathweb.db
+      MATHWEB_AI_HISTORY_DB_PATH: /data/mathweb_ai_history.sqlite3
+    volumes:
+      - mathweb-data:/data
+    ports:
+      - "127.0.0.1:8000:8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=4)"]
+      interval: 30s
+      timeout: 5s
+      retries: 4
+      start_period: 45s
+
+  mathweb-web:
+    build:
+      context: .
+      dockerfile: Dockerfile.mathweb-web
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${MATHWEB_WEB_PORT:-8080}:80"
+    depends_on:
+      mathweb-api:
+        condition: service_healthy
+
+  factory-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.mathweb
+    restart: unless-stopped
+    init: true
+    command: ["python","-m","question_factory.cli","--db","/data/question_factory.sqlite3","daemon","--workers","4","--poll","5"]
+    environment:
+      QF_DB_PATH: /data/question_factory.sqlite3
+    volumes:
+      - mathweb-data:/data
+    depends_on:
+      mathweb-api:
+        condition: service_healthy
+
+  factory-operator:
+    build:
+      context: .
+      dockerfile: Dockerfile.mathweb
+    restart: unless-stopped
+    init: true
+    command: ["python","-m","question_factory.operations","--mode","loop","--data-dir","/data","--poll","300","--backup-every","86400"]
+    environment:
+      QF_DB_PATH: /data/question_factory.sqlite3
+    volumes:
+      - mathweb-data:/data
+    depends_on:
+      mathweb-api:
+        condition: service_healthy
+
+volumes:
+  mathweb-data:

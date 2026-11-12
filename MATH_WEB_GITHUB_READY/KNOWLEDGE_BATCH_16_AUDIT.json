@@ -1,0 +1,36 @@
+{
+  "source": "MATH_WEB_GITHUB_READY_KNOWLEDGE_BATCH_15.zip",
+  "batch": 16,
+  "new_topic_keys": [
+    "so_phuc",
+    "nguyen_ham_tich_phan",
+    "tinh_don_dieu",
+    "pt_mu",
+    "pt_logarit",
+    "g12_geom_point_plane_distance"
+  ],
+  "new_topics": 6,
+  "new_questions": 60,
+  "question_types": {
+    "multiple_choice": 42,
+    "short_answer": 12,
+    "true_false": 6
+  },
+  "topics_with_quiz_before": 73,
+  "topics_with_quiz_after": 79,
+  "total_topics": 150,
+  "quality_checks": [
+    "schema",
+    "answer_index",
+    "four_unique_choices",
+    "question_type_distribution",
+    "worked_examples",
+    "zip_integrity"
+  ],
+  "limitations": [
+    "No independent proof of correctness for all 60 questions",
+    "No browser integration test",
+    "No newly verified educational videos",
+    "Not 100% curriculum coverage"
+  ]
+}

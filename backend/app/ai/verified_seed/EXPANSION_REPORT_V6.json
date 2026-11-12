@@ -1,0 +1,12 @@
+{
+  "previous_form_ids": 65,
+  "new_form_ids": 26,
+  "total_form_ids": 91,
+  "previous_questions": 650,
+  "new_questions": 260,
+  "total_questions": 910,
+  "verified_new_answers": 260,
+  "duplicate_question_text": 0,
+  "forms_with_ten_questions": 91,
+  "caveat": "Form IDs do not establish deep mathematical independence. New questions are numeric/basic and not yet tested in the existing practice UI."
+}

@@ -1,0 +1,334 @@
+{
+  "version": "V212",
+  "source_archive": "MATH_WEB_GITHUB_READY_V211_FULL_WEB_BANK_INTEGRATED.zip",
+  "verified_source_bank_size": 11646,
+  "new_question_count": 420,
+  "final_sqlite_question_count": 12066,
+  "new_candidate_groups": 42,
+  "new_certified_independent_types": 0,
+  "grades": {
+    "10": 140,
+    "11": 140,
+    "12": 140
+  },
+  "question_formats": {
+    "multiple_choice": 294,
+    "short_answer": 84,
+    "true_false": 42
+  },
+  "validation": {
+    "exact_check_each_generated_answer": 420,
+    "unique_new_question_stems": 420,
+    "exact_question_duplicates_against_base": 0,
+    "candidate_group_id_collision": 0,
+    "mcq_unique_correct_option": 294,
+    "true_false_2_true_2_false": 42,
+    "each_group_has_10": true,
+    "sqlite_integrity": "ok",
+    "full_zip_readback_pending": false,
+    "full_zip_readback_rows": 12066
+  },
+  "method_review_status": "42 method-signature candidates reviewed for internal differences but NOT exhaustively semantically matched against preexisting 11,646 questions; zero certified",
+  "limitations": [
+    "Automatic arithmetic and formula checks do not equal independent manual review of every explanation.",
+    "Semantic equivalence with all past types has not been certified; no independent types claimed.",
+    "Site and Battle integration/regression tests are not yet run.",
+    "No claim of 60 minutes of uninterrupted execution."
+  ],
+  "groups": {
+    "euclidean_algorithm_gcd": {
+      "grade": 10,
+      "topic": "chia_het",
+      "method_signature": "euclid_gcd",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "linear_congruence_bounded_solution_count": {
+      "grade": 10,
+      "topic": "chia_du",
+      "method_signature": "gcd_reduce_congruence",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "totient_product_two_distinct_primes": {
+      "grade": 10,
+      "topic": "chia_het",
+      "method_signature": "euler_totient_prime_factors",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "implication_chain_truth_assignments": {
+      "grade": 10,
+      "topic": "menh_de",
+      "method_signature": "monotone_boolean_chain",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "quadratic_sign_chart_integer_count": {
+      "grade": 10,
+      "topic": "bat_phuong_trinh",
+      "method_signature": "quadratic_root_sign_intervals",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "rational_inequality_pole_integer_count": {
+      "grade": 10,
+      "topic": "bat_phuong_trinh",
+      "method_signature": "rational_sign_chart_exclude_pole",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "radical_equation_extraneous_root_filter": {
+      "grade": 10,
+      "topic": "g10_radical_equations_advanced",
+      "method_signature": "square_and_check_domain",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "linear_programming_two_constraints_vertex_max": {
+      "grade": 10,
+      "topic": "he_bat_phuong_trinh",
+      "method_signature": "feasible_polygon_vertex_theorem",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "heron_triangle_area_squared": {
+      "grade": 10,
+      "topic": "he_thuc_luong_tam_giac",
+      "method_signature": "heron_semiperimeter_area",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "internal_angle_bisector_segment_fraction": {
+      "grade": 10,
+      "topic": "he_thuc_luong_tam_giac",
+      "method_signature": "angle_bisector_ratio",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "circle_vertical_line_intersection_count": {
+      "grade": 10,
+      "topic": "g10_geom_coordinate_circle_line",
+      "method_signature": "circle_line_discriminant",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "multiset_word_arrangements_three_symbols": {
+      "grade": 10,
+      "topic": "hoan_vi_chinh_hop_to_hop",
+      "method_signature": "multinomial_permutations_repeated",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "right_triangle_circumradius_squared": {
+      "grade": 10,
+      "topic": "duong_tron_co_ban_10",
+      "method_signature": "hypotenuse_midpoint_circumcircle",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "lower_quartile_exclusive_median_convention": {
+      "grade": 10,
+      "topic": "thong_ke",
+      "method_signature": "sorted_sample_lower_half_median",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "cosine_sum_pythagorean_ratios": {
+      "grade": 11,
+      "topic": "cong_thuc_luong_giac",
+      "method_signature": "cosine_angle_addition",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "tangent_sum_rational": {
+      "grade": 11,
+      "topic": "cong_thuc_luong_giac",
+      "method_signature": "tangent_angle_addition",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "cos_nx_equals_cos_x_solution_count": {
+      "grade": 11,
+      "topic": "phuong_trinh_luong_giac_day_du",
+      "method_signature": "trig_cos_equality_two_progressions",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "second_order_linear_recurrence_two_roots": {
+      "grade": 11,
+      "topic": "day_so_truy_hoi_11",
+      "method_signature": "characteristic_roots_2_and_3",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "monotone_nested_radical_recurrence_limit": {
+      "grade": 11,
+      "topic": "gioi_han",
+      "method_signature": "monotone_bounded_fixed_point_sqrt",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "rationalize_sqrt_quadratic_at_infinity": {
+      "grade": 11,
+      "topic": "gioi_han_ham_so",
+      "method_signature": "conjugate_sqrt_x2_ax",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "sine_ratio_at_zero": {
+      "grade": 11,
+      "topic": "gioi_han",
+      "method_signature": "fundamental_sin_limit",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "quotient_derivative_fractional_linear": {
+      "grade": 11,
+      "topic": "dao_ham_quy_tac",
+      "method_signature": "quotient_rule_mobius_derivative",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "derivative_polynomial_composition": {
+      "grade": 11,
+      "topic": "dao_ham",
+      "method_signature": "chain_rule_power_of_quadratic",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "piecewise_differentiability_parameter": {
+      "grade": 11,
+      "topic": "ham_so_lien_tuc",
+      "method_signature": "one_sided_derivative_match",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "binomial_even_polynomial_coefficient": {
+      "grade": 11,
+      "topic": "g11_binomial_advanced",
+      "method_signature": "binomial_product_even_reduction",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "exact_successes_independent_bernoulli": {
+      "grade": 11,
+      "topic": "xac_suat_11",
+      "method_signature": "binomial_probability_distribution",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "variance_discrete_uniform_consecutive": {
+      "grade": 11,
+      "topic": "xac_suat",
+      "method_signature": "variance_sum_squared_deviations",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "pyramid_parallel_cross_section_area_ratio": {
+      "grade": 11,
+      "topic": "g11_geom_section_ratio",
+      "method_signature": "similarity_area_ratio_parallel_planes",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "oblique_asymptote_rational_quadratic": {
+      "grade": 12,
+      "topic": "tien_can",
+      "method_signature": "polynomial_long_division_asymptote",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "cubic_stationary_extrema_count_discriminant": {
+      "grade": 12,
+      "topic": "cuc_tri",
+      "method_signature": "derivative_quadratic_discriminant",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "amgm_minimum_positive_x_reciprocal": {
+      "grade": 12,
+      "topic": "gtln_gtnn",
+      "method_signature": "arithmetic_geometric_mean_equality",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "logarithmic_inequality_decreasing_base_integer": {
+      "grade": 12,
+      "topic": "bpt_logarit",
+      "method_signature": "monotone_decreasing_log_inequality",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "exponential_equation_equal_base_linear_exponents": {
+      "grade": 12,
+      "topic": "pt_mu",
+      "method_signature": "injective_exponential_linear_exponents",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "complex_rotation_unit_3_4_5": {
+      "grade": 12,
+      "topic": "so_phuc",
+      "method_signature": "complex_multiplication_unit_rotation",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "quadratic_conjugate_roots_squared_moduli_sum": {
+      "grade": 12,
+      "topic": "pt_so_phuc",
+      "method_signature": "complex_vieta_root_norm",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "nonreal_nth_roots_of_unity_count": {
+      "grade": 12,
+      "topic": "so_phuc",
+      "method_signature": "roots_of_unity_real_positions",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "definite_integral_u_substitution_derivative_over_square": {
+      "grade": 12,
+      "topic": "nguyen_ham_tich_phan",
+      "method_signature": "u_substitution_quadratic_denominator",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "revolution_linear_function_disk_integral_pi_coefficient": {
+      "grade": 12,
+      "topic": "g12_solid_of_revolution",
+      "method_signature": "washer_disk_integral",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "area_between_parabola_and_line_first_quadrant": {
+      "grade": 12,
+      "topic": "ung_dung_tich_phan",
+      "method_signature": "integrate_curve_difference",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "distance_parallel_planes_squared_3d": {
+      "grade": 12,
+      "topic": "g12_geom_two_planes_angle",
+      "method_signature": "parallel_plane_normal_distance",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "line_plane_intersection_parameter_t": {
+      "grade": 12,
+      "topic": "g12_geom_line_plane_intersection",
+      "method_signature": "parametric_line_plane_substitution",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    },
+    "squared_cosine_angle_between_planes": {
+      "grade": 12,
+      "topic": "g12_geom_two_planes_angle",
+      "method_signature": "dot_product_unit_normals",
+      "status": "candidate_semantic_review_pending",
+      "question_count": 10
+    }
+  }
+}

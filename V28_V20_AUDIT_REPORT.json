@@ -1,0 +1,37 @@
+{
+  "version": "V20_functional_audit",
+  "baseline": "MATH_WEB_V28_CLASSIC_ASSESSMENT_V19_AUDITED.zip",
+  "data": {
+    "assessment_questions": 900,
+    "complete_topics": 150,
+    "matrix_errors": 0,
+    "review_status_independent": "0/900 verified independently",
+    "b25_records": 4000,
+    "b25_topic_keys": 134,
+    "b25_sha256_unchanged": true
+  },
+  "changes": [
+    "Expose 900-question experimental matrix assessment from learning-path without replacing official server-graded roadmap",
+    "Restore interrupted quiz from sessionStorage on reload",
+    "Aggregate last score per topic across quiz rounds for learning recommendations",
+    "Correct outdated point-system description in legacy survey panel",
+    "Add explicit trial/independent-review warning"
+  ],
+  "tests": {
+    "backend_selective_pytest": "26 passed",
+    "javascript_syntax": "passed",
+    "html_pages_static_checked": 20,
+    "missing_local_assets": 0,
+    "matrix_errors": 0,
+    "zip_crc": "pending",
+    "browser_visual": "NOT RUN: browser binaries unavailable",
+    "battle_two_account_live_tcp": "NOT RUN: selective backend WebSocket tests only",
+    "mathematical_independent_review": "NOT RUN"
+  },
+  "issues": {
+    "matrix_errors": [],
+    "missing_assets": [],
+    "bank_mapping": "134 mapped topic keys, not demonstrated 150/150"
+  },
+  "user_facing_note": "Provisional matrix results are local-only and do NOT unlock validated official roadmap."
+}

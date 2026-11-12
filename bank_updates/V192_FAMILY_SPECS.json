@@ -1,0 +1,1352 @@
+[
+  {
+    "grade": 10,
+    "topic": "menh_de",
+    "key": "v192_truth_assignments",
+    "name": "Đếm cách gán giá trị chân lý để một tuyển nhiều mệnh đề đúng",
+    "method": "Số gán khiến ít nhất một trong n mệnh đề đúng = 2^n−1",
+    "conditions": "n mệnh đề độc lập, mỗi mệnh đề có hai giá trị",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 10,
+    "topic": "he_bat_phuong_trinh",
+    "key": "v192_bounded_integer",
+    "name": "Đếm nghiệm nguyên của giao hai bất phương trình tuyến tính một ẩn",
+    "method": "L≤x≤U => U−L+1 nghiệm nguyên",
+    "conditions": "L,U nguyên, L≤U",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 10,
+    "topic": "he_thuc_luong",
+    "key": "v192_cosine_law_side_squared",
+    "name": "Áp dụng định lý côsin để tìm bình phương cạnh đối diện góc 60°",
+    "method": "c²=a²+b²−ab khi góc xen giữa 60°",
+    "conditions": "Hai cạnh a,b>0, góc xen giữa 60°",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "vector",
+    "key": "v192_parallelogram_vector_norm",
+    "name": "Tính bình phương độ dài tổng hai vectơ từ độ dài và tích vô hướng",
+    "method": "||u+v||²=||u||²+||v||²+2u·v",
+    "conditions": "Hai vectơ cho phép tích vô hướng xác định",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "quy_tac_dem",
+    "key": "v192_binary_no_adjacent_ones",
+    "name": "Đếm chuỗi nhị phân không có hai chữ số 1 liền kề",
+    "method": "F(n)=F(n−1)+F(n−2) dựa trên chữ số cuối",
+    "conditions": "n≥2; chuỗi dài n",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "thong_ke",
+    "key": "v192_weighted_mean",
+    "name": "Trung bình cộng của mẫu có bảng tần số",
+    "method": "x̄=(Σf_i x_i)/(Σf_i)",
+    "conditions": "Tần số nguyên dương, tổng tần số khác 0",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_angles_parallel",
+    "key": "v192_alternate_interior_angle",
+    "name": "Xác định góc so le trong khi hai đường thẳng song song",
+    "method": "Góc so le trong bằng nhau",
+    "conditions": "Hai đường thẳng song song cắt bởi một cát tuyến",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_quadrilaterals_properties",
+    "key": "v192_parallelogram_diagonal_law",
+    "name": "Định luật hình bình hành cho hai đường chéo",
+    "method": "AC²+BD²=2(AB²+BC²)",
+    "conditions": "ABCD là hình bình hành",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_thales_similarity",
+    "key": "v192_similar_triangle_area",
+    "name": "Tỉ số diện tích của hai tam giác đồng dạng tạo bởi đường song song",
+    "method": "S_ADE/S_ABC=(AD/AB)²",
+    "conditions": "D trên AB; E trên AC; DE∥BC",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_triangle_area_ratio",
+    "key": "v192_cevian_area_ratio",
+    "name": "Tỉ số diện tích hai tam giác chung đường cao từ A",
+    "method": "S_ABD/S_ACD=BD/DC",
+    "conditions": "D nằm trong cạnh BC của tam giác ABC",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_circle_angles",
+    "key": "v192_interior_chords_arc_angle",
+    "name": "Góc tạo bởi hai dây cung cắt nhau bên trong đường tròn",
+    "method": "Góc trong = (số đo cung chắn và cung đối đỉnh)/2",
+    "conditions": "Hai dây cắt bên trong đường tròn",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_line_intersections",
+    "key": "v192_two_lines_intersect",
+    "name": "Tìm hoành độ giao điểm hai đường thẳng từ hệ số góc",
+    "method": "ax+b=cx+d => x=(d−b)/(a−c)",
+    "conditions": "Hai đường thẳng khác hệ số góc",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_triangle_inequalities",
+    "key": "v192_count_triangle_integer_third_side",
+    "name": "Đếm độ dài nguyên của cạnh thứ ba để tạo thành tam giác",
+    "method": "|a−b|<c<a+b",
+    "conditions": "a,b là hai cạnh nguyên dương",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_radical_equations_advanced",
+    "key": "v192_one_radical_equation",
+    "name": "Giải phương trình căn √(x+a)=x−b và loại nghiệm ngoại lai",
+    "method": "Bình phương hai vế sau khi đặt x−b≥0, thử điều kiện",
+    "conditions": "Căn bậc hai không âm; nghiệm phải thỏa x−b≥0",
+    "difficulty": "nâng cao"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_circle_tangent_chord",
+    "key": "v192_power_of_point_tangent",
+    "name": "Độ dài tiếp tuyến bằng căn tích hai đoạn cát tuyến",
+    "method": "PT²=PA·PB",
+    "conditions": "P nằm ngoài đường tròn, A gần P hơn B",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "chung_minh_hinh_hoc_10",
+    "key": "v192_right_triangle_altitude",
+    "name": "Hệ thức đường cao ứng với cạnh huyền trong tam giác vuông",
+    "method": "CH²=AH·HB",
+    "conditions": "Tam giác ABC vuông tại C; H là chân đường cao trên AB",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_locus",
+    "key": "v192_equidistant_locus_on_axis",
+    "name": "Xác định điểm thuộc Ox cách đều hai điểm qua bình phương khoảng cách",
+    "method": "(x−a)²+y₁²=(x−b)²+y₂² => x=(b²+y₂²−a²−y₁²)/(2(b−a))",
+    "conditions": "A,B khác hoành độ; điểm H nằm trên Ox",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "toa_do_hinh_hoc_10",
+    "key": "v192_coordinate_triangle_area",
+    "name": "Diện tích tam giác theo định thức hai vectơ cạnh trong Oxy",
+    "method": "S=|det(AB,AC)|/2",
+    "conditions": "Ba điểm không thẳng hàng",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "duong_thang",
+    "key": "v192_parallel_lines_distance",
+    "name": "Khoảng cách giữa hai đường thẳng song song ở dạng tổng quát",
+    "method": "d=|c₂−c₁|/√(a²+b²)",
+    "conditions": "Đường thẳng có cùng pháp tuyến (3,4)",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_advanced_inequalities",
+    "key": "v192_amgm_product_max",
+    "name": "Giá trị lớn nhất của tích hai số không âm có tổng cố định",
+    "method": "xy≤((x+y)/2)²",
+    "conditions": "x,y không âm, x+y=S",
+    "difficulty": "nâng cao"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_symmetric_systems",
+    "key": "v192_sum_and_product_to_square_sum",
+    "name": "Tìm x²+y² từ tổng và tích hai nghiệm",
+    "method": "x²+y²=(x+y)²−2xy",
+    "conditions": "Hai số thực x,y với tổng và tích tương thích",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "duong_tron_co_ban_10",
+    "key": "v192_two_external_tangents",
+    "name": "Tính đoạn tiếp tuyến từ một điểm ngoài đường tròn bằng Pythagore",
+    "method": "PT=√(OP²−R²)",
+    "conditions": "P nằm ngoài đường tròn, OT⊥PT",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "nhi_thuc_newton",
+    "key": "v192_sum_binomial_coefficients",
+    "name": "Tổng các hệ số trong khai triển nhị thức Newton",
+    "method": "Σ C(n,k)=2^n bằng cách thay x=1 trong (1+x)^n",
+    "conditions": "n số nguyên không âm",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_coordinate_circle_line",
+    "key": "v192_circle_vertical_tangency",
+    "name": "Tìm hoành độ đường thẳng đứng tiếp xúc phía phải với đường tròn",
+    "method": "x=a+R với tâm I(a,b) bán kính R",
+    "conditions": "Tiếp tuyến đứng nằm bên phải tâm",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "ham_so_luong_giac",
+    "key": "v192_sine_period",
+    "name": "Chu kỳ cơ bản của hàm sin(ax+b)",
+    "method": "T=2π/|a|",
+    "conditions": "a khác 0; x đo bằng radian",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 11,
+    "topic": "phuong_trinh_luong_giac",
+    "key": "v192_sine_zero_root_count",
+    "name": "Đếm nghiệm sin(mx)=0 trên đoạn nửa kín",
+    "method": "sin(mx)=0⇔mx=jπ; j nguyên",
+    "conditions": "m nguyên dương, 0≤x<π",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "gia_tri_luong_giac",
+    "key": "v192_cos_double_from_tan",
+    "name": "Tính cos(2α) từ tanα",
+    "method": "cos2α=(1−tan²α)/(1+tan²α)",
+    "conditions": "cosα khác 0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "day_so",
+    "key": "v192_telescoping_product",
+    "name": "Tích rút gọn của dãy phân số liên tiếp",
+    "method": "∏_{j=1}^n (j+1)/j=n+1",
+    "conditions": "n số nguyên dương",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 11,
+    "topic": "cap_so_cong",
+    "key": "v192_sum_to_term_difference",
+    "name": "Tìm số hạng u_n từ công thức tổng n số hạng đầu",
+    "method": "u_n=S_n−S_{n−1}",
+    "conditions": "n nguyên dương; S_n đã cho dưới dạng tam thức bậc hai",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "cap_so_nhan",
+    "key": "v192_common_ratio_nonconsecutive",
+    "name": "Suy công bội dương của cấp số nhân qua hai số hạng không liên tiếp",
+    "method": "q²=u_{j+2}/u_j",
+    "conditions": "Cấp số nhân q>0, u_j khác 0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "ham_so_lien_tuc",
+    "key": "v192_piecewise_removable_continuity",
+    "name": "Điền giá trị tại điểm khuyết để hàm phân thức liên tục",
+    "method": "(x²−a²)/(x−a)→2a khi x→a",
+    "conditions": "Xét giới hạn khi x→a và gán f(a)=m",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "ung_dung_dao_ham_11",
+    "key": "v192_tangent_cubic_intercept",
+    "name": "Tung độ giao Oy của tiếp tuyến với đồ thị bậc ba",
+    "method": "b=f(a)−af′(a)",
+    "conditions": "f(x)=x³+cx; tiếp xúc tại x=a",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "phuong_trinh_luong_giac_day_du",
+    "key": "v192_cos_zero_root_count",
+    "name": "Đếm nghiệm cos(mx)=0 trên chu kỳ 2π",
+    "method": "mx=π/2+jπ",
+    "conditions": "m nguyên dương; x thuộc [0;2π)",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_transform_translation",
+    "key": "v192_translation_coordinate_sum",
+    "name": "Ảnh điểm qua phép tịnh tiến vectơ xác định",
+    "method": "P′=P+v",
+    "conditions": "Điểm và vectơ thuộc mặt phẳng Oxy",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_transform_reflection",
+    "key": "v192_reflect_across_y_eq_x",
+    "name": "Phép đối xứng qua đường thẳng y=x hoán đổi tọa độ",
+    "method": "(x,y)↦(y,x)",
+    "conditions": "Trục đối xứng y=x",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_rotation_homothety",
+    "key": "v192_central_symmetry_nonorigin",
+    "name": "Đối xứng tâm O(a,b) trong Oxy",
+    "method": "P′=2O−P",
+    "conditions": "O là trung điểm đoạn PP′",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_transform_composition",
+    "key": "v192_translation_then_reflection",
+    "name": "Hợp phép tịnh tiến rồi đối xứng trục tung",
+    "method": "(x,y)→(x+a,y+b)→(−x−a,y+b)",
+    "conditions": "Trục đối xứng cuối là Oy",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_prism_pyramid_sections",
+    "key": "v192_right_prism_lateral_area",
+    "name": "Diện tích xung quanh lăng trụ đứng theo chu vi đáy",
+    "method": "S_xq=P_đáy·h",
+    "conditions": "Lăng trụ đứng có đáy là tam giác 3-4-5",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 11,
+    "topic": "hinh_khong_gian",
+    "key": "v192_pyramid_volume",
+    "name": "Thể tích hình chóp bằng một phần ba diện tích đáy nhân chiều cao",
+    "method": "V=S_đáy·h/3",
+    "conditions": "Hình chóp có diện tích đáy và chiều cao dương",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_dihedral_angles",
+    "key": "v192_line_plane_angle_sine_squared",
+    "name": "Bình phương sin góc giữa cạnh xiên và mặt phẳng đáy",
+    "method": "sin²θ=h²/(h²+d²)",
+    "conditions": "Điểm ngoài mặt phẳng có hình chiếu vuông góc, h>0,d>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_binomial_advanced",
+    "key": "v192_vandermonde_binomial",
+    "name": "Tổng bình phương các hệ số tổ hợp qua đồng nhất thức Vandermonde",
+    "method": "Σ C(n,k)² = C(2n,n)",
+    "conditions": "n số nguyên dương; C(n,k) tổ hợp",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "quy_nap_toan_hoc_11",
+    "key": "v192_sum_of_cubes_induction",
+    "name": "Dùng công thức quy nạp cho tổng lập phương số tự nhiên",
+    "method": "1³+...+n³=[n(n+1)/2]²",
+    "conditions": "n nguyên dương",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_sequences_advanced",
+    "key": "v192_affine_first_order_recurrence",
+    "name": "Giải truy hồi tuyến tính cấp một bằng cách dịch điểm bất động",
+    "method": "u_n=(u₁+c)2^(n−1)−c nếu u_(n+1)=2u_n+c",
+    "conditions": "u₁,c cho trước, n nguyên dương",
+    "difficulty": "nâng cao"
+  },
+  {
+    "grade": 11,
+    "topic": "to_hop_xac_suat_nang_cao_11",
+    "key": "v192_lattice_shortest_paths",
+    "name": "Đếm đường đi ngắn nhất trên lưới ô vuông",
+    "method": "C(m+n,m)",
+    "conditions": "Chỉ được đi sang phải hoặc đi lên",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "thong_ke_11",
+    "key": "v192_median_sorted_odd_sample",
+    "name": "Trung vị của dãy đã sắp tăng có số phần tử lẻ",
+    "method": "Me=x_((n+1)/2)",
+    "conditions": "Dãy đơn điệu tăng gồm số lẻ phần tử",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_conditional_probability_models",
+    "key": "v192_dice_even_sum_condition",
+    "name": "Xác suất có điều kiện cả hai lần gieo đều chẵn khi tổng chẵn",
+    "method": "P(cả chẵn | tổng chẵn)=E²/(E²+O²)",
+    "conditions": "Gieo độc lập 2 xúc xắc đều từ 1 đến n",
+    "difficulty": "nâng cao"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_parallel_planes",
+    "key": "v192_parallel_plane_coordinate_distance",
+    "name": "Khoảng cách giữa hai mặt phẳng song song có phương trình z=a, z=b",
+    "method": "d=|a−b|",
+    "conditions": "Hệ trục vuông góc Oxyz; hai mặt phẳng khác nhau",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "xac_suat_11",
+    "key": "v192_at_least_one_independent_success",
+    "name": "Xác suất có ít nhất một thành công qua n lần thử Bernoulli",
+    "method": "P(X≥1)=1−(1−p)^n",
+    "conditions": "Các lần thử độc lập, mỗi lần xác suất thành công p",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "tinh_don_dieu",
+    "key": "v192_decreasing_cubic_interval",
+    "name": "Độ dài khoảng nghịch biến của hàm bậc ba đặc biệt",
+    "method": "f′(x)=3(x²−a²)<0 khi −a<x<a",
+    "conditions": "a>0, f(x)=x³−3a²x",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "cuc_tri",
+    "key": "v192_local_maximum_of_odd_cubic",
+    "name": "Giá trị cực đại địa phương của f(x)=x³−3a²x",
+    "method": "Cực đại tại x=−a, f(−a)=2a³",
+    "conditions": "a>0, đạo hàm đổi dấu từ dương sang âm",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "tien_can",
+    "key": "v192_rational_vertical_asymptote",
+    "name": "Tiệm cận đứng của phân thức bậc nhất/bậc nhất",
+    "method": "x=−d/c nếu mẫu bằng 0 nhưng tử khác 0",
+    "conditions": "c khác 0, tử không triệt tiêu tại nghiệm mẫu",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "tiep_tuyen",
+    "key": "v192_tangent_natural_log_intercept",
+    "name": "Tung độ giao trục Oy của tiếp tuyến với đồ thị y=ln x",
+    "method": "b=ln(a)−1 tại x=a",
+    "conditions": "a>0, tiếp tuyến y=ln a+(x−a)/a",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "pt_mu",
+    "key": "v192_quadratic_in_exponential",
+    "name": "Đặt t=2^x giải phương trình bậc hai theo t",
+    "method": "(2^x−A)(2^x−B)=0",
+    "conditions": "A,B là lũy thừa nguyên dương của 2 và khác nhau",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "pt_logarit",
+    "key": "v192_log_sum_quadratic",
+    "name": "Giải phương trình tổng hai logarit với miền xác định",
+    "method": "log_a x+log_a(x−m)=log_a C => x(x−m)=C",
+    "conditions": "a>1, x>m>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "bpt_mu",
+    "key": "v192_exponential_inequality_integer_count",
+    "name": "Đếm số nguyên trong đoạn thỏa bất phương trình mũ",
+    "method": "2^x>2^k ⇔ x>k",
+    "conditions": "Cơ số 2>1; x nguyên trong [0,N]",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "bpt_logarit",
+    "key": "v192_logarithmic_inequality_integer_count",
+    "name": "Đếm nghiệm nguyên của bất phương trình logarit có dịch chuyển",
+    "method": "log₂(x−a)≥m ⇔ x≥a+2^m",
+    "conditions": "Điều kiện x−a>0; x trong đoạn cho trước",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "nguyen_ham_tich_phan",
+    "key": "v192_sine_definite_integral",
+    "name": "Tích phân sin(ax) trên nửa chu kỳ",
+    "method": "∫₀^(π/a) sin(ax)dx=2/a",
+    "conditions": "a>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "ung_dung_tich_phan",
+    "key": "v192_absolute_value_area",
+    "name": "Tính diện tích dưới đồ thị |x−a| bằng chia khoảng",
+    "method": "∫₀^(2a)|x−a|dx=a²",
+    "conditions": "a>0, phân tích trị tuyệt đối tại x=a",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_solid_of_revolution",
+    "key": "v192_volume_disks_linear_graph",
+    "name": "Thể tích khối tròn xoay từ y=ax trên đoạn [0,b]",
+    "method": "V=π∫₀ᵇ (ax)²dx=πa²b³/3",
+    "conditions": "a,b>0; quay quanh trục Ox",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "xac_suat_12",
+    "key": "v192_expected_discrete_three_point",
+    "name": "Kỳ vọng của biến ngẫu nhiên nhận ba giá trị",
+    "method": "E(X)=Σ x_i·p_i",
+    "conditions": "X nhận các giá trị −a,0,b; xác suất cộng thành 1",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "thong_ke_12",
+    "key": "v192_population_variance_two_values",
+    "name": "Phương sai mẫu với hai giá trị có tần số",
+    "method": "Var=p(1−p)(a−b)²",
+    "conditions": "Tính phương sai theo 1/n, không hiệu chỉnh n−1",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_line_plane_intersection",
+    "key": "v192_line_plane_parameter",
+    "name": "Tìm tham số giao điểm của đường thẳng tham số với mặt phẳng",
+    "method": "t=(d−n·A)/(n·u)",
+    "conditions": "n·u khác 0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_sphere_tangent_plane",
+    "key": "v192_tangent_plane_constant",
+    "name": "Hệ số tự do của mặt phẳng tiếp xúc với mặt cầu",
+    "method": "n·X=n·T khi n=T−C",
+    "conditions": "Bán kính CT vuông góc mặt phẳng tiếp xúc tại T",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_two_planes_angle",
+    "key": "v192_angle_between_planes_cos_squared",
+    "name": "Bình phương cos góc nhọn giữa hai mặt phẳng",
+    "method": "cos²φ=(n₁·n₂)²/(||n₁||²||n₂||²)",
+    "conditions": "Hai mặt phẳng cắt nhau; pháp tuyến cho trước",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_line_plane_angle",
+    "key": "v192_angle_between_line_plane_sin_squared",
+    "name": "Bình phương sin góc giữa đường thẳng và mặt phẳng",
+    "method": "sin²φ=(u·n)²/(||u||²||n||²)",
+    "conditions": "u vectơ chỉ phương đường thẳng, n pháp tuyến mặt phẳng",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_sphere_plane_intersection",
+    "key": "v192_integer_parallel_secant_planes",
+    "name": "Đếm các mặt phẳng tọa độ nguyên cắt mặt cầu theo đường tròn thực",
+    "method": "z=m cắt x²+y²+z²=R² thành đường tròn nếu |m|<R",
+    "conditions": "R nguyên dương, m nguyên",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_skew_line_relation",
+    "key": "v192_skew_lines_distance_squared",
+    "name": "Bình phương khoảng cách hai đường thẳng chéo nhau bằng tích hỗn tạp",
+    "method": "d²=[(B−A)·(u×v)]²/||u×v||²",
+    "conditions": "Hai đường thẳng không song song, không cắt nhau",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_parameter_geometry",
+    "key": "v192_parameter_line_parallel_plane",
+    "name": "Tìm tham số để đường thẳng song song mặt phẳng",
+    "method": "n(m)·u=0, đồng thời không nằm trong mặt phẳng",
+    "conditions": "Đường thẳng chỉ phương u=(2,−k,1); mặt phẳng pháp tuyến (m,2,3)",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_min_distance_3d",
+    "key": "v192_distance_point_to_sphere_squared",
+    "name": "Bình phương khoảng cách ngắn nhất từ điểm ngoài tới mặt cầu",
+    "method": "d_min²=(OP−R)²",
+    "conditions": "P nằm ngoài mặt cầu, OP>R",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_complex_plane_geometry",
+    "key": "v192_complex_circle_farthest",
+    "name": "Giá trị lớn nhất của khoảng cách |z−w| khi |z| cố định",
+    "method": "max_{|z|=R}|z−w|=R+|w|",
+    "conditions": "R>0, w cố định trong mặt phẳng phức",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "pt_so_phuc",
+    "key": "v192_complex_linear_division",
+    "name": "Tính phần thực nghiệm phương trình tuyến tính phức",
+    "method": "z=(c+di)/(a+bi), phần thực = (ac+bd)/(a²+b²)",
+    "conditions": "a²+b²>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_integral_optimization",
+    "key": "v192_ftc_chain_derivative",
+    "name": "Đạo hàm của tích phân có cận phụ thuộc x theo định lý cơ bản",
+    "method": "d/dx∫₀^(x²)t^pdt=2x(x²)^p",
+    "conditions": "x>0, p nguyên dương",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_line_equation_3d",
+    "key": "v192_line_param_find_coordinate",
+    "name": "Tìm tọa độ trên đường thẳng tham số nhờ một hoành độ cho trước",
+    "method": "x=a+ut suy ra t=(x−a)/u, rồi thế vào z=c+wt",
+    "conditions": "u khác 0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_solid_surface_area",
+    "key": "v192_cylinder_total_surface",
+    "name": "Diện tích toàn phần hình trụ gồm hai đáy và mặt xung quanh",
+    "method": "S_tp=2πrh+2πr²",
+    "conditions": "r,h>0; hình trụ tròn xoay",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "hinh_khoi_va_the_tich_co_ban_12",
+    "key": "v192_frustum_cone_volume",
+    "name": "Thể tích hình nón cụt bán kính hai đáy R,r",
+    "method": "V=πh(R²+Rr+r²)/3",
+    "conditions": "R>r>0, h>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_sphere_equation",
+    "key": "v192_sphere_complete_square",
+    "name": "Tìm bán kính từ phương trình mặt cầu dạng khai triển",
+    "method": "R²=(a²+b²+c²)−d với phương trình x²+y²+z²−2ax−2by−2cz+d=0",
+    "conditions": "Phương trình mô tả mặt cầu thực R>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_3d_optimization",
+    "key": "v192_box_volume_fixed_edge_sum",
+    "name": "Tối đa hóa thể tích hộp chữ nhật có tổng ba kích thước cố định",
+    "method": "V=xyz≤[(x+y+z)/3]³, dấu bằng khi x=y=z",
+    "conditions": "x,y,z dương, tổng ba cạnh cho trước",
+    "difficulty": "nâng cao"
+  },
+  {
+    "grade": 10,
+    "topic": "menh_de_tap_hop",
+    "key": "v192_set_complement_union_count",
+    "name": "Số phần tử ngoài hợp hai tập trong vũ trụ hữu hạn",
+    "method": "|U\\(A∪B)|=|U|−|A|−|B|+|A∩B|",
+    "conditions": "A,B là tập con của U hữu hạn",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "bat_phuong_trinh",
+    "key": "v192_quadratic_between_roots",
+    "name": "Đếm nghiệm nguyên của bất phương trình tam thức âm giữa hai nghiệm",
+    "method": "(x−a)(x−b)<0 ⇔ a<x<b",
+    "conditions": "Hai nghiệm phân biệt a<b và hệ số bậc hai dương",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "ham_so_bac_hai",
+    "key": "v192_parabola_vertex_abscissa",
+    "name": "Hoành độ đỉnh của đồ thị tam thức bậc hai",
+    "method": "x_đỉnh=−b/(2a)",
+    "conditions": "a khác 0; y=ax²+bx+c",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "phuong_trinh_he",
+    "key": "v192_sum_difference_system",
+    "name": "Giải hệ hai phương trình dạng tổng và hiệu",
+    "method": "x=(S+D)/2, y=(S−D)/2",
+    "conditions": "Hai ẩn thực x,y",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "hoan_vi_chinh_hop_to_hop",
+    "key": "v192_arrange_three_distinct_roles",
+    "name": "Chỉnh hợp chập ba khi phân công ba vai trò khác nhau",
+    "method": "A(n,3)=n(n−1)(n−2)",
+    "conditions": "n người khác nhau, ba vị trí phân biệt",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "xac_suat",
+    "key": "v192_hypergeometric_all_red_three",
+    "name": "Xác suất lấy ba phần tử cùng loại khi không hoàn lại",
+    "method": "P=C(R,3)/C(R+B,3)",
+    "conditions": "R≥3, B≥1, rút cùng lúc ba viên bi",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "tap_hop",
+    "key": "v192_cartesian_product_cardinality",
+    "name": "Số cặp có thứ tự trong tích Descartes hai tập hữu hạn",
+    "method": "|A×B|=|A|·|B|",
+    "conditions": "Hai tập hữu hạn, đếm cặp có thứ tự",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 10,
+    "topic": "ham_so",
+    "key": "v192_domain_square_root_linear",
+    "name": "Điểm đầu của miền xác định hàm căn bậc hai tuyến tính",
+    "method": "√(ax−b) xác định khi x≥b/a với a>0",
+    "conditions": "a>0; biến thực",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 10,
+    "topic": "ham_so_bac_nhat",
+    "key": "v192_line_slope_from_points",
+    "name": "Hệ số góc đường thẳng qua hai điểm trong Oxy",
+    "method": "a=(y_B−y_A)/(x_B−x_A)",
+    "conditions": "x_B khác x_A",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "phuong_trinh",
+    "key": "v192_parameter_infinite_solutions",
+    "name": "Điều kiện phương trình tuyến tính có vô số nghiệm",
+    "method": "a(m)x=b(m) có vô số nghiệm khi a(m)=b(m)=0",
+    "conditions": "Hai vế tuyến tính theo ẩn x",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "he_phuong_trinh",
+    "key": "v192_cramer_rule_two_unknowns",
+    "name": "Giải hệ hai phương trình hai ẩn bằng định thức Cramer",
+    "method": "x=det(A_x)/det(A), det(A)≠0",
+    "conditions": "Hệ tuyến tính có định thức ma trận hệ số khác 0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "he_thuc_luong_tam_giac",
+    "key": "v192_extended_sine_rule",
+    "name": "Tìm bán kính ngoại tiếp bằng định lý sin mở rộng",
+    "method": "2R=a/sin A",
+    "conditions": "Góc A có sin A>0 và cạnh đối diện a",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "toa_do_phang",
+    "key": "v192_point_distance_pythagorean",
+    "name": "Khoảng cách giữa hai điểm trong hệ tọa độ Oxy",
+    "method": "AB=√[(x_B−x_A)²+(y_B−y_A)²]",
+    "conditions": "Hai điểm A,B khác nhau",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 10,
+    "topic": "duong_tron",
+    "key": "v192_arc_length_radians",
+    "name": "Độ dài cung tròn tính bằng radian",
+    "method": "L=Rθ với θ tính theo radian",
+    "conditions": "Bán kính R>0, góc ở tâm θ≥0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "hinh_hoc_10",
+    "key": "v192_centroid_divides_median",
+    "name": "Trọng tâm chia đường trung tuyến theo tỉ số 2:1 từ đỉnh",
+    "method": "AG=2AM/3",
+    "conditions": "G là trọng tâm tam giác, AM trung tuyến",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "hinh_hoc_co_ban_10",
+    "key": "v192_trapezoid_area",
+    "name": "Diện tích hình thang theo tổng hai đáy và chiều cao",
+    "method": "S=(a+b)h/2",
+    "conditions": "Hai đáy song song, chiều cao h>0",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 10,
+    "topic": "tam_giac_tu_giac_10",
+    "key": "v192_rhombus_diagonals_area",
+    "name": "Diện tích hình thoi bằng nửa tích hai đường chéo",
+    "method": "S=d₁d₂/2",
+    "conditions": "Hai đường chéo vuông góc cắt nhau tại trung điểm",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 10,
+    "topic": "he_thuc_luong_van_dung_10",
+    "key": "v192_triangle_area_included_sine",
+    "name": "Diện tích tam giác từ hai cạnh kề và sin góc xen giữa",
+    "method": "S=ab·sin C/2",
+    "conditions": "Hai cạnh a,b dương và góc xen giữa hợp lệ",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_circle_chords_arcs",
+    "key": "v192_chord_using_half_central_angle",
+    "name": "Tính dây cung theo góc ở tâm và bán kính",
+    "method": "AB=2R·sin(θ/2)",
+    "conditions": "Hai đầu dây thuộc đường tròn tâm O; sin(θ/2) đã biết",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_coordinate_distance_midpoint",
+    "key": "v192_coordinate_midpoint_x",
+    "name": "Hoành độ trung điểm của đoạn trong Oxy",
+    "method": "x_M=(x_A+x_B)/2",
+    "conditions": "A,B có tọa độ thực",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_vector_proofs",
+    "key": "v192_parallelogram_fourth_vertex",
+    "name": "Khôi phục đỉnh thứ tư hình bình hành bằng vectơ",
+    "method": "D=A+C−B đối với ABCD thứ tự liên tiếp",
+    "conditions": "A,B,C là ba đỉnh liên tiếp hình bình hành",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_combinatorics_olympiad",
+    "key": "v192_pigeonhole_guaranteed",
+    "name": "Nguyên lý Dirichlet: số đồ vật tối thiểu để có ít nhất r đồ vật cùng hộp",
+    "method": "N_min=m(r−1)+1",
+    "conditions": "Phân N đồ vật vào m hộp, m,r nguyên dương",
+    "difficulty": "nâng cao"
+  },
+  {
+    "grade": 11,
+    "topic": "gioi_han",
+    "key": "v192_polynomial_difference_quotient",
+    "name": "Giới hạn của thương (x^n−1)/(x−1) tại x=1",
+    "method": "lim_(x→1)(x^n−1)/(x−1)=n",
+    "conditions": "n nguyên dương",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "dao_ham",
+    "key": "v192_sqrt_derivative_at_square",
+    "name": "Đạo hàm căn bậc hai tại bình phương số dương",
+    "method": "(√x)′=1/(2√x)",
+    "conditions": "x>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "ham_so_luong_giac_day_du",
+    "key": "v192_range_sine_affine",
+    "name": "Giá trị nhỏ nhất của hàm y=a sin x+b",
+    "method": "min y=b−|a|",
+    "conditions": "a,b thực, x∈R",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "gioi_han_ham_so",
+    "key": "v192_exp_zero_limit",
+    "name": "Giới hạn cơ bản của hàm mũ tự nhiên ở 0",
+    "method": "lim_(x→0) (e^(ax)−1)/x=a",
+    "conditions": "a là hằng số thực",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "dao_ham_quy_tac",
+    "key": "v192_polynomial_product_derivative",
+    "name": "Đạo hàm tích hai đa thức tại điểm cho trước",
+    "method": "(uv)′=u′v+uv′",
+    "conditions": "u,v khả vi",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "bai_toan_thuc_te_11",
+    "key": "v192_finite_annuity_geometric",
+    "name": "Tổng giá trị khoản tiền gửi tăng trưởng theo cấp số nhân",
+    "method": "S=p(1+r+...+r^(n−1))=p(r^n−1)/(r−1)",
+    "conditions": "r>1; gửi đầu mỗi kỳ, đánh giá cuối các kỳ",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "bien_co_doc_lap_11",
+    "key": "v192_intersection_independent_events",
+    "name": "Xác suất giao hai biến cố độc lập",
+    "method": "P(A∩B)=P(A)P(B)",
+    "conditions": "A,B độc lập; xác suất thuộc [0;1]",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "day_so_truy_hoi_11",
+    "key": "v192_add_n_recurrence",
+    "name": "Truy hồi cộng theo chỉ số và tổng số tự nhiên",
+    "method": "u_n=u₁+Σ_(j=1)^(n−1) j=u₁+n(n−1)/2",
+    "conditions": "u_(n+1)=u_n+n, n nguyên dương",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "phep_bien_hinh_co_ban_11",
+    "key": "v192_reflection_across_horizontal",
+    "name": "Ảnh điểm qua trục đối xứng là đường thẳng y=c",
+    "method": "(x,y)→(x,2c−y)",
+    "conditions": "Đường y=c nằm ngang",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "nhan_biet_hinh_khong_gian_11",
+    "key": "v192_euler_convex_polyhedron",
+    "name": "Tìm số mặt từ đặc trưng Euler của đa diện lồi",
+    "method": "V−E+F=2",
+    "conditions": "Đa diện lồi, V là số đỉnh, E số cạnh",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 11,
+    "topic": "vuong_goc_khong_gian",
+    "key": "v192_box_space_diagonal",
+    "name": "Đường chéo không gian hình hộp chữ nhật theo định lý Pythagore ba chiều",
+    "method": "d=√(a²+b²+c²)",
+    "conditions": "a,b,c độ dài ba cạnh đôi một vuông góc",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_section_ratio",
+    "key": "v192_similar_pyramid_volume_ratio",
+    "name": "Tỉ số thể tích hai hình chóp đồng dạng do thiết diện song song đáy",
+    "method": "V_nhỏ/V_lớn=(tỉ số chiều cao)^3",
+    "conditions": "Mặt phẳng cắt song song đáy hình chóp",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_advanced_trig_equations",
+    "key": "v192_sin_equals_cos_count",
+    "name": "Đếm nghiệm sin x=cos x trên số chu kỳ xác định",
+    "method": "tan x=1 => x=π/4+jπ",
+    "conditions": "cosx không thể bằng 0 ở nghiệm; x∈[0,2nπ)",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_skew_lines_distance",
+    "key": "v192_skew_edges_of_cube_distance",
+    "name": "Khoảng cách giữa hai cạnh chéo nhau trong hình lập phương",
+    "method": "Khoảng cách bằng độ dài đoạn vuông góc chung",
+    "conditions": "Hình lập phương ABCD.A′B′C′D′ cạnh a",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "phep_bien_hinh_11",
+    "key": "v192_homothety_center_origin",
+    "name": "Phép vị tự tâm O tỉ số k đối với điểm P(x,y)",
+    "method": "(x,y)→(kx,ky)",
+    "conditions": "k khác 0, O là gốc tọa độ",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_three_perpendiculars",
+    "key": "v192_space_perpendicular_projection",
+    "name": "Độ dài cạnh xiên từ hai đoạn trực giao theo định lý ba đường vuông góc",
+    "method": "SB²=SA²+AB² khi SA⊥(P), A,B∈(P)",
+    "conditions": "SA>0, AB>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "khao_sat_ham_so",
+    "key": "v192_oblique_asymptote_division",
+    "name": "Tiệm cận xiên qua phép chia đa thức của hàm phân thức",
+    "method": "(x²+ax+b)/(x+c)=x+(a−c)+R/(x+c)",
+    "conditions": "Mẫu khác 0; x→±∞",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "so_phuc",
+    "key": "v192_complex_modulus_multiplicative",
+    "name": "Môđun của tích hai số phức theo tính nhân",
+    "method": "|zw|=|z|·|w|",
+    "conditions": "z,w∈C, môđun không âm",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "toa_do_khong_gian",
+    "key": "v192_tetrahedron_centroid",
+    "name": "Tọa độ trọng tâm tứ diện bằng trung bình cộng bốn đỉnh",
+    "method": "G=(A+B+C+D)/4",
+    "conditions": "A,B,C,D không đồng phẳng",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "gtln_gtnn",
+    "key": "v192_cubic_max_closed_interval",
+    "name": "Giá trị lớn nhất của đa thức bậc ba trên đoạn kín qua đạo hàm",
+    "method": "So sánh f tại hai đầu mút và các điểm tới hạn nội bộ",
+    "conditions": "Đoạn [0,a] với a≥2",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "tuong_giao",
+    "key": "v192_parabola_horizontal_intersections",
+    "name": "Đếm giao điểm parabol và đường thẳng ngang theo dấu biệt thức",
+    "method": "x²+a=m => có 0,1,2 nghiệm tùy dấu m−a",
+    "conditions": "m thực, xét riêng m<a, m=a, m>a",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "ham_mu",
+    "key": "v192_exponential_time_ratio",
+    "name": "Tỉ số giá trị hàm mũ tại hai thời điểm cách nhau Δ",
+    "method": "a^(t+Δ)/a^t=a^Δ",
+    "conditions": "a>0 và a≠1, t thực",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "ham_logarit",
+    "key": "v192_change_of_base_power",
+    "name": "Đổi cơ số logarit của lũy thừa",
+    "method": "log_(a²)(a^n)=n/2",
+    "conditions": "a>0, a≠1",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "mat_phang_oxyz",
+    "key": "v192_plane_from_normal_point_constant",
+    "name": "Tìm hệ số tự do D trong phương trình mặt phẳng qua điểm với pháp tuyến",
+    "method": "ax+by+cz+D=0 ⇒ D=−(ax₀+by₀+cz₀)",
+    "conditions": "Pháp tuyến khác không",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "mat_cau",
+    "key": "v192_sphere_surface_area",
+    "name": "Diện tích mặt cầu theo bán kính",
+    "method": "S=4πR²",
+    "conditions": "R>0, hỏi hệ số S/π",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "bai_toan_thuc_te_12",
+    "key": "v192_half_life_radioactive_decay",
+    "name": "Mô hình giảm một nửa sau mỗi chu kỳ",
+    "method": "N(t)=N₀·(1/2)^(t/T)",
+    "conditions": "T chu kỳ bán rã dương, t bội nguyên của T",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_vectors_3d",
+    "key": "v192_cross_norm_via_gram",
+    "name": "Độ dài tích có hướng qua định thức Gram",
+    "method": "||u×v||²=||u||²||v||²−(u·v)²",
+    "conditions": "Vectơ u,v∈R³",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_plane_equation",
+    "key": "v192_plane_normal_from_vectors",
+    "name": "Tìm hệ số pháp tuyến mặt phẳng qua hai vectơ chỉ phương",
+    "method": "n=u×v",
+    "conditions": "u,v không cùng phương",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "g12_geom_point_plane_distance",
+    "key": "v192_point_plane_squared_distance",
+    "name": "Bình phương khoảng cách từ điểm đến mặt phẳng bằng công thức pháp tuyến",
+    "method": "d²=(ax₀+by₀+cz₀+D)²/(a²+b²+c²)",
+    "conditions": "Mặt phẳng 3x+4y+D=0 có pháp tuyến khác 0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "tong_hop_thpt",
+    "key": "v192_inverse_derivative_polynomial",
+    "name": "Đạo hàm hàm ngược tại một giá trị từ đạo hàm hàm gốc",
+    "method": "(f⁻¹)′(f(a))=1/f′(a)",
+    "conditions": "f khả vi khả nghịch lân cận a, f′(a)≠0",
+    "difficulty": "nâng cao"
+  },
+  {
+    "grade": 12,
+    "topic": "goc_khoang_cach_oxyz",
+    "key": "v192_broken_line_reflection_min",
+    "name": "Tối ưu đường gấp khúc đi qua mặt phẳng bằng phép phản xạ",
+    "method": "min_H∈(P)(PH+HQ)=P′Q với P′ đối xứng P qua (P)",
+    "conditions": "P,Q ở cùng phía mặt phẳng (Oxy)",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "bai_toan_thuc_te_10",
+    "key": "v192_profit_linear_demand_quadratic",
+    "name": "Tối ưu lợi nhuận với giá bán giảm tuyến tính theo số lượng",
+    "method": "P(x)=x(p₀−x)−cx có parabol quay xuống, đỉnh cho cực đại",
+    "conditions": "Giá bán và chi phí cho phép nghiệm tối ưu x>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_triangle_congruence",
+    "key": "v192_sas_equal_corresponding_angle",
+    "name": "Suy góc tương ứng bằng nhau từ hai tam giác bằng nhau theo cạnh-góc-cạnh",
+    "method": "SAS: hai cạnh và góc xen giữa bằng nhau => hai tam giác bằng nhau",
+    "conditions": "Hai tam giác có hai cạnh kề và góc xen giữa bằng nhau",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 10,
+    "topic": "g10_geom_special_lines",
+    "key": "v192_angle_bisector_stewart_length",
+    "name": "Tính bình phương độ dài đường phân giác trong bằng hệ thức Stewart",
+    "method": "l_a²=bc[1−a²/(b+c)²]",
+    "conditions": "Tam giác có cạnh a=BC,b=CA,c=AB thỏa bất đẳng thức tam giác",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "cong_thuc_luong_giac",
+    "key": "v192_triple_angle_sine",
+    "name": "Dùng công thức góc ba lần để tính sin(3α) từ sinα",
+    "method": "sin(3α)=3sinα−4sin³α",
+    "conditions": "α nhọn, sinα đã biết",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "day_so_tong_quat",
+    "key": "v192_finite_difference_quadratic_sequence",
+    "name": "Tính sai phân hai số hạng liên tiếp của dãy bậc hai",
+    "method": "u_(n+1)−u_n=a(2n+1)+b",
+    "conditions": "u_n=an²+bn+c",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "song_song_khong_gian",
+    "key": "v192_parallel_planes_transversal_ratio",
+    "name": "Hệ quả định lý Thales trong không gian với hai mặt phẳng song song",
+    "method": "OA′/OA=OB′/OB",
+    "conditions": "O không thuộc hai mặt phẳng song song, hai tia cắt hai mặt phẳng",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "goc_khoang_cach_11",
+    "key": "v192_height_from_line_plane_angle",
+    "name": "Khoảng cách từ điểm đến mặt phẳng bằng cạnh xiên nhân sin góc nghiêng",
+    "method": "d=SA·sinφ",
+    "conditions": "A thuộc (P), S không thuộc (P); góc giữa SA và (P) có sinφ cho trước",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "thiet_dien_hinh_khong_gian_11",
+    "key": "v192_tetra_midpoint_section_perimeter",
+    "name": "Chu vi thiết diện tam giác qua ba trung điểm cạnh từ đỉnh tứ diện đều",
+    "method": "Thiết diện đồng dạng đáy tỉ số 1/2, chu vi giảm một nửa",
+    "conditions": "Tứ diện đều cạnh a; thiết diện qua trung điểm SA,SB,SC",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "bai_toan_thuc_te_tong_hop_11",
+    "key": "v192_two_speed_time_sum",
+    "name": "Mô hình thời gian hành trình hai chặng với vận tốc khác nhau",
+    "method": "t_total=s₁/v₁+s₂/v₂",
+    "conditions": "Hai chặng liên tiếp, tốc độ khác 0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_space_lines_planes",
+    "key": "v192_prism_face_count",
+    "name": "Đếm số mặt của lăng trụ đáy n giác",
+    "method": "F=n+2: n mặt bên và 2 mặt đáy",
+    "conditions": "Lăng trụ có hai đáy là đa giác n cạnh; n≥3",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_parallel_line_plane",
+    "key": "v192_midline_parallel_base_3d",
+    "name": "Đường trung bình song song cạnh đáy trong mặt bên của hình chóp",
+    "method": "MN=BC/2 khi M,N là trung điểm SB,SC",
+    "conditions": "Trong tam giác SBC; MN∥BC và MN∥mặt phẳng đáy khi BC nằm trên đáy",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_perpendicular_line_plane",
+    "key": "v192_vertical_cube_edge_distance",
+    "name": "Khoảng cách giữa hai mặt phẳng đáy và mặt trên hình hộp chữ nhật",
+    "method": "Hai mặt phẳng song song, cạnh bên vuông góc cả hai nên khoảng cách bằng chiều cao",
+    "conditions": "Hình hộp chữ nhật ABCD.A′B′C′D′",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_section_construction",
+    "key": "v192_cube_horizontal_section_area",
+    "name": "Thiết diện hình hộp bởi mặt phẳng song song đáy",
+    "method": "Thiết diện bằng hình chữ nhật đáy khi cắt song song đáy",
+    "conditions": "Cắt bên trong hình hộp chữ nhật tại độ cao h giữa hai đáy",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 11,
+    "topic": "g11_geom_space_proof",
+    "key": "v192_centroids_of_two_pyramid_faces",
+    "name": "Đường nối trọng tâm hai mặt của hình chóp song song cạnh đối diện",
+    "method": "GH=(S−A)/3 khi G là trọng tâm ABC, H là trọng tâm SBC",
+    "conditions": "Hình chóp S.ABC với SA>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "ung_dung_dao_ham",
+    "key": "v192_optimize_closed_cylinder_surface",
+    "name": "Tối ưu diện tích toàn phần hình trụ có thể tích cố định",
+    "method": "S(r)=2πr²+2V/r; cực tiểu khi r³=V/(2π)",
+    "conditions": "Hình trụ kín r,h>0, V=πr²h không đổi",
+    "difficulty": "nâng cao"
+  },
+  {
+    "grade": 12,
+    "topic": "hinh_hoc_khong_gian",
+    "key": "v192_prism_volume_base_area",
+    "name": "Thể tích lăng trụ từ diện tích đáy và chiều cao",
+    "method": "V=S_đáy·h",
+    "conditions": "Lăng trụ có hai đáy song song bằng nhau, h>0",
+    "difficulty": "nền tảng"
+  },
+  {
+    "grade": 12,
+    "topic": "bieu_dien_so_phuc",
+    "key": "v192_real_part_complex_square",
+    "name": "Phần thực bình phương số phức trong tọa độ phẳng",
+    "method": "Re((a+bi)²)=a²−b²",
+    "conditions": "a,b thực",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "duong_thang_oxyz",
+    "key": "v192_line_line_angle_dot_square",
+    "name": "Bình phương cos góc giữa hai đường thẳng theo vectơ chỉ phương",
+    "method": "cos²θ=(u·v)²/(||u||²||v||²)",
+    "conditions": "Hai vectơ chỉ phương khác 0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "the_tich_khong_gian",
+    "key": "v192_regular_tetra_volume_squared",
+    "name": "Thể tích tứ diện đều qua chiều cao và diện tích đáy",
+    "method": "V=a³√2/12 nên V²=a⁶/72",
+    "conditions": "Tứ diện đều cạnh a>0",
+    "difficulty": "trung cấp"
+  },
+  {
+    "grade": 12,
+    "topic": "hinh_hoc_oxyz_van_dung_12",
+    "key": "v192_closest_point_segment_origin",
+    "name": "Tối thiểu hóa bình phương khoảng cách từ điểm trên đoạn thẳng đến O bằng đạo hàm",
+    "method": "P(t)=A+t(B−A), min ||P(t)||² với 0≤t≤1",
+    "conditions": "A,B phân biệt; hình chiếu chân vuông góc thuộc đoạn",
+    "difficulty": "nâng cao"
+  }
+]

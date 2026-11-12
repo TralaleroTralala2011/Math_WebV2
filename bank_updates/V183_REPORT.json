@@ -1,0 +1,16 @@
+{
+  "base": "V182",
+  "new_qa_checked": 755,
+  "topics_extended": 83,
+  "duplicate_against_v182": 63,
+  "mcq": 496,
+  "short_answer": 178,
+  "true_false": 81,
+  "new_certified_forms": 0,
+  "production_integrated": 0,
+  "combined_import_ready": 6110,
+  "raw_question_gap_to_300000": 293890,
+  "semantic_independence": "not certified",
+  "production_db": "not available in checkpoint",
+  "catalog_topics": 150
+}

@@ -1,0 +1,72 @@
+{
+  "version": "V154",
+  "created_utc": "2026-11-09T04:30:18.875855+00:00",
+  "input_zip": "MATH_WEB_GITHUB_READY_V153_PERSISTENT_MIGRATION.zip",
+  "input_zip_sha256": "a52176101e012b8c239d697266374eaca444edf03f26d7748b20608d2e567263",
+  "input_verified_zip_integrity": true,
+  "input_commit": "unavailable: ZIP contains no .git metadata",
+  "source_databases_preserved_sha256_exact": true,
+  "source_database_count": 6,
+  "delta": {
+    "new_pending_candidate_methods": 2,
+    "new_answer_verified_pending_review_questions": 20,
+    "restored_unarchived_v153_pending_methods": 4,
+    "restored_unarchived_v153_oracle_checked_questions": 40,
+    "new_independently_certified_types": 0,
+    "newly_published_bank_questions": 0,
+    "historical_candidates_scanned": 1615,
+    "shared_core_method_candidates": 1050,
+    "question_text_scan_lines": 665293,
+    "exact_question_collision_count": 0
+  },
+  "published_qf_source": {
+    "topics": 150,
+    "archetypes": 0,
+    "questions": 0,
+    "independence_certifications": 0,
+    "note": "Numbers describe only the source Question Factory SQLite, not every practice question file."
+  },
+  "tests": {
+    "selected_sqlite_migration_backup_restore": "24 passed",
+    "v154_math_oracle": "20 questions checked in 1 test passed",
+    "v153_math_oracle": "40 questions checked in 1 test passed",
+    "v154_package_guard": "2 passed",
+    "backend_plus_question_factory": "279 passed, 6 warnings, 7 subtests passed",
+    "all_db_sha_after_tests_equal_source_zip": true,
+    "browser_e2e": "not run",
+    "load_benchmark": "not run",
+    "real_user_production_restore": "not run"
+  },
+  "features_changed": [
+    "SQLite symlink protection",
+    "optional extra-source SQLite migration",
+    "read-only historical account DB audit",
+    "cross-platform manifest path checks",
+    "release archive DB integrity gates",
+    "V128 audit fallback restored from late V153 workspace"
+  ],
+  "limitations": [
+    "No semantic certification of mathematical methods",
+    "Live server accounts not verified",
+    "No E2E browser tests or mobile testing",
+    "No baseline-vs-after API latency benchmark because no runtime performance optimization was made",
+    "No GitHub push",
+    "Session runtime not measured; 50-60 minutes not claimed"
+  ],
+  "required_next": [
+    "Review 2 new candidate methods against existing form methods before certification",
+    "Identify which of 3 historical mathweb.db files was actually in production",
+    "Live-like staging restore with full database contents",
+    "E2E Battle/Admin/friends/chat/login and responsive tests",
+    "Continue independent verified bank expansion",
+    "Measure real before/after performance when changing hot paths"
+  ],
+  "paths": {
+    "full_checkpoint_zip": "MATH_WEB_GITHUB_READY_V154_PRIVATE_CHECKPOINT.zip",
+    "source_only_zip": "MATH_WEB_GITHUB_READY_V154_GITHUB_SOURCE_ONLY.zip",
+    "report": "V154_RELEASE/V154_REPORT.md",
+    "integrity": "V154_RELEASE/ORIGINAL_SQLITE_HASHES.json",
+    "candidate_data": "V154_RESEARCH/V154_VERIFIED_ANSWERS_PENDING_REVIEW.jsonl",
+    "tests": "V154_RELEASE/FINAL_COMBINED_REGRESSION.log"
+  }
+}

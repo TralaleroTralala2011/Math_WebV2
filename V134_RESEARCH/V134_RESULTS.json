@@ -1,0 +1,23 @@
+{
+  "version": "V134",
+  "topic_catalog_count": 150,
+  "new_candidate_methods": 18,
+  "new_questions": 180,
+  "questions_mathematically_crosschecked_at_generation": 180,
+  "new_independent_methods_certified": 0,
+  "published_questions": 0,
+  "prior_questions_scanned": 13870,
+  "unique_prior_normalized_stems": 13870,
+  "normalized_duplicate_hits": 0,
+  "curriculum_topic_repairs_in_previous_versions": {
+    "V132_methods": 3,
+    "V132_questions": 30,
+    "V133_methods": 1,
+    "V133_questions": 10
+  },
+  "critical_errors": [],
+  "quality_warnings": [],
+  "method_independence_and_global_semantic_duplicate_review": "NOT CERTIFIED",
+  "full_end_to_end_regression": "NOT RUN",
+  "publication_status": "RESEARCH_QUARANTINED"
+}

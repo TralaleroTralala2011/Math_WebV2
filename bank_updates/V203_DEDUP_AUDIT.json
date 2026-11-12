@@ -1,0 +1,76 @@
+{
+  "verified_new_count": 120,
+  "duplicate_normalized_question_count": 0,
+  "family_candidates": 12,
+  "flagged_for_manual_semantic_review": [
+    {
+      "form": "v203_triangle_third_side_integer_count",
+      "score": 0.621,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Đếm độ dài nguyên của cạnh thứ ba để tạo thành tam giác",
+        "method": "|a−b|<c<a+b",
+        "grade": 10,
+        "topic": "g10_geom_triangle_inequalities"
+      }
+    },
+    {
+      "form": "v203_infinite_geometric_sum",
+      "score": 0.879,
+      "possible_prior": {
+        "source": "V191_FAMILY_SPECS.json",
+        "name": "Tổng cấp số nhân vô hạn hội tụ",
+        "method": "S=a₁/(1−q)",
+        "grade": 11,
+        "topic": "cap_so_nhan"
+      }
+    },
+    {
+      "form": "v203_at_least_one_independent_success",
+      "score": 0.691,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Xác suất có ít nhất một thành công qua n lần thử Bernoulli",
+        "method": "P(X≥1)=1−(1−p)^n",
+        "grade": 11,
+        "topic": "xac_suat_11"
+      }
+    },
+    {
+      "form": "v203_reflection_point_vertical_axis",
+      "score": 0.566,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Phép đối xứng qua đường thẳng y=x hoán đổi tọa độ",
+        "method": "(x,y)↦(y,x)",
+        "grade": 11,
+        "topic": "g11_geom_transform_reflection"
+      }
+    },
+    {
+      "form": "v203_rotation_volume_line",
+      "score": 0.573,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Thể tích khối tròn xoay từ y=ax trên đoạn [0,b]",
+        "method": "V=π∫₀ᵇ (ax)²dx=πa²b³/3",
+        "grade": 12,
+        "topic": "g12_solid_of_revolution"
+      }
+    },
+    {
+      "form": "v203_point_plane_distance",
+      "score": 0.733,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Bình phương khoảng cách từ điểm đến mặt phẳng bằng công thức pháp tuyến",
+        "method": "d²=(ax₀+by₀+cz₀+D)²/(a²+b²+c²)",
+        "grade": 12,
+        "topic": "g12_geom_point_plane_distance"
+      }
+    }
+  ],
+  "method_independence_certified": 0,
+  "remaining_invalid_topic_rows": 10,
+  "warning": "heuristic similarity is not proof of mathematical independence"
+}

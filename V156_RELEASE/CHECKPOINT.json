@@ -1,0 +1,52 @@
+{
+  "version": "V156",
+  "source_version": "V155",
+  "source_zip": "MATH_WEB_GITHUB_READY_V155_PRIVATE_CHECKPOINT.zip",
+  "source_sha256": "fad703eed8b7e19c1b2a8801e1705dcbba18cf3d56be2b342080499825d280f9",
+  "created_utc": "2026-11-09T04:36:07.211705+00:00",
+  "git_commit": null,
+  "preserved_legacy_databases": 6,
+  "legacy_database_sha256_match": true,
+  "pending_new_methods_from_this_user_turn": 2,
+  "independent_certified_new_types": 0,
+  "pending_new_questions_oracle_verified": 20,
+  "published_new_questions": 0,
+  "prior_v153_pending_methods_restored": 4,
+  "prior_v153_pending_questions_restored": 40,
+  "question_factory_topic_rows": 150,
+  "question_factory_independence_certificates": 0,
+  "final_regression": "279 passed, 6 warnings, 7 subtests passed",
+  "migration_related_tests": "24 passed",
+  "release_package_tests": "4 passed",
+  "original_sqlite_integrity": "6 source DB files preserved exactly; integrity verified by package tool",
+  "workflow": [
+    "ZIP input integrity",
+    "isolated tests",
+    "research answer oracles",
+    "data location audit",
+    "exclude transient WAL/SHM",
+    "private and source-only ZIP packaging"
+  ],
+  "limitations": [
+    "no audited independent new types",
+    "no live user migration validation",
+    "no browser E2E and no mobile/load benchmark",
+    "no GitHub access/push verified",
+    "50-60 minute runtime not measured"
+  ],
+  "next": [
+    "identify live account DB",
+    "expert review candidate uniqueness",
+    "battle/admin E2E",
+    "benchmark and optimize",
+    "grow validated question bank"
+  ],
+  "paths": {
+    "report": "V156_RELEASE/V156_REPORT.md",
+    "checkpoint": "V156_RELEASE/CHECKPOINT.json",
+    "private_zip": "MATH_WEB_GITHUB_READY_V156_PRIVATE_CHECKPOINT.zip",
+    "source_only_zip": "MATH_WEB_GITHUB_READY_V156_GITHUB_SOURCE_ONLY.zip",
+    "bank_research": "V154_RESEARCH",
+    "test_log": "V154_RELEASE/FINAL_COMBINED_REGRESSION.log"
+  }
+}

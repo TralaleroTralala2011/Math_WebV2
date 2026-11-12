@@ -1,0 +1,1507 @@
+{
+  "version": "V203",
+  "order_rule": "fewest bundled questions first; count-only priority, not a measure of certified independent mathematical types",
+  "topic_count": 150,
+  "priority_order": [
+    {
+      "grade": 11,
+      "topic": "ham_so_luong_giac",
+      "topic_name": "Hàm số lượng giác",
+      "bundled_total_questions": 20,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19980,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "tinh_don_dieu",
+      "topic_name": "Tính đơn điệu",
+      "bundled_total_questions": 20,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19980,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_prism_pyramid_sections",
+      "topic_name": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+      "bundled_total_questions": 30,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19970,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "phuong_trinh_luong_giac",
+      "topic_name": "Phương trình lượng giác",
+      "bundled_total_questions": 30,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19970,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "phuong_trinh_luong_giac_day_du",
+      "topic_name": "Phương trình lượng giác",
+      "bundled_total_questions": 33,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19967,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "chung_minh_hinh_hoc_10",
+      "topic_name": "Chứng minh hình học và bài toán tổng hợp",
+      "bundled_total_questions": 39,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19961,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_angles_parallel",
+      "topic_name": "Góc tạo bởi hai đường thẳng và đường cắt",
+      "bundled_total_questions": 40,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19960,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_line_intersections",
+      "topic_name": "Giao điểm và vị trí tương đối của hai đường thẳng",
+      "bundled_total_questions": 40,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19960,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_thales_similarity",
+      "topic_name": "Định lý Thales và tam giác đồng dạng",
+      "bundled_total_questions": 40,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19960,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "ham_so_bac_nhat",
+      "topic_name": "Hàm số bậc nhất",
+      "bundled_total_questions": 40,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19960,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_rotation_homothety",
+      "topic_name": "Phép quay và phép vị tự",
+      "bundled_total_questions": 40,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19960,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_transform_translation",
+      "topic_name": "Phép tịnh tiến và ảnh của hình",
+      "bundled_total_questions": 40,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19960,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "bpt_mu",
+      "topic_name": "Bất phương trình mũ",
+      "bundled_total_questions": 40,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19960,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_vectors_3d",
+      "topic_name": "Vectơ và độ dài trong không gian Oxyz",
+      "bundled_total_questions": 40,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19960,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "hinh_khong_gian",
+      "topic_name": "Quan hệ song song và vuông góc trong không gian",
+      "bundled_total_questions": 42,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19958,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "ham_so_luong_giac_day_du",
+      "topic_name": "Hàm số lượng giác",
+      "bundled_total_questions": 44,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19956,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_three_perpendiculars",
+      "topic_name": "Định lý ba đường vuông góc",
+      "bundled_total_questions": 45,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19955,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "nhan_biet_hinh_khong_gian_11",
+      "topic_name": "Nhận biết hình học không gian",
+      "bundled_total_questions": 46,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19954,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_space_proof",
+      "topic_name": "Chứng minh tổng hợp song song và vuông góc",
+      "bundled_total_questions": 47,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19953,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "day_so_tong_quat",
+      "topic_name": "Dãy số",
+      "bundled_total_questions": 47,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19953,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "duong_thang",
+      "topic_name": "Đường thẳng",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_triangle_congruence",
+      "topic_name": "Các trường hợp bằng nhau của tam giác",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "bai_toan_thuc_te_11",
+      "topic_name": "Bài toán thực tế Toán 11",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "bai_toan_thuc_te_tong_hop_11",
+      "topic_name": "Bài toán thực tế tổng hợp Toán 11",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_parallel_line_plane",
+      "topic_name": "Đường thẳng song song với mặt phẳng",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_perpendicular_line_plane",
+      "topic_name": "Đường thẳng vuông góc với mặt phẳng",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_section_construction",
+      "topic_name": "Dựng thiết diện của hình chóp và lăng trụ",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_section_ratio",
+      "topic_name": "Thiết diện và tỉ số đoạn trong hình không gian",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_skew_lines_distance",
+      "topic_name": "Khoảng cách giữa hai đường thẳng chéo nhau",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "phep_bien_hinh_co_ban_11",
+      "topic_name": "Phép biến hình cơ bản",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "song_song_khong_gian",
+      "topic_name": "Quan hệ song song trong không gian",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "vuong_goc_khong_gian",
+      "topic_name": "Quan hệ vuông góc trong không gian",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "bai_toan_thuc_te_12",
+      "topic_name": "Bài toán thực tế Toán 12",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "duong_thang_oxyz",
+      "topic_name": "Đường thẳng trong Oxyz",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_complex_plane_geometry",
+      "topic_name": "Hình học số phức và quỹ tích",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_line_equation_3d",
+      "topic_name": "Phương trình đường thẳng trong Oxyz",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "tong_hop_thpt",
+      "topic_name": "Bài toán tổng hợp THPT",
+      "bundled_total_questions": 49,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19951,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "nhi_thuc_newton",
+      "topic_name": "Nhị thức Newton",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_circle_angles",
+      "topic_name": "Góc nội tiếp và góc ở tâm nâng cao",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_triangle_area_ratio",
+      "topic_name": "Tỉ số diện tích tam giác",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_radical_equations_advanced",
+      "topic_name": "Phương trình chứa căn thức nâng cao",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "he_bat_phuong_trinh",
+      "topic_name": "Hệ bất phương trình",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "he_thuc_luong",
+      "topic_name": "Hệ thức lượng trong tam giác",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_advanced_trig_equations",
+      "topic_name": "Phương trình lượng giác nâng cao",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_transform_composition",
+      "topic_name": "Hợp thành các phép biến hình",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "ham_so_lien_tuc",
+      "topic_name": "Hàm số liên tục",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "quy_nap_toan_hoc_11",
+      "topic_name": "Quy nạp toán học",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "thong_ke_11",
+      "topic_name": "Thống kê Toán 11",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "cuc_tri",
+      "topic_name": "Cực trị",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_line_plane_intersection",
+      "topic_name": "Giao điểm đường thẳng và mặt phẳng",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "tien_can",
+      "topic_name": "Tiệm cận",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "tiep_tuyen",
+      "topic_name": "Tiếp tuyến",
+      "bundled_total_questions": 50,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19950,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "ham_logarit",
+      "topic_name": "Hàm số logarit",
+      "bundled_total_questions": 51,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19949,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "gia_tri_luong_giac",
+      "topic_name": "Giá trị lượng giác",
+      "bundled_total_questions": 51,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19949,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_dihedral_angles",
+      "topic_name": "Góc giữa đường thẳng và mặt phẳng",
+      "bundled_total_questions": 53,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19947,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_circle_tangent_chord",
+      "topic_name": "Tiếp tuyến và dây cung của đường tròn",
+      "bundled_total_questions": 54,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19946,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_two_planes_angle",
+      "topic_name": "Góc giữa hai mặt phẳng",
+      "bundled_total_questions": 55,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19945,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "thong_ke_12",
+      "topic_name": "Các số đặc trưng đo xu thế và độ phân tán",
+      "bundled_total_questions": 56,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19944,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "ham_mu",
+      "topic_name": "Hàm số mũ",
+      "bundled_total_questions": 58,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19942,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_binomial_advanced",
+      "topic_name": "Nhị thức Newton và hệ số tổ hợp nâng cao",
+      "bundled_total_questions": 58,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19942,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_sequences_advanced",
+      "topic_name": "Dãy số truy hồi và bài toán cực trị",
+      "bundled_total_questions": 58,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19942,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "phep_bien_hinh_11",
+      "topic_name": "Phép biến hình trong mặt phẳng",
+      "bundled_total_questions": 58,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19942,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_skew_line_relation",
+      "topic_name": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+      "bundled_total_questions": 58,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19942,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "tam_giac_tu_giac_10",
+      "topic_name": "Tam giác và tứ giác cơ bản",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "hinh_hoc_khong_gian",
+      "topic_name": "Hình học không gian",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "mat_cau",
+      "topic_name": "Mặt cầu",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "bai_toan_thuc_te_10",
+      "topic_name": "Bài toán thực tế Toán 10",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_coordinate_circle_line",
+      "topic_name": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_locus",
+      "topic_name": "Quỹ tích điểm trong mặt phẳng",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_vector_proofs",
+      "topic_name": "Chứng minh hình học bằng vectơ",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_symmetric_systems",
+      "topic_name": "Hệ phương trình đối xứng và hoán vị",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "he_phuong_trinh",
+      "topic_name": "Hệ phương trình",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "hinh_hoc_10",
+      "topic_name": "Hình học phẳng",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "menh_de_tap_hop",
+      "topic_name": "Mệnh đề và tập hợp",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "toa_do_hinh_hoc_10",
+      "topic_name": "Tọa độ và đường thẳng trong mặt phẳng",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_parallel_planes",
+      "topic_name": "Hai mặt phẳng song song",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_space_lines_planes",
+      "topic_name": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "goc_khoang_cach_11",
+      "topic_name": "Góc và khoảng cách trong không gian",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "thiet_dien_hinh_khong_gian_11",
+      "topic_name": "Thiết diện hình không gian",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "ung_dung_dao_ham_11",
+      "topic_name": "Ứng dụng đạo hàm",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_min_distance_3d",
+      "topic_name": "Cực trị khoảng cách trong không gian tọa độ",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_parameter_geometry",
+      "topic_name": "Bài toán tham số hình học Oxyz",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_integral_optimization",
+      "topic_name": "Tối ưu và cực trị bằng tích phân",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "khao_sat_ham_so",
+      "topic_name": "Khảo sát và vẽ đồ thị hàm số",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "tuong_giao",
+      "topic_name": "Tương giao đồ thị",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "ung_dung_dao_ham",
+      "topic_name": "Ứng dụng đạo hàm",
+      "bundled_total_questions": 59,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19941,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "day_so_truy_hoi_11",
+      "topic_name": "Dãy số truy hồi",
+      "bundled_total_questions": 60,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19940,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "bieu_dien_so_phuc",
+      "topic_name": "Biểu diễn số phức",
+      "bundled_total_questions": 60,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19940,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "bpt_logarit",
+      "topic_name": "Bất phương trình logarit",
+      "bundled_total_questions": 60,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19940,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_plane_equation",
+      "topic_name": "Phương trình mặt phẳng",
+      "bundled_total_questions": 60,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19940,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_sphere_equation",
+      "topic_name": "Phương trình mặt cầu và tâm bán kính",
+      "bundled_total_questions": 60,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19940,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "pt_so_phuc",
+      "topic_name": "Phương trình số phức",
+      "bundled_total_questions": 60,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19940,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_triangle_inequalities",
+      "topic_name": "Bất đẳng thức và cực trị trong tam giác",
+      "bundled_total_questions": 60,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19940,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_geom_transform_reflection",
+      "topic_name": "Phép đối xứng trục",
+      "bundled_total_questions": 60,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19940,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_sphere_plane_intersection",
+      "topic_name": "Giao tuyến mặt cầu và mặt phẳng",
+      "bundled_total_questions": 60,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19940,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_sphere_tangent_plane",
+      "topic_name": "Mặt phẳng tiếp xúc với mặt cầu",
+      "bundled_total_questions": 60,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19940,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "hinh_khoi_va_the_tich_co_ban_12",
+      "topic_name": "Hình khối và thể tích cơ bản",
+      "bundled_total_questions": 60,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19940,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "day_so",
+      "topic_name": "Dãy số",
+      "bundled_total_questions": 61,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19939,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "he_thuc_luong_van_dung_10",
+      "topic_name": "Hệ thức lượng trong tam giác",
+      "bundled_total_questions": 64,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19936,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_solid_of_revolution",
+      "topic_name": "Thể tích khối tròn xoay và mô hình thực tế",
+      "bundled_total_questions": 64,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19936,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "duong_tron",
+      "topic_name": "Đường tròn",
+      "bundled_total_questions": 68,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19932,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "g11_conditional_probability_models",
+      "topic_name": "Mô hình xác suất có điều kiện",
+      "bundled_total_questions": 68,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19932,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "menh_de",
+      "topic_name": "Mệnh đề",
+      "bundled_total_questions": 69,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19931,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_coordinate_distance_midpoint",
+      "topic_name": "Trung điểm và khoảng cách trong tọa độ phẳng",
+      "bundled_total_questions": 69,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19931,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_3d_optimization",
+      "topic_name": "Bài toán tối ưu hình học không gian",
+      "bundled_total_questions": 69,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19931,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "goc_khoang_cach_oxyz",
+      "topic_name": "Góc và khoảng cách Oxyz",
+      "bundled_total_questions": 69,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19931,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "gtln_gtnn",
+      "topic_name": "Giá trị lớn nhất và nhỏ nhất",
+      "bundled_total_questions": 69,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19931,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "hinh_hoc_oxyz_van_dung_12",
+      "topic_name": "Vận dụng tọa độ Oxyz",
+      "bundled_total_questions": 69,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19931,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "the_tich_khong_gian",
+      "topic_name": "Thể tích hình học không gian",
+      "bundled_total_questions": 69,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19931,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "hinh_hoc_co_ban_10",
+      "topic_name": "Hình học cơ bản: góc, cạnh và diện tích",
+      "bundled_total_questions": 70,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19930,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "ham_so",
+      "topic_name": "Hàm số",
+      "bundled_total_questions": 70,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19930,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "xac_suat",
+      "topic_name": "Xác suất",
+      "bundled_total_questions": 70,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19930,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_line_plane_angle",
+      "topic_name": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+      "bundled_total_questions": 70,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19930,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_advanced_inequalities",
+      "topic_name": "Bất đẳng thức đại số và cực trị nâng cao",
+      "bundled_total_questions": 70,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19930,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_circle_chords_arcs",
+      "topic_name": "Dây cung, cung và khoảng cách đến tâm",
+      "bundled_total_questions": 70,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19930,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_solid_surface_area",
+      "topic_name": "Diện tích xung quanh và toàn phần hình khối",
+      "bundled_total_questions": 70,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19930,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "duong_tron_co_ban_10",
+      "topic_name": "Đường tròn và các góc cơ bản",
+      "bundled_total_questions": 70,
+      "new_questions_v198_v203": 30,
+      "questions_missing_to_20000_count_only": 19930,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_quadrilaterals_properties",
+      "topic_name": "Tính chất hình bình hành và hình thoi",
+      "bundled_total_questions": 70,
+      "new_questions_v198_v203": 30,
+      "questions_missing_to_20000_count_only": 19930,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "he_thuc_luong_tam_giac",
+      "topic_name": "Hệ thức lượng trong tam giác",
+      "bundled_total_questions": 78,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19922,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "g12_geom_point_plane_distance",
+      "topic_name": "Khoảng cách từ điểm đến mặt phẳng",
+      "bundled_total_questions": 79,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19921,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "dao_ham_quy_tac",
+      "topic_name": "Quy tắc đạo hàm",
+      "bundled_total_questions": 79,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19921,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_geom_special_lines",
+      "topic_name": "Đường trung tuyến, phân giác và đường cao",
+      "bundled_total_questions": 80,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19920,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "ung_dung_tich_phan",
+      "topic_name": "Ứng dụng tích phân",
+      "bundled_total_questions": 80,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19920,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "gioi_han",
+      "topic_name": "Giới hạn",
+      "bundled_total_questions": 85,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19915,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "quy_tac_dem",
+      "topic_name": "Quy tắc đếm",
+      "bundled_total_questions": 87,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19913,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "xac_suat_12",
+      "topic_name": "Xác suất và biến ngẫu nhiên",
+      "bundled_total_questions": 89,
+      "new_questions_v198_v203": 30,
+      "questions_missing_to_20000_count_only": 19911,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "gioi_han_ham_so",
+      "topic_name": "Giới hạn hàm số",
+      "bundled_total_questions": 90,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19910,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "g10_combinatorics_olympiad",
+      "topic_name": "Tổ hợp và nguyên lý Dirichlet nâng cao",
+      "bundled_total_questions": 90,
+      "new_questions_v198_v203": 40,
+      "questions_missing_to_20000_count_only": 19910,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "cong_thuc_luong_giac",
+      "topic_name": "Công thức lượng giác",
+      "bundled_total_questions": 98,
+      "new_questions_v198_v203": 30,
+      "questions_missing_to_20000_count_only": 19902,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "mat_phang_oxyz",
+      "topic_name": "Mặt phẳng trong Oxyz",
+      "bundled_total_questions": 99,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19901,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "phuong_trinh_he",
+      "topic_name": "Phương trình và hệ phương trình",
+      "bundled_total_questions": 110,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19890,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "pt_mu",
+      "topic_name": "Phương trình mũ",
+      "bundled_total_questions": 110,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19890,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "tap_hop",
+      "topic_name": "Tập hợp và các phép toán",
+      "bundled_total_questions": 110,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19890,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "xac_suat_11",
+      "topic_name": "Xác suất",
+      "bundled_total_questions": 116,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19884,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "pt_logarit",
+      "topic_name": "Phương trình logarit",
+      "bundled_total_questions": 125,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19875,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "toa_do_phang",
+      "topic_name": "Tọa độ trong mặt phẳng",
+      "bundled_total_questions": 130,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19870,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "bat_phuong_trinh",
+      "topic_name": "Bất phương trình và hệ bất phương trình",
+      "bundled_total_questions": 130,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19870,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "to_hop_xac_suat_nang_cao_11",
+      "topic_name": "Tổ hợp và xác suất nâng cao",
+      "bundled_total_questions": 130,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19870,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "vector",
+      "topic_name": "Vectơ",
+      "bundled_total_questions": 150,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19850,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "thong_ke",
+      "topic_name": "Thống kê",
+      "bundled_total_questions": 180,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19820,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "bien_co_doc_lap_11",
+      "topic_name": "Biến cố độc lập và xác suất có điều kiện",
+      "bundled_total_questions": 180,
+      "new_questions_v198_v203": 60,
+      "questions_missing_to_20000_count_only": 19820,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "toa_do_khong_gian",
+      "topic_name": "Tọa độ trong không gian",
+      "bundled_total_questions": 190,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19810,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "ham_so_bac_hai",
+      "topic_name": "Hàm số bậc hai và parabol",
+      "bundled_total_questions": 190,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19810,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "so_phuc",
+      "topic_name": "Số phức",
+      "bundled_total_questions": 200,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19800,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "hoan_vi_chinh_hop_to_hop",
+      "topic_name": "Hoán vị, chỉnh hợp, tổ hợp",
+      "bundled_total_questions": 220,
+      "new_questions_v198_v203": 20,
+      "questions_missing_to_20000_count_only": 19780,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "cap_so_cong",
+      "topic_name": "Cấp số cộng",
+      "bundled_total_questions": 240,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19760,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 10,
+      "topic": "phuong_trinh",
+      "topic_name": "Phương trình",
+      "bundled_total_questions": 240,
+      "new_questions_v198_v203": 10,
+      "questions_missing_to_20000_count_only": 19760,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 12,
+      "topic": "nguyen_ham_tich_phan",
+      "topic_name": "Nguyên hàm và tích phân",
+      "bundled_total_questions": 250,
+      "new_questions_v198_v203": 40,
+      "questions_missing_to_20000_count_only": 19750,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "dao_ham",
+      "topic_name": "Đạo hàm",
+      "bundled_total_questions": 260,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19740,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    },
+    {
+      "grade": 11,
+      "topic": "cap_so_nhan",
+      "topic_name": "Cấp số nhân",
+      "bundled_total_questions": 330,
+      "new_questions_v198_v203": 0,
+      "questions_missing_to_20000_count_only": 19670,
+      "certified_distinct_type_count": "unverified",
+      "certified_types_remaining": "unverified"
+    }
+  ]
+}

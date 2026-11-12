@@ -1,0 +1,98 @@
+{
+  "verified_new_count": 230,
+  "duplicate_normalized_question_count": 0,
+  "family_candidates": 23,
+  "flagged_for_manual_semantic_review": [
+    {
+      "form": "v200_angle_bisector_length_sq",
+      "score": 0.725,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Tính bình phương độ dài đường phân giác trong bằng hệ thức Stewart",
+        "method": "l_a²=bc[1−a²/(b+c)²]",
+        "grade": 10,
+        "topic": "g10_geom_special_lines"
+      }
+    },
+    {
+      "form": "v200_vector_internal_section",
+      "score": 0.741,
+      "possible_prior": {
+        "source": "V191_FAMILY_SPECS.json",
+        "name": "Tọa độ điểm chia đoạn theo tỉ số cho trước",
+        "method": "M=(nA+mB)/(m+n)",
+        "grade": 10,
+        "topic": "toa_do_phang"
+      }
+    },
+    {
+      "form": "v200_arc_length_over_pi",
+      "score": 0.578,
+      "possible_prior": {
+        "source": "V199_FAMILY_SPECS.json",
+        "name": "Diện tích quạt tròn chia π",
+        "method": "S/π=R²θ/360°",
+        "grade": 10,
+        "topic": "duong_tron_co_ban_10"
+      }
+    },
+    {
+      "form": "v200_cos_addition_rational",
+      "score": 0.577,
+      "possible_prior": {
+        "source": "V191_FAMILY_SPECS.json",
+        "name": "Công thức cos(α+β) từ các tỉ số lượng giác",
+        "method": "cos(α+β)=cosα cosβ−sinα sinβ",
+        "grade": 11,
+        "topic": "cong_thuc_luong_giac"
+      }
+    },
+    {
+      "form": "v200_poisson_binomial_exact_one",
+      "score": 0.673,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Xác suất giao hai biến cố độc lập",
+        "method": "P(A∩B)=P(A)P(B)",
+        "grade": 11,
+        "topic": "bien_co_doc_lap_11"
+      }
+    },
+    {
+      "form": "v200_complex_division_realpart",
+      "score": 0.65,
+      "possible_prior": {
+        "source": "V191_FAMILY_SPECS.json",
+        "name": "Phần thực nghịch đảo số phức",
+        "method": "Re[1/(a+bi)]=a/(a²+b²)",
+        "grade": 12,
+        "topic": "so_phuc"
+      }
+    },
+    {
+      "form": "v200_cone_frustum_volume_over_pi",
+      "score": 0.724,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Thể tích hình nón cụt bán kính hai đáy R,r",
+        "method": "V=πh(R²+Rr+r²)/3",
+        "grade": 12,
+        "topic": "hinh_khoi_va_the_tich_co_ban_12"
+      }
+    },
+    {
+      "form": "v200_cubic_bounded_maximum",
+      "score": 0.699,
+      "possible_prior": {
+        "source": "V192_FAMILY_SPECS.json",
+        "name": "Giá trị lớn nhất của đa thức bậc ba trên đoạn kín qua đạo hàm",
+        "method": "So sánh f tại hai đầu mút và các điểm tới hạn nội bộ",
+        "grade": 12,
+        "topic": "gtln_gtnn"
+      }
+    }
+  ],
+  "method_independence_certified": 0,
+  "remaining_invalid_topic_rows": 10,
+  "warning": "heuristic similarity is not proof of mathematical independence"
+}

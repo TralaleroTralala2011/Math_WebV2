@@ -21,3 +21,14 @@
 #mathweb-quicknav a:hover{transform:translateX(-6px) scale(1.025)!important}
 @media(max-width:540px){#mathweb-quicknav{right:9px!important;bottom:12px!important;gap:8px!important}#mathweb-quicknav a{min-width:137px;min-height:44px!important;padding:6px 10px 6px 6px!important;font-size:12px!important}#mathweb-quicknav .mw-quick-icon{width:30px;height:30px;font-size:17px}}
 @media(prefers-reduced-motion:reduce){#mathweb-quicknav a{animation:none!important;transition:none!important}}
+
+/* Responsive launcher: compact when not in use, all 3 destinations preserved. */
+#mathweb-quicknav .mw-quick-links{display:flex;flex-direction:column;gap:9px;align-items:flex-end;pointer-events:none}
+#mathweb-quicknav .mw-quick-toggle{display:none;pointer-events:auto;border:1px solid #a5d9ff;background:#1559ac;color:white;border-radius:999px;box-shadow:0 8px 24px #08162d75;min-height:44px;padding:9px 15px;font:700 13px/1.2 system-ui,sans-serif;cursor:pointer}
+#mathweb-quicknav .mw-quick-toggle:focus-visible{outline:3px solid #fbbf24;outline-offset:2px}
+@media(max-width:600px){
+ #mathweb-quicknav .mw-quick-toggle{display:block}
+ #mathweb-quicknav .mw-quick-links{display:none!important}
+ #mathweb-quicknav.mw-quick-open .mw-quick-links{display:flex!important}
+ #mathweb-quicknav .mw-quick-links a{min-width:145px}
+}

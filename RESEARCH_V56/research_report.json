@@ -1,0 +1,13 @@
+{
+  "version": "V56_RESEARCH",
+  "basis": "V55",
+  "candidate_method_families": 48,
+  "new_question_types_verified": 0,
+  "new_questions_created": 0,
+  "sources": [
+    "https://lophocnguvan.com/wp-content/uploads/Giao-duc-pho-thong-2018-Mon-Toan.pdf",
+    "https://en.khanacademy.org/mission/math",
+    "https://openstax.org/k12/math"
+  ],
+  "caveat": "Candidate method families are research taxonomy, not verified unique forms. Existing V55 bank preserved."
+}

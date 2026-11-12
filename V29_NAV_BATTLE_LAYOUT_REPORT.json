@@ -1,0 +1,12 @@
+{
+  "base": "MATH_WEB_V28_CLASSIC_V28_UI_RESTORED_B54.zip",
+  "changes": {
+    "MATH_WEB_GITHUB_READY/battle.html": "append targeted stylesheet link",
+    "MATH_WEB_GITHUB_READY/chat.html": "append targeted stylesheet link"
+  },
+  "new_css": "css/v29-nav-battle-layout.css",
+  "unchanged": "Backend, databases, Battle JS, Chat JS and all other code",
+  "checks": {
+    "unchanged_non_html_assets": true
+  }
+}

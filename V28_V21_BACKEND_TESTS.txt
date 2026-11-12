@@ -1,0 +1,16 @@
+.........................F                                               [100%]
+=================================== FAILURES ===================================
+_________________ test_updated_design_loaded_on_student_pages __________________
+
+    def test_updated_design_loaded_on_student_pages():
+        for name in ('index.html','learn.html','learning-path.html','battle.html','practice.html','chat.html','account.html'):
+            markup=(ROOT/name).read_text(encoding='utf-8')
+>           assert 'neon-v27-usability.css' in markup, name
+E           AssertionError: index.html
+E           assert 'neon-v27-usability.css' in '<!DOCTYPE html>\n<html lang="vi">\n\n<head>\n    <meta charset="UTF-8">\n    <meta\n        name="viewport"\n        ...uy · Giáo viên hướng dẫn: GV Việt Hòa</footer><script src="js/quick-navigation.js" defer></script>\n</body>\n\n</html>'
+
+tests/test_neon_v27_usability.py:30: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_neon_v27_usability.py::test_updated_design_loaded_on_student_pages - AssertionError: index.html
+assert 'neon-v27-usability.css' in '<!DOCTYPE html>\n<html lang="vi">\n\n<head>\n    <meta charset="UTF-8">\n    <meta\n        name="viewport"\n        ...uy · Giáo viên hướng dẫn: GV Việt Hòa</footer><script src="js/quick-navigation.js" defer></script>\n</body>\n\n</html>'
+1 failed, 25 passed in 14.15s

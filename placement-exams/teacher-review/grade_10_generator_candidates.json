@@ -1,0 +1,281 @@
+{
+  "grade": 10,
+  "status": "CANDIDATE_NOT_IN_OFFICIAL_EXAM",
+  "question_count": 20,
+  "form_count": 2,
+  "forms": [
+    {
+      "grade": 10,
+      "topic_id": "ham_so_bac_hai",
+      "title": "Tính giá trị hàm số bậc hai tại một điểm",
+      "concept": "Giá trị f(x0) của đa thức bậc hai",
+      "method": "Thay trực tiếp hoành độ x0 vào ax²+bx+c và tính đúng thứ tự phép toán",
+      "conditions": "a khác 0, hệ số và x0 nguyên",
+      "distinguishing": "Tính giá trị tại một điểm, không tìm đỉnh hay nghiệm phương trình",
+      "questions": [
+        {
+          "question": "Cho f(x)=1x²+(2)x+(3). Tính f(1).",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "6",
+            "7",
+            "4",
+            "9"
+          ],
+          "correct_index": 0,
+          "answer": "6",
+          "explanation": "Thay x=1 vào biểu thức: f(1)=1×(1)²+(2)×(1)+(3)=6."
+        },
+        {
+          "question": "Cho f(x)=2x²+(1)x+(-1). Tính f(2).",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "10",
+            "7",
+            "12",
+            "9"
+          ],
+          "correct_index": 3,
+          "answer": "9",
+          "explanation": "Thay x=2 vào biểu thức: f(2)=2×(2)²+(1)×(2)+(-1)=9."
+        },
+        {
+          "question": "Cho f(x)=-1x²+(3)x+(2). Tính f(1).",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "2",
+            "7",
+            "4",
+            "5"
+          ],
+          "correct_index": 2,
+          "answer": "4",
+          "explanation": "Thay x=1 vào biểu thức: f(1)=-1×(1)²+(3)×(1)+(2)=4."
+        },
+        {
+          "question": "Cho f(x)=1x²+(-2)x+(4). Tính f(3).",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "10",
+            "7",
+            "8",
+            "5"
+          ],
+          "correct_index": 1,
+          "answer": "7",
+          "explanation": "Thay x=3 vào biểu thức: f(3)=1×(3)²+(-2)×(3)+(4)=7."
+        },
+        {
+          "question": "Cho f(x)=3x²+(2)x+(-5). Tính f(-2).",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "3",
+            "4",
+            "1",
+            "6"
+          ],
+          "correct_index": 0,
+          "answer": "3",
+          "explanation": "Thay x=-2 vào biểu thức: f(-2)=3×(-2)²+(2)×(-2)+(-5)=3."
+        },
+        {
+          "question": "Cho f(x)=-2x²+(3)x+(1). Tính f(3).",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "-7",
+            "-10",
+            "-5",
+            "-8"
+          ],
+          "correct_index": 3,
+          "answer": "-8",
+          "explanation": "Thay x=3 vào biểu thức: f(3)=-2×(3)²+(3)×(3)+(1)=-8."
+        },
+        {
+          "question": "Cho f(x)=2x²+(-4)x+(6). Tính f(-3).",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "34",
+            "39",
+            "36",
+            "37"
+          ],
+          "correct_index": 2,
+          "answer": "36",
+          "explanation": "Thay x=-3 vào biểu thức: f(-3)=2×(-3)²+(-4)×(-3)+(6)=36."
+        },
+        {
+          "question": "Cho f(x)=4x²+(-3)x+(5). Tính f(4).",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "57",
+          "explanation": "Thay x=4 vào biểu thức: f(4)=4×(4)²+(-3)×(4)+(5)=57."
+        },
+        {
+          "question": "Cho f(x)=-3x²+(5)x+(-7). Tính f(-4).",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "-75",
+          "explanation": "Thay x=-4 vào biểu thức: f(-4)=-3×(-4)²+(5)×(-4)+(-7)=-75."
+        },
+        {
+          "question": "Cho f(x)=5x²+(-6)x+(8). Tính f(5). Khẳng định đáp án là 104. Đúng hay sai?",
+          "question_type": "true_false",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "Sai",
+          "explanation": "Thay x=5 vào biểu thức: f(5)=5×(5)²+(-6)×(5)+(8)=103. Khẳng định là sai; kết quả đúng phải là 103."
+        }
+      ]
+    },
+    {
+      "grade": 10,
+      "topic_id": "ham_so_bac_hai",
+      "title": "Xác định số nghiệm thực bằng dấu của biệt thức",
+      "concept": "Số nghiệm thực phân biệt của phương trình bậc hai",
+      "method": "Tính biệt thức Δ=b²−4ac và phân biệt các trường hợp Δ âm, bằng không, dương",
+      "conditions": "Phương trình ax²+bx+c=0, a khác 0",
+      "distinguishing": "Phân loại số nghiệm thực, khác việc tính f(x) hay tọa độ đỉnh",
+      "questions": [
+        {
+          "question": "Phương trình 1x²+(0)x+(-4)=0 có bao nhiêu nghiệm thực phân biệt?",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "2",
+            "0",
+            "1",
+            "Vô số"
+          ],
+          "correct_index": 0,
+          "answer": "2",
+          "explanation": "Vì a=1 khác 0, biệt thức Δ=b²−4ac=(0)²−4×(1)×(-4)=16. Suy ra phương trình có 2 nghiệm thực phân biệt."
+        },
+        {
+          "question": "Phương trình 1x²+(2)x+(1)=0 có bao nhiêu nghiệm thực phân biệt?",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "0",
+            "2",
+            "Vô số",
+            "1"
+          ],
+          "correct_index": 3,
+          "answer": "1",
+          "explanation": "Vì a=1 khác 0, biệt thức Δ=b²−4ac=(2)²−4×(1)×(1)=0. Suy ra phương trình có 1 nghiệm thực phân biệt."
+        },
+        {
+          "question": "Phương trình 1x²+(0)x+(4)=0 có bao nhiêu nghiệm thực phân biệt?",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "2",
+            "Vô số",
+            "0",
+            "1"
+          ],
+          "correct_index": 2,
+          "answer": "0",
+          "explanation": "Vì a=1 khác 0, biệt thức Δ=b²−4ac=(0)²−4×(1)×(4)=-16. Suy ra phương trình có 0 nghiệm thực phân biệt."
+        },
+        {
+          "question": "Phương trình 2x²+(0)x+(-8)=0 có bao nhiêu nghiệm thực phân biệt?",
+          "question_type": "multiple_choice",
+          "difficulty": "nền tảng",
+          "choices": [
+            "Vô số",
+            "2",
+            "0",
+            "1"
+          ],
+          "correct_index": 1,
+          "answer": "2",
+          "explanation": "Vì a=2 khác 0, biệt thức Δ=b²−4ac=(0)²−4×(2)×(-8)=64. Suy ra phương trình có 2 nghiệm thực phân biệt."
+        },
+        {
+          "question": "Phương trình 2x²+(4)x+(2)=0 có bao nhiêu nghiệm thực phân biệt?",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "1",
+            "0",
+            "2",
+            "Vô số"
+          ],
+          "correct_index": 0,
+          "answer": "1",
+          "explanation": "Vì a=2 khác 0, biệt thức Δ=b²−4ac=(4)²−4×(2)×(2)=0. Suy ra phương trình có 1 nghiệm thực phân biệt."
+        },
+        {
+          "question": "Phương trình -1x²+(2)x+(-3)=0 có bao nhiêu nghiệm thực phân biệt?",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "1",
+            "2",
+            "Vô số",
+            "0"
+          ],
+          "correct_index": 3,
+          "answer": "0",
+          "explanation": "Vì a=-1 khác 0, biệt thức Δ=b²−4ac=(2)²−4×(-1)×(-3)=-8. Suy ra phương trình có 0 nghiệm thực phân biệt."
+        },
+        {
+          "question": "Phương trình 3x²+(-6)x+(2)=0 có bao nhiêu nghiệm thực phân biệt?",
+          "question_type": "multiple_choice",
+          "difficulty": "trung cấp",
+          "choices": [
+            "1",
+            "Vô số",
+            "2",
+            "0"
+          ],
+          "correct_index": 2,
+          "answer": "2",
+          "explanation": "Vì a=3 khác 0, biệt thức Δ=b²−4ac=(-6)²−4×(3)×(2)=12. Suy ra phương trình có 2 nghiệm thực phân biệt."
+        },
+        {
+          "question": "Phương trình 2x²+(-8)x+(8)=0 có bao nhiêu nghiệm thực phân biệt?",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "1",
+          "explanation": "Vì a=2 khác 0, biệt thức Δ=b²−4ac=(-8)²−4×(2)×(8)=0. Suy ra phương trình có 1 nghiệm thực phân biệt."
+        },
+        {
+          "question": "Phương trình 3x²+(2)x+(5)=0 có bao nhiêu nghiệm thực phân biệt?",
+          "question_type": "written",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "0",
+          "explanation": "Vì a=3 khác 0, biệt thức Δ=b²−4ac=(2)²−4×(3)×(5)=-56. Suy ra phương trình có 0 nghiệm thực phân biệt."
+        },
+        {
+          "question": "Phương trình -2x²+(3)x+(4)=0 có bao nhiêu nghiệm thực phân biệt? Khẳng định đáp án là 0. Đúng hay sai?",
+          "question_type": "true_false",
+          "difficulty": "nâng cao",
+          "choices": [],
+          "correct_index": null,
+          "answer": "Sai",
+          "explanation": "Vì a=-2 khác 0, biệt thức Δ=b²−4ac=(3)²−4×(-2)×(4)=41. Suy ra phương trình có 2 nghiệm thực phân biệt. Khẳng định là sai; kết quả đúng phải là 2."
+        }
+      ]
+    }
+  ],
+  "limitations": "Chỉ xác minh tính toán nội bộ của bộ sinh; giáo viên phải kiểm tra nội dung, độ khó và đáp án độc lập trước khi phê duyệt."
+}

@@ -1,0 +1,749 @@
+{
+  "version": "V41",
+  "previous_question_count": 12320,
+  "new_question_count": 1180,
+  "total_question_count": 13500,
+  "previous_form_id_count": 1231,
+  "new_form_id_count": 118,
+  "total_form_id_count": 1349,
+  "new_by_grade": {
+    "10": {
+      "forms": 40,
+      "questions": 400
+    },
+    "11": {
+      "forms": 28,
+      "questions": 280
+    },
+    "12": {
+      "forms": 50,
+      "questions": 500
+    }
+  },
+  "new_forms": [
+    {
+      "form_id": "v41_viete_00",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "signature": "V41 | viete | distinct requested mathematical operation 0"
+    },
+    {
+      "form_id": "v41_viete_01",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "signature": "V41 | viete | distinct requested mathematical operation 1"
+    },
+    {
+      "form_id": "v41_viete_02",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "signature": "V41 | viete | distinct requested mathematical operation 2"
+    },
+    {
+      "form_id": "v41_viete_03",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "signature": "V41 | viete | distinct requested mathematical operation 3"
+    },
+    {
+      "form_id": "v41_viete_04",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "signature": "V41 | viete | distinct requested mathematical operation 4"
+    },
+    {
+      "form_id": "v41_viete_05",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "signature": "V41 | viete | distinct requested mathematical operation 5"
+    },
+    {
+      "form_id": "v41_viete_06",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "signature": "V41 | viete | distinct requested mathematical operation 6"
+    },
+    {
+      "form_id": "v41_viete_07",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "signature": "V41 | viete | distinct requested mathematical operation 7"
+    },
+    {
+      "form_id": "v41_viete_08",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "signature": "V41 | viete | distinct requested mathematical operation 8"
+    },
+    {
+      "form_id": "v41_viete_09",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "signature": "V41 | viete | distinct requested mathematical operation 9"
+    },
+    {
+      "form_id": "v41_circle_00",
+      "grade": 10,
+      "topic": "Đường tròn",
+      "signature": "V41 | circle | distinct requested mathematical operation 0"
+    },
+    {
+      "form_id": "v41_circle_01",
+      "grade": 10,
+      "topic": "Đường tròn",
+      "signature": "V41 | circle | distinct requested mathematical operation 1"
+    },
+    {
+      "form_id": "v41_circle_02",
+      "grade": 10,
+      "topic": "Đường tròn",
+      "signature": "V41 | circle | distinct requested mathematical operation 2"
+    },
+    {
+      "form_id": "v41_circle_03",
+      "grade": 10,
+      "topic": "Đường tròn",
+      "signature": "V41 | circle | distinct requested mathematical operation 3"
+    },
+    {
+      "form_id": "v41_circle_04",
+      "grade": 10,
+      "topic": "Đường tròn",
+      "signature": "V41 | circle | distinct requested mathematical operation 4"
+    },
+    {
+      "form_id": "v41_circle_05",
+      "grade": 10,
+      "topic": "Đường tròn",
+      "signature": "V41 | circle | distinct requested mathematical operation 5"
+    },
+    {
+      "form_id": "v41_circle_06",
+      "grade": 10,
+      "topic": "Đường tròn",
+      "signature": "V41 | circle | distinct requested mathematical operation 6"
+    },
+    {
+      "form_id": "v41_circle_07",
+      "grade": 10,
+      "topic": "Đường tròn",
+      "signature": "V41 | circle | distinct requested mathematical operation 7"
+    },
+    {
+      "form_id": "v41_circle_08",
+      "grade": 10,
+      "topic": "Đường tròn",
+      "signature": "V41 | circle | distinct requested mathematical operation 8"
+    },
+    {
+      "form_id": "v41_circle_09",
+      "grade": 10,
+      "topic": "Đường tròn",
+      "signature": "V41 | circle | distinct requested mathematical operation 9"
+    },
+    {
+      "form_id": "v41_vector_00",
+      "grade": 10,
+      "topic": "Vectơ",
+      "signature": "V41 | vector | distinct requested mathematical operation 0"
+    },
+    {
+      "form_id": "v41_vector_01",
+      "grade": 10,
+      "topic": "Vectơ",
+      "signature": "V41 | vector | distinct requested mathematical operation 1"
+    },
+    {
+      "form_id": "v41_vector_02",
+      "grade": 10,
+      "topic": "Vectơ",
+      "signature": "V41 | vector | distinct requested mathematical operation 2"
+    },
+    {
+      "form_id": "v41_vector_03",
+      "grade": 10,
+      "topic": "Vectơ",
+      "signature": "V41 | vector | distinct requested mathematical operation 3"
+    },
+    {
+      "form_id": "v41_vector_04",
+      "grade": 10,
+      "topic": "Vectơ",
+      "signature": "V41 | vector | distinct requested mathematical operation 4"
+    },
+    {
+      "form_id": "v41_vector_05",
+      "grade": 10,
+      "topic": "Vectơ",
+      "signature": "V41 | vector | distinct requested mathematical operation 5"
+    },
+    {
+      "form_id": "v41_vector_06",
+      "grade": 10,
+      "topic": "Vectơ",
+      "signature": "V41 | vector | distinct requested mathematical operation 6"
+    },
+    {
+      "form_id": "v41_vector_07",
+      "grade": 10,
+      "topic": "Vectơ",
+      "signature": "V41 | vector | distinct requested mathematical operation 7"
+    },
+    {
+      "form_id": "v41_vector_08",
+      "grade": 10,
+      "topic": "Vectơ",
+      "signature": "V41 | vector | distinct requested mathematical operation 8"
+    },
+    {
+      "form_id": "v41_vector_09",
+      "grade": 10,
+      "topic": "Vectơ",
+      "signature": "V41 | vector | distinct requested mathematical operation 9"
+    },
+    {
+      "form_id": "v41_ap_00",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "V41 | ap | distinct requested mathematical operation 0"
+    },
+    {
+      "form_id": "v41_ap_01",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "V41 | ap | distinct requested mathematical operation 1"
+    },
+    {
+      "form_id": "v41_ap_02",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "V41 | ap | distinct requested mathematical operation 2"
+    },
+    {
+      "form_id": "v41_ap_03",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "V41 | ap | distinct requested mathematical operation 3"
+    },
+    {
+      "form_id": "v41_ap_04",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "V41 | ap | distinct requested mathematical operation 4"
+    },
+    {
+      "form_id": "v41_ap_05",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "V41 | ap | distinct requested mathematical operation 5"
+    },
+    {
+      "form_id": "v41_ap_06",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "V41 | ap | distinct requested mathematical operation 6"
+    },
+    {
+      "form_id": "v41_ap_07",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "V41 | ap | distinct requested mathematical operation 7"
+    },
+    {
+      "form_id": "v41_ap_08",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "V41 | ap | distinct requested mathematical operation 8"
+    },
+    {
+      "form_id": "v41_ap_09",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "signature": "V41 | ap | distinct requested mathematical operation 9"
+    },
+    {
+      "form_id": "v41_gp_02",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "V41 | gp | distinct requested mathematical operation 2"
+    },
+    {
+      "form_id": "v41_gp_03",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "V41 | gp | distinct requested mathematical operation 3"
+    },
+    {
+      "form_id": "v41_gp_04",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "V41 | gp | distinct requested mathematical operation 4"
+    },
+    {
+      "form_id": "v41_gp_05",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "V41 | gp | distinct requested mathematical operation 5"
+    },
+    {
+      "form_id": "v41_gp_06",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "V41 | gp | distinct requested mathematical operation 6"
+    },
+    {
+      "form_id": "v41_gp_07",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "V41 | gp | distinct requested mathematical operation 7"
+    },
+    {
+      "form_id": "v41_gp_08",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "V41 | gp | distinct requested mathematical operation 8"
+    },
+    {
+      "form_id": "v41_gp_09",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "signature": "V41 | gp | distinct requested mathematical operation 9"
+    },
+    {
+      "form_id": "v41_deriv_00",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "V41 | deriv | distinct requested mathematical operation 0"
+    },
+    {
+      "form_id": "v41_deriv_01",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "V41 | deriv | distinct requested mathematical operation 1"
+    },
+    {
+      "form_id": "v41_deriv_02",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "V41 | deriv | distinct requested mathematical operation 2"
+    },
+    {
+      "form_id": "v41_deriv_03",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "V41 | deriv | distinct requested mathematical operation 3"
+    },
+    {
+      "form_id": "v41_deriv_04",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "V41 | deriv | distinct requested mathematical operation 4"
+    },
+    {
+      "form_id": "v41_deriv_05",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "V41 | deriv | distinct requested mathematical operation 5"
+    },
+    {
+      "form_id": "v41_deriv_06",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "V41 | deriv | distinct requested mathematical operation 6"
+    },
+    {
+      "form_id": "v41_deriv_07",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "V41 | deriv | distinct requested mathematical operation 7"
+    },
+    {
+      "form_id": "v41_deriv_08",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "V41 | deriv | distinct requested mathematical operation 8"
+    },
+    {
+      "form_id": "v41_deriv_09",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "signature": "V41 | deriv | distinct requested mathematical operation 9"
+    },
+    {
+      "form_id": "v41_integral_00",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "V41 | integral | distinct requested mathematical operation 0"
+    },
+    {
+      "form_id": "v41_integral_01",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "V41 | integral | distinct requested mathematical operation 1"
+    },
+    {
+      "form_id": "v41_integral_02",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "V41 | integral | distinct requested mathematical operation 2"
+    },
+    {
+      "form_id": "v41_integral_03",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "V41 | integral | distinct requested mathematical operation 3"
+    },
+    {
+      "form_id": "v41_integral_04",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "V41 | integral | distinct requested mathematical operation 4"
+    },
+    {
+      "form_id": "v41_integral_05",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "V41 | integral | distinct requested mathematical operation 5"
+    },
+    {
+      "form_id": "v41_integral_06",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "V41 | integral | distinct requested mathematical operation 6"
+    },
+    {
+      "form_id": "v41_integral_07",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "V41 | integral | distinct requested mathematical operation 7"
+    },
+    {
+      "form_id": "v41_integral_08",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "V41 | integral | distinct requested mathematical operation 8"
+    },
+    {
+      "form_id": "v41_integral_09",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "signature": "V41 | integral | distinct requested mathematical operation 9"
+    },
+    {
+      "form_id": "v41_complex_00",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "V41 | complex | distinct requested mathematical operation 0"
+    },
+    {
+      "form_id": "v41_complex_01",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "V41 | complex | distinct requested mathematical operation 1"
+    },
+    {
+      "form_id": "v41_complex_02",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "V41 | complex | distinct requested mathematical operation 2"
+    },
+    {
+      "form_id": "v41_complex_03",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "V41 | complex | distinct requested mathematical operation 3"
+    },
+    {
+      "form_id": "v41_complex_04",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "V41 | complex | distinct requested mathematical operation 4"
+    },
+    {
+      "form_id": "v41_complex_05",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "V41 | complex | distinct requested mathematical operation 5"
+    },
+    {
+      "form_id": "v41_complex_06",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "V41 | complex | distinct requested mathematical operation 6"
+    },
+    {
+      "form_id": "v41_complex_07",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "V41 | complex | distinct requested mathematical operation 7"
+    },
+    {
+      "form_id": "v41_complex_08",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "V41 | complex | distinct requested mathematical operation 8"
+    },
+    {
+      "form_id": "v41_complex_09",
+      "grade": 12,
+      "topic": "Số phức",
+      "signature": "V41 | complex | distinct requested mathematical operation 9"
+    },
+    {
+      "form_id": "v41_space_00",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "V41 | space | distinct requested mathematical operation 0"
+    },
+    {
+      "form_id": "v41_space_01",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "V41 | space | distinct requested mathematical operation 1"
+    },
+    {
+      "form_id": "v41_space_02",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "V41 | space | distinct requested mathematical operation 2"
+    },
+    {
+      "form_id": "v41_space_03",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "V41 | space | distinct requested mathematical operation 3"
+    },
+    {
+      "form_id": "v41_space_04",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "V41 | space | distinct requested mathematical operation 4"
+    },
+    {
+      "form_id": "v41_space_05",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "V41 | space | distinct requested mathematical operation 5"
+    },
+    {
+      "form_id": "v41_space_06",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "V41 | space | distinct requested mathematical operation 6"
+    },
+    {
+      "form_id": "v41_space_07",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "V41 | space | distinct requested mathematical operation 7"
+    },
+    {
+      "form_id": "v41_space_08",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "V41 | space | distinct requested mathematical operation 8"
+    },
+    {
+      "form_id": "v41_space_09",
+      "grade": 12,
+      "topic": "Tọa độ trong không gian",
+      "signature": "V41 | space | distinct requested mathematical operation 9"
+    },
+    {
+      "form_id": "v41_comb_00",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "V41 | comb | distinct requested mathematical operation 0"
+    },
+    {
+      "form_id": "v41_comb_01",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "V41 | comb | distinct requested mathematical operation 1"
+    },
+    {
+      "form_id": "v41_comb_02",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "V41 | comb | distinct requested mathematical operation 2"
+    },
+    {
+      "form_id": "v41_comb_03",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "V41 | comb | distinct requested mathematical operation 3"
+    },
+    {
+      "form_id": "v41_comb_04",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "V41 | comb | distinct requested mathematical operation 4"
+    },
+    {
+      "form_id": "v41_comb_05",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "V41 | comb | distinct requested mathematical operation 5"
+    },
+    {
+      "form_id": "v41_comb_06",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "V41 | comb | distinct requested mathematical operation 6"
+    },
+    {
+      "form_id": "v41_comb_07",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "V41 | comb | distinct requested mathematical operation 7"
+    },
+    {
+      "form_id": "v41_comb_08",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "V41 | comb | distinct requested mathematical operation 8"
+    },
+    {
+      "form_id": "v41_comb_09",
+      "grade": 10,
+      "topic": "Tổ hợp",
+      "signature": "V41 | comb | distinct requested mathematical operation 9"
+    },
+    {
+      "form_id": "v41_binom_00",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "V41 | binom | distinct requested mathematical operation 0"
+    },
+    {
+      "form_id": "v41_binom_01",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "V41 | binom | distinct requested mathematical operation 1"
+    },
+    {
+      "form_id": "v41_binom_02",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "V41 | binom | distinct requested mathematical operation 2"
+    },
+    {
+      "form_id": "v41_binom_03",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "V41 | binom | distinct requested mathematical operation 3"
+    },
+    {
+      "form_id": "v41_binom_04",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "V41 | binom | distinct requested mathematical operation 4"
+    },
+    {
+      "form_id": "v41_binom_05",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "V41 | binom | distinct requested mathematical operation 5"
+    },
+    {
+      "form_id": "v41_binom_06",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "V41 | binom | distinct requested mathematical operation 6"
+    },
+    {
+      "form_id": "v41_binom_07",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "V41 | binom | distinct requested mathematical operation 7"
+    },
+    {
+      "form_id": "v41_binom_08",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "V41 | binom | distinct requested mathematical operation 8"
+    },
+    {
+      "form_id": "v41_binom_09",
+      "grade": 12,
+      "topic": "Xác suất và biến ngẫu nhiên",
+      "signature": "V41 | binom | distinct requested mathematical operation 9"
+    },
+    {
+      "form_id": "v41_logexp_00",
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "signature": "V41 | logexp | distinct requested mathematical operation 0"
+    },
+    {
+      "form_id": "v41_logexp_01",
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "signature": "V41 | logexp | distinct requested mathematical operation 1"
+    },
+    {
+      "form_id": "v41_logexp_02",
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "signature": "V41 | logexp | distinct requested mathematical operation 2"
+    },
+    {
+      "form_id": "v41_logexp_03",
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "signature": "V41 | logexp | distinct requested mathematical operation 3"
+    },
+    {
+      "form_id": "v41_logexp_04",
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "signature": "V41 | logexp | distinct requested mathematical operation 4"
+    },
+    {
+      "form_id": "v41_logexp_05",
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "signature": "V41 | logexp | distinct requested mathematical operation 5"
+    },
+    {
+      "form_id": "v41_logexp_06",
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "signature": "V41 | logexp | distinct requested mathematical operation 6"
+    },
+    {
+      "form_id": "v41_logexp_07",
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "signature": "V41 | logexp | distinct requested mathematical operation 7"
+    },
+    {
+      "form_id": "v41_logexp_08",
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "signature": "V41 | logexp | distinct requested mathematical operation 8"
+    },
+    {
+      "form_id": "v41_logexp_09",
+      "grade": 12,
+      "topic": "Hàm số logarit",
+      "signature": "V41 | logexp | distinct requested mathematical operation 9"
+    }
+  ],
+  "rejected": [
+    [
+      "v41_gp_00",
+      "duplicate question"
+    ],
+    [
+      "v41_gp_01",
+      "duplicate question"
+    ]
+  ],
+  "limitations": [
+    "A distinct form ID or requested operation does not prove a mathematically independent problem-solving method.",
+    "Exact answer cross-check is not independent full pedagogical review.",
+    "Battle/Admin/frontend regression tests not run.",
+    "Bank remains a seed file and is not automatically wired to practice UI."
+  ]
+}

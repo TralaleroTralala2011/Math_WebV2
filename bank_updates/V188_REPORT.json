@@ -1,0 +1,16 @@
+{
+  "version": "V188",
+  "source_archives": [
+    "MATH_WEB_GITHUB_READY_V185_BANK_VALIDATED_IMPORT.zip",
+    "MATH_WEB_GITHUB_READY_V186_BANK_INCREMENT_PATCH.zip",
+    "MATH_WEB_GITHUB_READY_V187_BANK_INCREMENT_PATCH.zip"
+  ],
+  "baseline_topics_with_questions": 153,
+  "baseline_question_records_seen": 6926,
+  "new_candidate_families": 5,
+  "new_questions_exact_arithmetic_checked": 50,
+  "new_certified_independent_forms": 0,
+  "production_integrated_questions": 0,
+  "validation_scope": "exact arithmetic oracle and exact text dedup against V185-V187; no full semantic dedup or production retrieval",
+  "note": "No production database in provided archives. All new forms remain candidates."
+}

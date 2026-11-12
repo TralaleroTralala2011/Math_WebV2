@@ -1,0 +1,18 @@
+{
+  "version": "V44",
+  "base_version": "V43",
+  "previous_question_count": 17500,
+  "previous_form_code_count": 1749,
+  "added_form_codes": 1000,
+  "added_questions": 10000,
+  "total_form_codes": 2749,
+  "total_questions": 27500,
+  "archetype_families": 20,
+  "candidate_groups_rejected": 4750,
+  "important_limitations": [
+    "New form codes are structural variants within 20 archetypes, NOT 1000 independently verified mathematical problem types.",
+    "Answer checks are deterministic formulas, not independent mathematical proof or pedagogical review.",
+    "Old application features were copied unchanged, not regression tested.",
+    "The seed bank is not guaranteed to be connected to practice UI."
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "release": "NEON V22",
+  "date": "2026-11-12",
+  "base": "NEON V21",
+  "test_summary": "207 passed",
+  "changed_files": {
+    "backend/app/roadmap_v2_routes.py": "94e1c98c58dcf6331ab6dcd8bc0eb0e195420a1308bbd7ccca753881e1587d3b",
+    "backend/app/fixed_placement.py": "852b4a9bc63b46d2aad280885700f4146b3575b43d53e4b925f58cba255f6f80",
+    "backend/tests/test_neon_v22_evidence_integrity.py": "888862565848786828dae5af3ba6e811de1c82e100fb0cc45b974e77c4dcfc51",
+    "js/roadmap-v5.js": "0ba7929a1000b25f43f48c13f0a9258b5b19f9c0892d6e0e3bc252029237b4b3",
+    "js/geometry-mobile-v21.js": "93d724ef10d0c22b568059f3f6bce50b5099568b8b00fd24bf389339ff78e232",
+    "css/geometry-mobile-v21.css": "0f3f30d27296b510939d63e72a46b7415c3b213307d7234ed71a08b0ddfa6225",
+    "NEON_V22_REPORT.md": "00eccee53c566c873e119d44c3a5ed900626e3e7950736d2db23fc60775cb29c",
+    "V22_PREVIEW/mathgeo_v22_phone.png": "30071ff3adf9142439fb2599555eb74b55f1a6635623eae25a4ac04630239eec",
+    "V22_PREVIEW/mathgeo_v22_desktop.png": "c46de3cf1b52932cc2cb7fe7d68a1615d07dbd07da0bb64595a82a2e082d689c"
+  }
+}

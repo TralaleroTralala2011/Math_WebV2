@@ -1,0 +1,1223 @@
+{
+  "version": "V43",
+  "base": "V42",
+  "added_form_ids": 200,
+  "added_questions": 2000,
+  "total_form_ids": 1749,
+  "total_questions": 17500,
+  "added_questions_by_grade": {
+    "10": 1000,
+    "11": 600,
+    "12": 400
+  },
+  "forms": [
+    {
+      "form_id": "v43_poly_00",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_01",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_02",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_03",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_04",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_05",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_06",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_07",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_08",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_09",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_10",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_11",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_12",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_13",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_14",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_15",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_16",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_17",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_18",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_poly_19",
+      "grade": 10,
+      "topic": "Hàm số",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_00",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_01",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_02",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_03",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_04",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_05",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_06",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_07",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_08",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_09",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_10",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_11",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_12",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_13",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_14",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_15",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_16",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_17",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_18",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_viete_19",
+      "grade": 10,
+      "topic": "Phương trình bậc hai",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_00",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_01",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_02",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_03",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_04",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_05",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_06",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_07",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_08",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_09",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_10",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_11",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_12",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_13",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_14",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_15",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_16",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_17",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_18",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_ap_19",
+      "grade": 11,
+      "topic": "Cấp số cộng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_00",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_01",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_02",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_03",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_04",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_05",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_06",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_07",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_08",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_09",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_10",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_11",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_12",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_13",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_14",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_15",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_16",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_17",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_18",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_gp_19",
+      "grade": 11,
+      "topic": "Cấp số nhân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_00",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_01",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_02",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_03",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_04",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_05",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_06",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_07",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_08",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_09",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_10",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_11",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_12",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_13",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_14",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_15",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_16",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_17",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_18",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_vector_19",
+      "grade": 10,
+      "topic": "Vectơ",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_00",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_01",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_02",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_03",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_04",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_05",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_06",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_07",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_08",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_09",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_10",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_11",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_12",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_13",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_14",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_15",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_16",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_17",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_18",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_line_19",
+      "grade": 10,
+      "topic": "Tọa độ trong mặt phẳng",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_00",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_01",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_02",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_03",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_04",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_05",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_06",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_07",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_08",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_09",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_10",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_11",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_12",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_13",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_14",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_15",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_16",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_17",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_18",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_complex_19",
+      "grade": 12,
+      "topic": "Số phức",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_00",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_01",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_02",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_03",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_04",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_05",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_06",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_07",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_08",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_09",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_10",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_11",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_12",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_13",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_14",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_15",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_16",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_17",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_18",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_deriv_19",
+      "grade": 11,
+      "topic": "Đạo hàm",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_00",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_01",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_02",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_03",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_04",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_05",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_06",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_07",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_08",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_09",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_10",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_11",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_12",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_13",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_14",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_15",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_16",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_17",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_18",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_integral_19",
+      "grade": 12,
+      "topic": "Nguyên hàm và tích phân",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_00",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_01",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_02",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_03",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_04",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_05",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_06",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_07",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_08",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_09",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_10",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_11",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_12",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_13",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_14",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_15",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_16",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_17",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_18",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    },
+    {
+      "form_id": "v43_stats_19",
+      "grade": 10,
+      "topic": "Thống kê",
+      "questions": 10
+    }
+  ],
+  "validation": {
+    "answer_sympy_consistency": "2000/2000",
+    "question_exact_duplicate": "0",
+    "zip_integrity": "checked_after_write",
+    "independent_semantic_types": "NOT_VERIFIED",
+    "regression_tests": "NOT_RUN",
+    "note": "Many task codes share a mathematical method; not equivalent to 200 independent problem types. Solutions are formula-guided, not full pedagogical review."
+  }
+}

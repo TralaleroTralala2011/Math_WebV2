@@ -1,0 +1,1292 @@
+{
+  "ready": false,
+  "grade": 11,
+  "blueprint_version": "2026.11.11",
+  "blueprint_hash": "7e180adc09e3d9c6ae1701e8b11cfe920aa6d716ed82ff87ee28619491d3ae39",
+  "required": 459,
+  "selected": 0,
+  "topics_required": 51,
+  "topics_with_format_diversity": 0,
+  "format_warnings": [
+    "ham_so_luong_giac",
+    "phuong_trinh_luong_giac",
+    "day_so",
+    "cap_so_cong",
+    "cap_so_nhan",
+    "gioi_han",
+    "dao_ham",
+    "hinh_khong_gian",
+    "xac_suat_11",
+    "gia_tri_luong_giac",
+    "cong_thuc_luong_giac",
+    "ham_so_luong_giac_day_du",
+    "phuong_trinh_luong_giac_day_du",
+    "day_so_tong_quat",
+    "gioi_han_ham_so",
+    "ham_so_lien_tuc",
+    "dao_ham_quy_tac",
+    "ung_dung_dao_ham_11",
+    "song_song_khong_gian",
+    "vuong_goc_khong_gian",
+    "goc_khoang_cach_11",
+    "thong_ke_11",
+    "bai_toan_thuc_te_11",
+    "to_hop_xac_suat_nang_cao_11",
+    "bien_co_doc_lap_11",
+    "day_so_truy_hoi_11",
+    "quy_nap_toan_hoc_11",
+    "phep_bien_hinh_11",
+    "thiet_dien_hinh_khong_gian_11",
+    "bai_toan_thuc_te_tong_hop_11",
+    "phep_bien_hinh_co_ban_11",
+    "nhan_biet_hinh_khong_gian_11",
+    "g11_geom_transform_translation",
+    "g11_geom_transform_reflection",
+    "g11_geom_space_lines_planes",
+    "g11_geom_parallel_line_plane",
+    "g11_geom_prism_pyramid_sections",
+    "g11_geom_rotation_homothety",
+    "g11_geom_parallel_planes",
+    "g11_geom_perpendicular_line_plane",
+    "g11_geom_dihedral_angles",
+    "g11_geom_section_construction",
+    "g11_geom_skew_lines_distance",
+    "g11_geom_three_perpendiculars",
+    "g11_geom_transform_composition",
+    "g11_geom_section_ratio",
+    "g11_geom_space_proof",
+    "g11_advanced_trig_equations",
+    "g11_sequences_advanced",
+    "g11_binomial_advanced",
+    "g11_conditional_probability_models"
+  ],
+  "gaps": [
+    {
+      "topic_id": "ham_so_luong_giac",
+      "title": "Hàm số lượng giác",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ham_so_luong_giac",
+      "title": "Hàm số lượng giác",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ham_so_luong_giac",
+      "title": "Hàm số lượng giác",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "phuong_trinh_luong_giac",
+      "title": "Phương trình lượng giác",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "phuong_trinh_luong_giac",
+      "title": "Phương trình lượng giác",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "phuong_trinh_luong_giac",
+      "title": "Phương trình lượng giác",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "day_so",
+      "title": "Dãy số",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "day_so",
+      "title": "Dãy số",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "day_so",
+      "title": "Dãy số",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "cap_so_cong",
+      "title": "Cấp số cộng",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "cap_so_cong",
+      "title": "Cấp số cộng",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "cap_so_cong",
+      "title": "Cấp số cộng",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "cap_so_nhan",
+      "title": "Cấp số nhân",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "cap_so_nhan",
+      "title": "Cấp số nhân",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "cap_so_nhan",
+      "title": "Cấp số nhân",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "gioi_han",
+      "title": "Giới hạn",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "gioi_han",
+      "title": "Giới hạn",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "gioi_han",
+      "title": "Giới hạn",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "dao_ham",
+      "title": "Đạo hàm",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "dao_ham",
+      "title": "Đạo hàm",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "dao_ham",
+      "title": "Đạo hàm",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "hinh_khong_gian",
+      "title": "Quan hệ song song và vuông góc trong không gian",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "hinh_khong_gian",
+      "title": "Quan hệ song song và vuông góc trong không gian",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "hinh_khong_gian",
+      "title": "Quan hệ song song và vuông góc trong không gian",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "xac_suat_11",
+      "title": "Xác suất",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "xac_suat_11",
+      "title": "Xác suất",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "xac_suat_11",
+      "title": "Xác suất",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "gia_tri_luong_giac",
+      "title": "Giá trị lượng giác",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "gia_tri_luong_giac",
+      "title": "Giá trị lượng giác",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "gia_tri_luong_giac",
+      "title": "Giá trị lượng giác",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "cong_thuc_luong_giac",
+      "title": "Công thức lượng giác",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "cong_thuc_luong_giac",
+      "title": "Công thức lượng giác",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "cong_thuc_luong_giac",
+      "title": "Công thức lượng giác",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ham_so_luong_giac_day_du",
+      "title": "Hàm số lượng giác",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ham_so_luong_giac_day_du",
+      "title": "Hàm số lượng giác",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ham_so_luong_giac_day_du",
+      "title": "Hàm số lượng giác",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "phuong_trinh_luong_giac_day_du",
+      "title": "Phương trình lượng giác",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "phuong_trinh_luong_giac_day_du",
+      "title": "Phương trình lượng giác",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "phuong_trinh_luong_giac_day_du",
+      "title": "Phương trình lượng giác",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "day_so_tong_quat",
+      "title": "Dãy số",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "day_so_tong_quat",
+      "title": "Dãy số",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "day_so_tong_quat",
+      "title": "Dãy số",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "gioi_han_ham_so",
+      "title": "Giới hạn hàm số",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "gioi_han_ham_so",
+      "title": "Giới hạn hàm số",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "gioi_han_ham_so",
+      "title": "Giới hạn hàm số",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ham_so_lien_tuc",
+      "title": "Hàm số liên tục",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ham_so_lien_tuc",
+      "title": "Hàm số liên tục",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ham_so_lien_tuc",
+      "title": "Hàm số liên tục",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "dao_ham_quy_tac",
+      "title": "Quy tắc đạo hàm",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "dao_ham_quy_tac",
+      "title": "Quy tắc đạo hàm",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "dao_ham_quy_tac",
+      "title": "Quy tắc đạo hàm",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ung_dung_dao_ham_11",
+      "title": "Ứng dụng đạo hàm",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ung_dung_dao_ham_11",
+      "title": "Ứng dụng đạo hàm",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ung_dung_dao_ham_11",
+      "title": "Ứng dụng đạo hàm",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "song_song_khong_gian",
+      "title": "Quan hệ song song trong không gian",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "song_song_khong_gian",
+      "title": "Quan hệ song song trong không gian",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "song_song_khong_gian",
+      "title": "Quan hệ song song trong không gian",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "vuong_goc_khong_gian",
+      "title": "Quan hệ vuông góc trong không gian",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "vuong_goc_khong_gian",
+      "title": "Quan hệ vuông góc trong không gian",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "vuong_goc_khong_gian",
+      "title": "Quan hệ vuông góc trong không gian",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "goc_khoang_cach_11",
+      "title": "Góc và khoảng cách trong không gian",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "goc_khoang_cach_11",
+      "title": "Góc và khoảng cách trong không gian",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "goc_khoang_cach_11",
+      "title": "Góc và khoảng cách trong không gian",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "thong_ke_11",
+      "title": "Thống kê Toán 11",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "thong_ke_11",
+      "title": "Thống kê Toán 11",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "thong_ke_11",
+      "title": "Thống kê Toán 11",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bai_toan_thuc_te_11",
+      "title": "Bài toán thực tế Toán 11",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bai_toan_thuc_te_11",
+      "title": "Bài toán thực tế Toán 11",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bai_toan_thuc_te_11",
+      "title": "Bài toán thực tế Toán 11",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "to_hop_xac_suat_nang_cao_11",
+      "title": "Tổ hợp và xác suất nâng cao",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "to_hop_xac_suat_nang_cao_11",
+      "title": "Tổ hợp và xác suất nâng cao",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "to_hop_xac_suat_nang_cao_11",
+      "title": "Tổ hợp và xác suất nâng cao",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bien_co_doc_lap_11",
+      "title": "Biến cố độc lập và xác suất có điều kiện",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bien_co_doc_lap_11",
+      "title": "Biến cố độc lập và xác suất có điều kiện",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bien_co_doc_lap_11",
+      "title": "Biến cố độc lập và xác suất có điều kiện",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "day_so_truy_hoi_11",
+      "title": "Dãy số truy hồi",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "day_so_truy_hoi_11",
+      "title": "Dãy số truy hồi",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "day_so_truy_hoi_11",
+      "title": "Dãy số truy hồi",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "quy_nap_toan_hoc_11",
+      "title": "Quy nạp toán học",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "quy_nap_toan_hoc_11",
+      "title": "Quy nạp toán học",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "quy_nap_toan_hoc_11",
+      "title": "Quy nạp toán học",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "phep_bien_hinh_11",
+      "title": "Phép biến hình trong mặt phẳng",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "phep_bien_hinh_11",
+      "title": "Phép biến hình trong mặt phẳng",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "phep_bien_hinh_11",
+      "title": "Phép biến hình trong mặt phẳng",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "thiet_dien_hinh_khong_gian_11",
+      "title": "Thiết diện hình không gian",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "thiet_dien_hinh_khong_gian_11",
+      "title": "Thiết diện hình không gian",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "thiet_dien_hinh_khong_gian_11",
+      "title": "Thiết diện hình không gian",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bai_toan_thuc_te_tong_hop_11",
+      "title": "Bài toán thực tế tổng hợp Toán 11",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bai_toan_thuc_te_tong_hop_11",
+      "title": "Bài toán thực tế tổng hợp Toán 11",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bai_toan_thuc_te_tong_hop_11",
+      "title": "Bài toán thực tế tổng hợp Toán 11",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "phep_bien_hinh_co_ban_11",
+      "title": "Phép biến hình cơ bản",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "phep_bien_hinh_co_ban_11",
+      "title": "Phép biến hình cơ bản",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "phep_bien_hinh_co_ban_11",
+      "title": "Phép biến hình cơ bản",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "nhan_biet_hinh_khong_gian_11",
+      "title": "Nhận biết hình học không gian",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "nhan_biet_hinh_khong_gian_11",
+      "title": "Nhận biết hình học không gian",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "nhan_biet_hinh_khong_gian_11",
+      "title": "Nhận biết hình học không gian",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_transform_translation",
+      "title": "Phép tịnh tiến và ảnh của hình",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_transform_translation",
+      "title": "Phép tịnh tiến và ảnh của hình",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_transform_translation",
+      "title": "Phép tịnh tiến và ảnh của hình",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_transform_reflection",
+      "title": "Phép đối xứng trục",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_transform_reflection",
+      "title": "Phép đối xứng trục",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_transform_reflection",
+      "title": "Phép đối xứng trục",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_space_lines_planes",
+      "title": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_space_lines_planes",
+      "title": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_space_lines_planes",
+      "title": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_parallel_line_plane",
+      "title": "Đường thẳng song song với mặt phẳng",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_parallel_line_plane",
+      "title": "Đường thẳng song song với mặt phẳng",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_parallel_line_plane",
+      "title": "Đường thẳng song song với mặt phẳng",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_prism_pyramid_sections",
+      "title": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_prism_pyramid_sections",
+      "title": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_prism_pyramid_sections",
+      "title": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_rotation_homothety",
+      "title": "Phép quay và phép vị tự",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_rotation_homothety",
+      "title": "Phép quay và phép vị tự",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_rotation_homothety",
+      "title": "Phép quay và phép vị tự",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_parallel_planes",
+      "title": "Hai mặt phẳng song song",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_parallel_planes",
+      "title": "Hai mặt phẳng song song",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_parallel_planes",
+      "title": "Hai mặt phẳng song song",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_perpendicular_line_plane",
+      "title": "Đường thẳng vuông góc với mặt phẳng",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_perpendicular_line_plane",
+      "title": "Đường thẳng vuông góc với mặt phẳng",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_perpendicular_line_plane",
+      "title": "Đường thẳng vuông góc với mặt phẳng",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_dihedral_angles",
+      "title": "Góc giữa đường thẳng và mặt phẳng",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_dihedral_angles",
+      "title": "Góc giữa đường thẳng và mặt phẳng",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_dihedral_angles",
+      "title": "Góc giữa đường thẳng và mặt phẳng",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_section_construction",
+      "title": "Dựng thiết diện của hình chóp và lăng trụ",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_section_construction",
+      "title": "Dựng thiết diện của hình chóp và lăng trụ",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_section_construction",
+      "title": "Dựng thiết diện của hình chóp và lăng trụ",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_skew_lines_distance",
+      "title": "Khoảng cách giữa hai đường thẳng chéo nhau",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_skew_lines_distance",
+      "title": "Khoảng cách giữa hai đường thẳng chéo nhau",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_skew_lines_distance",
+      "title": "Khoảng cách giữa hai đường thẳng chéo nhau",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_three_perpendiculars",
+      "title": "Định lý ba đường vuông góc",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_three_perpendiculars",
+      "title": "Định lý ba đường vuông góc",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_three_perpendiculars",
+      "title": "Định lý ba đường vuông góc",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_transform_composition",
+      "title": "Hợp thành các phép biến hình",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_transform_composition",
+      "title": "Hợp thành các phép biến hình",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_transform_composition",
+      "title": "Hợp thành các phép biến hình",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_section_ratio",
+      "title": "Thiết diện và tỉ số đoạn trong hình không gian",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_section_ratio",
+      "title": "Thiết diện và tỉ số đoạn trong hình không gian",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_section_ratio",
+      "title": "Thiết diện và tỉ số đoạn trong hình không gian",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_space_proof",
+      "title": "Chứng minh tổng hợp song song và vuông góc",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_space_proof",
+      "title": "Chứng minh tổng hợp song song và vuông góc",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_geom_space_proof",
+      "title": "Chứng minh tổng hợp song song và vuông góc",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_advanced_trig_equations",
+      "title": "Phương trình lượng giác nâng cao",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_advanced_trig_equations",
+      "title": "Phương trình lượng giác nâng cao",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_advanced_trig_equations",
+      "title": "Phương trình lượng giác nâng cao",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_sequences_advanced",
+      "title": "Dãy số truy hồi và bài toán cực trị",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_sequences_advanced",
+      "title": "Dãy số truy hồi và bài toán cực trị",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_sequences_advanced",
+      "title": "Dãy số truy hồi và bài toán cực trị",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_binomial_advanced",
+      "title": "Nhị thức Newton và hệ số tổ hợp nâng cao",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_binomial_advanced",
+      "title": "Nhị thức Newton và hệ số tổ hợp nâng cao",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_binomial_advanced",
+      "title": "Nhị thức Newton và hệ số tổ hợp nâng cao",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_conditional_probability_models",
+      "title": "Mô hình xác suất có điều kiện",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_conditional_probability_models",
+      "title": "Mô hình xác suất có điều kiện",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g11_conditional_probability_models",
+      "title": "Mô hình xác suất có điều kiện",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    }
+  ],
+  "paper_hash": null,
+  "note": "Đề chưa đủ câu đã duyệt và đa dạng hình thức; không thể công bố.",
+  "status": "unpublished_zero_independently_reviewed"
+}

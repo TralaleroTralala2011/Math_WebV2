@@ -1,0 +1,9 @@
+{
+  "checked": 70,
+  "by_status": {
+    "pass": 70
+  },
+  "failures": [],
+  "method": "brute-force enumeration independent of stored generator formula",
+  "independence_certified_new": 0
+}

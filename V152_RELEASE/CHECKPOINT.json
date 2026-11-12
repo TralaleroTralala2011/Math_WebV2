@@ -1,0 +1,17 @@
+{
+  "version": "V152",
+  "base": "MATH_WEB_GITHUB_READY_V151_PERSISTENT_DATA_BACKUP.zip",
+  "new_candidates": 0,
+  "new_certified_independent_types": 0,
+  "new_verified_questions": 0,
+  "tests": {
+    "selected": "8 passed",
+    "full_regression": "not_run",
+    "e2e": "not_run"
+  },
+  "changed_files": [
+    "backend/scripts/restore_sqlite.py",
+    "backend/tests/test_v152_restore_sqlite.py"
+  ],
+  "notes": "restore requires empty destination and stopped backend; no production DB touched"
+}

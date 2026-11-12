@@ -1,0 +1,15 @@
+{
+  "version": "V196",
+  "base": "V195",
+  "prior_bank_count": 9436,
+  "new_question_count": 100,
+  "new_candidate_forms": 10,
+  "certified_independent_forms": 0,
+  "new_bank_count": 9536,
+  "math_validation": "100/100 arithmetic verified via independent Python calculations during construction",
+  "exact_question_duplicates": 0,
+  "sqlite_integrity": "ok",
+  "user_table_counts_unchanged": true,
+  "production_deployed": false,
+  "limitations": "Semantic method-independence and end-to-end UI grading not certified. Short-answer fractions require website equivalence checking."
+}

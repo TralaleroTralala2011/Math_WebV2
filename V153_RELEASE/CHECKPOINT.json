@@ -1,0 +1,36 @@
+{
+  "version": "V153",
+  "source": "V152_SAFE_SQLITE_RESTORE",
+  "created_utc": "2026-11-09T03:57:47.469236+00:00",
+  "changes": [
+    "External MATHWEB_DATA_DIR routing for Question Factory and AI question history with explicit path overrides retained",
+    "Dry-run-first legacy SQLite migration script, consistent online backups and atomic restore",
+    "Regression tests for WAL backup, XP preservation, destination protection and failure rollback"
+  ],
+  "tests": {
+    "selected_regression": "81 passed, 6 warnings (logged)",
+    "browser_e2e": "not run",
+    "full_backend": "not run",
+    "load_benchmark": "not run"
+  },
+  "question_bank": {
+    "new_candidates": 0,
+    "new_certified_independent_types": 0,
+    "new_verified_questions": 0,
+    "existing_candidates": "not recounted in this run"
+  },
+  "source_database_sha256_verified": false,
+  "limitations": [
+    "No proof of 300000 independent types or 3000000 questions",
+    "No real-user production restore test",
+    "No GitHub push",
+    "No 50-minute execution claim"
+  ],
+  "next": [
+    "Audit all SQLite consumers and test with isolated persistent directory",
+    "Run full backend and browser E2E",
+    "Benchmark question retrieval before/after",
+    "Review mathematical independence of candidates"
+  ],
+  "database_note": "The recorded preliminary hash for mathweb.db differs from the actual V152 ZIP member. V153 includes the exact database bytes extracted from V152 ZIP; preliminary hash log is stale and must not be used as proof."
+}

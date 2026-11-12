@@ -14,7 +14,25 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent
 
-DATABASE_PATH = Path(os.getenv("MATHWEB_DB_PATH", str(BASE_DIR / "mathweb.db"))).expanduser()
+# Windows local installs keep accounts outside the replaceable ZIP directory.
+# Explicit MATHWEB_DB_PATH always takes priority (production and test fixtures).
+_legacy_database = BASE_DIR / "mathweb.db"
+_local_app_data = os.environ.get("LOCALAPPDATA") if os.name == "nt" else None
+_default_database = (Path(_local_app_data) / "MATH_WEB" / "mathweb.db") if _local_app_data else _legacy_database
+DATABASE_PATH = Path(os.getenv("MATHWEB_DB_PATH", str(_default_database))).expanduser()
+DATABASE_PATH.parent.mkdir(parents=True, exist_ok=True)
+# One-time migration of an older local installation, without overwriting a
+# newer database. Import uses SQLite backup, which also handles WAL correctly.
+if _local_app_data and "MATHWEB_DB_PATH" not in os.environ and not DATABASE_PATH.exists() and _legacy_database.exists():
+    with sqlite3.connect(str(_legacy_database)) as _old, sqlite3.connect(str(DATABASE_PATH)) as _new:
+        _old.backup(_new)
+# Preserve the original per-installation signing secret during migration.
+if _local_app_data and "MATHWEB_DB_PATH" not in os.environ:
+    _old_secret = _legacy_database.parent / ".mathweb_hmac_secret"
+    _new_secret = DATABASE_PATH.parent / ".mathweb_hmac_secret"
+    if not _new_secret.exists() and _old_secret.exists():
+        import shutil
+        shutil.copy2(_old_secret, _new_secret)
 
 
 # =========================================================
@@ -1500,28 +1518,12 @@ def init_database():
         add_column_if_missing(connection, "admin_question_bank", "game_id", "TEXT NOT NULL DEFAULT ''")
         connection.execute("CREATE INDEX IF NOT EXISTS idx_admin_questions_topic ON admin_question_bank(grade, topic, difficulty)")
 
-        admin_username = "admin19022011"
-        connection.execute("UPDATE users SET role='user' WHERE role='admin' AND username<>?", (admin_username,))
-        admin_row = connection.execute("SELECT id, role FROM users WHERE username=? LIMIT 1", (admin_username,)).fetchone()
-        bootstrap_password = os.getenv("MATHWEB_BOOTSTRAP_ADMIN_PASSWORD", "adminsitinh")
-        if admin_row:
-            if admin_row["role"] != "admin":
-                salt = secrets.token_bytes(16)
-                digest = hashlib.pbkdf2_hmac("sha256", bootstrap_password.encode("utf-8"), salt, 100_000)
-                password_hash = base64.b64encode(salt).decode("ascii") + ":" + base64.b64encode(digest).decode("ascii")
-                connection.execute("UPDATE users SET role='admin', status='active', password_hash=? WHERE id=?", (password_hash, admin_row["id"]))
-        else:
-            salt = secrets.token_bytes(16)
-            digest = hashlib.pbkdf2_hmac("sha256", bootstrap_password.encode("utf-8"), salt, 100_000)
-            password_hash = base64.b64encode(salt).decode("ascii") + ":" + base64.b64encode(digest).decode("ascii")
-            player_id = "MWADMIN" + datetime.now(timezone.utc).strftime("%y%m%d%H%M%S")
-            stamp = utc_now_iso()
-            connection.execute("""INSERT INTO users
-                (player_id, username, password_hash, level, xp, total_games, total_correct, total_wrong,
-                 total_blank, total_score, last_seen, created_at, role, status)
-                VALUES (?, ?, ?, 0, 0, 0, 0, 0, 0, 0, ?, ?, 'admin', 'active')""",
-                (player_id, admin_username, password_hash, stamp, stamp))
-        connection.execute("CREATE UNIQUE INDEX IF NOT EXISTS idx_single_admin_role ON users(role) WHERE role='admin'")
+        # Administration bootstrap belongs exclusively to
+        # app.admin_routes.ensure_admin_schema_and_account(). The legacy
+        # initializer used to create/reset the administrator with a PUBLIC
+        # default password on EVERY startup and could overwrite credentials.
+        # Preserve existing user rows here for one-time migration; do not
+        # create shadow admins or mutate existing password hashes.
 
         # =====================================================
         # COMMIT

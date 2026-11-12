@@ -74,8 +74,25 @@ def _unlabeled_number(value):
         return None
     return _safe_numeric(value)
 
+def _bracketed_pair(value):
+    """Parse interval/ordered-pair punctuation without discarding endpoints.
+
+    [3;5] and (3;5) must NOT be considered equivalent. The same notation
+    also occurs for coordinates, where a matching bracket pair is required.
+    """
+    m=re.fullmatch(r'\s*([\[(])\s*([^;,]+)\s*[;,]\s*([^;,]+)\s*([\])])\s*',str(value))
+    if not m:return None
+    x,y=(_safe_numeric(t) for t in (m.group(2),m.group(3)))
+    if x is None or y is None:return None
+    return (m.group(1),m.group(4),x,y)
+
+
 def equivalent(a,b):
     """Compare numeric, fraction, radical and coordinate-pair answers robustly."""
+    # In mathematics R (circumradius) and r (inradius) are distinct symbols.
+    # Never fold their case to compare answer options.
+    if isinstance(a,str) and isinstance(b,str) and re.fullmatch(r'[A-Za-z]',a.strip()) and re.fullmatch(r'[A-Za-z]',b.strip()):
+        return a.strip()==b.strip()
     if normalize_answer(a) == normalize_answer(b):
         return True
     labeled_a, labeled_b = _labeled_answer(a), _labeled_answer(b)
@@ -93,6 +110,12 @@ def equivalent(a,b):
             return coords is not None and all(math.isclose(x,y,rel_tol=1e-8,abs_tol=1e-8) for x,y in zip(labeled[1],coords))
         num = _unlabeled_number(plain)
         return num is not None and math.isclose(labeled[2],num,rel_tol=1e-8,abs_tol=1e-8)
+    bracket_a,bracket_b=_bracketed_pair(a),_bracketed_pair(b)
+    if bracket_a is not None or bracket_b is not None:
+        if bracket_a is None or bracket_b is None:return False
+        if bracket_a[:2]!=bracket_b[:2]:return False
+        return all(math.isclose(x,y,rel_tol=1e-8,abs_tol=1e-8)
+                   for x,y in zip(bracket_a[2:],bracket_b[2:]))
     pair_a, pair_b = _coordinate_pair(a), _coordinate_pair(b)
     if pair_a is not None and pair_b is not None:
         return all(math.isclose(x,y,rel_tol=1e-8,abs_tol=1e-8) for x,y in zip(pair_a,pair_b))

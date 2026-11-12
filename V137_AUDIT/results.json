@@ -1,0 +1,13 @@
+{
+  "counts": {
+    "method_files": 5,
+    "candidates": 68,
+    "question_files": 5,
+    "questions": 680,
+    "stored_check_mismatches": 1,
+    "constant_answer_methods": 1,
+    "linked_methods": 68
+  },
+  "issues": [],
+  "limitation": "Structural checks and literal normalized text only; stored checks are not independent mathematical proofs; zero forms certified."
+}

@@ -1,0 +1,1267 @@
+{
+  "ready": false,
+  "grade": 12,
+  "blueprint_version": "2026.11.11",
+  "blueprint_hash": "0edf567413b4aff3ea810a2b48f6fb97684f6509cc86c1dd3ab6683f095ac80c",
+  "required": 450,
+  "selected": 0,
+  "topics_required": 50,
+  "topics_with_format_diversity": 0,
+  "format_warnings": [
+    "ung_dung_dao_ham",
+    "khao_sat_ham_so",
+    "nguyen_ham_tich_phan",
+    "so_phuc",
+    "hinh_hoc_khong_gian",
+    "toa_do_khong_gian",
+    "xac_suat_12",
+    "thong_ke_12",
+    "tinh_don_dieu",
+    "cuc_tri",
+    "gtln_gtnn",
+    "tiep_tuyen",
+    "tien_can",
+    "tuong_giao",
+    "ham_mu",
+    "ham_logarit",
+    "pt_mu",
+    "pt_logarit",
+    "bpt_mu",
+    "bpt_logarit",
+    "ung_dung_tich_phan",
+    "bieu_dien_so_phuc",
+    "pt_so_phuc",
+    "mat_phang_oxyz",
+    "duong_thang_oxyz",
+    "mat_cau",
+    "goc_khoang_cach_oxyz",
+    "the_tich_khong_gian",
+    "tong_hop_thpt",
+    "bai_toan_thuc_te_12",
+    "hinh_khoi_va_the_tich_co_ban_12",
+    "hinh_hoc_oxyz_van_dung_12",
+    "g12_geom_vectors_3d",
+    "g12_geom_plane_equation",
+    "g12_geom_line_equation_3d",
+    "g12_geom_sphere_equation",
+    "g12_geom_solid_surface_area",
+    "g12_geom_point_plane_distance",
+    "g12_geom_line_plane_angle",
+    "g12_geom_two_planes_angle",
+    "g12_geom_line_plane_intersection",
+    "g12_geom_sphere_tangent_plane",
+    "g12_geom_skew_line_relation",
+    "g12_geom_min_distance_3d",
+    "g12_geom_sphere_plane_intersection",
+    "g12_geom_parameter_geometry",
+    "g12_geom_3d_optimization",
+    "g12_complex_plane_geometry",
+    "g12_integral_optimization",
+    "g12_solid_of_revolution"
+  ],
+  "gaps": [
+    {
+      "topic_id": "ung_dung_dao_ham",
+      "title": "Ứng dụng đạo hàm",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ung_dung_dao_ham",
+      "title": "Ứng dụng đạo hàm",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ung_dung_dao_ham",
+      "title": "Ứng dụng đạo hàm",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "khao_sat_ham_so",
+      "title": "Khảo sát và vẽ đồ thị hàm số",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "khao_sat_ham_so",
+      "title": "Khảo sát và vẽ đồ thị hàm số",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "khao_sat_ham_so",
+      "title": "Khảo sát và vẽ đồ thị hàm số",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "nguyen_ham_tich_phan",
+      "title": "Nguyên hàm và tích phân",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "nguyen_ham_tich_phan",
+      "title": "Nguyên hàm và tích phân",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "nguyen_ham_tich_phan",
+      "title": "Nguyên hàm và tích phân",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "so_phuc",
+      "title": "Số phức",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "so_phuc",
+      "title": "Số phức",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "so_phuc",
+      "title": "Số phức",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "hinh_hoc_khong_gian",
+      "title": "Hình học không gian",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "hinh_hoc_khong_gian",
+      "title": "Hình học không gian",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "hinh_hoc_khong_gian",
+      "title": "Hình học không gian",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "toa_do_khong_gian",
+      "title": "Tọa độ trong không gian",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "toa_do_khong_gian",
+      "title": "Tọa độ trong không gian",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "toa_do_khong_gian",
+      "title": "Tọa độ trong không gian",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "xac_suat_12",
+      "title": "Xác suất và biến ngẫu nhiên",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "xac_suat_12",
+      "title": "Xác suất và biến ngẫu nhiên",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "xac_suat_12",
+      "title": "Xác suất và biến ngẫu nhiên",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "thong_ke_12",
+      "title": "Các số đặc trưng đo xu thế và độ phân tán",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "thong_ke_12",
+      "title": "Các số đặc trưng đo xu thế và độ phân tán",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "thong_ke_12",
+      "title": "Các số đặc trưng đo xu thế và độ phân tán",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tinh_don_dieu",
+      "title": "Tính đơn điệu",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tinh_don_dieu",
+      "title": "Tính đơn điệu",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tinh_don_dieu",
+      "title": "Tính đơn điệu",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "cuc_tri",
+      "title": "Cực trị",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "cuc_tri",
+      "title": "Cực trị",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "cuc_tri",
+      "title": "Cực trị",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "gtln_gtnn",
+      "title": "Giá trị lớn nhất và nhỏ nhất",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "gtln_gtnn",
+      "title": "Giá trị lớn nhất và nhỏ nhất",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "gtln_gtnn",
+      "title": "Giá trị lớn nhất và nhỏ nhất",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tiep_tuyen",
+      "title": "Tiếp tuyến",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tiep_tuyen",
+      "title": "Tiếp tuyến",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tiep_tuyen",
+      "title": "Tiếp tuyến",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tien_can",
+      "title": "Tiệm cận",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tien_can",
+      "title": "Tiệm cận",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tien_can",
+      "title": "Tiệm cận",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tuong_giao",
+      "title": "Tương giao đồ thị",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tuong_giao",
+      "title": "Tương giao đồ thị",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tuong_giao",
+      "title": "Tương giao đồ thị",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ham_mu",
+      "title": "Hàm số mũ",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ham_mu",
+      "title": "Hàm số mũ",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ham_mu",
+      "title": "Hàm số mũ",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ham_logarit",
+      "title": "Hàm số logarit",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ham_logarit",
+      "title": "Hàm số logarit",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ham_logarit",
+      "title": "Hàm số logarit",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "pt_mu",
+      "title": "Phương trình mũ",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "pt_mu",
+      "title": "Phương trình mũ",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "pt_mu",
+      "title": "Phương trình mũ",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "pt_logarit",
+      "title": "Phương trình logarit",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "pt_logarit",
+      "title": "Phương trình logarit",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "pt_logarit",
+      "title": "Phương trình logarit",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bpt_mu",
+      "title": "Bất phương trình mũ",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bpt_mu",
+      "title": "Bất phương trình mũ",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bpt_mu",
+      "title": "Bất phương trình mũ",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bpt_logarit",
+      "title": "Bất phương trình logarit",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bpt_logarit",
+      "title": "Bất phương trình logarit",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bpt_logarit",
+      "title": "Bất phương trình logarit",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ung_dung_tich_phan",
+      "title": "Ứng dụng tích phân",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ung_dung_tich_phan",
+      "title": "Ứng dụng tích phân",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "ung_dung_tich_phan",
+      "title": "Ứng dụng tích phân",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bieu_dien_so_phuc",
+      "title": "Biểu diễn số phức",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bieu_dien_so_phuc",
+      "title": "Biểu diễn số phức",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bieu_dien_so_phuc",
+      "title": "Biểu diễn số phức",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "pt_so_phuc",
+      "title": "Phương trình số phức",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "pt_so_phuc",
+      "title": "Phương trình số phức",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "pt_so_phuc",
+      "title": "Phương trình số phức",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "mat_phang_oxyz",
+      "title": "Mặt phẳng trong Oxyz",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "mat_phang_oxyz",
+      "title": "Mặt phẳng trong Oxyz",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "mat_phang_oxyz",
+      "title": "Mặt phẳng trong Oxyz",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "duong_thang_oxyz",
+      "title": "Đường thẳng trong Oxyz",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "duong_thang_oxyz",
+      "title": "Đường thẳng trong Oxyz",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "duong_thang_oxyz",
+      "title": "Đường thẳng trong Oxyz",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "mat_cau",
+      "title": "Mặt cầu",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "mat_cau",
+      "title": "Mặt cầu",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "mat_cau",
+      "title": "Mặt cầu",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "goc_khoang_cach_oxyz",
+      "title": "Góc và khoảng cách Oxyz",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "goc_khoang_cach_oxyz",
+      "title": "Góc và khoảng cách Oxyz",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "goc_khoang_cach_oxyz",
+      "title": "Góc và khoảng cách Oxyz",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "the_tich_khong_gian",
+      "title": "Thể tích hình học không gian",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "the_tich_khong_gian",
+      "title": "Thể tích hình học không gian",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "the_tich_khong_gian",
+      "title": "Thể tích hình học không gian",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tong_hop_thpt",
+      "title": "Bài toán tổng hợp THPT",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tong_hop_thpt",
+      "title": "Bài toán tổng hợp THPT",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "tong_hop_thpt",
+      "title": "Bài toán tổng hợp THPT",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bai_toan_thuc_te_12",
+      "title": "Bài toán thực tế Toán 12",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bai_toan_thuc_te_12",
+      "title": "Bài toán thực tế Toán 12",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "bai_toan_thuc_te_12",
+      "title": "Bài toán thực tế Toán 12",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "hinh_khoi_va_the_tich_co_ban_12",
+      "title": "Hình khối và thể tích cơ bản",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "hinh_khoi_va_the_tich_co_ban_12",
+      "title": "Hình khối và thể tích cơ bản",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "hinh_khoi_va_the_tich_co_ban_12",
+      "title": "Hình khối và thể tích cơ bản",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "hinh_hoc_oxyz_van_dung_12",
+      "title": "Vận dụng tọa độ Oxyz",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "hinh_hoc_oxyz_van_dung_12",
+      "title": "Vận dụng tọa độ Oxyz",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "hinh_hoc_oxyz_van_dung_12",
+      "title": "Vận dụng tọa độ Oxyz",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_vectors_3d",
+      "title": "Vectơ và độ dài trong không gian Oxyz",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_vectors_3d",
+      "title": "Vectơ và độ dài trong không gian Oxyz",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_vectors_3d",
+      "title": "Vectơ và độ dài trong không gian Oxyz",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_plane_equation",
+      "title": "Phương trình mặt phẳng",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_plane_equation",
+      "title": "Phương trình mặt phẳng",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_plane_equation",
+      "title": "Phương trình mặt phẳng",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_line_equation_3d",
+      "title": "Phương trình đường thẳng trong Oxyz",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_line_equation_3d",
+      "title": "Phương trình đường thẳng trong Oxyz",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_line_equation_3d",
+      "title": "Phương trình đường thẳng trong Oxyz",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_sphere_equation",
+      "title": "Phương trình mặt cầu và tâm bán kính",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_sphere_equation",
+      "title": "Phương trình mặt cầu và tâm bán kính",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_sphere_equation",
+      "title": "Phương trình mặt cầu và tâm bán kính",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_solid_surface_area",
+      "title": "Diện tích xung quanh và toàn phần hình khối",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_solid_surface_area",
+      "title": "Diện tích xung quanh và toàn phần hình khối",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_solid_surface_area",
+      "title": "Diện tích xung quanh và toàn phần hình khối",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_point_plane_distance",
+      "title": "Khoảng cách từ điểm đến mặt phẳng",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_point_plane_distance",
+      "title": "Khoảng cách từ điểm đến mặt phẳng",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_point_plane_distance",
+      "title": "Khoảng cách từ điểm đến mặt phẳng",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_line_plane_angle",
+      "title": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_line_plane_angle",
+      "title": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_line_plane_angle",
+      "title": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_two_planes_angle",
+      "title": "Góc giữa hai mặt phẳng",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_two_planes_angle",
+      "title": "Góc giữa hai mặt phẳng",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_two_planes_angle",
+      "title": "Góc giữa hai mặt phẳng",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_line_plane_intersection",
+      "title": "Giao điểm đường thẳng và mặt phẳng",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_line_plane_intersection",
+      "title": "Giao điểm đường thẳng và mặt phẳng",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_line_plane_intersection",
+      "title": "Giao điểm đường thẳng và mặt phẳng",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_sphere_tangent_plane",
+      "title": "Mặt phẳng tiếp xúc với mặt cầu",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_sphere_tangent_plane",
+      "title": "Mặt phẳng tiếp xúc với mặt cầu",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_sphere_tangent_plane",
+      "title": "Mặt phẳng tiếp xúc với mặt cầu",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_skew_line_relation",
+      "title": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_skew_line_relation",
+      "title": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_skew_line_relation",
+      "title": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_min_distance_3d",
+      "title": "Cực trị khoảng cách trong không gian tọa độ",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_min_distance_3d",
+      "title": "Cực trị khoảng cách trong không gian tọa độ",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_min_distance_3d",
+      "title": "Cực trị khoảng cách trong không gian tọa độ",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_sphere_plane_intersection",
+      "title": "Giao tuyến mặt cầu và mặt phẳng",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_sphere_plane_intersection",
+      "title": "Giao tuyến mặt cầu và mặt phẳng",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_sphere_plane_intersection",
+      "title": "Giao tuyến mặt cầu và mặt phẳng",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_parameter_geometry",
+      "title": "Bài toán tham số hình học Oxyz",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_parameter_geometry",
+      "title": "Bài toán tham số hình học Oxyz",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_parameter_geometry",
+      "title": "Bài toán tham số hình học Oxyz",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_3d_optimization",
+      "title": "Bài toán tối ưu hình học không gian",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_3d_optimization",
+      "title": "Bài toán tối ưu hình học không gian",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_geom_3d_optimization",
+      "title": "Bài toán tối ưu hình học không gian",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_complex_plane_geometry",
+      "title": "Hình học số phức và quỹ tích",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_complex_plane_geometry",
+      "title": "Hình học số phức và quỹ tích",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_complex_plane_geometry",
+      "title": "Hình học số phức và quỹ tích",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_integral_optimization",
+      "title": "Tối ưu và cực trị bằng tích phân",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_integral_optimization",
+      "title": "Tối ưu và cực trị bằng tích phân",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_integral_optimization",
+      "title": "Tối ưu và cực trị bằng tích phân",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_solid_of_revolution",
+      "title": "Thể tích khối tròn xoay và mô hình thực tế",
+      "tier": "nền tảng",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_solid_of_revolution",
+      "title": "Thể tích khối tròn xoay và mô hình thực tế",
+      "tier": "trung cấp",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    },
+    {
+      "topic_id": "g12_solid_of_revolution",
+      "title": "Thể tích khối tròn xoay và mô hình thực tế",
+      "tier": "nâng cao",
+      "required": 3,
+      "available_unique_reviewed": 0,
+      "missing": 3
+    }
+  ],
+  "paper_hash": null,
+  "note": "Đề chưa đủ câu đã duyệt và đa dạng hình thức; không thể công bố.",
+  "status": "unpublished_zero_independently_reviewed"
+}

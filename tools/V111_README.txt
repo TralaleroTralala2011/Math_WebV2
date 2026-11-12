@@ -1,0 +1,1 @@
+V111 adds 10000 exact-arithmetic checked questions into verified_seed_bank.jsonl. 1000 candidate IDs with 10 questions each. They are NOT certified independent types; 10000 independent types target remains unmet. Existing MathGeo Studio Pro files preserved.

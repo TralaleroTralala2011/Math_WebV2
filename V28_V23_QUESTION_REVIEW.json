@@ -1,0 +1,10 @@
+{
+  "total": 900,
+  "manual_review_pending": 900,
+  "automatic_flags": [],
+  "true_false_distribution": {
+    "true": 198,
+    "false": 102
+  },
+  "limits": "Static checks do not mathematically verify solutions, real-world applicability or pedagogical difficulty."
+}

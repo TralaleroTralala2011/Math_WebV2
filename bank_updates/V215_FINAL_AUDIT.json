@@ -1,0 +1,45 @@
+{
+  "version": "V215",
+  "source_checkpoint": "V211",
+  "original_questions_preserved": 11646,
+  "question_candidates_generated_in_V212_V213_V214": 1020,
+  "candidate_groups_generated": 102,
+  "questions_quarantined": 400,
+  "groups_quarantined": 40,
+  "active_new_questions": 620,
+  "active_candidate_groups": 62,
+  "total_active_questions": 12266,
+  "certified_independent_types": 0,
+  "retained_by_grade": {
+    "10": 230,
+    "11": 180,
+    "12": 210
+  },
+  "retained_by_format": {
+    "multiple_choice": 434,
+    "short_answer": 124,
+    "true_false": 62
+  },
+  "question_build_and_grading_test": {
+    "tested": 620,
+    "failures": 0,
+    "outcome": "PASS"
+  },
+  "equivalent_free_response_grading_test": {
+    "tested": 124,
+    "correct": 124,
+    "outcome": "PASS"
+  },
+  "target_per_session": {
+    "independent_new_types": 10000,
+    "new_questions": 100000
+  },
+  "test_subset_results": {
+    "tests_passed": 72,
+    "tests_failed": 0,
+    "scope": "selected backend tests: API, battle invitations, question factories, validation, grading, regression, repeat prevention"
+  },
+  "qualification": "Candidate groups not certified semantically independent; no claim that all 620 have a new method; no production deploy; full end-to-end visual/UI regression not performed.",
+  "quarantined_questions_preserved_in_archive": "MATH_WEB_GITHUB_READY/bank_updates/V215_SEMANTIC_QUARANTINE.json",
+  "patch_usage": "V215 quality gate patch is designed for V214 pre-QA, not a standalone incremental upgrade from V211; use the full V215 zip."
+}

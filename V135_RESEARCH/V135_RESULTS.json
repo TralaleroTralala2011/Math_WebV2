@@ -1,0 +1,35 @@
+{
+  "version": "V135",
+  "official_topics": 150,
+  "new_candidate_groups": 13,
+  "new_worked_questions": 130,
+  "oracle_crosscheck_recomputed": 130,
+  "prior_question_files_scanned": 30,
+  "prior_question_records_scanned": 302513,
+  "prior_unique_normalized_stems": 302512,
+  "normalized_question_collisions_with_previous": 0,
+  "prior_methods_with_same_topic_and_title": [],
+  "prior_jsonl_bytes_scanned": 147499059,
+  "historical_normalized_duplicate_occurrences": 1,
+  "historical_duplicates_sample": [
+    {
+      "first": {
+        "file": "V62_ADDED_QUESTIONS.jsonl",
+        "line": 57,
+        "id": "v62_method_006"
+      },
+      "again": {
+        "file": "V64_ADDED_QUESTIONS.jsonl",
+        "line": 57,
+        "id": "v64_geometric_sequence_nth"
+      },
+      "question": "Cấp số nhân có u₁=8, công bội q=2. Tính u₅."
+    }
+  ],
+  "certified_new_independent_methods": 0,
+  "published_new_questions": 0,
+  "fatal_errors": [],
+  "quality_warnings": [],
+  "novelty_across_all_mathematics": "NOT ESTABLISHED: human/specialist review required",
+  "publication_status": "PENDING_EXPERT_REVIEW_QUARANTINED"
+}

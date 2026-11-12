@@ -1,0 +1,19 @@
+{
+  "version": "V142",
+  "source_zip": "MATH_WEB_GITHUB_READY_V141_RESEARCH_CERTIFIED_PROGRESS.zip",
+  "timestamp_utc": "2026-11-08T17:32:22.262471+00:00",
+  "new_independent_methods_certified": 0,
+  "new_questions_published": 0,
+  "candidate_methods_carried_forward": 11,
+  "candidate_questions_carried_forward": 110,
+  "source_files_changed": [
+    "backend/question_factory/storage.py"
+  ],
+  "added_tests": [
+    "backend/tests/test_v142_certification_integrity.py"
+  ],
+  "tests": "13 passed (V140/V141/V142 focused)",
+  "full_regression": "not run",
+  "battle_e2e": "not run",
+  "completion_claim": false
+}

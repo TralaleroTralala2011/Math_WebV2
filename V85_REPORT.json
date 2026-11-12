@@ -1,0 +1,14 @@
+{
+  "version": "V85",
+  "base": "V84",
+  "geometry_fixes": [
+    "attach actual diagram JSON to practice cards",
+    "import coordinate geometry points, segments, polylines and circles into MathGeo Studio",
+    "remove misleading generic 3D pyramid fallback and generic triangle replacement"
+  ],
+  "new_form_ids": 0,
+  "new_questions": 0,
+  "new_form_ids_target": 10000,
+  "target_met": false,
+  "notes": "Not all geometry formats are mapped; no browser regression testing; no new problem types. V84 question bank retained."
+}

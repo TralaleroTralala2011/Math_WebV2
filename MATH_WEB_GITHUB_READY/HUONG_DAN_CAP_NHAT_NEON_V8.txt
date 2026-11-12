@@ -1,0 +1,24 @@
+MATH_WEB_GITHUB_READY · NEON V8
+Huong dan nang cap KHONG MAT DU LIEU
+=================================
+1. SAO LUU: truoc khi thay website, dung server cu va copy thu muc
+   backend/database/ (gom mathweb.db va .mathweb_hmac_secret) ra noi an toan.
+2. Giai nen V8 vao thu muc moi, KHONG giai nen de ghi de len thu muc cu.
+3. Neu muon GIU tài khoản, lịch sử học, bạn bè, chat, Battle:
+   copy chính hai tệp backend/database/mathweb.db và
+   backend/database/.mathweb_hmac_secret từ bản cài đặt cũ
+   sang cùng đường dẫn trong bản V8, trước khi mở server.
+   KHÔNG chia sẻ 2 tệp này qua Internet, GitHub hay file ZIP công khai.
+4. Neu cai moi: khong can chep 2 tep, backend se tu tao DB va khoa rieng.
+   Mat khau Admin lan dau duoc in ra cua so backend.
+5. Chay START_MATH_WEB.bat. Moi frontend duoc bat bang
+   scripts/serve_frontend.py; TUYET DOI khong dung python -m http.server
+   de phuc vu thu muc project khi co DB vi no co the lo thong tin rieng.
+6. Chi dung START_MATH_WEB_LAN.bat tren Wi-Fi tin cay. Neu muon public
+   Internet: can reverse proxy HTTPS, co che xac thuc va bao ve bo sung.
+7. KHONG phe duyet cau hoi tu dong. Admin phai kiem tra dap an,
+   loi giai va do trung lap truoc khi xuat ban.
+8. De 30 cau chu de chi mo neu co 30 cau duoc kiem chung; de dau vao
+   chua du 3-4 cau/muc/chu de thi chi la danh gia so bo.
+
+NOTE: V8 ZIP khong kem DB va khoa ky da duoc tao o phien ban thu nghiem.

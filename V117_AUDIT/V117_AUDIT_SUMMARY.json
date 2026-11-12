@@ -1,0 +1,36 @@
+{
+  "topics": 150,
+  "target_forms_per_topic": 500,
+  "target_unique_forms": 75000,
+  "target_questions": 750000,
+  "candidate_forms_prior": 196,
+  "candidate_forms_new": 56,
+  "candidate_forms_total": 252,
+  "candidate_questions_new": 560,
+  "candidate_question_packages_total": 252,
+  "candidate_questions_total_if_10_generated_per_prior_form": 2520,
+  "math_method_independence_certified": 0,
+  "topics_with_at_least_500_candidate_forms": 0,
+  "candidate_coverage_all_150": true,
+  "new_exact_text_collisions_with_checked_sources": 0,
+  "source_rows_read": [
+    {
+      "file": "V114_1650_MATH_VERIFIED_PENDING_REVIEW.jsonl",
+      "rows": 1650
+    },
+    {
+      "file": "V116_NEW_QUESTIONS_10_EACH.jsonl",
+      "rows": 310
+    },
+    {
+      "file": "verified_seed_bank.jsonl",
+      "rows": 344280
+    }
+  ],
+  "invalid_source_json_lines": 0,
+  "exact_signature_collision_groups": 2,
+  "new_methods_with_possible_similarity": 30,
+  "new_example_checks": "deterministic regeneration + symbolic equivalence; expert proof not complete",
+  "publication_blocked": true,
+  "warning": "Type IDs, formats and numerical variants are not distinct independent problem-solving methods."
+}

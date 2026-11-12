@@ -1,0 +1,19 @@
+{
+  "version": "V125",
+  "candidates": 1050,
+  "questions": 10500,
+  "topics": 150,
+  "source_method_clusters": 150,
+  "shared_core_clusters": 150,
+  "certified_new_independent_types": 0,
+  "discrepancies": {
+    "answer_numeric_mismatch_review": 2100,
+    "duplicate_candidate_ids": 0,
+    "wrong_question_count": 0,
+    "duplicate_normalized_stems": 0,
+    "duplicate_fingerprints": 0
+  },
+  "structural_gate_pass": true,
+  "mathematical_independence_gate_pass": false,
+  "note": "Structural checks do not independently prove mathematical answers or method novelty."
+}

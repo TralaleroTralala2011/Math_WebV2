@@ -1,0 +1,10 @@
+{
+  "source": "V188 patch plus V185-V187 comparison",
+  "existing_rows_scanned": 6976,
+  "new_families_candidates": 12,
+  "new_questions_exact_oracle_checked": 120,
+  "certified_independent_families": 0,
+  "confirmed_production_integrated": 0,
+  "rejected": [],
+  "notes": "No production database accessible; semantic independence not certified. Questions are short answer; equivalent answer grading requires application testing."
+}

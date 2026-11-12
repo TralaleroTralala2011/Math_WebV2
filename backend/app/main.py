@@ -1,3 +1,5 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -8,6 +10,7 @@ from .notifications.routes import router as notifications_router
 from .presence.routes import router as presence_router
 from .games.routes import router as games_router
 from .chat.routes import router as chat_router
+from .chat.live import router as chat_live_router
 from .matchmaking.routes import router as matchmaking_router
 from app.ai.routes import router as ai_router
 from .admin_routes import router as admin_router
@@ -15,6 +18,8 @@ from .video_routes import router as video_router
 from .quality_routes import router as quality_router
 from .tutor_routes import router as tutor_router
 from .learning_progress_routes import router as learning_progress_router
+from .roadmap_v2_routes import router as roadmap_v2_router
+from .question_factory_v2_routes import router as qf2_router
 from .study_suite_routes import router as study_suite_router
 from .final_features_routes import router as final_features_router
 from .ai.maintenance_worker import start_worker, stop_worker
@@ -24,10 +29,21 @@ from .ai.maintenance_worker import start_worker, stop_worker
 # APP
 # =========================================================
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Start background maintenance once per API process; always stop cleanly.
+    start_worker()
+    try:
+        yield
+    finally:
+        stop_worker()
+
+
 app = FastAPI(
     title="MATH WEB API",
     description="Backend API cho nền tảng luyện toán MATH WEB",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan
 )
 
 
@@ -95,6 +111,7 @@ app.include_router(notifications_router)
 app.include_router(presence_router)
 app.include_router(games_router)
 app.include_router(chat_router)
+app.include_router(chat_live_router)
 app.include_router(matchmaking_router)
 app.include_router(ai_router)
 app.include_router(admin_router)
@@ -102,6 +119,8 @@ app.include_router(video_router)
 app.include_router(quality_router)
 app.include_router(tutor_router)
 app.include_router(learning_progress_router)
+app.include_router(roadmap_v2_router)
+app.include_router(qf2_router)
 app.include_router(study_suite_router)
 app.include_router(final_features_router)
 
@@ -130,12 +149,3 @@ def health_check():
         "service": "MATH WEB API"
     }
 
-@app.on_event("startup")
-def start_mathweb_ai_maintenance():
-    # Background maintenance lives with the API process and uses the same SQLite bank.
-    start_worker()
-
-
-@app.on_event("shutdown")
-def stop_mathweb_ai_maintenance():
-    stop_worker()

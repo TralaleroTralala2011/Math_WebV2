@@ -1,0 +1,16 @@
+{
+  "version": "V203",
+  "candidate_families": 12,
+  "math_oracle_checked": 120,
+  "grades": {
+    "10": 40,
+    "11": 40,
+    "12": 40
+  },
+  "formats": {
+    "multiple_choice": 84,
+    "short_answer": 24,
+    "true_false": 12
+  },
+  "certified_independent_forms": 0
+}

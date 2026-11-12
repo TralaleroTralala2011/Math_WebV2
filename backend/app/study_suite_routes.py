@@ -1,7 +1,7 @@
 """Verified question bank, timed practice exams and spaced review.
 Only curated and independently checked items are published. No claims of full coverage.
 """
-import json, random, secrets, sqlite3
+import json, random, secrets, sqlite3, threading
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from fastapi import APIRouter, Header, HTTPException
@@ -24,16 +24,40 @@ SEED=[
 ('phuong_trinh','linear','Giải 5x-7=18.','5','5x=25 nên x=5.',1),
 ('phuong_trinh','fractions','Giải (x+1)/2=4.','7','x+1=8 nên x=7.',1),
 ]
+# Schema creation and seed insertion run once per database file, not on every
+# HTTP request. The inode key also handles a database replaced at the same path
+# (common in tests and controlled backup restores).
+_init_lock = threading.Lock()
+_initialized_databases = set()
+
+
 def connect():
- DB.parent.mkdir(parents=True,exist_ok=True)
- c=sqlite3.connect(DB,timeout=15); c.row_factory=sqlite3.Row
- c.execute('PRAGMA journal_mode=WAL')
- c.executescript("""CREATE TABLE IF NOT EXISTS questions(id INTEGER PRIMARY KEY,topic TEXT NOT NULL,kind TEXT NOT NULL,prompt TEXT NOT NULL,answer TEXT NOT NULL,solution TEXT NOT NULL,difficulty INTEGER NOT NULL,source TEXT NOT NULL,verified INTEGER NOT NULL DEFAULT 0,UNIQUE(topic,kind,prompt));
- CREATE TABLE IF NOT EXISTS exams(id TEXT PRIMARY KEY,user_id INTEGER NOT NULL,started TEXT NOT NULL,deadline TEXT NOT NULL,submitted TEXT,score REAL,answers TEXT,question_ids TEXT NOT NULL);
- CREATE TABLE IF NOT EXISTS reviews(user_id INTEGER NOT NULL,question_id INTEGER NOT NULL,interval_days INTEGER NOT NULL,ease REAL NOT NULL,due TEXT NOT NULL,last_correct INTEGER NOT NULL,PRIMARY KEY(user_id,question_id));""")
- for topic,kind,prompt,answer,solution,difficulty in SEED:
-  c.execute('INSERT OR IGNORE INTO questions(topic,kind,prompt,answer,solution,difficulty,source,verified) VALUES(?,?,?,?,?,?,?,1)',(topic,kind,prompt,answer,solution,difficulty,'MATH_WEB curated starter bank'))
- c.commit();return c
+ DB.parent.mkdir(parents=True, exist_ok=True)
+ c = sqlite3.connect(DB, timeout=15)
+ c.row_factory = sqlite3.Row
+ c.execute('PRAGMA busy_timeout=15000')
+ try:
+  stat = DB.stat()
+  key = (str(DB.resolve()), stat.st_dev, stat.st_ino)
+  if key not in _initialized_databases or stat.st_size == 0:
+   with _init_lock:
+    if key not in _initialized_databases or stat.st_size == 0:
+     c.execute('PRAGMA journal_mode=WAL')
+     c.executescript("""CREATE TABLE IF NOT EXISTS questions(id INTEGER PRIMARY KEY,topic TEXT NOT NULL,kind TEXT NOT NULL,prompt TEXT NOT NULL,answer TEXT NOT NULL,solution TEXT NOT NULL,difficulty INTEGER NOT NULL,source TEXT NOT NULL,verified INTEGER NOT NULL DEFAULT 0,UNIQUE(topic,kind,prompt));
+     CREATE TABLE IF NOT EXISTS exams(id TEXT PRIMARY KEY,user_id INTEGER NOT NULL,started TEXT NOT NULL,deadline TEXT NOT NULL,submitted TEXT,score REAL,answers TEXT,question_ids TEXT NOT NULL);
+     CREATE TABLE IF NOT EXISTS reviews(user_id INTEGER NOT NULL,question_id INTEGER NOT NULL,interval_days INTEGER NOT NULL,ease REAL NOT NULL,due TEXT NOT NULL,last_correct INTEGER NOT NULL,PRIMARY KEY(user_id,question_id));
+     CREATE INDEX IF NOT EXISTS idx_study_reviews_due ON reviews(user_id, due, last_correct);""")
+     for topic,kind,prompt,answer,solution,difficulty in SEED:
+      c.execute('INSERT OR IGNORE INTO questions(topic,kind,prompt,answer,solution,difficulty,source,verified) VALUES(?,?,?,?,?,?,?,1)',(topic,kind,prompt,answer,solution,difficulty,'MATH_WEB curated starter bank'))
+     c.execute("PRAGMA user_version=401")
+     c.commit()
+     _initialized_databases.add(key)
+  return c
+ except Exception:
+  c.close()
+  raise
+
+
 def uid(auth):
  u=get_current_user(auth)
  if not u: raise HTTPException(401,'Cần đăng nhập')
@@ -95,6 +119,8 @@ def schedule(c,user,qid,ok):
 def submit(exam_id:str,req:Submit,authorization:str|None=Header(default=None)):
  user=uid(authorization)
  with connect() as c:
+  # Serialize concurrent submissions before checking state.
+  c.execute('BEGIN IMMEDIATE')
   exam=exam_for(c,exam_id,user)
   if exam['submitted']:raise HTTPException(409,'Bài thi đã nộp, không thể nộp lại')
   if NOW()>datetime.fromisoformat(exam['deadline']):raise HTTPException(409,'Đã hết giờ. Bài thi chưa được nộp; hãy liên hệ hệ thống để xử lý.')

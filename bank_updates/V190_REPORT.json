@@ -1,0 +1,13 @@
+{
+  "version": "V190",
+  "previous": "V189",
+  "new_candidate_families": 4,
+  "new_questions": 40,
+  "new_independent_certified": 0,
+  "production_integrated": 0,
+  "old_question_rows_scanned": 8681,
+  "literal_duplicate_questions": 0,
+  "semantic_dedup_complete": false,
+  "all_150_topic_coverage_audited": false,
+  "notes": "Source bundles are patches, not a complete production bank. Independent-form certification and live retrieval remain unverified."
+}

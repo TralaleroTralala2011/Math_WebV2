@@ -1,0 +1,23 @@
+{
+  "version": "V74_QUALITY_AUDIT",
+  "source": "V73",
+  "existing_question_records": 333590,
+  "existing_form_ids": 33358,
+  "grade_topic_pairs": 140,
+  "labeled_method_family_clusters": 3247,
+  "form_ids_sharing_method_family": 30366,
+  "form_ids_with_under_10_questions": 0,
+  "form_ids_with_duplicate_question_text_inside_form": 0,
+  "records_missing_answer_or_solution": 0,
+  "new_form_ids_added": 0,
+  "new_questions_added": 0,
+  "independent_mathematical_types_verified_in_this_audit": 0,
+  "interpretation": "Shared method family is a flag, not a proof of identical mathematical type. Conversely, unique method family is not proof of distinctness. No form IDs are certified as independent types by this structural audit.",
+  "next_steps": [
+    "Review forms by curriculum topic and actual mathematical task, not IDs",
+    "Merge duplicates with the same solution structure",
+    "Build genuinely new form specifications with worked examples",
+    "Check answers independently and review explanations",
+    "Only then approve form IDs as independent types"
+  ]
+}
