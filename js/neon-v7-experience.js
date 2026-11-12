@@ -31,8 +31,8 @@ api('/api/users/me').then(d=>{
 api('/api/games/streak').then(s=>{
  const target=$('mw-v6-streak');if(target)target.textContent=number(s.current)+' ngày liên tiếp';
 }).catch(()=>{});
-api('/api/games/activity-heatmap').then(d=>{
- const squares=$('mw-v6-heat')?.querySelectorAll('i');if(!squares||!Array.isArray(d.days))return;
+window.MATHWEB_OPTIONAL_API.get('/api/games/activity-heatmap','activity_heatmap',token).then(d=>{
+ const squares=$('mw-v6-heat')?.querySelectorAll('i');if(!squares||!Array.isArray(d?.days))return;
  d.days.slice(-squares.length).forEach((day,i)=>{
   const n=Math.max(0,Number(day.sessions)||0);
   const square=squares[i];square.title=day.date+': '+n+' lượt luyện tập, '+number(day.questions)+' câu';
@@ -40,9 +40,9 @@ api('/api/games/activity-heatmap').then(d=>{
  });
 }).catch(()=>{});
 for(const grade of [10,11,12]){
- api('/api/roadmap-v2/status/'+grade).then(d=>{
+ window.MATHWEB_OPTIONAL_API.get('/api/roadmap-v2/status/'+grade,'roadmap_v2',token).then(d=>{
   const row=Array.from(document.querySelectorAll('.mw-v6-grade')).find(r=>r.querySelector('a')?.textContent.trim()==='Toán '+grade);
-  if(!row)return;
+  if(!row||!d)return;
   const bar=row.querySelector('.mw-v5-progress span'),label=row.querySelector('small');
   const total=Number(d.coverage?.topic_count)||0;
   if(!d.placement_complete){if(label)label.textContent='Chưa đánh giá';return}

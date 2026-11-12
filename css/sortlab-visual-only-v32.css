@@ -1,0 +1,28 @@
+/* MATH_WEB V32 | Visual-only SortLab-inspired effects. No app state / API changes. */
+:root{--mwfx-mint:#a7f3d0;--mwfx-blue:#93c5fd;--mwfx-purple:#c084fc;--mwfx-speed:.36s}
+/* Decorative background is purposefully low opacity and never receives clicks. */
+#mwfx-ambient{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;opacity:.42;contain:strict}
+#mwfx-ambient:before{content:"";position:absolute;inset:-25%;background:radial-gradient(ellipse at 16% 20%,rgba(167,243,208,.13),transparent 42%),radial-gradient(ellipse at 84% 80%,rgba(192,132,252,.12),transparent 46%),radial-gradient(ellipse at 53% 45%,rgba(147,197,253,.10),transparent 55%);animation:mwfx-ambient-drift 19s ease-in-out infinite alternate;will-change:transform}
+@keyframes mwfx-ambient-drift{from{transform:translate3d(-1.5%,0,0) scale(1)}to{transform:translate3d(1.5%,-1%,0) scale(1.05)}}
+/* Cursor halo is painted independently, never blocks controls. */
+#mwfx-cursor{position:fixed;left:0;top:0;width:220px;height:220px;z-index:10000;border-radius:50%;pointer-events:none;opacity:0;transform:translate3d(-999px,-999px,0);background:radial-gradient(circle,rgba(167,243,208,.12),rgba(147,197,253,.045) 33%,transparent 67%);mix-blend-mode:screen;transition:opacity .18s linear;will-change:transform}
+/* Entrance without resetting the layout or affecting app scripts. */
+body.mwfx-page-enter{animation:mwfx-page-arrive .42s cubic-bezier(.2,.85,.3,1) both}
+@keyframes mwfx-page-arrive{from{opacity:.86;filter:blur(2px)}to{opacity:1;filter:blur(0)}}
+/* The eligible cards receive a visual-only hover effect; no selector spans form fields. */
+.mwfx-card{transition:box-shadow var(--mwfx-speed) cubic-bezier(.16,1,.3,1),border-color var(--mwfx-speed) ease,filter var(--mwfx-speed) ease!important;position:relative}
+@media(hover:hover) and (pointer:fine){.mwfx-card:hover{filter:brightness(1.055);box-shadow:0 18px 45px rgba(0,0,0,.18),0 0 22px rgba(167,243,208,.10)!important}}
+.mwfx-card:focus-within{outline:2px solid rgba(147,197,253,.45);outline-offset:2px}
+/* A tiny highlight on links and buttons, never override their click handlers. */
+.mwfx-control{transition:filter .24s ease,box-shadow .24s ease!important}
+@media(hover:hover) and (pointer:fine){.mwfx-control:hover{filter:brightness(1.10)}}
+.mwfx-control:focus-visible{outline:2px solid var(--mwfx-blue);outline-offset:3px}
+/* Ripple is attached to the viewport rather than inserted into a functional button. */
+.mwfx-ripple{position:fixed;width:14px;height:14px;border-radius:50%;pointer-events:none;z-index:10001;border:1.5px solid rgba(167,243,208,.75);box-shadow:0 0 15px rgba(192,132,252,.32);transform:translate(-50%,-50%) scale(.4);animation:mwfx-ripple-wave .6s ease-out forwards}
+@keyframes mwfx-ripple-wave{to{opacity:0;transform:translate(-50%,-50%) scale(6)}}
+/* Slide-like stagger on a visual layer only; existing content is not initially hidden. */
+.mwfx-shine{position:fixed;top:0;left:-30%;width:30vw;height:2px;background:linear-gradient(90deg,transparent,var(--mwfx-mint),var(--mwfx-purple),transparent);pointer-events:none;z-index:10002;opacity:0;animation:mwfx-shine-pass .62s ease-out both}
+@keyframes mwfx-shine-pass{0%{opacity:0;transform:translateX(0)}20%{opacity:.7}100%{opacity:0;transform:translateX(440vw)}}
+/* Respect user accessibility and battery preferences. */
+@media(prefers-reduced-motion:reduce){#mwfx-ambient:before,body.mwfx-page-enter,.mwfx-ripple,.mwfx-shine{animation:none!important}#mwfx-ambient,#mwfx-cursor{display:none!important}.mwfx-card,.mwfx-control{transition:none!important}}
+@media(pointer:coarse),(max-width:768px){#mwfx-cursor{display:none!important}#mwfx-ambient{opacity:.24}}

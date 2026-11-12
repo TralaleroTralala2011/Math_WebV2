@@ -1,0 +1,64 @@
+name: Deploy MATH_WEB static frontend to GitHub Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install QA dependencies
+        run: python -m pip install -r backend/requirements.txt pytest httpx
+      - name: Verify bank source + deployment contract
+        env:
+          MATHWEB_DB_PATH: /tmp/mathweb_ci_preflight.sqlite3
+          MATHWEB_AI_HISTORY_DB_PATH: /tmp/mathweb_ci_preflight_history.sqlite3
+          MATHWEB_QUIET_BOOTSTRAP: '1'
+        run: |
+          python scripts/restore_v254_bank.py
+          PYTHONPATH=backend python scripts/v34_preflight.py
+      - name: Regression backend tests
+        env:
+          PYTHONPATH: backend
+          MATHWEB_QUIET_BOOTSTRAP: '1'
+          MATHWEB_DB_PATH: /tmp/mathweb_ci_users.sqlite3
+          MATHWEB_AI_HISTORY_DB_PATH: /tmp/mathweb_ci_history.sqlite3
+        run: pytest -q backend/tests --disable-warnings
+      - name: Prepare safe frontend files (never publish backend or SQLite)
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -f index.html ]; then SRC=.; elif [ -f MATH_WEB_GITHUB_READY/index.html ]; then SRC=MATH_WEB_GITHUB_READY; else echo 'index.html missing'; exit 1; fi
+          mkdir -p /tmp/mathweb-public
+          rsync -a "$SRC"/ /tmp/mathweb-public/ \
+            --exclude='.git' --exclude='.github' --exclude='.*' --exclude='backend' \
+            --exclude='mathweb_work' --exclude='MATH_WEB' \
+            --exclude='question_bank_v254_source' --exclude='_archive' \
+            --exclude='__pycache__' --exclude='.env*' --exclude='*.sqlite*' \
+            --exclude='*.db' --exclude='*.zip' --exclude='*.docx' \
+            --exclude='*.md' --exclude='*.jsonl' --exclude='*.py' \
+            --exclude='*.bat' --exclude='*.ps1' --exclude='*.png.bak'
+          test -f /tmp/mathweb-public/index.html
+          test ! -e /tmp/mathweb-public/backend
+          touch /tmp/mathweb-public/.nojekyll
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: /tmp/mathweb-public
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

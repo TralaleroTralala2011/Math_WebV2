@@ -1,4 +1,4 @@
-const api=(window.MATHWEB_API_BASE||localStorage.getItem('mathweb_api_base')||'http://127.0.0.1:8000').replace(/\/$/,'');
+const api=(window.MATHWEB_API_URL||'http://127.0.0.1:8000').replace(/\/$/,'');
 const token=()=>localStorage.getItem('mathweb_token')||localStorage.getItem('token')||'';
 const $=id=>document.getElementById(id);const message=x=>$('output').textContent=x;
 async function request(path,options={}){let r=await fetch(api+'/api/study-suite'+path,{...options,headers:{'Content-Type':'application/json',Authorization:'Bearer '+token(),...(options.headers||{})}});let d=await r.json();if(!r.ok)throw Error(typeof d.detail==='string'?d.detail:JSON.stringify(d.detail));return d;}

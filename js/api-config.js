@@ -19,7 +19,7 @@
     // A saved production API must not override the LAN backend when the user
     // opens the website from a phone on the same Wi-Fi. Explicit ?api= remains
     // available on local installs for advanced configuration.
-    let applicableSavedApi = storedApi;
+    let applicableSavedApi = isLocalNetwork ? storedApi : null;
     if (isLocalNetwork && storedApi) {
         try {
             const savedHost = new URL(storedApi).hostname;
@@ -31,7 +31,7 @@
     const configuredApi =
         queryApi ||
         applicableSavedApi ||
-        window.MATHWEB_API_URL ||
+        (isLocalNetwork ? window.MATHWEB_API_URL : null) ||
         (isLocalNetwork ? localApi : productionApi);
 
     let validApi = isLocalNetwork ? localApi : productionApi;

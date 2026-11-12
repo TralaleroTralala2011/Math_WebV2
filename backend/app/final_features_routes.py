@@ -1,3 +1,4 @@
+import os
 """Features 10-12: restricted teacher/admin workflow, evidence-based achievements, publication QA."""
 import json, sqlite3, hashlib, threading
 from pathlib import Path
@@ -10,7 +11,7 @@ from .study_suite_routes import connect as study_connect, correct
 from .quality_routes import load, assessment
 
 router=APIRouter(prefix='/api/final-features',tags=['final-features'])
-DB=Path(__file__).resolve().parents[2]/'database'/'final_features.sqlite3'
+DB = Path(os.environ["MATHWEB_DATA_DIR"]) / "final_features.sqlite3" if os.environ.get("MATHWEB_DATA_DIR") else Path(__file__).resolve().parents[2] / "database" / "final_features.sqlite3"
 def now(): return datetime.now(timezone.utc).isoformat()
 _init_lock = threading.Lock()
 _initialized_databases = set()

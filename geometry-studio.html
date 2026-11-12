@@ -18,8 +18,9 @@
 </style>
 <link rel="stylesheet" href="css/geometry-studio-fallback.css">
 <link rel="stylesheet" href="css/quick-navigation.css">
-<link rel="stylesheet" href="css/geometry-mobile-v21.css">
-<link rel="stylesheet" href="css/neon-v5.css?v=5" /><link rel="stylesheet" href="css/neon-v6.css?v=6" /><link rel="stylesheet" href="css/neon-v7.css?v=7"><link rel="stylesheet" href="css/neon-v8.css?v=8"><link rel="stylesheet" href="css/neon-v26-unified.css?v=26"><link rel="stylesheet" href="css/neon-v27-usability.css?v=27"><link rel="stylesheet" href="css/neon-v28-editorial.css?v=28"></head>
+<link rel="stylesheet" href="css/geometry-mobile-v21.css"><link rel="stylesheet" href="css/geometry-mobile-v33.css?v=33">
+<link rel="stylesheet" href="css/neon-v5.css?v=5" /><link rel="stylesheet" href="css/neon-v6.css?v=6" /><link rel="stylesheet" href="css/neon-v7.css?v=7"><link rel="stylesheet" href="css/neon-v8.css?v=8"><link rel="stylesheet" href="css/neon-v26-unified.css?v=26"><link rel="stylesheet" href="css/neon-v27-usability.css?v=27"><link rel="stylesheet" href="css/neon-v28-editorial.css?v=28"><link rel="stylesheet" href="css/sortlab-visual-only-v32.css?v=32">
+</head>
 <body class="mw-geometry-studio bg-slate-900 h-screen flex flex-col font-sans overflow-hidden text-slate-100">
 
     <!-- Header Điều khiển & Nhập hàm số, Parabol, Tọa độ -->
@@ -635,22 +636,36 @@
             return "P" + (++pointCounter);
         }
 
-        function resizeCanvas() {
-            const dpr = window.devicePixelRatio || 1;
-            const displayWidth = canvas.parentElement.clientWidth;
-            const displayHeight = canvas.parentElement.clientHeight;
-            canvas.width = displayWidth * dpr;
-            canvas.height = displayHeight * dpr;
-            canvas.style.width = displayWidth + 'px';
-            canvas.style.height = displayHeight + 'px';
-            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-            draw();
+        // The canvas is a flex child: do not set its CSS height to its parent's
+        // total height, which also includes the bottom status bar on phones.
+        let resizeFrame = 0, lastDisplayWidth = 0, lastDisplayHeight = 0;
+        let canvasRect = null, drawFrame = 0;
+        function requestDraw() {
+            if(drawFrame)return;
+            drawFrame = requestAnimationFrame(() => {drawFrame = 0;draw();});
         }
-        window.addEventListener('resize', resizeCanvas);
-        if(window.ResizeObserver)new ResizeObserver(()=>resizeCanvas()).observe(canvas.parentElement);
-
+        function resizeCanvas() {
+            if(resizeFrame)return;
+            resizeFrame = requestAnimationFrame(() => {
+                resizeFrame = 0;
+                // Match the actual flex-computed CSS size. This keeps bitmap
+                // pixels and pointer coordinates aligned even if the toolbar wraps.
+                const width = Math.max(1,Math.floor(canvas.clientWidth));
+                const height = Math.max(1,Math.floor(canvas.clientHeight));
+                canvasRect = null;
+                if(width===lastDisplayWidth && height===lastDisplayHeight)return;
+                lastDisplayWidth=width;lastDisplayHeight=height;
+                const dpr = Math.min(2,window.devicePixelRatio || 1);
+                canvas.width = Math.round(width*dpr);
+                canvas.height = Math.round(height*dpr);
+                ctx.setTransform(dpr,0,0,dpr,0,0);
+                draw();
+            });
+        }
+        window.addEventListener('resize', resizeCanvas,{passive:true});
+        if(window.ResizeObserver)new ResizeObserver(resizeCanvas).observe(canvas.parentElement);
         function getCanvasCoordinates(e) {
-            const rect = canvas.getBoundingClientRect();
+            const rect = canvasRect || canvas.getBoundingClientRect();
             return {
                 x: (e.clientX - rect.left - panX) / zoom,
                 y: (e.clientY - rect.top - panY) / zoom
@@ -1541,6 +1556,7 @@
 
         canvas.addEventListener('pointerdown', (e) => {
             if (e.pointerType !== 'mouse') e.preventDefault();
+            canvasRect = canvas.getBoundingClientRect();
             canvas.setPointerCapture?.(e.pointerId);
             activePointers.set(e.pointerId, {x:e.clientX, y:e.clientY});
             if (activePointers.size >= 2) {
@@ -1767,7 +1783,7 @@
                     const cy=(values[0].y+values[1].y)/2-rect.top;
                     const next=Math.max(.2,Math.min(4,zoom*distance/lastPinchDistance));
                     panX=cx-(cx-panX)*next/zoom; panY=cy-(cy-panY)*next/zoom;
-                    zoom=next; updateZoomDisplay(); draw();
+                    zoom=next; updateZoomDisplay(); requestDraw();
                 }
                 lastPinchDistance=distance;return;
             }
@@ -1779,25 +1795,25 @@
                 mode3D.rotX += deltaY * 0.008;
                 mode3D.lastMouseX = e.clientX;
                 mode3D.lastMouseY = e.clientY;
-                draw();
+                requestDraw();
                 return;
             }
 
             if (isPanning) {
                 panX = e.clientX - startPanX;
                 panY = e.clientY - startPanY;
-                draw();
+                requestDraw();
                 return;
             }
             if (draggedPoint && currentTool === 'select' && currentMode === '2D') {
                 const coords = getCanvasCoordinates(e);
                 points[draggedPoint].x = Math.round(coords.x / GRID_SIZE) * GRID_SIZE;
                 points[draggedPoint].y = Math.round(coords.y / GRID_SIZE) * GRID_SIZE;
-                draw(); updateStats();
+                requestDraw(); updateStats();
             }
         });
 
-        const finishPointer=e=>{ activePointers.delete(e.pointerId); draggedPoint=null; isPanning=false; mode3D.isRotating=false; lastPinchDistance=0; try{if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId)}catch{}; };
+        const finishPointer=e=>{ canvasRect=null;activePointers.delete(e.pointerId); draggedPoint=null; isPanning=false; mode3D.isRotating=false; lastPinchDistance=0; try{if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId)}catch{}; };
         window.addEventListener('pointerup',finishPointer);
         window.addEventListener('pointercancel',finishPointer);
         function zoomAtCenter(factor) {
@@ -1835,6 +1851,7 @@
         }
 
     </script>
-<section id="measure-panel" style="position:fixed;bottom:15px;right:15px;z-index:60;background:#1e1b4bee;border:1px solid #8b5cf6;border-radius:14px;padding:13px;color:#fff;max-width:min(340px,94vw);box-shadow:0 10px 32px #0005;font:13px system-ui"><b>📏 Đo đạc và chú thích</b><button id="measure-collapse" type="button" aria-expanded="false" aria-controls="measure-controls" title="Mở/đóng bảng đo đạc">Mở bảng đo</button><div id="measure-controls"><div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap"><input id="measure-a" placeholder="Điểm A" aria-label="Tên điểm đầu" style="width:68px;color:#111;padding:7px;border-radius:7px"><input id="measure-b" placeholder="Điểm B" aria-label="Tên điểm cuối" style="width:68px;color:#111;padding:7px;border-radius:7px"><input id="measure-c" placeholder="Điểm C" aria-label="Tên điểm thứ ba" style="width:75px;color:#111;padding:7px;border-radius:7px"></div><div style="margin-top:8px;display:flex;gap:6px"><button id="measure-length" style="background:#7c3aed;padding:7px;border-radius:7px">Độ dài AB</button><button id="measure-angle" style="background:#7c3aed;padding:7px;border-radius:7px">Góc ABC</button></div><p id="measure-result" aria-live="polite" style="margin:8px 0 0">Nhập tên các điểm đã dựng.</p></div></section><script>(function(){const el=id=>document.getElementById(id);function get(name){return points[String(el(name).value).trim().toUpperCase()]}function result(s){el('measure-result').textContent=s}el('measure-length').onclick=()=>{const a=get('measure-a'),b=get('measure-b');if(!a||!b)return result('Không tìm thấy điểm A hoặc B.');const scale=getUnitScale(),length=Math.hypot(a.x-b.x,a.y-b.y)/GRID_SIZE*scale.val;result('Độ dài: '+length.toFixed(3)+' '+scale.name)};el('measure-angle').onclick=()=>{const a=get('measure-a'),b=get('measure-b'),c=get('measure-c');if(!a||!b||!c)return result('Cần nhập đủ 3 điểm đã dựng.');const u=[a.x-b.x,a.y-b.y],v=[c.x-b.x,c.y-b.y],d=Math.hypot(...u)*Math.hypot(...v);if(!d)return result('Các điểm không xác định được góc.');const angle=Math.acos(Math.max(-1,Math.min(1,(u[0]*v[0]+u[1]*v[1])/d)))*180/Math.PI;result('Góc ABC: '+angle.toFixed(2)+'°')};const panel=el('measure-panel'),collapse=el('measure-collapse');collapse.onclick=()=>{const active=panel.classList.toggle('measure-expanded');collapse.setAttribute('aria-expanded',String(active));collapse.textContent=active?'Đóng bảng đo':'Mở bảng đo'};if(new URLSearchParams(location.search).get('mode')==='3d')window.addEventListener('load',()=>switchMode('3D'))})();</script><div style="position:fixed;bottom:0;left:0;z-index:45;background:#0f172acc;color:#c4b5fd;padding:3px 8px;font:10px system-ui">Dự án khoa học kỹ thuật · Người thực hiện: Lê Đức Nhân và Ngô Phúc Huy · Giáo viên hướng dẫn: GV Việt Hòa</div><script src="js/geometry-mobile-v21.js" defer></script><script src="js/quick-navigation.js" defer></script>
-<script src="js/neon-v5.js?v=5" defer></script><script src="js/neon-v6-experience.js?v=6" defer></script><script defer src="js/neon-v7-experience.js?v=7"></script><script src="js/neon-v26-unified.js?v=26" defer></script><script src="js/neon-v27-usability.js?v=27" defer></script></body>
+<section id="measure-panel" style="position:fixed;bottom:15px;right:15px;z-index:60;background:#1e1b4bee;border:1px solid #8b5cf6;border-radius:14px;padding:13px;color:#fff;max-width:min(340px,94vw);box-shadow:0 10px 32px #0005;font:13px system-ui"><b>📏 Đo đạc và chú thích</b><button id="measure-collapse" type="button" aria-expanded="false" aria-controls="measure-controls" title="Mở/đóng bảng đo đạc">Mở bảng đo</button><div id="measure-controls"><div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap"><input id="measure-a" placeholder="Điểm A" aria-label="Tên điểm đầu" style="width:68px;color:#111;padding:7px;border-radius:7px"><input id="measure-b" placeholder="Điểm B" aria-label="Tên điểm cuối" style="width:68px;color:#111;padding:7px;border-radius:7px"><input id="measure-c" placeholder="Điểm C" aria-label="Tên điểm thứ ba" style="width:75px;color:#111;padding:7px;border-radius:7px"></div><div style="margin-top:8px;display:flex;gap:6px"><button id="measure-length" style="background:#7c3aed;padding:7px;border-radius:7px">Độ dài AB</button><button id="measure-angle" style="background:#7c3aed;padding:7px;border-radius:7px">Góc ABC</button></div><p id="measure-result" aria-live="polite" style="margin:8px 0 0">Nhập tên các điểm đã dựng.</p></div></section><script>(function(){const el=id=>document.getElementById(id);function get(name){return points[String(el(name).value).trim().toUpperCase()]}function result(s){el('measure-result').textContent=s}el('measure-length').onclick=()=>{const a=get('measure-a'),b=get('measure-b');if(!a||!b)return result('Không tìm thấy điểm A hoặc B.');const scale=getUnitScale(),length=Math.hypot(a.x-b.x,a.y-b.y)/GRID_SIZE*scale.val;result('Độ dài: '+length.toFixed(3)+' '+scale.name)};el('measure-angle').onclick=()=>{const a=get('measure-a'),b=get('measure-b'),c=get('measure-c');if(!a||!b||!c)return result('Cần nhập đủ 3 điểm đã dựng.');const u=[a.x-b.x,a.y-b.y],v=[c.x-b.x,c.y-b.y],d=Math.hypot(...u)*Math.hypot(...v);if(!d)return result('Các điểm không xác định được góc.');const angle=Math.acos(Math.max(-1,Math.min(1,(u[0]*v[0]+u[1]*v[1])/d)))*180/Math.PI;result('Góc ABC: '+angle.toFixed(2)+'°')};const panel=el('measure-panel'),collapse=el('measure-collapse');collapse.onclick=()=>{const active=panel.classList.toggle('measure-expanded');collapse.setAttribute('aria-expanded',String(active));collapse.textContent=active?'Đóng bảng đo':'Mở bảng đo'};if(new URLSearchParams(location.search).get('mode')==='3d')window.addEventListener('load',()=>switchMode('3D'))})();</script><div style="position:fixed;bottom:0;left:0;z-index:45;background:#0f172acc;color:#c4b5fd;padding:3px 8px;font:10px system-ui">Dự án khoa học kỹ thuật · Người thực hiện: Lê Đức Nhân và Ngô Phúc Huy · Giáo viên hướng dẫn: GV Việt Hòa</div><script src="js/geometry-mobile-v21.js" defer></script><script src="js/geometry-mobile-v33.js?v=33" defer></script><script src="js/quick-navigation.js" defer></script>
+<script src="js/neon-v5.js?v=5" defer></script><script src="js/neon-v6-experience.js?v=6" defer></script><script defer src="js/neon-v7-experience.js?v=7"></script><script src="js/neon-v26-unified.js?v=26" defer></script><script src="js/neon-v27-usability.js?v=27" defer></script><script src="js/sortlab-visual-only-v32.js?v=32" defer></script>
+</body>
 </html>

@@ -146,6 +146,12 @@ def health_check():
     return {
         "success": True,
         "status": "online",
-        "service": "MATH WEB API"
+        "service": "MATH WEB API",
+        "release": "v33-github-mobile",
+        "features": {
+            "roadmap_v2": True,
+            "activity_heatmap": True,
+            "tutor_recommendations": True
+        }
     }
 

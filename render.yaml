@@ -1,13 +1,27 @@
+# MATH_WEB production pilot blueprint. Persistent disk on paid Render service required.
+# GitHub Pages serves frontend only, this service handles account/Battle/Chat/DB.
 services:
   - type: web
-    name: math-web-api-tralalerotralala2011
+    name: math-webv2
     runtime: python
-    rootDir: backend
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    plan: starter
+    buildCommand: pip install -r backend/requirements.txt && python scripts/restore_v254_bank.py
+    startCommand: uvicorn app.main:app --app-dir backend --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
+    disk:
+      name: mathweb-pilot-data
+      mountPath: /var/data
+      sizeGB: 1
     envVars:
       - key: PYTHON_VERSION
         value: 3.13.5
       - key: MATH_WEB_SECRET_KEY
         generateValue: true
+      - key: MATHWEB_BOOTSTRAP_ADMIN_PASSWORD
+        sync: false
+      - key: MATHWEB_DATA_DIR
+        value: /var/data
+      - key: MATHWEB_DB_PATH
+        value: /var/data/mathweb.db
+      - key: MATHWEB_AI_HISTORY_DB_PATH
+        value: /var/data/mathweb_ai_history.sqlite3

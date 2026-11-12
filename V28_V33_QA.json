@@ -1,0 +1,80 @@
+{
+  "release": "MATH_WEB V33 · GitHub/Render Sync & Mobile Geometry",
+  "source_zip": "MATH_WEB_V28_CLASSIC_V32_SORTLAB_VISUAL_ONLY.zip",
+  "source_existing_files_unchanged": 1969,
+  "changed_existing_files": [
+    "render.yaml",
+    "learn.html",
+    "index.html",
+    "geometry-studio.html",
+    "js/neon-v6-experience.js",
+    "js/geometry-lab.js",
+    "js/learn-neon-v5.js",
+    "js/neon-v7-experience.js",
+    "backend/app/main.py"
+  ],
+  "new_files": [
+    ".github/workflows/pages.yml",
+    "DEPLOY_GITHUB_RENDER_V33.md",
+    "V33_BROWSER_SIMULATION.json",
+    "backend/tests/test_v33_deploy_contract.py",
+    "css/geometry-mobile-v33.css",
+    "js/geometry-mobile-v33.js",
+    "js/optional-api-v33.js",
+    "qa/v33_optional_api_test.cjs"
+  ],
+  "missing_existing_files": [],
+  "html_root_pages_checked": 20,
+  "missing_relative_html_assets": [],
+  "bank_sha256_unchanged": true,
+  "bank_sqlite_quick_check": "ok",
+  "bank_counts": {
+    "questions": 83298,
+    "b54_word_labels": 95514
+  },
+  "health_contract_test": "passed",
+  "optional_api_fallback_node_test": "passed",
+  "geometry_browser_content_test": {
+    "mobile": {
+      "cw": 390,
+      "ch": 635,
+      "pw": 390,
+      "ph": 661,
+      "canvasWidth": 390,
+      "canvasHeight": 635,
+      "footer": 26,
+      "mode": "2D",
+      "dock": "flex",
+      "badge": true,
+      "points": 2,
+      "scrollWidth": 390,
+      "viewport": 390,
+      "tap_created_point": true,
+      "pinch_zoom_changed": true,
+      "errors": []
+    },
+    "desktop": {
+      "cw": 925,
+      "ch": 630,
+      "pw": 925,
+      "ph": 667,
+      "canvasWidth": 925,
+      "canvasHeight": 630,
+      "footer": 18,
+      "mode": "2D",
+      "dock": "none",
+      "badge": true,
+      "points": 2,
+      "scrollWidth": 1365,
+      "viewport": 1365,
+      "errors": []
+    }
+  },
+  "limitation": "Production URLs cannot be redeployed/tested from this session; rendering simulation used browser.set_content instead of deployed site",
+  "notes": [
+    "404 on Render means a deployed backend mismatch can persist until Render service is updated",
+    "GitHub Pages cannot serve FastAPI; Pages workflow publishes static files only",
+    "Backend SQLite accounts require persistent storage on Render; no production durability asserted",
+    "Forced-reflow warnings are performance signals and may still appear on older/slow clients"
+  ]
+}

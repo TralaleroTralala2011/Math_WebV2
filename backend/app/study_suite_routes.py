@@ -1,3 +1,4 @@
+import os
 """Verified question bank, timed practice exams and spaced review.
 Only curated and independently checked items are published. No claims of full coverage.
 """
@@ -9,7 +10,7 @@ from pydantic import BaseModel, Field
 from .auth.routes import get_current_user
 
 router=APIRouter(prefix='/api/study-suite', tags=['study-suite'])
-DB=Path(__file__).resolve().parents[2]/'database'/'study_suite.sqlite3'
+DB = Path(os.environ["MATHWEB_DATA_DIR"]) / "study_suite.sqlite3" if os.environ.get("MATHWEB_DATA_DIR") else Path(__file__).resolve().parents[2] / "database" / "study_suite.sqlite3"
 CATALOG=Path(__file__).resolve().parents[2]/'learn-assets'/'topics.json'
 NOW=lambda:datetime.now(timezone.utc)
 # All items below have manually checked answers; this is an initial small bank, not 150-topic coverage.

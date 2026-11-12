@@ -14,3 +14,10 @@ Thumbs.db
 .mathweb_hmac_secret
 .env
 .env.*
+
+# SQLite write-ahead logs and QA artifacts must never be committed
+*.db-*
+*.sqlite-*
+*.sqlite3-*
+.pytest_cache/
+*_qa_tmp.db

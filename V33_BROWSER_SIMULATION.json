@@ -1,0 +1,36 @@
+{
+  "mobile": {
+    "cw": 390,
+    "ch": 635,
+    "pw": 390,
+    "ph": 661,
+    "canvasWidth": 390,
+    "canvasHeight": 635,
+    "footer": 26,
+    "mode": "2D",
+    "dock": "flex",
+    "badge": true,
+    "points": 2,
+    "scrollWidth": 390,
+    "viewport": 390,
+    "tap_created_point": true,
+    "pinch_zoom_changed": true,
+    "errors": []
+  },
+  "desktop": {
+    "cw": 925,
+    "ch": 630,
+    "pw": 925,
+    "ph": 667,
+    "canvasWidth": 925,
+    "canvasHeight": 630,
+    "footer": 18,
+    "mode": "2D",
+    "dock": "none",
+    "badge": true,
+    "points": 2,
+    "scrollWidth": 1365,
+    "viewport": 1365,
+    "errors": []
+  }
+}

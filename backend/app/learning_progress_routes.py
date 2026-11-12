@@ -1,3 +1,4 @@
+import os
 """Authenticated diagnostic mastery and prerequisite-aware recommendations.
 Only server-graded diagnostic questions influence verified mastery. No XP awarded.
 """
@@ -11,7 +12,7 @@ from .quality_routes import EDGES
 
 router = APIRouter(prefix="/api/learning-progress", tags=["learning-progress"])
 TOPICS_PATH = Path(__file__).resolve().parents[2] / "learn-assets/topics.json"
-DB = Path(__file__).resolve().parents[2] / "database/learning_progress.sqlite3"
+DB = Path(os.environ["MATHWEB_DATA_DIR"]) / "learning_progress.sqlite3" if os.environ.get("MATHWEB_DATA_DIR") else Path(__file__).resolve().parents[2] / "database" / "learning_progress.sqlite3"
 
 def topics():
     return json.loads(TOPICS_PATH.read_text(encoding="utf-8"))

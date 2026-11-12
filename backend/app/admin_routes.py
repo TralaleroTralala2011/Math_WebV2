@@ -98,15 +98,20 @@ def ensure_admin_schema_and_account():
                 conn.execute("INSERT INTO admin_accounts(username,password_hash,status,auth_version,created_at) VALUES(?,?,?,?,?)",
                              (ADMIN_USERNAME, admin["password_hash"], "active", 0, admin["created_at"] or now_iso()))
             else:
+                if os.getenv("MATHWEB_DATA_DIR") and not BOOTSTRAP_PASSWORD:
+                    raise RuntimeError("Set Render secret MATHWEB_BOOTSTRAP_ADMIN_PASSWORD before creating the first admin account.")
                 initial_password = BOOTSTRAP_PASSWORD or secrets.token_urlsafe(24)
                 if len(initial_password) < 8:
                     raise RuntimeError("MATHWEB_BOOTSTRAP_ADMIN_PASSWORD must contain at least 8 characters.")
                 conn.execute("INSERT INTO admin_accounts(username,password_hash,status,auth_version,created_at) VALUES(?,?,?,?,?)",
                              (ADMIN_USERNAME, hash_password(initial_password), "active", 0, now_iso()))
-                # Only printed for newly created admins, not on every restart.
+                # Never print production admin credentials to hosted logs.
                 print("[MATH_WEB ADMIN SETUP] Initial username:", ADMIN_USERNAME, flush=True)
-                print("[MATH_WEB ADMIN SETUP] Initial password:", initial_password, flush=True)
-                print("[MATH_WEB ADMIN SETUP] Change this password immediately after signing in.", flush=True)
+                if os.getenv("MATHWEB_DATA_DIR"):
+                    print("[MATH_WEB ADMIN SETUP] Admin credential loaded from Render secret setting; value is hidden.", flush=True)
+                elif not os.getenv("MATHWEB_QUIET_BOOTSTRAP"):
+                    print("[MATH_WEB ADMIN SETUP] Local-only initial password:", initial_password, flush=True)
+                    print("[MATH_WEB ADMIN SETUP] Change this password immediately after signing in.", flush=True)
         # Keep old audit/user references safe, but hide the legacy shadow from learner lists.
         conn.execute("DROP INDEX IF EXISTS idx_single_admin_role")
         if admin:

@@ -1,0 +1,24 @@
+{
+  "source_zip": "MATH_WEB_V28_CLASSIC_V30_LOGIN_GRADING_UI_FIX(1).zip",
+  "reference_html": "sorting_algorithms_cyber_presentation_EPIC (1).html",
+  "scope": "Presentation visual FX adapted only. Original functions not replaced.",
+  "root_html_modified": 20,
+  "css_added": 1,
+  "js_added": 1,
+  "source_files_preserved_byte_identical": 1954,
+  "source_file_count": 1974,
+  "functional_files_changed": 0,
+  "functional_files_preserved": "all original .py, .js, database, assets and config bytes",
+  "effects": [
+    "subtle ambient glow",
+    "non-blocking page fade",
+    "cursor halo",
+    "click ripple",
+    "card hover glow",
+    "focus-visible support",
+    "reduced-motion support"
+  ],
+  "no_import_of_sorting_algorithms_code": true,
+  "check_js_syntax": "PASS",
+  "browser_end_to_end": "NOT_RUN"
+}
