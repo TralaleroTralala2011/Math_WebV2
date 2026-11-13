@@ -29,9 +29,9 @@
 
         MAX_MATCH_WAIT_SECONDS: 600,
 
-        MAX_GAME_TIME_SECONDS: 1800,
+        MAX_GAME_TIME_SECONDS: 300,
 
-        MAX_QUESTIONS: 100,
+        MAX_QUESTIONS: Number.MAX_SAFE_INTEGER,
 
         ANSWER_FEEDBACK_DELAY: 650,
 
@@ -3238,7 +3238,7 @@
         ) {
 
             showToast(
-                "❌ Trận đấu chưa có bộ câu hỏi AI.",
+                "❌ Ngân hàng đề chưa có câu hỏi phù hợp cho trận đấu.",
                 "error"
             );
 
@@ -3312,9 +3312,7 @@
             );
 
         if (timerElement) {
-
-            timerElement.textContent =
-                "00:00";
+            timerElement.textContent = "05:00";
         }
 
         showScreen(gameScreen);
@@ -3334,8 +3332,7 @@
                 correct = safeInteger(mine.correct, 0);
                 wrong = safeInteger(mine.wrong, 0);
                 blank = safeInteger(mine.blank, 0);
-                if (normalizeMatchStatus(progress.status) === 'FINISHED' ||
-                    currentQuestionIndex >= questions.length) {
+                if (normalizeMatchStatus(progress.status) === 'FINISHED') {
                     finishGame();
                     return;
                 }
@@ -3345,7 +3342,12 @@
         }
         connectBattleSocket();
         startGameTimer();
-        renderQuestion();
+        if (currentQuestionIndex >= questions.length) {
+            currentQuestionIndex--;
+            nextQuestion();
+        } else {
+            renderQuestion();
+        }
     }
 
 
@@ -3397,7 +3399,7 @@
 
                         timerElement.textContent =
                             formatTime(
-                                safeSeconds
+                                BATTLE_CONFIG.MAX_GAME_TIME_SECONDS - safeSeconds
                             );
                     }
 
@@ -4240,13 +4242,31 @@
 
         currentQuestionIndex++;
 
-        if (
-            currentQuestionIndex >=
-            questions.length
-        ) {
-
-            finishGame();
-
+        if (currentQuestionIndex >= questions.length) {
+            // Request a new shared batch from the existing question bank.
+            // The server never generates questions for Battle.
+            (async function () {
+                try {
+                    const response = await apiFetch(
+                        `${BATTLE_API_URL}/api/matchmaking/match/${encodeURIComponent(currentMatchId)}`,
+                        { headers: authHeaders() }
+                    );
+                    if (!response.ok) throw new Error('Không thể tải thêm câu từ ngân hàng');
+                    const fresh = await readJSON(response);
+                    if (normalizeMatchStatus(fresh.status) === 'FINISHED') {
+                        finishGame(); return;
+                    }
+                    questions = normalizeQuestions(fresh.questions || []);
+                    if (currentQuestionIndex < questions.length) {
+                        renderQuestion();
+                    } else {
+                        showToast('Ngân hàng đã hết câu phù hợp cho trận này.', 'error');
+                        // Keep match clock running; no fabricated questions.
+                    }
+                } catch (error) {
+                    showToast('Chưa tải được câu tiếp theo. Kiểm tra kết nối mạng.', 'error');
+                }
+            })();
             return;
         }
 

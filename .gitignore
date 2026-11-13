@@ -21,3 +21,10 @@ Thumbs.db
 *.sqlite3-*
 .pytest_cache/
 *_qa_tmp.db
+node_modules/
+*.pyc
+!.env.example
+*.db-wal
+*.db-shm
+/MATH_WEB/
+/mathweb_work/

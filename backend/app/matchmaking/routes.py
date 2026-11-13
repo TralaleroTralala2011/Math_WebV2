@@ -26,7 +26,7 @@ MATCH_TOTAL_QUESTIONS = 10
 
 MATCH_QUEUE_TIMEOUT_SECONDS = 10 * 60
 MATCH_INVITE_TIMEOUT_SECONDS = 18
-MATCH_MAX_DURATION_SECONDS = 30 * 60
+MATCH_MAX_DURATION_SECONDS = 5 * 60
 
 MAX_PLAYER_ID_LENGTH = 100
 MAX_MATCH_ID = 2_147_483_647
@@ -275,7 +275,7 @@ class MatchAnswerRequest(BaseModel):
     question_index: int = Field(
         ...,
         ge=0,
-        le=MATCH_TOTAL_QUESTIONS - 1
+        le=1_000_000
     )
 
     answer: object = None
@@ -285,7 +285,7 @@ class MatchSkipRequest(BaseModel):
     question_index: int = Field(
         ...,
         ge=0,
-        le=MATCH_TOTAL_QUESTIONS - 1
+        le=1_000_000
     )
 
 
@@ -585,93 +585,86 @@ def get_common_topics(grade, topics1, topics2):
     return common[:MAX_TOPIC_COUNT]
 
 
-def generate_ai_battle_questions(grade, topics, difficulty, question_type):
-    """Build a validated Battle-only deck without exhausting practice history.
+def generate_ai_battle_questions(grade, topics, difficulty, question_type, *, existing=None, count=MATCH_TOTAL_QUESTIONS):
+    """Battle only reads existing bank entries; never invokes a generator.
 
-    Normal generation remains the first choice. The fallback does not write to
-    the persistent practice uniqueness ledger and never returns invalid or
-    verbatim-duplicate questions within a match.
+    Returns a shared batch of validated questions, excluding previous prompts.
+    If the bank is exhausted, it returns a shorter batch or raises 503 initially.
     """
+    from ..ai.engine.validator import validate, ValidationError
+    from ..questions.answer_checker import canonical_type
+    existing = list(existing or [])
+    seen = {" ".join(str(q.get("question", "")).casefold().split()) for q in existing}
+    result = []
+    topics = list(dict.fromkeys(str(t) for t in topics if t))
     if not topics:
         raise HTTPException(status_code=409, detail="Hai người chơi không có chủ đề chung.")
-
-    from ..questions.answer_checker import canonical_type
-    from ..ai.engine.validator import validate, ValidationError
-    import random
-
-    topic_cycle = list(dict.fromkeys(str(t) for t in topics if t))[:2]
-    if not topic_cycle:
-        raise HTTPException(status_code=409, detail="Chưa có chủ đề thi đấu.")
-
-    battle_types = ["multiple_choice"] * 7 + ["short_answer"] * 2 + ["true_false"]
-    random.shuffle(battle_types)
-    clean_questions = []
-    seen_text = set()
-
-    def accept(candidate, expected_type):
-        if not isinstance(candidate, dict):
-            return None
-        item = dict(candidate)
+    types = ["multiple_choice", "short_answer", "true_false"] if question_type == "mixed" else [question_type]
+    candidates = []
+    for topic in topics:
+        for kind in types:
+            for item in ai_service._curated_admin_candidates(grade, topic, difficulty, kind):
+                q = ai_service._build_curated_question(item, grade, topic, difficulty, kind)
+                if q is not None:
+                    candidates.append(q)
+            # V254 draft bank is existing data, not generated at match time.
+            for batch in range(4):
+              for item in ai_service._v254_candidates(grade, topic, "medium", kind):
+                  try:
+                      options = json.loads(item.get("options") or "[]")
+                      q = {
+                          "id": "v254_" + str(item["id"]), "grade": grade,
+                          "topic": topic, "difficulty": "medium",
+                          "question_type": item["question_type"],
+                          "question": item["question"], "answer": item["answer"],
+                          "solution": item["solution"], "explanation": item["solution"],
+                          "options": options, "source": "Question_Bank_V254",
+                          "archetype": "v254_" + str(item["id"]),
+                          "template_family": "v254_" + str(item["id"]),
+                      }
+                      candidates.append(q)
+                  except (ValueError, TypeError, KeyError):
+                      continue
+    random.shuffle(candidates)
+    for q in candidates:
+        if len(result) >= count:
+            break
+        text = " ".join(str(q.get("question") or "").casefold().split())
+        if not text or text in seen:
+            continue
         try:
-            validate(item)
+            validate(q)
+            if canonical_type(q) not in types:
+                continue
         except (ValidationError, ValueError, KeyError, TypeError):
-            return None
-        if canonical_type(item) != expected_type:
-            return None
-        question_text = str(item.get("question") or item.get("text") or "").strip()
-        key = " ".join(question_text.casefold().split())
-        if not key or key in seen_text:
-            return None
-        seen_text.add(key)
-        return item
+            continue
+        seen.add(text)
+        q["battle_index"] = len(existing) + len(result)
+        result.append(q)
+    if not result and not existing:
+        raise HTTPException(status_code=503, detail="Ngân hàng chưa có câu hỏi hợp lệ cho chủ đề đã chọn. Battle không tự tạo câu hỏi.")
+    return result
 
-    for index in range(MATCH_TOTAL_QUESTIONS):
-        item_type = battle_types[index % len(battle_types)] if question_type == "mixed" else question_type
-        topic = topic_cycle[index % len(topic_cycle)]
-        chosen = None
-        # Preserve the existing generation path whenever its history allows it.
-        try:
-            result = ai_service.generate_set(
-                grade=grade, topics=[topic], count=1,
-                difficulty=difficulty, question_type=item_type,
-                history=[], max_attempts_per_phase=12
-            )
-            for candidate in result.get("questions", []):
-                chosen = accept(candidate, item_type)
-                if chosen:
-                    break
-        except (ValueError, RuntimeError):
-            pass
 
-        if chosen is None:
-            # Battle-only escape hatch: use the underlying validated generator.
-            # Do NOT record into question_history, so practice stays strict.
-            for _ in range(120):
-                try:
-                    candidate = ai_service.generator.generate(
-                        grade, topic, difficulty, item_type, None, []
-                    )
-                    chosen = accept(candidate, item_type)
-                    if chosen:
-                        ai_service.store.put(chosen)
-                        break
-                except (ValueError, RuntimeError, ValidationError, KeyError, TypeError):
-                    continue
-
-        if chosen is None:
-            raise HTTPException(
-                status_code=503,
-                detail=f"Nguồn câu hỏi Battle chưa đủ cho chủ đề {topic} ({item_type})."
-            )
-        chosen["battle_index"] = index
-        chosen["battle_topic"] = topic
-        clean_questions.append(chosen)
-
-    try:
-        archive_questions(grade, topic_cycle, clean_questions, source="AI runtime · Battle")
-    except Exception:
-        pass
-    return clean_questions
+def extend_battle_bank(cursor, match, player_number):
+    """Extend the SAME deck atomically when a player reaches its end."""
+    if match["status"] != "PLAYING" or is_match_expired(match):
+        return match
+    questions = safe_json_loads(match["questions"], [])
+    if not isinstance(questions, list):
+        return match
+    answers = load_player_answers(match, player_number)
+    if len(answers) < len(questions):
+        return match
+    more = generate_ai_battle_questions(
+        match["grade"], safe_json_loads(match["topics"], []),
+        match["difficulty"], match["question_type"], existing=questions,
+    )
+    if more:
+        cursor.execute("UPDATE matches SET questions=? WHERE id=? AND status='PLAYING'",
+                       (safe_json_dumps(questions + more), match["id"]))
+        return cursor.execute("SELECT * FROM matches WHERE id=?", (match["id"],)).fetchone()
+    return match
 
 
 def sanitize_question(question, index=None):
@@ -1102,108 +1095,39 @@ def check_battle_answer(question, user_answer):
     return grade_answer(question, user_answer)
 
 
-def calculate_player_stats(
-    questions,
-    answers,
-    started_at
-):
-    correct = 0
-    wrong = 0
-    blank = 0
-
-    for index in range(
-        len(questions)
-    ):
-        item = answers.get(
-            str(index)
-        )
-
-        if not isinstance(
-            item,
-            dict
-        ):
-            blank += 1
+def calculate_player_stats(questions, answers, started_at):
+    """Count only submitted answers; unanswered shared-deck entries are not skips."""
+    correct = wrong = blank = 0
+    for index in range(len(questions)):
+        item = answers.get(str(index))
+        if not isinstance(item, dict):
             continue
-
         if item.get("skipped"):
             blank += 1
-            continue
-
-        if item.get("correct"):
+        elif item.get("correct"):
             correct += 1
         else:
             wrong += 1
+    return {"correct": correct, "wrong": wrong, "blank": blank,
+            "time": seconds_since(started_at) or 0}
 
-    elapsed = seconds_since(
-        started_at
-    )
-
-    return {
-        "correct": correct,
-        "wrong": wrong,
-        "blank": blank,
-        "time": elapsed or 0
-    }
 
 
 def calculate_winner(match):
-    p1_correct = int(
-        match["player1_correct"] or 0
-    )
+    """Correct desc, elapsed asc, wrong asc, attempted desc, skipped asc."""
+    def rank(number):
+        correct = int(match[f"player{number}_correct"] or 0)
+        wrong = int(match[f"player{number}_wrong"] or 0)
+        skipped = int(match[f"player{number}_blank"] or 0)
+        elapsed = float(match[f"player{number}_time"] or 0)
+        attempted = correct + wrong + skipped
+        return (correct, -elapsed, -wrong, attempted, -skipped)
 
-    p2_correct = int(
-        match["player2_correct"] or 0
-    )
+    p1, p2 = rank(1), rank(2)
+    if p1 == p2:
+        return None
+    return match["player1_id"] if p1 > p2 else match["player2_id"]
 
-    if p1_correct > p2_correct:
-        return match["player1_id"]
-
-    if p2_correct > p1_correct:
-        return match["player2_id"]
-
-    p1_time = float(
-        match["player1_time"] or 0
-    )
-
-    p2_time = float(
-        match["player2_time"] or 0
-    )
-
-    if p1_time < p2_time:
-        return match["player1_id"]
-
-    if p2_time < p1_time:
-        return match["player2_id"]
-
-    p1_wrong = int(
-        match["player1_wrong"] or 0
-    )
-
-    p2_wrong = int(
-        match["player2_wrong"] or 0
-    )
-
-    if p1_wrong < p2_wrong:
-        return match["player1_id"]
-
-    if p2_wrong < p1_wrong:
-        return match["player2_id"]
-
-    p1_blank = int(
-        match["player1_blank"] or 0
-    )
-
-    p2_blank = int(
-        match["player2_blank"] or 0
-    )
-
-    if p1_blank < p2_blank:
-        return match["player1_id"]
-
-    if p2_blank < p1_blank:
-        return match["player2_id"]
-
-    return None
 
 
 def finalize_match_if_needed(
@@ -1211,6 +1135,9 @@ def finalize_match_if_needed(
     match,
     questions
 ):
+    # Five-minute Battle is time-limited, never question-count-limited.
+    return False, None
+
     question_count = len(
         questions
     )
@@ -2104,6 +2031,15 @@ def get_match(
                 status_code=403,
                 detail="Bạn không thuộc trận đấu này."
             )
+
+        player_number = get_player_number(match, user["id"])
+        if is_match_expired(match):
+            expire_match_if_needed(cursor, match)
+            connection.commit()
+            match = cursor.execute("SELECT * FROM matches WHERE id=?", (match_id,)).fetchone()
+        elif match["status"] == "PLAYING":
+            match = extend_battle_bank(cursor, match, player_number)
+            connection.commit()
 
         players = get_players(
             cursor,
