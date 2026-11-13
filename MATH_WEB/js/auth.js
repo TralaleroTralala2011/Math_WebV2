@@ -176,11 +176,33 @@ function saveLoginData(
 ========================================================= */
 
 function getToken() {
-    // Admin dùng token riêng; không làm mất phiên khi đóng trình duyệt.
-    const adminToken = localStorage.getItem("mathweb_admin_token");
-    const studentToken = localStorage.getItem(TOKEN_KEY);
-    const token = adminToken || studentToken;
-    return typeof token === "string" && token.trim() ? token.trim() : null;
+
+    const token =
+        localStorage.getItem(
+            TOKEN_KEY
+        );
+
+
+    if (
+        typeof token !==
+        "string"
+    ) {
+
+        return null;
+    }
+
+
+    const trimmed =
+        token.trim();
+
+
+    if (!trimmed) {
+
+        return null;
+    }
+
+
+    return trimmed;
 }
 
 
@@ -308,9 +330,6 @@ function clearAuthData() {
     localStorage.removeItem(
         PROFILE_KEY
     );
-    localStorage.removeItem("mathweb_admin_token");
-    localStorage.removeItem("mathweb_admin_user");
-    localStorage.removeItem("mathweb_admin_profile");
 }
 
 
@@ -1034,13 +1053,16 @@ async function getCurrentUser() {
         );
 
 
-    if (user.role === "admin") {
-        localStorage.setItem("mathweb_admin_user", userJSON);
-        localStorage.setItem("mathweb_admin_profile", userJSON);
-    } else {
-        localStorage.setItem(USER_KEY, userJSON);
-        localStorage.setItem(PROFILE_KEY, userJSON);
-    }
+    localStorage.setItem(
+        USER_KEY,
+        userJSON
+    );
+
+
+    localStorage.setItem(
+        PROFILE_KEY,
+        userJSON
+    );
 
 
     return user;
