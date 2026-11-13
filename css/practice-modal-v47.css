@@ -1,0 +1,9 @@
+/* MATH_WEB V47: native top-layer dialog, scoped to the knowledge popup. */
+#knowledgePopup.knowledge-popup { box-sizing:border-box; margin:0; padding:clamp(16px,3vw,30px); max-width:calc(100vw - 20px); max-height:calc(100dvh - 20px); color:#eaf4ff; z-index:2100; }
+#knowledgePopup.knowledge-popup:not([open]) { display:none !important; }
+#knowledgePopup.knowledge-popup[open] { display:block !important; position:fixed !important; inset:auto !important; top:50% !important; left:50% !important; width:min(680px,calc(100vw - 20px)) !important; overflow-y:auto; transform:translate(-50%,-50%) !important; opacity:1 !important; visibility:visible !important; }
+#knowledgePopup.knowledge-popup::backdrop { background:rgba(2,5,12,.75); backdrop-filter:blur(6px); }
+#practiceOverlay.practice-overlay { pointer-events:none; }
+#knowledgePopup .popup-container { position:relative; }
+@media (max-width:600px) { #knowledgePopup.knowledge-popup[open] { border-radius:18px; } }
+@media (prefers-reduced-motion:reduce) { #knowledgePopup.knowledge-popup { transition:none !important; animation:none !important; } }

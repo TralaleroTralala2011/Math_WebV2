@@ -1,0 +1,21 @@
+/* Optional supplemental question bank, isolated from legacy study and roadmap UI. */
+.mw-v48-bank-panel{max-width:1100px;margin:20px auto 28px;padding:20px;border:1px solid #3477aa;border-radius:18px;background:#11243b;color:#f0f6ff;box-shadow:0 12px 28px rgba(5,25,60,.18);font:14px/1.6 system-ui,Arial,sans-serif}
+.mw-v48-bank-panel h2{margin:0 0 6px;color:#edfaff;font-size:clamp(19px,2.2vw,24px)}
+.mw-v48-disclaimer,.mw-v48-source{color:#b5cae4;margin:6px 0 14px;font-size:12px}
+.mw-v48-controls{display:grid;grid-template-columns:130px minmax(200px,1fr) auto;align-items:end;gap:12px}
+.mw-v48-controls label{display:flex;flex-direction:column;gap:4px;color:#ecf9ff;font-weight:700}
+.mw-v48-controls select,.mw-v48-options input{width:100%;min-height:43px;margin:0;padding:8px 12px;background:#213a54;color:#fff;border:1px solid #6ba7d5;border-radius:10px;font:inherit}
+.mw-v48-bank-panel button{font:inherit;cursor:pointer;min-height:42px;border-radius:10px;padding:9px 15px}
+.mw-v48-bank-panel button:focus-visible,.mw-v48-bank-panel select:focus-visible,.mw-v48-bank-panel input:focus-visible{outline:3px solid #70d9ff;outline-offset:2px}
+.mw-v48-bank-panel button:disabled{opacity:.6;cursor:default}
+.mw-v48-primary{border:0;background:#15a9de;color:#06243d;font-weight:800}
+.mw-v48-status{margin:10px 0;min-height:22px;color:#b7e8ff}
+.mw-v48-question-area{margin-top:12px}
+.mw-v48-qcount{color:#64f1d0;font-weight:800;margin:0}
+.mw-v48-prompt{color:white;font-size:17px;line-height:1.6;margin:8px 0}
+.mw-v48-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+.mw-v48-option{background:#1c3450;color:white;border:1px solid #6482aa;text-align:left;white-space:normal}
+.mw-v48-option:hover:not(:disabled){border-color:#67e7ff;background:#254968}
+.mw-v48-feedback{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65;color:#dcf8e9}
+@media(max-width:720px){.mw-v48-bank-panel{margin:14px 12px;padding:14px}.mw-v48-controls{grid-template-columns:1fr}.mw-v48-options{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.mw-v48-bank-panel *{animation:none!important;transition:none!important}}

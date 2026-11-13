@@ -25,7 +25,7 @@
 
         RESULT_POLL_INTERVAL: 1800,
 
-        ONLINE_TIMEOUT: 30000,
+        ONLINE_TIMEOUT: 90000,
 
         MAX_MATCH_WAIT_SECONDS: 600,
 
@@ -118,6 +118,31 @@
         return document.getElementById(id);
     }
 
+
+    // V48: Always send the selected grade to all three Battle entry points.
+    // Previously the UI omitted it, so the server silently defaulted to grade 12.
+    function getBattleSettings() {
+        const picker = getElement("mwBattleGrade");
+        const chosen = Number(picker?.value || 10);
+        return {
+            grade: [10, 11, 12].includes(chosen) ? chosen : 10,
+            topics: [],
+            difficulty: "medium",
+            question_type: "mixed"
+        };
+    }
+
+    function initBattleGrade() {
+        const picker = getElement("mwBattleGrade");
+        if (!picker) return;
+        let preferred = 10;
+        try { preferred = Number(localStorage.getItem("mw-v6-grade") || localStorage.getItem("mw-battle-grade") || 10); } catch (_) {}
+        picker.value = String([10,11,12].includes(preferred) ? preferred : 10);
+        picker.addEventListener("change", () => {
+            try { localStorage.setItem("mw-battle-grade", picker.value); } catch (_) {}
+        });
+    }
+    initBattleGrade();
 
     const battleMenu =
         getElement("battleMenu");
@@ -1231,7 +1256,8 @@
                         method:
                             "POST",
                         headers:
-                            authHeaders()
+                            authHeaders(true),
+                        body: JSON.stringify(getBattleSettings())
                     }
                 );
 
@@ -1474,6 +1500,7 @@
             `;
 
         try {
+            if (window.MATHWEB_PRESENCE) await window.MATHWEB_PRESENCE.sendHeartbeat();
 
             const response =
                 await apiFetch(
@@ -1595,11 +1622,6 @@
 
                         <button
                             class="battle-main-button battle-invite-button"
-                            ${
-                                online
-                                    ? ""
-                                    : "disabled"
-                            }
                             type="button"
                         >
                             ⚔️ Mời đấu
@@ -1717,6 +1739,7 @@
             `;
 
         try {
+            if (window.MATHWEB_PRESENCE) await window.MATHWEB_PRESENCE.sendHeartbeat();
 
             const response =
                 await searchFetch(
@@ -1744,13 +1767,8 @@
                 );
             }
 
-            const online =
-                Boolean(
-                    data.online
-                ) ||
-                isOnline(
-                    data.last_seen
-                );
+            const online = (typeof data.online === 'boolean')
+                ? data.online : isOnline(data.last_seen);
 
             result.innerHTML =
                 `
@@ -1802,11 +1820,6 @@
                     <button
                         id="inviteSearchPlayer"
                         class="battle-main-button"
-                        ${
-                            online
-                                ? ""
-                                : "disabled"
-                        }
                         type="button"
                     >
                         ⚔️ Mời đấu
@@ -1885,6 +1898,7 @@
                         body:
                             JSON.stringify(
                                 {
+                                    ...getBattleSettings(),
                                     player_id:
                                         String(
                                             playerId

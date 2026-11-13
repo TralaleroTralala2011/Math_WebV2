@@ -45,9 +45,9 @@ class AIQuestionService:
         if question_type not in ("short_answer", "written", "multiple_choice"):
             return []
         import sqlite3
-        from pathlib import Path
-        db_path = Path(__file__).resolve().parents[1] / "storage" / "v254_candidates.sqlite"
-        if not db_path.is_file():
+        from .v254_bank import ensure_v254_bank
+        db_path = ensure_v254_bank()
+        if db_path is None:
             return []
         requested_type = "short_answer" if question_type == "written" else question_type
         try:
@@ -58,6 +58,9 @@ class AIQuestionService:
                     """SELECT id, question, answer, solution, options, question_type, difficulty
                        FROM questions
                        WHERE grade=? AND topic=? AND difficulty=? AND question_type=?
+                         AND length(trim(question)) BETWEEN 8 AND 1800
+                         AND length(trim(answer)) BETWEEN 1 AND 250
+                         AND length(trim(solution)) BETWEEN 12 AND 2800
                        ORDER BY RANDOM() LIMIT 50""",
                     (int(grade), str(topic_id), normalize(difficulty), requested_type),
                 ).fetchall()
@@ -353,7 +356,7 @@ class AIQuestionService:
             # just because the set contains ten questions.
             level=current
             item_type = mixed_types[i] if question_type == "mixed" else question_type
-            q=self.generate_one(grade,topic,level,item_type,seen,game_id,recent_families[-10:],seen_structures,seen_variations,seen_archetypes,max_attempts_per_phase=max_attempts_per_phase)
+            q=self.generate_one(grade,topic,level,item_type,seen,game_id,recent_families[-10:],seen_structures,seen_variations,seen_archetypes,max_attempts_per_phase)
             q["variation_key"]=self._variation_key(q)
             # Prefer a diagram reconstructed from this exact question whenever
             # its wording contains coordinate, slope, graph, or geometric data.

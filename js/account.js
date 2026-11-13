@@ -2,7 +2,7 @@ const API_URL =
     window.MATHWEB_API_URL || "http://127.0.0.1:8000";
 
 const API_TIMEOUT_MS = 10000;
-const MAX_PLAYER_ID_LENGTH = 30;
+const MAX_PLAYER_ID_LENGTH = 100;
 const MAX_REQUEST_ID = 2147483647;
 
 let accountLoading = false;
@@ -2076,8 +2076,9 @@ function renderFriendSearchResult(
 
     const requestPending =
         Boolean(
-            profile.request_pending ??
-            profile.requestPending ??
+            profile.friend_status === "pending" ||
+            profile.request_pending ||
+            profile.requestPending ||
             profile.pending
         );
 

@@ -7,6 +7,7 @@ from fastapi import APIRouter, Header, HTTPException
 from pydantic import BaseModel, Field
 
 from ..auth.routes import get_current_user
+from ..presence.routes import is_user_online
 from ..ai.routes import service as ai_service
 from app.ai.archive import archive_questions
 from database.database import get_connection
@@ -25,7 +26,7 @@ router = APIRouter(
 MATCH_TOTAL_QUESTIONS = 10
 
 MATCH_QUEUE_TIMEOUT_SECONDS = 10 * 60
-MATCH_INVITE_TIMEOUT_SECONDS = 18
+MATCH_INVITE_TIMEOUT_SECONDS = 120
 MATCH_MAX_DURATION_SECONDS = 5 * 60
 
 MAX_PLAYER_ID_LENGTH = 100
@@ -607,8 +608,13 @@ def generate_ai_battle_questions(grade, topics, difficulty, question_type, *, ex
                 q = ai_service._build_curated_question(item, grade, topic, difficulty, kind)
                 if q is not None:
                     candidates.append(q)
-            # V254 draft bank is existing data, not generated at match time.
-            for item in ai_service._v254_candidates(grade, topic, "medium", kind):
+            # V254 contains mostly medium-tier drafts. Prefer the requested
+            # level; if no bank records exist, use medium as a clearly labeled
+            # fallback so a random match can still start (no runtime generation).
+            bank_rows = ai_service._v254_candidates(grade, topic, difficulty, kind)
+            if not bank_rows and difficulty != "medium":
+                bank_rows = ai_service._v254_candidates(grade, topic, "medium", kind)
+            for item in bank_rows:
                 try:
                     options = json.loads(item.get("options") or "[]")
                     q = {
@@ -618,6 +624,8 @@ def generate_ai_battle_questions(grade, topics, difficulty, question_type, *, ex
                         "question": item["question"], "answer": item["answer"],
                         "solution": item["solution"], "explanation": item["solution"],
                         "options": options, "source": "Question_Bank_V254",
+                        "bank_status": "candidate_unverified",
+                        "difficulty_fallback": (item["difficulty"] != difficulty),
                         "archetype": "v254_" + str(item["id"]),
                         "template_family": "v254_" + str(item["id"]),
                     }
@@ -829,7 +837,7 @@ def cleanup_expired_invites(cursor):
         FROM match_invites
         WHERE
             status = 'pending'
-            AND datetime(replace(created_at, 'T', ' ')) < datetime('now', '-18 seconds')
+            AND julianday(created_at) < julianday('now', '-120 seconds')
         """
     )
 
@@ -1720,6 +1728,7 @@ def find_player(
         "level": target["level"],
         "xp": target["xp"],
         "last_seen": target["last_seen"],
+        "online": is_user_online(target["last_seen"]),
         "in_match": existing_match is not None,
         "is_friend": is_friend(
             user["id"],

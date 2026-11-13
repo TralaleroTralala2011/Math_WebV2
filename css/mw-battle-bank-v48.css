@@ -1,0 +1,7 @@
+/* V48: Battle grade picker, scoped to the Battle page only. */
+.mw-battle-grade-selector{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin:0 auto 24px;padding:12px 16px;width:min(100%,850px);border:1px solid rgba(79,199,242,.28);border-radius:16px;background:rgba(13,37,58,.72);color:#e4f3ff}
+.mw-battle-grade-selector label{font-size:14px;font-weight:750;white-space:nowrap}
+.mw-battle-grade-selector select{color:#eafcff;background:#153148;border:1px solid #51cbed;border-radius:10px;padding:8px 14px;font-size:14px;min-height:42px;cursor:pointer}
+.mw-battle-grade-selector select:focus-visible{outline:3px solid #51cbed;outline-offset:3px}
+.mw-battle-grade-selector span{color:#bacde0;font-size:12px}
+@media(max-width:600px){.mw-battle-grade-selector{flex-direction:column;align-items:stretch;text-align:center;margin-bottom:15px}}

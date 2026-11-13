@@ -1,0 +1,13 @@
+/* Scoped hotfix: overlay must never cover the actual topic dialog. */
+body .practice-overlay { z-index: 20000 !important; }
+body .knowledge-popup { z-index: 20001 !important; }
+body .knowledge-popup.active, body .knowledge-popup.show {
+ display:block !important; opacity:1 !important; visibility:visible !important;
+ position:fixed !important; left:50% !important; top:50% !important;
+ transform:translate(-50%,-50%) !important; pointer-events:auto !important;
+ width:min(680px,calc(100vw - 24px)) !important;
+ max-height:calc(100dvh - 24px) !important; overflow:auto !important;
+ background:#101827 !important; color:#edf7ff !important;
+}
+body .knowledge-popup:not(.active):not(.show) { pointer-events:none !important; }
+@media(max-width:600px){body .knowledge-popup.active,body .knowledge-popup.show{padding:18px !important}}

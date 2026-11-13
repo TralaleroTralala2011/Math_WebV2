@@ -1,0 +1,27 @@
+MATH_WEB V47 | BẢN VÁ SOCIAL + PRACTICE | 13/11/2026
+CƠ SỞ: MATH_WEB_V46_PRACTICE_MODAL_HOTFIX_20261113.zip
+
+SỬA:
+- practice.html: Chuyển knowledgePopup thành native dialog top-layer để không bị lớp nền che; bảo toàn ID, khung nội dung, và các xử lý gốc của practise.js.
+- js/practice-modal-v47.js và CSS: Đồng bộ trạng thái class active với dialog.showModal()/close(); Escape/nhấn đóng vẫn dùng handler cũ. Giữ file hotfix cũ trong ZIP nhưng không còn nạp nó ở practice.html.
+- backend/app/presence/routes.py: Chấp nhận tín hiệu trong 90 giây gần nhất (thay vì 30 giây) nhằm giảm offline nhầm khi độ trễ tăng.
+- Các trang index, practice, practise, learn, learning-path, geometry-studio: bắt đầu gửi heartbeat khi đang đăng nhập.
+- backend/app/matchmaking/routes.py: API tìm Player ID trả về online do backend tính; lời mời đấu hết hạn sau 120 giây thay vì 18 giây.
+- js/battle.js: Không khóa nút mời đấu chỉ vì trạng thái offline, cập nhật heartbeat trước thao tác tìm người chơi/tải bạn bè; backend vẫn kiểm tra quyền và điều kiện trận.
+- js/account.js: Nhận biết trạng thái lời mời pending do backend trả về, đồng bộ giới hạn độ dài Player ID.
+- Không đổi cơ sở dữ liệu sản xuất, đăng nhập Admin, luật chấm điểm, ngân hàng câu hỏi, hoặc phần còn lại của UI.
+
+KIỂM THỬ:
+- node --check các JS chính: ĐẠT.
+- py_compile các route sửa: ĐẠT.
+- pytest backend/tests/test_v47_social_and_modal.py + backend/tests/test_v22_two_account_flow.py: 9/9 ĐẠT với cơ sở dữ liệu tạm và ngân hàng V254 đã khôi phục từ ZIP.
+- V254 packaged seed: manifest có 83.298 câu và 95.514 nhãn B54; đây là dữ liệu nguồn, KHÔNG được chứng nhận mọi câu đạt 8 tiêu chí.
+- Không thể chạy kiểm thử UI trình duyệt tương tác trong phiên này (trình duyệt sandbox chặn mở file/local HTTP).
+- Chưa xác minh GitHub Pages / Render production, WebSocket ngoài Internet, độ bền database hoặc dữ liệu thật.
+
+HƯỚNG DẪN:
+1) Sao lưu bản cũ và database. Giải nén ZIP, đưa nội dung thư mục MATH_WEB_GITHUB_READY vào repo ở đường dẫn frontend/backend đang dùng.
+2) Commit/push các thay đổi lên GitHub. GitHub Pages chạy frontend; Render chạy backend.
+3) Render phải cài dependencies từ backend/requirements.txt, chạy scripts/restore_v254_bank.py khi build, và có database + SECRET_KEY ổn định (Render Free file hệ thống có thể mất sau deploy).
+4) Kiểm thử với hai tài khoản có Player ID trong cùng database: tìm người, kết bạn, chấp nhận, xem Online, mời đấu, ghép ngẫu nhiên, mở chủ đề Luyện tập.
+5) Nếu lỗi 401/404/503 còn xuất hiện, xem Network + Render Logs. Không xóa database để sửa lỗi.
