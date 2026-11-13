@@ -3,7 +3,7 @@ services:
     name: math-web-api-tralalerotralala2011
     runtime: python
     rootDir: backend
-    buildCommand: pip install -r requirements.txt
+    buildCommand: python -m pip install -r backend/requirements.txt && python -m pip check && python -c "import sympy; print(\'SymPy ready:\', sympy.__version__)" && python scripts/restore_v254_bank.py
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
     envVars:

@@ -1,3 +1,4 @@
 fastapi
 uvicorn
 pydantic
+sympy>=1.13,<2

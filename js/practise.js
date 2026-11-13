@@ -3401,7 +3401,11 @@
         };
         const key = String(knowledge?.id || knowledge?.code || '').trim();
         const games = gameMap[key] || knowledge?.games || [];
-        return games.map(function (game) {
+        // V46: remove graph-only mini-games that do not provide a usable practice flow.
+        // Keep the remaining original game destinations and their logic unchanged.
+        return games.filter(function (game) {
+            return !(/đồ thị bí ẩn|do thi bi an/i.test(String(game.name || '')) || /(?:graph|o-thi-bi-an)\.html(?:[?#]|$)/i.test(String(game.path || '')));
+        }).map(function (game) {
             return { name: game.name, icon: game.icon, path: game.path };
         });
     }

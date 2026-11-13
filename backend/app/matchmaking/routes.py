@@ -608,23 +608,22 @@ def generate_ai_battle_questions(grade, topics, difficulty, question_type, *, ex
                 if q is not None:
                     candidates.append(q)
             # V254 draft bank is existing data, not generated at match time.
-            for batch in range(4):
-              for item in ai_service._v254_candidates(grade, topic, "medium", kind):
-                  try:
-                      options = json.loads(item.get("options") or "[]")
-                      q = {
-                          "id": "v254_" + str(item["id"]), "grade": grade,
-                          "topic": topic, "difficulty": "medium",
-                          "question_type": item["question_type"],
-                          "question": item["question"], "answer": item["answer"],
-                          "solution": item["solution"], "explanation": item["solution"],
-                          "options": options, "source": "Question_Bank_V254",
-                          "archetype": "v254_" + str(item["id"]),
-                          "template_family": "v254_" + str(item["id"]),
-                      }
-                      candidates.append(q)
-                  except (ValueError, TypeError, KeyError):
-                      continue
+            for item in ai_service._v254_candidates(grade, topic, "medium", kind):
+                try:
+                    options = json.loads(item.get("options") or "[]")
+                    q = {
+                        "id": "v254_" + str(item["id"]), "grade": grade,
+                        "topic": topic, "difficulty": "medium",
+                        "question_type": item["question_type"],
+                        "question": item["question"], "answer": item["answer"],
+                        "solution": item["solution"], "explanation": item["solution"],
+                        "options": options, "source": "Question_Bank_V254",
+                        "archetype": "v254_" + str(item["id"]),
+                        "template_family": "v254_" + str(item["id"]),
+                    }
+                    candidates.append(q)
+                except (ValueError, TypeError, KeyError):
+                    continue
     random.shuffle(candidates)
     for q in candidates:
         if len(result) >= count:

@@ -1,0 +1,12 @@
+/* Additive layout polish: no functionality removed. */
+#mw-geometry-nav-link{white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+@media(max-width:850px){#mw-geometry-nav-link{min-height:42px;padding:9px 12px}body.mw-geometry-studio #geo-canvas{touch-action:none}body.mw-geometry-studio button{min-height:38px}}
+body:has(#accountPage) .mathweb-project-footer{margin-top:0!important;padding:12px!important}
+body:has(#accountPage) #accountPage{min-height:0!important;padding-bottom:16px!important}
+body:has(#accountPage) .account-container{min-height:0!important}
+body:has(#accountPage) .account-container > *{max-width:100%}
+body:has(#accountPage) .account-container{row-gap:16px!important}
+body:has(#accountPage) .mathweb-project-footer{position:relative!important}
+body:has(#accountPage) .account-page{height:auto!important}
+body:has(#accountPage) .account-container{margin-bottom:0!important}
+@media(max-width:650px){body:has(#accountPage) .account-container{padding-left:12px!important;padding-right:12px!important}}

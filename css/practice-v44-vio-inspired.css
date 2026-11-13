@@ -1,0 +1,42 @@
+
+/* MATH_WEB V44: practice UX inspired by user-supplied Vio screenshots.
+   Scoped to AI practice only; grading and backend logic remain unchanged. */
+#mathwebAiOverlay, .mathweb-ai-overlay {
+  --v44-blue:#3d9be8; --v44-sky:#83d1f4;
+}
+.mathweb-ai-overlay {
+  background:linear-gradient(165deg,#3898e6 0%,#65bdf0 65%,#a8e1f8 100%) !important;
+}
+.mathweb-ai-panel {
+  width:min(940px,calc(100vw - 32px)) !important;
+  max-height:calc(100dvh - 32px) !important;
+  overflow:auto !important;
+  background:#fff !important;
+  color:#263651 !important;
+  border:1px solid rgba(255,255,255,.85) !important;
+  border-radius:20px !important;
+  box-shadow:0 20px 65px rgba(23,67,126,.18) !important;
+  padding:clamp(16px,3vw,30px) !important;
+}
+.mathweb-ai-progress {font-weight:800 !important;color:#2a3e5d !important;gap:12px}
+.mathweb-ai-progress-bar {height:9px !important;background:#e7edf6 !important;border-radius:99px !important;overflow:hidden}
+.mathweb-ai-progress-fill {background:linear-gradient(90deg,#59b64c,#9bd76e) !important;border-radius:99px}
+.mathweb-ai-question {color:#1e2b42 !important;font-size:clamp(17px,2vw,21px) !important;line-height:1.75 !important}
+.mathweb-ai-meta {flex-wrap:wrap !important}
+.mathweb-ai-chip {border-radius:99px !important}
+.mathweb-ai-panel button {cursor:pointer}
+.mathweb-ai-panel button:focus-visible,.mathweb-ai-panel input:focus-visible {
+ outline:3px solid #247ee7 !important;outline-offset:3px;
+}
+.mathweb-ai-panel button:not(:disabled) {transition:transform .18s ease,box-shadow .18s ease}
+.mathweb-ai-panel button:not(:disabled):hover {transform:translateY(-2px)}
+.mathweb-ai-panel #mathwebAiFeedback:not(:empty) {
+ border-radius:14px;animation:v44Feedback .3s ease-out;
+}
+@keyframes v44Feedback {from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+#v44-practice-tools {display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:0 0 12px;flex-wrap:wrap}
+#v44-practice-tools button {width:34px;height:34px;border-radius:50%;border:1px solid #dce4f2;background:#f6f8fc;color:#2d4568;font-weight:800;font-size:19px}
+#v44-practice-tools output {font-size:12px;font-weight:700;color:#536782;min-width:40px;text-align:center}
+#v44-practice-content {transform-origin:top center}
+@media(max-width:600px){.mathweb-ai-panel{width:calc(100vw - 16px)!important;max-height:calc(100dvh - 16px)!important;padding:14px!important;border-radius:15px!important}}
+@media(prefers-reduced-motion:reduce){.mathweb-ai-panel *, .mathweb-ai-panel *::before{animation:none!important;transition:none!important}}

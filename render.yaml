@@ -5,7 +5,7 @@ services:
     name: math-webv2
     runtime: python
     plan: starter
-    buildCommand: pip install -r backend/requirements.txt && python scripts/restore_v254_bank.py
+    buildCommand: python -m pip install -r backend/requirements.txt && python -m pip check && python -c "import sympy; print(\'SymPy ready:\', sympy.__version__)" && python scripts/restore_v254_bank.py
     startCommand: uvicorn app.main:app --app-dir backend --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
     disk:
