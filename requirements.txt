@@ -4,3 +4,5 @@ pydantic
 pypdf>=5.0
 python-docx>=1.1
 openpyxl>=3.1
+
+sympy>=1.13,<2

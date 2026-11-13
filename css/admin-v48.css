@@ -1,0 +1,42 @@
+/* MATH_WEB V48: isolated admin redesign, no backend or data changes */
+:root{--bg:#f1f5fb;--panel:#fff;--ink:#16243c;--muted:#667891;--line:#e0e8f4;--blue:#2563eb;--blue2:#e8f0ff;--green:#087f5b;--shadow:0 8px 32px rgba(31,57,105,.055)}
+body{background:radial-gradient(ellipse at 85% 0%,#e6efff 0,transparent 38%),#f1f5fb;color:var(--ink)}
+#appView.shell{max-width:1600px;padding:22px clamp(12px,2.2vw,32px) 28px}
+#appView .top{position:relative;isolation:isolate;padding:19px 23px;margin-bottom:18px;border:1px solid #e1eaf7;border-radius:21px;background:linear-gradient(110deg,#fff 10%,#f0f6ff 100%);box-shadow:0 12px 35px rgba(35,74,139,.055)}
+#appView .brand h1{font-size:clamp(19px,2vw,25px);font-weight:850;letter-spacing:-.6px}
+#appView .brand p{font-size:12px;color:#63758e}
+#appView .logo{width:52px;height:52px;border-radius:17px;background:linear-gradient(145deg,#1b56e6,#43b8bd);box-shadow:0 8px 22px rgba(37,99,235,.24)}
+#appView .layout{grid-template-columns:258px minmax(0,1fr);gap:20px;align-items:start}
+#appView .side{position:sticky;top:16px;padding:15px 11px;border:1px solid #e0e8f4;border-radius:21px;background:#fff;box-shadow:0 12px 34px rgba(31,57,105,.05);max-height:calc(100vh - 32px);overflow-y:auto;scrollbar-width:thin}
+#appView .side::before{content:'ĐIỀU HƯỚNG';display:block;padding:10px 14px 11px;color:#91a0b7;font-size:10px;letter-spacing:1.7px;font-weight:850}
+#appView .navbtn{display:flex;align-items:center;min-height:45px;border-radius:12px;margin:3px 0;padding:11px 13px;color:#51627c;font-size:13px;font-weight:730;line-height:1.35;transition:background .2s,color .2s,transform .2s,box-shadow .2s}
+#appView .navbtn:hover{background:#eff5ff;color:#2158c5;transform:translateX(2px)}
+#appView .navbtn.active{background:linear-gradient(110deg,#245ce9,#4383ee);color:#fff;box-shadow:0 6px 16px rgba(37,99,235,.22)}
+#appView .navbtn.active:hover{color:#fff}
+#appView .content{min-width:0;animation:adminV48Enter .34s ease both}
+#appView .pagehead{margin:3px 0 17px;gap:12px}
+#appView .pagehead h2{font-size:clamp(21px,2.2vw,27px);font-weight:850;letter-spacing:-.7px}
+#appView .panel,#appView .stat{border:1px solid #e0e9f5;border-radius:18px;background:#fff;box-shadow:0 8px 25px rgba(31,57,105,.045)}
+#appView .panel{padding:clamp(15px,1.8vw,23px)}
+#appView .stat{position:relative;overflow:hidden;padding:19px}
+#appView .stat::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(#3979f4,#63d2bf)}
+#appView .stat .value{color:#1b4fc4;font-size:clamp(24px,2.6vw,33px)}
+#appView .panel h3{font-weight:800;color:#213551}
+#appView button:not(.navbtn){border-radius:11px}
+#appView button:not(.navbtn):focus-visible,#appView .navbtn:focus-visible{outline:3px solid #8cb6ff;outline-offset:2px}
+#appView .tablewrap{border-color:#e4ebf5;border-radius:13px}
+#appView th{background:#f4f7fd;color:#4f607a}
+#appView tbody tr:hover{background:#f7faff}
+#appView .top-actions{align-items:center}
+#appView .top-actions button{font-size:12px;padding:10px 12px}
+#appView .notice{border-radius:12px}
+#appView .topic-card,#appView .game-card{border-radius:16px}
+#appView .footer{padding:20px 8px}
+#appView .v48-status{display:inline-flex;align-items:center;gap:7px;color:#0d805d;background:#e5f9f0;border:1px solid #c6eddc;border-radius:999px;padding:7px 10px;font-size:11px;font-weight:800}
+#appView .v48-status::before{content:'';height:7px;width:7px;background:#13b981;border-radius:50%}
+#appView .page.v48-enter{animation:adminV48Enter .32s cubic-bezier(.2,.8,.2,1) both}
+@keyframes adminV48Enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1000px){#appView .layout{grid-template-columns:210px minmax(0,1fr)}#appView .side{padding:9px}#appView .navbtn{font-size:12px;padding:10px}}
+@media(max-width:800px){#appView .layout{grid-template-columns:minmax(0,1fr)}#appView .side{position:static;display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;overflow-y:hidden;max-height:none;padding:8px;border-radius:15px}#appView .side::before{display:none}#appView .navbtn{white-space:nowrap;width:auto;min-height:39px;flex:0 0 auto;margin:0}#appView .navbtn:hover{transform:none}#appView .top{padding:15px}#appView .stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){#appView.shell{padding:10px 10px 22px}#appView .top{align-items:flex-start;gap:10px}#appView .top-actions{width:100%;justify-content:flex-start}#appView .top-actions button{flex:1 1 auto}#appView .brand h1{font-size:18px}#appView .brand p{font-size:11px}#appView .stats{gap:9px}#appView .stat{padding:13px}#appView .stat .value{font-size:24px}#appView .panel{padding:13px}#appView .pagehead{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){#appView .content,#appView .page.v48-enter{animation:none!important}#appView .navbtn{transition:none!important}}

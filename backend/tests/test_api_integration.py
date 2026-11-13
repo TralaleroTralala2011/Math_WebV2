@@ -46,7 +46,10 @@ def test_cors_preflight_for_local_frontend(client: TestClient):
     assert response.headers.get("access-control-allow-origin") == origin
 
 
-def test_random_matchmaking_does_not_lock_when_ai_generates_questions(client: TestClient):
+def test_random_matchmaking_rejects_empty_bank_without_ai_fallback(client: TestClient, monkeypatch):
+    from app.matchmaking.routes import ai_service
+    monkeypatch.setattr(ai_service, "_v254_candidates", lambda *args, **kwargs: [])
+    monkeypatch.setattr(ai_service, "_curated_admin_candidates", lambda *args, **kwargs: [])
     _, headers_a = register(client, "QueuePlayerA")
     _, headers_b = register(client, "QueuePlayerB")
     settings = {
@@ -55,41 +58,13 @@ def test_random_matchmaking_does_not_lock_when_ai_generates_questions(client: Te
         "difficulty": "easy",
         "question_type": "multiple_choice",
     }
-
     first = client.post("/api/matchmaking/random/join", headers=headers_a, json=settings)
     assert first.status_code == 200, first.text
     assert first.json()["status"] == "QUEUED"
-
     second = client.post("/api/matchmaking/random/join", headers=headers_b, json=settings)
-    assert second.status_code == 200, second.text
-    assert second.json()["status"] == "MATCHED"
-    assert second.json()["question_count"] == 10
-
-    match_id = second.json()["match_id"]
-    current_for_first = client.get("/api/matchmaking/current", headers=headers_a)
-    assert current_for_first.status_code == 200, current_for_first.text
-    assert current_for_first.json()["match_id"] == match_id
-    assert current_for_first.json()["status"] in {"STARTING", "PLAYING"}
-    match_details = client.get(f"/api/matchmaking/match/{match_id}", headers=headers_a)
-    assert match_details.status_code == 200, match_details.text
-
-    started = client.post(f"/api/matchmaking/match/{match_id}/start", headers=headers_a)
-    assert started.status_code == 200, started.text
-    assert started.json()["status"] == "PLAYING"
-
-    answer = client.post(
-        f"/api/matchmaking/match/{match_id}/answer",
-        headers=headers_a,
-        json={"question_index": 0, "answer": "__intentional_test_answer__"},
-    )
-    assert answer.status_code == 200, answer.text
-    assert answer.json()["correct"] is False
-    assert answer.json()["correct_answer"] is not None
-
-    progress = client.get(f"/api/matchmaking/match/{match_id}/progress", headers=headers_b)
-    assert progress.status_code == 200, progress.text
-    assert progress.json()["you"]["current"] == 0
-    assert progress.json()["opponent"]["current"] == 1
+    # V37+ requires verified bank questions. A missing bank must not trigger AI generation.
+    assert second.status_code == 503, second.text
+    assert "ngân hàng" in second.json()["detail"].lower()
 
 
 def test_friend_request_and_chat_message_flow(client: TestClient):

@@ -1,5 +1,35 @@
-/* V44: Restored the original V40/V29 classic navbar (same as Battle reference).
-   Only retain page spacing and the unboxed Battle notes from V42. */
+/* V42: shared navigation and flush page content; consistent across student pages. */
+body.mw-v5:not(.mw-v5-admin) #mw-v5-header {
+  position:relative!important;top:auto!important;width:100%!important;max-width:none!important;
+  margin:0!important;border-radius:0!important;min-height:0!important;
+}
+body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-inner {
+  box-sizing:border-box;display:flex!important;align-items:center!important;
+  flex-wrap:nowrap!important;gap:clamp(7px,1vw,14px)!important;
+  min-height:76px!important;max-width:1500px;margin:0 auto;
+}
+body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-logo,
+body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-actions {flex-shrink:0;}
+body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-nav {
+  display:flex;flex-wrap:nowrap!important;min-width:0;align-items:center;justify-content:center;
+}
+body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-nav a {flex-shrink:0;white-space:nowrap;}
+body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-actions {margin-left:auto;}
+@media(max-width:1250px){body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-search{display:none!important;}}
+@media(max-width:1100px){
+ body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-menu{display:inline-block!important;flex-shrink:0;}
+ body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-nav{display:none!important;position:absolute!important;
+   top:100%!important;left:12px!important;right:12px!important;z-index:1200!important;
+   padding:12px!important;flex-direction:column!important;align-items:stretch!important;
+   background:#101e31!important;border:1px solid #294d67!important;border-radius:14px!important;
+   max-height:calc(100dvh - 90px);overflow-y:auto;box-shadow:0 20px 45px #0009;}
+ body.mw-v5:not(.mw-v5-admin) #mw-v5-header.open .mw-v5-nav{display:flex!important;}
+ body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-nav a{padding:12px!important;font-size:14px!important;}
+}
+@media(max-width:600px){
+ body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-inner{min-height:62px!important;padding-inline:12px!important;}
+ body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-logo{font-size:16px!important;}
+}
 /* The unified header occupies its own space. Do not reserve the old navbar's height again. */
 body.mw-v5:has(.practice-page) .practice-page{padding-top:0!important;}
 body.mw-v5:has(.practice-page) .practice-hero{padding-top:clamp(18px,3vw,36px)!important;}

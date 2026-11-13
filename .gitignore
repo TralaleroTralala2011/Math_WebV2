@@ -28,5 +28,5 @@ node_modules/
 *.db-shm
 *.pem
 *.key
-*.p12
-*.pfx
+/MATH_WEB/
+/mathweb_work/
