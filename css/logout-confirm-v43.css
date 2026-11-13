@@ -1,0 +1,6 @@
+/* Shared confirmation for account and admin, isolated from existing themes */
+.mw-logout-overlay{position:fixed;inset:0;z-index:2147483600;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(3,9,23,.76);backdrop-filter:blur(8px)}
+.mw-logout-dialog{width:min(100%,430px);box-sizing:border-box;padding:28px;border:1px solid rgba(94,210,245,.32);border-radius:22px;background:#15243b;color:#f2f8ff;box-shadow:0 22px 80px rgba(0,0,0,.52);font-family:inherit;text-align:center}
+.mw-logout-icon{display:block;font-size:36px;margin-bottom:10px}.mw-logout-dialog h2{margin:0 0 10px;font-size:24px;color:#f2f8ff}.mw-logout-dialog p{margin:0 0 24px;color:#b9cde3;line-height:1.6;font-size:15px}
+.mw-logout-actions{display:flex;gap:12px}.mw-logout-actions button{flex:1;min-height:46px;padding:10px 12px;border-radius:12px;font:600 15px inherit;cursor:pointer}.mw-logout-actions [data-mw-logout=cancel]{background:#253b57;color:#f2f8ff;border:1px solid #426282}.mw-logout-actions [data-mw-logout=confirm]{background:#dc4865;color:white;border:1px solid #ec6d84}.mw-logout-actions button:focus-visible{outline:3px solid #53dff4;outline-offset:3px}
+@media(max-width:400px){.mw-logout-dialog{padding:22px}.mw-logout-actions{flex-direction:column}}

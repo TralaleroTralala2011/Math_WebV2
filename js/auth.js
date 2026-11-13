@@ -343,7 +343,8 @@ function clearAuthData() {
    LOGOUT
 ========================================================= */
 
-function logout() {
+async function logout() {
+    if (!(await window.mathwebConfirmLogout())) return;
 
     const tokenToRevoke = localStorage.getItem("mathweb_token");
     if (tokenToRevoke) {

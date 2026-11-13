@@ -1,0 +1,21 @@
+/* V40: roadmap page, scoped. Preserves existing site navigation and assessment logic. */
+body:has(#mw-v5-roadmap){background:radial-gradient(ellipse 65% 35% at 6% 8%,#0c3452 0%,transparent 70%),radial-gradient(ellipse 55% 35% at 96% 24%,#152849 0%,transparent 70%),#0b1424;color:#e7f2ff}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap{width:min(1160px,calc(100% - 36px));margin:24px auto 20px;min-height:320px}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v6-roadmap-intro{padding:30px clamp(18px,4vw,38px);border:1px solid #315373;border-radius:24px;background:linear-gradient(125deg,#16283f,#142239 58%,#112c3b);box-shadow:0 15px 50px #0002;position:relative;overflow:hidden}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v6-roadmap-intro:after{content:'✧';position:absolute;right:3%;top:-46px;font-size:190px;color:#59d6ee0b;pointer-events:none}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v5-title{font-size:clamp(27px,3.3vw,42px);line-height:1.15;letter-spacing:-.035em;color:#f5faff;margin:0 0 12px}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v5-sub{line-height:1.7;color:#a9c2d8}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v6-roadmap-flag{flex-shrink:0;white-space:normal;text-align:center;line-height:1.5;border:1px solid #2986a1;background:#10364a;color:#86e8f8;padding:12px 17px;border-radius:50px}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v5-card{background:linear-gradient(160deg,#172b44,#101d31);border:1px solid #2b4864;border-radius:20px;box-shadow:0 10px 26px #0002;padding:clamp(18px,2.5vw,26px);min-width:0}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v5-card h2{color:#eaf9ff;letter-spacing:-.02em}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v5-card p{color:#afc4d7;line-height:1.65}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v5-btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;min-height:42px;border-radius:12px;max-width:100%;white-space:normal}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v40-connection-card{max-width:850px;margin:28px auto;border-color:#4a6585;background:linear-gradient(130deg,#1b2d45,#132137)}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v40-connection-detail{padding:13px 16px;background:#0b1a2d;border-left:3px solid #49d7ed;border-radius:8px}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v40-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v40-actions .mw-v5-btn{background:#17445d;color:#e2faff;border:1px solid #317c99}
+body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v40-actions .mw-v5-gradient{background:linear-gradient(120deg,#137db0,#2ca5bb);color:white}
+body:has(#mw-v5-roadmap) #matrix-assessment-panel{border-color:#2b4864}
+body:has(#mw-v5-roadmap) #matrix-assessment-toggle{border-radius:12px;background:linear-gradient(110deg,#4f48c6,#7250d4);box-shadow:none}
+@media(max-width:780px){body:has(#mw-v5-roadmap) #mw-v5-roadmap{width:calc(100% - 24px);margin:12px auto}body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v6-roadmap-intro{padding:22px 18px;border-radius:18px}body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v6-roadmap-flag{margin-top:12px}body:has(#mw-v5-roadmap) #mw-v5-roadmap .mw-v40-actions>*{flex:1 1 200px}}
+@media(prefers-reduced-motion:reduce){body:has(#mw-v5-roadmap) #mw-v5-roadmap *{animation:none!important;scroll-behavior:auto!important}}

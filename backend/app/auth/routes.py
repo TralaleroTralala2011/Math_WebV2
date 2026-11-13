@@ -58,7 +58,7 @@ def _load_secret_key() -> str:
 
 SECRET_KEY = _load_secret_key()
 
-TOKEN_EXPIRE_DAYS = 7
+TOKEN_EXPIRE_DAYS = 30
 
 PASSWORD_HASH_ALGORITHM = "sha256"
 PASSWORD_ITERATIONS = 100_000
@@ -1362,7 +1362,7 @@ def logout(authorization: str | None = Header(default=None)):
     """Revoke the current account's existing tokens on logout.
 
     Previous versions only instructed the browser to erase local storage,
-    leaving a copied token fully usable until its seven-day expiry.
+    leaving a copied token fully usable until its token expiry.
     """
     token = extract_bearer_token(authorization)
     payload = verify_token(token)

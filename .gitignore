@@ -26,5 +26,7 @@ node_modules/
 !.env.example
 *.db-wal
 *.db-shm
+*.pem
+*.key
 /MATH_WEB/
 /mathweb_work/

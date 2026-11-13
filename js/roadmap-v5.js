@@ -63,7 +63,17 @@ function alertText(msg){const p=el('p','mw-v5-sub',msg);p.setAttribute('role','a
 function loading(){section();alertText('Đang đọc kết quả và độ phủ ngân hàng đề...')}
 function item(title,body,cls='mw-v5-card'){const e=el('article',cls);e.append(el('h2','',title));if(body)e.append(el('p','',body));return e}
 async function refresh(){loading();if(!token()){section();const c=item('🔒 Yêu cầu đăng nhập','Đăng nhập tài khoản học sinh trước khi sử dụng lộ trình. Tài khoản Admin không được tham gia lộ trình người học.');const a=el('a','mw-v5-btn mw-v5-gradient','Đăng nhập →');a.href='login.html';c.append(a);app.append(c);return}
- try{status=await call('/status/'+grade);coverage=status.coverage;show()}catch(err){section();alertText('Không kết nối được hệ thống lộ trình: '+err.message+' Hãy kiểm tra backend.')}
+ try{status=await call('/status/'+grade);coverage=status.coverage;show()}catch(err){
+ section();
+ const card=item('Lộ trình đang tạm gián đoạn','Không thể tải dữ liệu lộ trình từ máy chủ. Thử kết nối lại sẽ không xóa kết quả học tập đã lưu.');
+ card.classList.add('mw-v40-connection-card');
+ const detail=el('p','mw-v40-connection-detail',err.status===404?'API lộ trình chưa được triển khai trên backend (404). Cần cập nhật Render cùng phiên bản website.':err.status===401?'Phiên đăng nhập không còn hợp lệ. Hãy đăng nhập lại.':'Kết nối chưa thành công: '+err.message);
+ card.append(detail);
+ const actions=el('div','mw-v40-actions');
+ actions.append(btn('↻ Thử kết nối lại',()=>refresh(),'mw-v5-gradient'));
+ const learn=el('a','mw-v5-btn','📚 Mở thư viện học tập');learn.href='learn.html?grade='+grade;actions.append(learn);
+ card.append(actions);app.append(card);
+}
 }
 function gradeSelect(){const wrap=item('① Chọn lớp để bắt đầu','Chọn đúng khối lớp để hệ thống sử dụng ngân hàng câu hỏi tương ứng.');const row=el('div','mw-v6-grade-buttons');grades.forEach(g=>{const b=btn('Lớp '+g,()=>{grade=g;try{localStorage.setItem('mw-v6-grade',String(g))}catch{}attempt=null;answers={};cursor=0;refresh()},grade===g?'mw-v5-gradient':'');b.setAttribute('aria-pressed',String(grade===g));row.append(b)});wrap.append(row);return wrap}
 function overviewCard(){const c=item('② Đề đầu vào CỐ ĐỊNH · Toán '+grade,'Mỗi lớp có đề riêng, gồm 3 câu đã duyệt ở từng mức Nền tảng / Trung cấp / Nâng cao cho MỖI chủ đề. Đề chỉ được mở sau khi giáo viên kiểm chứng và công bố.');const row=el('div','mw-v6-tier-chips');for(const d of ['Nền tảng','Trung cấp','Nâng cao'])row.append(el('span','mw-v5-pill','✦ '+d));c.append(row);if(coverage){const p=el('p','');p.style.fontSize='12px';p.textContent=`Độ phủ hiện có: ${coverage.topics_with_questions}/${coverage.topic_count} chủ đề có câu hỏi; ${coverage.topics_meeting_3_per_tier}/${coverage.topic_count} đạt tối thiểu 3 câu/mức. Không tự nhận câu thiếu nhãn là đã kiểm định.`;c.append(p)}
