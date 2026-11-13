@@ -1,0 +1,17 @@
+/* V43 roadmap contrast restoration. Scope only learning-path page. */
+body.mw-unified:has(#mw-v5-roadmap){background:#0c1729!important;color:#eaf3ff!important}
+body.mw-unified:has(#mw-v5-roadmap) main{color:#eaf3ff}
+body.mw-unified #mw-v5-roadmap{color:#eaf3ff!important}
+body.mw-unified #mw-v5-roadmap :is(h1,h2,h3,h4,strong,b,label){color:#f8fbff!important;text-shadow:none!important}
+body.mw-unified #mw-v5-roadmap :is(p,li,small,span,div){color:inherit}
+body.mw-unified #mw-v5-roadmap :is(.mw-v5-sub,.muted,[class*=subtitle],[class*=description]){color:#c8d8eb!important}
+body.mw-unified #mw-v5-roadmap :is(.mw-v5-card,.mw-v6-roadmap-intro,.mw-v40-connection-card){background:linear-gradient(150deg,#172d49,#102238)!important;border:1px solid #466789!important;color:#eaf3ff!important;box-shadow:0 12px 35px #0003}
+body.mw-unified #mw-v5-roadmap :is(.mw-v5-card,.mw-v6-roadmap-intro,.mw-v40-connection-card) p{color:#d1dfed!important}
+body.mw-unified #mw-v5-roadmap .mw-v40-connection-detail{background:#0c2037!important;color:#eaf3ff!important}
+body.mw-unified #mw-v5-roadmap :is(input,select,textarea){background:#f7fbff!important;color:#17283e!important;border:1px solid #7797b8!important}
+body.mw-unified #mw-v5-roadmap input::placeholder{color:#566a81!important}
+body.mw-unified #mw-v5-roadmap :is(button,.mw-v5-btn,a[class*=btn]){color:#fff!important;background:#176c99!important;border:1px solid #4db2d6!important;text-decoration:none}
+body.mw-unified #mw-v5-roadmap :is(button,.mw-v5-btn,a[class*=btn]):hover{background:#2085b5!important;box-shadow:0 6px 22px #33b8ef33}
+body.mw-unified #mw-v5-roadmap :is(button,.mw-v5-btn,a,input,select,textarea):focus-visible{outline:3px solid #7be2ff!important;outline-offset:3px}
+body.mw-unified #mw-v5-roadmap :is(.mw-v6-roadmap-flag,.mw-v5-chip,[class*=badge]){color:#b6f6ff!important;background:#10394e!important;border-color:#368fa7!important}
+@media(prefers-reduced-motion:reduce){body.mw-unified #mw-v5-roadmap *{transition:none!important;animation:none!important}}
