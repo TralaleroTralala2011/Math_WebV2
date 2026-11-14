@@ -47,3 +47,23 @@ body.mw-v5 #battleMenu .battle-rules{
 body.mw-v5 #battleMenu .battle-rules>div{
  background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;
 }
+
+/* V50 mobile: persistent TOP navigation + persistent BOTTOM feature dock.
+   Applied only to MATH_WEB pages using the existing shared navigation. */
+@media (max-width:600px) {
+  body.mw-v5:not(.mw-v5-admin) #mw-v5-header {
+    position:fixed!important;top:0!important;left:0!important;width:100%!important;
+    max-width:100%!important;border-radius:0!important;margin:0!important;
+    z-index:1100!important;
+  }
+  body.mw-v5:not(.mw-v5-admin) .mw-v5-navdock {
+    display:flex!important;position:fixed!important;bottom:0!important;left:0!important;
+    right:0!important;z-index:1100!important;
+    padding-bottom:max(9px,env(safe-area-inset-bottom))!important;
+  }
+  body.mw-v5:not(.mw-v5-admin) {
+    padding-top:62px!important;
+    padding-bottom:calc(72px + env(safe-area-inset-bottom))!important;
+  }
+  body.mw-v5:not(.mw-v5-admin) #mw-v5-header .mw-v5-nav {z-index:1200!important;}
+}

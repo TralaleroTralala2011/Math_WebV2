@@ -1459,6 +1459,14 @@ function renderProfilePopup(
             profile.isOnline
         );
 
+    // A pending relation may be INCOMING or OUTGOING. The searched
+    // profile is the other player; relation.requester_id identifies the sender.
+    const incomingRequestId = requestPending &&
+        Number(profile.requester_id) === Number(profile.id) &&
+        Number.isInteger(Number(profile.relation_id)) &&
+        Number(profile.relation_id) > 0
+            ? Number(profile.relation_id) : null;
+
     const avatarHTML =
         avatar
             ? `
@@ -1551,10 +1559,10 @@ function renderProfilePopup(
 function showFriends(friends) {
     const container =
         document.getElementById(
-            "friendsList"
+            "friendList"
         ) ||
         document.querySelector(
-            ".friends-list"
+            "#friendList"
         );
 
     if (!container) {
@@ -1727,10 +1735,10 @@ function showFriendRequests(
 ) {
     const container =
         document.getElementById(
-            "friendRequestsList"
+            "friendRequests"
         ) ||
         document.querySelector(
-            ".friend-requests-list"
+            "#friendRequests"
         );
 
     if (!container) {
@@ -1886,10 +1894,10 @@ function showFriendRequests(
 async function searchFriend() {
     const input =
         document.getElementById(
-            "friendSearchInput"
+            "friendPlayerId"
         ) ||
         document.querySelector(
-            ".friend-search-input"
+            "#friendPlayerId"
         );
 
     const resultContainer =
@@ -2114,14 +2122,15 @@ function renderFriendSearchResult(
                 Đã là bạn
             </button>
         `;
+    } else if (requestPending && incomingRequestId) {
+        actionHTML = `
+            <button type="button" class="search-result-accept-button"
+                data-request-id="${incomingRequestId}">Chấp nhận lời mời</button>
+        `;
     } else if (requestPending) {
         actionHTML = `
-            <button
-                type="button"
-                class="search-result-action"
-                disabled
-            >
-                Đã gửi lời mời
+            <button type="button" class="search-result-action" disabled>
+                Đang chờ người kia chấp nhận
             </button>
         `;
     } else {
@@ -2177,17 +2186,36 @@ function renderFriendSearchResult(
         );
 
     if (addButton) {
-        addButton.addEventListener(
-            "click",
-            () => {
-                sendFriendRequest(
-                    playerId
-                );
-            },
-            {
-                once: true
+        // A failed request must be retryable; a single click should send
+        // at most one request even when Render is slow to wake up.
+        addButton.addEventListener("click", async () => {
+            if (addButton.disabled) return;
+            addButton.disabled = true;
+            const oldText = addButton.textContent;
+            addButton.textContent = "Đang gửi...";
+            const ok = await sendFriendRequest(playerId);
+            if (!ok && addButton.isConnected) {
+                addButton.disabled = false;
+                addButton.textContent = oldText;
             }
-        );
+        });
+    }
+
+    const acceptButton = container.querySelector(".search-result-accept-button");
+    if (acceptButton) {
+        acceptButton.addEventListener("click", async () => {
+            if (acceptButton.disabled) return;
+            acceptButton.disabled = true;
+            const oldText = acceptButton.textContent;
+            acceptButton.textContent = "Đang xác nhận...";
+            const ok = await acceptFriend(incomingRequestId);
+            if (ok) {
+                await searchFriend();
+            } else if (acceptButton.isConnected) {
+                acceptButton.disabled = false;
+                acceptButton.textContent = oldText;
+            }
+        });
     }
 
     const profileButton =
@@ -2277,6 +2305,9 @@ async function sendFriendRequest(
             "Đã gửi lời mời kết bạn!",
             "success"
         );
+
+        // Refresh friend/request lists after a confirmed successful write.
+        loadFriends().catch(console.warn);
 
         const button =
             document.querySelector(
@@ -3071,10 +3102,10 @@ function bindAccountEvents() {
 
     const searchButton =
         document.getElementById(
-            "friendSearchButton"
+            "searchFriendButton"
         ) ||
         document.querySelector(
-            ".friend-search-button"
+            "#searchFriendButton"
         );
 
     if (
@@ -3096,10 +3127,10 @@ function bindAccountEvents() {
 
     const searchInput =
         document.getElementById(
-            "friendSearchInput"
+            "friendPlayerId"
         ) ||
         document.querySelector(
-            ".friend-search-input"
+            "#friendPlayerId"
         );
 
     if (
@@ -3179,8 +3210,22 @@ function bindAccountEvents() {
 
 function initAccountPage() {
     bindAccountEvents();
-
     loadAccount();
+
+    // Poll only the friend-related API while this tab is visible. The server
+    // remains authoritative; don't forge presence or cached friend state.
+    let pollBusy = false;
+    const pollFriends = async () => {
+        if (pollBusy || document.hidden || !getToken() || !accountLoaded) return;
+        pollBusy = true;
+        try { await loadFriends(); } catch (err) { console.warn('Friends refresh:', err); }
+        finally { pollBusy = false; }
+    };
+    const friendRefreshInterval = window.setInterval(pollFriends, 10000);
+    document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) pollFriends();
+    });
+    window.addEventListener('pagehide', () => clearInterval(friendRefreshInterval), {once:true});
 }
 
 document.addEventListener(

@@ -65,6 +65,21 @@
 
     let gameStartedAt = null;
 
+    // Never use a phone's clock as the sole source of battle elapsed time.
+    let serverClockOffsetMs = 0;
+    let matchDurationSeconds = BATTLE_CONFIG.MAX_GAME_TIME_SECONDS;
+    let serverSyncedAtMs = null;
+    let performanceSyncedAtMs = null;
+    let acceptingInvite = false;
+
+    function getSyncedBattleNow() {
+        if (Number.isFinite(serverSyncedAtMs) &&
+            Number.isFinite(performanceSyncedAtMs)) {
+            return serverSyncedAtMs + (performance.now() - performanceSyncedAtMs);
+        }
+        return Date.now() + serverClockOffsetMs;
+    }
+
     let currentQuestionStartedAt = null;
 
     let gameTimer = null;
@@ -2414,13 +2429,8 @@
 
     async function acceptInvite() {
 
-        if (
-            !currentMatchId
-        ) {
-
-            return;
-        }
-
+        if (!currentMatchId || acceptingInvite) return;
+        acceptingInvite = true;
         try {
 
             const response =
@@ -2478,6 +2488,8 @@
                 error.message,
                 "error"
             );
+        } finally {
+            acceptingInvite = false;
         }
     }
 
@@ -3317,6 +3329,21 @@
                 Date.now();
         }
 
+        // Match duration/start are shared by both clients and the backend.
+        // Offset compensates for different phone/computer clocks.
+        const serverNowMs = Date.parse(currentMatch?.server_now || '');
+        if (Number.isFinite(serverNowMs)) {
+            performanceSyncedAtMs = performance.now();
+            serverSyncedAtMs = serverNowMs;
+            serverClockOffsetMs = serverNowMs - Date.now();
+        } else {
+            serverSyncedAtMs = null;
+            performanceSyncedAtMs = null;
+        }
+        const fromServer = Number(currentMatch?.duration_seconds);
+        matchDurationSeconds = Number.isFinite(fromServer) && fromServer > 0
+            ? fromServer : BATTLE_CONFIG.MAX_GAME_TIME_SECONDS;
+
         currentQuestionStartedAt =
             Date.now();
 
@@ -3326,7 +3353,9 @@
             );
 
         if (timerElement) {
-            timerElement.textContent = "05:00";
+            const remaining = Math.max(0, matchDurationSeconds - Math.floor(
+                (getSyncedBattleNow() - gameStartedAt) / 1000));
+            timerElement.textContent = formatTime(remaining);
         }
 
         showScreen(gameScreen);
@@ -3370,65 +3399,18 @@
     ===================================================== */
 
     function startGameTimer() {
-
         clearGameTimer();
-
-        gameTimer =
-            setInterval(
-                function () {
-
-                    if (
-                        !gameStartedAt
-                    ) {
-
-                        return;
-                    }
-
-                    const seconds =
-                        Math.floor(
-                            (
-                                Date.now() -
-                                gameStartedAt
-                            ) / 1000
-                        );
-
-                    const safeSeconds =
-                        Math.min(
-                            Math.max(
-                                seconds,
-                                0
-                            ),
-                            BATTLE_CONFIG
-                                .MAX_GAME_TIME_SECONDS
-                        );
-
-                    const timerElement =
-                        getElement(
-                            "battleGameTimer"
-                        );
-
-                    if (
-                        timerElement
-                    ) {
-
-                        timerElement.textContent =
-                            formatTime(
-                                BATTLE_CONFIG.MAX_GAME_TIME_SECONDS - safeSeconds
-                            );
-                    }
-
-                    if (
-                        seconds >=
-                        BATTLE_CONFIG
-                            .MAX_GAME_TIME_SECONDS
-                    ) {
-
-                        handleGameTimeout();
-                    }
-
-                },
-                500
-            );
+        const render = () => {
+            if (!gameStartedAt || gameFinished || finishingGame) return;
+            const elapsed = Math.max(0, Math.floor(
+                (getSyncedBattleNow() - gameStartedAt) / 1000));
+            const left = Math.max(0, matchDurationSeconds - elapsed);
+            const timerElement = getElement('battleGameTimer');
+            if (timerElement) timerElement.textContent = formatTime(left);
+            if (left === 0) handleGameTimeout();
+        };
+        render();
+        gameTimer = window.setInterval(render, 500);
     }
 
 

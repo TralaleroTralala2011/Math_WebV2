@@ -532,6 +532,29 @@ def get_default_topics(grade):
     ]
 
 
+
+def choose_random_bank_topics(grade, fallback):
+    """Choose actual grade-matching topics with existing bank questions.
+
+    Only used when a battle was requested without manually selected topics.
+    No questions are invented here; the regular battle validator still gates them.
+    """
+    try:
+        topic_ids = [str(t.get('id') or t.get('code') or t.get('topic_id'))
+                     for t in ai_service.topics(grade)
+                     if isinstance(t, dict) and (t.get('id') or t.get('code') or t.get('topic_id'))]
+        random.shuffle(topic_ids)
+        result = []
+        for topic_id in topic_ids:
+            if ai_service._v254_candidates(grade, topic_id, 'medium', 'multiple_choice'):
+                result.append(topic_id)
+                if len(result) >= MAX_TOPIC_COUNT:
+                    break
+        return result or fallback
+    except Exception:
+        return fallback
+
+
 def normalize_topics_for_grade(grade, topics):
     if not topics:
         return get_default_topics(grade)
@@ -1446,6 +1469,11 @@ def join_random_match(
             if question_type != opponent_question_type:
                 question_type = DEFAULT_QUESTION_TYPE
 
+            # Auto mode: draw random topics from the actual existing grade bank,
+            # while keeping manually selected topics unchanged.
+            if not getattr(data, 'topics', None) and common_topics == get_default_topics(settings['grade']):
+                common_topics = choose_random_bank_topics(settings['grade'], common_topics)
+
             questions = generate_ai_battle_questions(
                 settings["grade"],
                 common_topics,
@@ -1871,6 +1899,9 @@ def invite_player(
                 detail="Bạn cần chọn ít nhất một chủ đề để đấu."
             )
 
+        if not data.topics:
+            common_topics = choose_random_bank_topics(settings['grade'], common_topics)
+
         questions = generate_ai_battle_questions(
             settings["grade"],
             common_topics,
@@ -2104,7 +2135,9 @@ def get_match(
             "winner_id": match["winner_id"],
             "created_at": match["created_at"],
             "started_at": match["started_at"],
-            "finished_at": match["finished_at"]
+            "finished_at": match["finished_at"],
+            "server_now": now_iso(),
+            "duration_seconds": MATCH_MAX_DURATION_SECONDS,
         }
 
     finally:
@@ -2171,19 +2204,19 @@ def accept_invite(
                 detail="Bạn đang ở trong một trận đấu khác."
             )
 
+        # Accept + start is ONE atomic, server-authoritative transition.
+        # Both users see exactly the same started_at, even if one tab is late.
+        started_at = now_iso()
         cursor.execute(
             """
             UPDATE matches
-            SET status = 'STARTING'
+            SET status = 'PLAYING', started_at = ?
             WHERE
                 id = ?
                 AND player2_id = ?
                 AND status = 'INVITED'
             """,
-            (
-                match_id,
-                user["id"]
-            )
+            (started_at, match_id, user["id"])
         )
 
         if cursor.rowcount != 1:
@@ -2211,8 +2244,10 @@ def accept_invite(
 
         return {
             "success": True,
-            "status": "STARTING",
-            "match_id": match_id
+            "status": "PLAYING",
+            "match_id": match_id,
+            "started_at": started_at,
+            "duration_seconds": MATCH_MAX_DURATION_SECONDS,
         }
 
     finally:
