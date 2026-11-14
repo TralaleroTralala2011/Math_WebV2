@@ -1116,7 +1116,8 @@
 <link rel="stylesheet" href="css/mw-v43-reference-nav.css?v=43">
 <link rel="stylesheet" href="css/logout-confirm-v43.css?v=43">
 <link rel="stylesheet" href="css/mw-additive-ui-v46.css?v=1">
-</head>
+<link rel="stylesheet" href="css/mw-v54-friends.css?v=54">
+</script><link rel="stylesheet" href="css/unified-navbar-v56.css?v=56"><script src="js/unified-navbar-v56.js?v=56"></script></head>
 
 
 <body class="account-body">
@@ -1568,129 +1569,62 @@
              FRIENDS
         ================================================== -->
 
-        <section
-            class="friends-section"
-            aria-labelledby="friendsTitle"
-        >
-
-            <div class="section-title">
-
+        <section class="friends-section mw-friends-v54" aria-labelledby="friendsTitle">
+            <div class="section-title mw-friends-heading">
+                <span class="mw-friends-heading-icon" aria-hidden="true">♧</span>
                 <div>
-
-                    <h2 id="friendsTitle">
-                        Bạn bè
-                    </h2>
-
-                    <p>
-                        Quản lý bạn bè và lời mời kết bạn
-                    </p>
-
+                    <h2 id="friendsTitle">Bạn bè</h2>
+                    <p>Tìm người học cùng, quản lý lời mời và kết nối để cùng luyện tập.</p>
                 </div>
-
             </div>
 
-
-            <div class="friend-search">
-
-                <input
-                    type="text"
-                    id="friendPlayerId"
-                    placeholder="Nhập Player ID..."
-                    maxlength="20"
-                    autocomplete="off"
-                    aria-label="Player ID cần tìm"
-                >
-
-
-                <button
-                    id="searchFriendButton"
-                    type="button"
-                    class="account-button"
-                >
-                    🔍 Tìm kiếm
-                </button>
-
+            <div class="mw-friends-search-card">
+                <div class="mw-friends-search-intro">
+                    <div>
+                        <span class="mw-friends-eyebrow">KẾT NỐI NGƯỜI CHƠI</span>
+                        <h3>Tìm bạn bằng Player ID</h3>
+                        <p>Nhập mã người chơi để xem hồ sơ và gửi lời mời kết bạn.</p>
+                    </div>
+                    <span class="mw-friends-search-decor" aria-hidden="true">⌕</span>
+                </div>
+                <div class="friend-search" role="search" aria-label="Tìm kiếm bạn bè theo Player ID">
+                    <label for="friendPlayerId" class="mw-friends-input-label">Player ID</label>
+                    <input type="text" id="friendPlayerId" placeholder="Ví dụ: MW-123456-789" maxlength="100" autocomplete="off" spellcheck="false" aria-label="Player ID cần tìm">
+                    <button id="searchFriendButton" type="button" class="account-button">
+                        <span aria-hidden="true">⌕</span> Tìm kiếm
+                    </button>
+                </div>
+                <div id="friendSearchResult" class="friend-search-result" aria-live="polite" aria-atomic="true"></div>
             </div>
-
-
-            <div
-                id="friendSearchResult"
-                class="friend-search-result"
-                aria-live="polite"
-            ></div>
-
-
 
             <div class="friend-columns">
-
-
-                <div class="friend-panel">
-
+                <div class="friend-panel mw-friends-list-panel">
                     <div class="friend-panel-title">
-
-                        <div>
-
-                            <h3>
-                                Danh sách bạn bè
-                            </h3>
-
-
-                            <span
-                                id="friendCount"
-                                class="friend-count"
-                            >
-                                0 bạn
-                            </span>
-
+                        <div class="mw-friends-panel-heading">
+                            <span class="mw-friends-panel-icon" aria-hidden="true">♧</span>
+                            <div>
+                                <h3>Danh sách bạn bè</h3>
+                                <p>Người đã kết nối</p>
+                            </div>
                         </div>
-
+                        <span id="friendCount" class="friend-count" aria-label="Số bạn bè">0 bạn</span>
                     </div>
-
-
-                    <div
-                        id="friendList"
-                        class="friend-list"
-                        aria-live="polite"
-                    ></div>
-
+                    <div id="friendList" class="friend-list" aria-live="polite"></div>
                 </div>
-
-
-
-                <div class="friend-panel">
-
+                <div class="friend-panel mw-friends-requests-panel">
                     <div class="friend-panel-title">
-
-                        <div>
-
-                            <h3>
-                                Lời mời kết bạn
-                            </h3>
-
-
-                            <span
-                                id="requestCount"
-                                class="friend-count"
-                            >
-                                0 lời mời
-                            </span>
-
+                        <div class="mw-friends-panel-heading">
+                            <span class="mw-friends-panel-icon mw-friends-panel-icon-purple" aria-hidden="true">✉</span>
+                            <div>
+                                <h3>Lời mời kết bạn</h3>
+                                <p>Xem và phản hồi lời mời đến</p>
+                            </div>
                         </div>
-
+                        <span id="requestCount" class="friend-count" aria-label="Số lời mời đang chờ">0 lời mời</span>
                     </div>
-
-
-                    <div
-                        id="friendRequests"
-                        class="friend-list"
-                        aria-live="polite"
-                    ></div>
-
+                    <div id="friendRequests" class="friend-list" aria-live="polite"></div>
                 </div>
-
-
             </div>
-
         </section>
 
 

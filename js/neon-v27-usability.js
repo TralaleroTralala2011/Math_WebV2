@@ -1,7 +1,7 @@
 /* V27: restore working notification UI, keep header in normal document flow. */
 (()=>{'use strict';
 const page=(location.pathname.split('/').pop()||'index.html').toLowerCase();
-if(page==='admin.html')return;
+if(page==='admin.html'||document.querySelector('script[src*="unified-navbar-v56.js"]'))return;
 function setup(){
  if(page==='battle.html')document.body.classList.add('mw-v27-battle');
  const header=document.getElementById('mw-v5-header');if(!header)return;

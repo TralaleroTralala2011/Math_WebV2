@@ -1,0 +1,180 @@
+/* MATH_WEB V54: Account friends redesign. Entirely scoped; all existing IDs and
+   API event bindings stay unchanged. This stylesheet loads after legacy themes. */
+body.account-body .mw-friends-v54 {
+  --f54-ink: #eef7ff;
+  --f54-soft: #9eb1cc;
+  --f54-line: rgba(124, 176, 215, .21);
+  --f54-cyan: #54e3f0;
+  --f54-radius: 20px;
+  width: 100%; min-width: 0; margin: 30px 0 32px;
+  color: var(--f54-ink);
+  font-family: 'Poppins', system-ui, sans-serif;
+}
+body.account-body .mw-friends-v54 *,
+body.account-body .mw-friends-v54 *::before,
+body.account-body .mw-friends-v54 *::after {box-sizing:border-box}
+body.account-body .mw-friends-v54 .mw-friends-heading {display:flex;align-items:center;gap:14px;margin:0 0 20px;padding:0}
+body.account-body .mw-friends-v54 .mw-friends-heading-icon {
+  display:grid;place-items:center;flex:0 0 52px;width:52px;height:52px;
+  background:linear-gradient(145deg,#103c59,#1b2847);border:1px solid #2f7290;
+  color:#72ebf2;border-radius:16px;font-size:30px;line-height:1;
+  box-shadow:0 10px 24px rgba(0,0,0,.12)
+}
+body.account-body .mw-friends-v54 .mw-friends-heading h2 {font-size:clamp(22px,2.4vw,28px);font-weight:800;line-height:1.2;color:#f4f9ff;margin:0 0 6px}
+body.account-body .mw-friends-v54 .mw-friends-heading p {font-size:13px;line-height:1.6;color:#a5b8cf;margin:0;max-width:64ch}
+body.account-body .mw-friends-v54 .mw-friends-search-card {
+  width:100%;min-width:0;padding:clamp(16px,2.5vw,24px);border-radius:var(--f54-radius);
+  background:linear-gradient(116deg,rgba(26,52,77,.96),rgba(18,31,55,.97) 65%,rgba(19,27,53,.98));
+  border:1px solid rgba(100,169,213,.3);box-shadow:0 16px 40px rgba(0,0,0,.13);
+  margin-bottom:18px;
+}
+body.account-body .mw-friends-v54 .mw-friends-search-intro {display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}
+body.account-body .mw-friends-v54 .mw-friends-eyebrow {display:block;color:#5ce2ef;letter-spacing:.13em;font-size:10px;font-weight:800;margin-bottom:7px}
+body.account-body .mw-friends-v54 .mw-friends-search-intro h3 {font-size:clamp(16px,2vw,20px);font-weight:750;line-height:1.35;color:#f7fbff;margin:0 0 5px}
+body.account-body .mw-friends-v54 .mw-friends-search-intro p {font-size:12px;line-height:1.6;color:var(--f54-soft);margin:0}
+body.account-body .mw-friends-v54 .mw-friends-search-decor {width:46px;height:46px;display:grid;place-items:center;flex:0 0 46px;border-radius:14px;background:#1c4963;border:1px solid #297b9a;color:#81f1fa;font-size:33px;line-height:1}
+body.account-body .mw-friends-v54 .friend-search {display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:10px;row-gap:8px;align-items:center;margin:0;width:100%}
+body.account-body .mw-friends-v54 .mw-friends-input-label {grid-column:1/-1;color:#dce8f7;font-size:12px;font-weight:700}
+body.account-body .mw-friends-v54 .friend-search input {
+  display:block;width:100%;min-width:0;min-height:49px;max-width:none;flex:initial;
+  border:1px solid #395c7d;border-radius:12px;padding:12px 15px;
+  background:#10243e;color:#eff9ff;outline:none;font:500 14px/1.4 'Poppins',system-ui,sans-serif;
+  box-shadow:none;transition:border-color .15s,box-shadow .15s;
+}
+body.account-body .mw-friends-v54 .friend-search input::placeholder {color:#879db8}
+body.account-body .mw-friends-v54 .friend-search input:focus-visible {border-color:#5ae3f2;box-shadow:0 0 0 3px rgba(70,220,237,.14)}
+body.account-body .mw-friends-v54 .friend-search .account-button {
+  width:auto;min-width:130px;min-height:49px;height:auto;flex:initial;margin:0;
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border:1px solid #53d3ea;border-radius:12px;padding:10px 17px;
+  background:linear-gradient(110deg,#4bdbed,#39a8e4);color:#062341;
+  font:800 13px/1.3 'Poppins',system-ui,sans-serif;white-space:nowrap;
+  transition:filter .15s,transform .15s;box-shadow:0 8px 18px rgba(34,170,206,.14);
+}
+body.account-body .mw-friends-v54 .friend-search .account-button:hover:not(:disabled) {filter:brightness(1.08);transform:translateY(-1px)}
+body.account-body .mw-friends-v54 .friend-search .account-button span {font-size:23px;line-height:0.75}
+body.account-body .mw-friends-v54 .friend-search-result:empty {display:none!important}
+body.account-body .mw-friends-v54 .friend-search-result:not(:empty) {display:block;width:100%;min-width:0;margin:15px 0 0}
+body.account-body .mw-friends-v54 .search-result-card,
+body.account-body .mw-friends-v54 .friend-item,
+body.account-body .mw-friends-v54 .friend-request-item {
+  width:100%;min-width:0;margin:0;display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:15px;border-radius:15px;background:rgba(10,24,44,.65);
+  border:1px solid var(--f54-line);color:#edf8ff;
+  box-shadow:none;transition:border-color .15s,background .15s;
+}
+body.account-body .mw-friends-v54 .search-result-card {border-color:rgba(78,219,236,.4);background:linear-gradient(110deg,rgba(9,44,66,.9),rgba(15,29,52,.9))}
+body.account-body .mw-friends-v54 .friend-item:hover,
+body.account-body .mw-friends-v54 .friend-request-item:hover,
+body.account-body .mw-friends-v54 .search-result-card:hover {transform:none;background-color:rgba(25,52,81,.82);border-color:rgba(90,206,230,.5)}
+body.account-body .mw-friends-v54 .search-result-main,
+body.account-body .mw-friends-v54 .friend-main,
+body.account-body .mw-friends-v54 .friend-request-main {display:flex;align-items:center;gap:12px;min-width:0;flex:1 1 190px;width:auto;cursor:default}
+body.account-body .mw-friends-v54 .search-result-avatar,
+body.account-body .mw-friends-v54 .friend-avatar,
+body.account-body .mw-friends-v54 .friend-request-avatar {
+  flex:0 0 49px;width:49px;height:49px;min-width:49px;position:relative;
+  display:grid;place-items:center;border-radius:14px;
+  background:linear-gradient(135deg,#244b74,#3c2c67);border:1px solid rgba(118,171,232,.3);overflow:visible;
+}
+body.account-body .mw-friends-v54 .search-result-avatar img,
+body.account-body .mw-friends-v54 .friend-avatar img,
+body.account-body .mw-friends-v54 .friend-request-avatar img,
+body.account-body .mw-friends-v54 .search-result-avatar-fallback,
+body.account-body .mw-friends-v54 .friend-avatar-fallback,
+body.account-body .mw-friends-v54 .friend-request-avatar-fallback {width:100%;height:100%;object-fit:cover;border-radius:inherit;display:grid;place-items:center;color:#eaf6ff;font-size:19px;font-weight:800}
+body.account-body .mw-friends-v54 .search-result-info,
+body.account-body .mw-friends-v54 .friend-info,
+body.account-body .mw-friends-v54 .friend-request-info {display:flex;flex-direction:column;gap:4px;min-width:0;flex:1 1 auto;max-width:100%;width:auto;align-items:flex-start;text-align:left}
+body.account-body .mw-friends-v54 .search-result-name,
+body.account-body .mw-friends-v54 .friend-name,
+body.account-body .mw-friends-v54 .friend-request-name {color:#f4f9ff;font-size:15px;font-weight:800;line-height:1.35;max-width:100%;overflow-wrap:anywhere;white-space:normal;text-overflow:initial;margin:0}
+body.account-body .mw-friends-v54 .search-result-id,
+body.account-body .mw-friends-v54 .friend-id,
+body.account-body .mw-friends-v54 .friend-request-id {font-size:11px;font-weight:500;color:#a4b7ce;max-width:100%;overflow-wrap:anywhere;white-space:normal;line-height:1.4}
+body.account-body .mw-friends-v54 .mw-friends-person-meta {display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin-top:3px}
+body.account-body .mw-friends-v54 .mw-friends-online-label,
+body.account-body .mw-friends-v54 .mw-friends-level,
+body.account-body .mw-friends-v54 .mw-friends-incoming-tag {display:inline-flex;align-items:center;gap:5px;font-weight:700;font-size:10px;line-height:1.4;border:1px solid rgba(101,148,186,.27);border-radius:999px;padding:4px 8px;color:#a9b9cf;background:rgba(75,104,145,.15)}
+body.account-body .mw-friends-v54 .mw-friends-online-label.is-online {color:#89efb4;background:rgba(40,154,95,.12);border-color:rgba(80,220,140,.25)}
+body.account-body .mw-friends-v54 .mw-friends-online-label i {width:6px;height:6px;border-radius:50%;background:#8196ad;display:inline-block}
+body.account-body .mw-friends-v54 .mw-friends-online-label.is-online i {background:#61e59a}
+body.account-body .mw-friends-v54 .mw-friends-incoming-tag {margin-top:3px;color:#e5cbff;background:rgba(124,82,205,.16);border-color:rgba(175,141,232,.27)}
+body.account-body .mw-friends-v54 .friend-online-dot {position:absolute;right:-2px;bottom:-3px;width:11px;height:11px;border-radius:50%;background:#64748b;border:2px solid #10213b;box-shadow:none}
+body.account-body .mw-friends-v54 .friend-online-dot.online {background:#61e59a}
+body.account-body .mw-friends-v54 .search-result-actions,
+body.account-body .mw-friends-v54 .friend-actions,
+body.account-body .mw-friends-v54 .friend-request-actions {display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap;flex:0 1 auto;width:auto;min-width:0;margin:0}
+body.account-body .mw-friends-v54 button[class^="search-result-"],
+body.account-body .mw-friends-v54 .friend-actions button,
+body.account-body .mw-friends-v54 .friend-request-actions button {min-height:38px;min-width:0;margin:0;padding:8px 12px;border-radius:10px;border:1px solid #3f678b;background:#19344f;color:#dff7ff;white-space:normal;overflow-wrap:anywhere;font:700 11px/1.3 'Poppins',system-ui,sans-serif;cursor:pointer;transition:background .15s,border-color .15s}
+body.account-body .mw-friends-v54 button[class^="search-result-"]:hover:not(:disabled),
+body.account-body .mw-friends-v54 .friend-actions button:hover:not(:disabled),
+body.account-body .mw-friends-v54 .friend-request-actions button:hover:not(:disabled) {background:#264e72;border-color:#6ddff2}
+body.account-body .mw-friends-v54 .search-result-add-button,
+body.account-body .mw-friends-v54 .search-result-accept-button,
+body.account-body .mw-friends-v54 .friend-request-accept {background:#126c78!important;color:#e7ffff!important;border-color:#219fb0!important}
+body.account-body .mw-friends-v54 .friend-request-reject {border-color:#81536d!important;background:#38263e!important;color:#ffd6e4!important}
+body.account-body .mw-friends-v54 .search-result-action:disabled {color:#acbfd1;opacity:.85;background:#1b3048;cursor:not-allowed}
+body.account-body .mw-friends-v54 .friend-actions .friend-pvp-button {background:#332e6d;border-color:#645ccc;color:#eae6ff}
+body.account-body .mw-friends-v54 button:focus-visible {outline:2px solid #8eeaff;outline-offset:3px}
+body.account-body .mw-friends-v54 .friend-columns {display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;align-items:start;width:100%;min-width:0}
+body.account-body .mw-friends-v54 .friend-panel {min-width:0;width:100%;padding:clamp(15px,2.1vw,21px);border-radius:var(--f54-radius);background:linear-gradient(150deg,rgba(20,32,54,.98),rgba(17,22,44,.98));border:1px solid var(--f54-line);box-shadow:0 12px 30px rgba(0,0,0,.09)}
+body.account-body .mw-friends-v54 .friend-panel-title {display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:16px;min-width:0}
+body.account-body .mw-friends-v54 .mw-friends-panel-heading {display:flex;align-items:center;gap:10px;min-width:0;flex:1}
+body.account-body .mw-friends-v54 .mw-friends-panel-icon {display:grid;place-items:center;flex:0 0 40px;width:40px;height:40px;border-radius:12px;background:#17465a;border:1px solid #2b758d;color:#7defff;font-size:24px}
+body.account-body .mw-friends-v54 .mw-friends-panel-icon-purple {background:#332454;border-color:#674d93;color:#d6c1fb;font-size:21px}
+body.account-body .mw-friends-v54 .friend-panel-title h3 {font-size:15px;font-weight:800;line-height:1.3;margin:0;color:#eef9ff}
+body.account-body .mw-friends-v54 .friend-panel-title p {font-size:10px;line-height:1.5;color:#93abc5;margin:3px 0 0}
+body.account-body .mw-friends-v54 .friend-panel-title .friend-count {display:inline-flex;flex:0 0 auto;align-items:center;justify-content:center;white-space:nowrap;margin:0;padding:5px 10px;height:auto;min-height:27px;min-width:0;border-radius:99px;border:1px solid rgba(74,212,230,.24);color:#87e6f0;background:rgba(25,89,111,.25);font:700 11px/1.3 'Poppins',system-ui,sans-serif}
+body.account-body .mw-friends-v54 .mw-friends-requests-panel .friend-count {color:#d8c3ff;border-color:#8764b64a;background:#6c4ba52a}
+body.account-body .mw-friends-v54 .friend-list {display:flex;flex-direction:column;gap:10px;min-width:0;max-height:480px;overflow-y:auto;overscroll-behavior:contain}
+body.account-body .mw-friends-v54 .mw-friends-empty-state {display:flex;align-items:center;flex-direction:column;text-align:center;justify-content:center;gap:7px;min-height:166px;padding:24px 12px;border-radius:15px;border:1px dashed rgba(100,145,188,.25);background:rgba(6,21,39,.28);margin:0}
+body.account-body .mw-friends-v54 .mw-friends-empty-icon {display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:#1c3551;color:#a9d9ea;font-size:24px;margin-bottom:4px}
+body.account-body .mw-friends-v54 .mw-friends-empty-state strong {font-size:13px;font-weight:800;color:#e4f2ff}
+body.account-body .mw-friends-v54 .mw-friends-empty-state p {font-size:11px;line-height:1.6;margin:0;color:#a4b5ca;max-width:28ch}
+body.account-body .mw-friends-v54 .search-result-loading,
+body.account-body .mw-friends-v54 .search-result-error {padding:13px 16px;margin:0;border:1px solid rgba(78,176,206,.3);border-radius:12px;color:#cdeeff;background:rgba(12,48,66,.45);font-size:12px;line-height:1.6}
+body.account-body .mw-friends-v54 .search-result-error {border-color:#a45a70;color:#ffd5df;background:rgba(98,32,57,.25)}
+@media(max-width:1050px) {
+  body.account-body .mw-friends-v54 .friend-columns {grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:660px) {
+  body.account-body .mw-friends-v54 {margin-top:22px}
+  body.account-body .mw-friends-v54 .mw-friends-heading {gap:10px;margin-bottom:15px}
+  body.account-body .mw-friends-v54 .mw-friends-heading-icon {width:42px;height:42px;flex-basis:42px;border-radius:12px;font-size:25px}
+  body.account-body .mw-friends-v54 .mw-friends-heading h2 {font-size:21px}
+  body.account-body .mw-friends-v54 .mw-friends-heading p {font-size:11px}
+  body.account-body .mw-friends-v54 .mw-friends-search-card {padding:15px;margin-bottom:13px}
+  body.account-body .mw-friends-v54 .mw-friends-search-decor {display:none}
+  body.account-body .mw-friends-v54 .friend-search {grid-template-columns:minmax(0,1fr)}
+  body.account-body .mw-friends-v54 .friend-search .account-button {width:100%;min-height:46px}
+  body.account-body .mw-friends-v54 .friend-panel {padding:14px}
+  body.account-body .mw-friends-v54 .search-result-card,
+  body.account-body .mw-friends-v54 .friend-item,
+  body.account-body .mw-friends-v54 .friend-request-item {flex-direction:column;align-items:stretch;gap:13px;padding:12px}
+  body.account-body .mw-friends-v54 .search-result-actions,
+  body.account-body .mw-friends-v54 .friend-actions,
+  body.account-body .mw-friends-v54 .friend-request-actions {width:100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+  body.account-body .mw-friends-v54 .friend-actions {grid-template-columns:repeat(3,minmax(0,1fr))}
+  body.account-body .mw-friends-v54 button[class^="search-result-"],
+  body.account-body .mw-friends-v54 .friend-actions button,
+  body.account-body .mw-friends-v54 .friend-request-actions button {width:100%;padding:9px 5px;min-height:42px;font-size:11px}
+}
+@media(max-width:350px) {
+  body.account-body .mw-friends-v54 .friend-actions {grid-template-columns:repeat(2,minmax(0,1fr))}
+  body.account-body .mw-friends-v54 .friend-panel-title {align-items:flex-start;flex-wrap:wrap}
+}
+@media(prefers-reduced-motion:reduce) {
+  body.account-body .mw-friends-v54 *,body.account-body .mw-friends-v54 *::before,body.account-body .mw-friends-v54 *::after {transition:none!important;animation:none!important}
+}
+/* On narrow screens column flex-basis must not carry the desktop 190px width
+   into the vertical axis; otherwise every friend card gets a tall blank area. */
+@media(max-width:660px) {
+  body.account-body .mw-friends-v54 .search-result-main,
+  body.account-body .mw-friends-v54 .friend-main,
+  body.account-body .mw-friends-v54 .friend-request-main {flex:0 0 auto;width:100%;min-height:0;align-items:center}
+  body.account-body .mw-friends-v54 .search-result-info,
+  body.account-body .mw-friends-v54 .friend-info,
+  body.account-body .mw-friends-v54 .friend-request-info {flex:1 1 auto;width:auto}
+}

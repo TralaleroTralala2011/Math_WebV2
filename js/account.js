@@ -1459,14 +1459,6 @@ function renderProfilePopup(
             profile.isOnline
         );
 
-    // A pending relation may be INCOMING or OUTGOING. The searched
-    // profile is the other player; relation.requester_id identifies the sender.
-    const incomingRequestId = requestPending &&
-        Number(profile.requester_id) === Number(profile.id) &&
-        Number.isInteger(Number(profile.relation_id)) &&
-        Number(profile.relation_id) > 0
-            ? Number(profile.relation_id) : null;
-
     const avatarHTML =
         avatar
             ? `
@@ -1576,8 +1568,10 @@ function showFriends(friends) {
         friends.length === 0
     ) {
         container.innerHTML = `
-            <div class="friends-empty">
-                <p>Chưa có bạn bè.</p>
+            <div class="friends-empty mw-friends-empty-state">
+                <span class="mw-friends-empty-icon" aria-hidden="true">♧</span>
+                <strong>Chưa có bạn bè</strong>
+                <p>Tìm người chơi bằng Player ID để bắt đầu kết nối.</p>
             </div>
         `;
 
@@ -1684,6 +1678,12 @@ function showFriends(friends) {
                             "Không có"
                         )}
                     </div>
+                    <div class="mw-friends-person-meta">
+                        <span class="mw-friends-online-label ${online ? "is-online" : "is-offline"}">
+                            <i aria-hidden="true"></i>${online ? "Đang online" : "Offline"}
+                        </span>
+                        <span class="mw-friends-level">Lv.${safeNonNegativeInteger(friend.level ?? friend.lv, 0)}</span>
+                    </div>
                 </div>
             </div>
 
@@ -1752,8 +1752,10 @@ function showFriendRequests(
         requests.length === 0
     ) {
         container.innerHTML = `
-            <div class="friend-requests-empty">
-                <p>Không có lời mời kết bạn.</p>
+            <div class="friend-requests-empty mw-friends-empty-state">
+                <span class="mw-friends-empty-icon" aria-hidden="true">✉</span>
+                <strong>Chưa có lời mời mới</strong>
+                <p>Khi có người gửi lời mời kết bạn, bạn sẽ thấy tại đây.</p>
             </div>
         `;
 
@@ -1853,6 +1855,7 @@ function showFriendRequests(
                             "Không có"
                         )}
                     </div>
+                    <span class="mw-friends-incoming-tag">Muốn kết bạn với bạn</span>
                 </div>
             </div>
 
@@ -2090,6 +2093,17 @@ function renderFriendSearchResult(
             profile.pending
         );
 
+    // The matching API returns relation_id and requester_id. When the
+    // searched person sent the request, offer Accept rather than Pending.
+    const incomingRequestId = requestPending &&
+        Number(profile.requester_id) === Number(profile.id) &&
+        Number.isInteger(Number(profile.relation_id)) &&
+        Number(profile.relation_id) > 0
+            ? Number(profile.relation_id) : null;
+
+    const online = Boolean(profile.online ?? profile.is_online ?? profile.isOnline);
+    const level = safeNonNegativeInteger(profile.level ?? profile.lv, 0);
+
     const avatarHTML =
         avatar
             ? `
@@ -2162,6 +2176,12 @@ function renderFriendSearchResult(
                             playerId ||
                             "Không có"
                         )}
+                    </div>
+                    <div class="mw-friends-person-meta">
+                        <span class="mw-friends-online-label ${online ? "is-online" : "is-offline"}">
+                            <i aria-hidden="true"></i>${online ? "Đang online" : "Offline"}
+                        </span>
+                        <span class="mw-friends-level">Lv.${level}</span>
                     </div>
                 </div>
             </div>
@@ -2710,7 +2730,7 @@ function updateFriendCount(
 
         if (element) {
             element.textContent =
-                String(value);
+                id === "friendCount" ? `${value} bạn` : String(value);
         }
     });
 }
@@ -2735,7 +2755,7 @@ function updateRequestCount(
 
         if (element) {
             element.textContent =
-                String(value);
+                id === "requestCount" ? `${value} lời mời` : String(value);
         }
     });
 }
