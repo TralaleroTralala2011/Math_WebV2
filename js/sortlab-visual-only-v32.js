@@ -10,7 +10,7 @@
     if(!reduced){
       document.body.classList.add('mwfx-page-enter');
       var bg=document.createElement('div');bg.id='mwfx-ambient';bg.setAttribute('aria-hidden','true');document.body.appendChild(bg);
-      var line=document.createElement('div');line.className='mwfx-shine';line.setAttribute('aria-hidden','true');document.body.appendChild(line);
+      var line=document.createElement('div');line.className='mwfx-shine';line.setAttribute('aria-hidden','true');document.documentElement.appendChild(line);
       line.addEventListener('animationend',function(){line.remove();},{once:true});
     }
     // Restrict decoration to visual card surfaces and common clickable elements.
@@ -20,7 +20,7 @@
     if(reduced)return;
     var cursor=null,frame=0,lastX=-999,lastY=-999;
     if(!coarse && window.matchMedia && window.matchMedia('(hover: hover)').matches){
-      cursor=document.createElement('div');cursor.id='mwfx-cursor';cursor.setAttribute('aria-hidden','true');document.body.appendChild(cursor);
+      cursor=document.createElement('div');cursor.id='mwfx-cursor';cursor.setAttribute('aria-hidden','true');document.documentElement.appendChild(cursor);
       document.addEventListener('pointermove',function(e){
         if(e.pointerType==='touch')return;
         lastX=e.clientX;lastY=e.clientY;
@@ -33,7 +33,7 @@
       if(e.button!==0||e.pointerType==='touch'||!e.target.closest)return;
       var target=e.target.closest('a,button,.battle-choice,[role="button"]');
       if(!target||target.closest('[contenteditable="true"]'))return;
-      var r=document.createElement('span');r.className='mwfx-ripple';r.setAttribute('aria-hidden','true');r.style.left=e.clientX+'px';r.style.top=e.clientY+'px';document.body.appendChild(r);
+      var r=document.createElement('span');r.className='mwfx-ripple';r.setAttribute('aria-hidden','true');r.style.left=e.clientX+'px';r.style.top=e.clientY+'px';document.documentElement.appendChild(r);
       r.addEventListener('animationend',function(){r.remove();},{once:true});
     },{passive:true});
   }

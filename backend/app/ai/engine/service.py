@@ -41,21 +41,26 @@ class AIQuestionService:
     def topics(self,grade=None): return self.knowledge.list_topics(grade)
 
     def _v254_candidates(self, grade, topic_id, difficulty, question_type):
-        """Read old V254 and additive B56 candidate bank, never replacing either.
+        """Use non-overlapping screened V59 additions plus the original V254.
 
-        Exact normalized prompt dedup runs before returning results. B56 status
-        remains candidate/unverified; final validator still applies at use time.
+        The full, original B56 bank is preserved as a fallback only if the
+        screened overlay is not accessible. This prevents sampling the same
+        83k prompts twice. All sources remain candidate data, not proof of
+        mathematical correctness.
         """
         if question_type not in ("short_answer", "written", "multiple_choice"):
             return []
         import sqlite3
         from .v254_bank import ensure_v254_bank
         from .b56_bank import ensure_b56_bank
+        from .v59_bank import ensure_v59_bank
         requested_type = "short_answer" if question_type == "written" else question_type
         requested_level = normalize(difficulty)
         result = []
         seen = set()
-        for path in (ensure_v254_bank(), ensure_b56_bank()):
+        v59_path=ensure_v59_bank()
+        sources=[v59_path, ensure_v254_bank()] if v59_path else [ensure_v254_bank(), ensure_b56_bank()]
+        for path in sources:
             if path is None:
                 continue
             try:
@@ -73,8 +78,14 @@ class AIQuestionService:
                     ).fetchall()
                 for row in rows:
                     item = dict(row)
-                    signature = " ".join(str(item.get('question', '')).casefold().split())
+                    signature = " ".join(str(item.get("question", "")).casefold().split())
                     if not signature or signature in seen:
+                        continue
+                    # Clearly invalid short-answer labels must never reach
+                    # the answer checker as if they were numeric answers.
+                    if requested_type == "short_answer" and re.match(
+                        r"^\s*[A-D]\s*[).:\-]", str(item.get("answer") or ""), re.I
+                    ):
                         continue
                     seen.add(signature)
                     result.append(item)

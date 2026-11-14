@@ -1,0 +1,721 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<style id="battle-library-theme-v57">
+/* Battle-specific presentation only. The THPT sky, library, boy, book animation remain intact. */
+#app .case {min-width:0;display:grid;grid-template-columns:minmax(0,1fr);gap:8px;padding:12px;}
+#app .case>.colh,#app .case>.rowh {display:none!important;}
+#app .case>.bay {height:clamp(116px,16vh,155px);width:100%;overflow-x:auto;overflow-y:hidden;gap:4px;scrollbar-width:thin;padding:12px 12px 0;box-sizing:border-box;}
+#app .case>.bay .bk {flex:0 0 24px;min-width:16px;max-width:26px;}
+#app .lvl,#app #m-flevel {display:none!important;}
+#app .book-desc {max-height:4em;overflow:auto;}
+#app .lib-head h2 {font-size:clamp(23px,3.3vw,36px);}
+#app .case-scroll {overflow-x:visible;}
+#app .book .eyebrow {font-weight:700;}
+@media(max-width:600px){#app .case>.bay .bk{flex-basis:22px;min-width:18px;}}
+</style>
+</head><body>
+<title>Chọn chủ đề Battle · Tủ sách Toán THPT</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Be+Vietnam+Pro:wght@400;500;600&display=swap">
+<style>
+/* Bố cục: một "thế giới" cao 200%. Nửa trên là bầu trời sao, nửa dưới là thư viện.
+   Cậu bé đứng cố định giữa đáy màn hình; khi cậu cúi đầu, camera trượt xuống tủ sách. */
+:root{
+  --night:#0a0e2b; --night-2:#161c52; --moon:#f4ebc8; --gold:#f2c14e;
+  --wood:#6e4626; --wood-dark:#3b2413; --wood-light:#946133;
+  --paper:#f7f0dd; --paper-ink:#2a1d12; --muted:#aab0e0;
+  --f-display:"Baloo 2","Be Vietnam Pro",system-ui,sans-serif;
+  --f-body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.65,.02,.2,1);
+  --floor:clamp(64px,11vh,104px);
+  color-scheme:dark;
+}
+html,body{height:100%}
+body{margin:0;background:var(--night);color:#eef0ff;font:400 14px/1.5 var(--f-body);overflow:hidden}
+button{font-family:inherit}
+#app{position:relative;height:100%;overflow:hidden;background:var(--night)}
+#world{position:absolute;left:0;top:0;width:100%;height:200%;transition:transform 2.4s var(--ease);will-change:transform}
+#app[data-phase="turn"] #world,#app[data-phase="library"] #world{transform:translateY(-50%)}
+
+/* Bầu trời */
+.sky{position:relative;height:50%;overflow:hidden;
+  background:radial-gradient(120% 80% at 72% 0%,#2a3590 0%,transparent 55%),linear-gradient(#070a22,#121a54 68%,#2c2b72 100%)}
+.sky canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.moon{position:absolute;top:9%;right:11%;width:clamp(56px,9vw,108px);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle at 34% 34%,#fffbe8,#efe0aa 62%,#d6c487);
+  box-shadow:0 0 70px 14px rgba(244,235,200,.22),inset -8px -6px 18px rgba(150,130,70,.35)}
+.moon::before{content:"";position:absolute;left:55%;top:24%;width:20%;height:20%;border-radius:50%;background:rgba(160,140,80,.25)}
+.moon::after{content:"";position:absolute;left:24%;top:58%;width:14%;height:14%;border-radius:50%;background:rgba(160,140,80,.2)}
+.hill{position:absolute;left:-6%;right:-6%;bottom:-2px;height:20%;background:#05071a;border-radius:50% 50% 0 0/100% 100% 0 0}
+
+/* Cậu bé (nhìn từ phía sau) */
+.boy{position:absolute;left:50%;bottom:calc(var(--floor)*.3 + env(safe-area-inset-bottom,0px));
+  width:clamp(96px,17vh,170px);transform:translateX(-50%);transform-origin:50% 100%;
+  z-index:5;pointer-events:none;transition:transform 1.6s var(--ease)}
+#app[data-phase="turn"] .boy,#app[data-phase="library"] .boy{transform:translateX(-50%) scale(.62)}
+.boy svg{display:block;width:100%;height:auto;overflow:visible}
+.boy .head{transform-origin:50px 58px;transition:transform 1.1s var(--ease)}
+.boy .arm-r{transform-origin:78.5px 70px;transition:transform 1.1s var(--ease)}
+#app[data-phase="curtain"] .boy .head,#app[data-phase="sky"] .boy .head{transform:translateY(4px) rotate(-7deg) scale(1,.92)}
+#app[data-phase="curtain"] .boy .arm-r,#app[data-phase="sky"] .boy .arm-r{transform:rotate(-150deg)}
+.gaze{opacity:0;transition:opacity 1s}
+#app[data-phase="sky"] .gaze{opacity:1}
+
+.say{position:absolute;z-index:6;left:calc(50% + clamp(52px,9vh,92px));bottom:calc(var(--floor)*.3 + clamp(70px,13vh,130px));
+  max-width:calc(50% - clamp(60px,10vh,100px) - 12px);background:var(--paper);color:var(--paper-ink);
+  font:600 13px/1.35 var(--f-body);padding:8px 12px;border-radius:14px 14px 14px 3px;
+  box-shadow:0 8px 24px rgba(0,0,0,.4);opacity:0;transform:translateY(6px);transition:opacity .35s,transform .35s;pointer-events:none}
+.say.on{opacity:1;transform:none}
+
+.caption{position:absolute;z-index:8;left:50%;top:max(16px,env(safe-area-inset-top,0px));transform:translate(-50%,-6px);
+  max-width:calc(100% - 32px);text-align:center;padding:7px 16px;border-radius:999px;
+  background:rgba(10,14,43,.55);backdrop-filter:blur(4px);color:var(--moon);
+  font:500 13px/1.4 var(--f-body);letter-spacing:.02em;opacity:0;transition:opacity .5s,transform .5s;pointer-events:none}
+.caption.on{opacity:1;transform:translate(-50%,0)}
+#app[data-phase="library"] .caption{top:auto;bottom:max(10px,env(safe-area-inset-bottom,0px));transform:translate(-50%,0);display:none}
+
+/* Màn chuyển trang: tấm màn mở dần như mống mắt về phía cậu bé */
+#curtain{position:absolute;inset:0;z-index:20;display:grid;place-items:center;text-align:center;
+  padding:24px max(16px,env(safe-area-inset-right,0px)) 24px max(16px,env(safe-area-inset-left,0px));
+  background:radial-gradient(90% 70% at 50% 100%,#2d3190 0%,#12154a 45%,#0a0e2b 80%);
+  clip-path:circle(150% at 50% 100%);transition:clip-path 1.3s var(--ease)}
+#app:not([data-phase="curtain"]) #curtain{clip-path:circle(0% at 50% 100%);pointer-events:none}
+.cur-in{display:grid;gap:14px;justify-items:center;transition:opacity .5s,transform .5s}
+#app:not([data-phase="curtain"]) .cur-in{opacity:0;transform:scale(.96)}
+.mark{width:64px;height:64px}
+.cur-in h1{margin:0;font:800 clamp(30px,6vw,56px)/1 var(--f-display);color:var(--moon);letter-spacing:.01em}
+.cur-in p{margin:0;color:var(--muted);font-size:14px}
+.bar{width:min(240px,60vw);height:3px;border-radius:3px;background:rgba(255,255,255,.12);overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,#2fb8a0,#f2c14e,#a070e8);border-radius:3px}
+#app[data-phase="curtain"] .bar i{animation:load 1.7s linear forwards}
+@keyframes load{to{width:100%}}
+.skip{position:absolute;z-index:25;right:max(16px,env(safe-area-inset-right,0px));top:max(16px,env(safe-area-inset-top,0px));
+  background:rgba(255,255,255,.1);color:#dfe3ff;border:1px solid rgba(255,255,255,.22);border-radius:999px;
+  padding:6px 14px;font-size:13px;cursor:pointer;transition:opacity .4s,background .2s}
+.skip:hover{background:rgba(255,255,255,.2)}
+#app[data-phase="library"] .skip{opacity:0;pointer-events:none}
+
+/* Thư viện */
+.lib{position:relative;height:50%;
+  background:radial-gradient(60% 50% at 50% 28%,rgba(255,196,120,.11),transparent 70%),linear-gradient(#10132f,#1a1633 62%,#251a2e)}
+.lib-scroll{position:absolute;left:0;right:0;top:0;bottom:calc(var(--floor) + 90px);overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;
+  padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 24px max(16px,env(safe-area-inset-left,0px))}
+.floor{position:absolute;left:0;right:0;bottom:0;height:var(--floor);border-top:6px solid #26170b;
+  background:repeating-linear-gradient(90deg,#4d3119 0 118px,#3d2616 118px 120px),#4d3119;box-shadow:0 -14px 30px rgba(0,0,0,.45)}
+.lib-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:10px 24px;max-width:1180px;margin:0 auto 14px}
+.lib-head h2{margin:0;font:800 clamp(24px,3.4vw,36px)/1.05 var(--f-display);color:var(--moon)}
+.sub{margin:4px 0 0;color:var(--muted);font-size:13px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;position:relative}
+.chip{display:inline-flex;align-items:center;gap:8px;max-width:min(360px,100%);padding:6px 12px;border-radius:999px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#e6e9ff;font-size:13px}
+.chip i{flex:none;width:8px;height:8px;border-radius:50%;background:#6c719e}
+.chip.has i{background:var(--gold);box-shadow:0 0 8px var(--gold)}
+.chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.btn-ghost{background:rgba(255,255,255,.08);color:#dfe3ff;border:1px solid rgba(255,255,255,.18);border-radius:999px;
+  padding:6px 14px;font-size:13px;cursor:pointer;position:relative;transition:background .2s}
+.btn-ghost:hover{background:rgba(255,255,255,.16)}
+.btn-ghost:focus-visible,.btn-gold:focus-visible,.btn-quiet:focus-visible,.skip:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.badge{position:absolute;right:-4px;top:-6px;min-width:18px;height:18px;border-radius:9px;background:var(--gold);color:#2a1d12;
+  font:700 11px/18px var(--f-body);text-align:center;padding:0 4px}
+.badge[hidden]{display:none}
+#bellpanel{position:absolute;right:0;top:calc(100% + 8px);z-index:12;width:min(320px,calc(100vw - 32px));max-height:260px;overflow:auto;
+  background:var(--paper);color:var(--paper-ink);border-radius:14px;padding:12px 14px;box-shadow:0 16px 40px rgba(0,0,0,.5)}
+#bellpanel h3{margin:0 0 8px;font:700 15px var(--f-display)}
+#bellpanel ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+#bellpanel li{font-size:13px;line-height:1.4;padding-bottom:8px;border-bottom:1px solid rgba(60,40,20,.15)}
+#bellpanel li time{display:block;font-size:11px;color:#8a6d4d}
+#bellpanel .empty{color:#8a6d4d;font-size:13px}
+
+.hint{display:none;max-width:1180px;margin:0 auto 8px;color:var(--muted);font-size:12px}
+.case-scroll{max-width:1180px;margin:0 auto;overflow-x:auto;padding-bottom:8px}
+.case{min-width:820px;display:grid;grid-template-columns:84px repeat(3,minmax(0,1fr));column-gap:10px;padding:12px 12px 6px;
+  background:linear-gradient(#5d3a21,#472c18);border-radius:10px 10px 4px 4px;box-shadow:0 18px 40px rgba(0,0,0,.5),inset 0 0 0 3px #2d1b0e}
+.colh{padding:2px 4px 10px;font:700 20px/1 var(--f-display);color:var(--moon);text-align:center;letter-spacing:.02em}
+.rowh{display:flex;flex-direction:column;justify-content:center;gap:4px;padding:0 6px 10px 2px;color:#f1dfbf;font:600 13px/1.2 var(--f-body)}
+.rowh i{width:12px;height:12px;border-radius:50%}
+.rowh small{font-weight:400;font-size:11px;color:#c9ac85}
+.bay{position:relative;display:flex;align-items:flex-end;gap:2px;height:clamp(108px,15vh,134px);padding:10px 8px 0;margin-bottom:10px;
+  background:linear-gradient(#140c06,#26170c);box-shadow:inset 0 8px 16px rgba(0,0,0,.65);border-bottom:10px solid var(--wood-light)}
+
+.bk{--h:200;--s:55%;--l:44%;--ht:84%;position:relative;flex:1 1 0;min-width:8px;max-width:24px;height:var(--ht);border:0;padding:0;margin:0;cursor:pointer;
+  border-radius:2px 2px 1px 1px;transform-origin:50% 100%;
+  background:linear-gradient(90deg,hsl(var(--h) var(--s) calc(var(--l) + 12%)),hsl(var(--h) var(--s) var(--l)) 42%,hsl(var(--h) var(--s) calc(var(--l) - 10%)));
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,.2),1px 0 0 rgba(0,0,0,.4);transition:transform .25s var(--ease),filter .25s,box-shadow .25s}
+.bk::before,.bk::after{content:"";position:absolute;left:0;right:0;background:rgba(255,232,170,.55)}
+.bk::before{top:12%;height:5px}
+.bk::after{bottom:14%;height:3px;background:rgba(255,232,170,.35)}
+.bk.v2::before{top:22%;height:3px}
+.bk.v3::before{top:10%;height:8px;background:rgba(255,232,170,.4)}
+.bk:hover,.bk:focus-visible{transform:translateY(-9px);filter:brightness(1.2)}
+.bk:focus-visible{outline:2px solid var(--gold);outline-offset:2px;z-index:2}
+.bk.sel{transform:translateY(-6px);filter:brightness(1.25);box-shadow:0 0 0 2px var(--gold),0 0 18px rgba(242,193,78,.65)}
+#app:not([data-phase="library"]) .bk{opacity:0}
+#app[data-phase="library"] .bk{animation:rise .7s var(--ease) backwards;animation-delay:calc(var(--i)*22ms + var(--r)*160ms)}
+@keyframes rise{from{opacity:0;transform:translateY(46px)}}
+
+/* Khung chat hiện tên chủ đề */
+#tip{position:absolute;left:0;top:0;z-index:40;pointer-events:none;max-width:min(300px,86vw);background:var(--paper);color:var(--paper-ink);
+  border-radius:14px;padding:9px 13px 10px;font:600 14px/1.3 var(--f-body);box-shadow:0 10px 30px rgba(0,0,0,.45);
+  opacity:0;transform:translateY(6px) scale(.96);transition:opacity .15s,transform .15s}
+#tip.on{opacity:1;transform:none}
+#tip small{display:block;margin-bottom:2px;font:500 11px/1.3 var(--f-body);letter-spacing:.07em;text-transform:uppercase;color:#7a5a38}
+#tip::after{content:"";position:absolute;left:var(--tx,50%);bottom:-6px;width:12px;height:12px;background:var(--paper);transform:translateX(-50%) rotate(45deg);border-radius:0 0 3px 0}
+#tip.below::after{bottom:auto;top:-6px;border-radius:3px 0 0 0}
+
+/* Trang sách xác nhận */
+#modal{position:absolute;inset:0;z-index:30;display:grid;place-items:center;padding:16px;background:rgba(5,6,20,.74);backdrop-filter:blur(6px);
+  opacity:0;visibility:hidden;transition:opacity .3s,visibility 0s .3s}
+#modal.on{opacity:1;visibility:visible;transition:opacity .3s}
+.book{position:relative;display:grid;grid-template-columns:1fr 1fr;width:min(760px,94vw);min-height:min(420px,78vh);perspective:1800px;
+  transform:translateX(-25%) scale(.8);transition:transform 1.1s var(--ease) .25s}
+#modal.on .book{transform:none}
+.page{padding:clamp(16px,4vw,34px);color:var(--paper-ink);display:flex;flex-direction:column;justify-content:center;gap:12px;box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.page.left{border-radius:8px 0 0 8px;background:linear-gradient(90deg,#efe5cb,#f7f0dd 85%,#d9cdae);opacity:0;transition:opacity .3s .7s}
+#modal.on .page.left{opacity:1}
+.page.right{border-radius:0 8px 8px 0;background:linear-gradient(90deg,#d9cdae,#f7f0dd 12%,#f7f0dd)}
+.flip{position:absolute;left:50%;top:0;width:50%;height:100%;transform-origin:0 50%;transform-style:preserve-3d;z-index:2;transition:transform 1.1s var(--ease) .25s}
+#modal.on .flip{transform:rotateY(-180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;text-align:center;padding:20px}
+.face.front{border-radius:0 8px 8px 0;color:#fff4d6;background:linear-gradient(90deg,hsl(var(--ch) 50% 30%),hsl(var(--ch) 50% 40%) 12%,hsl(var(--ch) 52% 34%));box-shadow:inset 0 0 0 6px rgba(242,193,78,.5)}
+.face.front b{font:800 clamp(20px,4vw,30px)/1.1 var(--f-display)}
+.face.front span{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.face.back{transform:rotateY(180deg);border-radius:8px 0 0 8px;color:var(--paper-ink);background:linear-gradient(90deg,#efe5cb,#f7f0dd 85%,#d9cdae)}
+.emblem{width:clamp(64px,14vw,104px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;color:#fff;font:800 clamp(28px,6vw,44px)/1 var(--f-display);
+  background:hsl(var(--ch) 52% 42%);box-shadow:0 0 0 5px #f7f0dd,0 0 0 7px hsl(var(--ch) 52% 42%)}
+.lvl{font:700 16px var(--f-display)}
+.lnote{margin:0;font-size:13px;color:#6b5238}
+.eyebrow{margin:0;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a6d4d}
+.page h3{margin:0;font:800 clamp(22px,4.4vw,32px)/1.12 var(--f-display);text-wrap:balance}
+.ask{margin:0;font-size:15px}
+.acts{display:flex;flex-wrap:wrap;gap:10px}
+.btn-gold,.btn-quiet{border-radius:999px;padding:10px 20px;font:600 14px var(--f-body);cursor:pointer;border:0}
+.btn-gold{background:var(--gold);color:#2a1d12;box-shadow:0 6px 16px rgba(190,140,30,.4);transition:transform .15s}
+.btn-gold:hover{transform:translateY(-1px)}
+.btn-quiet{background:transparent;color:#5b4430;border:1px solid rgba(60,40,20,.3)}
+.note{margin:0;font-size:12px;color:#8a6d4d}
+.done{display:none;gap:8px}
+.page.ok .done{display:grid}
+.page.ok .ask,.page.ok .acts,.page.ok .note{display:none}
+.done b{font:700 18px var(--f-display);color:#1f7a5c}
+
+/* Thông báo */
+#toasts{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:max(16px,env(safe-area-inset-top,0px));z-index:50;display:grid;gap:8px;width:min(340px,calc(100% - 32px));pointer-events:none}
+.toast{background:#fff7dc;color:#2a1d12;border-radius:12px;padding:11px 14px;box-shadow:0 12px 30px rgba(0,0,0,.45);font-size:13px;line-height:1.4;animation:toastIn .4s var(--ease)}
+.toast b{display:block;font:700 14px var(--f-display)}
+@keyframes toastIn{from{opacity:0;transform:translateY(-10px)}}
+
+@media (max-width:900px){.hint{display:block}}
+@media (max-width:560px){.face.back .lnote{display:none}.page{padding:14px}.book{min-height:min(380px,80vh)}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important;transition-delay:0ms!important}}
+
+
+/* TÍCH HỢP CHỨC NĂNG TỪ TỦ SÁCH TOÁN, GIỮ GIAO DIỆN TỦ SÁCH THPT */
+.picker-meter{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;gap:5px;padding:6px 11px;border-radius:999px;border:1px solid rgba(242,193,78,.24);background:rgba(242,193,78,.08);color:#f7eccb;font:700 12px var(--f-body);font-variant-numeric:tabular-nums}
+.picker-meter.clock{color:#fbe3a6}
+.picker-meter.clock.low{color:#ffb59c;background:rgba(255,100,80,.16);border-color:rgba(255,120,110,.45)}
+.picker-dock{position:absolute;bottom:calc(var(--floor) + 8px);left:50%;transform:translateX(-50%);z-index:10;width:min(1180px,calc(100% - 32px));min-height:64px;padding:9px 12px;display:flex;gap:10px;align-items:center;border-radius:16px;background:linear-gradient(95deg,rgba(28,25,58,.98),rgba(48,34,46,.98));border:1px solid rgba(242,193,78,.38);box-shadow:0 12px 28px #05051088}
+.picked{display:flex;gap:7px;align-items:center;flex:1;min-width:0;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#846b41 transparent}
+.picked .empty{color:#bbb7da;font-size:12px;padding:5px;white-space:nowrap}
+.pk{display:inline-flex;align-items:center;gap:8px;flex:none;max-width:220px;padding:6px 7px 6px 12px;border-radius:999px;background:#f2c14e23;color:#f8eccc;border:1px solid #f2c14e80;font-size:12px}
+.pk span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pk button{width:23px;height:23px;flex:none;border:0;border-radius:50%;background:#ffffff26;color:#fff9e0;cursor:pointer;font-size:16px}
+.pk button:hover{background:#ffffff50}
+.picker-send{flex:none;min-width:112px;min-height:42px}
+.btn-gold:disabled{opacity:.48;filter:saturate(.35);cursor:not-allowed;box-shadow:none}
+.book-desc{margin:0;font:500 13px/1.6 var(--f-body);color:#604e37;max-height:84px;overflow-y:auto}
+.book-warn{min-height:1em;margin:0;font-size:12px;font-weight:700;color:#9b4229}
+.bk{touch-action:manipulation}
+#app.picker-locked .bk{pointer-events:none}
+.picker-countdown,.picker-sent{position:absolute;inset:0;z-index:45;display:grid;place-items:center;padding:18px;background:radial-gradient(70% 80% at 50% 50%,#282164bb,#05091bf2);backdrop-filter:blur(10px)}
+.picker-countdown[hidden],.picker-sent[hidden],.start-btn[hidden]{display:none!important}
+.count-card{width:min(500px,100%);text-align:center;color:#fff7df;display:flex;flex-direction:column;align-items:center;gap:18px}
+.count-kicker{font:800 clamp(26px,5vw,42px) var(--f-display);color:var(--moon)}
+.count-orbit{width:clamp(152px,34vw,240px);height:clamp(152px,34vw,240px);border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle,#283e84 0%,#141a4e 66%,#0b0e2d 100%);border:7px solid #f2c14e;box-shadow:0 0 0 14px #f2c14e1c,0 0 90px #7d7cf87d,inset 0 0 40px #06091cb0}
+#countNum{font:800 clamp(86px,22vw,160px)/1 var(--f-display);color:#fff1d2;text-shadow:0 0 28px #f2c14e8c}
+.count-orbit.pulse{animation:count-pulse .65s cubic-bezier(.15,.75,.35,1)}
+@keyframes count-pulse{0%{transform:scale(.7);filter:brightness(1.5)}55%{transform:scale(1.08)}100%{transform:scale(1)}}
+.count-card p{margin:0;color:#c5c6f2;font-size:14px}
+.start-btn{font:900 28px var(--f-display);padding:13px 54px;letter-spacing:.06em;box-shadow:0 0 36px #f2c14e66}
+.sent-card{width:min(600px,100%);max-height:88vh;overflow:auto;border:1px solid #c7a666;border-radius:22px;padding:clamp(22px,4vw,42px);background:linear-gradient(125deg,#fff7e4,#eaddbd);color:#332515;box-shadow:0 28px 90px #000a;text-align:center}
+.sent-card h3{font:800 clamp(26px,5vw,38px) var(--f-display);margin:0 0 8px}
+.sent-icon{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;margin:0 auto 14px;color:#fff;background:#2b956e;font-size:36px}
+#sentSubtitle{color:#6f5943;line-height:1.6}
+#sentList{text-align:left;padding-left:25px;margin:20px auto;max-width:420px;display:grid;gap:10px}
+#sentList li{line-height:1.5}
+#sentList small{display:block;color:#866d4b}
+#app[data-phase='library'] .boy{bottom:-48px;opacity:.82;transition:bottom .6s var(--ease),opacity .5s}
+.book-ghost{position:absolute;z-index:40;pointer-events:none;box-sizing:border-box;border-radius:3px;background:linear-gradient(90deg,#a67a35,#dfbd67,#815126);border:1px solid #eecb75;box-shadow:0 15px 36px #0008}
+@media(max-width:800px){.lib-head{align-items:flex-start}.tools{gap:6px}.picker-dock{width:calc(100% - 20px)}.picker-meter{font-size:11px;padding:5px 8px}}
+@media(max-width:560px){.lib-scroll{bottom:calc(var(--floor) + 105px)!important}.picker-dock{bottom:calc(var(--floor) + 6px);min-height:95px;align-items:stretch;flex-direction:column;gap:6px;padding:8px}.picked{min-height:31px}.picker-send{width:100%;min-height:38px}.tools{width:100%}.chip{max-width:100%;flex-basis:100%}.book{display:block;width:min(420px,96vw);max-height:82dvh;overflow-y:auto;transform:scale(.92)}#modal.on .book{transform:none}.page.left{display:none}.page.right{border-radius:14px;min-height:300px;padding:22px}.book>.flip{display:none}.book-desc{max-height:120px}.book-warn{min-height:1.2em}.page h3{font-size:clamp(22px,6vw,29px)}.picker-countdown{padding:12px}}
+@media(prefers-reduced-motion:reduce){.count-orbit.pulse{animation:none}}
+
+</style>
+
+<div id="app" data-phase="curtain">
+  <div id="world">
+    <section class="sky" aria-hidden="true">
+      <canvas id="skyc"></canvas>
+      <div class="moon"></div>
+      <div class="hill"></div>
+    </section>
+    <section class="lib" id="lib" aria-label="Tủ sách Toán THPT">
+      <div class="lib-scroll" id="libscroll">
+        <header class="lib-head">
+          <div>
+            <h2>Tủ sách Toán THPT</h2>
+            <p class="sub" id="sub"></p>
+          </div>
+          <div class="tools">
+            <div class="chip" id="chip"><i></i><span>Chưa chọn cuốn nào</span></div>
+             <span class="picker-meter" id="pickerCount" aria-live="polite">0/5 chủ đề</span>
+             <span class="picker-meter clock" id="pickerTimer" role="timer" aria-label="Thời gian còn lại">⏱ <b>2:00</b></span>
+            <button class="btn-ghost" id="bell" type="button" aria-expanded="false" aria-controls="bellpanel">Thông báo<span class="badge" id="badge" hidden>0</span></button>
+            <button class="btn-ghost" id="replay" type="button">Xem lại cảnh mở đầu</button>
+            <div id="bellpanel" hidden><h3>Thông báo đã gửi</h3><ul id="loglist"></ul><p class="empty" id="logempty">Chưa có thông báo nào.</p></div>
+          </div>
+        </header>
+        <p class="hint">Vuốt ngang để xem hết tủ sách.</p>
+        <div class="case-scroll"><div class="case" id="case"></div></div>
+      </div>
+      <div class="picker-dock" id="pickerDock" aria-label="Các chủ đề đã chọn">
+        <div class="picked" id="picked" aria-live="polite"></div>
+        <button class="btn-gold picker-send" id="send" type="button" disabled>Hoàn tất</button>
+      </div>
+      <div class="floor"></div>
+    </section>
+  </div>
+
+  <div class="caption" id="caption" aria-live="polite"></div>
+  <div class="say" id="say"></div>
+
+  <div class="boy" aria-hidden="true">
+    <svg viewBox="0 0 100 170">
+      <defs><linearGradient id="gz" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+      <ellipse cx="50" cy="165" rx="30" ry="4.5" fill="#000" opacity=".35"/>
+      <path class="gaze" d="M50 30L-120-520L220-520Z" fill="url(#gz)"/>
+      <rect x="32" y="108" width="15" height="52" rx="6" fill="#2a3566"/>
+      <rect x="53" y="108" width="15" height="52" rx="6" fill="#2a3566"/>
+      <rect x="30" y="154" width="19" height="10" rx="5" fill="#161626"/>
+      <rect x="51" y="154" width="19" height="10" rx="5" fill="#161626"/>
+      <rect x="15" y="64" width="13" height="42" rx="6.5" fill="#d85f3a"/>
+      <circle cx="21.5" cy="108" r="6" fill="#f1c7a0"/>
+      <rect x="24" y="60" width="52" height="56" rx="16" fill="#e8744b"/>
+      <rect x="32" y="70" width="36" height="38" rx="9" fill="#2f7f8f"/>
+      <rect x="32" y="70" width="36" height="9" rx="4.5" fill="#3a95a6"/>
+      <path d="M50 79v29" stroke="#256574" stroke-width="1.5"/>
+      <g class="arm-r"><rect x="72" y="64" width="13" height="42" rx="6.5" fill="#d85f3a"/><circle cx="78.5" cy="108" r="6" fill="#f1c7a0"/></g>
+      <g class="head">
+        <rect x="43" y="50" width="14" height="14" rx="5" fill="#e6b88f"/>
+        <circle cx="31.5" cy="41" r="4" fill="#f1c7a0"/><circle cx="68.5" cy="41" r="4" fill="#f1c7a0"/>
+        <circle cx="50" cy="38" r="20" fill="#2a1a14"/>
+        <path d="M38 25Q50 18 62 25" stroke="#4a3126" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <path d="M44 20l-3-7 6 4 3-6 3 6 6-4-3 7z" fill="#2a1a14"/>
+      </g>
+    </svg>
+  </div>
+
+  <div id="tip" role="tooltip"></div>
+
+  <div id="modal" aria-hidden="true">
+    <div class="book" role="dialog" aria-modal="true" aria-labelledby="m-title" id="bookbox">
+      <div class="page left"></div>
+      <div class="page right" id="rpage">
+        <p class="eyebrow" id="m-eyebrow"></p>
+        <h3 id="m-title"></h3>
+         <p class="book-desc" id="m-desc"></p>
+         <p class="book-warn" id="m-warn" aria-live="polite"></p>
+        <p class="ask">Bạn có muốn chọn cuốn sách này không?</p>
+        <div class="acts">
+          <button class="btn-gold" id="m-yes" type="button">Chọn cuốn này</button>
+          <button class="btn-quiet" id="m-no" type="button">Để lại tủ</button>
+        </div>
+        <p class="note">Mỗi người chọn từ 1 đến 3 chủ đề. Có thể chốt ngay sau cuốn đầu tiên.</p>
+        <div class="done"><b>Đã chọn cuốn sách này</b><span>Thông tin đã được gửi và thông báo đã hiện lên.</span></div>
+      </div>
+      <div class="flip">
+        <div class="face front" id="m-front"><span id="m-fgrade"></span><b id="m-flevel"></b><span>Toán THPT</span></div>
+        <div class="face back" id="m-back"><div class="emblem" id="m-emb"></div><div class="lvl" id="m-lvl"></div><p class="lnote" id="m-note"></p><p class="lnote" id="m-count"></p></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="picker-countdown" id="pickerCountdown" aria-hidden="true" hidden>
+    <div class="count-card">
+      <div class="count-kicker" id="countStatus">Chuẩn bị</div>
+      <div class="count-orbit"><span id="countNum">3</span></div>
+      <p id="countSubtitle">Đã chọn 0 chủ đề</p>
+      <button class="btn-gold start-btn" id="startBtn" type="button" hidden>START</button>
+    </div>
+  </section>
+  <section class="picker-sent" id="pickerSent" aria-hidden="true" hidden>
+    <div class="sent-card" role="dialog" aria-modal="true" aria-labelledby="sentTitle">
+      <div class="sent-icon">✓</div>
+      <h3 id="sentTitle">Đã gửi danh sách chủ đề</h3>
+      <p id="sentSubtitle"></p>
+      <ol id="sentList"></ol>
+      <button class="btn-gold" id="again" type="button">Chọn lại</button>
+    </div>
+  </section>
+  <div id="toasts" aria-live="polite"></div>
+
+  <div id="curtain">
+    <div class="cur-in">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 14q12-4 24 2 12-6 24-2v34q-12-4-24 2-12-6-24-2z" fill="none" stroke="#f4ebc8" stroke-width="3" stroke-linejoin="round"/><path d="M32 16v34" stroke="#f2c14e" stroke-width="3"/></svg>
+      <h1>Tủ sách Toán THPT</h1>
+      <p>Đang mở cửa thư viện…</p>
+      <div class="bar"><i></i></div>
+    </div>
+  </div>
+  <button class="skip" id="skip" type="button">Bỏ qua</button>
+</div>
+<script>
+/* Dữ liệu: tên chủ đề lấy từ bản bạn gửi. Hàng = cấp độ, cột = lớp. */
+var LEVELS=[
+ {key:'nen-tang',name:'Nền tảng',note:'Kiến thức cốt lõi, làm chắc từng bước.',h:168},
+ {key:'trung-cap',name:'Trung cấp',note:'Vận dụng, kết hợp dữ kiện và bài toán thực tế.',h:218},
+ {key:'nang-cao',name:'Nâng cao',note:'Vận dụng cao, biến đổi nhiều bước và thử thách tổng hợp.',h:268}
+];
+var GRADES=[10,11,12];
+var TOPICS={
+10:[
+['Chia dư','Chia hết','Hàm số','Hàm số bậc nhất','Hệ phương trình','Hệ phương trình','Mệnh đề','Thống kê','Tập hợp và các phép toán','Vectơ','Xác suất','Hình học cơ bản: góc, cạnh và diện tích','Tam giác và tứ giác cơ bản','Đường tròn và các góc cơ bản','Góc tạo bởi hai đường thẳng và đường cắt','Các trường hợp bằng nhau của tam giác','Đường trung tuyến, phân giác và đường cao','Tính chất hình bình hành và hình thoi','Dây cung, cung và khoảng cách đến tâm'],
+['Căn thức','Dãy số','Hình học','Mệnh đề và tập hợp','Phương trình','Phương trình bậc hai','Tọa độ trong mặt phẳng','Tổ hợp','Đường thẳng','Đường tròn','Hệ thức lượng trong tam giác','Tọa độ và đường thẳng trong mặt phẳng','Định lý Thales và tam giác đồng dạng','Tỉ số diện tích tam giác','Góc nội tiếp và góc ở tâm nâng cao','Trung điểm và khoảng cách trong tọa độ phẳng','Giao điểm và vị trí tương đối của hai đường thẳng'],
+['Bài toán thực tế Toán 10','Bất phương trình','Chỉnh hợp','Hàm số bậc hai và parabol','Hằng đẳng thức','Hệ bất phương trình','Hệ thức lượng trong tam giác','Hệ thức lượng trong tam giác','Nhị thức Newton','Phân thức đại số','Quy tắc đếm','Chứng minh hình học và bài toán tổng hợp','Quỹ tích điểm trong mặt phẳng','Tiếp tuyến và dây cung của đường tròn','Bất đẳng thức và cực trị trong tam giác','Chứng minh hình học bằng vectơ','Bài toán tổng hợp đường thẳng và đường tròn tọa độ']
+],
+11:[
+['Công thức lượng giác','Cấp số cộng','Cấp số nhân','Dãy số','Giá trị lượng giác','Giới hạn','Hàm số lượng giác','Thống kê Toán 11','Xác suất','Đạo hàm','Phép biến hình cơ bản','Nhận biết hình học không gian','Phép tịnh tiến và ảnh của hình','Phép đối xứng trục','Nhận biết đường thẳng và mặt phẳng trong không gian','Đường thẳng song song với mặt phẳng','Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp'],
+['Bài toán thực tế Toán 11','Dãy số','Giới hạn hàm số','Góc và khoảng cách trong không gian','Hàm số liên tục','Phương trình lượng giác','Quan hệ song song trong không gian','Quan hệ vuông góc trong không gian','Quy tắc đạo hàm','Ứng dụng đạo hàm','Phép quay và phép vị tự','Hai mặt phẳng song song','Đường thẳng vuông góc với mặt phẳng','Góc giữa đường thẳng và mặt phẳng','Dựng thiết diện của hình chóp và lăng trụ'],
+['Biến cố độc lập và xác suất có điều kiện','Bài toán thực tế tổng hợp Toán 11','Dãy số truy hồi','Hàm số lượng giác','Phép biến hình trong mặt phẳng','Phương trình lượng giác','Quan hệ song song và vuông góc trong không gian','Quy nạp toán học','Thiết diện hình không gian','Tổ hợp và xác suất nâng cao','Khoảng cách giữa hai đường thẳng chéo nhau','Định lý ba đường vuông góc','Hợp thành các phép biến hình','Thiết diện và tỉ số đoạn trong hình không gian','Chứng minh tổng hợp song song và vuông góc']
+],
+12:[
+['Các số đặc trưng đo xu thế và độ phân tán','Cực trị','Giá trị lớn nhất và nhỏ nhất','Hàm số logarit','Hàm số mũ','Hình học không gian','Số phức','Tính đơn điệu','Tọa độ trong không gian','Xác suất và biến ngẫu nhiên','Hình khối và thể tích cơ bản','Vectơ và độ dài trong không gian Oxyz','Phương trình mặt phẳng','Phương trình đường thẳng trong Oxyz','Phương trình mặt cầu và tâm bán kính','Diện tích xung quanh và toàn phần hình khối'],
+['Biểu diễn số phức','Khảo sát và vẽ đồ thị hàm số','Mặt phẳng trong Oxyz','Nguyên hàm và tích phân','Phương trình logarit','Phương trình mũ','Tiếp tuyến','Tiệm cận','Đường thẳng trong Oxyz','Ứng dụng đạo hàm','Vận dụng tọa độ Oxyz','Khoảng cách từ điểm đến mặt phẳng','Góc giữa đường thẳng và mặt phẳng Oxyz','Góc giữa hai mặt phẳng','Giao điểm đường thẳng và mặt phẳng','Mặt phẳng tiếp xúc với mặt cầu'],
+['Bài toán thực tế Toán 12','Bài toán tổng hợp THPT','Bất phương trình logarit','Bất phương trình mũ','Góc và khoảng cách Oxyz','Mặt cầu','Phương trình số phức','Thể tích hình học không gian','Tương giao đồ thị','Ứng dụng tích phân','Vị trí tương đối của hai đường thẳng trong Oxyz','Cực trị khoảng cách trong không gian tọa độ','Giao tuyến mặt cầu và mặt phẳng','Bài toán tham số hình học Oxyz','Bài toán tối ưu hình học không gian']
+ ]};
+var DESC={"10":[["Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập hình học cơ bản: góc, cạnh và diện tích với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.","Luyện tập tam giác và tứ giác cơ bản với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.","Luyện tập đường tròn và các góc cơ bản với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.","Góc tạo bởi hai đường thẳng và đường cắt. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Các trường hợp bằng nhau của tam giác. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Đường trung tuyến, phân giác và đường cao. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Tính chất hình bình hành và hình thoi. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Dây cung, cung và khoảng cách đến tâm. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép."],["Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập hệ thức lượng trong tam giác với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.","Luyện tập tọa độ và đường thẳng trong mặt phẳng với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.","Định lý Thales và tam giác đồng dạng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Tỉ số diện tích tam giác. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Góc nội tiếp và góc ở tâm nâng cao. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Trung điểm và khoảng cách trong tọa độ phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Giao điểm và vị trí tương đối của hai đường thẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép."],["Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập chứng minh hình học và bài toán tổng hợp với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.","Quỹ tích điểm trong mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Tiếp tuyến và dây cung của đường tròn. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Bất đẳng thức và cực trị trong tam giác. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Chứng minh hình học bằng vectơ. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Bài toán tổng hợp đường thẳng và đường tròn tọa độ. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép."]],"11":[["Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập phép biến hình cơ bản với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.","Luyện tập nhận biết hình học không gian với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.","Phép tịnh tiến và ảnh của hình. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Phép đối xứng trục. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Nhận biết đường thẳng và mặt phẳng trong không gian. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Đường thẳng song song với mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép."],["Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Phép quay và phép vị tự. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Hai mặt phẳng song song. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Đường thẳng vuông góc với mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Góc giữa đường thẳng và mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Dựng thiết diện của hình chóp và lăng trụ. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép."],["Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Khoảng cách giữa hai đường thẳng chéo nhau. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Định lý ba đường vuông góc. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Hợp thành các phép biến hình. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Thiết diện và tỉ số đoạn trong hình không gian. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Chứng minh tổng hợp song song và vuông góc. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép."]],"12":[["Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập hình khối và thể tích cơ bản với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.","Vectơ và độ dài trong không gian Oxyz. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Phương trình mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Phương trình đường thẳng trong Oxyz. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Phương trình mặt cầu và tâm bán kính. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Diện tích xung quanh và toàn phần hình khối. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép."],["Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập vận dụng tọa độ oxyz với dữ kiện rõ ràng, hình minh họa đúng quan hệ và thử thách nhiều bước.","Khoảng cách từ điểm đến mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Góc giữa đường thẳng và mặt phẳng Oxyz. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Góc giữa hai mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Giao điểm đường thẳng và mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Mặt phẳng tiếp xúc với mặt cầu. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép."],["Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Luyện tập kiến thức theo chương trình THPT, từ nền tảng đến vận dụng nâng cao.","Vị trí tương đối của hai đường thẳng trong Oxyz. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Cực trị khoảng cách trong không gian tọa độ. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Giao tuyến mặt cầu và mặt phẳng. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Bài toán tham số hình học Oxyz. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép.","Bài toán tối ưu hình học không gian. Có câu hỏi AI theo chủ đề, lời giải và hình minh họa khi dữ kiện cho phép."]]};
+</script>
+<script>
+(function(){
+'use strict';
+var $=function(s){return document.querySelector(s)};
+var app=$('#app'),lib=$('#libscroll'),caseEl=$('#case'),tip=$('#tip'),modal=$('#modal'),
+    sayEl=$('#say'),cap=$('#caption'),chip=$('#chip'),toasts=$('#toasts'),panel=$('#bellpanel'),bell=$('#bell');
+// Optional integration endpoint can be configured by a parent application before page load.
+var WEBHOOK_URL=typeof window.MATHBOOK_WEBHOOK_URL==='string'?window.MATHBOOK_WEBHOOK_URL:'';
+var STORE_KEY='mathbook:selected',MIN=1,MAX=3,SECONDS=120;
+var reduce=!!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+var current=null,opener=null,allBooks=[],selected=new Map(),total=0,
+    timers=[],tickId=0,deadline=0,finalized=false,randomFilled=0,reason='manual',
+    phaseState='curtain',stage='intro',unread=0,logs=[],ghost=null,bookAnimating=false;
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
+function pad(n){return n<10?'0'+n:''+n}
+function later(fn,ms){timers.push(setTimeout(fn,ms))}
+function clearScheduled(){timers.forEach(clearTimeout);timers=[];clearInterval(tickId);tickId=0}
+function info(b){var g=+b.dataset.g,li=+b.dataset.l,i=+b.dataset.i,lv=LEVELS[li],list=TOPICS[g][li];
+  return{id:'g'+g+'-'+lv.key+'-'+pad(i+1),key:g+'|'+list[i],title:list[i],grade:g,level:lv.name,levelKey:lv.key,
+  position:i+1,total:list.length,note:lv.note,hue:lv.h,desc:(DESC[g]&&DESC[g][li]&&DESC[g][li][i])||lv.note,topicId:(window.BATTLE_TOPIC_IDS&&window.BATTLE_TOPIC_IDS[li]&&window.BATTLE_TOPIC_IDS[li][i])||''}}
+function publicInfo(p){return{id:p.id,topicId:p.topicId,title:p.title,grade:p.grade,position:p.position,total:p.total}}
+function isDuplicate(p){for(var v of selected.values())if(v.key===p.key&&v.id!==p.id)return true;return false}
+var actx=null;
+function beep(freq,dur,vol,type){try{actx=actx||new(window.AudioContext||window.webkitAudioContext)();
+  if(actx.state==='suspended')actx.resume();
+  var o=actx.createOscillator(),g=actx.createGain(),t=actx.currentTime;
+  o.type=type||'sine';o.frequency.value=freq;
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(vol,t+.01);
+  g.gain.exponentialRampToValueAtTime(.0001,t+dur);o.connect(g);g.connect(actx.destination);o.start(t);o.stop(t+dur+.02)
+}catch(_){}}
+document.addEventListener('pointerdown',function(){try{actx=actx||new(window.AudioContext||window.webkitAudioContext)();
+  if(actx.state==='suspended')actx.resume()}catch(_){}},{once:true});
+function build(){
+  caseEl.appendChild(el('div'));
+  GRADES.forEach(function(g){caseEl.appendChild(el('div','colh','Lớp '+g))});
+  LEVELS.forEach(function(lv,li){
+    var rh=el('div','rowh'),dot=el('i');dot.style.background='hsl('+lv.h+' 55% 52%)';
+    rh.appendChild(dot);rh.appendChild(el('span',null,lv.name));caseEl.appendChild(rh);
+    GRADES.forEach(function(g,gi){
+      var list=TOPICS[g][li],bay=el('div','bay'),r=rng(g*100+li*10+7);
+      bay.setAttribute('role','group');bay.setAttribute('aria-label','Lớp '+g+', '+lv.name);
+      list.forEach(function(title,i){
+        var q=r(),b=el('button','bk'+(q<.25?' v2':q>.8?' v3':''));
+        b.type='button';b.dataset.g=g;b.dataset.l=li;b.dataset.i=i;
+        b.style.setProperty('--h',lv.h+Math.round((r()-.5)*26));
+        b.style.setProperty('--s',Math.round(42+r()*24)+'%');
+        b.style.setProperty('--l',Math.round(36+r()*14)+'%');
+        b.style.setProperty('--ht',Math.round(66+r()*32)+'%');
+        b.style.setProperty('--i',i);b.style.setProperty('--r',li+gi*.35);
+        b.setAttribute('aria-label','Toán '+g+', '+lv.name+': '+title);b.setAttribute('aria-pressed','false');
+        bay.appendChild(b);allBooks.push(b);total++;
+      });caseEl.appendChild(bay);
+    });
+  });
+  $('#sub').textContent=total+' chuyên đề Toán '+GRADES[0]+' · Chọn 1–3 chủ đề trong 2 phút';
+}
+function showTip(b){
+ var d=info(b);tip.textContent='';tip.appendChild(el('small',null,'Toán '+d.grade));tip.appendChild(document.createTextNode(d.title));
+ tip.classList.remove('below');var r=b.getBoundingClientRect(),ar=app.getBoundingClientRect();
+ var tw=tip.offsetWidth,th=tip.offsetHeight,cx=r.left+r.width/2-ar.left;
+ var left=Math.max(8,Math.min(cx-tw/2,ar.width-tw-8)),top=r.top-ar.top-th-12;
+ if(top<8){top=r.bottom-ar.top+12;tip.classList.add('below')}
+ tip.style.left=left+'px';tip.style.top=top+'px';tip.style.setProperty('--tx',Math.max(14,Math.min(tw-14,cx-left))+'px');tip.classList.add('on');
+}
+function hideTip(){tip.classList.remove('on')}
+caseEl.addEventListener('mouseover',function(e){var b=e.target.closest('.bk');if(b&&stage==='pick')showTip(b)});
+caseEl.addEventListener('mouseout',function(e){var b=e.target.closest('.bk');if(b&&!b.contains(e.relatedTarget))hideTip()});
+caseEl.addEventListener('focusin',function(e){var b=e.target.closest('.bk');if(b&&stage==='pick')showTip(b)});
+caseEl.addEventListener('focusout',hideTip);
+caseEl.addEventListener('click',function(e){var b=e.target.closest('.bk');if(b&&stage==='pick'){hideTip();openBook(b)}});
+lib.addEventListener('scroll',hideTip,{passive:true});
+function renderSelected(){
+ allBooks.forEach(function(b){var on=selected.has(info(b).id);b.classList.toggle('sel',on);b.setAttribute('aria-pressed',on?'true':'false')});
+ $('#pickerCount').textContent=selected.size+'/'+MAX+' chủ đề';
+ chip.classList.toggle('has',selected.size>0);
+ chip.querySelector('span').textContent=selected.size?('Đã chọn '+selected.size+' chủ đề · Tối thiểu '+MIN):'Chưa chọn cuốn nào';
+ var picked=$('#picked');picked.textContent='';
+ if(!selected.size)picked.appendChild(el('span','empty','Chạm vào sách để chọn. Cần ít nhất '+MIN+' chủ đề.'));
+ selected.forEach(function(p){
+   var badge=el('span','pk'),txt=el('span',null,'Toán '+p.grade+' · '+p.title),del=el('button',null,'×');
+   del.type='button';del.setAttribute('aria-label','Bỏ chọn '+p.title);
+   del.addEventListener('click',function(){if(stage==='pick'){selected.delete(p.id);renderSelected();if(current&&modal.classList.contains('on'))refreshModal()}});
+   badge.appendChild(txt);badge.appendChild(del);picked.appendChild(badge);
+ });
+ $('#send').disabled=selected.size<MIN||stage!=='pick';
+}
+function refreshModal(){
+ if(!current)return;
+ var already=selected.has(current.id),btn=$('#m-yes'),warning=$('#m-warn');
+ btn.disabled=false;warning.textContent='';btn.textContent=already?'Bỏ chọn':'Chọn cuốn này';
+ if(!already){
+  if(selected.size>=MAX){btn.disabled=true;warning.textContent='Đã chọn đủ '+MAX+' chủ đề. Hãy bỏ một cuốn khác trước.'}
+  else if(isDuplicate(current)){btn.disabled=true;warning.textContent='Chủ đề này đã được chọn ở một cuốn khác cùng cấp độ.'}
+ }
+}
+function animateBook(b){
+ if(reduce||!b.animate)return;
+ try{
+  var src=b.getBoundingClientRect(),dst=$('#bookbox').getBoundingClientRect(),root=app.getBoundingClientRect();
+  var g=b.cloneNode(false);g.className='book-ghost';g.setAttribute('aria-hidden','true');
+  g.style.cssText='left:'+(src.left-root.left)+'px;top:'+(src.top-root.top)+'px;width:'+src.width+'px;height:'+src.height+'px;';
+  app.appendChild(g);ghost=g;
+  var target={left:(dst.left+dst.width*.72-root.left)+'px',top:(dst.top+dst.height*.4-root.top)+'px',width:'38px',height:'86px',opacity:0.2};
+  var anim=g.animate([{},target],{duration:430,easing:'cubic-bezier(.65,.02,.2,1)',fill:'forwards'});
+  var clean=function(){if(ghost===g)ghost=null;g.remove()};anim.addEventListener('finish',clean,{once:true});
+  anim.addEventListener('cancel',clean,{once:true});
+ }catch(_){if(ghost){ghost.remove();ghost=null}}
+}
+function openBook(b){
+ if(stage!=='pick'||bookAnimating)return;
+ current=info(b);opener=b;
+ $('#bookbox').style.setProperty('--ch',current.hue);
+ $('#m-eyebrow').textContent='Toán '+current.grade+' · Cuốn '+pad(current.position);
+ $('#m-title').textContent=current.title;
+ $('#m-fgrade').textContent='Toán '+current.grade;$('#m-flevel').textContent='';
+ $('#m-emb').textContent=current.grade;$('#m-lvl').textContent='';
+ $('#m-note').textContent=current.note;$('#m-count').textContent='Ngăn này có '+current.total+' chuyên đề.';
+ $('#m-desc').textContent=current.desc;
+ $('#rpage').classList.remove('ok');refreshModal();
+ lib.inert=true;modal.classList.add('on');modal.setAttribute('aria-hidden','false');
+ animateBook(b);$('#m-yes').focus({preventScroll:true});
+}
+function closeBook(){
+ if(!modal.classList.contains('on'))return;
+ modal.classList.remove('on');modal.setAttribute('aria-hidden','true');
+ lib.inert=(phaseState!=='library'||stage!=='pick');
+ if(opener&&stage==='pick')try{opener.focus({preventScroll:true})}catch(_){}
+}
+modal.addEventListener('click',function(e){if(e.target===modal)closeBook()});
+$('#m-no').addEventListener('click',closeBook);
+$('#m-yes').addEventListener('click',function(){
+ if(!current||stage!=='pick')return;
+ var p=current;
+ if(selected.has(p.id))selected.delete(p.id);
+ else{if(selected.size>=MAX||isDuplicate(p))return;selected.set(p.id,p)}
+ renderSelected();closeBook();
+ if(selected.size===MAX){toast('Đã đủ '+MAX+' chủ đề','Chuẩn bị đếm ngược để bắt đầu.');lock('full');later(startCountdown,1000)}
+});
+function fmt(s){return Math.floor(s/60)+':'+pad(s%60)}
+function paintClock(){
+ var left=Math.max(0,Math.ceil((deadline-Date.now())/1000)),time=$('#pickerTimer');
+ time.querySelector('b').textContent=fmt(left);time.classList.toggle('low',left<=10&&left>0);return left;
+}
+function startClock(){
+ if(stage!=='pick'||deadline)return;
+ deadline=Date.now()+SECONDS*1000;paintClock();clearInterval(tickId);
+ tickId=setInterval(function(){if(stage==='pick'&&paintClock()<=0){clearInterval(tickId);timeUp()}},250);
+}
+function lock(why){
+ if(stage!=='pick')return;
+ reason=why;stage='locked';app.classList.add('picker-locked');clearInterval(tickId);tickId=0;
+ closeBook();hideTip();lib.inert=true;$('#send').disabled=true;
+}
+function timeUp(){
+ if(stage!=='pick')return;
+ lock('timeout');var before=selected.size;
+ if(selected.size<MIN){
+  var pool=allBooks.map(info).filter(function(p){return !selected.has(p.id)});
+  while(selected.size<MIN&&pool.length){
+    var idx=Math.floor(Math.random()*pool.length),p=pool.splice(idx,1)[0];
+    if(!isDuplicate(p))selected.set(p.id,p);
+  }
+  randomFilled=selected.size-before;renderSelected();
+  toast('Hết giờ','Hệ thống đã chọn thêm '+randomFilled+' chủ đề ngẫu nhiên để đạt đủ '+MIN+'.');
+ }else toast('Hết giờ','Đã giữ nguyên '+selected.size+' chủ đề bạn chọn.');
+ later(startCountdown,1000);
+}
+$('#send').addEventListener('click',function(){if(stage==='pick'&&selected.size>=MIN){lock('manual');later(startCountdown,260)}});
+function pulse(n){
+ var num=$('#countNum'),orbit=$('.count-orbit');num.textContent=n;orbit.classList.remove('pulse');void orbit.offsetWidth;orbit.classList.add('pulse');
+ beep(580+(3-n)*160,.22,.11,'square');
+}
+function startCountdown(){
+ if(stage==='countdown'||stage==='ready'||stage==='sent')return;
+ stage='countdown';var box=$('#pickerCountdown');box.hidden=false;box.setAttribute('aria-hidden','false');
+ $('#countStatus').textContent='Chuẩn bị';$('#countSubtitle').textContent='Đã chọn '+selected.size+' chủ đề';
+ $('#startBtn').hidden=true;
+ if(reduce){showReady();return}
+ pulse(3);later(function(){pulse(2)},1000);later(function(){pulse(1)},2000);later(showReady,3000);
+}
+function showReady(){
+ if(stage!=='countdown')return;
+ stage='ready';$('#countStatus').textContent='Sẵn sàng!';
+ $('#countNum').textContent='✓';$('#startBtn').hidden=false;beep(960,.36,.13,'sine');
+ later(sendNow,300);
+}
+function publishPayload(){
+ var books=[...selected.values()].map(publicInfo);
+ return{sentAt:new Date().toISOString(),count:books.length,reason:reason,randomFilled:randomFilled,books:books};
+}
+function deliver(payload){
+ try{window.dispatchEvent(new CustomEvent('mathbook:selected',{detail:payload}))}catch(_){}
+ try{if(window.parent&&window.parent!==window)window.parent.postMessage({type:'mathbook:selected',payload:payload},'*')}catch(_){}
+ /* Battle choice is verified and persisted by the parent backend, not localStorage. */
+ /* API submissions happen only through the authenticated parent Battle page. */
+}
+function sendNow(){
+ if(finalized||stage!=='ready')return;
+ finalized=true;var payload=publishPayload();deliver(payload);
+ var out=$('#sentList');out.textContent='';
+ payload.books.forEach(function(b){var li=el('li'),small=el('small',null,'Toán '+b.grade);
+ li.appendChild(small);li.appendChild(document.createTextNode(b.title));out.appendChild(li)});
+ $('#sentSubtitle').textContent='Đã gửi '+payload.count+' chủ đề lúc '+new Date().toLocaleTimeString('vi-VN')+(randomFilled?' (tự bổ sung '+randomFilled+' chủ đề).':'.');
+ $('#pickerCountdown').hidden=true;$('#pickerCountdown').setAttribute('aria-hidden','true');
+ $('#pickerSent').hidden=false;$('#pickerSent').setAttribute('aria-hidden','false');stage='sent';
+ toast('Đã gửi thành công',payload.count+' chủ đề đã được lưu và phát sự kiện gửi.');
+ notify('Đã gửi',payload.count+' chủ đề Toán THPT đã được xác nhận.');
+ try{if('Notification' in window){var showNotice=function(){new Notification('Đã gửi',{body:payload.count+' chủ đề Toán THPT.'})};
+   if(Notification.permission==='granted')showNotice();
+   else if(Notification.permission==='default')Notification.requestPermission().then(function(result){if(result==='granted')showNotice()}).catch(function(){})
+ }}catch(_){}
+ beep(700,.18,.1,'sine');setTimeout(function(){beep(1050,.26,.09,'sine')},160);
+}
+$('#startBtn').addEventListener('click',sendNow);
+$('#again').addEventListener('click',function(){resetAndPlay()});
+function toast(title,body){var t=el('div','toast');t.appendChild(el('b',null,title));t.appendChild(document.createTextNode(body));toasts.appendChild(t);
+ setTimeout(function(){t.style.transition='opacity .4s';t.style.opacity='0';setTimeout(function(){t.remove()},450)},4500)}
+function renderLog(){
+ var list=$('#loglist');list.textContent='';logs.forEach(function(p){var li=el('li',null,p.text);li.insertBefore(el('time',null,p.at.toLocaleTimeString('vi-VN')),li.firstChild);list.appendChild(li)});
+ $('#logempty').hidden=logs.length>0;
+}
+function updBadge(){var b=$('#badge');b.textContent=unread;b.hidden=unread<1}
+function notify(title,body){logs.unshift({at:new Date(),text:title+': '+body});renderLog();
+ if(panel.hidden){unread++;updBadge()}}
+bell.addEventListener('click',function(e){e.stopPropagation();var open=panel.hidden;panel.hidden=!open;bell.setAttribute('aria-expanded',String(open));if(open){unread=0;updBadge()}});
+document.addEventListener('click',function(e){if(!panel.hidden&&!panel.contains(e.target)&&!bell.contains(e.target)){panel.hidden=true;bell.setAttribute('aria-expanded','false')}});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){
+ if(modal.classList.contains('on'))closeBook();else if(!panel.hidden){panel.hidden=true;bell.setAttribute('aria-expanded','false')}
+}});
+/* Giữ nguyên nền trời sao, sao băng, hoạt cảnh của giao diện THPT */
+var sky=(function(){
+  var c=$('#skyc'),ctx=c.getContext('2d'),w=0,h=0,stars=[],shoots=[],raf=0,run=false,next=0;
+  function draw(now){
+    var t=now/1000,i,k;ctx.clearRect(0,0,w,h);
+    ctx.save();ctx.translate(w*.5,h*.38);ctx.rotate(-.5);
+    var g=ctx.createLinearGradient(0,-h*.22,0,h*.22);g.addColorStop(0,'rgba(140,130,255,0)');g.addColorStop(.5,'rgba(160,150,255,.13)');g.addColorStop(1,'rgba(140,130,255,0)');
+    ctx.fillStyle=g;ctx.fillRect(-w,-h*.22,w*2,h*.44);ctx.restore();
+    for(i=0;i<stars.length;i++){
+      var s=stars[i],a=.4+.6*(.5+.5*Math.sin(t*s.s+s.p));
+      ctx.fillStyle='rgba('+s.c+','+a.toFixed(2)+')';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,6.283);ctx.fill();
+      if(s.r>1.4){var L=s.r*4*a;ctx.strokeStyle='rgba('+s.c+','+(a*.5).toFixed(2)+')';ctx.lineWidth=.6;ctx.beginPath();ctx.moveTo(s.x-L,s.y);ctx.lineTo(s.x+L,s.y);ctx.moveTo(s.x,s.y-L);ctx.lineTo(s.x,s.y+L);ctx.stroke()}
+    }
+    if(run&&now>next){shoots.push({x:w*(.35+Math.random()*.6),y:h*Math.random()*.35,vx:-(420+Math.random()*240),vy:230+Math.random()*120,life:0});next=now+2200+Math.random()*2400}
+    for(k=shoots.length-1;k>=0;k--){
+      var m=shoots[k];m.life+=1/60;m.x+=m.vx/60;m.y+=m.vy/60;var al=Math.max(0,1-m.life/1.1),tx=m.x-m.vx*.18,ty=m.y-m.vy*.18;
+      var gx=ctx.createLinearGradient(m.x,m.y,tx,ty);gx.addColorStop(0,'rgba(255,255,255,'+al.toFixed(2)+')');gx.addColorStop(1,'rgba(255,255,255,0)');
+      ctx.strokeStyle=gx;ctx.lineWidth=1.8;ctx.beginPath();ctx.moveTo(m.x,m.y);ctx.lineTo(tx,ty);ctx.stroke();
+      if(m.life>1.1)shoots.splice(k,1);
+    }
+  }
+  function size(){
+    w=c.clientWidth;h=c.clientHeight;if(!w||!h)return;
+    var dpr=Math.min(window.devicePixelRatio||1,2);c.width=Math.round(w*dpr);c.height=Math.round(h*dpr);ctx.setTransform(dpr,0,0,dpr,0,0);
+    var r=rng(42),n=Math.round(w*h/5200),i,q;stars=[];
+    for(i=0;i<n;i++){q=r();stars.push({x:r()*w,y:r()*h*.92,r:.3+q*q*q*1.7,p:r()*6.28,s:.6+r()*1.8,c:q>.85?'255,214,160':q>.6?'170,200,255':'255,255,255'})}
+    draw(performance.now());
+  }
+  function loop(now){if(!run)return;draw(now);raf=requestAnimationFrame(loop)}
+  return{
+    size:size,
+    start:function(){if(run)return;size();if(reduce)return;run=true;next=performance.now()+2300;raf=requestAnimationFrame(loop)},
+    stop:function(){run=false;cancelAnimationFrame(raf);shoots.length=0;draw(performance.now())}
+  };
+})();
+
+var resizeTime=0;window.addEventListener('resize',function(){clearTimeout(resizeTime);resizeTime=setTimeout(sky.size,150)});
+function phase(p){phaseState=p;app.dataset.phase=p;lib.inert=(p!=='library'||stage!=='pick')}
+function caption(text){if(!text){cap.classList.remove('on');return}cap.textContent=text;cap.classList.add('on')}
+function speak(text){if(!text){sayEl.classList.remove('on');return}sayEl.textContent=text;sayEl.classList.add('on')}
+function enterLibrary(){
+ stage='pick';phase('library');caption('');startClock();later(sky.stop,2800);
+}
+function resetAndPlay(){
+ clearScheduled();if(ghost){ghost.remove();ghost=null}closeBook();hideTip();speak('');caption('');toasts.textContent='';
+ selected.clear();current=null;opener=null;deadline=0;reason='manual';randomFilled=0;finalized=false;stage='intro';
+ app.classList.remove('picker-locked');$('#pickerCountdown').hidden=true;$('#pickerSent').hidden=true;
+ $('#pickerCountdown').setAttribute('aria-hidden','true');$('#pickerSent').setAttribute('aria-hidden','true');
+ $('#pickerTimer').classList.remove('low');$('#pickerTimer b').textContent='2:00';
+ panel.hidden=true;bell.setAttribute('aria-expanded','false');renderSelected();
+ phase('curtain');sky.start();
+ if(reduce){later(enterLibrary,400);return}
+ later(function(){phase('sky');caption('Ngước nhìn bầu trời đầy sao…')},1900);
+ later(function(){speak('Nhiều sao quá!')},2700);
+ later(function(){speak('');phase('turn');caption('…rồi cúi xuống, một tủ sách hiện ra.');speak('Ồ, một tủ sách!')},6300);
+ later(function(){enterLibrary();speak('Mình nên chọn cuốn nào nhỉ?')},8800);
+ later(function(){speak('')},12800);
+}
+function skipIntro(){
+ if(phaseState==='library')return;
+ clearScheduled();speak('');enterLibrary();
+}
+$('#skip').addEventListener('click',skipIntro);
+$('#replay').addEventListener('click',resetAndPlay);
+
+// Server-authoritative catalog; the standalone HTML list is never submitted to Battle.
+window.addEventListener('message',function(event){
+ if(event.source!==window.parent || event.origin!==location.origin) return;
+ var msg=event.data;
+ if(!msg || msg.type!=='mathweb:battle-catalog-init') return;
+ var grade=Number(msg.grade),topics=Array.isArray(msg.topics)?msg.topics:[];
+ if(![10,11,12].includes(grade) || !topics.length)return;
+ var clean=topics.filter(function(t){return t&&typeof t.id==='string'&&t.id&&typeof t.name==='string'&&t.name});
+ if(!clean.length)return;
+ GRADES=[grade];
+ LEVELS=[
+   {key:'ke-sach-1',name:'',note:'Chọn cuốn sách phù hợp với chủ đề bạn muốn thi đấu.',h:168},
+   {key:'ke-sach-2',name:'',note:'Bạn có thể chọn thêm hoặc chốt ngay.',h:218},
+   {key:'ke-sach-3',name:'',note:'Mỗi người được chọn tối đa ba cuốn.',h:268}
+ ];
+ var partition=[[],[],[]],ids=[[],[],[]];
+ clean.forEach(function(t,i){var group=i%3;partition[group].push(t.name);ids[group].push(t.id)});
+ TOPICS={};TOPICS[grade]=partition;window.BATTLE_TOPIC_IDS=ids;
+ DESC={};DESC[grade]=partition.map(function(group){return group.map(function(){return 'Câu hỏi được máy chủ rút từ ngân hàng theo đúng chủ đề.'})});
+ caseEl.textContent='';allBooks=[];total=0;
+ build();renderSelected();resetAndPlay();
+},false);
+try{if(window.parent!==window)window.parent.postMessage({type:'mathweb:battle-library-ready'},location.origin)}catch(_){ }
+
+})();
+
+</script>
+
+</body></html>

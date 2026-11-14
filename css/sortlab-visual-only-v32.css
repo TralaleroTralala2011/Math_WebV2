@@ -7,7 +7,7 @@
 /* Cursor halo is painted independently, never blocks controls. */
 #mwfx-cursor{position:fixed;left:0;top:0;width:220px;height:220px;z-index:10000;border-radius:50%;pointer-events:none;opacity:0;transform:translate3d(-999px,-999px,0);background:radial-gradient(circle,rgba(167,243,208,.12),rgba(147,197,253,.045) 33%,transparent 67%);mix-blend-mode:screen;transition:opacity .18s linear;will-change:transform}
 /* Entrance without resetting the layout or affecting app scripts. */
-body.mwfx-page-enter{animation:mwfx-page-arrive .42s cubic-bezier(.2,.85,.3,1) both}
+body.mwfx-page-enter{animation:mwfx-page-arrive .42s cubic-bezier(.2,.85,.3,1) backwards}
 @keyframes mwfx-page-arrive{from{opacity:.86;filter:blur(2px)}to{opacity:1;filter:blur(0)}}
 /* The eligible cards receive a visual-only hover effect; no selector spans form fields. */
 .mwfx-card{transition:box-shadow var(--mwfx-speed) cubic-bezier(.16,1,.3,1),border-color var(--mwfx-speed) ease,filter var(--mwfx-speed) ease!important;position:relative}

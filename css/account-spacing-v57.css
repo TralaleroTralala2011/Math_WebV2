@@ -1,0 +1,32 @@
+/* MATH_WEB V57: scoped account-only layout fix, no script or data changes. */
+body.account-body #mw-v5-header,
+body.account-body > header.navbar {margin-bottom:0!important;}
+body.account-body #mw-account-dashboard {
+  width:min(1240px,calc(100% - 32px))!important;
+  max-width:1240px!important;
+  margin:10px auto 0!important;
+  padding-bottom:0!important;
+}
+body.account-body #mw-account-dashboard .mw-v6-bottom {margin-bottom:0!important;}
+body.account-body #accountPage {
+  min-height:0!important;
+  padding:12px 0 30px!important;
+  margin:0!important;
+}
+body.account-body #accountPage .account-container {
+  width:min(1240px,calc(100% - 32px))!important;
+  max-width:1240px!important;
+  margin:0 auto!important;
+  padding:0!important;
+}
+body.account-body #accountPage .account-header {
+  margin-top:0!important;
+  margin-bottom:14px!important;
+}
+body.account-body #accountPage .level-section {margin-top:0!important;}
+body.account-body #accountPage .friends-section {margin-top:22px!important;}
+@media(max-width:700px){
+ body.account-body #mw-account-dashboard {width:calc(100% - 24px)!important;margin-top:6px!important;}
+ body.account-body #accountPage {padding-top:10px!important;padding-bottom:calc(82px + env(safe-area-inset-bottom))!important;}
+ body.account-body #accountPage .account-container {width:calc(100% - 24px)!important;}
+}

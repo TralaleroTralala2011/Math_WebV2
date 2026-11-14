@@ -27,6 +27,21 @@ def normalized_question(text):
     return " ".join(str(text).casefold().split())
 
 
+def _assert_real_seed(path):
+    """Reject an unresolved Git LFS pointer with a clear HTTP status.
+
+    A GitHub Pages/Render deploy may contain the text pointer rather than the
+    actual verified JSONL. That must never be counted as verified questions.
+    """
+    p=Path(path)
+    if not p.is_file():
+        raise HTTPException(503,"Ngân hàng verified chưa được tải lên máy chủ.")
+    with p.open('rb') as f:
+        header=f.read(120)
+    if header.startswith(b'version https://git-lfs.github.com/spec/v1'):
+        raise HTTPException(503,"Ngân hàng verified hiện chỉ có con trỏ Git LFS; cần tải tệp JSONL thật trước khi dùng.")
+
+
 def audit_records(records):
     """Structural audit, not a claim of mathematical proof for arbitrary questions."""
     forms = defaultdict(list)
@@ -66,6 +81,7 @@ def _indexed_bank(path=BANK_PATH):
     """
     global _INDEX_CACHE
     path = Path(path)
+    _assert_real_seed(path)
     stat = path.stat()
     identity = (str(path.resolve()), stat.st_size, stat.st_mtime_ns)
     with _INDEX_LOCK:
@@ -126,6 +142,7 @@ def quality():
 
 
 def load_bank(path=BANK_PATH):
+    _assert_real_seed(path)
     records = []
     seen = set()
     with open(path, encoding="utf-8") as f:

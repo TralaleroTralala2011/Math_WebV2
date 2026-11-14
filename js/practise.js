@@ -4849,8 +4849,29 @@
             }
 
 
+            // Final anti-repeat gate: don't show duplicate prompts even when
+            // two bank sources or an API cache accidentally return the same item.
+            const uniqueQuestions = [];
+            const seenQuestionTexts = new Set();
+            for (const item of questions) {
+                const prompt = getQuestionText(item);
+                const normalized = String(prompt || "")
+                    .normalize("NFKC")
+                    .toLocaleLowerCase("vi-VN")
+                    .replace(/\s+/g, " ")
+                    .trim();
+                if (!normalized || seenQuestionTexts.has(normalized)) continue;
+                seenQuestionTexts.add(normalized);
+                uniqueQuestions.push(item);
+            }
+            if (uniqueQuestions.length < count) {
+                throw new Error(
+                    "Ngân hàng chỉ trả về " + uniqueQuestions.length +
+                    "/" + count + " câu khác nhau. Vui lòng chọn lại hoặc giảm số câu; hệ thống không phát câu trùng."
+                );
+            }
             aiQuestions =
-                questions;
+                uniqueQuestions.slice(0, count);
 
             aiCurrentIndex =
                 0;
