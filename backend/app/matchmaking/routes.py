@@ -31,7 +31,7 @@ MATCH_MAX_DURATION_SECONDS = 5 * 60
 
 MAX_PLAYER_ID_LENGTH = 100
 MAX_MATCH_ID = 2_147_483_647
-MAX_TOPIC_COUNT = 5
+MAX_TOPIC_COUNT = 3
 
 DEFAULT_GRADE = 12
 DEFAULT_DIFFICULTY = "medium"
@@ -53,6 +53,7 @@ VALID_QUESTION_TYPES = {
 
 VALID_MATCH_STATUSES = {
     "INVITED",
+    "SELECTING",
     "STARTING",
     "PLAYING",
     "FINISHED",
@@ -159,6 +160,10 @@ def init_matchmaking_tables():
                 "grade": "INTEGER DEFAULT 12",
                 "difficulty": "TEXT DEFAULT 'medium'",
                 "question_type": "TEXT DEFAULT 'multiple_choice'",
+                "player1_topic_choices": "TEXT DEFAULT '[]'",
+                "player2_topic_choices": "TEXT DEFAULT '[]'",
+                "player1_topics_ready": "INTEGER DEFAULT 0",
+                "player2_topics_ready": "INTEGER DEFAULT 0",
                 "player1_answers": "TEXT DEFAULT '{}'",
                 "player2_answers": "TEXT DEFAULT '{}'",
                 "player1_current": "INTEGER DEFAULT 0",
@@ -553,6 +558,20 @@ def choose_random_bank_topics(grade, fallback):
         return result or fallback
     except Exception:
         return fallback
+
+
+EXTRA_B56_TOPICS = {10: {
+    "chia_du": "Chia dư",
+    "chia_het": "Chia hết",
+    "phuong_trinh_bac_hai": "Phương trình bậc hai",
+}}
+
+
+def valid_battle_topics(grade):
+    known = {str(item['id']): str(item.get('name') or item['id'])
+             for item in ai_service.topics(grade) if isinstance(item, dict) and item.get('id')}
+    known.update(EXTRA_B56_TOPICS.get(grade, {}))
+    return known
 
 
 def normalize_topics_for_grade(grade, topics):
@@ -1348,11 +1367,8 @@ def join_random_match(
     settings = normalize_settings(
         data or MatchSettings()
     )
-    settings["topics"] = normalize_topics_for_grade(
-        settings["grade"], settings["topics"]
-    )
-    if not settings["topics"]:
-        settings["topics"] = get_default_topics(settings["grade"])
+    # Players choose the actual 1-3 book topics after pairing.
+    settings["topics"] = []
 
     cleanup_matchmaking()
 
@@ -1429,15 +1445,9 @@ def join_random_match(
             if candidate_grade != settings["grade"]:
                 continue
 
-            common_topics = get_common_topics(
-                settings["grade"],
-                settings["topics"],
-                candidate_topics
-            )
-
-            if common_topics:
-                opponent = candidate
-                break
+            common_topics = []
+            opponent = candidate
+            break
 
         if opponent:
             opponent_id = opponent["user_id"]
@@ -1469,17 +1479,8 @@ def join_random_match(
             if question_type != opponent_question_type:
                 question_type = DEFAULT_QUESTION_TYPE
 
-            # Auto mode: draw random topics from the actual existing grade bank,
-            # while keeping manually selected topics unchanged.
-            if not getattr(data, 'topics', None) and common_topics == get_default_topics(settings['grade']):
-                common_topics = choose_random_bank_topics(settings['grade'], common_topics)
-
-            questions = generate_ai_battle_questions(
-                settings["grade"],
-                common_topics,
-                difficulty,
-                question_type
-            )
+            # Do not generate questions until BOTH players lock 1-3 topics.
+            questions = []
 
             match_code = (
                 "MW-"
@@ -1520,7 +1521,7 @@ def join_random_match(
                     match_code,
                     opponent_id,
                     user["id"],
-                    "STARTING",
+                    "SELECTING",
                     safe_json_dumps(
                         questions
                     ),
@@ -1781,11 +1782,7 @@ def invite_player(
     settings = normalize_settings(
         data
     )
-    settings["topics"] = normalize_topics_for_grade(
-        settings["grade"], settings["topics"]
-    )
-    if not settings["topics"]:
-        settings["topics"] = get_default_topics(settings["grade"])
+    settings["topics"] = []
 
     target_player_id = validate_player_id(
         data.player_id
@@ -1880,34 +1877,8 @@ def invite_player(
                 detail="Người này đã gửi lời mời cho bạn."
             )
 
-        target_topics = get_default_topics(
-            settings["grade"]
-        )
-
-        common_topics = get_common_topics(
-            settings["grade"],
-            settings["topics"],
-            target_topics
-        )
-
-        if not common_topics:
-            common_topics = settings["topics"]
-
-        if not common_topics:
-            raise HTTPException(
-                status_code=400,
-                detail="Bạn cần chọn ít nhất một chủ đề để đấu."
-            )
-
-        if not data.topics:
-            common_topics = choose_random_bank_topics(settings['grade'], common_topics)
-
-        questions = generate_ai_battle_questions(
-            settings["grade"],
-            common_topics,
-            settings["difficulty"],
-            settings["question_type"]
-        )
+        common_topics = []
+        questions = []
 
         match_code = (
             "MW-"
@@ -2120,6 +2091,19 @@ def get_match(
                 []
             ),
 
+            "topic_selection": {
+                "my_choices": safe_json_loads(match[
+                    'player1_topic_choices' if player_number == 1 else 'player2_topic_choices'
+                ], []),
+                "my_ready": bool(match[
+                    'player1_topics_ready' if player_number == 1 else 'player2_topics_ready'
+                ]),
+                "opponent_ready": bool(match[
+                    'player2_topics_ready' if player_number == 1 else 'player1_topics_ready'
+                ]),
+                "max_topics": MAX_TOPIC_COUNT,
+                "min_topics": 1,
+            },
             "grade": match["grade"],
             "difficulty": match["difficulty"],
             "question_type": match["question_type"],
@@ -2204,19 +2188,17 @@ def accept_invite(
                 detail="Bạn đang ở trong một trận đấu khác."
             )
 
-        # Accept + start is ONE atomic, server-authoritative transition.
-        # Both users see exactly the same started_at, even if one tab is late.
-        started_at = now_iso()
+        # Consent accepted; both players now pick 1-3 topics. Clock not running yet.
         cursor.execute(
             """
             UPDATE matches
-            SET status = 'PLAYING', started_at = ?
+            SET status = 'SELECTING'
             WHERE
                 id = ?
                 AND player2_id = ?
                 AND status = 'INVITED'
             """,
-            (started_at, match_id, user["id"])
+            (match_id, user["id"])
         )
 
         if cursor.rowcount != 1:
@@ -2244,12 +2226,94 @@ def accept_invite(
 
         return {
             "success": True,
-            "status": "PLAYING",
+            "status": "SELECTING",
             "match_id": match_id,
-            "started_at": started_at,
             "duration_seconds": MATCH_MAX_DURATION_SECONDS,
         }
 
+    finally:
+        connection.close()
+
+
+# =========================================================
+# TOPIC SELECTION: BOTH CONSENT, 1-3 CHOICES EACH
+# =========================================================
+
+class TopicChoicesRequest(BaseModel):
+    topics: list[str] = Field(min_length=1, max_length=3)
+
+
+@router.get("/topic-catalog")
+def battle_topic_catalog(grade: int = 10, authorization: str = Header(default=None)):
+    get_user(authorization)
+    if grade not in (10, 11, 12):
+        raise HTTPException(status_code=400, detail="Khối lớp không hợp lệ.")
+    return {"grade": grade, "topics": [
+        {"id": ident, "name": name, "grade": grade}
+        for ident, name in valid_battle_topics(grade).items()
+    ]}
+
+
+@router.post("/match/{match_id}/topics")
+def submit_battle_topics(match_id: int, data: TopicChoicesRequest,
+                         authorization: str = Header(default=None)):
+    """Atomic turn-taking: second confirmed vote starts same deck and shared clock."""
+    user = get_user(authorization)
+    validate_match_id(match_id)
+    chosen = list(data.topics)
+    if any(not isinstance(t, str) or not t.strip() for t in chosen):
+        raise HTTPException(status_code=422, detail="Chủ đề không hợp lệ.")
+    if len(set(chosen)) != len(chosen):
+        raise HTTPException(status_code=422, detail="Không chọn trùng chủ đề.")
+    connection = get_connection()
+    try:
+        cursor = connection.cursor()
+        cursor.execute('BEGIN IMMEDIATE')
+        match = cursor.execute('SELECT * FROM matches WHERE id=?', (match_id,)).fetchone()
+        if not match:
+            raise HTTPException(status_code=404, detail="Không tìm thấy trận đấu.")
+        if user['id'] not in (match['player1_id'], match['player2_id']):
+            raise HTTPException(status_code=403, detail="Bạn không thuộc trận đấu này.")
+        if match['status'] == 'PLAYING':
+            return {"success": True, "status": "PLAYING", "match_id": match_id,
+                    "topics": safe_json_loads(match['topics'], []),
+                    "started_at": match['started_at']}
+        if match['status'] != 'SELECTING':
+            raise HTTPException(status_code=409, detail="Trận không ở bước chọn chủ đề.")
+        allowed = valid_battle_topics(int(match['grade']))
+        if any(t not in allowed for t in chosen):
+            raise HTTPException(status_code=422, detail="Chủ đề không thuộc khối lớp trận đấu.")
+        number = 1 if user['id'] == match['player1_id'] else 2
+        ready_column = f'player{number}_topics_ready'
+        topics_column = f'player{number}_topic_choices'
+        if match[ready_column]:
+            return {"success": True, "status": "SELECTING", "match_id": match_id,
+                    "my_ready": True, "opponent_ready": bool(match[f'player{3-number}_topics_ready'])}
+        cursor.execute(f"UPDATE matches SET {topics_column}=?, {ready_column}=1 WHERE id=? AND status='SELECTING'",
+                       (safe_json_dumps(chosen), match_id))
+        other_ready = bool(match[f'player{3-number}_topics_ready'])
+        if not other_ready:
+            connection.commit()
+            return {"success": True, "status": "SELECTING", "match_id": match_id,
+                    "my_ready": True, "opponent_ready": False}
+        other = safe_json_loads(match[f'player{3-number}_topic_choices'], [])
+        topics = list(dict.fromkeys(chosen + other))
+        random.shuffle(topics)
+        # Each person's chosen topics are eligible. No intersection is required.
+        # All questions are sampled once on the server and shared by both players.
+        questions = generate_ai_battle_questions(
+            match['grade'], topics, match['difficulty'], match['question_type'])
+        started_at = now_iso()
+        cursor.execute("""UPDATE matches SET status='PLAYING', topics=?, questions=?, started_at=?
+                         WHERE id=? AND status='SELECTING'""",
+                       (safe_json_dumps(topics), safe_json_dumps(questions), started_at, match_id))
+        connection.commit()
+        return {"success": True, "status": "PLAYING", "match_id": match_id,
+                "topics": topics, "started_at": started_at,
+                "question_count": len(questions), "duration_seconds": MATCH_MAX_DURATION_SECONDS}
+    except Exception:
+        connection.rollback()
+        raise
     finally:
         connection.close()
 

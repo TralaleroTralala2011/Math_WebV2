@@ -12,8 +12,8 @@ const nav=document.createElement('nav');nav.setAttribute('aria-label','Điều h
 const logo=document.createElement('a');logo.className='logo';logo.href=new URL('index.html',root).href;logo.innerHTML='<b>∑</b> MATH<span style="color:#08ecf2">WEB</span>';nav.append(logo);
 const toggle=document.createElement('button');toggle.type='button';toggle.textContent='☰ Menu';toggle.setAttribute('aria-expanded','false');toggle.setAttribute('aria-controls','links');nav.append(toggle);
 const links=document.createElement('div');links.id='links';
-for(const [label,target] of [['Trang chủ','index.html'],['Luyện tập','practice.html'],['Học tập','learn.html'],['Lộ trình học','learning-path.html'],['Battle','battle.html'],['Bạn bè & Chat','chat.html']]){
- const a=document.createElement('a');a.textContent=label;a.href=new URL(target,root).href;if(target==='practice.html')a.className='active';links.append(a);
+for(const [label,target] of [['Trang chủ','index.html'],['Luyện tập','practise.html'],['Học tập','learn.html'],['Lộ trình học','learning-path.html'],['Battle','battle.html'],['Bạn bè & Chat','chat.html']]){
+ const a=document.createElement('a');a.textContent=label;a.href=new URL(target,root).href;if(target==='practise.html')a.className='active';links.append(a);
 }
 nav.append(links);shadow.append(style,nav);
 toggle.addEventListener('click',()=>{const open=links.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'✕ Đóng':'☰ Menu'});

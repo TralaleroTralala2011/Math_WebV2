@@ -985,6 +985,8 @@
             normalized ===
                 "INVITED" ||
             normalized ===
+                "SELECTING" ||
+            normalized ===
                 "STARTING" ||
             normalized ===
                 "PLAYING"
@@ -2064,6 +2066,8 @@
 
                         if (
                             status ===
+                                "SELECTING" ||
+                            status ===
                                 "STARTING" ||
                             status ===
                                 "PLAYING"
@@ -2191,6 +2195,8 @@
             }
 
             if (
+                status ===
+                    "SELECTING" ||
                 status ===
                     "STARTING" ||
                 status ===
@@ -2363,6 +2369,10 @@
                         if (
                             data.match_id &&
                             (
+                                normalizeMatchStatus(
+                                    data.status
+                                ) ===
+                                    "SELECTING" ||
                                 normalizeMatchStatus(
                                     data.status
                                 ) ===
@@ -2570,6 +2580,10 @@
     }
 
 
+    document.addEventListener('mathweb:battle-topics-ready', (event) => {
+        if (event.detail?.matchId) openMatch(event.detail.matchId);
+    });
+
     /* =====================================================
        OPEN MATCH
     ===================================================== */
@@ -2660,11 +2674,19 @@
                     match.status
                 );
 
+            if (status === "SELECTING") {
+                showScreen(startingScreen);
+                const shelf = window.MathWebBattleTopicBookshelf;
+                if (!shelf) { showToast("Không tải được giao diện chọn chủ đề.", "error"); return; }
+                await shelf.show(match, id => openMatch(id));
+                return;
+            }
+
             if (
                 status ===
                 "PLAYING"
             ) {
-
+                window.MathWebBattleTopicBookshelf?.close();
                 startGame();
 
                 return;
@@ -2908,6 +2930,11 @@
                 normalizeMatchStatus(
                     match.status
                 );
+
+            if (status === "SELECTING") {
+                await openMatch(match.id);
+                return;
+            }
 
             if (
                 status ===

@@ -41,33 +41,47 @@ class AIQuestionService:
     def topics(self,grade=None): return self.knowledge.list_topics(grade)
 
     def _v254_candidates(self, grade, topic_id, difficulty, question_type):
-        """Fetch matching V254 drafts from an indexed SQLite bank, not a huge in-memory JSON."""
+        """Read old V254 and additive B56 candidate bank, never replacing either.
+
+        Exact normalized prompt dedup runs before returning results. B56 status
+        remains candidate/unverified; final validator still applies at use time.
+        """
         if question_type not in ("short_answer", "written", "multiple_choice"):
             return []
         import sqlite3
         from .v254_bank import ensure_v254_bank
-        db_path = ensure_v254_bank()
-        if db_path is None:
-            return []
+        from .b56_bank import ensure_b56_bank
         requested_type = "short_answer" if question_type == "written" else question_type
-        try:
-            # Open immutable/read-only: concurrent requests cannot write to bundled bank.
-            with sqlite3.connect(f"file:{db_path.as_posix()}?mode=ro", uri=True, timeout=3) as conn:
-                conn.row_factory = sqlite3.Row
-                rows = conn.execute(
-                    """SELECT id, question, answer, solution, options, question_type, difficulty
-                       FROM questions
-                       WHERE grade=? AND topic=? AND difficulty=? AND question_type=?
-                         AND length(trim(question)) BETWEEN 8 AND 1800
-                         AND length(trim(answer)) BETWEEN 1 AND 250
-                         AND length(trim(solution)) BETWEEN 12 AND 2800
-                       ORDER BY RANDOM() LIMIT 50""",
-                    (int(grade), str(topic_id), normalize(difficulty), requested_type),
-                ).fetchall()
-                return [dict(x) for x in rows]
-        except (OSError, sqlite3.Error, ValueError):
-            # Generator fallback keeps practice available if bank is missing/broken.
-            return []
+        requested_level = normalize(difficulty)
+        result = []
+        seen = set()
+        for path in (ensure_v254_bank(), ensure_b56_bank()):
+            if path is None:
+                continue
+            try:
+                with sqlite3.connect(f"file:{path.as_posix()}?mode=ro", uri=True, timeout=3) as conn:
+                    conn.row_factory = sqlite3.Row
+                    rows = conn.execute(
+                        """SELECT id, question, answer, solution, options, question_type, difficulty
+                           FROM questions
+                           WHERE grade=? AND topic=? AND difficulty=? AND question_type=?
+                             AND length(trim(question)) BETWEEN 8 AND 1800
+                             AND length(trim(answer)) BETWEEN 1 AND 250
+                             AND length(trim(solution)) BETWEEN 12 AND 2800
+                           ORDER BY RANDOM() LIMIT 80""",
+                        (int(grade), str(topic_id), requested_level, requested_type),
+                    ).fetchall()
+                for row in rows:
+                    item = dict(row)
+                    signature = " ".join(str(item.get('question', '')).casefold().split())
+                    if not signature or signature in seen:
+                        continue
+                    seen.add(signature)
+                    result.append(item)
+            except (OSError, sqlite3.Error, ValueError):
+                continue
+        random.shuffle(result)
+        return result[:100]
 
     def _curated_admin_candidates(self, grade, topic_id, difficulty, question_type, game_id=None):
         """Load reviewed admin-authored items for the exact knowledge topic, if any."""

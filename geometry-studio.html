@@ -561,6 +561,7 @@
         let showOxyAxis = false;
         let lastCreatedPointName = null;
 
+        const MIN_ZOOM = 0.03, MAX_ZOOM = 40;
         let zoom = 1, panX = 0, panY = 0;
         let currentTool = 'select';
         let draggedPoint = null;
@@ -1327,25 +1328,61 @@
             });
         }
 
-        function drawGridDots(displayW, displayH) {
-            const left=-panX/zoom,top=-panY/zoom;
-            const right=(displayW-panX)/zoom,bottom=(displayH-panY)/zoom;
-            // Display a coarser grid when zoomed out, like GeoGebra.
-            const minSpacing=15/zoom;
-            const gridMultiplier=Math.max(1,Math.pow(2,Math.ceil(Math.log2(minSpacing/GRID_SIZE))));
-            const step=GRID_SIZE*gridMultiplier;
-            const startX=Math.floor(left/step)*step,endX=Math.ceil(right/step)*step;
-            const startY=Math.floor(top/step)*step,endY=Math.ceil(bottom/step)*step;
-            ctx.fillStyle='#475569';
-            const radius=1.15/zoom;
-            for(let x=startX;x<=endX;x+=step){
-                for(let y=startY;y<=endY;y+=step){
-                    ctx.beginPath();ctx.arc(x,y,radius,0,Math.PI*2);ctx.fill();
-                }
-            }
+        
+function drawGridDots(displayW, displayH) {
+    if (zoom < 0.045) return;
+    const left=-panX/zoom,top=-panY/zoom;
+    const right=(displayW-panX)/zoom,bottom=(displayH-panY)/zoom;
+    // Keep dots visually sparse when zoomed out so they never turn into a solid sheet.
+    const minScreenSpacing = zoom < 0.12 ? 48 : zoom < 0.25 ? 38 : zoom < 0.45 ? 30 : 24;
+    const minSpacing=minScreenSpacing/zoom;
+    const gridMultiplier=Math.max(1,Math.pow(2,Math.ceil(Math.log2(minSpacing/GRID_SIZE))));
+    const step=GRID_SIZE*gridMultiplier;
+    const startX=Math.floor(left/step)*step,endX=Math.ceil(right/step)*step;
+    const startY=Math.floor(top/step)*step,endY=Math.ceil(bottom/step)*step;
+    const screenStep = step * zoom;
+    const alpha = zoom < 0.18 ? 0.26 : zoom < 0.4 ? 0.38 : 0.55;
+    ctx.fillStyle=`rgba(148,163,184,${alpha})`;
+    const radius=Math.max(0.32/zoom, Math.min(0.95/zoom, screenStep*0.02/zoom));
+    for(let x=startX;x<=endX;x+=step){
+        for(let y=startY;y<=endY;y+=step){
+            ctx.beginPath();ctx.arc(x,y,radius,0,Math.PI*2);ctx.fill();
         }
+    }
+}
 
-        function draw3D() {
+function draw3DAxes() {
+    const axisLen = 180;
+    const origin = project3D(0,0,0);
+    const ox = project3D(axisLen,0,0);
+    const oy = project3D(0,axisLen,0);
+    const oz = project3D(0,0,axisLen);
+    const axes = [
+        { to: ox, label: 'Ox', color: '#f59e0b' },
+        { to: oy, label: 'Oy', color: '#4ade80' },
+        { to: oz, label: 'Oz', color: '#38bdf8' }
+    ];
+    axes.forEach(axis => {
+        ctx.beginPath();
+        ctx.moveTo(origin.x, origin.y);
+        ctx.lineTo(axis.to.x, axis.to.y);
+        ctx.strokeStyle = axis.color;
+        ctx.lineWidth = 2.2 / zoom;
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(axis.to.x, axis.to.y, 4.2 / zoom, 0, Math.PI*2);
+        ctx.fillStyle = axis.color;
+        ctx.fill();
+        ctx.font = `bold ${13 / zoom}px sans-serif`;
+        ctx.fillText(axis.label, axis.to.x + 7 / zoom, axis.to.y - 6 / zoom);
+    });
+    ctx.font = `bold ${12 / zoom}px sans-serif`;
+    ctx.fillStyle = '#e2e8f0';
+    ctx.fillText('O', origin.x + 6 / zoom, origin.y - 6 / zoom);
+}
+
+function draw3D() {
+            draw3DAxes();
             const projNodes = {};
             for (let key in mode3D.nodes) {
                 const n = mode3D.nodes[key];
@@ -1473,11 +1510,13 @@
             for (let name in points) {
                 const pt = points[name];
                 ctx.beginPath();
-                ctx.arc(pt.x, pt.y, 6 / zoom, 0, Math.PI * 2);
+                const pointRadius = (zoom < 0.22 ? 3.2 : zoom < 0.5 ? 4.2 : 6) / zoom;
+                ctx.arc(pt.x, pt.y, pointRadius, 0, Math.PI * 2);
                 ctx.fillStyle = (name === lastCreatedPointName) ? '#f59e0b' : '#ef4444';
                 ctx.fill();
 
-                ctx.font = `bold ${14 / zoom}px sans-serif`;
+                const labelSize = (zoom < 0.22 ? 9 : zoom < 0.5 ? 11 : 14) / zoom;
+                ctx.font = `bold ${labelSize}px sans-serif`;
                 ctx.fillStyle = '#38bdf8';
                 ctx.fillText(name, pt.x + 8 / zoom, pt.y - 8 / zoom);
             }
@@ -1546,7 +1585,7 @@
             const mouseY = e.clientY - rect.top;
 
             const zoomFactor = e.deltaY < 0 ? 1.12 : 0.88;
-            const newZoom = Math.min(4, Math.max(0.2, zoom * zoomFactor));
+            const newZoom = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, zoom * zoomFactor));
 
             panX = mouseX - (mouseX - panX) * (newZoom / zoom);
             panY = mouseY - (mouseY - panY) * (newZoom / zoom);
@@ -1783,7 +1822,7 @@
                     const values=[...activePointers.values()];
                     const cx=(values[0].x+values[1].x)/2-rect.left;
                     const cy=(values[0].y+values[1].y)/2-rect.top;
-                    const next=Math.max(.2,Math.min(4,zoom*distance/lastPinchDistance));
+                    const next=Math.max(MIN_ZOOM,Math.min(MAX_ZOOM,zoom*distance/lastPinchDistance));
                     panX=cx-(cx-panX)*next/zoom; panY=cy-(cy-panY)*next/zoom;
                     zoom=next; updateZoomDisplay(); requestDraw();
                 }
@@ -1820,7 +1859,7 @@
         window.addEventListener('pointercancel',finishPointer);
         function zoomAtCenter(factor) {
             const w=canvas.parentElement.clientWidth,h=canvas.parentElement.clientHeight;
-            const next=Math.max(0.12,Math.min(5,zoom*factor));
+            const next=Math.max(MIN_ZOOM,Math.min(MAX_ZOOM,zoom*factor));
             const wx=(w/2-panX)/zoom,wy=(h/2-panY)/zoom;
             zoom=next;panX=w/2-wx*zoom;panY=h/2-wy*zoom;
             updateZoomDisplay();draw();

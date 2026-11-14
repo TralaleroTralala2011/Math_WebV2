@@ -14,6 +14,7 @@ from .chat.live import router as chat_live_router
 from .matchmaking.routes import router as matchmaking_router
 from app.ai.routes import router as ai_router
 from .admin_routes import router as admin_router
+from .update_backup_routes import router as update_backup_router
 from .video_routes import router as video_router
 from .quality_routes import router as quality_router
 from .tutor_routes import router as tutor_router
@@ -115,6 +116,7 @@ app.include_router(chat_live_router)
 app.include_router(matchmaking_router)
 app.include_router(ai_router)
 app.include_router(admin_router)
+app.include_router(update_backup_router)
 app.include_router(video_router)
 app.include_router(quality_router)
 app.include_router(tutor_router)

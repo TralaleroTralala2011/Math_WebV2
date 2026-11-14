@@ -48,55 +48,113 @@ function isGeometry(){const t=String(GAME.topicId||GAME.engine||'').toLowerCase(
 function records(){try{return JSON.parse(localStorage.getItem(scoreStoreKey)||'{}')}catch(e){return {}}}
 function saveRecord(){const all=records(),key=String(GAME.knowledgeId||GAME.topicId||GAME.engine)+'::'+String(GAME.title||location.pathname);const old=all[key]||{plays:0,bestProgress:0,totalCorrect:0,totalWrong:0,lastPlayed:null};all[key]={...old,liveProgress:S.progress,livePoints:S.points,totalCorrect:S.correct,totalWrong:S.wrong,answered:S.answered,lastPlayed:new Date().toISOString(),bestProgress:Math.max(old.bestProgress||0,S.progress)};try{localStorage.setItem(scoreStoreKey,JSON.stringify(all))}catch(e){};if(RECORD)RECORD.textContent=`🏅 Kỷ lục đã lưu: ${all[key].bestProgress||0}/100 • Đã chơi ${all[key].plays||0} lần`}
 function saveFinished(){const all=records(),key=String(GAME.knowledgeId||GAME.topicId||GAME.engine)+'::'+String(GAME.title||location.pathname);const old=all[key]||{plays:0,bestProgress:0,totalCorrect:0,totalWrong:0,lastPlayed:null};all[key]={...old,plays:(old.plays||0)+1,bestProgress:Math.max(old.bestProgress||0,S.progress),lastProgress:S.progress,lastPoints:S.points,totalCorrect:(old.totalCorrect||0)+S.correct,totalWrong:(old.totalWrong||0)+S.wrong,lastPlayed:new Date().toISOString()};try{localStorage.setItem(scoreStoreKey,JSON.stringify(all))}catch(e){};if(RECORD)RECORD.textContent=`🏅 Kỷ lục đã lưu: ${all[key].bestProgress}/100 • Đã chơi ${all[key].plays} lần`}
-function addDiagram(q){if(!DIAGRAM)return;let d=q&&q.diagram;const questionText=String((q&&(q.question||q.text))||'');if(!d&&isGeometry()){
- // Build exact diagrams from explicit numeric data when a legacy question bank omitted diagram metadata.
- const circleMatch=questionText.match(/(?:đường tròn|đường tròn \(C\))\s*(?:tâm)?\s*I?\s*\(?\s*I?\s*\(?\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)?/i);
- const centerMatch=questionText.match(/tâm\s+I\s*\(?\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)?/i);
- const radiusMatch=questionText.match(/bán kính\s*(?:bằng\s*)?(-?\d+(?:[.,]\d+)?)/i);
- const tangentMatch=questionText.match(/tiếp tuyến.*?điểm\s+T\s*\(?\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)?/i);
- const num=v=>Number(String(v).replace(',','.'));
- if(centerMatch&&radiusMatch&&tangentMatch){const h=num(centerMatch[1]),k=num(centerMatch[2]),r=num(radiusMatch[1]),tx=num(tangentMatch[1]),ty=num(tangentMatch[2]);const dist=Math.hypot(tx-h,ty-k);if(r>0&&Math.abs(dist-r)<1e-6){let px=tx,py=ty;if(Math.abs(tx-h)<1e-6)px=tx+r;else if(Math.abs(ty-k)<1e-6)py=ty+r;else {px=tx-(ty-k);py=ty+(tx-h)}d={type:'geometry',points:{I:[h,k],T:[tx,ty],P:[px,py]},segments:[['I','T'],['T','P']],circles:[{center:[h,k],radius:r}],right_angle:'T',measurements:[{from:'I',to:'T',text:String(r)}],caption:'Hình dựng từ tâm, bán kính và tiếp điểm trong đề; bán kính IT vuông góc tiếp tuyến tại T.'};}}
- if(!d&&centerMatch&&radiusMatch){const h=num(centerMatch[1]),k=num(centerMatch[2]),r=num(radiusMatch[1]);if(r>0)d={type:'geometry',points:{I:[h,k],R:[h+r,k]},segments:[['I','R']],circles:[{center:[h,k],radius:r}],measurements:[{from:'I',to:'R',text:String(r)}],caption:'Đường tròn dựng theo đúng tâm và bán kính đã cho.'};}
- }if(!d&&isGeometry()){
- const id=String(GAME.topicId||GAME.knowledgeId||'').toLowerCase();
- const caption='Hình sơ đồ minh họa cho chuyên đề; nếu đề có số liệu/ tọa độ cụ thể, ưu tiên dữ kiện trong đề.';
- if(/circle|duong_tron|mat_cau|sphere/.test(id)){
-   d={type:'geometry',points:{O:[0,0],A:[1,0],B:[0,1]},segments:[['O','A']],circles:[{center:[0,0],radius:1}],caption};
- } else if(/coordinate|toa_do|plane_equation|line_equation|vector|oxyz|distance|midpoint/.test(id)){
-   d={type:'geometry',points:{O:[0,0],A:[2,1],B:[-1,2]},segments:[['A','B']],axes:true,caption};
- } else if(/space|khong_gian|prism|pyramid|3d|solid|section|plane|skew|mat_phang/.test(id)){
-   d={type:'geometry',points:{A:[0,0],B:[2,0],C:[2.8,0.8],D:[0.8,0.8],A1:[0,1.8],B1:[2,1.8],C1:[2.8,2.6],D1:[0.8,2.6]},segments:[['A','B'],['B','C'],['C','D'],['D','A'],['A1','B1'],['B1','C1'],['C1','D1'],['D1','A1'],['A','A1'],['B','B1'],['C','C1'],['D','D1']],caption};
- } else {
-   d={type:'geometry',points:{A:[0,0],B:[3,0],C:[1.1,2]},segments:[['A','B'],['B','C'],['C','A']],caption};
+function addDiagram(q){
+ if(!DIAGRAM)return;
+ let d=q&&q.diagram?JSON.parse(JSON.stringify(q.diagram)):null;
+ const questionText=String((q&&(q.question||q.text))||'');
+ const safeNum=v=>Number(String(v).replace(',','.'));
+ const point2DRe=/\b([A-Za-z][A-Za-z0-9_]*)\s*\(\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)/g;
+ const point3DRe=/\b([A-Za-z][A-Za-z0-9_]*)\s*\(\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)/g;
+ const vector3DRe=/(?:vect(?:ơ|o)|vector|u)\s*(?:chỉ\s*phương|chi\s*phuong)?\s*(?:u)?\s*=\s*\(\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)/i;
+ const points2D={};
+ const points3D={};
+ let m;
+ while((m=point2DRe.exec(questionText))){ if(!points2D[m[1].toUpperCase()]) points2D[m[1].toUpperCase()] = [safeNum(m[2]), safeNum(m[3])]; }
+ while((m=point3DRe.exec(questionText))){ if(!points3D[m[1].toUpperCase()]) points3D[m[1].toUpperCase()] = [safeNum(m[2]), safeNum(m[3]), safeNum(m[4])]; }
+ const vectorMatch = questionText.match(vector3DRe);
+ if(!d && isGeometry()){
+   const centerMatch=questionText.match(/tâm\s+I\s*\(?\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)?/i);
+   const radiusMatch=questionText.match(/bán kính\s*(?:bằng\s*)?(-?\d+(?:[.,]\d+)?)/i);
+   if(centerMatch&&radiusMatch){const h=safeNum(centerMatch[1]),k=safeNum(centerMatch[2]),r=safeNum(radiusMatch[1]);if(r>0)d={type:'geometry',points:{I:[h,k],R:[h+r,k]},segments:[['I','R']],circles:[{center:[h,k],radius:r}],measurements:[{from:'I',to:'R',text:String(r)}],caption:'Đường tròn dựng theo đúng tâm và bán kính đã cho.'};}
  }
-}
-const geometry=isGeometry()||!!d;DIAGRAM.hidden=!geometry;if(!geometry){DIAGRAM.innerHTML='';return}if(!d){DIAGRAM.innerHTML='<div class="diagram-title">📐 Chưa có hình minh họa cho câu này</div><p>Không tự vẽ hình phỏng đoán khi đề chưa có dữ liệu dựng hình.</p>';return}let svg='';
- const label=(x,y,t)=>`<text x="${x}" y="${y}" fill="#dcecff" font-size="14" font-weight="700">${safe(t)}</text>`;
- const line=(x1,y1,x2,y2,stroke='#58d9f7',w=2)=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round"/>`;
- if(d&&d.type==='circle_inscribed_triangle'){svg=`<circle cx="190" cy="95" r="66" fill="rgba(88,217,247,.04)" stroke="#58d9f7" stroke-width="2"/>${line(190,29,132,140)}${line(132,140,248,140)}${line(248,140,190,29)}${line(190,95,190,29,'#9a83ff',1.5)}${label(183,22,'A')}${label(117,153,'B')}${label(253,153,'C')}${label(198,92,'O')}`}
- else if(d&&d.type==='circle_inscribed'&&d.shape==='rectangle'){svg=`<circle cx="190" cy="95" r="66" fill="rgba(88,217,247,.04)" stroke="#58d9f7" stroke-width="2"/>${line(125,48,255,48)}${line(255,48,255,142)}${line(255,142,125,142)}${line(125,142,125,48)}${line(125,48,255,142,'#9a83ff',1.5)}${line(255,48,125,142,'#9a83ff',1.5)}${label(113,43,'A')}${label(260,43,'B')}${label(260,157,'C')}${label(112,157,'D')}`}
- else if(d&&d.type==='circle_inscribed_triangle'){svg=`<circle cx="190" cy="95" r="66" fill="rgba(88,217,247,.04)" stroke="#58d9f7" stroke-width="2"/>${line(190,29,132,140)}${line(132,140,248,140)}${line(248,140,190,29)}${line(190,95,190,29,'#9a83ff',1.5)}${label(183,22,'A')}${label(117,153,'B')}${label(253,153,'C')}${label(198,92,'O')}`}
- else if(d&&d.type==='circle_inscribed'&&d.shape==='rectangle'){svg=`<circle cx="190" cy="95" r="66" fill="rgba(88,217,247,.04)" stroke="#58d9f7" stroke-width="2"/>${line(125,48,255,48)}${line(255,48,255,142)}${line(255,142,125,142)}${line(125,142,125,48)}${line(125,48,255,142,'#9a83ff',1.5)}${line(255,48,125,142,'#9a83ff',1.5)}${label(113,43,'A')}${label(260,43,'B')}${label(260,157,'C')}${label(112,157,'D')}`}
- else if(d&&d.points&&typeof d.points==='object'&&!Array.isArray(d.points)){
-   const entries=Object.entries(d.points).filter(e=>Array.isArray(e[1])&&e[1].length>=2);
-   if(entries.length>=2){
-     let xs=entries.map(e=>Number(e[1][0])||0),ys=entries.map(e=>Number(e[1][1])||0);
-     (Array.isArray(d.circles)?d.circles:[]).forEach(c=>{const o=c.center||[0,0],r=Number(c.radius)||0;xs.push(Number(o[0])-r,Number(o[0])+r);ys.push(Number(o[1])-r,Number(o[1])+r)});(Array.isArray(d.polylines)?d.polylines:[]).forEach(l=>(l||[]).forEach(q=>{xs.push(Number(q[0])||0);ys.push(Number(q[1])||0)}));
-     let minX=Math.min(...xs),maxX=Math.max(...xs),minY=Math.min(...ys),maxY=Math.max(...ys);const scale=Math.min(300/Math.max(1,maxX-minX),135/Math.max(1,maxY-minY));const sx=v=>195-(minX+maxX)/2*scale+(v*scale),sy=v=>105+(maxY+minY)/2*scale-(v*scale);
-     const pts=Object.fromEntries(entries.map(([k,v])=>[k,[sx(Number(v[0])||0),sy(Number(v[1])||0)]]));
-     const circles=Array.isArray(d.circles)?d.circles:[];
-     svg=circles.map(c=>`<circle cx="${sx((c.center||[0,0])[0])}" cy="${sy((c.center||[0,0])[1])}" r="${Number(c.radius||0)*scale}" fill="rgba(88,217,247,.035)" stroke="#58d9f7" stroke-width="2"/>`).join('');
-     const segs=Array.isArray(d.segments)?d.segments:[];
-     svg+=segs.map(s=>pts[s[0]]&&pts[s[1]]?line(...pts[s[0]],...pts[s[1]]):'').join('');svg+=(Array.isArray(d.polylines)?d.polylines:[]).map(l=>`<polyline points="${(l||[]).map(q=>`${sx(q[0])},${sy(q[1])}`).join(' ')}" fill="none" stroke="#58d9f7" stroke-width="2.5" stroke-linejoin="round"/>`).join('');svg+=(Array.isArray(d.hidden_segments)?d.hidden_segments:[]).map(s=>pts[s[0]]&&pts[s[1]]?`<line x1="${pts[s[0]][0]}" y1="${pts[s[0]][1]}" x2="${pts[s[1]][0]}" y2="${pts[s[1]][1]}" stroke="#58d9f7" stroke-dasharray="5 4" stroke-width="1.6"/>`:'').join('');svg+=(Array.isArray(d.dashed_segments)?d.dashed_segments:[]).map(s=>pts[s[0]]&&pts[s[1]]?`<line x1="${pts[s[0]][0]}" y1="${pts[s[0]][1]}" x2="${pts[s[1]][0]}" y2="${pts[s[1]][1]}" stroke="#ffd166" stroke-dasharray="5 4" stroke-width="2.2"/>`:'').join('');
-     svg+=entries.filter(([k])=>!(Array.isArray(d.hide_labels)&&d.hide_labels.includes(k))).map(([k,v])=>label(pts[k][0]+6,pts[k][1]-7,k)).join('');
-     svg+=(Array.isArray(d.measurements)?d.measurements.map(m=>{const a=pts[m.from],b=pts[m.to];return a&&b?label((a[0]+b[0])/2+4,(a[1]+b[1])/2-5,m.text):''}).join(''):'');svg+=(d.angle_labels&&typeof d.angle_labels==='object'?Object.entries(d.angle_labels).map(([key,val])=>{const ps=key.split('').filter(n=>pts[n]).map(n=>pts[n]);if(!ps.length)return '';return label(ps.reduce((s,p)=>s+p[0],0)/ps.length+5,ps.reduce((s,p)=>s+p[1],0)/ps.length-5,String(val)+'°')}).join(''):'');
-     const rightAngles=Array.isArray(d.right_angles)?d.right_angles:(d.right_angle?[d.right_angle]:[]);
-     svg+=rightAngles.map(v=>{const adj=segs.filter(s=>s.includes(v)).map(s=>s.find(n=>n!==v)).filter(n=>pts[n]);if(adj.length<2)return '';const p=pts[v];let pair=null;for(let i=0;i<adj.length;i++){for(let j=i+1;j<adj.length;j++){const a=pts[adj[i]],b=pts[adj[j]],u=[a[0]-p[0],a[1]-p[1]],w=[b[0]-p[0],b[1]-p[1]],dot=u[0]*w[0]+u[1]*w[1],scale=Math.hypot(...u)*Math.hypot(...w);if(scale>0&&Math.abs(dot)<=0.035*scale){pair=[a,b];break}}if(pair)break}if(!pair)return '';const [p1,p2]=pair,unit=q=>{const dx=q[0]-p[0],dy=q[1]-p[1],len=Math.hypot(dx,dy)||1;return [dx/len*9,dy/len*9]},u=unit(p1),w=unit(p2);return `<path d="M ${p[0]+u[0]} ${p[1]+u[1]} L ${p[0]+u[0]+w[0]} ${p[1]+u[1]+w[1]} L ${p[0]+w[0]} ${p[1]+w[1]}" fill="none" stroke="#ffd166" stroke-width="1.8"/>`}).join('');
+ if((!d || !d.points || !Object.keys(d.points||{}).length) && Object.keys(points3D).length){
+   d={type:'space_projection',points:points3D,axes3d:true,caption:'Hình chiếu Oxyz: vị trí các điểm được dựng từ đúng tọa độ đã cho; hình chiếu không bảo toàn độ dài 3D.'};
+ }
+ if((!d || !d.points || !Object.keys(d.points||{}).length) && Object.keys(points2D).length){
+   const names=Object.keys(points2D);
+   d={type:'geometry',points:points2D,segments:names.length>=2?[[names[0],names[1]]]:[],axes:true,caption:'Mặt phẳng tọa độ với các điểm đúng theo đề bài.'};
+ }
+ if(d && Object.keys(points3D).length){
+   d.points = d.points || points3D;
+   if(!d.caption) d.caption='Hình chiếu Oxyz: vị trí các điểm được dựng từ đúng tọa độ đã cho; hình chiếu không bảo toàn độ dài 3D.';
+ }
+ if(vectorMatch){
+   const vx=safeNum(vectorMatch[1]), vy=safeNum(vectorMatch[2]), vz=safeNum(vectorMatch[3]);
+   const baseName = Object.keys(points3D)[0] || Object.keys(d&&d.coordinates_3d||{})[0] || Object.keys(d&&d.points||{})[0] || 'M';
+   const baseRaw = points3D[baseName] || (d&&d.coordinates_3d&&d.coordinates_3d[baseName]) || (d&&d.points&&Array.isArray(d.points[baseName])?d.points[baseName]:null);
+   if(baseRaw && baseRaw.length>=3){
+     const tip=[Number(baseRaw[0])+vx, Number(baseRaw[1])+vy, Number(baseRaw[2])+vz];
+     d = d || {};
+     d.points = Object.assign({}, d.points || {}, {[baseName]: baseRaw, U: tip});
+     d.coordinates_3d = Object.assign({}, d.coordinates_3d || {}, {[baseName]: baseRaw, U: tip});
+     const segs = Array.isArray(d.segments)?d.segments.slice():[];
+     if(!segs.some(s=>Array.isArray(s) && s[0]===baseName && s[1]==='U')) segs.push([baseName,'U']);
+     d.segments = segs;
+     d.axes3d = true;
+     d.vectorLabel = 'u';
+     if(!d.caption) d.caption='Hình chiếu Oxyz: vị trí các điểm được dựng từ đúng tọa độ đã cho; hình chiếu không bảo toàn độ dài 3D.';
    }
- } else if(d&&(d.type==='circle'||d.shape==='circle')){const r=Number(d.r||d.radius)||55;svg=`<circle cx="190" cy="95" r="${Math.min(70,Math.max(25,r*4))}" fill="rgba(88,217,247,.06)" stroke="#58d9f7" stroke-width="2"/>${line(190,95,245,95)}${label(177,88,'O')}${label(210,86,'r')}`}
- else if(d&&(d.type==='right_triangle'||d.shape==='right_triangle'||d.type==='triangle_area')){svg=`${line(55,165,330,165)}${line(55,165,55,35)}${line(55,35,330,165)}${label(38,180,'A')}${label(334,180,'B')}${label(40,28,'C')}${label(165,185,d.a||d.base||'đáy')}${label(65,98,d.b||d.height||'cao')}${d.c?label(190,85,d.c):''}`}
- else if(d&&(d.type==='coordinate'||d.shape==='coordinate_polygon')){svg=`${line(25,160,350,160,'#60738f',1)}${line(60,190,60,20,'#60738f',1)}${line(90,130,270,55)}${label(274,52,'B')}${label(80,143,'A')}${label(342,154,'x')}${label(66,22,'y')}`}
- else {DIAGRAM.innerHTML='<div class="diagram-title">📐 Chưa có hình minh họa cho dạng này</div><p>Đề bài vẫn dùng dữ kiện văn bản; không hiển thị hình không đúng tỉ lệ.</p>';return}
+ }
+ if(!d && isGeometry()){
+   const id=String(GAME.topicId||GAME.knowledgeId||'').toLowerCase();
+   const caption='Hình sơ đồ minh họa cho chuyên đề; nếu đề có số liệu/ tọa độ cụ thể, ưu tiên dữ kiện trong đề.';
+   if(/space|khong_gian|oxyz|mat_phang|plane|3d|solid/.test(id)) d={type:'space_projection',points:{O:[0,0,0],A:[2,0,0],B:[0,2,0],C:[0,0,2]},segments:[['O','A'],['O','B'],['O','C']],axes3d:true,caption};
+   else if(/coordinate|toa_do|line_equation|vector|distance|midpoint/.test(id)) d={type:'geometry',points:{O:[0,0],A:[2,1],B:[-1,2]},segments:[['A','B']],axes:true,caption};
+   else d={type:'geometry',points:{A:[0,0],B:[3,0],C:[1.1,2]},segments:[['A','B'],['B','C'],['C','A']],caption};
+ }
+ const geometry=isGeometry()||!!d;DIAGRAM.hidden=!geometry;if(!geometry){DIAGRAM.innerHTML='';return}
+ if(!d){DIAGRAM.innerHTML='<div class="diagram-title">📐 Chưa có hình minh họa cho câu này</div><p>Không tự vẽ hình phỏng đoán khi đề chưa có dữ liệu dựng hình.</p>';return}
+ const label=(x,y,t,color='#dcecff',size=14)=>`<text x="${x}" y="${y}" fill="${color}" font-size="${size}" font-weight="700">${safe(t)}</text>`;
+ const line=(x1,y1,x2,y2,stroke='#58d9f7',w=2,dash='')=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${stroke}" stroke-width="${w}" stroke-linecap="round" ${dash?`stroke-dasharray="${dash}"`:''}/>`;
+ function project3D(v){const x=Number(v[0])||0,y=Number(v[1])||0,z=Number(v[2])||0;return [x-0.55*z, y+0.32*z];}
+ function fitAndMap(rawPts){
+   const values=Object.values(rawPts); let xs=values.map(v=>v[0]), ys=values.map(v=>v[1]);
+   let minX=Math.min(...xs), maxX=Math.max(...xs), minY=Math.min(...ys), maxY=Math.max(...ys);
+   if(!(isFinite(minX)&&isFinite(maxX)&&isFinite(minY)&&isFinite(maxY))){minX=-1;maxX=1;minY=-1;maxY=1;}
+   if(minX===maxX){minX-=1;maxX+=1;} if(minY===maxY){minY-=1;maxY+=1;}
+   const paddingX=(maxX-minX)*0.18+1, paddingY=(maxY-minY)*0.18+1;
+   minX-=paddingX; maxX+=paddingX; minY-=paddingY; maxY+=paddingY;
+   const scale=Math.min(300/Math.max(1,maxX-minX),140/Math.max(1,maxY-minY));
+   const sx=v=>195-(minX+maxX)/2*scale+(v*scale);
+   const sy=v=>105+(maxY+minY)/2*scale-(v*scale);
+   return {scale,sx,sy};
+ }
+ let svg='';
+ if(d && (Array.isArray(d.curves) || Array.isArray(d.marked_points) || (d.x_range && d.y_range))){
+   const xr=Array.isArray(d.x_range)?d.x_range:[-5,5], yr=Array.isArray(d.y_range)?d.y_range:[-5,5];
+   const sx=v=>40+(v-xr[0])/(xr[1]-xr[0])*310, sy=v=>180-(v-yr[0])/(yr[1]-yr[0])*140;
+   const zeroX=sx(0), zeroY=sy(0);
+   svg += line(25,zeroY,350,zeroY,'#60738f',1.2)+line(zeroX,190,zeroX,20,'#60738f',1.2);
+   svg += label(339,zeroY-8,d.x_label||'x','#9fb4cc',12)+label(zeroX+8,31,d.y_label||'y','#9fb4cc',12)+label(zeroX+6,zeroY+14,'O','#9fb4cc',12);
+   (d.curves||[]).forEach(curve=>{const pts=(curve.points||[]).filter(p=>Array.isArray(p)&&p.length>=2); if(pts.length>=2) svg += `<polyline points="${pts.map(p=>`${sx(Number(p[0])||0)},${sy(Number(p[1])||0)}`).join(' ')}" fill="none" stroke="#58d9f7" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>`;});
+   (d.asymptotes||[]).forEach(a=>{if(a.axis==='x'){const x=sx(Number(a.value)||0); svg += line(x,20,x,190,'#fbbf24',1.2,'5 4');} else if(a.axis==='y'){const y=sy(Number(a.value)||0); svg += line(25,y,350,y,'#fbbf24',1.2,'5 4');}});
+   (d.marked_points||[]).forEach(pt=>{const x=sx(Number(pt.x)||0), y=sy(Number(pt.y)||0); svg += `<circle cx="${x}" cy="${y}" r="4.1" fill="#ef4444"/>`+label(x+6,y-6,pt.label||'', '#dcecff', 12);});
+ } else if(d && d.points && typeof d.points==='object' && !Array.isArray(d.points)) {
+   const entries = Object.entries(d.coordinates_3d||d.points).filter(e=>Array.isArray(e[1])&&e[1].length>=2);
+   const use3D = !!(d.axes3d || d.coordinates_3d || entries.some(e=>e[1].length>=3));
+   let rawPts={};
+   entries.forEach(([k,v])=>rawPts[k]=use3D?project3D(v):[Number(v[0])||0,Number(v[1])||0]);
+   if(use3D){ rawPts.__OX__=[4,0]; rawPts.__OY__=[0,4]; rawPts.__OZ__=project3D([0,0,4]); rawPts.__O__=[0,0]; }
+   else if(d.axes){ rawPts.__X__=[4,0]; rawPts.__Y__=[0,4]; rawPts.__O__=[0,0]; }
+   const map=fitAndMap(rawPts), pts={}; Object.entries(rawPts).forEach(([k,v])=>pts[k]=[map.sx(v[0]),map.sy(v[1])]);
+   if(use3D){
+      svg += line(pts.__O__[0],pts.__O__[1],pts.__OX__[0],pts.__OX__[1],'#f59e0b',2)+label(pts.__OX__[0]+6,pts.__OX__[1]-6,'Ox','#f59e0b',12);
+      svg += line(pts.__O__[0],pts.__O__[1],pts.__OY__[0],pts.__OY__[1],'#4ade80',2)+label(pts.__OY__[0]+6,pts.__OY__[1]-6,'Oy','#4ade80',12);
+      svg += line(pts.__O__[0],pts.__O__[1],pts.__OZ__[0],pts.__OZ__[1],'#38bdf8',2)+label(pts.__OZ__[0]+6,pts.__OZ__[1]-6,'Oz','#38bdf8',12);
+      svg += label(pts.__O__[0]+5,pts.__O__[1]-5,'O','#cbd5e1',12);
+   } else if(d.axes){
+      svg += line(25,pts.__O__[1],350,pts.__O__[1],'#60738f',1.2)+line(pts.__O__[0],190,pts.__O__[0],20,'#60738f',1.2);
+      svg += label(338,pts.__O__[1]-8,'x','#9fb4cc',12)+label(pts.__O__[0]+8,31,'y','#9fb4cc',12)+label(pts.__O__[0]+5,pts.__O__[1]+14,'O','#9fb4cc',12);
+   }
+   (Array.isArray(d.circles)?d.circles:[]).forEach(c=>{const center=(c.center||[0,0]);const centerKey=Array.isArray(center)?null:center;let cx,cy;if(centerKey&&pts[centerKey]){cx=pts[centerKey][0];cy=pts[centerKey][1];}else{const proj=use3D?project3D(center):[Number(center[0])||0,Number(center[1])||0];cx=map.sx(proj[0]);cy=map.sy(proj[1]);}const baseR=Number(c.radius||0);const rr=Math.abs(baseR*map.scale);if(rr>0.5) svg += `<circle cx="${cx}" cy="${cy}" r="${rr}" fill="rgba(88,217,247,.035)" stroke="#58d9f7" stroke-width="2"/>`;});
+   (Array.isArray(d.segments)?d.segments:[]).forEach(s=>{if(pts[s[0]]&&pts[s[1]]) svg += line(pts[s[0]][0],pts[s[0]][1],pts[s[1]][0],pts[s[1]][1]);});
+   (Array.isArray(d.hidden_segments)?d.hidden_segments:[]).forEach(s=>{if(pts[s[0]]&&pts[s[1]]) svg += line(pts[s[0]][0],pts[s[0]][1],pts[s[1]][0],pts[s[1]][1],'#58d9f7',1.6,'5 4');});
+   (Array.isArray(d.dashed_segments)?d.dashed_segments:[]).forEach(s=>{if(pts[s[0]]&&pts[s[1]]) svg += line(pts[s[0]][0],pts[s[0]][1],pts[s[1]][0],pts[s[1]][1],'#ffd166',2,'5 4');});
+   Object.entries(pts).forEach(([k,v])=>{if(k.startsWith('__')) return; svg += `<circle cx="${v[0]}" cy="${v[1]}" r="4.2" fill="#ef4444"/>` + label(v[0]+6,v[1]-6,k);});
+   (Array.isArray(d.measurements)?d.measurements:[]).forEach(m=>{const a=pts[m.from],b=pts[m.to];if(a&&b) svg += label((a[0]+b[0])/2+4,(a[1]+b[1])/2-5,m.text,'#ffd166',12);});
+   if(d.vectorLabel && Array.isArray(d.segments) && d.segments[0] && pts[d.segments[0][0]] && pts[d.segments[0][1]]){ const a=pts[d.segments[0][0]], b=pts[d.segments[0][1]]; svg += label((a[0]+b[0])/2+5,(a[1]+b[1])/2-8,d.vectorLabel,'#ffd166',12); }
+ }
+ if(!svg){DIAGRAM.innerHTML='<div class="diagram-title">📐 Chưa có hình minh họa cho dạng này</div><p>Đề bài vẫn dùng dữ kiện văn bản; không hiển thị hình không đúng tỉ lệ.</p>';return}
  DIAGRAM.innerHTML=`<div class="diagram-title">📐 Hình minh họa theo dữ kiện bài toán</div><svg viewBox="0 0 390 210" role="img" aria-label="Hình minh họa hình học">${svg}</svg>${d&&d.caption?`<p>${safe(d.caption)}</p>`:'<p>Hình minh họa hỗ trợ quan sát. Dùng số liệu ghi trong đề làm căn cứ tính toán.</p>'}`;
 }
 function normalizeQuestion(q){const raw=q.options||q.choices||[];return {...q,text:q.question||q.text||'Câu hỏi',question_type:q.question_type||q.type|| (raw.length?'multiple_choice':'short_answer'),statements:Array.isArray(q.statements)?q.statements:[],statement_answers:Array.isArray(q.statement_answers)?q.statement_answers:[],options:raw.map(o=>typeof o==='object'&&o!==null?(o.value??o.label??String(o)):o),solution:q.solution||q.explanation||'',answer:q.answer,diagram:q.diagram||null}}
