@@ -14,6 +14,7 @@ from .topic_expansion import geometry_diagram
 from .question_history import QuestionHistory
 from .question_identity import question_key
 from .topic_relevance import is_question_on_topic
+from .mcq_quality_v68 import improve_mcq
 
 class QuestionStore:
     def __init__(self): self.items={}
@@ -255,12 +256,13 @@ class AIQuestionService:
             q = self._build_curated_question(item, grade, topic_id, difficulty, question_type)
             if not q or not is_question_on_topic(topic_id, q.get('question', '')):
                 continue
+            improve_mcq(q)
             try:
                 validate(q)
             except ValidationError:
                 continue
             variation = self._variation_key(q)
-            if q["fingerprint"] in seen or question_key(q.get("question", "")) in seen_text_keys or self.question_history.question_seen(q.get("question", "")):
+            if q["fingerprint"] in seen or question_key(q.get("question", "")) in seen_text_keys or (not game_id and self.question_history.question_seen(q.get("question", ""))):
                 continue
             if q.get("structure_fingerprint") in seen_structures or variation in seen_variations:
                 continue
@@ -305,13 +307,14 @@ class AIQuestionService:
                 }
                 if not is_question_on_topic(topic_id, q.get('question', '')):
                     continue
+                improve_mcq(q)
                 try:
                     validate(q)
                 except ValidationError:
                     continue
                 variation=self._variation_key(q)
                 if (q['fingerprint'] in seen or question_key(q.get('question','')) in seen_text_keys
-                    or self.question_history.question_seen(q['question'])):
+                    or (not game_id and self.question_history.question_seen(q['question']))):
                     continue
                 if strict_structure and (q.get('structure_fingerprint') in seen_structures
                                          or variation in seen_variations
@@ -328,11 +331,12 @@ class AIQuestionService:
                 q=self.generator.generate(grade,topic_id,normalize(difficulty),question_type,game_id,recent_families)
                 if not is_question_on_topic(topic_id, q.get('question', '')):
                     continue
+                improve_mcq(q)
                 try: validate(q)
                 except ValidationError as e: last=e; continue
 
                 variation = self._variation_key(q)
-                if q["fingerprint"] in seen or question_key(q.get("question", "")) in seen_text_keys or self.question_history.question_seen(q.get("question", "")):
+                if q["fingerprint"] in seen or question_key(q.get("question", "")) in seen_text_keys or (not game_id and self.question_history.question_seen(q.get("question", ""))):
                     continue
                 if strict and q.get("structure_fingerprint") in seen_structures:
                     continue

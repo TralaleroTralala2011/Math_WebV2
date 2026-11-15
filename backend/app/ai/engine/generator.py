@@ -69,6 +69,26 @@ class QuestionGenerator:
                     q["question"] = f"Sau khi phân tích dữ kiện, {q['question'][0].lower() + q['question'][1:]}"
                 elif style == "theory_check" and q.get("question"):
                     q["question"] = f"Kiểm tra kiến thức: {q['question']}"
+        if q is None and topic_id in ("day_so_10", "phan_thuc_dai_so"):
+            # These two legacy mini-game topics exist in the grade-10 menu,
+            # but not as canonical rows of the 150-topic index. Use dedicated
+            # skill-aligned builders instead of _g_generic's unrelated sums.
+            # The game ID is read only to choose the skill, not a database topic.
+            game_label = str(game_id or "").rsplit(" • ", 1)[-1].rsplit("_stage", 1)[0]
+            if topic_id == "day_so_10":
+                if game_label == "Điền số":
+                    q = self._game_sequence_fill()
+                elif game_label == "Đường đua dãy số":
+                    q = self.game_bank.sequence_race(difficulty)
+                else:
+                    q = self.game_bank.sequence_rule(difficulty)
+            else:
+                if game_label == "Tìm điều kiện":
+                    q = self.game_bank.fraction_condition(difficulty)
+                elif game_label == "Rút gọn":
+                    q = self._game_fraction_simplify()
+                else:
+                    q = self._game_fraction_expression()
         if q is None:
             # Geometry uses a grade-aware, three-tier curriculum bank first.
             # This is additive and leaves the legacy UI, game banks and other topics untouched.
@@ -129,6 +149,51 @@ class QuestionGenerator:
         q["explanation"] = q["solution"]
         return self._convert(q,question_type)
 
+    def _game_sequence_fill(self):
+        """Fill a genuinely missing member of an arithmetic progression."""
+        a = random.randint(-12, 9)
+        d = random.choice([-6,-5,-4,-3,-2,2,3,4,5,6])
+        missing = a + 2*d
+        return self._base(
+            f"Điền số còn thiếu trong dãy số: {a}; {a+d}; …; {a+3*d}; {a+4*d}.",
+            missing,
+            f"Dãy số có công sai {d}. Số còn thiếu là {a+d}+({d})={missing}.",
+            [missing-d,missing+d,missing+2*d],
+            "Tìm hiệu của hai số hạng liên tiếp.",
+        )
+
+    def _game_fraction_simplify(self):
+        """Cancel a factor with the excluded denominator zero explicit."""
+        a = random.randint(2, 10)
+        positive = random.choice([True, False])
+        excluded = a if positive else -a
+        denominator = f"x−{a}" if positive else f"x+{a}"
+        answer = f"x+{a}" if positive else f"x−{a}"
+        wrong = [denominator, f"x+{a+1}", f"x−{a+1}"]
+        return self._base(
+            f"Với x≠{excluded}, rút gọn phân thức (x²−{a*a})/({denominator}).",
+            answer,
+            f"Phân tích: x²−{a*a}=(x−{a})(x+{a}). "
+            f"Với x≠{excluded}, rút gọn nhân tử {denominator} để được {answer}.",
+            wrong,
+        )
+
+    def _game_fraction_expression(self):
+        """A distinct algebraic-fraction multiplication task, never a speed word problem."""
+        a=random.randint(2,9)
+        b=random.randint(2,9)
+        while b == a:b=random.randint(2,9)
+        from fractions import Fraction
+        f=Fraction(a,b)
+        answer=str(f.numerator) if f.denominator==1 else f"{f.numerator}/{f.denominator}"
+        return self._base(
+            f"Với x≠0, tính giá trị phân thức ({a}x)/({b}x) sau khi rút gọn.",
+            answer,
+            f"Vì x≠0 nên ({a}x)/({b}x)={a}/{b}={answer}.",
+            [str(Fraction(b,a)),str(Fraction(a,b+1)),str(Fraction(a+1,b))],
+            "Khử x rồi rút gọn phân số.",
+        )
+
     def _base(self, question, answer, solution, options=None, hint=""):
         return {"question":question,"answer":answer,"solution":solution,"options":options or [],"hint":hint}
 
@@ -170,11 +235,16 @@ class QuestionGenerator:
         # Final generic labels are used only as a last resort for unusual
         # string answers. Existing numeric distractors are never replaced.
         if len(vals) < 4:
-            for x in ["Không xác định", "Không đủ dữ kiện", "Giá trị khác"]:
-                if x not in vals and x.lower() != str(answer).strip().lower():
-                    vals.append(x)
-                if len(vals) == 4:
-                    break
+            # Do not make a numerical answer stand out among generic labels.
+            # If there are too few genuine numeric distractors, regeneration
+            # is safer than disguising missing options as "Giá trị khác".
+            from .solver import _safe_numeric
+            if _safe_numeric(answer) is None:
+                for x in ["Không xác định", "Không đủ dữ kiện", "Giá trị khác"]:
+                    if x not in vals and x.lower() != str(answer).strip().lower():
+                        vals.append(x)
+                    if len(vals) == 4:
+                        break
 
         random.shuffle(vals)
         return vals[:4] if len(vals) >= 4 else vals

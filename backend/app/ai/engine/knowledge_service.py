@@ -9,6 +9,11 @@ class KnowledgeService:
         "chia_du": {"id":"chia_du","name":"Chia dư","grade":10},
         "chia_het": {"id":"chia_het","name":"Chia hết","grade":10},
         "phuong_trinh_bac_hai": {"id":"phuong_trinh_bac_hai","name":"Phương trình bậc hai","grade":10},
+        # These are legitimate grade-10 learning games, but the 150-topic
+        # canonical index has no grade-10 entries for either title. Map them
+        # explicitly; never borrow a different subject to bypass validation.
+        "day_so_10": {"id":"day_so_10","name":"Dãy số","grade":10},
+        "phan_thuc_dai_so": {"id":"phan_thuc_dai_so","name":"Phân thức đại số","grade":10},
     }
     GAME_TOPIC_ALIASES = {
         "probability": "xac_suat",
@@ -20,12 +25,13 @@ class KnowledgeService:
         "quadratic-equation": "phuong_trinh_bac_hai",
         "quadratic_equation": "phuong_trinh_bac_hai",
         "inequality": "bat_phuong_trinh",
-        "sequence": "day_so",
+        "sequence": "day_so_10",
         "divisibility": "chia_het",
         "remainder": "chia_du",
         "radical": "g10_radical_equations_advanced",
         "identities": "ham_so_bac_hai",
-        "algebraic-fraction": "phuong_trinh",
+        "algebraic-fraction": "phan_thuc_dai_so",
+        "algebraic_fraction": "phan_thuc_dai_so",
         "geometry": "hinh_hoc_10",
         "statistics": "thong_ke",
     }
@@ -64,6 +70,10 @@ class KnowledgeService:
             raw = str(topic).strip()
             folded = raw.casefold()
             canonical = self.GAME_TOPIC_ALIASES.get(folded, folded)
+            # The three original games/sequence/*.html are grade-11 games;
+            # the later games/knowledge/sequence/*.html are grade-10 games.
+            if folded == "sequence" and int(grade) == 11:
+                canonical = "day_so"
             if canonical not in allowed:
                 canonical = self.word_topic_aliases.get(str(int(grade)), {}).get(folded, canonical)
             if canonical in allowed and canonical not in result:
