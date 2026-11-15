@@ -592,11 +592,13 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
             if (mode === '2D') {
                 viewMode2dBtn.className = "px-3 py-1 bg-indigo-600 text-white rounded transition shadow";
                 viewMode3dBtn.className = "px-3 py-1 text-slate-400 hover:text-white rounded transition";
-                document.getElementById('bar-fx-container').style.display = 'flex';
+                const functionBar = document.getElementById('bar-fx-container');
+                 if (functionBar) functionBar.style.display = 'flex';
             } else {
                 viewMode3dBtn.className = "px-3 py-1 bg-cyan-600 text-white rounded transition shadow";
                 viewMode2dBtn.className = "px-3 py-1 text-slate-400 hover:text-white rounded transition";
-                document.getElementById('bar-fx-container').style.display = 'none';
+                const functionBar = document.getElementById('bar-fx-container');
+                 if (functionBar) functionBar.style.display = 'none';
                 if (!mode3D.currentShape) init3DShape('pyramid_square');
                 refresh3DControls();
             }

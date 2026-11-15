@@ -73,6 +73,9 @@
   }
   function shouldReplaceHeader(header){
     if(!header) return false;
+    // MathGeo's first header contains live 2D/3D tools, not the site navbar.
+    // Replacing it removes the mode buttons and bar-fx-container, breaking switchMode.
+    if(header.querySelector('#view-mode-2d, #view-mode-3d, #bar-fx-container')) return false;
     const txt = (header.textContent || '').replace(/\s+/g,' ').trim();
     return /MATH|Trang chủ|Luyện tập|Battle|Tài khoản|Học tập|Đấu online|Bạn bè/i.test(txt);
   }
