@@ -114,7 +114,16 @@ def export(source,outdir,sqlite_path):
     mapping=json.loads(TOPIC_MAP.read_text(encoding='utf8'))
     catalog=json.loads((ROOT/'backend/app/ai/knowledge/index.json').read_text(encoding='utf8'))
     by_grade={int(g):{t['id'] for t in ts} for g,ts in catalog.items()}
-    expected={v['source_word']: (int(k),v) for k,v in mapping.items()}
+    # V61: accept both the original B56 filenames and corrected, accent-safe
+    # filenames. Resolve by the explicit source number and topic metadata,
+    # never by guessing the topic from an imperfect filename slug.
+    expected={}
+    for k,v in mapping.items():
+        for source in (v['source_word'],v.get('source_word_legacy')):
+            if source:
+                if source in expected and expected[source][0]!=int(k):
+                    raise ValueError('Ambiguous mapped Word filename: '+source)
+                expected[source]=(int(k),v)
     existing=get_existing_signatures()
     inside=set()
     outdir.mkdir(parents=True,exist_ok=True)
@@ -132,11 +141,16 @@ def export(source,outdir,sqlite_path):
     per_topic={}
     with zipfile.ZipFile(source) as z:
         all_docs=[n for n in z.namelist() if n.endswith('.docx')]
-        missing=set(expected)-set(all_docs)
-        if missing:raise ValueError('Missing mapped source Word files: '+str(sorted(missing)[:3]))
+        missing=[k for k,v in mapping.items() if not any(
+            name in all_docs for name in (v['source_word'],v.get('source_word_legacy')) if name)]
+        if missing:raise ValueError('Missing mapped source Word files: '+str(missing[:3]))
+        if len(all_docs)!=len(mapping):raise ValueError('Expected exactly one source Word per topic')
+        used_numbers=set()
         for number,path in enumerate(all_docs,1):
             if path not in expected:raise ValueError('Unexpected Word filename: '+path)
             source_no, info=expected[path]
+            if source_no in used_numbers:raise ValueError('Duplicate source topic: '+str(source_no))
+            used_numbers.add(source_no)
             grade=int(info['grade']);topic=str(info['topic'])
             # Some playable practice topics (chia_du, chia_het, phuong_trinh_bac_hai)
             # are in the imported B56 mapping but not the AI knowledge index.
@@ -153,7 +167,7 @@ def export(source,outdir,sqlite_path):
                          'topic_name':info['name'],'question_type':kind,'difficulty':'medium',
                          'question':stem,'answer':answer,'solution':item['solution'],
                          'options':opts if kind=='multiple_choice' else [],
-                         'source_word':path,'source_question_number':item['number'],
+                         'source_word':info['source_word'],'source_question_number':item['number'],
                          'quality_status':'candidate_unverified'}
                     hashvalue=sha_prompt(stem) if stem else ''
                     status='eligible_candidate'
@@ -173,14 +187,14 @@ def export(source,outdir,sqlite_path):
                             VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)''',(
                             row['id'],grade,topic,'medium',kind,stem,answer,item['solution'],
                             json.dumps(row['options'],ensure_ascii=False), '150_CHU_DE_WORD',
-                            'candidate_unverified',path,item['number'],hashvalue))
+                            'candidate_unverified',info['source_word'],item['number'],hashvalue))
             per_topic[str(source_no)]={'grade':grade,'topic':topic,'name':info['name'],**doc_stats}
             if number%25==0:print('Imported',number,'/',len(all_docs),'raw',stats['question_markers'],'active',stats['eligible_candidate'],flush=True)
     db.commit()
     ok=db.execute('PRAGMA quick_check').fetchone()[0]
     if ok!='ok':raise RuntimeError('SQLite check:'+ok)
     db.close()
-    report={'word_files':len(expected),'stats':dict(stats),'per_topic':per_topic,'eligibility':'structural_only_not_independent_math_certification',
+    report={'word_files':len(mapping),'stats':dict(stats),'per_topic':per_topic,'eligibility':'structural_only_not_independent_math_certification',
         'source':str(source),'db_sha256':hashlib.sha256(sqlite_path.read_bytes()).hexdigest(),'db_bytes':sqlite_path.stat().st_size}
     (STORAGE/'v60_word_manifest.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8')
     return report

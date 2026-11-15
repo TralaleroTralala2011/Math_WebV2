@@ -1287,6 +1287,9 @@
   },
   "eligibility": "structural_only_not_independent_math_certification",
   "source": "/mnt/data/150_CHU_DE_WORD.zip",
-  "db_sha256": "5149e60964d61968a0ace7c6756f3d86584cb79d1b6f95470468e122a4c08d07",
-  "db_bytes": 12615680
+  "db_sha256": "3e9087cd898e5cc544a1cf4ba3e04bc1fbe01c17bde75a9c9a6d3a3784b0cecd",
+  "db_bytes": 12648448,
+  "corrected_word_source": "question_bank_v254_source/150_CHU_DE_WORD_CORRECTED_V61.zip",
+  "original_word_source_preserved": "question_bank_v254_source/150_CHU_DE_WORD_SOURCE_V60.zip",
+  "filename_correction_note": "Only source filenames and linked provenance were normalized; original Word bytes, questions, answers, solutions, topic IDs preserved."
 }

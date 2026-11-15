@@ -1,0 +1,1541 @@
+{
+  "version": "V61",
+  "word_count": 150,
+  "renamed_count": 52,
+  "original_archive_preserved_sha256": "1acfc64f91c51955a273dd2c01beb76784a13c7ab0667a24e0a30be6fe03aa9a",
+  "corrected_archive_sha256": "d576bbda706ddce49915e34757eb5d3581d59a74b3c30226335fbfba6a2af2ce",
+  "jsonl_files": 150,
+  "jsonl_rows": 95544,
+  "source_word_references_updated": 95544,
+  "sqlite_candidate_rows": 16274,
+  "sqlite_sha256": "3e9087cd898e5cc544a1cf4ba3e04bc1fbe01c17bde75a9c9a6d3a3784b0cecd",
+  "topic_alias_count_by_grade": {
+    "10": 290,
+    "11": 270,
+    "12": 280
+  },
+  "ambiguous_topic_aliases": {
+    "10": {},
+    "11": {
+      "day_so": [
+        "day_so",
+        "day_so_tong_quat"
+      ],
+      "dãy số": [
+        "day_so",
+        "day_so_tong_quat"
+      ],
+      "phương trình lượng giác": [
+        "phuong_trinh_luong_giac",
+        "phuong_trinh_luong_giac_day_du"
+      ],
+      "phuong_trinh_luong_giac": [
+        "phuong_trinh_luong_giac",
+        "phuong_trinh_luong_giac_day_du"
+      ]
+    },
+    "12": {}
+  },
+  "filename_details": [
+    {
+      "number": 1,
+      "grade": 10,
+      "topic": "bai_toan_thuc_te_10",
+      "topic_name": "Bài toán thực tế Toán 10",
+      "old_filename": "150_CHU_DE_WORD/001_Toan_10_Bai_toan_thuc_te_Toan_10.docx",
+      "corrected_filename": "150_CHU_DE_WORD/001_Toan_10_Bai_toan_thuc_te_Toan_10.docx",
+      "sha256": "f0c1812399cea7c54c00729af3c1be0a161e09d0d34434ef3428b3bc987446d1",
+      "filename_changed": false
+    },
+    {
+      "number": 2,
+      "grade": 10,
+      "topic": "g10_geom_coordinate_circle_line",
+      "topic_name": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+      "old_filename": "150_CHU_DE_WORD/002_Toan_10_Bai_toan_tong_hop_uong_thang_va_uong_tron_toa_o.docx",
+      "corrected_filename": "150_CHU_DE_WORD/002_Toan_10_Bai_toan_tong_hop_duong_thang_va_duong_tron_toa_do.docx",
+      "sha256": "f1f865dc38cd88fc8ea369eb6a360fb25a12b3f95193da6fcf514252f62efef4",
+      "filename_changed": true
+    },
+    {
+      "number": 3,
+      "grade": 10,
+      "topic": "bat_phuong_trinh",
+      "topic_name": "Bất phương trình và hệ bất phương trình",
+      "old_filename": "150_CHU_DE_WORD/003_Toan_10_Bat_phuong_trinh_va_he_bat_phuong_trinh.docx",
+      "corrected_filename": "150_CHU_DE_WORD/003_Toan_10_Bat_phuong_trinh_va_he_bat_phuong_trinh.docx",
+      "sha256": "3229b933bdf8957f07a7140cfd4d2cb5f6c820968511e46496a06b1c75ab8454",
+      "filename_changed": false
+    },
+    {
+      "number": 4,
+      "grade": 10,
+      "topic": "g10_geom_triangle_inequalities",
+      "topic_name": "Bất đẳng thức và cực trị trong tam giác",
+      "old_filename": "150_CHU_DE_WORD/004_Toan_10_Bat_ang_thuc_va_cuc_tri_trong_tam_giac.docx",
+      "corrected_filename": "150_CHU_DE_WORD/004_Toan_10_Bat_dang_thuc_va_cuc_tri_trong_tam_giac.docx",
+      "sha256": "cfbc861c120a6be788adbf386d7021c493f5561f47c1dfa5e1310a7ff2fd0d4b",
+      "filename_changed": true
+    },
+    {
+      "number": 5,
+      "grade": 10,
+      "topic": "g10_advanced_inequalities",
+      "topic_name": "Bất đẳng thức đại số và cực trị nâng cao",
+      "old_filename": "150_CHU_DE_WORD/005_Toan_10_Bat_ang_thuc_ai_so_va_cuc_tri_nang_cao.docx",
+      "corrected_filename": "150_CHU_DE_WORD/005_Toan_10_Bat_dang_thuc_dai_so_va_cuc_tri_nang_cao.docx",
+      "sha256": "154e8c4982b684569ec7892da4aa223c039d4bccdb0abaead39ab88dfc20f54e",
+      "filename_changed": true
+    },
+    {
+      "number": 6,
+      "grade": 10,
+      "topic": "g10_geom_vector_proofs",
+      "topic_name": "Chứng minh hình học bằng vectơ",
+      "old_filename": "150_CHU_DE_WORD/006_Toan_10_Chung_minh_hinh_hoc_bang_vecto.docx",
+      "corrected_filename": "150_CHU_DE_WORD/006_Toan_10_Chung_minh_hinh_hoc_bang_vecto.docx",
+      "sha256": "fd9abfc88c60e76198ad6b69f1fd81f79862895fe88cb6cbcd5e8adbfef7964d",
+      "filename_changed": false
+    },
+    {
+      "number": 7,
+      "grade": 10,
+      "topic": "chung_minh_hinh_hoc_10",
+      "topic_name": "Chứng minh hình học và bài toán tổng hợp",
+      "old_filename": "150_CHU_DE_WORD/007_Toan_10_Chung_minh_hinh_hoc_va_bai_toan_tong_hop.docx",
+      "corrected_filename": "150_CHU_DE_WORD/007_Toan_10_Chung_minh_hinh_hoc_va_bai_toan_tong_hop.docx",
+      "sha256": "48f9cd7aee3fd544ae1654215323445925f554afe4978505a11ed3f796df5adc",
+      "filename_changed": false
+    },
+    {
+      "number": 8,
+      "grade": 10,
+      "topic": "g10_geom_triangle_congruence",
+      "topic_name": "Các trường hợp bằng nhau của tam giác",
+      "old_filename": "150_CHU_DE_WORD/008_Toan_10_Cac_truong_hop_bang_nhau_cua_tam_giac.docx",
+      "corrected_filename": "150_CHU_DE_WORD/008_Toan_10_Cac_truong_hop_bang_nhau_cua_tam_giac.docx",
+      "sha256": "488d25d38406ac37bc269a3033ab67c431c46e76ac53409c7956ea6a02c005fe",
+      "filename_changed": false
+    },
+    {
+      "number": 9,
+      "grade": 10,
+      "topic": "g10_geom_circle_chords_arcs",
+      "topic_name": "Dây cung, cung và khoảng cách đến tâm",
+      "old_filename": "150_CHU_DE_WORD/009_Toan_10_Day_cung_cung_va_khoang_cach_en_tam.docx",
+      "corrected_filename": "150_CHU_DE_WORD/009_Toan_10_Day_cung_cung_va_khoang_cach_den_tam.docx",
+      "sha256": "5e7a84b5e75dfe2e8bdec6f8e89a94699bd83b04ce01b6249173a163b7bab3fa",
+      "filename_changed": true
+    },
+    {
+      "number": 10,
+      "grade": 10,
+      "topic": "g10_geom_line_intersections",
+      "topic_name": "Giao điểm và vị trí tương đối của hai đường thẳng",
+      "old_filename": "150_CHU_DE_WORD/010_Toan_10_Giao_iem_va_vi_tri_tuong_oi_cua_hai_uong_thang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/010_Toan_10_Giao_diem_va_vi_tri_tuong_doi_cua_hai_duong_thang.docx",
+      "sha256": "626a4b0f96eaa31a13f82f5a8b02072cc52deca7c4eb03e73940f7bd30ba8e84",
+      "filename_changed": true
+    },
+    {
+      "number": 11,
+      "grade": 10,
+      "topic": "g10_geom_circle_angles",
+      "topic_name": "Góc nội tiếp và góc ở tâm nâng cao",
+      "old_filename": "150_CHU_DE_WORD/011_Toan_10_Goc_noi_tiep_va_goc_o_tam_nang_cao.docx",
+      "corrected_filename": "150_CHU_DE_WORD/011_Toan_10_Goc_noi_tiep_va_goc_o_tam_nang_cao.docx",
+      "sha256": "ad47d7a3850bba8c43703861cbeeb3eed11ff4f282079d1548d75d6a0c71d444",
+      "filename_changed": false
+    },
+    {
+      "number": 12,
+      "grade": 10,
+      "topic": "g10_geom_angles_parallel",
+      "topic_name": "Góc tạo bởi hai đường thẳng và đường cắt",
+      "old_filename": "150_CHU_DE_WORD/012_Toan_10_Goc_tao_boi_hai_uong_thang_va_uong_cat.docx",
+      "corrected_filename": "150_CHU_DE_WORD/012_Toan_10_Goc_tao_boi_hai_duong_thang_va_duong_cat.docx",
+      "sha256": "e8f820ac2c3e5e2a789c6284aa8c9e53933964ed21e8337039c8378ad07b71ac",
+      "filename_changed": true
+    },
+    {
+      "number": 13,
+      "grade": 10,
+      "topic": "hoan_vi_chinh_hop_to_hop",
+      "topic_name": "Hoán vị, chỉnh hợp, tổ hợp",
+      "old_filename": "150_CHU_DE_WORD/013_Toan_10_Hoan_vi_chinh_hop_to_hop.docx",
+      "corrected_filename": "150_CHU_DE_WORD/013_Toan_10_Hoan_vi_chinh_hop_to_hop.docx",
+      "sha256": "f8eb8da216a2a90c4006cfcfdb47227f8c250d2ea481ff14836456c449df84f3",
+      "filename_changed": false
+    },
+    {
+      "number": 14,
+      "grade": 10,
+      "topic": "ham_so",
+      "topic_name": "Hàm số",
+      "old_filename": "150_CHU_DE_WORD/014_Toan_10_Ham_so.docx",
+      "corrected_filename": "150_CHU_DE_WORD/014_Toan_10_Ham_so.docx",
+      "sha256": "cf263b364f7c11b67e8370f805807e0eb0a7af33cf013a717246abe8d44581b2",
+      "filename_changed": false
+    },
+    {
+      "number": 15,
+      "grade": 10,
+      "topic": "ham_so_bac_hai",
+      "topic_name": "Hàm số bậc hai và parabol",
+      "old_filename": "150_CHU_DE_WORD/015_Toan_10_Ham_so_bac_hai_va_parabol.docx",
+      "corrected_filename": "150_CHU_DE_WORD/015_Toan_10_Ham_so_bac_hai_va_parabol.docx",
+      "sha256": "672623fc07e0bfab0334d6356e12228332a74c51231ed92296bee571dab59cc3",
+      "filename_changed": false
+    },
+    {
+      "number": 16,
+      "grade": 10,
+      "topic": "ham_so_bac_nhat",
+      "topic_name": "Hàm số bậc nhất",
+      "old_filename": "150_CHU_DE_WORD/016_Toan_10_Ham_so_bac_nhat.docx",
+      "corrected_filename": "150_CHU_DE_WORD/016_Toan_10_Ham_so_bac_nhat.docx",
+      "sha256": "f51d4617e706fe583dc0652184db2bc0fa2674f063b1020d637a2347e3c8bb8a",
+      "filename_changed": false
+    },
+    {
+      "number": 17,
+      "grade": 10,
+      "topic": "hinh_hoc_co_ban_10",
+      "topic_name": "Hình học cơ bản: góc, cạnh và diện tích",
+      "old_filename": "150_CHU_DE_WORD/017_Toan_10_Hinh_hoc_co_ban_goc_canh_va_dien_tich.docx",
+      "corrected_filename": "150_CHU_DE_WORD/017_Toan_10_Hinh_hoc_co_ban_goc_canh_va_dien_tich.docx",
+      "sha256": "747dbd51b06c8b7282d5719959aa75999b070b7dcb3721d60d5ee79e3f912ebc",
+      "filename_changed": false
+    },
+    {
+      "number": 18,
+      "grade": 10,
+      "topic": "hinh_hoc_10",
+      "topic_name": "Hình học phẳng",
+      "old_filename": "150_CHU_DE_WORD/018_Toan_10_Hinh_hoc_phang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/018_Toan_10_Hinh_hoc_phang.docx",
+      "sha256": "1f7be49caa22cdba796cefe73da11f4cf0d6df7cab78282a32c0fed6d3b1474b",
+      "filename_changed": false
+    },
+    {
+      "number": 19,
+      "grade": 10,
+      "topic": "he_bat_phuong_trinh",
+      "topic_name": "Hệ bất phương trình",
+      "old_filename": "150_CHU_DE_WORD/019_Toan_10_He_bat_phuong_trinh.docx",
+      "corrected_filename": "150_CHU_DE_WORD/019_Toan_10_He_bat_phuong_trinh.docx",
+      "sha256": "fa968b3c695d1d3bc457defe4bea137fc3fa5dbfc7068555b6f9fe137f5e5961",
+      "filename_changed": false
+    },
+    {
+      "number": 20,
+      "grade": 10,
+      "topic": "he_phuong_trinh",
+      "topic_name": "Hệ phương trình",
+      "old_filename": "150_CHU_DE_WORD/020_Toan_10_He_phuong_trinh.docx",
+      "corrected_filename": "150_CHU_DE_WORD/020_Toan_10_He_phuong_trinh.docx",
+      "sha256": "e4fc5de35c67341e5384b662fcdc793654cd08fcb2a6844aad92fa5ac652d9b0",
+      "filename_changed": false
+    },
+    {
+      "number": 21,
+      "grade": 10,
+      "topic": "g10_symmetric_systems",
+      "topic_name": "Hệ phương trình đối xứng và hoán vị",
+      "old_filename": "150_CHU_DE_WORD/021_Toan_10_He_phuong_trinh_oi_xung_va_hoan_vi.docx",
+      "corrected_filename": "150_CHU_DE_WORD/021_Toan_10_He_phuong_trinh_doi_xung_va_hoan_vi.docx",
+      "sha256": "9ccf0fcd3a0a2ae3369c7d301675e79fc16dd168fff5265fe1ab378f50f6cf83",
+      "filename_changed": true
+    },
+    {
+      "number": 22,
+      "grade": 10,
+      "topic": "he_thuc_luong",
+      "topic_name": "Hệ thức lượng trong tam giác",
+      "old_filename": "150_CHU_DE_WORD/022_Toan_10_He_thuc_luong_trong_tam_giac.docx",
+      "corrected_filename": "150_CHU_DE_WORD/022_Toan_10_He_thuc_luong_trong_tam_giac.docx",
+      "sha256": "9a4439009a6f74f549ac536de5f6db285cea82af71b54ff27519bd853aaf3e13",
+      "filename_changed": false
+    },
+    {
+      "number": 23,
+      "grade": 10,
+      "topic": "menh_de",
+      "topic_name": "Mệnh đề",
+      "old_filename": "150_CHU_DE_WORD/023_Toan_10_Menh_e.docx",
+      "corrected_filename": "150_CHU_DE_WORD/023_Toan_10_Menh_de.docx",
+      "sha256": "e3ef0f0f8878b6c9b61bfaacee47825dbaac7ff1e6204d1cc420f8b03648c0bd",
+      "filename_changed": true
+    },
+    {
+      "number": 24,
+      "grade": 10,
+      "topic": "menh_de_tap_hop",
+      "topic_name": "Mệnh đề và tập hợp",
+      "old_filename": "150_CHU_DE_WORD/024_Toan_10_Menh_e_va_tap_hop.docx",
+      "corrected_filename": "150_CHU_DE_WORD/024_Toan_10_Menh_de_va_tap_hop.docx",
+      "sha256": "5614194de18b405e802025f933a03333a184c125b1aa8cab42e2f909f8c0056f",
+      "filename_changed": true
+    },
+    {
+      "number": 25,
+      "grade": 10,
+      "topic": "nhi_thuc_newton",
+      "topic_name": "Nhị thức Newton",
+      "old_filename": "150_CHU_DE_WORD/025_Toan_10_Nhi_thuc_Newton.docx",
+      "corrected_filename": "150_CHU_DE_WORD/025_Toan_10_Nhi_thuc_Newton.docx",
+      "sha256": "60309ebc93b2b1d4da720a2c900fb8da593aec91ed71361d5d851e9e9b274e33",
+      "filename_changed": false
+    },
+    {
+      "number": 26,
+      "grade": 10,
+      "topic": "phuong_trinh",
+      "topic_name": "Phương trình",
+      "old_filename": "150_CHU_DE_WORD/026_Toan_10_Phuong_trinh.docx",
+      "corrected_filename": "150_CHU_DE_WORD/026_Toan_10_Phuong_trinh.docx",
+      "sha256": "601299188662ca0382c889392ccad3bf86f81dcae06f65653104c7ee7140698a",
+      "filename_changed": false
+    },
+    {
+      "number": 27,
+      "grade": 10,
+      "topic": "g10_radical_equations_advanced",
+      "topic_name": "Phương trình chứa căn thức nâng cao",
+      "old_filename": "150_CHU_DE_WORD/027_Toan_10_Phuong_trinh_chua_can_thuc_nang_cao.docx",
+      "corrected_filename": "150_CHU_DE_WORD/027_Toan_10_Phuong_trinh_chua_can_thuc_nang_cao.docx",
+      "sha256": "253250c027ced9b6888c00798749c23e1b77dd17adf4edd0a0f6a82b0411ec8d",
+      "filename_changed": false
+    },
+    {
+      "number": 28,
+      "grade": 10,
+      "topic": "phuong_trinh_he",
+      "topic_name": "Phương trình và hệ phương trình",
+      "old_filename": "150_CHU_DE_WORD/028_Toan_10_Phuong_trinh_va_he_phuong_trinh.docx",
+      "corrected_filename": "150_CHU_DE_WORD/028_Toan_10_Phuong_trinh_va_he_phuong_trinh.docx",
+      "sha256": "c16b8a36b75d73e04f8b3b5359e844837bb7bb52ebe0797e7df88925d58bdf6b",
+      "filename_changed": false
+    },
+    {
+      "number": 29,
+      "grade": 10,
+      "topic": "quy_tac_dem",
+      "topic_name": "Quy tắc đếm",
+      "old_filename": "150_CHU_DE_WORD/029_Toan_10_Quy_tac_em.docx",
+      "corrected_filename": "150_CHU_DE_WORD/029_Toan_10_Quy_tac_dem.docx",
+      "sha256": "2dc3342db3a0339c0f2a3be6253b4fe6f4cef66e97912ec47ad34b657aacb608",
+      "filename_changed": true
+    },
+    {
+      "number": 30,
+      "grade": 10,
+      "topic": "g10_geom_locus",
+      "topic_name": "Quỹ tích điểm trong mặt phẳng",
+      "old_filename": "150_CHU_DE_WORD/030_Toan_10_Quy_tich_iem_trong_mat_phang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/030_Toan_10_Quy_tich_diem_trong_mat_phang.docx",
+      "sha256": "458daa09193a741311b00537a88cc33ccb6416bc0e69654c156f381d422d8ff7",
+      "filename_changed": true
+    },
+    {
+      "number": 31,
+      "grade": 10,
+      "topic": "tam_giac_tu_giac_10",
+      "topic_name": "Tam giác và tứ giác cơ bản",
+      "old_filename": "150_CHU_DE_WORD/031_Toan_10_Tam_giac_va_tu_giac_co_ban.docx",
+      "corrected_filename": "150_CHU_DE_WORD/031_Toan_10_Tam_giac_va_tu_giac_co_ban.docx",
+      "sha256": "49d9bb259d602e788575852aff94b805d328de040d5af13fe8df0a0c4e7855d2",
+      "filename_changed": false
+    },
+    {
+      "number": 32,
+      "grade": 10,
+      "topic": "thong_ke",
+      "topic_name": "Thống kê",
+      "old_filename": "150_CHU_DE_WORD/032_Toan_10_Thong_ke.docx",
+      "corrected_filename": "150_CHU_DE_WORD/032_Toan_10_Thong_ke.docx",
+      "sha256": "1fc4877c0accc914430b9922883c476c55a0bae4a337a05c925dde4b4d1de884",
+      "filename_changed": false
+    },
+    {
+      "number": 33,
+      "grade": 10,
+      "topic": "g10_geom_circle_tangent_chord",
+      "topic_name": "Tiếp tuyến và dây cung của đường tròn",
+      "old_filename": "150_CHU_DE_WORD/033_Toan_10_Tiep_tuyen_va_day_cung_cua_uong_tron.docx",
+      "corrected_filename": "150_CHU_DE_WORD/033_Toan_10_Tiep_tuyen_va_day_cung_cua_duong_tron.docx",
+      "sha256": "63e900c1cde620345bc03e17de191dad20c1d30692def4b6b0835c082af24c8e",
+      "filename_changed": true
+    },
+    {
+      "number": 34,
+      "grade": 10,
+      "topic": "g10_geom_coordinate_distance_midpoint",
+      "topic_name": "Trung điểm và khoảng cách trong tọa độ phẳng",
+      "old_filename": "150_CHU_DE_WORD/034_Toan_10_Trung_iem_va_khoang_cach_trong_toa_o_phang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/034_Toan_10_Trung_diem_va_khoang_cach_trong_toa_do_phang.docx",
+      "sha256": "910271fed2db6d520ba5bd7a9c2c4a9c66d2d37dda115cc9c1c91717f86c1333",
+      "filename_changed": true
+    },
+    {
+      "number": 35,
+      "grade": 10,
+      "topic": "g10_geom_quadrilaterals_properties",
+      "topic_name": "Tính chất hình bình hành và hình thoi",
+      "old_filename": "150_CHU_DE_WORD/035_Toan_10_Tinh_chat_hinh_binh_hanh_va_hinh_thoi.docx",
+      "corrected_filename": "150_CHU_DE_WORD/035_Toan_10_Tinh_chat_hinh_binh_hanh_va_hinh_thoi.docx",
+      "sha256": "15cad9790db5361bedfa240551897c1440503f3912f8e0312380a856dcfdff82",
+      "filename_changed": false
+    },
+    {
+      "number": 36,
+      "grade": 10,
+      "topic": "tap_hop",
+      "topic_name": "Tập hợp và các phép toán",
+      "old_filename": "150_CHU_DE_WORD/036_Toan_10_Tap_hop_va_cac_phep_toan.docx",
+      "corrected_filename": "150_CHU_DE_WORD/036_Toan_10_Tap_hop_va_cac_phep_toan.docx",
+      "sha256": "f42a4f5a969e6a916d10a0866c2ee306dd27a6e5133cd57bc3fee23f29e43e1b",
+      "filename_changed": false
+    },
+    {
+      "number": 37,
+      "grade": 10,
+      "topic": "g10_geom_triangle_area_ratio",
+      "topic_name": "Tỉ số diện tích tam giác",
+      "old_filename": "150_CHU_DE_WORD/037_Toan_10_Ti_so_dien_tich_tam_giac.docx",
+      "corrected_filename": "150_CHU_DE_WORD/037_Toan_10_Ti_so_dien_tich_tam_giac.docx",
+      "sha256": "7ec59c86821ab5aa2eebf90565b9bbbd26f5828fc2cd8afd47ab1a0baa6d3959",
+      "filename_changed": false
+    },
+    {
+      "number": 38,
+      "grade": 10,
+      "topic": "toa_do_phang",
+      "topic_name": "Tọa độ trong mặt phẳng",
+      "old_filename": "150_CHU_DE_WORD/038_Toan_10_Toa_o_trong_mat_phang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/038_Toan_10_Toa_do_trong_mat_phang.docx",
+      "sha256": "7c1ee9581225f219d8aa7abd0b62a330eae809dc40106c607f42c1f32ff073f6",
+      "filename_changed": true
+    },
+    {
+      "number": 39,
+      "grade": 10,
+      "topic": "toa_do_hinh_hoc_10",
+      "topic_name": "Tọa độ và đường thẳng trong mặt phẳng",
+      "old_filename": "150_CHU_DE_WORD/039_Toan_10_Toa_o_va_uong_thang_trong_mat_phang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/039_Toan_10_Toa_do_va_duong_thang_trong_mat_phang.docx",
+      "sha256": "f8ad910a9173b72e2930346a2ddb9364a13a56d86d642b1c9d5a35c08f6c542d",
+      "filename_changed": true
+    },
+    {
+      "number": 40,
+      "grade": 10,
+      "topic": "g10_combinatorics_olympiad",
+      "topic_name": "Tổ hợp và nguyên lý Dirichlet nâng cao",
+      "old_filename": "150_CHU_DE_WORD/040_Toan_10_To_hop_va_nguyen_ly_Dirichlet_nang_cao.docx",
+      "corrected_filename": "150_CHU_DE_WORD/040_Toan_10_To_hop_va_nguyen_ly_Dirichlet_nang_cao.docx",
+      "sha256": "608026eb6fff247f5cabbd4c0ba72243b35a529e00c36044531b896b750064dd",
+      "filename_changed": false
+    },
+    {
+      "number": 41,
+      "grade": 10,
+      "topic": "vector",
+      "topic_name": "Vectơ",
+      "old_filename": "150_CHU_DE_WORD/041_Toan_10_Vecto.docx",
+      "corrected_filename": "150_CHU_DE_WORD/041_Toan_10_Vecto.docx",
+      "sha256": "b9678210fb38d8773500dced6b2b986e9287be3b72757800d42e8682158ba494",
+      "filename_changed": false
+    },
+    {
+      "number": 42,
+      "grade": 10,
+      "topic": "xac_suat",
+      "topic_name": "Xác suất",
+      "old_filename": "150_CHU_DE_WORD/042_Toan_10_Xac_suat.docx",
+      "corrected_filename": "150_CHU_DE_WORD/042_Toan_10_Xac_suat.docx",
+      "sha256": "df9f1f217e863bfe82ca1a3bb68185dc1ea3d60afc95321fabc1a58e6f66bf76",
+      "filename_changed": false
+    },
+    {
+      "number": 43,
+      "grade": 10,
+      "topic": "chia_du",
+      "topic_name": "Chia dư",
+      "old_filename": "150_CHU_DE_WORD/043_Toan_10_Chia_Du.docx",
+      "corrected_filename": "150_CHU_DE_WORD/043_Toan_10_Chia_du.docx",
+      "sha256": "90bcad0ee74ce933243df65c817bf2e2762b15397994d6c316dd6ae9bcefe977",
+      "filename_changed": true
+    },
+    {
+      "number": 44,
+      "grade": 10,
+      "topic": "chia_het",
+      "topic_name": "Chia hết",
+      "old_filename": "150_CHU_DE_WORD/044_Toan_10_Chia_Het.docx",
+      "corrected_filename": "150_CHU_DE_WORD/044_Toan_10_Chia_het.docx",
+      "sha256": "4e6821a23df815b439784faaf866134f0f37a4a3aa4fac44a3bf360d1934268c",
+      "filename_changed": true
+    },
+    {
+      "number": 45,
+      "grade": 10,
+      "topic": "phuong_trinh_bac_hai",
+      "topic_name": "Phương trình bậc hai",
+      "old_filename": "150_CHU_DE_WORD/045_Toan_10_Phuong_Trinh_Bac_Hai.docx",
+      "corrected_filename": "150_CHU_DE_WORD/045_Toan_10_Phuong_trinh_bac_hai.docx",
+      "sha256": "199b2f327ba0bc4ead037d8a138adbae63b98e957224607c21ba7011713d9afe",
+      "filename_changed": true
+    },
+    {
+      "number": 46,
+      "grade": 10,
+      "topic": "duong_thang",
+      "topic_name": "Đường thẳng",
+      "old_filename": "150_CHU_DE_WORD/046_Toan_10_uong_thang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/046_Toan_10_Duong_thang.docx",
+      "sha256": "900a7f97e8e5505b5c2cf64aca051d694ec19f106b542216b105a4484c40ceb4",
+      "filename_changed": true
+    },
+    {
+      "number": 47,
+      "grade": 10,
+      "topic": "g10_geom_special_lines",
+      "topic_name": "Đường trung tuyến, phân giác và đường cao",
+      "old_filename": "150_CHU_DE_WORD/047_Toan_10_uong_trung_tuyen_phan_giac_va_uong_cao.docx",
+      "corrected_filename": "150_CHU_DE_WORD/047_Toan_10_Duong_trung_tuyen_phan_giac_va_duong_cao.docx",
+      "sha256": "fdda28742e03b97ebf4d1afd2c5cbff2c7ad11da1bc7a2a0d508a5a91b1e9b97",
+      "filename_changed": true
+    },
+    {
+      "number": 48,
+      "grade": 10,
+      "topic": "duong_tron",
+      "topic_name": "Đường tròn",
+      "old_filename": "150_CHU_DE_WORD/048_Toan_10_uong_tron.docx",
+      "corrected_filename": "150_CHU_DE_WORD/048_Toan_10_Duong_tron.docx",
+      "sha256": "07c5e2b0da03289df6d5573e9528607b3e5c19852bbe359095f2f29c50941736",
+      "filename_changed": true
+    },
+    {
+      "number": 49,
+      "grade": 10,
+      "topic": "duong_tron_co_ban_10",
+      "topic_name": "Đường tròn và các góc cơ bản",
+      "old_filename": "150_CHU_DE_WORD/049_Toan_10_uong_tron_va_cac_goc_co_ban.docx",
+      "corrected_filename": "150_CHU_DE_WORD/049_Toan_10_Duong_tron_va_cac_goc_co_ban.docx",
+      "sha256": "2dd4ea1d70935efd90368917d8866ef52626b6d7f1c63f33efcd21697641f7b4",
+      "filename_changed": true
+    },
+    {
+      "number": 50,
+      "grade": 10,
+      "topic": "g10_geom_thales_similarity",
+      "topic_name": "Định lý Thales và tam giác đồng dạng",
+      "old_filename": "150_CHU_DE_WORD/050_Toan_10_inh_ly_Thales_va_tam_giac_ong_dang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/050_Toan_10_Dinh_ly_Thales_va_tam_giac_dong_dang.docx",
+      "sha256": "41db7c1231e833dce3d5cf42e9cb0a4d80c7c3ac7cde531df2ac96f43717030c",
+      "filename_changed": true
+    },
+    {
+      "number": 51,
+      "grade": 11,
+      "topic": "bien_co_doc_lap_11",
+      "topic_name": "Biến cố độc lập và xác suất có điều kiện",
+      "old_filename": "150_CHU_DE_WORD/051_Toan_11_Bien_co_oc_lap_va_xac_suat_co_ieu_kien.docx",
+      "corrected_filename": "150_CHU_DE_WORD/051_Toan_11_Bien_co_doc_lap_va_xac_suat_co_dieu_kien.docx",
+      "sha256": "a15552b8b1384bd46936ae89a2fb09a8133722b1c90ece259ba39845df61d2d8",
+      "filename_changed": true
+    },
+    {
+      "number": 52,
+      "grade": 11,
+      "topic": "bai_toan_thuc_te_11",
+      "topic_name": "Bài toán thực tế Toán 11",
+      "old_filename": "150_CHU_DE_WORD/052_Toan_11_Bai_toan_thuc_te_Toan_11.docx",
+      "corrected_filename": "150_CHU_DE_WORD/052_Toan_11_Bai_toan_thuc_te_Toan_11.docx",
+      "sha256": "28485afd7447fbd2d7df2f87c03540f3df86c3a67dadf04a499663982467de0c",
+      "filename_changed": false
+    },
+    {
+      "number": 53,
+      "grade": 11,
+      "topic": "bai_toan_thuc_te_tong_hop_11",
+      "topic_name": "Bài toán thực tế tổng hợp Toán 11",
+      "old_filename": "150_CHU_DE_WORD/053_Toan_11_Bai_toan_thuc_te_tong_hop_Toan_11.docx",
+      "corrected_filename": "150_CHU_DE_WORD/053_Toan_11_Bai_toan_thuc_te_tong_hop_Toan_11.docx",
+      "sha256": "d542f1647c974e48b5f9473968c6107a0e8305e32991c5a709fe94e966fcb67d",
+      "filename_changed": false
+    },
+    {
+      "number": 54,
+      "grade": 11,
+      "topic": "g11_geom_space_proof",
+      "topic_name": "Chứng minh tổng hợp song song và vuông góc",
+      "old_filename": "150_CHU_DE_WORD/054_Toan_11_Chung_minh_tong_hop_song_song_va_vuong_goc.docx",
+      "corrected_filename": "150_CHU_DE_WORD/054_Toan_11_Chung_minh_tong_hop_song_song_va_vuong_goc.docx",
+      "sha256": "f010e160fdeff4d0433ea8df1bf54d2b7dd13abf61d5017d9ff3da9f6a94f8ba",
+      "filename_changed": false
+    },
+    {
+      "number": 55,
+      "grade": 11,
+      "topic": "cong_thuc_luong_giac",
+      "topic_name": "Công thức lượng giác",
+      "old_filename": "150_CHU_DE_WORD/055_Toan_11_Cong_thuc_luong_giac.docx",
+      "corrected_filename": "150_CHU_DE_WORD/055_Toan_11_Cong_thuc_luong_giac.docx",
+      "sha256": "fb59ea8c289d88bf39760187c2a2e127544d606eb5223e3cde92ab97204392fe",
+      "filename_changed": false
+    },
+    {
+      "number": 56,
+      "grade": 11,
+      "topic": "cap_so_cong",
+      "topic_name": "Cấp số cộng",
+      "old_filename": "150_CHU_DE_WORD/056_Toan_11_Cap_so_cong.docx",
+      "corrected_filename": "150_CHU_DE_WORD/056_Toan_11_Cap_so_cong.docx",
+      "sha256": "525837e434d342820a6e36e6b8f0d7833c454b454a11dd1163c6ef877a950fde",
+      "filename_changed": false
+    },
+    {
+      "number": 57,
+      "grade": 11,
+      "topic": "cap_so_nhan",
+      "topic_name": "Cấp số nhân",
+      "old_filename": "150_CHU_DE_WORD/057_Toan_11_Cap_so_nhan.docx",
+      "corrected_filename": "150_CHU_DE_WORD/057_Toan_11_Cap_so_nhan.docx",
+      "sha256": "818c60f876e947c5ccdbc97d77f76df2bda9f40e3bc1b80fcfd5749baed8a129",
+      "filename_changed": false
+    },
+    {
+      "number": 58,
+      "grade": 11,
+      "topic": "day_so",
+      "topic_name": "Dãy số",
+      "old_filename": "150_CHU_DE_WORD/058_Toan_11_Day_so.docx",
+      "corrected_filename": "150_CHU_DE_WORD/058_Toan_11_Day_so.docx",
+      "sha256": "67e8855c2fe1c0d1534c7864199f7a853f9afff9d260476eb2d22b64ca36c5b9",
+      "filename_changed": false
+    },
+    {
+      "number": 59,
+      "grade": 11,
+      "topic": "day_so_tong_quat",
+      "topic_name": "Dãy số",
+      "old_filename": "150_CHU_DE_WORD/059_Toan_11_Day_so.docx",
+      "corrected_filename": "150_CHU_DE_WORD/059_Toan_11_Day_so.docx",
+      "sha256": "aea2e27cbebf7e341ae35635599ee281b358d10ac8222d06e99635cde2536c77",
+      "filename_changed": false
+    },
+    {
+      "number": 60,
+      "grade": 11,
+      "topic": "day_so_truy_hoi_11",
+      "topic_name": "Dãy số truy hồi",
+      "old_filename": "150_CHU_DE_WORD/060_Toan_11_Day_so_truy_hoi.docx",
+      "corrected_filename": "150_CHU_DE_WORD/060_Toan_11_Day_so_truy_hoi.docx",
+      "sha256": "4c7457b8d5d45fc886c4a5e4efc308f9d48ba701e3850f2a499c335e84899f95",
+      "filename_changed": false
+    },
+    {
+      "number": 61,
+      "grade": 11,
+      "topic": "g11_sequences_advanced",
+      "topic_name": "Dãy số truy hồi và bài toán cực trị",
+      "old_filename": "150_CHU_DE_WORD/061_Toan_11_Day_so_truy_hoi_va_bai_toan_cuc_tri.docx",
+      "corrected_filename": "150_CHU_DE_WORD/061_Toan_11_Day_so_truy_hoi_va_bai_toan_cuc_tri.docx",
+      "sha256": "246ea7ae8af4d71e19d10573802fb4e00e4219549fbb4441e0fa6d56070f10dc",
+      "filename_changed": false
+    },
+    {
+      "number": 62,
+      "grade": 11,
+      "topic": "g11_geom_section_construction",
+      "topic_name": "Dựng thiết diện của hình chóp và lăng trụ",
+      "old_filename": "150_CHU_DE_WORD/062_Toan_11_Dung_thiet_dien_cua_hinh_chop_va_lang_tru.docx",
+      "corrected_filename": "150_CHU_DE_WORD/062_Toan_11_Dung_thiet_dien_cua_hinh_chop_va_lang_tru.docx",
+      "sha256": "587677e4f6d4de34d957adcd915e160fc763b4b6bb294258bc8ebb35ced31cc0",
+      "filename_changed": false
+    },
+    {
+      "number": 63,
+      "grade": 11,
+      "topic": "gia_tri_luong_giac",
+      "topic_name": "Giá trị lượng giác",
+      "old_filename": "150_CHU_DE_WORD/063_Toan_11_Gia_tri_luong_giac.docx",
+      "corrected_filename": "150_CHU_DE_WORD/063_Toan_11_Gia_tri_luong_giac.docx",
+      "sha256": "e36a5c8526f68d76786a57a2bcbaaea64ecbe21b192e528c8b745d46c6a1d8be",
+      "filename_changed": false
+    },
+    {
+      "number": 64,
+      "grade": 11,
+      "topic": "gioi_han",
+      "topic_name": "Giới hạn",
+      "old_filename": "150_CHU_DE_WORD/064_Toan_11_Gioi_han.docx",
+      "corrected_filename": "150_CHU_DE_WORD/064_Toan_11_Gioi_han.docx",
+      "sha256": "c441e646a9ea189dcd098e5e69efde206fbc1e6d98aa3b22b1bcc4263c907c83",
+      "filename_changed": false
+    },
+    {
+      "number": 65,
+      "grade": 11,
+      "topic": "gioi_han_ham_so",
+      "topic_name": "Giới hạn hàm số",
+      "old_filename": "150_CHU_DE_WORD/065_Toan_11_Gioi_han_ham_so.docx",
+      "corrected_filename": "150_CHU_DE_WORD/065_Toan_11_Gioi_han_ham_so.docx",
+      "sha256": "3436490b028862cbd66c3e27f86b12954d029ad23cb0af4c83e7cd2015cc2665",
+      "filename_changed": false
+    },
+    {
+      "number": 66,
+      "grade": 11,
+      "topic": "g11_geom_dihedral_angles",
+      "topic_name": "Góc giữa đường thẳng và mặt phẳng",
+      "old_filename": "150_CHU_DE_WORD/066_Toan_11_Goc_giua_uong_thang_va_mat_phang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/066_Toan_11_Goc_giua_duong_thang_va_mat_phang.docx",
+      "sha256": "64339d24c094b7d643c3eb81bc8e3cb3c39d70b7c529a607704547cf48968df4",
+      "filename_changed": true
+    },
+    {
+      "number": 67,
+      "grade": 11,
+      "topic": "goc_khoang_cach_11",
+      "topic_name": "Góc và khoảng cách trong không gian",
+      "old_filename": "150_CHU_DE_WORD/067_Toan_11_Goc_va_khoang_cach_trong_khong_gian.docx",
+      "corrected_filename": "150_CHU_DE_WORD/067_Toan_11_Goc_va_khoang_cach_trong_khong_gian.docx",
+      "sha256": "9120d40b3bc77da177506afe4f6d366fc9acaea669ae0a8b6702ca37422a4517",
+      "filename_changed": false
+    },
+    {
+      "number": 68,
+      "grade": 11,
+      "topic": "g11_geom_parallel_planes",
+      "topic_name": "Hai mặt phẳng song song",
+      "old_filename": "150_CHU_DE_WORD/068_Toan_11_Hai_mat_phang_song_song.docx",
+      "corrected_filename": "150_CHU_DE_WORD/068_Toan_11_Hai_mat_phang_song_song.docx",
+      "sha256": "ece76d30a1643c3bffc7e3dd81915e5a7ceb87c63ab56ecc455205ad0776a684",
+      "filename_changed": false
+    },
+    {
+      "number": 69,
+      "grade": 11,
+      "topic": "ham_so_lien_tuc",
+      "topic_name": "Hàm số liên tục",
+      "old_filename": "150_CHU_DE_WORD/069_Toan_11_Ham_so_lien_tuc.docx",
+      "corrected_filename": "150_CHU_DE_WORD/069_Toan_11_Ham_so_lien_tuc.docx",
+      "sha256": "6d32916393a22b2060d0886cf28a4bc955f3e03d0b027c99efce7e153e6966ae",
+      "filename_changed": false
+    },
+    {
+      "number": 70,
+      "grade": 11,
+      "topic": "ham_so_luong_giac",
+      "topic_name": "Hàm số lượng giác",
+      "old_filename": "150_CHU_DE_WORD/070_Toan_11_Ham_so_luong_giac.docx",
+      "corrected_filename": "150_CHU_DE_WORD/070_Toan_11_Ham_so_luong_giac.docx",
+      "sha256": "99fe83fac49bedb035c9a24ec379aec69173dc0d14c992df6ebeea8c6b4aa771",
+      "filename_changed": false
+    },
+    {
+      "number": 71,
+      "grade": 11,
+      "topic": "g11_geom_transform_composition",
+      "topic_name": "Hợp thành các phép biến hình",
+      "old_filename": "150_CHU_DE_WORD/071_Toan_11_Hop_thanh_cac_phep_bien_hinh.docx",
+      "corrected_filename": "150_CHU_DE_WORD/071_Toan_11_Hop_thanh_cac_phep_bien_hinh.docx",
+      "sha256": "4bb9e7231af7242e9ec1312c16674d7c9403426f8510e24411f56c039ca9a3c4",
+      "filename_changed": false
+    },
+    {
+      "number": 72,
+      "grade": 11,
+      "topic": "g11_geom_skew_lines_distance",
+      "topic_name": "Khoảng cách giữa hai đường thẳng chéo nhau",
+      "old_filename": "150_CHU_DE_WORD/072_Toan_11_Khoang_cach_giua_hai_uong_thang_cheo_nhau.docx",
+      "corrected_filename": "150_CHU_DE_WORD/072_Toan_11_Khoang_cach_giua_hai_duong_thang_cheo_nhau.docx",
+      "sha256": "985af2de88ecafa88bb6166bc1c118b0ce408adccfc67571fe5c6774c4f79830",
+      "filename_changed": true
+    },
+    {
+      "number": 73,
+      "grade": 11,
+      "topic": "g11_conditional_probability_models",
+      "topic_name": "Mô hình xác suất có điều kiện",
+      "old_filename": "150_CHU_DE_WORD/073_Toan_11_Mo_hinh_xac_suat_co_ieu_kien.docx",
+      "corrected_filename": "150_CHU_DE_WORD/073_Toan_11_Mo_hinh_xac_suat_co_dieu_kien.docx",
+      "sha256": "ed75ad6a9d111d9e66638c0d3f458c1112d5d97a6a832105b8b46e867368ac15",
+      "filename_changed": true
+    },
+    {
+      "number": 74,
+      "grade": 11,
+      "topic": "g11_geom_prism_pyramid_sections",
+      "topic_name": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+      "old_filename": "150_CHU_DE_WORD/074_Toan_11_Mat_ben_canh_ben_va_ay_cua_lang_tru_hinh_chop.docx",
+      "corrected_filename": "150_CHU_DE_WORD/074_Toan_11_Mat_ben_canh_ben_va_day_cua_lang_tru_hinh_chop.docx",
+      "sha256": "60e01a06f5862d37a4a09e3c446131c1d17a81c4aac6b9a985c38d36da7338f0",
+      "filename_changed": true
+    },
+    {
+      "number": 75,
+      "grade": 11,
+      "topic": "nhan_biet_hinh_khong_gian_11",
+      "topic_name": "Nhận biết hình học không gian",
+      "old_filename": "150_CHU_DE_WORD/075_Toan_11_Nhan_biet_hinh_hoc_khong_gian.docx",
+      "corrected_filename": "150_CHU_DE_WORD/075_Toan_11_Nhan_biet_hinh_hoc_khong_gian.docx",
+      "sha256": "b0df5695c83e86770969435db537c3b85ed444d81b7cc9329cd14dead337a153",
+      "filename_changed": false
+    },
+    {
+      "number": 76,
+      "grade": 11,
+      "topic": "g11_geom_space_lines_planes",
+      "topic_name": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+      "old_filename": "150_CHU_DE_WORD/076_Toan_11_Nhan_biet_uong_thang_va_mat_phang_trong_khong_gian.docx",
+      "corrected_filename": "150_CHU_DE_WORD/076_Toan_11_Nhan_biet_duong_thang_va_mat_phang_trong_khong_gian.docx",
+      "sha256": "964dae307528d81c505a20945da12e54f9454ad993c76fbe72492dcfcb8d1e76",
+      "filename_changed": true
+    },
+    {
+      "number": 77,
+      "grade": 11,
+      "topic": "g11_binomial_advanced",
+      "topic_name": "Nhị thức Newton và hệ số tổ hợp nâng cao",
+      "old_filename": "150_CHU_DE_WORD/077_Toan_11_Nhi_thuc_Newton_va_he_so_to_hop_nang_cao.docx",
+      "corrected_filename": "150_CHU_DE_WORD/077_Toan_11_Nhi_thuc_Newton_va_he_so_to_hop_nang_cao.docx",
+      "sha256": "b86f447965c7496bfc1867703ac14882399081b2b678b1155183bfa46df3a08a",
+      "filename_changed": false
+    },
+    {
+      "number": 78,
+      "grade": 11,
+      "topic": "phep_bien_hinh_co_ban_11",
+      "topic_name": "Phép biến hình cơ bản",
+      "old_filename": "150_CHU_DE_WORD/078_Toan_11_Phep_bien_hinh_co_ban.docx",
+      "corrected_filename": "150_CHU_DE_WORD/078_Toan_11_Phep_bien_hinh_co_ban.docx",
+      "sha256": "0dd326ebd73e8273054a221435fc56cfdac3b1dfbce01e8f6c0302dc385e45f7",
+      "filename_changed": false
+    },
+    {
+      "number": 79,
+      "grade": 11,
+      "topic": "phep_bien_hinh_11",
+      "topic_name": "Phép biến hình trong mặt phẳng",
+      "old_filename": "150_CHU_DE_WORD/079_Toan_11_Phep_bien_hinh_trong_mat_phang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/079_Toan_11_Phep_bien_hinh_trong_mat_phang.docx",
+      "sha256": "17fd9a390cbf9ecff98153044a2b8f8c964cec6c7632073522fe0743cfce6da5",
+      "filename_changed": false
+    },
+    {
+      "number": 80,
+      "grade": 11,
+      "topic": "g11_geom_rotation_homothety",
+      "topic_name": "Phép quay và phép vị tự",
+      "old_filename": "150_CHU_DE_WORD/080_Toan_11_Phep_quay_va_phep_vi_tu.docx",
+      "corrected_filename": "150_CHU_DE_WORD/080_Toan_11_Phep_quay_va_phep_vi_tu.docx",
+      "sha256": "f031090836b9bfb354d2c54b3e32826e8e54d065bb8ffdc967d2ad4fd4a98668",
+      "filename_changed": false
+    },
+    {
+      "number": 81,
+      "grade": 11,
+      "topic": "g11_geom_transform_translation",
+      "topic_name": "Phép tịnh tiến và ảnh của hình",
+      "old_filename": "150_CHU_DE_WORD/081_Toan_11_Phep_tinh_tien_va_anh_cua_hinh.docx",
+      "corrected_filename": "150_CHU_DE_WORD/081_Toan_11_Phep_tinh_tien_va_anh_cua_hinh.docx",
+      "sha256": "dd93b6c2eadc691e520957314d3195044e33e321ec3e6c0509f1c0a70628921d",
+      "filename_changed": false
+    },
+    {
+      "number": 82,
+      "grade": 11,
+      "topic": "g11_geom_transform_reflection",
+      "topic_name": "Phép đối xứng trục",
+      "old_filename": "150_CHU_DE_WORD/082_Toan_11_Phep_oi_xung_truc.docx",
+      "corrected_filename": "150_CHU_DE_WORD/082_Toan_11_Phep_doi_xung_truc.docx",
+      "sha256": "6f05ca657b44505598c022e58f6b3210c28b1036223c580d37e1ed59939b5da2",
+      "filename_changed": true
+    },
+    {
+      "number": 83,
+      "grade": 11,
+      "topic": "phuong_trinh_luong_giac",
+      "topic_name": "Phương trình lượng giác",
+      "old_filename": "150_CHU_DE_WORD/083_Toan_11_Phuong_trinh_luong_giac.docx",
+      "corrected_filename": "150_CHU_DE_WORD/083_Toan_11_Phuong_trinh_luong_giac.docx",
+      "sha256": "5e99e78ca28c02c0a5e616445e39ccef2dd66cb79d734ffa5e0bb5586a49aa99",
+      "filename_changed": false
+    },
+    {
+      "number": 84,
+      "grade": 11,
+      "topic": "phuong_trinh_luong_giac_day_du",
+      "topic_name": "Phương trình lượng giác",
+      "old_filename": "150_CHU_DE_WORD/084_Toan_11_Phuong_trinh_luong_giac.docx",
+      "corrected_filename": "150_CHU_DE_WORD/084_Toan_11_Phuong_trinh_luong_giac.docx",
+      "sha256": "21dae62172f6d5c7e6eca4ba541ae91bb72bdbef21d7879b58c5e509da95b081",
+      "filename_changed": false
+    },
+    {
+      "number": 85,
+      "grade": 11,
+      "topic": "g11_advanced_trig_equations",
+      "topic_name": "Phương trình lượng giác nâng cao",
+      "old_filename": "150_CHU_DE_WORD/085_Toan_11_Phuong_trinh_luong_giac_nang_cao.docx",
+      "corrected_filename": "150_CHU_DE_WORD/085_Toan_11_Phuong_trinh_luong_giac_nang_cao.docx",
+      "sha256": "29d746c334ae57230aa0e9224995c8c3aec9ab067513811205580f53ebf2c280",
+      "filename_changed": false
+    },
+    {
+      "number": 86,
+      "grade": 11,
+      "topic": "song_song_khong_gian",
+      "topic_name": "Quan hệ song song trong không gian",
+      "old_filename": "150_CHU_DE_WORD/086_Toan_11_Quan_he_song_song_trong_khong_gian.docx",
+      "corrected_filename": "150_CHU_DE_WORD/086_Toan_11_Quan_he_song_song_trong_khong_gian.docx",
+      "sha256": "40fd0b5edb67ffc44a8308e4a86d912f0f8dd6c8a9ba484d463fadb492d61c1e",
+      "filename_changed": false
+    },
+    {
+      "number": 87,
+      "grade": 11,
+      "topic": "hinh_khong_gian",
+      "topic_name": "Quan hệ song song và vuông góc trong không gian",
+      "old_filename": "150_CHU_DE_WORD/087_Toan_11_Quan_he_song_song_va_vuong_goc_trong_khong_gian.docx",
+      "corrected_filename": "150_CHU_DE_WORD/087_Toan_11_Quan_he_song_song_va_vuong_goc_trong_khong_gian.docx",
+      "sha256": "4782997b2b7bedf46e4137a1e4595ba00ffed5c94f16f52dc9ceba56179a1550",
+      "filename_changed": false
+    },
+    {
+      "number": 88,
+      "grade": 11,
+      "topic": "vuong_goc_khong_gian",
+      "topic_name": "Quan hệ vuông góc trong không gian",
+      "old_filename": "150_CHU_DE_WORD/088_Toan_11_Quan_he_vuong_goc_trong_khong_gian.docx",
+      "corrected_filename": "150_CHU_DE_WORD/088_Toan_11_Quan_he_vuong_goc_trong_khong_gian.docx",
+      "sha256": "20ddb170efbb4d6f2c2c81e2c29f929bea0708f68b40006774a1f7314d2c24a3",
+      "filename_changed": false
+    },
+    {
+      "number": 89,
+      "grade": 11,
+      "topic": "quy_nap_toan_hoc_11",
+      "topic_name": "Quy nạp toán học",
+      "old_filename": "150_CHU_DE_WORD/089_Toan_11_Quy_nap_toan_hoc.docx",
+      "corrected_filename": "150_CHU_DE_WORD/089_Toan_11_Quy_nap_toan_hoc.docx",
+      "sha256": "7c8b200c2f9e8c5e75680833fd2cedf956ec4a701094c56e49ce17678ef63bb3",
+      "filename_changed": false
+    },
+    {
+      "number": 90,
+      "grade": 11,
+      "topic": "dao_ham_quy_tac",
+      "topic_name": "Quy tắc đạo hàm",
+      "old_filename": "150_CHU_DE_WORD/090_Toan_11_Quy_tac_ao_ham.docx",
+      "corrected_filename": "150_CHU_DE_WORD/090_Toan_11_Quy_tac_dao_ham.docx",
+      "sha256": "662d19193bd72d16a0e98a5d42e5bf73847e00925b652e3d06579c79fd0a3d7e",
+      "filename_changed": true
+    },
+    {
+      "number": 91,
+      "grade": 11,
+      "topic": "thiet_dien_hinh_khong_gian_11",
+      "topic_name": "Thiết diện hình không gian",
+      "old_filename": "150_CHU_DE_WORD/091_Toan_11_Thiet_dien_hinh_khong_gian.docx",
+      "corrected_filename": "150_CHU_DE_WORD/091_Toan_11_Thiet_dien_hinh_khong_gian.docx",
+      "sha256": "19407225358119798c8497558c672427e0200f33e36975b1f15c59a34fdb1097",
+      "filename_changed": false
+    },
+    {
+      "number": 92,
+      "grade": 11,
+      "topic": "g11_geom_section_ratio",
+      "topic_name": "Thiết diện và tỉ số đoạn trong hình không gian",
+      "old_filename": "150_CHU_DE_WORD/092_Toan_11_Thiet_dien_va_ti_so_oan_trong_hinh_khong_gian.docx",
+      "corrected_filename": "150_CHU_DE_WORD/092_Toan_11_Thiet_dien_va_ti_so_doan_trong_hinh_khong_gian.docx",
+      "sha256": "eb942d8b6cd60e6e93e7561c30ad6d06aa6a45ce99ed621f0e56417789ec6625",
+      "filename_changed": true
+    },
+    {
+      "number": 93,
+      "grade": 11,
+      "topic": "thong_ke_11",
+      "topic_name": "Thống kê Toán 11",
+      "old_filename": "150_CHU_DE_WORD/093_Toan_11_Thong_ke_Toan_11.docx",
+      "corrected_filename": "150_CHU_DE_WORD/093_Toan_11_Thong_ke_Toan_11.docx",
+      "sha256": "5f6047c3eeb1e1436a4bad6a95b92fe98b78093160a65e02852c72ce5875bd62",
+      "filename_changed": false
+    },
+    {
+      "number": 94,
+      "grade": 11,
+      "topic": "to_hop_xac_suat_nang_cao_11",
+      "topic_name": "Tổ hợp và xác suất nâng cao",
+      "old_filename": "150_CHU_DE_WORD/094_Toan_11_To_hop_va_xac_suat_nang_cao.docx",
+      "corrected_filename": "150_CHU_DE_WORD/094_Toan_11_To_hop_va_xac_suat_nang_cao.docx",
+      "sha256": "e555a99942ace11ff5bfc6d1b7b04ff0681438438c44377e56f715a18cc4b077",
+      "filename_changed": false
+    },
+    {
+      "number": 95,
+      "grade": 11,
+      "topic": "xac_suat_11",
+      "topic_name": "Xác suất",
+      "old_filename": "150_CHU_DE_WORD/095_Toan_11_Xac_suat.docx",
+      "corrected_filename": "150_CHU_DE_WORD/095_Toan_11_Xac_suat.docx",
+      "sha256": "5b7db4c70c0f5bfad2f548536518f3e18dd58d1cc7b1ce05329a14f44ff72b7a",
+      "filename_changed": false
+    },
+    {
+      "number": 96,
+      "grade": 11,
+      "topic": "g11_geom_parallel_line_plane",
+      "topic_name": "Đường thẳng song song với mặt phẳng",
+      "old_filename": "150_CHU_DE_WORD/096_Toan_11_uong_thang_song_song_voi_mat_phang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/096_Toan_11_Duong_thang_song_song_voi_mat_phang.docx",
+      "sha256": "5f66dfa189b8b72827a0073a0b2857864e149191eb893aa5d7cebd9da31620e3",
+      "filename_changed": true
+    },
+    {
+      "number": 97,
+      "grade": 11,
+      "topic": "g11_geom_perpendicular_line_plane",
+      "topic_name": "Đường thẳng vuông góc với mặt phẳng",
+      "old_filename": "150_CHU_DE_WORD/097_Toan_11_uong_thang_vuong_goc_voi_mat_phang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/097_Toan_11_Duong_thang_vuong_goc_voi_mat_phang.docx",
+      "sha256": "e6e05ba9422026d057847c77a50bd745b511f1a0eef7372274431cab6d91dd3d",
+      "filename_changed": true
+    },
+    {
+      "number": 98,
+      "grade": 11,
+      "topic": "dao_ham",
+      "topic_name": "Đạo hàm",
+      "old_filename": "150_CHU_DE_WORD/098_Toan_11_ao_ham.docx",
+      "corrected_filename": "150_CHU_DE_WORD/098_Toan_11_Dao_ham.docx",
+      "sha256": "32af96a1d04b65fde83ea1b587d07af5ee1aaddacadb3c437a2584dce9229b87",
+      "filename_changed": true
+    },
+    {
+      "number": 99,
+      "grade": 11,
+      "topic": "g11_geom_three_perpendiculars",
+      "topic_name": "Định lý ba đường vuông góc",
+      "old_filename": "150_CHU_DE_WORD/099_Toan_11_inh_ly_ba_uong_vuong_goc.docx",
+      "corrected_filename": "150_CHU_DE_WORD/099_Toan_11_Dinh_ly_ba_duong_vuong_goc.docx",
+      "sha256": "4017f8f033a7501ad0061f96cb88228afd3590cd39a8cbb804075df7640a3962",
+      "filename_changed": true
+    },
+    {
+      "number": 100,
+      "grade": 11,
+      "topic": "ung_dung_dao_ham_11",
+      "topic_name": "Ứng dụng đạo hàm",
+      "old_filename": "150_CHU_DE_WORD/100_Toan_11_Ung_dung_ao_ham.docx",
+      "corrected_filename": "150_CHU_DE_WORD/100_Toan_11_Ung_dung_dao_ham.docx",
+      "sha256": "54073e9a2bf151f54024aef477306374f3274b8b0c493f843327e3bacc8098ee",
+      "filename_changed": true
+    },
+    {
+      "number": 101,
+      "grade": 12,
+      "topic": "bieu_dien_so_phuc",
+      "topic_name": "Biểu diễn số phức",
+      "old_filename": "150_CHU_DE_WORD/101_Toan_12_Bieu_dien_so_phuc.docx",
+      "corrected_filename": "150_CHU_DE_WORD/101_Toan_12_Bieu_dien_so_phuc.docx",
+      "sha256": "983df07ec0f938539551274325e176e4dc410fcd1ee0ecef7b73c385f6f0e9e5",
+      "filename_changed": false
+    },
+    {
+      "number": 102,
+      "grade": 12,
+      "topic": "g12_geom_parameter_geometry",
+      "topic_name": "Bài toán tham số hình học Oxyz",
+      "old_filename": "150_CHU_DE_WORD/102_Toan_12_Bai_toan_tham_so_hinh_hoc_Oxyz.docx",
+      "corrected_filename": "150_CHU_DE_WORD/102_Toan_12_Bai_toan_tham_so_hinh_hoc_Oxyz.docx",
+      "sha256": "9a66a48b126edba1c7285c14307ab54fc56782cfa770f5dd8cbcc84b16da924b",
+      "filename_changed": false
+    },
+    {
+      "number": 103,
+      "grade": 12,
+      "topic": "bai_toan_thuc_te_12",
+      "topic_name": "Bài toán thực tế Toán 12",
+      "old_filename": "150_CHU_DE_WORD/103_Toan_12_Bai_toan_thuc_te_Toan_12.docx",
+      "corrected_filename": "150_CHU_DE_WORD/103_Toan_12_Bai_toan_thuc_te_Toan_12.docx",
+      "sha256": "95db86a15faeeea489af90c1fe6a68fdf9c2256d33a2787bb0b7b7dc413bdc49",
+      "filename_changed": false
+    },
+    {
+      "number": 104,
+      "grade": 12,
+      "topic": "g12_geom_3d_optimization",
+      "topic_name": "Bài toán tối ưu hình học không gian",
+      "old_filename": "150_CHU_DE_WORD/104_Toan_12_Bai_toan_toi_uu_hinh_hoc_khong_gian.docx",
+      "corrected_filename": "150_CHU_DE_WORD/104_Toan_12_Bai_toan_toi_uu_hinh_hoc_khong_gian.docx",
+      "sha256": "ec6077d1b0146bdaa72bac7da73d9e4b0624fcabbf50cce4bf97cabbe9f1caf2",
+      "filename_changed": false
+    },
+    {
+      "number": 105,
+      "grade": 12,
+      "topic": "tong_hop_thpt",
+      "topic_name": "Bài toán tổng hợp THPT",
+      "old_filename": "150_CHU_DE_WORD/105_Toan_12_Bai_toan_tong_hop_THPT.docx",
+      "corrected_filename": "150_CHU_DE_WORD/105_Toan_12_Bai_toan_tong_hop_THPT.docx",
+      "sha256": "a3751faa650ba8fc879d4ba07daca88395b27d863036e98df9d401a4f05d08d1",
+      "filename_changed": false
+    },
+    {
+      "number": 106,
+      "grade": 12,
+      "topic": "bpt_logarit",
+      "topic_name": "Bất phương trình logarit",
+      "old_filename": "150_CHU_DE_WORD/106_Toan_12_Bat_phuong_trinh_logarit.docx",
+      "corrected_filename": "150_CHU_DE_WORD/106_Toan_12_Bat_phuong_trinh_logarit.docx",
+      "sha256": "fb6f0c64a1d5fb65648607df79c9f951cabe77e476a9445c5a4aa2332e5d66e4",
+      "filename_changed": false
+    },
+    {
+      "number": 107,
+      "grade": 12,
+      "topic": "bpt_mu",
+      "topic_name": "Bất phương trình mũ",
+      "old_filename": "150_CHU_DE_WORD/107_Toan_12_Bat_phuong_trinh_mu.docx",
+      "corrected_filename": "150_CHU_DE_WORD/107_Toan_12_Bat_phuong_trinh_mu.docx",
+      "sha256": "f1b6b5ac2dcab77149c6bfd849d06f2460b8ccaaa849630041c921ee3cef3f16",
+      "filename_changed": false
+    },
+    {
+      "number": 108,
+      "grade": 12,
+      "topic": "thong_ke_12",
+      "topic_name": "Các số đặc trưng đo xu thế và độ phân tán",
+      "old_filename": "150_CHU_DE_WORD/108_Toan_12_Cac_so_ac_trung_o_xu_the_va_o_phan_tan.docx",
+      "corrected_filename": "150_CHU_DE_WORD/108_Toan_12_Cac_so_dac_trung_do_xu_the_va_do_phan_tan.docx",
+      "sha256": "ec98f3ef5dda3b216f205725d772f3026d70ba39be708b38050ee53250a95e6e",
+      "filename_changed": true
+    },
+    {
+      "number": 109,
+      "grade": 12,
+      "topic": "cuc_tri",
+      "topic_name": "Cực trị",
+      "old_filename": "150_CHU_DE_WORD/109_Toan_12_Cuc_tri.docx",
+      "corrected_filename": "150_CHU_DE_WORD/109_Toan_12_Cuc_tri.docx",
+      "sha256": "2c44ac9686b14b398520f21c56e3d2c818ceafbd229b7060cc29da7b6a6c18aa",
+      "filename_changed": false
+    },
+    {
+      "number": 110,
+      "grade": 12,
+      "topic": "g12_geom_min_distance_3d",
+      "topic_name": "Cực trị khoảng cách trong không gian tọa độ",
+      "old_filename": "150_CHU_DE_WORD/110_Toan_12_Cuc_tri_khoang_cach_trong_khong_gian_toa_o.docx",
+      "corrected_filename": "150_CHU_DE_WORD/110_Toan_12_Cuc_tri_khoang_cach_trong_khong_gian_toa_do.docx",
+      "sha256": "3edd598e880914511670b9ebb7a54dc0ca0bd67cb7356e3057876434ab323db1",
+      "filename_changed": true
+    },
+    {
+      "number": 111,
+      "grade": 12,
+      "topic": "g12_geom_solid_surface_area",
+      "topic_name": "Diện tích xung quanh và toàn phần hình khối",
+      "old_filename": "150_CHU_DE_WORD/111_Toan_12_Dien_tich_xung_quanh_va_toan_phan_hinh_khoi.docx",
+      "corrected_filename": "150_CHU_DE_WORD/111_Toan_12_Dien_tich_xung_quanh_va_toan_phan_hinh_khoi.docx",
+      "sha256": "6be41d2bb01f6d6c9a6223bd962420ae74d9dd0fbc7fba6046f4e234ce616795",
+      "filename_changed": false
+    },
+    {
+      "number": 112,
+      "grade": 12,
+      "topic": "g12_geom_sphere_plane_intersection",
+      "topic_name": "Giao tuyến mặt cầu và mặt phẳng",
+      "old_filename": "150_CHU_DE_WORD/112_Toan_12_Giao_tuyen_mat_cau_va_mat_phang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/112_Toan_12_Giao_tuyen_mat_cau_va_mat_phang.docx",
+      "sha256": "415dec3921316adb742018b995fb22460b3f0918195c29f2ac1a02dc2a0e81af",
+      "filename_changed": false
+    },
+    {
+      "number": 113,
+      "grade": 12,
+      "topic": "g12_geom_line_plane_intersection",
+      "topic_name": "Giao điểm đường thẳng và mặt phẳng",
+      "old_filename": "150_CHU_DE_WORD/113_Toan_12_Giao_iem_uong_thang_va_mat_phang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/113_Toan_12_Giao_diem_duong_thang_va_mat_phang.docx",
+      "sha256": "f39e353f152d88eb002099f0439f4dddd458071bcc2a32dcc30806e7dbb663dc",
+      "filename_changed": true
+    },
+    {
+      "number": 114,
+      "grade": 12,
+      "topic": "gtln_gtnn",
+      "topic_name": "Giá trị lớn nhất và nhỏ nhất",
+      "old_filename": "150_CHU_DE_WORD/114_Toan_12_Gia_tri_lon_nhat_va_nho_nhat.docx",
+      "corrected_filename": "150_CHU_DE_WORD/114_Toan_12_Gia_tri_lon_nhat_va_nho_nhat.docx",
+      "sha256": "9417a4670f31f83072ea77f792ca23bd6763c1eb81e54a4b7a4b8400cd6f775f",
+      "filename_changed": false
+    },
+    {
+      "number": 115,
+      "grade": 12,
+      "topic": "g12_geom_two_planes_angle",
+      "topic_name": "Góc giữa hai mặt phẳng",
+      "old_filename": "150_CHU_DE_WORD/115_Toan_12_Goc_giua_hai_mat_phang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/115_Toan_12_Goc_giua_hai_mat_phang.docx",
+      "sha256": "d8eae8e2bba14f6f5baf061130edf1f03397ccb905b6bfdbd911a9432beed69b",
+      "filename_changed": false
+    },
+    {
+      "number": 116,
+      "grade": 12,
+      "topic": "g12_geom_line_plane_angle",
+      "topic_name": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+      "old_filename": "150_CHU_DE_WORD/116_Toan_12_Goc_giua_uong_thang_va_mat_phang_Oxyz.docx",
+      "corrected_filename": "150_CHU_DE_WORD/116_Toan_12_Goc_giua_duong_thang_va_mat_phang_Oxyz.docx",
+      "sha256": "7d057a0548f5ec178404943ffe8971236450794331ae969a45cc6c0f6f510a46",
+      "filename_changed": true
+    },
+    {
+      "number": 117,
+      "grade": 12,
+      "topic": "goc_khoang_cach_oxyz",
+      "topic_name": "Góc và khoảng cách Oxyz",
+      "old_filename": "150_CHU_DE_WORD/117_Toan_12_Goc_va_khoang_cach_Oxyz.docx",
+      "corrected_filename": "150_CHU_DE_WORD/117_Toan_12_Goc_va_khoang_cach_Oxyz.docx",
+      "sha256": "1fcefa1d9d0a14aa6cc8ff0ee09db728079e79ecca5b39d3b7d5072b9da78e32",
+      "filename_changed": false
+    },
+    {
+      "number": 118,
+      "grade": 12,
+      "topic": "ham_logarit",
+      "topic_name": "Hàm số logarit",
+      "old_filename": "150_CHU_DE_WORD/118_Toan_12_Ham_so_logarit.docx",
+      "corrected_filename": "150_CHU_DE_WORD/118_Toan_12_Ham_so_logarit.docx",
+      "sha256": "2e3f702591378841c9599576bf855d4106e758ed785d30ea175c4472519e66a1",
+      "filename_changed": false
+    },
+    {
+      "number": 119,
+      "grade": 12,
+      "topic": "ham_mu",
+      "topic_name": "Hàm số mũ",
+      "old_filename": "150_CHU_DE_WORD/119_Toan_12_Ham_so_mu.docx",
+      "corrected_filename": "150_CHU_DE_WORD/119_Toan_12_Ham_so_mu.docx",
+      "sha256": "fa2d231f60cb9d828f8ea79f33973cc1e043c638cca370e4d58287ac8619f17d",
+      "filename_changed": false
+    },
+    {
+      "number": 120,
+      "grade": 12,
+      "topic": "hinh_hoc_khong_gian",
+      "topic_name": "Hình học không gian",
+      "old_filename": "150_CHU_DE_WORD/120_Toan_12_Hinh_hoc_khong_gian.docx",
+      "corrected_filename": "150_CHU_DE_WORD/120_Toan_12_Hinh_hoc_khong_gian.docx",
+      "sha256": "2a454dd9f8e9558cfd83c41e6743781007f48880f71701beee46489cf27d688f",
+      "filename_changed": false
+    },
+    {
+      "number": 121,
+      "grade": 12,
+      "topic": "g12_complex_plane_geometry",
+      "topic_name": "Hình học số phức và quỹ tích",
+      "old_filename": "150_CHU_DE_WORD/121_Toan_12_Hinh_hoc_so_phuc_va_quy_tich.docx",
+      "corrected_filename": "150_CHU_DE_WORD/121_Toan_12_Hinh_hoc_so_phuc_va_quy_tich.docx",
+      "sha256": "b57346f520abc05637f4e73b8930b6c884a286a210d3db8ca3b77a3c53dff3ef",
+      "filename_changed": false
+    },
+    {
+      "number": 122,
+      "grade": 12,
+      "topic": "hinh_khoi_va_the_tich_co_ban_12",
+      "topic_name": "Hình khối và thể tích cơ bản",
+      "old_filename": "150_CHU_DE_WORD/122_Toan_12_Hinh_khoi_va_the_tich_co_ban.docx",
+      "corrected_filename": "150_CHU_DE_WORD/122_Toan_12_Hinh_khoi_va_the_tich_co_ban.docx",
+      "sha256": "ad1dba4f29803b5074fe69fdab372b74628d9413361a2436b504fdfc5689920b",
+      "filename_changed": false
+    },
+    {
+      "number": 123,
+      "grade": 12,
+      "topic": "g12_geom_point_plane_distance",
+      "topic_name": "Khoảng cách từ điểm đến mặt phẳng",
+      "old_filename": "150_CHU_DE_WORD/123_Toan_12_Khoang_cach_tu_iem_en_mat_phang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/123_Toan_12_Khoang_cach_tu_diem_den_mat_phang.docx",
+      "sha256": "176356a40de435819221d8e778085118aa308a7f1eb88284e8d8f13c089af795",
+      "filename_changed": true
+    },
+    {
+      "number": 124,
+      "grade": 12,
+      "topic": "khao_sat_ham_so",
+      "topic_name": "Khảo sát và vẽ đồ thị hàm số",
+      "old_filename": "150_CHU_DE_WORD/124_Toan_12_Khao_sat_va_ve_o_thi_ham_so.docx",
+      "corrected_filename": "150_CHU_DE_WORD/124_Toan_12_Khao_sat_va_ve_do_thi_ham_so.docx",
+      "sha256": "e2fce472c11f118de2b56639619ec344884896b618c23ccf7517029239c4eb99",
+      "filename_changed": true
+    },
+    {
+      "number": 125,
+      "grade": 12,
+      "topic": "mat_cau",
+      "topic_name": "Mặt cầu",
+      "old_filename": "150_CHU_DE_WORD/125_Toan_12_Mat_cau.docx",
+      "corrected_filename": "150_CHU_DE_WORD/125_Toan_12_Mat_cau.docx",
+      "sha256": "1473ad3ad16df516a98fd5118ac0eeaf57e74f39aca330571e3c71f457db9f00",
+      "filename_changed": false
+    },
+    {
+      "number": 126,
+      "grade": 12,
+      "topic": "g12_geom_sphere_tangent_plane",
+      "topic_name": "Mặt phẳng tiếp xúc với mặt cầu",
+      "old_filename": "150_CHU_DE_WORD/126_Toan_12_Mat_phang_tiep_xuc_voi_mat_cau.docx",
+      "corrected_filename": "150_CHU_DE_WORD/126_Toan_12_Mat_phang_tiep_xuc_voi_mat_cau.docx",
+      "sha256": "7ecb0c305e33fecfec8aa60b72e351b4e4837ae3eae7da30ee61f870b2348f33",
+      "filename_changed": false
+    },
+    {
+      "number": 127,
+      "grade": 12,
+      "topic": "mat_phang_oxyz",
+      "topic_name": "Mặt phẳng trong Oxyz",
+      "old_filename": "150_CHU_DE_WORD/127_Toan_12_Mat_phang_trong_Oxyz.docx",
+      "corrected_filename": "150_CHU_DE_WORD/127_Toan_12_Mat_phang_trong_Oxyz.docx",
+      "sha256": "425e34638815e70e17ba2d1dd0e201f6072187a8029915da8d6deb119a4b645c",
+      "filename_changed": false
+    },
+    {
+      "number": 128,
+      "grade": 12,
+      "topic": "nguyen_ham_tich_phan",
+      "topic_name": "Nguyên hàm và tích phân",
+      "old_filename": "150_CHU_DE_WORD/128_Toan_12_Nguyen_ham_va_tich_phan.docx",
+      "corrected_filename": "150_CHU_DE_WORD/128_Toan_12_Nguyen_ham_va_tich_phan.docx",
+      "sha256": "dd3e51764b6501a33f166caa21af0e49ff74cd06c4fc319b574b7f820cdcd4c1",
+      "filename_changed": false
+    },
+    {
+      "number": 129,
+      "grade": 12,
+      "topic": "pt_logarit",
+      "topic_name": "Phương trình logarit",
+      "old_filename": "150_CHU_DE_WORD/129_Toan_12_Phuong_trinh_logarit.docx",
+      "corrected_filename": "150_CHU_DE_WORD/129_Toan_12_Phuong_trinh_logarit.docx",
+      "sha256": "4827c21ddf424a5be8a0cdb7a5f2df27f9bdd965e3426a7542009af13dec1629",
+      "filename_changed": false
+    },
+    {
+      "number": 130,
+      "grade": 12,
+      "topic": "pt_mu",
+      "topic_name": "Phương trình mũ",
+      "old_filename": "150_CHU_DE_WORD/130_Toan_12_Phuong_trinh_mu.docx",
+      "corrected_filename": "150_CHU_DE_WORD/130_Toan_12_Phuong_trinh_mu.docx",
+      "sha256": "6ce706e802bf380461f7902d0bd65e8f1b739cd43a8f4e3c968935f93984bcab",
+      "filename_changed": false
+    },
+    {
+      "number": 131,
+      "grade": 12,
+      "topic": "g12_geom_sphere_equation",
+      "topic_name": "Phương trình mặt cầu và tâm bán kính",
+      "old_filename": "150_CHU_DE_WORD/131_Toan_12_Phuong_trinh_mat_cau_va_tam_ban_kinh.docx",
+      "corrected_filename": "150_CHU_DE_WORD/131_Toan_12_Phuong_trinh_mat_cau_va_tam_ban_kinh.docx",
+      "sha256": "10d37ffca52ca8bdb8185516556d4e013df44a92d148d3a434ad54fe9a9b8155",
+      "filename_changed": false
+    },
+    {
+      "number": 132,
+      "grade": 12,
+      "topic": "g12_geom_plane_equation",
+      "topic_name": "Phương trình mặt phẳng",
+      "old_filename": "150_CHU_DE_WORD/132_Toan_12_Phuong_trinh_mat_phang.docx",
+      "corrected_filename": "150_CHU_DE_WORD/132_Toan_12_Phuong_trinh_mat_phang.docx",
+      "sha256": "d787f27c654deb4dd9ef73124f74bcc131e8f8928e4baa267d846b5cb8d96c39",
+      "filename_changed": false
+    },
+    {
+      "number": 133,
+      "grade": 12,
+      "topic": "pt_so_phuc",
+      "topic_name": "Phương trình số phức",
+      "old_filename": "150_CHU_DE_WORD/133_Toan_12_Phuong_trinh_so_phuc.docx",
+      "corrected_filename": "150_CHU_DE_WORD/133_Toan_12_Phuong_trinh_so_phuc.docx",
+      "sha256": "a10d4a694c97e8d41c3740a35a61ec9e56e1e307af9b79c90a6907436ecdc4b3",
+      "filename_changed": false
+    },
+    {
+      "number": 134,
+      "grade": 12,
+      "topic": "g12_geom_line_equation_3d",
+      "topic_name": "Phương trình đường thẳng trong Oxyz",
+      "old_filename": "150_CHU_DE_WORD/134_Toan_12_Phuong_trinh_uong_thang_trong_Oxyz.docx",
+      "corrected_filename": "150_CHU_DE_WORD/134_Toan_12_Phuong_trinh_duong_thang_trong_Oxyz.docx",
+      "sha256": "34263ed7eef63d44a412b6d79ba27737af60fbf0c653cd1d5e98b0f0924acfff",
+      "filename_changed": true
+    },
+    {
+      "number": 135,
+      "grade": 12,
+      "topic": "so_phuc",
+      "topic_name": "Số phức",
+      "old_filename": "150_CHU_DE_WORD/135_Toan_12_So_phuc.docx",
+      "corrected_filename": "150_CHU_DE_WORD/135_Toan_12_So_phuc.docx",
+      "sha256": "dfa5c2436d9f25da591b43e2260702aeae363b6daff5d94775902199ec23e93f",
+      "filename_changed": false
+    },
+    {
+      "number": 136,
+      "grade": 12,
+      "topic": "the_tich_khong_gian",
+      "topic_name": "Thể tích hình học không gian",
+      "old_filename": "150_CHU_DE_WORD/136_Toan_12_The_tich_hinh_hoc_khong_gian.docx",
+      "corrected_filename": "150_CHU_DE_WORD/136_Toan_12_The_tich_hinh_hoc_khong_gian.docx",
+      "sha256": "48161c7a93e52a25183b7ca7a4517caf144f16f66dcf8115eb88c1b74f32b1cf",
+      "filename_changed": false
+    },
+    {
+      "number": 137,
+      "grade": 12,
+      "topic": "g12_solid_of_revolution",
+      "topic_name": "Thể tích khối tròn xoay và mô hình thực tế",
+      "old_filename": "150_CHU_DE_WORD/137_Toan_12_The_tich_khoi_tron_xoay_va_mo_hinh_thuc_te.docx",
+      "corrected_filename": "150_CHU_DE_WORD/137_Toan_12_The_tich_khoi_tron_xoay_va_mo_hinh_thuc_te.docx",
+      "sha256": "e382277a6b9483fb8c8c6f44ffe75c55db17fb0cde284631534f5c2fb3ab4760",
+      "filename_changed": false
+    },
+    {
+      "number": 138,
+      "grade": 12,
+      "topic": "tiep_tuyen",
+      "topic_name": "Tiếp tuyến",
+      "old_filename": "150_CHU_DE_WORD/138_Toan_12_Tiep_tuyen.docx",
+      "corrected_filename": "150_CHU_DE_WORD/138_Toan_12_Tiep_tuyen.docx",
+      "sha256": "c8c851bb5b43d0afd5ff4cae558d1f3dc16d27163ea979ff0037ffa6153f4bd3",
+      "filename_changed": false
+    },
+    {
+      "number": 139,
+      "grade": 12,
+      "topic": "tien_can",
+      "topic_name": "Tiệm cận",
+      "old_filename": "150_CHU_DE_WORD/139_Toan_12_Tiem_can.docx",
+      "corrected_filename": "150_CHU_DE_WORD/139_Toan_12_Tiem_can.docx",
+      "sha256": "016b10a2e1350f740b3bf736c74b6891a5fdba53355fd9e995e21b91b0cf52c0",
+      "filename_changed": false
+    },
+    {
+      "number": 140,
+      "grade": 12,
+      "topic": "tinh_don_dieu",
+      "topic_name": "Tính đơn điệu",
+      "old_filename": "150_CHU_DE_WORD/140_Toan_12_Tinh_on_ieu.docx",
+      "corrected_filename": "150_CHU_DE_WORD/140_Toan_12_Tinh_don_dieu.docx",
+      "sha256": "70ec22c35e95dc1c8150b81e1074ed7918106af83fadb7aed0755c08e08ab012",
+      "filename_changed": true
+    },
+    {
+      "number": 141,
+      "grade": 12,
+      "topic": "tuong_giao",
+      "topic_name": "Tương giao đồ thị",
+      "old_filename": "150_CHU_DE_WORD/141_Toan_12_Tuong_giao_o_thi.docx",
+      "corrected_filename": "150_CHU_DE_WORD/141_Toan_12_Tuong_giao_do_thi.docx",
+      "sha256": "3b3f2c04445b0ccef7d1d779ec6ee0005d3ccda67e533d6e62d6bbe7e66ed68d",
+      "filename_changed": true
+    },
+    {
+      "number": 142,
+      "grade": 12,
+      "topic": "toa_do_khong_gian",
+      "topic_name": "Tọa độ trong không gian",
+      "old_filename": "150_CHU_DE_WORD/142_Toan_12_Toa_o_trong_khong_gian.docx",
+      "corrected_filename": "150_CHU_DE_WORD/142_Toan_12_Toa_do_trong_khong_gian.docx",
+      "sha256": "61563175f97bdd65a3e06393709f155c1f3225dae6c2d085ae6739f36125f9f5",
+      "filename_changed": true
+    },
+    {
+      "number": 143,
+      "grade": 12,
+      "topic": "g12_integral_optimization",
+      "topic_name": "Tối ưu và cực trị bằng tích phân",
+      "old_filename": "150_CHU_DE_WORD/143_Toan_12_Toi_uu_va_cuc_tri_bang_tich_phan.docx",
+      "corrected_filename": "150_CHU_DE_WORD/143_Toan_12_Toi_uu_va_cuc_tri_bang_tich_phan.docx",
+      "sha256": "9169098d2efa8282c738e662b781766fc08e3fb838540bbae66e2b0914b5a28e",
+      "filename_changed": false
+    },
+    {
+      "number": 144,
+      "grade": 12,
+      "topic": "g12_geom_vectors_3d",
+      "topic_name": "Vectơ và độ dài trong không gian Oxyz",
+      "old_filename": "150_CHU_DE_WORD/144_Toan_12_Vecto_va_o_dai_trong_khong_gian_Oxyz.docx",
+      "corrected_filename": "150_CHU_DE_WORD/144_Toan_12_Vecto_va_do_dai_trong_khong_gian_Oxyz.docx",
+      "sha256": "a1fec787913450a8638d532c5e3506a82c3d9af3c73e98533c64d6d4890e2642",
+      "filename_changed": true
+    },
+    {
+      "number": 145,
+      "grade": 12,
+      "topic": "hinh_hoc_oxyz_van_dung_12",
+      "topic_name": "Vận dụng tọa độ Oxyz",
+      "old_filename": "150_CHU_DE_WORD/145_Toan_12_Van_dung_toa_o_Oxyz.docx",
+      "corrected_filename": "150_CHU_DE_WORD/145_Toan_12_Van_dung_toa_do_Oxyz.docx",
+      "sha256": "5c498927a9a9608f4b251a9249e85cd2983e4e68119e9c133d37958249577f4a",
+      "filename_changed": true
+    },
+    {
+      "number": 146,
+      "grade": 12,
+      "topic": "g12_geom_skew_line_relation",
+      "topic_name": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+      "old_filename": "150_CHU_DE_WORD/146_Toan_12_Vi_tri_tuong_oi_cua_hai_uong_thang_trong_Oxyz.docx",
+      "corrected_filename": "150_CHU_DE_WORD/146_Toan_12_Vi_tri_tuong_doi_cua_hai_duong_thang_trong_Oxyz.docx",
+      "sha256": "f2f081b4f06f128f035f6d7daad7862b300dcd019a28431f36185b985bdf84c6",
+      "filename_changed": true
+    },
+    {
+      "number": 147,
+      "grade": 12,
+      "topic": "xac_suat_12",
+      "topic_name": "Xác suất và biến ngẫu nhiên",
+      "old_filename": "150_CHU_DE_WORD/147_Toan_12_Xac_suat_va_bien_ngau_nhien.docx",
+      "corrected_filename": "150_CHU_DE_WORD/147_Toan_12_Xac_suat_va_bien_ngau_nhien.docx",
+      "sha256": "2be541049c7087fcf0e3bffa1f8f6c5f06b3cb01439f542114f32b220c3b1d7b",
+      "filename_changed": false
+    },
+    {
+      "number": 148,
+      "grade": 12,
+      "topic": "duong_thang_oxyz",
+      "topic_name": "Đường thẳng trong Oxyz",
+      "old_filename": "150_CHU_DE_WORD/148_Toan_12_uong_thang_trong_Oxyz.docx",
+      "corrected_filename": "150_CHU_DE_WORD/148_Toan_12_Duong_thang_trong_Oxyz.docx",
+      "sha256": "0aeaacb32d478aed0ebf84e343b38851f768efa83af7e228560b43e6ad86a8ad",
+      "filename_changed": true
+    },
+    {
+      "number": 149,
+      "grade": 12,
+      "topic": "ung_dung_tich_phan",
+      "topic_name": "Ứng dụng tích phân",
+      "old_filename": "150_CHU_DE_WORD/149_Toan_12_Ung_dung_tich_phan.docx",
+      "corrected_filename": "150_CHU_DE_WORD/149_Toan_12_Ung_dung_tich_phan.docx",
+      "sha256": "1ab72416a86572d4d004c02190dc424f6d0a6ed7baac602aa0053575bebc7836",
+      "filename_changed": false
+    },
+    {
+      "number": 150,
+      "grade": 12,
+      "topic": "ung_dung_dao_ham",
+      "topic_name": "Ứng dụng đạo hàm",
+      "old_filename": "150_CHU_DE_WORD/150_Toan_12_Ung_dung_ao_ham.docx",
+      "corrected_filename": "150_CHU_DE_WORD/150_Toan_12_Ung_dung_dao_ham.docx",
+      "sha256": "6192212b77d06f3ffed9b8af5175c62afe67c0822f38124a501b3a39b84f9cea",
+      "filename_changed": true
+    }
+  ]
+}

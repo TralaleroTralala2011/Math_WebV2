@@ -34,6 +34,14 @@ class KnowledgeService:
         self.path = KNOWLEDGE_DIR / "index.json"
         self.data = json.loads(self.path.read_text(encoding="utf-8"))
         self.by_id = {item["id"]: {**item, "grade": int(grade)} for grade, items in self.data.items() for item in items}
+        # V61: grade-scoped Word title / file aliases; IDs remain authoritative.
+        # Ambiguous labels (for instance the two different "Dãy số" topics)
+        # are deliberately excluded from aliases to avoid wrong-topic questions.
+        aliases_file = self.path.parent.parent / "storage" / "word_topic_aliases_v61.json"
+        try:
+            self.word_topic_aliases = json.loads(aliases_file.read_text(encoding="utf-8")).get("aliases", {})
+        except (OSError, ValueError, TypeError):
+            self.word_topic_aliases = {}
 
     def list_topics(self, grade: int | None = None):
         if grade is None:
@@ -56,6 +64,8 @@ class KnowledgeService:
             raw = str(topic).strip()
             folded = raw.casefold()
             canonical = self.GAME_TOPIC_ALIASES.get(folded, folded)
+            if canonical not in allowed:
+                canonical = self.word_topic_aliases.get(str(int(grade)), {}).get(folded, canonical)
             if canonical in allowed and canonical not in result:
                 result.append(canonical)
         return result
