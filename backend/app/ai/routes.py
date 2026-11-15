@@ -151,7 +151,7 @@ def practice_session(req:QuestionRequest, authorization: str | None = Header(def
         if req.problem_mode:
             result=service.generate_problem_set(req.grade,req.topics,req.count,effective_difficulty(req),req.problem_parts,req.history,req.game_id)
         else:
-            result=service.generate_set(req.grade,req.topics,req.count,effective_difficulty(req),req.question_type,req.history,req.game_id)
+            result=service.generate_set(req.grade,req.topics,req.count,effective_difficulty(req),req.question_type,req.history,req.game_id,allow_partial=bool(req.game_id))
         result["mode"]="practice"
         try: archive_questions(req.grade, req.topics, result.get("questions", []), game_id=req.game_id or "", source="AI runtime · practice session")
         except Exception: pass

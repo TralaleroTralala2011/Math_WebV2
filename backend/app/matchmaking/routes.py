@@ -635,9 +635,10 @@ def generate_ai_battle_questions(grade, topics, difficulty, question_type, *, ex
     If the bank is exhausted, it returns a shorter batch or raises 503 initially.
     """
     from ..ai.engine.validator import validate, ValidationError
+    from ..ai.engine.question_identity import question_key
     from ..questions.answer_checker import canonical_type
     existing = list(existing or [])
-    seen = {" ".join(str(q.get("question", "")).casefold().split()) for q in existing}
+    seen = {question_key(q.get("question", "")) for q in existing}
     result = []
     topics = list(dict.fromkeys(str(t) for t in topics if t))
     if not topics:
@@ -660,12 +661,12 @@ def generate_ai_battle_questions(grade, topics, difficulty, question_type, *, ex
                 try:
                     options = json.loads(item.get("options") or "[]")
                     q = {
-                        "id": "v254_" + str(item["id"]), "grade": grade,
+                        "id": "bank_" + str(item["id"]), "grade": grade,
                         "topic": topic, "difficulty": "medium",
                         "question_type": item["question_type"],
                         "question": item["question"], "answer": item["answer"],
                         "solution": item["solution"], "explanation": item["solution"],
-                        "options": options, "source": "Question_Bank_V254",
+                        "options": options, "source": item.get("source") or "Question_Bank_V254",
                         "bank_status": "candidate_unverified",
                         "difficulty_fallback": (item["difficulty"] != difficulty),
                         "archetype": "v254_" + str(item["id"]),
@@ -678,8 +679,8 @@ def generate_ai_battle_questions(grade, topics, difficulty, question_type, *, ex
     for q in candidates:
         if len(result) >= count:
             break
-        text = " ".join(str(q.get("question") or "").casefold().split())
-        if not text or text in seen:
+        text = question_key(q.get("question") or "")
+        if not q.get("question") or text in seen:
             continue
         try:
             validate(q)

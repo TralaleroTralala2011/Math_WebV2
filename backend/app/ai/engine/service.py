@@ -11,6 +11,7 @@ from .feedback import feedback
 from .explanation import build_detailed_solution
 from .topic_expansion import geometry_diagram
 from .question_history import QuestionHistory
+from .question_identity import question_key
 
 class QuestionStore:
     def __init__(self): self.items={}
@@ -41,7 +42,7 @@ class AIQuestionService:
     def topics(self,grade=None): return self.knowledge.list_topics(grade)
 
     def _v254_candidates(self, grade, topic_id, difficulty, question_type):
-        """Use non-overlapping screened V59 additions plus the original V254.
+        """Use screened Word/V59 overlays alongside the original V254.
 
         The full, original B56 bank is preserved as a fallback only if the
         screened overlay is not accessible. This prevents sampling the same
@@ -54,12 +55,17 @@ class AIQuestionService:
         from .v254_bank import ensure_v254_bank
         from .b56_bank import ensure_b56_bank
         from .v59_bank import ensure_v59_bank
+        from .word_bank import ensure_word_bank
         requested_type = "short_answer" if question_type == "written" else question_type
         requested_level = normalize(difficulty)
         result = []
         seen = set()
         v59_path=ensure_v59_bank()
-        sources=[v59_path, ensure_v254_bank()] if v59_path else [ensure_v254_bank(), ensure_b56_bank()]
+        word_path=ensure_word_bank()
+        sources=([word_path] if word_path else []) + (
+            [v59_path, ensure_v254_bank()] if v59_path
+            else [ensure_v254_bank(), ensure_b56_bank()]
+        )
         for path in sources:
             if path is None:
                 continue
@@ -78,7 +84,7 @@ class AIQuestionService:
                     ).fetchall()
                 for row in rows:
                     item = dict(row)
-                    signature = " ".join(str(item.get("question", "")).casefold().split())
+                    signature = question_key(item.get("question", ""))
                     if not signature or signature in seen:
                         continue
                     # Clearly invalid short-answer labels must never reach
@@ -212,12 +218,13 @@ class AIQuestionService:
             q["answer"] = ",".join("Đúng" if x else "Sai" for x in statement_answers)
         return q
 
-    def generate_one(self,grade,topic_id,difficulty="medium",question_type="multiple_choice",seen=None,game_id=None,recent_families=None,seen_structures=None,seen_variations=None,seen_archetypes=None,max_attempts_per_phase=150):
+    def generate_one(self,grade,topic_id,difficulty="medium",question_type="multiple_choice",seen=None,game_id=None,recent_families=None,seen_structures=None,seen_variations=None,seen_archetypes=None,max_attempts_per_phase=150,seen_text_keys=None):
         topic_info = self.knowledge.get(topic_id)
         if topic_info is None: raise ValueError("Unknown topic")
         if int(topic_info.get("grade",grade)) != int(grade):
             raise ValueError("Topic does not belong to requested grade")
         seen=set(seen or set())
+        seen_text_keys=set(seen_text_keys or ())
         seen_structures=set(seen_structures or set())
         seen_variations=set(seen_variations or set())
         seen_archetypes=set(seen_archetypes or set())
@@ -240,7 +247,7 @@ class AIQuestionService:
             except ValidationError:
                 continue
             variation = self._variation_key(q)
-            if q["fingerprint"] in seen or self.question_history.question_seen(q.get("question", "")):
+            if q["fingerprint"] in seen or question_key(q.get("question", "")) in seen_text_keys or self.question_history.question_seen(q.get("question", "")):
                 continue
             if q.get("structure_fingerprint") in seen_structures or variation in seen_variations:
                 continue
@@ -281,7 +288,7 @@ class AIQuestionService:
             except ValidationError:
                 continue
             variation = self._variation_key(q)
-            if q["fingerprint"] in seen or self.question_history.question_seen(q["question"]):
+            if q["fingerprint"] in seen or question_key(q.get("question", "")) in seen_text_keys or self.question_history.question_seen(q["question"]):
                 continue
             if q.get("structure_fingerprint") in seen_structures or variation in seen_variations:
                 continue
@@ -300,7 +307,7 @@ class AIQuestionService:
                 except ValidationError as e: last=e; continue
 
                 variation = self._variation_key(q)
-                if q["fingerprint"] in seen or self.question_history.question_seen(q.get("question", "")):
+                if q["fingerprint"] in seen or question_key(q.get("question", "")) in seen_text_keys or self.question_history.question_seen(q.get("question", "")):
                     continue
                 if strict and q.get("structure_fingerprint") in seen_structures:
                     continue
@@ -345,7 +352,7 @@ class AIQuestionService:
         random.shuffle(kinds)
         return kinds
 
-    def generate_set(self,grade,topics,count,difficulty="medium",question_type="multiple_choice",history=None,game_id=None,max_attempts_per_phase=150):
+    def generate_set(self,grade,topics,count,difficulty="medium",question_type="multiple_choice",history=None,game_id=None,max_attempts_per_phase=150,allow_partial=False):
         if count<1 or count>MAX_COUNT: raise ValueError("count out of range")
         if question_type not in {"multiple_choice", "short_answer", "true_false", "mixed"}:
             raise ValueError("Unsupported question type")
@@ -354,6 +361,7 @@ class AIQuestionService:
         current=normalize(difficulty)
         out=[]; seen=set()
         seen_structures=set()
+        seen_text_keys=set()
         seen_variations=set()
         seen_archetypes=set()
         recent_families=[]
@@ -366,6 +374,7 @@ class AIQuestionService:
             if isinstance(item, dict):
                 if item.get("structure_fingerprint"): seen_structures.add(item["structure_fingerprint"])
                 if item.get("fingerprint"): seen.add(item["fingerprint"])
+                if item.get("question"): seen_text_keys.add(question_key(item["question"]))
                 if item.get("template_family"): recent_families.append(item["template_family"])
                 if item.get("variation_key"): seen_variations.add(item["variation_key"])
                 if item.get("archetype"): seen_archetypes.add(item["archetype"])
@@ -381,7 +390,14 @@ class AIQuestionService:
             # just because the set contains ten questions.
             level=current
             item_type = mixed_types[i] if question_type == "mixed" else question_type
-            q=self.generate_one(grade,topic,level,item_type,seen,game_id,recent_families[-10:],seen_structures,seen_variations,seen_archetypes,max_attempts_per_phase)
+            try:
+                q=self.generate_one(grade,topic,level,item_type,seen,game_id,recent_families[-10:],seen_structures,seen_variations,seen_archetypes,max_attempts_per_phase,seen_text_keys)
+            except RuntimeError:
+                # Mini-games can use fewer *distinct* questions when a narrow
+                # topic/type is depleted. Never duplicate to fill the request.
+                if allow_partial and out:
+                    break
+                raise
             q["variation_key"]=self._variation_key(q)
             # Prefer a diagram reconstructed from this exact question whenever
             # its wording contains coordinate, slope, graph, or geometric data.
@@ -396,7 +412,7 @@ class AIQuestionService:
             diagram = generated_diagram if (generated_diagram and explicit_figure) else (q.get("diagram") or generated_diagram)
             if diagram:
                 q["diagram"] = diagram
-            seen.add(q["fingerprint"]); seen_structures.add(q.get("structure_fingerprint")); seen_variations.add(q["variation_key"]);
+            seen.add(q["fingerprint"]); seen_text_keys.add(question_key(q.get("question", ""))); seen_structures.add(q.get("structure_fingerprint")); seen_variations.add(q["variation_key"]);
             if q.get("archetype"): seen_archetypes.add(q["archetype"])
             out.append(q)
             if q.get("template_family"): recent_families.append(q["template_family"])

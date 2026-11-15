@@ -3,6 +3,13 @@ from pathlib import Path
 from ..config import KNOWLEDGE_DIR
 
 class KnowledgeService:
+    # Game-only bank topics supported by B56/Word, not added to the 150-topic
+    # public catalogue, to keep existing navigation IDs and counts stable.
+    GAME_BANK_TOPICS = {
+        "chia_du": {"id":"chia_du","name":"Chia dư","grade":10},
+        "chia_het": {"id":"chia_het","name":"Chia hết","grade":10},
+        "phuong_trinh_bac_hai": {"id":"phuong_trinh_bac_hai","name":"Phương trình bậc hai","grade":10},
+    }
     GAME_TOPIC_ALIASES = {
         "probability": "xac_suat",
         "combination": "hoan_vi_chinh_hop_to_hop",
@@ -10,16 +17,16 @@ class KnowledgeService:
         "function": "ham_so_bac_hai",
         "system-equation": "phuong_trinh_he",
         "system_equation": "phuong_trinh_he",
-        "quadratic-equation": "ham_so_bac_hai",
-        "quadratic_equation": "ham_so_bac_hai",
+        "quadratic-equation": "phuong_trinh_bac_hai",
+        "quadratic_equation": "phuong_trinh_bac_hai",
         "inequality": "bat_phuong_trinh",
         "sequence": "day_so",
-        "divisibility": "menh_de_tap_hop",
-        "remainder": "menh_de_tap_hop",
-        "radical": "menh_de_tap_hop",
-        "identities": "menh_de_tap_hop",
-        "algebraic-fraction": "menh_de_tap_hop",
-        "geometry": "menh_de_tap_hop",
+        "divisibility": "chia_het",
+        "remainder": "chia_du",
+        "radical": "g10_radical_equations_advanced",
+        "identities": "ham_so_bac_hai",
+        "algebraic-fraction": "phuong_trinh",
+        "geometry": "hinh_hoc_10",
         "statistics": "thong_ke",
     }
 
@@ -34,10 +41,12 @@ class KnowledgeService:
         return self.data.get(str(grade), [])
 
     def get(self, topic_id: str):
-        return self.by_id.get(topic_id) or self.by_id.get(self.GAME_TOPIC_ALIASES.get(topic_id, topic_id))
+        canonical=self.GAME_TOPIC_ALIASES.get(str(topic_id).casefold(),str(topic_id))
+        return self.by_id.get(canonical) or self.GAME_BANK_TOPICS.get(canonical)
 
     def normalize_topics(self, grade: int, topics: list[str] | None):
         allowed = {x["id"] for x in self.list_topics(grade)}
+        allowed.update(x for x, info in self.GAME_BANK_TOPICS.items() if info["grade"] == int(grade))
         if not topics:
             return list(allowed)
         result = []
