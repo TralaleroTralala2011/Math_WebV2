@@ -13,6 +13,7 @@ from .explanation import build_detailed_solution
 from .topic_expansion import geometry_diagram
 from .question_history import QuestionHistory
 from .question_identity import question_key
+from .topic_relevance import is_question_on_topic
 
 class QuestionStore:
     def __init__(self): self.items={}
@@ -67,6 +68,8 @@ class AIQuestionService:
         # Old V254/V59/V60 records remain available as fallbacks. Never map a
         # missing topic to an unrelated one and never show duplicate prompts.
         for item in select_word_questions(int(grade),str(topic_id),requested_level,requested_type,limit=150):
+            if not is_question_on_topic(topic_id, item.get('question', '')):
+                continue
             signature=question_key(item.get('question',''))
             if not signature or signature in seen:continue
             seen.add(signature)
@@ -96,6 +99,8 @@ class AIQuestionService:
                     ).fetchall()
                 for row in rows:
                     item=dict(row)
+                    if not is_question_on_topic(topic_id, item.get('question', '')):
+                        continue
                     signature=question_key(item.get('question',''))
                     if not signature or signature in seen:continue
                     if requested_type=='short_answer' and re.match(
@@ -248,7 +253,7 @@ class AIQuestionService:
         # They pass the same validation and duplicate gates as generated questions.
         for item in self._curated_admin_candidates(grade, topic_id, difficulty, question_type, game_id):
             q = self._build_curated_question(item, grade, topic_id, difficulty, question_type)
-            if not q:
+            if not q or not is_question_on_topic(topic_id, q.get('question', '')):
                 continue
             try:
                 validate(q)
@@ -298,6 +303,8 @@ class AIQuestionService:
                     'generation_style':'v254_import','game_id':str(game_id or ''),
                     'knowledge_name':(self.knowledge.get(topic_id) or {}).get('name','')
                 }
+                if not is_question_on_topic(topic_id, q.get('question', '')):
+                    continue
                 try:
                     validate(q)
                 except ValidationError:
@@ -319,6 +326,8 @@ class AIQuestionService:
         for strict in (True, False):
             for _ in range(max(1, min(150, int(max_attempts_per_phase)))):
                 q=self.generator.generate(grade,topic_id,normalize(difficulty),question_type,game_id,recent_families)
+                if not is_question_on_topic(topic_id, q.get('question', '')):
+                    continue
                 try: validate(q)
                 except ValidationError as e: last=e; continue
 
@@ -448,6 +457,10 @@ class AIQuestionService:
             problem=None
             for _ in range(40):
                 candidate=self.problem_generator.generate(grade,topic,current,problem_parts,"mixed",game_id)
+                visible_text = ' '.join(str(candidate.get(k, '') or '') for k in ('title','context'))
+                visible_text += ' ' + ' '.join(str(p.get('question', '') or '') for p in candidate.get('parts', []))
+                if not is_question_on_topic(topic, visible_text):
+                    continue
                 signature=(candidate.get("archetype"),candidate.get("title"),candidate.get("context"))
                 persistent_signature = " | ".join(str(x or "") for x in signature)
                 if signature not in seen_titles and not self.question_history.problem_seen(persistent_signature):

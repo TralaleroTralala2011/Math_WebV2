@@ -15,6 +15,8 @@ import zipfile
 from contextlib import closing
 from pathlib import Path
 
+from .topic_relevance import is_question_on_topic, audited_topic_ids
+
 STORAGE = Path(__file__).resolve().parents[1] / 'storage'
 DB_FILE = STORAGE / 'v62_word_source.sqlite'
 SEED_FILE = STORAGE / 'v62_word_source.seed.zip'
@@ -94,9 +96,10 @@ def select_word_questions(grade:int,topic:str,difficulty:str,question_type:str,l
                           source_word,source_question_number,status,form_id,form_title
                    FROM questions WHERE grade=? AND topic=? AND difficulty=? AND question_type=?
                    ORDER BY RANDOM() LIMIT ?''',
-                (int(grade),str(topic),str(difficulty),question_type,max(1,min(150,int(limit))))
+                (int(grade),str(topic),str(difficulty),question_type,
+                 max(1,min(2000,int(limit) * (8 if str(topic) in audited_topic_ids() else 1))))
             ).fetchall()
-            return [dict(r) for r in data]
+            return [dict(r) for r in data if is_question_on_topic(str(topic), r['question'])][:max(1, min(150, int(limit)))]
     except (OSError,ValueError,sqlite3.Error):
         return []
 
@@ -107,6 +110,32 @@ def source_availability(grade:int|None=None, topic:str|None=None):
     if path is None:
         return {'available':False,'reason':'word_source_bank_missing_or_invalid'}
     manifest=json.loads(MANIFEST.read_text(encoding='utf8'))
+    # For audited mislabeled topics, report the *eligible* availability rather
+    # than raw rows with the requested topic metadata. This avoids advertising
+    # 634 valid exercises when 541 belong to unrelated triangle skills.
+    if topic in audited_topic_ids():
+        rows_by_group = {}
+        excluded = 0
+        with closing(sqlite3.connect(f'file:{path.as_posix()}?mode=ro',uri=True)) as conn:
+            query = 'SELECT grade,topic,question_type,difficulty,question FROM questions WHERE topic=?'
+            params = [str(topic)]
+            if grade is not None:
+                query += ' AND grade=?'
+                params.append(int(grade))
+            for row_grade, row_topic, kind, level, question in conn.execute(query, params):
+                if not is_question_on_topic(str(topic), question):
+                    excluded += 1
+                    continue
+                key = (row_grade, row_topic, kind, level)
+                rows_by_group[key] = rows_by_group.get(key, 0) + 1
+        rows = [dict(zip(('grade','topic','question_type','difficulty','count'),(*key,count)))
+                for key,count in sorted(rows_by_group.items())]
+        return {'available':True,'source_word_files':manifest['source_files'],
+                'source_sha256':manifest['source_sha256'],
+                'quality_status':'candidate_unverified;topic_relevance_screened',
+                'topic_relevance_screened':True,'off_topic_excluded':excluded,
+                'matched_question_count':sum(row['count'] for row in rows),
+                'topics':rows}
     query = ('SELECT grade,topic,question_type,difficulty,COUNT(*) AS total FROM questions WHERE 1=1')
     params=[]
     if grade is not None:

@@ -114,6 +114,110 @@ def _g10_triangle(level, game_id=""):
 
 
 
+def _g10_quadrilaterals_properties(level):
+    """Skill-specific fallback. Do not serve unrelated plane/triangle examples.
+
+    Every numeric answer is derived from the exact stated parallelogram or
+    rhombus properties; no generic geometry fallback is used for this topic.
+    """
+    level = level if level in {'easy','medium','hard'} else 'medium'
+    families = {
+        'easy': ['parallelogram_perimeter','parallelogram_area','rhombus_area','opposite_angles'],
+        'medium': ['rhombus_missing_diagonal','fourth_vertex','adjacent_angles',
+                   'midpoint_opposite_vertex','parallelogram_missing_height'],
+        'hard': ['determinant_area','rhombus_perimeter_diagonals',
+                 'parallelogram_diagonals','rhombus_area_to_perimeter',
+                 'parallelogram_double_triangle_area'],
+    }
+    family = random.choice(families[level])
+    if family == 'parallelogram_perimeter':
+        a,b = random.randint(3,20), random.randint(3,19)
+        correct = 2*(a+b)
+        return _q(f'Hình bình hành ABCD có AB={a} cm, BC={b} cm. Tính chu vi.',str(correct),
+            f'Các cạnh đối của hình bình hành bằng nhau. P=2(AB+BC)=2({a}+{b})={correct} cm.',
+            [str(a+b),str(2*a+b),str(2*b+a)],'Áp dụng tính chất hai cặp cạnh đối bằng nhau.',family)
+    if family == 'parallelogram_area':
+        a,h=random.randint(4,23),random.randint(3,17);ans=a*h
+        return _q(f'Một hình bình hành có cạnh đáy {a} cm và chiều cao tương ứng {h} cm. Tính diện tích.',str(ans),
+            f'Diện tích hình bình hành bằng đáy nhân chiều cao: S={a}·{h}={ans} cm².',
+            [str(ans+h),str(ans+a),str(a+h)],'Không chia 2 khi tính diện tích hình bình hành.',family)
+    if family == 'rhombus_area':
+        p,q=random.randint(3,17),random.randint(3,16);d1,d2=2*p,2*q;ans=2*p*q
+        return _q(f'Hình thoi ABCD có hai đường chéo dài {d1} cm và {d2} cm. Tính diện tích hình thoi.',str(ans),
+            f'S=d₁d₂/2={d1}·{d2}/2={ans} cm².',
+            [str(ans*2),str(ans+p),str(ans+q)],'Diện tích hình thoi bằng nửa tích hai đường chéo.',family)
+    if family == 'opposite_angles':
+        angle=random.randint(30,150)
+        return _q(f'Hình bình hành ABCD có góc A={angle}°. Tính góc C đối diện với góc A.',str(angle),
+            f'Trong hình bình hành, hai góc đối bằng nhau. Vậy góc C=góc A={angle}°.',
+            [str(180-angle),str(90),str(angle+10)],'Hai góc đối của hình bình hành bằng nhau.',family)
+    if family == 'rhombus_missing_diagonal':
+        d1=random.randrange(6,32,2);d2=random.randrange(6,28,2);area=d1*d2//2
+        return _q(f'Hình thoi có diện tích {area} cm², một đường chéo dài {d1} cm. Tính độ dài đường chéo còn lại.',str(d2),
+            f'S=d₁d₂/2 nên d₂=2S/d₁=2·{area}/{d1}={d2} cm.',
+            [str(d2+2),str(area//2),str(d1+d2)],'Giải công thức diện tích hình thoi theo đường chéo cần tìm.',family)
+    if family == 'adjacent_angles':
+        a=random.randint(35,145);b=180-a
+        return _q(f'Hình bình hành ABCD có góc A={a}°. Tính góc B kề với góc A.',str(b),
+            f'Hai góc kề trong hình bình hành bù nhau: góc B=180°−{a}°={b}°.',
+            [str(a),str(90),str(b+10)],'Tính chất hai góc kề bù của hình bình hành.',family)
+    if family == 'parallelogram_missing_height':
+        a=random.randint(5,22);h=random.randint(4,18);s=a*h
+        return _q(f'Hình bình hành có diện tích {s} cm² và cạnh đáy {a} cm. Tính chiều cao tương ứng với đáy.',str(h),
+            f'S=a·h nên h=S/a={s}/{a}={h} cm.',
+            [str(a),str(h+2),str(s)],'Đổi công thức diện tích hình bình hành để tìm chiều cao.',family)
+    if family in {'fourth_vertex','midpoint_opposite_vertex'}:
+        ax,ay=random.randint(-7,7),random.randint(-7,7)
+        if family == 'fourth_vertex':
+            ux,uy=random.randint(2,7),random.randint(-3,4)
+            vx,vy=random.randint(-3,4),random.randint(2,7)
+            if ux*vy-uy*vx==0:vy+=3
+            bx,by=ax+ux,ay+uy;dx,dy=ax+vx,ay+vy;cx,cy=bx+vx,by+vy
+            ans=f'({cx}; {cy})'
+            text=f'Trong hình bình hành ABCD, A({ax};{ay}), B({bx};{by}), D({dx};{dy}). Tìm tọa độ đỉnh C.'
+            solution=f'Từ quy tắc hình bình hành, C=B+D−A=({bx}+{dx}−({ax});{by}+{dy}−({ay}))={ans}.'
+            diagram=coordinate_points({'A':[ax,ay],'B':[bx,by],'C':[cx,cy],'D':[dx,dy]},[['A','B'],['B','C'],['C','D'],['D','A']], 'Các đỉnh hình bình hành được dựng theo đúng tọa độ đề bài.')
+            return _q(text,ans,solution,[f'({bx}; {dy})',f'({ax+bx}; {ay+by})',f'({dx}; {cy})'],
+                      'Hai cặp cạnh đối của hình bình hành là các vectơ bằng nhau.',family,diagram=diagram)
+        ix,iy=ax+random.randint(2,8),ay+random.randint(2,8)
+        cx,cy=2*ix-ax,2*iy-ay;ans=f'({cx}; {cy})'
+        return _q(f'Hình bình hành ABCD có A({ax};{ay}) và giao điểm hai đường chéo I({ix};{iy}). Tìm tọa độ C.',ans,
+            f'Đường chéo hình bình hành cắt nhau tại trung điểm, nên C=2I−A=({2*ix}−({ax});{2*iy}−({ay}))={ans}.',
+            [f'({ix}; {iy})',f'({cx+1}; {cy})',f'({cx}; {cy+2})'],
+            'Dùng tính chất hai đường chéo cắt nhau tại trung điểm.',family)
+    if family == 'determinant_area':
+        ax,ay=random.randint(-5,5),random.randint(-5,5)
+        u=random.randint(3,12);v=random.randint(2,9);offset=random.randint(1,6)
+        bx,by=ax+u,ay;dx,dy=ax+offset,ay+v;area=u*v
+        return _q(f'Trong mặt phẳng Oxy, hình bình hành ABCD có A({ax};{ay}), B({bx};{by}), D({dx};{dy}). Tính diện tích hình bình hành (đơn vị diện tích).',str(area),
+            f'AB=({u};0), AD=({offset};{v}). Diện tích bằng |det(AB,AD)|=|{u}·{v}−0·{offset}|={area}.',
+            [str(area+v),str(area*2),str(u+v)],'Dùng trị tuyệt đối định thức của hai vectơ cạnh kề.',family,
+            diagram=coordinate_points({'A':[ax,ay],'B':[bx,by],'D':[dx,dy],'C':[bx+offset,by+v]},[['A','B'],['B','C'],['C','D'],['D','A']], 'Hình bình hành theo đúng tọa độ đề bài.'))
+    if family in {'rhombus_perimeter_diagonals','rhombus_area_to_perimeter'}:
+        p,q,c=random.choice([(3,4,5),(5,12,13),(8,15,17),(7,24,25)])
+        scale=random.randint(1,3);p*=scale;q*=scale;c*=scale
+        d1,d2=2*p,2*q;perimeter=4*c
+        if family == 'rhombus_area_to_perimeter':
+            text=f'Hình thoi có diện tích {2*p*q} cm² và một đường chéo dài {d1} cm. Tính chu vi hình thoi.'
+            first=f'S=d₁d₂/2 nên d₂=2S/d₁={2*(2*p*q)}/{d1}={d2} cm. '
+        else:
+            text=f'Hình thoi ABCD có hai đường chéo dài {d1} cm và {d2} cm. Tính chu vi.'
+            first=''
+        return _q(text,str(perimeter),first+f'Hai đường chéo hình thoi vuông góc và cắt nhau tại trung điểm. Mỗi cạnh bằng √({p}²+{q}²)={c} cm. Chu vi=4·{c}={perimeter} cm.',
+            [str(2*c),str(perimeter+4),str(d1+d2)],'Dùng tam giác vuông tạo bởi hai nửa đường chéo.',family)
+    if family == 'parallelogram_diagonals':
+        u=random.randint(3,10);v=random.randint(3,9);k=random.randint(1,5)
+        # AB=(u,0), AD=(k,v), BD=AD−AB.
+        val=(k-u)**2+v*v
+        return _q(f'Hình bình hành ABCD có các vectơ AB=({u};0), AD=({k};{v}). Tính bình phương độ dài đường chéo BD.',str(val),
+            f'BD=AD−AB=({k}−{u};{v})=({k-u};{v}), do đó BD²=({k-u})²+{v}²={val}.',
+            [str(val+v),str((k+u)**2+v*v),str(val+u)],'Dùng vectơ BD=AD−AB và công thức bình phương độ dài.',family)
+    s=random.randint(10,50);ans=2*s
+    return _q(f'Hình bình hành ABCD có diện tích tam giác ABC bằng {s} cm². Tính diện tích hình bình hành ABCD.',str(ans),
+        f'Đường chéo AC chia hình bình hành thành hai tam giác có diện tích bằng nhau, nên S_ABCD=2·S_ABC=2·{s}={ans} cm².',
+        [str(s),str(ans+2),str(3*s)],'Đường chéo hình bình hành chia thành hai tam giác bằng diện tích.',family)
+
+
 def _g10_plane_geometry(level):
     """Broad plane-geometry bank for foundational, intermediate and olympiad-style practice."""
     if level == "easy":
@@ -576,6 +680,8 @@ def _generate_geometry_question(grade: int, topic_id: str, difficulty: str, game
     g=int(grade or 10)
     if t == "g10_geom_coordinate_distance_midpoint":
         return _g10_coordinate_midpoint_topic(difficulty)
+    if t == "g10_geom_quadrilaterals_properties":
+        return _g10_quadrilaterals_properties(difficulty)
     aliases={
       "hinh_hoc_co_ban_10":"plane", "tam_giac_tu_giac_10":"plane", "duong_tron_co_ban_10":"circle", "he_thuc_luong_van_dung_10":"triangle", "toa_do_hinh_hoc_10":"coordinate", "chung_minh_hinh_hoc_10":"plane", "phep_bien_hinh_co_ban_11":"transform", "nhan_biet_hinh_khong_gian_11":"space11", "hinh_khoi_va_the_tich_co_ban_12":"volume", "hinh_hoc_oxyz_van_dung_12":"space12",
       "he_thuc_luong":"triangle", "he_thuc_luong_tam_giac":"triangle", "hinh_hoc_10":"plane",
@@ -680,6 +786,10 @@ def generate(grade: int, topic_id: str, difficulty: str, game_id: str | None = N
         return q
     if not q.get("diagram"):
         tid = topic_id
+        # No generic triangle/coordinate picture for a parallelogram task.
+        # Only draw a figure when the actual prompt provides reconstructible data.
+        if tid == "g10_geom_quadrilaterals_properties":
+            return q
         # Topic-family fallbacks are intentionally shape-specific; these diagrams
         # are labeled as illustrations and never claim to be numerically to scale.
         if any(k in tid for k in ("circle", "chords", "sphere")) or tid in {"g12_geom_sphere_equation", "g12_geom_sphere_tangent_plane", "g12_geom_sphere_plane_intersection"}:

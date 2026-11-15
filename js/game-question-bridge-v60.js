@@ -6,6 +6,19 @@
        .replace(/\s*([=+*/;(),?:])\s*/g,'$1').replace(/\s+/g,' ')
        .trim().replace(/[\s.!?]+$/,'').toLocaleLowerCase('vi-VN');
   function key(question){ return canon(question && (question.text || question.question) || ''); }
+  // Extra browser-side protection for a verified mislabeled Word topic.
+  // The API is the authoritative gate, but deployed frontends may talk to an
+  // older Render backend, so never render a known unrelated exercise anyway.
+  const plain = value => String(value||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+       .replace(/đ/g,'d').replace(/Đ/g,'D').toLocaleLowerCase('vi-VN')
+       .replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
+  function relevant(topic, question){
+    if(topic!=='g10_geom_quadrilaterals_properties') return true;
+    const t=plain(question&& (question.text || question.question));
+    return /\b(hinh binh hanh|hinh thoi)\b/.test(t)
+        || (/\btu giac\b/.test(t)
+         && /\b(duong cheo|canh doi|goc doi|hai cap canh|trung diem|song song|bang nhau)\b/.test(t));
+  }
   async function getBatch(opts){
     const {api,game,stage,history=[],state,normalizeQuestion,topicQuestionValid} = opts;
     const topic = String(game && game.topicId || '');
@@ -44,7 +57,7 @@
         const data=await response.json();
         for(const raw of (Array.isArray(data.questions)?data.questions:[])){
           const q=normalizeQuestion(raw);
-          if(!topicQuestionValid(q))continue;
+          if(!topicQuestionValid(q) || !relevant(topic,q))continue;
           const k=key(q);
           if(!k || seen.has(k))continue;
           seen.add(k);
