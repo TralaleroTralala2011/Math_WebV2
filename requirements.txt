@@ -6,3 +6,8 @@ python-docx>=1.1
 openpyxl>=3.1
 
 sympy>=1.13,<2
+
+# Required for encrypted Admin backup/restore on Render.
+cryptography>=42
+# Required for FastAPI File/Form upload endpoints.
+python-multipart>=0.0.9

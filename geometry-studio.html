@@ -4,7 +4,7 @@
 <script src="js/protected-pages.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathGeo Studio v25.0 - Universal Geometry AI & 3D Extended</title>
+    <title>MathGeo Studio V65 - 2D & 3D Geometry Tools</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -15,6 +15,21 @@
         ::-webkit-scrollbar-thumb:hover { background: #475569; }
         canvas { touch-action: none; user-select: none; }
     @media(max-width:850px){body{height:auto;min-height:100dvh;overflow:auto}header{position:relative}body>div.flex-1{display:flex;flex-direction:column;overflow:visible!important}aside{width:100%!important;max-height:48vh;min-height:250px;overflow:auto!important}main{min-height:52vh;min-width:0}#geo-canvas{min-height:48vh}.draw-concept-btn{min-height:38px}}
+
+/* V65 dedicated 3D drawing controls, independent of third-party CSS availability. */
+body.mw-geometry-studio .geo3d-edit{margin-top:12px;background:#0e2033;border:1px solid #225876;border-radius:12px;padding:12px;color:#e5f4ff;display:grid;gap:9px}
+body.mw-geometry-studio .geo3d-edit h3{font-size:15px;font-weight:800;margin:0;color:#67e8f9}
+body.mw-geometry-studio .geo3d-help{font-size:12px;color:#acc3dd;line-height:1.55;margin:0}
+body.mw-geometry-studio .geo3d-row{display:flex;gap:6px;flex-wrap:wrap;align-items:end}
+body.mw-geometry-studio .geo3d-row label{display:grid;gap:3px;font-size:11px;color:#cbd5e1;flex:1;min-width:90px}
+body.mw-geometry-studio .geo3d-coords label:first-child{flex:2;min-width:110px}
+body.mw-geometry-studio .geo3d-row input,body.mw-geometry-studio .geo3d-row select{width:100%;max-width:100%;min-width:0;color:#e5f4ff;background:#061423;border:1px solid #385471;padding:9px 7px;border-radius:8px}
+body.mw-geometry-studio .geo3d-row button{flex:1;min-width:90px;padding:9px 7px;background:#123b56;border:1px solid #27769b;color:#d8f8ff;border-radius:8px;font-size:12px}
+body.mw-geometry-studio #geo3d-status{margin:0;min-height:30px;font-size:12px;color:#bae6fd}
+body.mw-geometry-studio #geo-ai-status{font-size:12px;line-height:1.5;min-height:25px}
+body.mw-geometry-studio #geo-canvas{touch-action:none}
+body.mw-geometry-studio.geo-mode-3d #measure-panel{display:none!important}
+@media(max-width:850px){body.mw-geometry-studio .geo3d-row button{min-width:calc(50% - 6px)}body.mw-geometry-studio .geo3d-edit{padding:10px}}
 </style>
 <link rel="stylesheet" href="css/geometry-studio-fallback.css">
 <link rel="stylesheet" href="css/quick-navigation.css">
@@ -34,7 +49,7 @@
             <div>
                 <h1 class="text-xs font-bold tracking-wide text-white flex items-center gap-2">
                     MathGeo Studio Pro
-                    <span class="bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 text-[10px] px-2 py-0.5 rounded-full font-semibold">v25.0 AI & 3D Extended</span>
+                    <span class="bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 text-[10px] px-2 py-0.5 rounded-full font-semibold">V65 · Dựng hình 2D/3D</span>
                 </h1>
             </div>
         </div>
@@ -345,10 +360,10 @@
                 <div class="bg-gradient-to-b from-indigo-950/60 to-slate-900 p-3.5 rounded-xl border border-indigo-500/30 space-y-3">
                     <div class="flex items-center gap-2 text-indigo-300 font-bold text-xs uppercase tracking-wider">
                         <i class="fa-solid fa-wand-magic-sparkles text-amber-400 text-sm"></i>
-                        Universal Geometry AI Engine
+                        Trình dựng hình theo mô tả · 2D / 3D
                     </div>
                     <p class="text-[11px] text-slate-400 leading-relaxed">
-                        Hỗ trợ mọi loại hình: Tam giác, Hình thoi, Hình bình hành, Hình thang, Hình chữ nhật, Ngũ giác, Lục giác, Hình chóp 3D... kèm tỉ lệ (ví dụ: <code class="text-amber-300 font-mono">AB = 2AC</code>, <code class="text-amber-300 font-mono">BC = 5</code>).
+                        Dựng hình mẫu theo các từ khóa được hỗ trợ, có thể chỉnh tọa độ và cạnh 3D bằng tay. Không tự suy ra mọi quan hệ hình học từ văn bản. Hỗ trợ một số tỉ lệ (ví dụ: <code class="text-amber-300 font-mono">AB = 2AC</code>, <code class="text-amber-300 font-mono">BC = 5</code>).
                     </p>
                     <textarea id="ai-input-text" rows="4" class="w-full bg-slate-950 border border-slate-700 rounded-xl p-2.5 text-xs text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-500 font-sans leading-relaxed" placeholder="Ví dụ: Cho hình chóp S.ABCD có đáy ABCD là hình thang cân..."></textarea>
                     
@@ -370,6 +385,7 @@
                             <i class="fa-solid fa-dice"></i> 🎲 Đổi Hình Khác
                         </button>
                     </div>
+                    <p id="geo-ai-status" role="status" aria-live="polite" class="text-[11px] text-cyan-300">Nhập mô tả để dựng hình mẫu. Hình chỉ được xem là minh họa khi dữ kiện chưa đủ.</p>
                 </div>
             </div>
 
@@ -411,6 +427,35 @@
                             <i class="fa-solid fa-diamond text-emerald-400"></i>
                         </button>
                     </div>
+
+                    <div class="geo3d-edit" id="geo3d-editor" aria-label="Dựng và chỉnh sửa hình học không gian">
+                        <h3>✏️ Tự dựng hình 3D</h3>
+                        <p class="geo3d-help">Tọa độ thực (x, y, z). Kéo để xoay, <b>Shift + kéo điểm</b> để điều chỉnh điểm trong mặt phẳng màn hình. Hai ngón để thu/phóng.</p>
+                        <div class="geo3d-row geo3d-coords">
+                            <label>Tên điểm<input id="geo3d-name" type="text" maxlength="12" value="M" aria-label="Tên điểm 3D"></label>
+                            <label>x<input id="geo3d-x" type="number" step="any" value="0"></label>
+                            <label>y<input id="geo3d-y" type="number" step="any" value="0"></label>
+                            <label>z<input id="geo3d-z" type="number" step="any" value="0"></label>
+                        </div>
+                        <div class="geo3d-row">
+                            <button id="geo3d-add-point" type="button">＋ Thêm / sửa điểm</button>
+                            <button id="geo3d-delete-point" type="button">Xóa điểm</button>
+                        </div>
+                        <div class="geo3d-row">
+                            <label>Điểm đầu<select id="geo3d-edge-a" aria-label="Điểm đầu cạnh"></select></label>
+                            <label>Điểm cuối<select id="geo3d-edge-b" aria-label="Điểm cuối cạnh"></select></label>
+                        </div>
+                        <div class="geo3d-row">
+                            <button id="geo3d-add-edge" type="button">╱ Nối hai điểm</button>
+                            <button id="geo3d-delete-edge" type="button">Xóa cạnh</button>
+                            <button id="geo3d-measure" type="button">📏 Đo AB</button>
+                        </div>
+                        <div class="geo3d-row">
+                            <button id="geo3d-reset" type="button">⟲ Trục Ox/Oy/Oz</button>
+                            <button id="geo3d-fit" type="button">⌗ Căn vừa hình</button>
+                        </div>
+                        <p id="geo3d-status" role="status" aria-live="polite">Chọn một khối mẫu hoặc nhập tọa độ các điểm.</p>
+                    </div>
                 </div>
             </div>
 
@@ -425,7 +470,7 @@
             </div>
 
             <div class="text-[10px] text-slate-500 border-t border-slate-800 p-2 text-center bg-slate-950">
-                MathGeo Studio v25.0 - Universal AI & 3D Extended
+                MathGeo Studio V65 - Dựng hình theo mô tả
             </div>
         </aside>
 
@@ -517,6 +562,7 @@
 
         function switchMode(mode) {
             currentMode = mode;
+            document.body.classList.toggle('geo-mode-3d',mode==='3D');
             if (mode === '2D') {
                 viewMode2dBtn.className = "px-3 py-1 bg-indigo-600 text-white rounded transition shadow";
                 viewMode3dBtn.className = "px-3 py-1 text-slate-400 hover:text-white rounded transition";
@@ -526,6 +572,7 @@
                 viewMode2dBtn.className = "px-3 py-1 text-slate-400 hover:text-white rounded transition";
                 document.getElementById('bar-fx-container').style.display = 'none';
                 if (!mode3D.currentShape) init3DShape('pyramid_square');
+                refresh3DControls();
             }
             draw(); updateStats();
         }
@@ -596,12 +643,21 @@
         unitValInput.addEventListener('input', () => { draw(); updateStats(); });
         unitNameInput.addEventListener('input', () => { draw(); updateStats(); });
 
-        function saveState() {
-            historyStack.push(JSON.stringify({ points, lines, circles, rightAngleSigns, measuredAngles, vectors, functionsData, ellipses, halfPlanes, showOxyAxis, lastCreatedPointName }));
-            if (historyStack.length > 40) historyStack.shift();
-            redoStack = [];
-            updateUndoRedoButtons();
+        function snapshotState() {
+            return JSON.stringify({points,lines,circles,rightAngleSigns,measuredAngles,vectors,functionsData,ellipses,halfPlanes,showOxyAxis,lastCreatedPointName,currentMode,
+                mesh3D:{currentShape:mode3D.currentShape,nodes:mode3D.nodes,edges:mode3D.edges,rotX:mode3D.rotX,rotY:mode3D.rotY},zoom,panX,panY});
         }
+        function restoreSnapshot(raw) {
+            const st=JSON.parse(raw);
+            points=st.points||{};lines=st.lines||[];circles=st.circles||[];rightAngleSigns=st.rightAngleSigns||[];
+            measuredAngles=st.measuredAngles||[];vectors=st.vectors||[];functionsData=st.functionsData||[];
+            ellipses=st.ellipses||[];halfPlanes=st.halfPlanes||[];showOxyAxis=!!st.showOxyAxis;lastCreatedPointName=st.lastCreatedPointName||null;
+            if(st.mesh3D){mode3D.currentShape=st.mesh3D.currentShape;mode3D.nodes=st.mesh3D.nodes||{};mode3D.edges=st.mesh3D.edges||[];
+                mode3D.rotX=st.mesh3D.rotX;mode3D.rotY=st.mesh3D.rotY;}
+            zoom=st.zoom||1;panX=st.panX||0;panY=st.panY||0;
+            switchMode(st.currentMode||'2D');updateZoomDisplay();refresh3DControls();draw();updateStats();
+        }
+        function saveState(){historyStack.push(snapshotState());if(historyStack.length>40)historyStack.shift();redoStack=[];updateUndoRedoButtons();}
 
         function updateUndoRedoButtons() {
             btnUndo.disabled = historyStack.length === 0;
@@ -610,18 +666,12 @@
 
         btnUndo.addEventListener('click', () => {
             if (historyStack.length === 0) return;
-            redoStack.push(JSON.stringify({ points, lines, circles, rightAngleSigns, measuredAngles, vectors, functionsData, ellipses, halfPlanes, showOxyAxis, lastCreatedPointName }));
-            const prevState = JSON.parse(historyStack.pop());
-            points = prevState.points; lines = prevState.lines; circles = prevState.circles; rightAngleSigns = prevState.rightAngleSigns || []; measuredAngles = prevState.measuredAngles || []; vectors = prevState.vectors || []; functionsData = prevState.functionsData || []; ellipses = prevState.ellipses || []; halfPlanes = prevState.halfPlanes || []; showOxyAxis = prevState.showOxyAxis || false; lastCreatedPointName = prevState.lastCreatedPointName || null;
-            updateUndoRedoButtons(); draw(); updateStats();
+            redoStack.push(snapshotState());restoreSnapshot(historyStack.pop());updateUndoRedoButtons();
         });
 
         btnRedo.addEventListener('click', () => {
             if (redoStack.length === 0) return;
-            historyStack.push(JSON.stringify({ points, lines, circles, rightAngleSigns, measuredAngles, vectors, functionsData, ellipses, halfPlanes, showOxyAxis, lastCreatedPointName }));
-            const nextState = JSON.parse(redoStack.pop());
-            points = nextState.points; lines = nextState.lines; circles = nextState.circles; rightAngleSigns = nextState.rightAngleSigns || []; measuredAngles = nextState.measuredAngles || []; vectors = nextState.vectors || []; functionsData = nextState.functionsData || []; ellipses = nextState.ellipses || []; halfPlanes = nextState.halfPlanes || []; showOxyAxis = nextState.showOxyAxis || false; lastCreatedPointName = nextState.lastCreatedPointName || null;
-            updateUndoRedoButtons(); draw(); updateStats();
+            historyStack.push(snapshotState());restoreSnapshot(redoStack.pop());updateUndoRedoButtons();
         });
 
         const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -912,9 +962,24 @@
             return ['A', 'B', 'C', 'D', 'E', 'F'];
         }
 
+        function announceAI(message,error=false){const el=document.getElementById('geo-ai-status');if(el){el.textContent=message;el.style.color=error?'#fda4af':'#67e8f9';}}
+        function parse3DCoordinates(text){
+            const out={};const re=/\b([A-Z][A-Za-z0-9']{0,9})\s*(?:=\s*)?\(\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)/g;
+            let m;while((m=re.exec(text))!==null){const name=m[1];if(/^u$/i.test(name))continue;
+              const n=m.slice(2,5).map(x=>Number(x.replace(',','.')));if(n.every(Number.isFinite))out[name]={x:n[0]*24,y:n[1]*24,z:n[2]*24};}
+            return out;
+        }
+        function parseDirectionVector(text){
+            const m=text.match(/(?:vectơ|vector|\bu\s*=|chỉ phương)[^=]{0,45}=?\s*\(\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*[;,]\s*(-?\d+(?:[.,]\d+)?)\s*\)/i);
+            if(!m)return null;const n=m.slice(1,4).map(x=>Number(x.replace(',','.')));return n.every(Number.isFinite)?n:null;
+        }
+
         function runGenerativeAIEngine(isRandomVariation = false) {
             const text = aiInputText.value.trim();
-            if (!text) return;
+            if (!text) return announceAI('Nhập đề bài hoặc chọn một mẫu hình trước khi dựng.',true);
+            const knownPattern=/chóp|chop|tứ diện|tu dien|lăng trụ|lang tru|lập phương|lap phuong|hình hộp|hinh hop|trụ|tru|nón|non|mặt cầu|mat cau|hình cầu|hinh cau|khối cầu|khoi cau|bát diện|bat dien|hình thang|hinh thang|hình thoi|hinh thoi|hình bình hành|hinh binh hanh|tam giác|tam giac|đường tròn|duong tron|tròn|hình chữ nhật|hinh chu nhat|hình vuông|hinh vuong|đa giác|da giac|lục giác|luc giac/i;
+            if(!knownPattern.test(text) && !Object.keys(parse3DCoordinates(text)).length)
+                return announceAI('Chưa nhận diện được hình. Hãy dùng từ khóa hình học hoặc dạng tọa độ A(1;2;3). Bản vẽ hiện tại được giữ nguyên.',true);
             saveState();
             points = {}; lines = []; circles = []; rightAngleSigns = []; measuredAngles = []; functionsData = [];
             showOxyAxis = false;
@@ -932,7 +997,34 @@
             const rndY = isRandomVariation ? (Math.random() - 0.5) * 50 : 0;
 
             // 1. XỬ LÝ HÌNH HỌC KHÔNG GIAN (3D MỞ RỘNG)
-            if (textLower.includes("chóp cụt") || textLower.includes("chop cut")) {
+            const parsed3D=parse3DCoordinates(text);
+            const vector3D=parseDirectionVector(text);
+            const mentions3D=/\boxyz\b|không gian|khong gian|\b3d\b/i.test(text);
+            const hasSolid=/chóp|chop|tứ diện|tu dien|lăng trụ|lang tru|lập phương|lap phuong|hình hộp|hinh hop|chóp cụt|chop cut|trụ|tru tron|nón|non tron|cầu|cau|bát diện|bat dien/i.test(text);
+            if (Object.keys(parsed3D).length && (mentions3D || vector3D || hasSolid || /\([^)]*[,;][^)]*[,;]/.test(text))) {
+                switchMode('3D');
+                mode3D.currentShape='custom_coordinates';mode3D.nodes=parsed3D;mode3D.edges=[];
+                const names=Object.keys(parsed3D);
+                // Connect consecutive names only when a named polygon is explicitly given.
+                const poly=text.match(/(?:tam giác|tam giac|tứ giác|tu giac)\s+([A-Z]{3,8})/i);
+                if(poly){const seq=poly[1].split('').filter(n=>parsed3D[n]);for(let i=0;i<seq.length;i++)
+                    if(seq.length>=3)mode3D.edges.push({p1:seq[i],p2:seq[(i+1)%seq.length]});}
+                if(vector3D && names.length===1){
+                    const n=names[0],p=parsed3D[n],m=Math.hypot(...vector3D);
+                    if(m>1e-8){const k=85/m;mode3D.nodes[n+'+']={x:p.x+vector3D[0]*k,y:p.y+vector3D[1]*k,z:p.z+vector3D[2]*k};
+                        mode3D.nodes[n+'−']={x:p.x-vector3D[0]*k,y:p.y-vector3D[1]*k,z:p.z-vector3D[2]*k};
+                        mode3D.edges.push({p1:n+'−',p2:n+'+'});}
+                }
+                announceAI('Đã dựng '+names.length+' điểm theo tọa độ trong đề'+(vector3D?' và đường thẳng theo vectơ chỉ phương.':'.'));
+            } else if (textLower.includes('hình hộp chữ nhật') || textLower.includes('hinh hop chu nhat')) {
+                switchMode('3D');init3DShape('cuboid');announceAI('Đã dựng hình hộp chữ nhật mẫu; có thể chỉnh từng tọa độ.');
+            } else if (/hình trụ|hinh tru|khối trụ|khoi tru/.test(textLower)) {
+                switchMode('3D');init3DShape('cylinder');announceAI('Đã dựng mô hình khung hình trụ.');
+            } else if (/hình nón|hinh non|khối nón|khoi non/.test(textLower)) {
+                switchMode('3D');init3DShape('cone');announceAI('Đã dựng mô hình khung hình nón.');
+            } else if (/mặt cầu|mat cau|hình cầu|hinh cau|khối cầu|khoi cau/.test(textLower)) {
+                switchMode('3D');init3DShape('sphere');announceAI('Đã dựng mô hình khung mặt cầu.');
+            } else if (textLower.includes("chóp cụt") || textLower.includes("chop cut")) {
                 switchMode('3D');
                 if (isRandomVariation) { mode3D.rotX = 0.2 + Math.random() * 0.4; mode3D.rotY = -0.8 + Math.random() * 0.8; }
                 init3DShape('pyramid_truncated');
@@ -950,7 +1042,11 @@
                     mode3D.rotX = 0.2 + Math.random() * 0.4;
                     mode3D.rotY = -0.8 + Math.random() * 0.8;
                 }
-                if (textLower.includes("chóp tam giác") || textLower.includes("tứ diện")) {
+                if ((textLower.includes('chóp') || textLower.includes('chop')) && (textLower.includes('đáy là hình thoi') || textLower.includes('đáy hình thoi'))) {
+                    init3DShape('pyramid_rhombus');
+                } else if ((textLower.includes('chóp') || textLower.includes('chop')) && (textLower.includes('đáy là hình bình hành') || textLower.includes('đáy hình bình hành'))) {
+                    init3DShape('pyramid_parallelogram');
+                } else if (textLower.includes("chóp tam giác") || textLower.includes("tứ diện")) {
                     init3DShape('pyramid_triangle');
                 } else if (textLower.includes("lăng trụ")) {
                     init3DShape('prism_triangle');
@@ -1105,7 +1201,16 @@
                 }
             }
 
-            draw(); updateStats();
+            if(currentMode==='2D'&&!Object.keys(points).length&&!functionsData.length&&!circles.length){
+                announceAI('Chưa nhận diện được hình hoặc dữ kiện. Hãy thử mẫu có tên hình hoặc nhập tọa độ A(1;2;3).',true);
+            } else if(currentMode==='2D'){
+                announceAI('Đã dựng hình 2D minh họa; kiểm tra số đo và giả thiết trước khi dùng.');
+            } else if(!Object.keys(parsed3D).length){
+                announceAI('Đã dựng khối 3D mẫu theo mô tả. Có thể chỉnh tọa độ và cạnh để đúng đề.');
+            }
+            refresh3DControls();
+            if(currentMode==='3D' && Object.keys(mode3D.nodes).length)fit3D();
+            draw();updateStats();
         }
 
         btnAiParse.addEventListener('click', () => runGenerativeAIEngine(false));
@@ -1113,7 +1218,21 @@
 
         function init3DShape(shape) {
             mode3D.currentShape = shape;
-            if (shape === 'pyramid_square') {
+            if(shape==='pyramid_rhombus'||shape==='pyramid_parallelogram'){
+                mode3D.nodes={
+                    S:{x:0,y:145,z:0},
+                    A:{x:-115,y:-75,z:0},
+                    B:{x:0,y:-75,z:-85},
+                    C:{x:115,y:-75,z:0},
+                    D:{x:0,y:-75,z:85}
+                };
+                if(shape==='pyramid_parallelogram'){
+                    mode3D.nodes.A={x:-115,y:-75,z:-85};mode3D.nodes.B={x:80,y:-75,z:-85};
+                    mode3D.nodes.C={x:125,y:-75,z:85};mode3D.nodes.D={x:-70,y:-75,z:85};
+                }
+                mode3D.edges=[{p1:'S',p2:'A'},{p1:'S',p2:'B'},{p1:'S',p2:'C'},{p1:'S',p2:'D'},
+                    {p1:'A',p2:'B'},{p1:'B',p2:'C'},{p1:'C',p2:'D'},{p1:'D',p2:'A'}];
+            } else if (shape === 'pyramid_square') {
                 mode3D.nodes = {
                     'S': {x: 0, y: 150, z: 0},
                     'A': {x: -100, y: -80, z: -80}, 'B': {x: 100, y: -80, z: -80},
@@ -1162,8 +1281,30 @@
                     {p1:"A'", p2:"B'"}, {p1:"B'", p2:"C'"}, {p1:"C'", p2:"D'"}, {p1:"D'", p2:"A'"},
                     {p1:'A', p2:"A'"}, {p1:'B', p2:"B'"}, {p1:'C', p2:"C'"}, {p1:'D', p2:"D'"}
                 ];
+            } else if (shape === 'cuboid') {
+                mode3D.nodes={};mode3D.edges=[];
+                const base=[[-125,-70,-75],[125,-70,-75],[125,-70,75],[-125,-70,75]];
+                'ABCD'.split('').forEach((name,i)=>{
+                    mode3D.nodes[name]={x:base[i][0],y:base[i][1],z:base[i][2]};
+                    mode3D.nodes[name+"'"]={x:base[i][0],y:80,z:base[i][2]};
+                });
+                for(let i=0;i<4;i++){const n='ABCD'[i],m='ABCD'[(i+1)%4];mode3D.edges.push({p1:n,p2:m},{p1:n+"'",p2:m+"'"},{p1:n,p2:n+"'"});}
+            } else if (shape === 'cone' || shape === 'cylinder' || shape === 'sphere') {
+                mode3D.nodes={};mode3D.edges=[];
+                const addRing=(prefix,n,r,y)=>{for(let i=0;i<n;i++){
+                    const t=2*Math.PI*i/n,key=prefix+i;mode3D.nodes[key]={x:r*Math.cos(t),y,z:r*Math.sin(t)};
+                    mode3D.edges.push({p1:key,p2:prefix+((i+1)%n)});
+                }};
+                const n=32;
+                if(shape==='cone'){addRing('R',n,105,-95);mode3D.nodes.S={x:0,y:130,z:0};for(let i=0;i<n;i+=4)mode3D.edges.push({p1:'S',p2:'R'+i});}
+                else if(shape==='cylinder'){addRing('B',n,90,-105);addRing('T',n,90,105);for(let i=0;i<n;i+=4)mode3D.edges.push({p1:'B'+i,p2:'T'+i});}
+                else {for(let j=1;j<=5;j++){
+                    const phi=-Math.PI/2+j*Math.PI/6,rad=120*Math.cos(phi),y=120*Math.sin(phi);
+                    addRing('L'+j+'_',n,rad,y);
+                    if(j>1)for(let i=0;i<n;i+=4)mode3D.edges.push({p1:'L'+(j-1)+'_'+i,p2:'L'+j+'_'+i});
+                }mode3D.nodes.N={x:0,y:120,z:0};mode3D.nodes.S={x:0,y:-120,z:0};}
             } else if (shape === 'prism_hexagonal') {
-                const r1 = 100, r2 = 60;
+                const r1 = 100, r2 = 100;
                 mode3D.nodes = {};
                 mode3D.edges = [];
                 for (let i = 0; i < 6; i++) {
@@ -1191,15 +1332,95 @@
                     {p1:'A', p2:'B'}, {p1:'B', p2:'C'}, {p1:'C', p2:'D'}, {p1:'D', p2:'A'}
                 ];
             }
+            refresh3DControls();
+            if(currentMode==='3D' && canvas.clientWidth>0 && canvas.clientHeight>0) fit3D();
         }
 
         document.querySelectorAll('.draw-3d-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                switchMode('3D');
-                init3DShape(btn.dataset.shape);
-                draw(); updateStats();
+                saveState();switchMode('3D');init3DShape(btn.dataset.shape);
+                draw();updateStats();
             });
         });
+
+        // 3D editor: model coordinates are kept independent of current camera angle.
+        const geo3d=id=>document.getElementById(id);
+        function set3DStatus(text,error=false){const el=geo3d('geo3d-status');if(el){el.textContent=text;el.style.color=error?'#fda4af':'#bae6fd';}}
+        function refresh3DControls(){
+            const keys=Object.keys(mode3D.nodes);
+            for(const id of ['geo3d-edge-a','geo3d-edge-b']){
+                const select=geo3d(id);if(!select)continue;const old=select.value;select.replaceChildren();
+                for(const key of keys){const opt=document.createElement('option');opt.value=key;opt.textContent=key;select.appendChild(opt);}
+                if(keys.includes(old))select.value=old;
+            }
+            const b=geo3d('geo3d-edge-b');if(b&&keys.length>1&&b.value===geo3d('geo3d-edge-a').value)b.value=keys[1];
+        }
+        function pointName3D(){return geo3d('geo3d-name').value.trim();}
+        function validPointName(name){return /^[A-Za-z][A-Za-z0-9'_-]{0,11}$/.test(name)&&!['__proto__','constructor','prototype'].includes(name);}
+        function number3D(id){const input=geo3d(id);if(!input.value.trim())return NaN;return Number(input.value);}
+        function add3DPoint(){
+            const name=pointName3D();const x=number3D('geo3d-x'),y=number3D('geo3d-y'),z=number3D('geo3d-z');
+            if(!validPointName(name)||![x,y,z].every(Number.isFinite)||Math.max(Math.abs(x),Math.abs(y),Math.abs(z))>100000){
+                set3DStatus('Tên điểm hoặc tọa độ không hợp lệ.',true);return;}
+            saveState();mode3D.currentShape='custom';mode3D.nodes[name]={x:x*24,y:y*24,z:z*24};
+            switchMode('3D');refresh3DControls();draw();updateStats();set3DStatus(`Đã lưu ${name}(${x}; ${y}; ${z})`);
+        }
+        geo3d('geo3d-add-point').addEventListener('click',add3DPoint);
+        geo3d('geo3d-delete-point').addEventListener('click',()=>{
+            const name=pointName3D();if(!Object.prototype.hasOwnProperty.call(mode3D.nodes,name))return set3DStatus('Không có điểm cần xóa.',true);
+            saveState();delete mode3D.nodes[name];mode3D.edges=mode3D.edges.filter(e=>e.p1!==name&&e.p2!==name);
+            mode3D.currentShape='custom';refresh3DControls();draw();updateStats();set3DStatus('Đã xóa điểm '+name);
+        });
+        const selectedEdge=()=>[geo3d('geo3d-edge-a').value,geo3d('geo3d-edge-b').value];
+        geo3d('geo3d-add-edge').addEventListener('click',()=>{
+            const [a,b]=selectedEdge();if(!a||!b||a===b||!mode3D.nodes[a]||!mode3D.nodes[b])return set3DStatus('Chọn hai điểm 3D khác nhau.',true);
+            if(mode3D.edges.some(e=>e.p1===a&&e.p2===b||e.p1===b&&e.p2===a))return set3DStatus('Cạnh này đã có.',true);
+            saveState();mode3D.currentShape='custom';mode3D.edges.push({p1:a,p2:b});draw();updateStats();set3DStatus('Đã nối '+a+b);
+        });
+        geo3d('geo3d-delete-edge').addEventListener('click',()=>{
+            const [a,b]=selectedEdge();if(!mode3D.edges.some(e=>e.p1===a&&e.p2===b||e.p1===b&&e.p2===a))return set3DStatus('Không có cạnh này.',true);
+            saveState();mode3D.edges=mode3D.edges.filter(e=>!(e.p1===a&&e.p2===b||e.p1===b&&e.p2===a));
+            mode3D.currentShape='custom';draw();updateStats();set3DStatus('Đã xóa cạnh '+a+b);
+        });
+        geo3d('geo3d-measure').addEventListener('click',()=>{
+            const [a,b]=selectedEdge(),p=mode3D.nodes[a],q=mode3D.nodes[b];
+            if(!p||!q||a===b)return set3DStatus('Chọn hai điểm khác nhau để đo.',true);
+            const d=Math.hypot(p.x-q.x,p.y-q.y,p.z-q.z)/24*getUnitScale().val;
+            set3DStatus(`Độ dài ${a}${b} = ${Number(d.toPrecision(7))} ${getUnitScale().name} (tọa độ 3D).`);
+        });
+        geo3d('geo3d-reset').addEventListener('click',()=>{
+            saveState();mode3D.rotX=.35;mode3D.rotY=-.45;panX=panY=0;zoom=1;updateZoomDisplay();draw();set3DStatus('Đã đặt lại góc nhìn, hiện trục Ox/Oy/Oz.');
+        });
+        geo3d('geo3d-fit').addEventListener('click',fit3D);
+        function fit3D(){
+            const keys=Object.keys(mode3D.nodes);if(!keys.length){panX=panY=0;zoom=1;updateZoomDisplay();draw();return;}
+            const proj=keys.map(k=>project3D(mode3D.nodes[k].x,mode3D.nodes[k].y,mode3D.nodes[k].z));
+            const xmin=Math.min(...proj.map(p=>p.x)),xmax=Math.max(...proj.map(p=>p.x));
+            const ymin=Math.min(...proj.map(p=>p.y)),ymax=Math.max(...proj.map(p=>p.y));
+            const w=canvas.clientWidth,h=canvas.clientHeight;
+            zoom=Math.max(MIN_ZOOM,Math.min(MAX_ZOOM,Math.min((w-130)/Math.max(1,xmax-xmin),(h-175)/Math.max(1,ymax-ymin),2.15)));
+            panX=w/2-zoom*(xmin+xmax)/2;panY=h/2-zoom*(ymin+ymax)/2;
+            updateZoomDisplay();draw();set3DStatus('Đã căn vừa hình 3D.');
+        }
+        function hit3DNode(clientX,clientY){
+            const rect=canvas.getBoundingClientRect(),sx=clientX-rect.left,sy=clientY-rect.top;
+            let best=null,nearest=16;
+            for(const name of Object.keys(mode3D.nodes)){
+                const n=mode3D.nodes[name],p=project3D(n.x,n.y,n.z);
+                const d=Math.hypot(p.x*zoom+panX-sx,p.y*zoom+panY-sy);
+                if(d<nearest){best=name;nearest=d;}
+            }return best;
+        }
+        let dragged3DNode=null;
+        function move3DNode(deltaX,deltaY){
+            const p=mode3D.nodes[dragged3DNode];if(!p)return;
+            const sx=deltaX/zoom,sy=-deltaY/zoom,ry=mode3D.rotY,rx=mode3D.rotX;
+            const dy=sy*Math.cos(rx),dz1=-sy*Math.sin(rx);
+            p.x+=sx*Math.cos(ry)-dz1*Math.sin(ry);
+            p.y+=dy;p.z+=sx*Math.sin(ry)+dz1*Math.cos(ry);
+            geo3d('geo3d-name').value=dragged3DNode;
+            geo3d('geo3d-x').value=Number((p.x/24).toFixed(3));geo3d('geo3d-y').value=Number((p.y/24).toFixed(3));geo3d('geo3d-z').value=Number((p.z/24).toFixed(3));
+        }
 
         function project3D(x, y, z) {
             const radX = mode3D.rotX;
@@ -1213,8 +1434,8 @@
             let y2 = y1 * Math.cos(radX) - z1 * Math.sin(radX);
             let z2 = y1 * Math.sin(radX) + z1 * Math.cos(radX);
 
-            const displayW = canvas.parentElement.clientWidth;
-            const displayH = canvas.parentElement.clientHeight;
+            const displayW = canvas.clientWidth;
+            const displayH = canvas.clientHeight;
 
             return {
                 x: displayW / 2 + x2,
@@ -1406,7 +1627,9 @@ function draw3D() {
                 ctx.setLineDash([]);
             });
 
+            const nodeLabels=Object.keys(projNodes),dense=nodeLabels.length>22;
             for (let key in projNodes) {
+                if(dense && /^(?:R\d+|[BT]\d+|L\d+_\d+)$/.test(key))continue;
                 const p = projNodes[key];
                 ctx.beginPath();
                 ctx.arc(p.x, p.y, 5 / zoom, 0, Math.PI * 2);
@@ -1606,9 +1829,14 @@ function draw3D() {
                 return;
             }
             if (currentMode === '3D') {
-                mode3D.isRotating = true;
-                mode3D.lastMouseX = e.clientX;
-                mode3D.lastMouseY = e.clientY;
+                const nodeUnderPointer=hit3DNode(e.clientX,e.clientY);
+                dragged3DNode=(e.shiftKey||(e.pointerType!=='mouse'&&currentTool==='select'))?nodeUnderPointer:null;
+                if(dragged3DNode){saveState();geo3d('geo3d-name').value=dragged3DNode;
+                    const p=mode3D.nodes[dragged3DNode];geo3d('geo3d-x').value=Number((p.x/24).toFixed(3));
+                    geo3d('geo3d-y').value=Number((p.y/24).toFixed(3));geo3d('geo3d-z').value=Number((p.z/24).toFixed(3));}
+
+                mode3D.isRotating=!dragged3DNode;
+                mode3D.lastMouseX=e.clientX;mode3D.lastMouseY=e.clientY;
                 return;
             }
 
@@ -1817,7 +2045,7 @@ function draw3D() {
             if (activePointers.has(e.pointerId)) activePointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
             if (activePointers.size >= 2) {
                 const distance=pinchDistance();
-                if(lastPinchDistance && distance > 1 && currentMode === '2D') {
+                if(lastPinchDistance && distance > 1) {
                     const rect=canvas.getBoundingClientRect();
                     const values=[...activePointers.values()];
                     const cx=(values[0].x+values[1].x)/2-rect.left;
@@ -1829,15 +2057,11 @@ function draw3D() {
                 lastPinchDistance=distance;return;
             }
             if (activePointers.size === 0 && e.pointerType !== 'mouse') return;
-            if (currentMode === '3D' && mode3D.isRotating) {
-                const deltaX = e.clientX - mode3D.lastMouseX;
-                const deltaY = e.clientY - mode3D.lastMouseY;
-                mode3D.rotY += deltaX * 0.008;
-                mode3D.rotX += deltaY * 0.008;
-                mode3D.lastMouseX = e.clientX;
-                mode3D.lastMouseY = e.clientY;
-                requestDraw();
-                return;
+            if (currentMode === '3D' && (mode3D.isRotating||dragged3DNode)) {
+                const deltaX=e.clientX-mode3D.lastMouseX,deltaY=e.clientY-mode3D.lastMouseY;
+                if(dragged3DNode){move3DNode(deltaX,deltaY);updateStats();}
+                else {mode3D.rotY+=deltaX*.008;mode3D.rotX=Math.max(-Math.PI*0.49,Math.min(Math.PI*0.49,mode3D.rotX+deltaY*.008));}
+                mode3D.lastMouseX=e.clientX;mode3D.lastMouseY=e.clientY;requestDraw();return;
             }
 
             if (isPanning) {
@@ -1854,7 +2078,7 @@ function draw3D() {
             }
         });
 
-        const finishPointer=e=>{ canvasRect=null;activePointers.delete(e.pointerId); draggedPoint=null; isPanning=false; mode3D.isRotating=false; lastPinchDistance=0; try{if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId)}catch{}; };
+        const finishPointer=e=>{ canvasRect=null;activePointers.delete(e.pointerId); draggedPoint=null; isPanning=false; mode3D.isRotating=false; dragged3DNode=null; lastPinchDistance=0; try{if(canvas.hasPointerCapture(e.pointerId))canvas.releasePointerCapture(e.pointerId)}catch{}; };
         window.addEventListener('pointerup',finishPointer);
         window.addEventListener('pointercancel',finishPointer);
         function zoomAtCenter(factor) {
@@ -1869,6 +2093,9 @@ function draw3D() {
 
         btnClear.addEventListener('click', () => {
             saveState();
+            if(currentMode==='3D'){
+                mode3D.nodes={};mode3D.edges=[];mode3D.currentShape='custom';refresh3DControls();draw();updateStats();set3DStatus('Đã xóa các đối tượng 3D; trục Ox/Oy/Oz vẫn hiển thị.');return;
+            }
             points = {}; lines = []; circles = []; rightAngleSigns = []; measuredAngles = []; vectors = []; functionsData = []; ellipses = []; halfPlanes = []; selectedPointsBuffer = []; showOxyAxis = false; lastCreatedPointName = null;
             updateGuideUI(); draw(); updateStats();
         });
@@ -1885,6 +2112,9 @@ function draw3D() {
         resizeCanvas();
         parseCommand('he_truc_oxy');
         const questionFromExam=new URLSearchParams(location.search).get('question');
+        if(new URLSearchParams(location.search).get('mode')==='3d'){
+            switchMode('3D');setTabActive(tab3dBtn,tab3dContent);requestAnimationFrame(()=>{resizeCanvas();draw();});
+        }
         if(questionFromExam && questionFromExam.length <= 900) {
             aiInputText.value=questionFromExam;
             setTabActive(tabAiBtn,tabAiContent);
@@ -1892,7 +2122,7 @@ function draw3D() {
         }
 
     </script>
-<section id="measure-panel" style="position:fixed;bottom:15px;right:15px;z-index:60;background:#1e1b4bee;border:1px solid #8b5cf6;border-radius:14px;padding:13px;color:#fff;max-width:min(340px,94vw);box-shadow:0 10px 32px #0005;font:13px system-ui"><b>📏 Đo đạc và chú thích</b><button id="measure-collapse" type="button" aria-expanded="false" aria-controls="measure-controls" title="Mở/đóng bảng đo đạc">Mở bảng đo</button><div id="measure-controls"><div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap"><input id="measure-a" placeholder="Điểm A" aria-label="Tên điểm đầu" style="width:68px;color:#111;padding:7px;border-radius:7px"><input id="measure-b" placeholder="Điểm B" aria-label="Tên điểm cuối" style="width:68px;color:#111;padding:7px;border-radius:7px"><input id="measure-c" placeholder="Điểm C" aria-label="Tên điểm thứ ba" style="width:75px;color:#111;padding:7px;border-radius:7px"></div><div style="margin-top:8px;display:flex;gap:6px"><button id="measure-length" style="background:#7c3aed;padding:7px;border-radius:7px">Độ dài AB</button><button id="measure-angle" style="background:#7c3aed;padding:7px;border-radius:7px">Góc ABC</button></div><p id="measure-result" aria-live="polite" style="margin:8px 0 0">Nhập tên các điểm đã dựng.</p></div></section><script>(function(){const el=id=>document.getElementById(id);function get(name){return points[String(el(name).value).trim().toUpperCase()]}function result(s){el('measure-result').textContent=s}el('measure-length').onclick=()=>{const a=get('measure-a'),b=get('measure-b');if(!a||!b)return result('Không tìm thấy điểm A hoặc B.');const scale=getUnitScale(),length=Math.hypot(a.x-b.x,a.y-b.y)/GRID_SIZE*scale.val;result('Độ dài: '+length.toFixed(3)+' '+scale.name)};el('measure-angle').onclick=()=>{const a=get('measure-a'),b=get('measure-b'),c=get('measure-c');if(!a||!b||!c)return result('Cần nhập đủ 3 điểm đã dựng.');const u=[a.x-b.x,a.y-b.y],v=[c.x-b.x,c.y-b.y],d=Math.hypot(...u)*Math.hypot(...v);if(!d)return result('Các điểm không xác định được góc.');const angle=Math.acos(Math.max(-1,Math.min(1,(u[0]*v[0]+u[1]*v[1])/d)))*180/Math.PI;result('Góc ABC: '+angle.toFixed(2)+'°')};const panel=el('measure-panel'),collapse=el('measure-collapse');collapse.onclick=()=>{const active=panel.classList.toggle('measure-expanded');collapse.setAttribute('aria-expanded',String(active));collapse.textContent=active?'Đóng bảng đo':'Mở bảng đo'};if(new URLSearchParams(location.search).get('mode')==='3d')window.addEventListener('load',()=>switchMode('3D'))})();</script><div style="position:fixed;bottom:0;left:0;z-index:45;background:#0f172acc;color:#c4b5fd;padding:3px 8px;font:10px system-ui">Sản phẩm khoa học kỹ thuật của Lê Đức Nhân và Ngô Phúc Huy. Giáo viên hướng dẫn là GV.Khánh Hòa</div><script src="js/geometry-mobile-v21.js" defer></script><script src="js/geometry-mobile-v33.js?v=33" defer></script><script src="js/quick-navigation.js" defer></script>
+<section id="measure-panel" style="position:fixed;bottom:15px;right:15px;z-index:60;background:#1e1b4bee;border:1px solid #8b5cf6;border-radius:14px;padding:13px;color:#fff;max-width:min(340px,94vw);box-shadow:0 10px 32px #0005;font:13px system-ui"><b>📏 Đo đạc và chú thích</b><button id="measure-collapse" type="button" aria-expanded="false" aria-controls="measure-controls" title="Mở/đóng bảng đo đạc">Mở bảng đo</button><div id="measure-controls"><div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap"><input id="measure-a" placeholder="Điểm A" aria-label="Tên điểm đầu" style="width:68px;color:#111;padding:7px;border-radius:7px"><input id="measure-b" placeholder="Điểm B" aria-label="Tên điểm cuối" style="width:68px;color:#111;padding:7px;border-radius:7px"><input id="measure-c" placeholder="Điểm C" aria-label="Tên điểm thứ ba" style="width:75px;color:#111;padding:7px;border-radius:7px"></div><div style="margin-top:8px;display:flex;gap:6px"><button id="measure-length" style="background:#7c3aed;padding:7px;border-radius:7px">Độ dài AB</button><button id="measure-angle" style="background:#7c3aed;padding:7px;border-radius:7px">Góc ABC</button></div><p id="measure-result" aria-live="polite" style="margin:8px 0 0">Nhập tên các điểm đã dựng.</p></div></section><script>(function(){const el=id=>document.getElementById(id);function get(name){return points[String(el(name).value).trim().toUpperCase()]}function result(s){el('measure-result').textContent=s}el('measure-length').onclick=()=>{const a=get('measure-a'),b=get('measure-b');if(!a||!b)return result('Không tìm thấy điểm A hoặc B.');const scale=getUnitScale(),length=Math.hypot(a.x-b.x,a.y-b.y)/GRID_SIZE*scale.val;result('Độ dài: '+length.toFixed(3)+' '+scale.name)};el('measure-angle').onclick=()=>{const a=get('measure-a'),b=get('measure-b'),c=get('measure-c');if(!a||!b||!c)return result('Cần nhập đủ 3 điểm đã dựng.');const u=[a.x-b.x,a.y-b.y],v=[c.x-b.x,c.y-b.y],d=Math.hypot(...u)*Math.hypot(...v);if(!d)return result('Các điểm không xác định được góc.');const angle=Math.acos(Math.max(-1,Math.min(1,(u[0]*v[0]+u[1]*v[1])/d)))*180/Math.PI;result('Góc ABC: '+angle.toFixed(2)+'°')};const panel=el('measure-panel'),collapse=el('measure-collapse');collapse.onclick=()=>{const active=panel.classList.toggle('measure-expanded');collapse.setAttribute('aria-expanded',String(active));collapse.textContent=active?'Đóng bảng đo':'Mở bảng đo'};})();</script><div style="position:fixed;bottom:0;left:0;z-index:45;background:#0f172acc;color:#c4b5fd;padding:3px 8px;font:10px system-ui">Sản phẩm khoa học kỹ thuật của Lê Đức Nhân và Ngô Phúc Huy. Giáo viên hướng dẫn là GV.Khánh Hòa</div><script src="js/geometry-mobile-v21.js" defer></script><script src="js/geometry-mobile-v33.js?v=33" defer></script><script src="js/quick-navigation.js" defer></script>
 <script src="js/neon-v5.js?v=5" defer></script><script src="js/api-config.js"></script>
 <script src="js/presence.js"></script><script src="js/optional-api-v33.js?v=36"></script>
 <script src="js/neon-v6-experience.js?v=6" defer></script><script defer src="js/neon-v7-experience.js?v=7"></script><script src="js/neon-v26-unified.js?v=26" defer></script><script src="js/neon-v27-usability.js?v=27" defer></script><script src="js/sortlab-visual-only-v32.js?v=32" defer></script>
