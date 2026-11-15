@@ -112,6 +112,16 @@ def health(): return {"ok":True,"service":"ai-question-engine","version":"6.0-su
 def bank_stats():
     return {"legacy": "preserved", "super_bank": SUPER_BANK_STATS, "problem_archetypes": "20+ reusable structures"}
 
+@router.get("/bank/word/availability")
+def word_bank_availability(grade:int|None=None,topic:str|None=None):
+    """Coverage by exact source topic; no questions/answers exposed."""
+    if grade is not None and grade not in (10,11,12):
+        raise HTTPException(422,"invalid_grade")
+    if topic is not None and (not topic or len(topic)>150):
+        raise HTTPException(422,"invalid_topic")
+    from .engine.word_source_v62 import source_availability
+    return source_availability(grade,topic)
+
 @router.get("/knowledge")
 def knowledge(grade:int|None=None): return service.topics(grade)
 

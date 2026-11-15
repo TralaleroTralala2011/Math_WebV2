@@ -1,4 +1,5 @@
 import time, random, uuid, json, re
+from contextlib import closing
 from database.database import get_connection
 from ..config import MAX_COUNT, MAX_TOPICS, QUESTION_TTL_SECONDS
 from .knowledge_service import KnowledgeService
@@ -55,49 +56,56 @@ class AIQuestionService:
         from .v254_bank import ensure_v254_bank
         from .b56_bank import ensure_b56_bank
         from .v59_bank import ensure_v59_bank
+        from .word_source_v62 import select_word_questions, ensure_word_source
         from .word_bank import ensure_word_bank
         requested_type = "short_answer" if question_type == "written" else question_type
         requested_level = normalize(difficulty)
         result = []
         seen = set()
+
+        # V62 Word-first: query the same exact grade/topic/type as requested.
+        # Old V254/V59/V60 records remain available as fallbacks. Never map a
+        # missing topic to an unrelated one and never show duplicate prompts.
+        for item in select_word_questions(int(grade),str(topic_id),requested_level,requested_type,limit=150):
+            signature=question_key(item.get('question',''))
+            if not signature or signature in seen:continue
+            seen.add(signature)
+            result.append(item)
+        if len(result)>=100:
+            return result[:100]
+
         v59_path=ensure_v59_bank()
-        word_path=ensure_word_bank()
-        sources=([word_path] if word_path else []) + (
+        old_word_path=ensure_word_bank() if ensure_word_source() is None else None
+        sources=([old_word_path] if old_word_path else []) + (
             [v59_path, ensure_v254_bank()] if v59_path
             else [ensure_v254_bank(), ensure_b56_bank()]
         )
         for path in sources:
-            if path is None:
-                continue
+            if path is None or len(result)>=100:continue
             try:
-                with sqlite3.connect(f"file:{path.as_posix()}?mode=ro", uri=True, timeout=3) as conn:
-                    conn.row_factory = sqlite3.Row
-                    rows = conn.execute(
+                with closing(sqlite3.connect(f"file:{path.as_posix()}?mode=ro",uri=True,timeout=3)) as conn:
+                    conn.row_factory=sqlite3.Row
+                    rows=conn.execute(
                         """SELECT id, question, answer, solution, options, question_type, difficulty
-                           FROM questions
-                           WHERE grade=? AND topic=? AND difficulty=? AND question_type=?
+                           FROM questions WHERE grade=? AND topic=? AND difficulty=? AND question_type=?
                              AND length(trim(question)) BETWEEN 8 AND 1800
                              AND length(trim(answer)) BETWEEN 1 AND 250
                              AND length(trim(solution)) BETWEEN 12 AND 2800
-                           ORDER BY RANDOM() LIMIT 80""",
-                        (int(grade), str(topic_id), requested_level, requested_type),
+                           ORDER BY RANDOM() LIMIT 100""",
+                        (int(grade),str(topic_id),requested_level,requested_type)
                     ).fetchall()
                 for row in rows:
-                    item = dict(row)
-                    signature = question_key(item.get("question", ""))
-                    if not signature or signature in seen:
-                        continue
-                    # Clearly invalid short-answer labels must never reach
-                    # the answer checker as if they were numeric answers.
-                    if requested_type == "short_answer" and re.match(
-                        r"^\s*[A-D]\s*[).:\-]", str(item.get("answer") or ""), re.I
-                    ):
-                        continue
+                    item=dict(row)
+                    signature=question_key(item.get('question',''))
+                    if not signature or signature in seen:continue
+                    if requested_type=='short_answer' and re.match(
+                        r'^\s*[A-D]\s*[).:\-]',str(item.get('answer') or ''),re.I
+                    ):continue
                     seen.add(signature)
                     result.append(item)
-            except (OSError, sqlite3.Error, ValueError):
+                    if len(result)>=100:break
+            except (OSError,sqlite3.Error,ValueError):
                 continue
-        random.shuffle(result)
         return result[:100]
 
     def _curated_admin_candidates(self, grade, topic_id, difficulty, question_type, game_id=None):
@@ -261,42 +269,50 @@ class AIQuestionService:
                 del bucket[:-12]
             return q
 
-        # V254 replaces the previous 4,000-row active candidate bank.
-        # Admin-reviewed entries remain higher priority; V254 is still draft data.
-        for item in self._v254_candidates(grade, topic_id, difficulty, question_type):
-            try:
-                options = json.loads(item["options"])
-            except (TypeError, ValueError):
-                options = []
-            qt = item["question_type"]
-            if qt == "multiple_choice":
-                if len(options) != 4 or item["answer"] not in options:
+        # Source Word first, then V59/V254. Prefer diverse structures, but do
+        # not reject a different *question* solely because its mathematical
+        # structure matches a previous one. Exact visible text is never reused.
+        bank_items=self._v254_candidates(grade, topic_id, difficulty, question_type)
+        for strict_structure in (True,False):
+            for item in bank_items:
+                try:
+                    options=json.loads(item['options'])
+                except (TypeError,ValueError):
+                    options=[]
+                qt=item['question_type']
+                if qt=='multiple_choice' and (len(options)!=4 or item['answer'] not in options):
                     continue
-            q = {
-                "id": uuid.uuid4().hex, "grade": grade, "topic": topic_id,
-                "difficulty": normalize(difficulty), "question_type": qt,
-                "question": item["question"], "answer": item["answer"],
-                "solution": item["solution"], "explanation": item["solution"],
-                "options": options, "source": "Question_Bank_V254 (draft; unverified)",
-                "archetype": "v254_" + str(item["id"]),
-                "template_family": "v254_" + str(item["id"]),
-                "generation_style": "v254_import", "game_id": str(game_id or ""),
-                "knowledge_name": (self.knowledge.get(topic_id) or {}).get("name", ""),
-            }
-            try:
-                validate(q)
-            except ValidationError:
-                continue
-            variation = self._variation_key(q)
-            if q["fingerprint"] in seen or question_key(q.get("question", "")) in seen_text_keys or self.question_history.question_seen(q["question"]):
-                continue
-            if q.get("structure_fingerprint") in seen_structures or variation in seen_variations:
-                continue
-            if q.get("archetype") in seen_archetypes:
-                continue
-            self.store.put(q)
-            self.question_history.record_question(q)
-            return q
+                q={
+                    'id':uuid.uuid4().hex,'grade':grade,'topic':topic_id,
+                    'difficulty':normalize(difficulty),'question_type':qt,
+                    'question':item['question'],'answer':item['answer'],
+                    'solution':item['solution'],'explanation':item['solution'],
+                    'options':options,
+                    'source':item.get('source') or 'Question_Bank_V254 (draft; unverified)',
+                    'source_word':item.get('source_word',''),
+                    'source_question_number':item.get('source_question_number'),
+                    'form_id':item.get('form_id',''),
+                    'quality_status':item.get('status','candidate_unverified'),
+                    'archetype':'v254_'+str(item['id']),
+                    'template_family':'v254_'+str(item['id']),
+                    'generation_style':'v254_import','game_id':str(game_id or ''),
+                    'knowledge_name':(self.knowledge.get(topic_id) or {}).get('name','')
+                }
+                try:
+                    validate(q)
+                except ValidationError:
+                    continue
+                variation=self._variation_key(q)
+                if (q['fingerprint'] in seen or question_key(q.get('question','')) in seen_text_keys
+                    or self.question_history.question_seen(q['question'])):
+                    continue
+                if strict_structure and (q.get('structure_fingerprint') in seen_structures
+                                         or variation in seen_variations
+                                         or q.get('archetype') in seen_archetypes):
+                    continue
+                self.store.put(q)
+                self.question_history.record_question(q)
+                return q
 
         # Phase 1: strict diversity. A question must not repeat the same
         # mathematical structure or the same bank variation already used.

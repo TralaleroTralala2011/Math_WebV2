@@ -662,7 +662,7 @@ def generate_ai_battle_questions(grade, topics, difficulty, question_type, *, ex
                     options = json.loads(item.get("options") or "[]")
                     q = {
                         "id": "bank_" + str(item["id"]), "grade": grade,
-                        "topic": topic, "difficulty": "medium",
+                        "topic": topic, "difficulty": item.get("difficulty") or difficulty,
                         "question_type": item["question_type"],
                         "question": item["question"], "answer": item["answer"],
                         "solution": item["solution"], "explanation": item["solution"],

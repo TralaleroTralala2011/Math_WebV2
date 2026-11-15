@@ -1,0 +1,1186 @@
+{
+  "source_filename": "150_CHU_DE_WORD(1).zip",
+  "source_sha256": "1acfc64f91c51955a273dd2c01beb76784a13c7ab0667a24e0a30be6fe03aa9a",
+  "source_files": 150,
+  "raw_question_markers": 95544,
+  "usable_questions": 91026,
+  "covered_source_topics": 150,
+  "question_types": {
+    "multiple_choice": 60578,
+    "short_answer": 30448
+  },
+  "difficulty_counts": {
+    "easy": 13797,
+    "hard": 4196,
+    "medium": 73033
+  },
+  "status_counts": {
+    "usable_candidate": 91026,
+    "invalid_mcq": 345,
+    "word_files": 150,
+    "duplicate_word_source": 1378,
+    "incomplete_fields": 356,
+    "equivalent_mcq_options": 2439
+  },
+  "per_topic": {
+    "1": {
+      "grade": 10,
+      "topic": "bai_toan_thuc_te_10",
+      "name": "Bài toán thực tế Toán 10",
+      "export": "001_toan_10_bai_toan_thuc_te_10.jsonl",
+      "usable_candidate": 336,
+      "invalid_mcq": 330
+    },
+    "2": {
+      "grade": 10,
+      "topic": "g10_geom_coordinate_circle_line",
+      "name": "Bài toán tổng hợp đường thẳng và đường tròn tọa độ",
+      "export": "002_toan_10_g10_geom_coordinate_circle_line.jsonl",
+      "usable_candidate": 167,
+      "duplicate_word_source": 499
+    },
+    "3": {
+      "grade": 10,
+      "topic": "bat_phuong_trinh",
+      "name": "Bất phương trình và hệ bất phương trình",
+      "export": "003_toan_10_bat_phuong_trinh.jsonl",
+      "incomplete_fields": 10,
+      "usable_candidate": 624
+    },
+    "4": {
+      "grade": 10,
+      "topic": "g10_geom_triangle_inequalities",
+      "name": "Bất đẳng thức và cực trị trong tam giác",
+      "export": "004_toan_10_g10_geom_triangle_inequalities.jsonl",
+      "usable_candidate": 634
+    },
+    "5": {
+      "grade": 10,
+      "topic": "g10_advanced_inequalities",
+      "name": "Bất đẳng thức đại số và cực trị nâng cao",
+      "export": "005_toan_10_g10_advanced_inequalities.jsonl",
+      "usable_candidate": 634
+    },
+    "6": {
+      "grade": 10,
+      "topic": "g10_geom_vector_proofs",
+      "name": "Chứng minh hình học bằng vectơ",
+      "export": "006_toan_10_g10_geom_vector_proofs.jsonl",
+      "usable_candidate": 634
+    },
+    "7": {
+      "grade": 10,
+      "topic": "chung_minh_hinh_hoc_10",
+      "name": "Chứng minh hình học và bài toán tổng hợp",
+      "export": "007_toan_10_chung_minh_hinh_hoc_10.jsonl",
+      "usable_candidate": 634
+    },
+    "8": {
+      "grade": 10,
+      "topic": "g10_geom_triangle_congruence",
+      "name": "Các trường hợp bằng nhau của tam giác",
+      "export": "008_toan_10_g10_geom_triangle_congruence.jsonl",
+      "usable_candidate": 634
+    },
+    "9": {
+      "grade": 10,
+      "topic": "g10_geom_circle_chords_arcs",
+      "name": "Dây cung, cung và khoảng cách đến tâm",
+      "export": "009_toan_10_g10_geom_circle_chords_arcs.jsonl",
+      "usable_candidate": 619,
+      "equivalent_mcq_options": 15
+    },
+    "10": {
+      "grade": 10,
+      "topic": "g10_geom_line_intersections",
+      "name": "Giao điểm và vị trí tương đối của hai đường thẳng",
+      "export": "010_toan_10_g10_geom_line_intersections.jsonl",
+      "incomplete_fields": 10,
+      "usable_candidate": 624
+    },
+    "11": {
+      "grade": 10,
+      "topic": "g10_geom_circle_angles",
+      "name": "Góc nội tiếp và góc ở tâm nâng cao",
+      "export": "011_toan_10_g10_geom_circle_angles.jsonl",
+      "usable_candidate": 618,
+      "equivalent_mcq_options": 16
+    },
+    "12": {
+      "grade": 10,
+      "topic": "g10_geom_angles_parallel",
+      "name": "Góc tạo bởi hai đường thẳng và đường cắt",
+      "export": "012_toan_10_g10_geom_angles_parallel.jsonl",
+      "usable_candidate": 616,
+      "equivalent_mcq_options": 18
+    },
+    "13": {
+      "grade": 10,
+      "topic": "hoan_vi_chinh_hop_to_hop",
+      "name": "Hoán vị, chỉnh hợp, tổ hợp",
+      "export": "013_toan_10_hoan_vi_chinh_hop_to_hop.jsonl",
+      "usable_candidate": 442,
+      "equivalent_mcq_options": 192
+    },
+    "14": {
+      "grade": 10,
+      "topic": "ham_so",
+      "name": "Hàm số",
+      "export": "014_toan_10_ham_so.jsonl",
+      "usable_candidate": 634
+    },
+    "15": {
+      "grade": 10,
+      "topic": "ham_so_bac_hai",
+      "name": "Hàm số bậc hai và parabol",
+      "export": "015_toan_10_ham_so_bac_hai.jsonl",
+      "usable_candidate": 584,
+      "duplicate_word_source": 50
+    },
+    "16": {
+      "grade": 10,
+      "topic": "ham_so_bac_nhat",
+      "name": "Hàm số bậc nhất",
+      "export": "016_toan_10_ham_so_bac_nhat.jsonl",
+      "usable_candidate": 614,
+      "duplicate_word_source": 20
+    },
+    "17": {
+      "grade": 10,
+      "topic": "hinh_hoc_co_ban_10",
+      "name": "Hình học cơ bản: góc, cạnh và diện tích",
+      "export": "017_toan_10_hinh_hoc_co_ban_10.jsonl",
+      "usable_candidate": 633,
+      "incomplete_fields": 1
+    },
+    "18": {
+      "grade": 10,
+      "topic": "hinh_hoc_10",
+      "name": "Hình học phẳng",
+      "export": "018_toan_10_hinh_hoc_10.jsonl",
+      "usable_candidate": 634
+    },
+    "19": {
+      "grade": 10,
+      "topic": "he_bat_phuong_trinh",
+      "name": "Hệ bất phương trình",
+      "export": "019_toan_10_he_bat_phuong_trinh.jsonl",
+      "usable_candidate": 634
+    },
+    "20": {
+      "grade": 10,
+      "topic": "he_phuong_trinh",
+      "name": "Hệ phương trình",
+      "export": "020_toan_10_he_phuong_trinh.jsonl",
+      "usable_candidate": 603,
+      "invalid_mcq": 11,
+      "duplicate_word_source": 50
+    },
+    "21": {
+      "grade": 10,
+      "topic": "g10_symmetric_systems",
+      "name": "Hệ phương trình đối xứng và hoán vị",
+      "export": "021_toan_10_g10_symmetric_systems.jsonl",
+      "usable_candidate": 634
+    },
+    "22": {
+      "grade": 10,
+      "topic": "he_thuc_luong",
+      "name": "Hệ thức lượng trong tam giác",
+      "export": "022_toan_10_he_thuc_luong.jsonl",
+      "usable_candidate": 634
+    },
+    "23": {
+      "grade": 10,
+      "topic": "menh_de",
+      "name": "Mệnh đề",
+      "export": "023_toan_10_menh_de.jsonl",
+      "usable_candidate": 644
+    },
+    "24": {
+      "grade": 10,
+      "topic": "menh_de_tap_hop",
+      "name": "Mệnh đề và tập hợp",
+      "export": "024_toan_10_menh_de_tap_hop.jsonl",
+      "usable_candidate": 634
+    },
+    "25": {
+      "grade": 10,
+      "topic": "nhi_thuc_newton",
+      "name": "Nhị thức Newton",
+      "export": "025_toan_10_nhi_thuc_newton.jsonl",
+      "usable_candidate": 616,
+      "incomplete_fields": 1,
+      "duplicate_word_source": 20,
+      "equivalent_mcq_options": 27
+    },
+    "26": {
+      "grade": 10,
+      "topic": "phuong_trinh",
+      "name": "Phương trình",
+      "export": "026_toan_10_phuong_trinh.jsonl",
+      "usable_candidate": 634
+    },
+    "27": {
+      "grade": 10,
+      "topic": "g10_radical_equations_advanced",
+      "name": "Phương trình chứa căn thức nâng cao",
+      "export": "027_toan_10_g10_radical_equations_advanced.jsonl",
+      "usable_candidate": 634
+    },
+    "28": {
+      "grade": 10,
+      "topic": "phuong_trinh_he",
+      "name": "Phương trình và hệ phương trình",
+      "export": "028_toan_10_phuong_trinh_he.jsonl",
+      "usable_candidate": 614,
+      "duplicate_word_source": 20
+    },
+    "29": {
+      "grade": 10,
+      "topic": "quy_tac_dem",
+      "name": "Quy tắc đếm",
+      "export": "029_toan_10_quy_tac_dem.jsonl",
+      "incomplete_fields": 10,
+      "usable_candidate": 450,
+      "equivalent_mcq_options": 184
+    },
+    "30": {
+      "grade": 10,
+      "topic": "g10_geom_locus",
+      "name": "Quỹ tích điểm trong mặt phẳng",
+      "export": "030_toan_10_g10_geom_locus.jsonl",
+      "usable_candidate": 633,
+      "incomplete_fields": 1
+    },
+    "31": {
+      "grade": 10,
+      "topic": "tam_giac_tu_giac_10",
+      "name": "Tam giác và tứ giác cơ bản",
+      "export": "031_toan_10_tam_giac_tu_giac_10.jsonl",
+      "duplicate_word_source": 11,
+      "usable_candidate": 623
+    },
+    "32": {
+      "grade": 10,
+      "topic": "thong_ke",
+      "name": "Thống kê",
+      "export": "032_toan_10_thong_ke.jsonl",
+      "usable_candidate": 652,
+      "duplicate_word_source": 2
+    },
+    "33": {
+      "grade": 10,
+      "topic": "g10_geom_circle_tangent_chord",
+      "name": "Tiếp tuyến và dây cung của đường tròn",
+      "export": "033_toan_10_g10_geom_circle_tangent_chord.jsonl",
+      "usable_candidate": 617,
+      "equivalent_mcq_options": 17
+    },
+    "34": {
+      "grade": 10,
+      "topic": "g10_geom_coordinate_distance_midpoint",
+      "name": "Trung điểm và khoảng cách trong tọa độ phẳng",
+      "export": "034_toan_10_g10_geom_coordinate_distance_midpoint.jsonl",
+      "usable_candidate": 633,
+      "incomplete_fields": 1
+    },
+    "35": {
+      "grade": 10,
+      "topic": "g10_geom_quadrilaterals_properties",
+      "name": "Tính chất hình bình hành và hình thoi",
+      "export": "035_toan_10_g10_geom_quadrilaterals_properties.jsonl",
+      "usable_candidate": 634
+    },
+    "36": {
+      "grade": 10,
+      "topic": "tap_hop",
+      "name": "Tập hợp và các phép toán",
+      "export": "036_toan_10_tap_hop.jsonl",
+      "usable_candidate": 634
+    },
+    "37": {
+      "grade": 10,
+      "topic": "g10_geom_triangle_area_ratio",
+      "name": "Tỉ số diện tích tam giác",
+      "export": "037_toan_10_g10_geom_triangle_area_ratio.jsonl",
+      "usable_candidate": 634
+    },
+    "38": {
+      "grade": 10,
+      "topic": "toa_do_phang",
+      "name": "Tọa độ trong mặt phẳng",
+      "export": "038_toan_10_toa_do_phang.jsonl",
+      "usable_candidate": 604,
+      "duplicate_word_source": 30
+    },
+    "39": {
+      "grade": 10,
+      "topic": "toa_do_hinh_hoc_10",
+      "name": "Tọa độ và đường thẳng trong mặt phẳng",
+      "export": "039_toan_10_toa_do_hinh_hoc_10.jsonl",
+      "usable_candidate": 634
+    },
+    "40": {
+      "grade": 10,
+      "topic": "g10_combinatorics_olympiad",
+      "name": "Tổ hợp và nguyên lý Dirichlet nâng cao",
+      "export": "040_toan_10_g10_combinatorics_olympiad.jsonl",
+      "usable_candidate": 439,
+      "equivalent_mcq_options": 205
+    },
+    "41": {
+      "grade": 10,
+      "topic": "vector",
+      "name": "Vectơ",
+      "export": "041_toan_10_vector.jsonl",
+      "usable_candidate": 634
+    },
+    "42": {
+      "grade": 10,
+      "topic": "xac_suat",
+      "name": "Xác suất",
+      "export": "042_toan_10_xac_suat.jsonl",
+      "usable_candidate": 613,
+      "duplicate_word_source": 25,
+      "equivalent_mcq_options": 6
+    },
+    "43": {
+      "grade": 10,
+      "topic": "chia_du",
+      "name": "Chia dư",
+      "export": "043_toan_10_chia_du.jsonl",
+      "usable_candidate": 654
+    },
+    "44": {
+      "grade": 10,
+      "topic": "chia_het",
+      "name": "Chia hết",
+      "export": "044_toan_10_chia_het.jsonl",
+      "usable_candidate": 634,
+      "duplicate_word_source": 20
+    },
+    "45": {
+      "grade": 10,
+      "topic": "phuong_trinh_bac_hai",
+      "name": "Phương trình bậc hai",
+      "export": "045_toan_10_phuong_trinh_bac_hai.jsonl",
+      "usable_candidate": 574,
+      "duplicate_word_source": 70
+    },
+    "46": {
+      "grade": 10,
+      "topic": "duong_thang",
+      "name": "Đường thẳng",
+      "export": "046_toan_10_duong_thang.jsonl",
+      "usable_candidate": 624,
+      "duplicate_word_source": 10
+    },
+    "47": {
+      "grade": 10,
+      "topic": "g10_geom_special_lines",
+      "name": "Đường trung tuyến, phân giác và đường cao",
+      "export": "047_toan_10_g10_geom_special_lines.jsonl",
+      "usable_candidate": 633,
+      "incomplete_fields": 1
+    },
+    "48": {
+      "grade": 10,
+      "topic": "duong_tron",
+      "name": "Đường tròn",
+      "export": "048_toan_10_duong_tron.jsonl",
+      "usable_candidate": 609,
+      "incomplete_fields": 1,
+      "equivalent_mcq_options": 24
+    },
+    "49": {
+      "grade": 10,
+      "topic": "duong_tron_co_ban_10",
+      "name": "Đường tròn và các góc cơ bản",
+      "export": "049_toan_10_duong_tron_co_ban_10.jsonl",
+      "usable_candidate": 614,
+      "incomplete_fields": 1,
+      "equivalent_mcq_options": 19
+    },
+    "50": {
+      "grade": 10,
+      "topic": "g10_geom_thales_similarity",
+      "name": "Định lý Thales và tam giác đồng dạng",
+      "export": "050_toan_10_g10_geom_thales_similarity.jsonl",
+      "usable_candidate": 634
+    },
+    "51": {
+      "grade": 11,
+      "topic": "bien_co_doc_lap_11",
+      "name": "Biến cố độc lập và xác suất có điều kiện",
+      "export": "051_toan_11_bien_co_doc_lap_11.jsonl",
+      "usable_candidate": 603,
+      "equivalent_mcq_options": 31
+    },
+    "52": {
+      "grade": 11,
+      "topic": "bai_toan_thuc_te_11",
+      "name": "Bài toán thực tế Toán 11",
+      "export": "052_toan_11_bai_toan_thuc_te_11.jsonl",
+      "usable_candidate": 634
+    },
+    "53": {
+      "grade": 11,
+      "topic": "bai_toan_thuc_te_tong_hop_11",
+      "name": "Bài toán thực tế tổng hợp Toán 11",
+      "export": "053_toan_11_bai_toan_thuc_te_tong_hop_11.jsonl",
+      "usable_candidate": 634
+    },
+    "54": {
+      "grade": 11,
+      "topic": "g11_geom_space_proof",
+      "name": "Chứng minh tổng hợp song song và vuông góc",
+      "export": "054_toan_11_g11_geom_space_proof.jsonl",
+      "usable_candidate": 634
+    },
+    "55": {
+      "grade": 11,
+      "topic": "cong_thuc_luong_giac",
+      "name": "Công thức lượng giác",
+      "export": "055_toan_11_cong_thuc_luong_giac.jsonl",
+      "usable_candidate": 620,
+      "duplicate_word_source": 14
+    },
+    "56": {
+      "grade": 11,
+      "topic": "cap_so_cong",
+      "name": "Cấp số cộng",
+      "export": "056_toan_11_cap_so_cong.jsonl",
+      "usable_candidate": 604,
+      "duplicate_word_source": 50
+    },
+    "57": {
+      "grade": 11,
+      "topic": "cap_so_nhan",
+      "name": "Cấp số nhân",
+      "export": "057_toan_11_cap_so_nhan.jsonl",
+      "usable_candidate": 594,
+      "duplicate_word_source": 50
+    },
+    "58": {
+      "grade": 11,
+      "topic": "day_so",
+      "name": "Dãy số",
+      "export": "058_toan_11_day_so.jsonl",
+      "usable_candidate": 644
+    },
+    "59": {
+      "grade": 11,
+      "topic": "day_so_tong_quat",
+      "name": "Dãy số",
+      "export": "059_toan_11_day_so_tong_quat.jsonl",
+      "usable_candidate": 634
+    },
+    "60": {
+      "grade": 11,
+      "topic": "day_so_truy_hoi_11",
+      "name": "Dãy số truy hồi",
+      "export": "060_toan_11_day_so_truy_hoi_11.jsonl",
+      "usable_candidate": 628,
+      "equivalent_mcq_options": 16
+    },
+    "61": {
+      "grade": 11,
+      "topic": "g11_sequences_advanced",
+      "name": "Dãy số truy hồi và bài toán cực trị",
+      "export": "061_toan_11_g11_sequences_advanced.jsonl",
+      "usable_candidate": 612,
+      "duplicate_word_source": 10,
+      "equivalent_mcq_options": 12
+    },
+    "62": {
+      "grade": 11,
+      "topic": "g11_geom_section_construction",
+      "name": "Dựng thiết diện của hình chóp và lăng trụ",
+      "export": "062_toan_11_g11_geom_section_construction.jsonl",
+      "usable_candidate": 634
+    },
+    "63": {
+      "grade": 11,
+      "topic": "gia_tri_luong_giac",
+      "name": "Giá trị lượng giác",
+      "export": "063_toan_11_gia_tri_luong_giac.jsonl",
+      "usable_candidate": 613,
+      "incomplete_fields": 1,
+      "duplicate_word_source": 20
+    },
+    "64": {
+      "grade": 11,
+      "topic": "gioi_han",
+      "name": "Giới hạn",
+      "export": "064_toan_11_gioi_han.jsonl",
+      "usable_candidate": 644
+    },
+    "65": {
+      "grade": 11,
+      "topic": "gioi_han_ham_so",
+      "name": "Giới hạn hàm số",
+      "export": "065_toan_11_gioi_han_ham_so.jsonl",
+      "usable_candidate": 612,
+      "incomplete_fields": 1,
+      "duplicate_word_source": 21
+    },
+    "66": {
+      "grade": 11,
+      "topic": "g11_geom_dihedral_angles",
+      "name": "Góc giữa đường thẳng và mặt phẳng",
+      "export": "066_toan_11_g11_geom_dihedral_angles.jsonl",
+      "usable_candidate": 634
+    },
+    "67": {
+      "grade": 11,
+      "topic": "goc_khoang_cach_11",
+      "name": "Góc và khoảng cách trong không gian",
+      "export": "067_toan_11_goc_khoang_cach_11.jsonl",
+      "usable_candidate": 634
+    },
+    "68": {
+      "grade": 11,
+      "topic": "g11_geom_parallel_planes",
+      "name": "Hai mặt phẳng song song",
+      "export": "068_toan_11_g11_geom_parallel_planes.jsonl",
+      "usable_candidate": 634
+    },
+    "69": {
+      "grade": 11,
+      "topic": "ham_so_lien_tuc",
+      "name": "Hàm số liên tục",
+      "export": "069_toan_11_ham_so_lien_tuc.jsonl",
+      "usable_candidate": 644
+    },
+    "70": {
+      "grade": 11,
+      "topic": "ham_so_luong_giac",
+      "name": "Hàm số lượng giác",
+      "export": "070_toan_11_ham_so_luong_giac.jsonl",
+      "usable_candidate": 634
+    },
+    "71": {
+      "grade": 11,
+      "topic": "g11_geom_transform_composition",
+      "name": "Hợp thành các phép biến hình",
+      "export": "071_toan_11_g11_geom_transform_composition.jsonl",
+      "usable_candidate": 644
+    },
+    "72": {
+      "grade": 11,
+      "topic": "g11_geom_skew_lines_distance",
+      "name": "Khoảng cách giữa hai đường thẳng chéo nhau",
+      "export": "072_toan_11_g11_geom_skew_lines_distance.jsonl",
+      "invalid_mcq": 4,
+      "usable_candidate": 630
+    },
+    "73": {
+      "grade": 11,
+      "topic": "g11_conditional_probability_models",
+      "name": "Mô hình xác suất có điều kiện",
+      "export": "073_toan_11_g11_conditional_probability_models.jsonl",
+      "usable_candidate": 597,
+      "equivalent_mcq_options": 37
+    },
+    "74": {
+      "grade": 11,
+      "topic": "g11_geom_prism_pyramid_sections",
+      "name": "Mặt bên, cạnh bên và đáy của lăng trụ, hình chóp",
+      "export": "074_toan_11_g11_geom_prism_pyramid_sections.jsonl",
+      "usable_candidate": 634
+    },
+    "75": {
+      "grade": 11,
+      "topic": "nhan_biet_hinh_khong_gian_11",
+      "name": "Nhận biết hình học không gian",
+      "export": "075_toan_11_nhan_biet_hinh_khong_gian_11.jsonl",
+      "usable_candidate": 634
+    },
+    "76": {
+      "grade": 11,
+      "topic": "g11_geom_space_lines_planes",
+      "name": "Nhận biết đường thẳng và mặt phẳng trong không gian",
+      "export": "076_toan_11_g11_geom_space_lines_planes.jsonl",
+      "usable_candidate": 634
+    },
+    "77": {
+      "grade": 11,
+      "topic": "g11_binomial_advanced",
+      "name": "Nhị thức Newton và hệ số tổ hợp nâng cao",
+      "export": "077_toan_11_g11_binomial_advanced.jsonl",
+      "usable_candidate": 421,
+      "duplicate_word_source": 20,
+      "equivalent_mcq_options": 203
+    },
+    "78": {
+      "grade": 11,
+      "topic": "phep_bien_hinh_co_ban_11",
+      "name": "Phép biến hình cơ bản",
+      "export": "078_toan_11_phep_bien_hinh_co_ban_11.jsonl",
+      "usable_candidate": 634
+    },
+    "79": {
+      "grade": 11,
+      "topic": "phep_bien_hinh_11",
+      "name": "Phép biến hình trong mặt phẳng",
+      "export": "079_toan_11_phep_bien_hinh_11.jsonl",
+      "usable_candidate": 634
+    },
+    "80": {
+      "grade": 11,
+      "topic": "g11_geom_rotation_homothety",
+      "name": "Phép quay và phép vị tự",
+      "export": "080_toan_11_g11_geom_rotation_homothety.jsonl",
+      "incomplete_fields": 10,
+      "usable_candidate": 634
+    },
+    "81": {
+      "grade": 11,
+      "topic": "g11_geom_transform_translation",
+      "name": "Phép tịnh tiến và ảnh của hình",
+      "export": "081_toan_11_g11_geom_transform_translation.jsonl",
+      "usable_candidate": 624,
+      "duplicate_word_source": 10
+    },
+    "82": {
+      "grade": 11,
+      "topic": "g11_geom_transform_reflection",
+      "name": "Phép đối xứng trục",
+      "export": "082_toan_11_g11_geom_transform_reflection.jsonl",
+      "incomplete_fields": 10,
+      "usable_candidate": 634
+    },
+    "83": {
+      "grade": 11,
+      "topic": "phuong_trinh_luong_giac",
+      "name": "Phương trình lượng giác",
+      "export": "083_toan_11_phuong_trinh_luong_giac.jsonl",
+      "usable_candidate": 634
+    },
+    "84": {
+      "grade": 11,
+      "topic": "phuong_trinh_luong_giac_day_du",
+      "name": "Phương trình lượng giác",
+      "export": "084_toan_11_phuong_trinh_luong_giac_day_du.jsonl",
+      "usable_candidate": 634
+    },
+    "85": {
+      "grade": 11,
+      "topic": "g11_advanced_trig_equations",
+      "name": "Phương trình lượng giác nâng cao",
+      "export": "085_toan_11_g11_advanced_trig_equations.jsonl",
+      "usable_candidate": 634
+    },
+    "86": {
+      "grade": 11,
+      "topic": "song_song_khong_gian",
+      "name": "Quan hệ song song trong không gian",
+      "export": "086_toan_11_song_song_khong_gian.jsonl",
+      "usable_candidate": 634
+    },
+    "87": {
+      "grade": 11,
+      "topic": "hinh_khong_gian",
+      "name": "Quan hệ song song và vuông góc trong không gian",
+      "export": "087_toan_11_hinh_khong_gian.jsonl",
+      "usable_candidate": 634
+    },
+    "88": {
+      "grade": 11,
+      "topic": "vuong_goc_khong_gian",
+      "name": "Quan hệ vuông góc trong không gian",
+      "export": "088_toan_11_vuong_goc_khong_gian.jsonl",
+      "usable_candidate": 634
+    },
+    "89": {
+      "grade": 11,
+      "topic": "quy_nap_toan_hoc_11",
+      "name": "Quy nạp toán học",
+      "export": "089_toan_11_quy_nap_toan_hoc_11.jsonl",
+      "usable_candidate": 569,
+      "equivalent_mcq_options": 71,
+      "incomplete_fields": 4
+    },
+    "90": {
+      "grade": 11,
+      "topic": "dao_ham_quy_tac",
+      "name": "Quy tắc đạo hàm",
+      "export": "090_toan_11_dao_ham_quy_tac.jsonl",
+      "usable_candidate": 634
+    },
+    "91": {
+      "grade": 11,
+      "topic": "thiet_dien_hinh_khong_gian_11",
+      "name": "Thiết diện hình không gian",
+      "export": "091_toan_11_thiet_dien_hinh_khong_gian_11.jsonl",
+      "usable_candidate": 634
+    },
+    "92": {
+      "grade": 11,
+      "topic": "g11_geom_section_ratio",
+      "name": "Thiết diện và tỉ số đoạn trong hình không gian",
+      "export": "092_toan_11_g11_geom_section_ratio.jsonl",
+      "usable_candidate": 634
+    },
+    "93": {
+      "grade": 11,
+      "topic": "thong_ke_11",
+      "name": "Thống kê Toán 11",
+      "export": "093_toan_11_thong_ke_11.jsonl",
+      "usable_candidate": 614,
+      "duplicate_word_source": 30
+    },
+    "94": {
+      "grade": 11,
+      "topic": "to_hop_xac_suat_nang_cao_11",
+      "name": "Tổ hợp và xác suất nâng cao",
+      "export": "094_toan_11_to_hop_xac_suat_nang_cao_11.jsonl",
+      "usable_candidate": 439,
+      "equivalent_mcq_options": 205
+    },
+    "95": {
+      "grade": 11,
+      "topic": "xac_suat_11",
+      "name": "Xác suất",
+      "export": "095_toan_11_xac_suat_11.jsonl",
+      "usable_candidate": 578,
+      "duplicate_word_source": 21,
+      "equivalent_mcq_options": 35
+    },
+    "96": {
+      "grade": 11,
+      "topic": "g11_geom_parallel_line_plane",
+      "name": "Đường thẳng song song với mặt phẳng",
+      "export": "096_toan_11_g11_geom_parallel_line_plane.jsonl",
+      "usable_candidate": 634
+    },
+    "97": {
+      "grade": 11,
+      "topic": "g11_geom_perpendicular_line_plane",
+      "name": "Đường thẳng vuông góc với mặt phẳng",
+      "export": "097_toan_11_g11_geom_perpendicular_line_plane.jsonl",
+      "usable_candidate": 634
+    },
+    "98": {
+      "grade": 11,
+      "topic": "dao_ham",
+      "name": "Đạo hàm",
+      "export": "098_toan_11_dao_ham.jsonl",
+      "usable_candidate": 613,
+      "incomplete_fields": 1,
+      "duplicate_word_source": 20
+    },
+    "99": {
+      "grade": 11,
+      "topic": "g11_geom_three_perpendiculars",
+      "name": "Định lý ba đường vuông góc",
+      "export": "099_toan_11_g11_geom_three_perpendiculars.jsonl",
+      "usable_candidate": 634
+    },
+    "100": {
+      "grade": 11,
+      "topic": "ung_dung_dao_ham_11",
+      "name": "Ứng dụng đạo hàm",
+      "export": "100_toan_11_ung_dung_dao_ham_11.jsonl",
+      "usable_candidate": 633,
+      "incomplete_fields": 1
+    },
+    "101": {
+      "grade": 12,
+      "topic": "bieu_dien_so_phuc",
+      "name": "Biểu diễn số phức",
+      "export": "101_toan_12_bieu_dien_so_phuc.jsonl",
+      "usable_candidate": 642
+    },
+    "102": {
+      "grade": 12,
+      "topic": "g12_geom_parameter_geometry",
+      "name": "Bài toán tham số hình học Oxyz",
+      "export": "102_toan_12_g12_geom_parameter_geometry.jsonl",
+      "usable_candidate": 632
+    },
+    "103": {
+      "grade": 12,
+      "topic": "bai_toan_thuc_te_12",
+      "name": "Bài toán thực tế Toán 12",
+      "export": "103_toan_12_bai_toan_thuc_te_12.jsonl",
+      "usable_candidate": 632
+    },
+    "104": {
+      "grade": 12,
+      "topic": "g12_geom_3d_optimization",
+      "name": "Bài toán tối ưu hình học không gian",
+      "export": "104_toan_12_g12_geom_3d_optimization.jsonl",
+      "usable_candidate": 407,
+      "equivalent_mcq_options": 225
+    },
+    "105": {
+      "grade": 12,
+      "topic": "tong_hop_thpt",
+      "name": "Bài toán tổng hợp THPT",
+      "export": "105_toan_12_tong_hop_thpt.jsonl",
+      "usable_candidate": 632
+    },
+    "106": {
+      "grade": 12,
+      "topic": "bpt_logarit",
+      "name": "Bất phương trình logarit",
+      "export": "106_toan_12_bpt_logarit.jsonl",
+      "usable_candidate": 246,
+      "incomplete_fields": 1,
+      "equivalent_mcq_options": 385
+    },
+    "107": {
+      "grade": 12,
+      "topic": "bpt_mu",
+      "name": "Bất phương trình mũ",
+      "export": "107_toan_12_bpt_mu.jsonl",
+      "usable_candidate": 632
+    },
+    "108": {
+      "grade": 12,
+      "topic": "thong_ke_12",
+      "name": "Các số đặc trưng đo xu thế và độ phân tán",
+      "export": "108_toan_12_thong_ke_12.jsonl",
+      "usable_candidate": 622,
+      "duplicate_word_source": 20
+    },
+    "109": {
+      "grade": 12,
+      "topic": "cuc_tri",
+      "name": "Cực trị",
+      "export": "109_toan_12_cuc_tri.jsonl",
+      "usable_candidate": 632
+    },
+    "110": {
+      "grade": 12,
+      "topic": "g12_geom_min_distance_3d",
+      "name": "Cực trị khoảng cách trong không gian tọa độ",
+      "export": "110_toan_12_g12_geom_min_distance_3d.jsonl",
+      "usable_candidate": 632
+    },
+    "111": {
+      "grade": 12,
+      "topic": "g12_geom_solid_surface_area",
+      "name": "Diện tích xung quanh và toàn phần hình khối",
+      "export": "111_toan_12_g12_geom_solid_surface_area.jsonl",
+      "usable_candidate": 631,
+      "incomplete_fields": 1
+    },
+    "112": {
+      "grade": 12,
+      "topic": "g12_geom_sphere_plane_intersection",
+      "name": "Giao tuyến mặt cầu và mặt phẳng",
+      "export": "112_toan_12_g12_geom_sphere_plane_intersection.jsonl",
+      "usable_candidate": 642
+    },
+    "113": {
+      "grade": 12,
+      "topic": "g12_geom_line_plane_intersection",
+      "name": "Giao điểm đường thẳng và mặt phẳng",
+      "export": "113_toan_12_g12_geom_line_plane_intersection.jsonl",
+      "incomplete_fields": 10,
+      "usable_candidate": 622
+    },
+    "114": {
+      "grade": 12,
+      "topic": "gtln_gtnn",
+      "name": "Giá trị lớn nhất và nhỏ nhất",
+      "export": "114_toan_12_gtln_gtnn.jsonl",
+      "usable_candidate": 632
+    },
+    "115": {
+      "grade": 12,
+      "topic": "g12_geom_two_planes_angle",
+      "name": "Góc giữa hai mặt phẳng",
+      "export": "115_toan_12_g12_geom_two_planes_angle.jsonl",
+      "usable_candidate": 620,
+      "duplicate_word_source": 10,
+      "equivalent_mcq_options": 2
+    },
+    "116": {
+      "grade": 12,
+      "topic": "g12_geom_line_plane_angle",
+      "name": "Góc giữa đường thẳng và mặt phẳng Oxyz",
+      "export": "116_toan_12_g12_geom_line_plane_angle.jsonl",
+      "usable_candidate": 632
+    },
+    "117": {
+      "grade": 12,
+      "topic": "goc_khoang_cach_oxyz",
+      "name": "Góc và khoảng cách Oxyz",
+      "export": "117_toan_12_goc_khoang_cach_oxyz.jsonl",
+      "usable_candidate": 632
+    },
+    "118": {
+      "grade": 12,
+      "topic": "ham_logarit",
+      "name": "Hàm số logarit",
+      "export": "118_toan_12_ham_logarit.jsonl",
+      "usable_candidate": 474,
+      "duplicate_word_source": 4,
+      "equivalent_mcq_options": 97,
+      "incomplete_fields": 57
+    },
+    "119": {
+      "grade": 12,
+      "topic": "ham_mu",
+      "name": "Hàm số mũ",
+      "export": "119_toan_12_ham_mu.jsonl",
+      "incomplete_fields": 62,
+      "usable_candidate": 485,
+      "duplicate_word_source": 20,
+      "equivalent_mcq_options": 75
+    },
+    "120": {
+      "grade": 12,
+      "topic": "hinh_hoc_khong_gian",
+      "name": "Hình học không gian",
+      "export": "120_toan_12_hinh_hoc_khong_gian.jsonl",
+      "usable_candidate": 622,
+      "duplicate_word_source": 10
+    },
+    "121": {
+      "grade": 12,
+      "topic": "g12_complex_plane_geometry",
+      "name": "Hình học số phức và quỹ tích",
+      "export": "121_toan_12_g12_complex_plane_geometry.jsonl",
+      "usable_candidate": 652
+    },
+    "122": {
+      "grade": 12,
+      "topic": "hinh_khoi_va_the_tich_co_ban_12",
+      "name": "Hình khối và thể tích cơ bản",
+      "export": "122_toan_12_hinh_khoi_va_the_tich_co_ban_12.jsonl",
+      "usable_candidate": 632
+    },
+    "123": {
+      "grade": 12,
+      "topic": "g12_geom_point_plane_distance",
+      "name": "Khoảng cách từ điểm đến mặt phẳng",
+      "export": "123_toan_12_g12_geom_point_plane_distance.jsonl",
+      "usable_candidate": 632
+    },
+    "124": {
+      "grade": 12,
+      "topic": "khao_sat_ham_so",
+      "name": "Khảo sát và vẽ đồ thị hàm số",
+      "export": "124_toan_12_khao_sat_ham_so.jsonl",
+      "usable_candidate": 632
+    },
+    "125": {
+      "grade": 12,
+      "topic": "mat_cau",
+      "name": "Mặt cầu",
+      "export": "125_toan_12_mat_cau.jsonl",
+      "usable_candidate": 632
+    },
+    "126": {
+      "grade": 12,
+      "topic": "g12_geom_sphere_tangent_plane",
+      "name": "Mặt phẳng tiếp xúc với mặt cầu",
+      "export": "126_toan_12_g12_geom_sphere_tangent_plane.jsonl",
+      "usable_candidate": 642
+    },
+    "127": {
+      "grade": 12,
+      "topic": "mat_phang_oxyz",
+      "name": "Mặt phẳng trong Oxyz",
+      "export": "127_toan_12_mat_phang_oxyz.jsonl",
+      "usable_candidate": 632
+    },
+    "128": {
+      "grade": 12,
+      "topic": "nguyen_ham_tich_phan",
+      "name": "Nguyên hàm và tích phân",
+      "export": "128_toan_12_nguyen_ham_tich_phan.jsonl",
+      "usable_candidate": 634,
+      "equivalent_mcq_options": 8
+    },
+    "129": {
+      "grade": 12,
+      "topic": "pt_logarit",
+      "name": "Phương trình logarit",
+      "export": "129_toan_12_pt_logarit.jsonl",
+      "usable_candidate": 455,
+      "duplicate_word_source": 21,
+      "equivalent_mcq_options": 96,
+      "incomplete_fields": 60
+    },
+    "130": {
+      "grade": 12,
+      "topic": "pt_mu",
+      "name": "Phương trình mũ",
+      "export": "130_toan_12_pt_mu.jsonl",
+      "usable_candidate": 452,
+      "duplicate_word_source": 20,
+      "equivalent_mcq_options": 95,
+      "incomplete_fields": 65
+    },
+    "131": {
+      "grade": 12,
+      "topic": "g12_geom_sphere_equation",
+      "name": "Phương trình mặt cầu và tâm bán kính",
+      "export": "131_toan_12_g12_geom_sphere_equation.jsonl",
+      "incomplete_fields": 10,
+      "usable_candidate": 622,
+      "duplicate_word_source": 10
+    },
+    "132": {
+      "grade": 12,
+      "topic": "g12_geom_plane_equation",
+      "name": "Phương trình mặt phẳng",
+      "export": "132_toan_12_g12_geom_plane_equation.jsonl",
+      "usable_candidate": 632,
+      "duplicate_word_source": 20
+    },
+    "133": {
+      "grade": 12,
+      "topic": "pt_so_phuc",
+      "name": "Phương trình số phức",
+      "export": "133_toan_12_pt_so_phuc.jsonl",
+      "usable_candidate": 632
+    },
+    "134": {
+      "grade": 12,
+      "topic": "g12_geom_line_equation_3d",
+      "name": "Phương trình đường thẳng trong Oxyz",
+      "export": "134_toan_12_g12_geom_line_equation_3d.jsonl",
+      "usable_candidate": 631,
+      "incomplete_fields": 1
+    },
+    "135": {
+      "grade": 12,
+      "topic": "so_phuc",
+      "name": "Số phức",
+      "export": "135_toan_12_so_phuc.jsonl",
+      "usable_candidate": 562,
+      "duplicate_word_source": 70
+    },
+    "136": {
+      "grade": 12,
+      "topic": "the_tich_khong_gian",
+      "name": "Thể tích hình học không gian",
+      "export": "136_toan_12_the_tich_khong_gian.jsonl",
+      "usable_candidate": 621,
+      "incomplete_fields": 1,
+      "duplicate_word_source": 10
+    },
+    "137": {
+      "grade": 12,
+      "topic": "g12_solid_of_revolution",
+      "name": "Thể tích khối tròn xoay và mô hình thực tế",
+      "export": "137_toan_12_g12_solid_of_revolution.jsonl",
+      "usable_candidate": 568,
+      "equivalent_mcq_options": 64
+    },
+    "138": {
+      "grade": 12,
+      "topic": "tiep_tuyen",
+      "name": "Tiếp tuyến",
+      "export": "138_toan_12_tiep_tuyen.jsonl",
+      "usable_candidate": 632
+    },
+    "139": {
+      "grade": 12,
+      "topic": "tien_can",
+      "name": "Tiệm cận",
+      "export": "139_toan_12_tien_can.jsonl",
+      "usable_candidate": 642
+    },
+    "140": {
+      "grade": 12,
+      "topic": "tinh_don_dieu",
+      "name": "Tính đơn điệu",
+      "export": "140_toan_12_tinh_don_dieu.jsonl",
+      "usable_candidate": 631,
+      "incomplete_fields": 1
+    },
+    "141": {
+      "grade": 12,
+      "topic": "tuong_giao",
+      "name": "Tương giao đồ thị",
+      "export": "141_toan_12_tuong_giao.jsonl",
+      "usable_candidate": 632
+    },
+    "142": {
+      "grade": 12,
+      "topic": "toa_do_khong_gian",
+      "name": "Tọa độ trong không gian",
+      "export": "142_toan_12_toa_do_khong_gian.jsonl",
+      "incomplete_fields": 10,
+      "usable_candidate": 612,
+      "duplicate_word_source": 20
+    },
+    "143": {
+      "grade": 12,
+      "topic": "g12_integral_optimization",
+      "name": "Tối ưu và cực trị bằng tích phân",
+      "export": "143_toan_12_g12_integral_optimization.jsonl",
+      "usable_candidate": 626,
+      "equivalent_mcq_options": 6
+    },
+    "144": {
+      "grade": 12,
+      "topic": "g12_geom_vectors_3d",
+      "name": "Vectơ và độ dài trong không gian Oxyz",
+      "export": "144_toan_12_g12_geom_vectors_3d.jsonl",
+      "incomplete_fields": 10,
+      "usable_candidate": 622
+    },
+    "145": {
+      "grade": 12,
+      "topic": "hinh_hoc_oxyz_van_dung_12",
+      "name": "Vận dụng tọa độ Oxyz",
+      "export": "145_toan_12_hinh_hoc_oxyz_van_dung_12.jsonl",
+      "usable_candidate": 621,
+      "incomplete_fields": 1,
+      "duplicate_word_source": 10
+    },
+    "146": {
+      "grade": 12,
+      "topic": "g12_geom_skew_line_relation",
+      "name": "Vị trí tương đối của hai đường thẳng trong Oxyz",
+      "export": "146_toan_12_g12_geom_skew_line_relation.jsonl",
+      "usable_candidate": 642
+    },
+    "147": {
+      "grade": 12,
+      "topic": "xac_suat_12",
+      "name": "Xác suất và biến ngẫu nhiên",
+      "export": "147_toan_12_xac_suat_12.jsonl",
+      "usable_candidate": 586,
+      "duplicate_word_source": 20,
+      "equivalent_mcq_options": 46
+    },
+    "148": {
+      "grade": 12,
+      "topic": "duong_thang_oxyz",
+      "name": "Đường thẳng trong Oxyz",
+      "export": "148_toan_12_duong_thang_oxyz.jsonl",
+      "usable_candidate": 632
+    },
+    "149": {
+      "grade": 12,
+      "topic": "ung_dung_tich_phan",
+      "name": "Ứng dụng tích phân",
+      "export": "149_toan_12_ung_dung_tich_phan.jsonl",
+      "usable_candidate": 605,
+      "duplicate_word_source": 20,
+      "equivalent_mcq_options": 7
+    },
+    "150": {
+      "grade": 12,
+      "topic": "ung_dung_dao_ham",
+      "name": "Ứng dụng đạo hàm",
+      "export": "150_toan_12_ung_dung_dao_ham.jsonl",
+      "usable_candidate": 641,
+      "incomplete_fields": 1
+    }
+  },
+  "db_sha256": "d6804d47d2eba6af621b3cf07ab850af0bf01707d37798594386a787a6b67259",
+  "db_bytes": 67997696,
+  "quality_status": "candidate_unverified: structure/duplicate checks; not all answers independently verified",
+  "source_retention": "Word ZIP unchanged, V254/V59/V60/V61 unchanged"
+}
