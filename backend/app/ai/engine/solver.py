@@ -18,6 +18,9 @@ def _safe_numeric(value):
     text = text.replace("π", "pi")
     text = re.sub(r"(?<![A-Za-z])√\s*(\d+(?:\.\d+)?)", r"sqrt(\1)", text)
     text = re.sub(r"(?<![A-Za-z])sqrt\s*\(([^()]*)\)", r"sqrt(\1)", text)
+    # Mathematical caret notation means exponentiation, not Python bitwise XOR.
+    if len(text) > 256: return None
+    text = text.replace("^", "**")
     try:
         tree = ast.parse(text, mode="eval")
     except Exception:
@@ -29,7 +32,20 @@ def _safe_numeric(value):
         if isinstance(node, ast.Expression): return visit(node.body)
         if isinstance(node, ast.Constant) and isinstance(node.value, (int, float)) and not isinstance(node.value, bool): return float(node.value)
         if isinstance(node, ast.Name) and node.id == "pi": return math.pi
-        if isinstance(node, ast.BinOp) and type(node.op) in binary: return binary[type(node.op)](visit(node.left), visit(node.right))
+        if isinstance(node, ast.BinOp) and type(node.op) in binary:
+            left=visit(node.left)
+            right=visit(node.right)
+            # Bound exponentiation *before* performing it: hostile responses
+            # like 9**9**9 must never allocate giant integers or tie up a worker.
+            if isinstance(node.op, ast.Pow):
+                if not math.isfinite(float(right)) or abs(right) > 100 or abs(left) > 1e12:
+                    raise ValueError("exponent out of bounds")
+                if abs(left) > 1 and right > 0 and right * math.log10(abs(left)) > 100:
+                    raise ValueError("power too large")
+            result=binary[type(node.op)](left,right)
+            if isinstance(result, complex) or not math.isfinite(float(result)):
+                raise ValueError("non-real result")
+            return result
         if isinstance(node, ast.UnaryOp) and type(node.op) in unary: return unary[type(node.op)](visit(node.operand))
         if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == "sqrt" and len(node.args) == 1:
             return math.sqrt(visit(node.args[0]))

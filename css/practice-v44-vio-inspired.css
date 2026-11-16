@@ -40,3 +40,157 @@
 #v44-practice-content {transform-origin:top center}
 @media(max-width:600px){.mathweb-ai-panel{width:calc(100vw - 16px)!important;max-height:calc(100dvh - 16px)!important;padding:14px!important;border-radius:15px!important}}
 @media(prefers-reduced-motion:reduce){.mathweb-ai-panel *, .mathweb-ai-panel *::before{animation:none!important;transition:none!important}}
+
+
+/* V75: High-contrast light theme for the AI practice dialog only.
+   practise.js injects legacy dark-theme rules at runtime, so these overrides
+   intentionally use scoped selectors + !important. Never target all inputs,
+   buttons or dialogs globally: Admin, game and Battle have their own themes. */
+.mathweb-ai-overlay .mathweb-ai-panel,
+#mathwebAiOverlay .mathweb-ai-panel {
+  color: #1f2c43 !important;
+  color-scheme: light;
+}
+.mathweb-ai-panel .mathweb-ai-title,
+.mathweb-ai-panel .mathweb-ai-question,
+.mathweb-ai-panel .mathweb-ai-result,
+.mathweb-ai-panel .mathweb-ai-result-score {
+  color: #18283f !important;
+}
+.mathweb-ai-panel .mathweb-ai-subtitle,
+.mathweb-ai-panel .mathweb-ai-progress,
+.mathweb-ai-panel .mathweb-ai-field label {
+  color: #475b79 !important;
+  opacity: 1 !important;
+}
+.mathweb-ai-panel .mathweb-ai-chip {
+  background: #edf4fd !important;
+  border: 1px solid #d7e5f5 !important;
+  color: #334c69 !important;
+  opacity: 1 !important;
+}
+.mathweb-ai-panel .mathweb-ai-field select,
+.mathweb-ai-panel .mathweb-ai-field input,
+.mathweb-ai-panel .mathweb-ai-input {
+  background: #fff !important;
+  border: 1.5px solid #9eb7d1 !important;
+  color: #15263b !important;
+  -webkit-text-fill-color: #15263b !important;
+  opacity: 1 !important;
+}
+.mathweb-ai-panel .mathweb-ai-input::placeholder,
+.mathweb-ai-panel .mathweb-ai-field input::placeholder {
+  color: #64748b !important;
+  opacity: 1 !important;
+}
+.mathweb-ai-panel .mathweb-ai-field select option {
+  background: #fff !important;
+  color: #15263b !important;
+}
+/* The original .mathweb-ai-option uses #fff foreground on a nearly transparent
+   background; after V44 switches the panel to white, choices disappear. */
+.mathweb-ai-panel #mathwebAiAnswerArea .mathweb-ai-option,
+.mathweb-ai-panel .mathweb-ai-options .mathweb-ai-option {
+  display: block;
+  background: #f2f7fd !important;
+  color: #172b45 !important;
+  -webkit-text-fill-color: #172b45 !important;
+  border: 1.5px solid #b5cce3 !important;
+  font-weight: 600;
+  opacity: 1 !important;
+  overflow-wrap: anywhere;
+  white-space: normal;
+  min-height: 49px;
+  text-align: left;
+  box-shadow: none !important;
+}
+.mathweb-ai-panel .mathweb-ai-option strong,
+.mathweb-ai-panel .mathweb-ai-option span {
+  color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+.mathweb-ai-panel #mathwebAiAnswerArea .mathweb-ai-option:hover:not(:disabled),
+.mathweb-ai-panel .mathweb-ai-options .mathweb-ai-option:hover:not(:disabled) {
+  background: #e4f1ff !important;
+  border-color: #318bd6 !important;
+  color: #103b69 !important;
+  -webkit-text-fill-color: #103b69 !important;
+}
+.mathweb-ai-panel #mathwebAiAnswerArea .mathweb-ai-option:focus-visible,
+.mathweb-ai-panel .mathweb-ai-input:focus-visible {
+  outline: 3px solid #267be5 !important;
+  outline-offset: 2px !important;
+}
+.mathweb-ai-panel #mathwebAiAnswerArea .mathweb-ai-option:disabled {
+  color: #344b64 !important;
+  -webkit-text-fill-color: #344b64 !important;
+  background: #eaf1f8 !important;
+  border-color: #c2d2e2 !important;
+  opacity: .88 !important;
+  cursor: default;
+}
+.mathweb-ai-panel .mathweb-ai-btn {
+  background: #eaf1f9 !important;
+  border: 1px solid #c3d5e9 !important;
+  color: #193650 !important;
+  -webkit-text-fill-color: #193650 !important;
+}
+.mathweb-ai-panel .mathweb-ai-btn:hover:not(:disabled) {
+  background: #dceaf9 !important;
+}
+.mathweb-ai-panel .mathweb-ai-btn-primary {
+  background: #156ec5 !important;
+  border-color: #156ec5 !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+}
+.mathweb-ai-panel .mathweb-ai-btn-primary:hover:not(:disabled) {
+  background: #0e59a6 !important;
+}
+.mathweb-ai-panel .mathweb-ai-feedback {
+  color: #203247 !important;
+  opacity: 1 !important;
+}
+.mathweb-ai-panel .mathweb-ai-correct {
+  background: #e3f7eb !important;
+  border: 1px solid #64ba85 !important;
+  color: #145438 !important;
+}
+.mathweb-ai-panel .mathweb-ai-wrong {
+  background: #fff0ef !important;
+  border: 1px solid #e4a3a3 !important;
+  color: #852626 !important;
+}
+.mathweb-ai-panel .mathweb-ai-solution {
+  border-top-color: #d3deeb !important;
+  color: #243950 !important;
+  opacity: 1 !important;
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+.mathweb-ai-panel .mathweb-ai-result-grid .mathweb-ai-stat {
+  background: #f0f5fc !important;
+  border: 1px solid #d4e2f0;
+  color: #243950 !important;
+}
+.mathweb-ai-panel .mathweb-ai-result-grid .mathweb-ai-stat span {
+  color: #4c6079 !important;
+  opacity: 1 !important;
+}
+.mathweb-ai-panel .mathweb-ai-error {
+  background: #fff1f1 !important;
+  border-color: #edb3b3 !important;
+  color: #8f2323 !important;
+}
+.mathweb-ai-panel .mathweb-ai-loader {
+  border-color: #d2e3f4 !important;
+  border-top-color: #156ec5 !important;
+}
+@media (max-width: 600px) {
+  .mathweb-ai-panel .mathweb-ai-options { gap: 10px; }
+  .mathweb-ai-panel #mathwebAiAnswerArea .mathweb-ai-option {
+    font-size: 15px;
+    padding: 12px 14px;
+    line-height: 1.55;
+  }
+}

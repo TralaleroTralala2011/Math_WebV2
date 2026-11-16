@@ -88,6 +88,7 @@ class QuestionRequest(BaseModel):
     question_type:str="mixed"
     history:list[dict]=Field(default_factory=list)
     game_id:str|None=None
+    run_id:str|None=Field(default=None,max_length=100,pattern=r"^[a-zA-Z0-9:_-]+$")
     problem_mode:bool=False
     problem_parts:int=Field(default=4,ge=2,le=6)
 
@@ -138,7 +139,7 @@ def questions(req:QuestionRequest, authorization: str | None = Header(default=No
         if req.problem_mode:
             result=service.generate_problem_set(req.grade,req.topics,req.count,effective_difficulty(req),req.problem_parts,req.history,req.game_id)
         else:
-            result=service.generate_set(req.grade,req.topics,req.count,effective_difficulty(req),req.question_type,req.history,req.game_id)
+            result=service.generate_set(req.grade,req.topics,req.count,effective_difficulty(req),req.question_type,req.history,req.game_id,run_id=req.run_id)
         try: archive_questions(req.grade, req.topics, result.get("questions", []), game_id=req.game_id or "", source="AI runtime · /questions")
         except Exception: pass  # Archiving must never take down a practice request.
         return annotate_tier(result, req)
@@ -161,7 +162,7 @@ def practice_session(req:QuestionRequest, authorization: str | None = Header(def
         if req.problem_mode:
             result=service.generate_problem_set(req.grade,req.topics,req.count,effective_difficulty(req),req.problem_parts,req.history,req.game_id)
         else:
-            result=service.generate_set(req.grade,req.topics,req.count,effective_difficulty(req),req.question_type,req.history,req.game_id,allow_partial=bool(req.game_id))
+            result=service.generate_set(req.grade,req.topics,req.count,effective_difficulty(req),req.question_type,req.history,req.game_id,allow_partial=bool(req.game_id),run_id=req.run_id)
         result["mode"]="practice"
         try: archive_questions(req.grade, req.topics, result.get("questions", []), game_id=req.game_id or "", source="AI runtime · practice session")
         except Exception: pass

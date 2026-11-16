@@ -6,6 +6,7 @@ import secrets
 
 from datetime import datetime, timezone
 from pathlib import Path
+from .persistence_guard import enforce_storage, check_account_continuity, record_account_watermark, create_snapshot
 
 
 # =========================================================
@@ -20,6 +21,31 @@ _legacy_database = BASE_DIR / "mathweb.db"
 _local_app_data = os.environ.get("LOCALAPPDATA") if os.name == "nt" else None
 _default_database = (Path(_local_app_data) / "MATH_WEB" / "mathweb.db") if _local_app_data else _legacy_database
 DATABASE_PATH = Path(os.getenv("MATHWEB_DB_PATH", str(_default_database))).expanduser()
+# Strict production bootstrap: an unconfigured first Admin must not get a
+# guessable password. Existing Admin credentials continue to work after deploy.
+if os.getenv('MATHWEB_ENV', '').lower() == 'production' and not os.getenv('MATHWEB_BOOTSTRAP_ADMIN_PASSWORD'):
+    existing_admin = False
+    if DATABASE_PATH.is_file():
+        try:
+            with sqlite3.connect(f"file:{DATABASE_PATH.resolve().as_posix()}?mode=ro", uri=True) as _check:
+                has_admin = _check.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='admin_accounts'").fetchone()
+                if has_admin:
+                    existing_admin = _check.execute('SELECT 1 FROM admin_accounts LIMIT 1').fetchone() is not None
+                else:
+                    has_users = _check.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='users'").fetchone()
+                    if has_users:
+                        existing_admin = _check.execute("SELECT 1 FROM users WHERE username='admin19022011' LIMIT 1").fetchone() is not None
+        except sqlite3.Error:
+            pass
+    if not existing_admin:
+        raise RuntimeError('Production requires a non-default MATHWEB_BOOTSTRAP_ADMIN_PASSWORD before first deployment.')
+# Safety check MUST happen before mkdir/connect: an ephemeral Render filesystem
+# must not silently create an empty accounts database.
+enforce_storage(DATABASE_PATH)
+check_account_continuity(DATABASE_PATH)
+# Protect existing data before applying additive schema migrations.
+if DATABASE_PATH.is_file() and (os.getenv('MATHWEB_DATA_DIR') or os.getenv('MATHWEB_ENABLE_LOCAL_BACKUPS')):
+    create_snapshot(DATABASE_PATH)
 DATABASE_PATH.parent.mkdir(parents=True, exist_ok=True)
 # One-time migration of an older local installation, without overwriting a
 # newer database. Import uses SQLite backup, which also handles WAL correctly.
@@ -1544,3 +1570,4 @@ def init_database():
 # =========================================================
 
 init_database()
+record_account_watermark(DATABASE_PATH)

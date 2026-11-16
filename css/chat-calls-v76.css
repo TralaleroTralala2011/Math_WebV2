@@ -1,0 +1,16 @@
+.mw-call-toolbar{display:flex;align-items:center;gap:6px;margin-left:auto;flex-wrap:wrap}
+.mw-call-toolbar button{color:#b9edff;background:#142947;border:1px solid #315c82;border-radius:11px;padding:9px 11px;font:600 13px/1.3 system-ui;cursor:pointer}
+.mw-call-toolbar button:hover,.mw-call-toolbar button:focus-visible{background:#1a446a;border-color:#37d8fa;color:#fff}
+.mw-call-overlay[hidden],.mw-call-actions [hidden],.mw-call-videos[hidden]{display:none!important}
+.mw-call-overlay{position:fixed;inset:0;background:rgba(0,6,19,.85);z-index:100500;display:grid;place-items:center;padding:12px;color:#f7fbff}
+.mw-call-card{width:min(680px,100%);background:#101d36;border:1px solid #37658e;box-shadow:0 18px 100px #000a;border-radius:22px;padding:20px;font:15px/1.6 system-ui}
+.mw-call-heading{display:flex;justify-content:space-between;gap:12px}.mw-call-heading strong{font-size:20px}.mw-call-heading p{color:#b5d5e8;margin:6px 0 15px}
+.mw-call-heading button{border:1px solid #3a5477;background:#182d49;color:#fff;border-radius:9px;width:38px;height:38px;cursor:pointer}
+.mw-call-videos{position:relative;border:1px solid #253b5c;background:#071322;border-radius:16px;min-height:185px;max-height:410px;overflow:hidden}
+#mw-remote-video{width:100%;height:min(60vh,400px);object-fit:contain;display:block}
+#mw-local-video{position:absolute;right:12px;bottom:12px;width:28%;max-width:170px;min-height:80px;border:1px solid #67e8f9;border-radius:10px;object-fit:cover;background:#12243d}
+.mw-call-actions{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:16px 0 8px}
+.mw-call-actions button{padding:10px 15px;border:1px solid #3b668a;border-radius:12px;background:#20466a;color:white;font-weight:700;cursor:pointer}
+#mw-call-accept{background:#0c8c65;border-color:#15b98b}#mw-call-hangup{background:#a72b44;border-color:#d54862}
+.mw-call-card small{display:block;text-align:center;color:#b5d5e8}
+@media(max-width:650px){.mw-call-toolbar{gap:4px}.mw-call-toolbar button{padding:7px 8px;font-size:12px}.mw-call-card{padding:12px}.mw-call-heading strong{font-size:17px}.mw-call-videos{min-height:140px}}

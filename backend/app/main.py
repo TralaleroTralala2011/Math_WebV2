@@ -15,6 +15,7 @@ from .presence.routes import router as presence_router
 from .games.routes import router as games_router
 from .chat.routes import router as chat_router
 from .chat.live import router as chat_live_router
+from .chat.calls import router as call_router
 from .matchmaking.routes import router as matchmaking_router
 from app.ai.routes import router as ai_router
 from .admin_routes import router as admin_router
@@ -28,6 +29,7 @@ from .question_factory_v2_routes import router as qf2_router
 from .study_suite_routes import router as study_suite_router
 from .final_features_routes import router as final_features_router
 from .ai.maintenance_worker import start_worker, stop_worker
+from .account_backup_worker import start_account_backup_worker, stop_account_backup_worker
 from question_factory.api import make_router as make_question_factory_router
 from question_factory.bootstrap import database_path as question_factory_database_path
 from question_factory.bootstrap import initialize_factory
@@ -41,9 +43,11 @@ from question_factory.bootstrap import initialize_factory
 async def lifespan(app: FastAPI):
     # Start background maintenance once per API process; always stop cleanly.
     start_worker()
+    start_account_backup_worker()
     try:
         yield
     finally:
+        stop_account_backup_worker()
         stop_worker()
 
 
@@ -132,6 +136,7 @@ app.include_router(presence_router)
 app.include_router(games_router)
 app.include_router(chat_router)
 app.include_router(chat_live_router)
+app.include_router(call_router)
 app.include_router(matchmaking_router)
 app.include_router(ai_router)
 app.include_router(admin_router)

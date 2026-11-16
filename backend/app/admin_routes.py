@@ -15,13 +15,15 @@ from typing import Any
 from fastapi import APIRouter, Header, HTTPException, Query
 from pydantic import BaseModel, Field
 
-from database.database import get_connection
+from database.database import get_connection, DATABASE_PATH
 from .learner_activity_routes import ensure_activity_table
 from .storage_diagnostics import get_storage_diagnostics
+from database.persistence_guard import create_snapshot
 from .auth.routes import extract_bearer_token, verify_token, hash_password, verify_password, create_admin_token
 from app.ai.routes import service as ai_service
 from app.ai.maintenance_worker import get_status as get_ai_worker_status, set_enabled as set_ai_worker_enabled, run_maintenance_once
 from app.ai.archive import archive_questions
+from app.ai.engine.assignment_quality import eligible_assignment_questions, validate_cached_assignment
 
 router = APIRouter(prefix="/api/admin", tags=["Administration"])
 ADMIN_USERNAME = "admin19022011"
@@ -74,6 +76,11 @@ def ensure_admin_schema_and_account():
         conn.execute("""CREATE TABLE IF NOT EXISTS learning_assignments (id INTEGER PRIMARY KEY AUTOINCREMENT,title TEXT NOT NULL,description TEXT NOT NULL DEFAULT '',grade INTEGER NOT NULL,topic TEXT NOT NULL,difficulty TEXT NOT NULL DEFAULT 'medium',question_type TEXT NOT NULL DEFAULT 'mixed',question_count INTEGER NOT NULL DEFAULT 10,due_at TEXT,status TEXT NOT NULL DEFAULT 'published',created_by INTEGER,created_at TEXT NOT NULL,updated_at TEXT NOT NULL)""")
         conn.execute("""CREATE TABLE IF NOT EXISTS learning_assignment_targets (id INTEGER PRIMARY KEY AUTOINCREMENT,assignment_id INTEGER NOT NULL,user_id INTEGER NOT NULL,status TEXT NOT NULL DEFAULT 'assigned',questions_json TEXT NOT NULL DEFAULT '[]',started_at TEXT,submitted_at TEXT,score REAL,correct_count INTEGER,elapsed_seconds INTEGER,answer_json TEXT NOT NULL DEFAULT '{}',feedback_json TEXT NOT NULL DEFAULT '{}',UNIQUE(assignment_id,user_id),FOREIGN KEY(assignment_id) REFERENCES learning_assignments(id) ON DELETE CASCADE,FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE)""")
         conn.execute("CREATE INDEX IF NOT EXISTS idx_assignment_targets_user ON learning_assignment_targets(user_id,status)")
+        conn.execute("""CREATE TABLE IF NOT EXISTS learning_assignment_quarantine (
+            id INTEGER PRIMARY KEY AUTOINCREMENT, assignment_id INTEGER NOT NULL,
+            user_id INTEGER NOT NULL, old_questions_json TEXT NOT NULL,
+            reason TEXT NOT NULL, captured_at TEXT NOT NULL
+        )""")
         conn.execute("""CREATE TABLE IF NOT EXISTS learner_personalization (
             user_id INTEGER PRIMARY KEY, preferred_difficulty TEXT NOT NULL DEFAULT 'auto',
             difficulty_adjustment INTEGER NOT NULL DEFAULT 0 CHECK(difficulty_adjustment BETWEEN -1 AND 1),
@@ -100,7 +107,7 @@ def ensure_admin_schema_and_account():
                 conn.execute("INSERT INTO admin_accounts(username,password_hash,status,auth_version,created_at) VALUES(?,?,?,?,?)",
                              (ADMIN_USERNAME, admin["password_hash"], "active", 0, admin["created_at"] or now_iso()))
             else:
-                if os.getenv("MATHWEB_DATA_DIR") and not BOOTSTRAP_PASSWORD:
+                if os.getenv("RENDER") and not BOOTSTRAP_PASSWORD:
                     raise RuntimeError("Set Render secret MATHWEB_BOOTSTRAP_ADMIN_PASSWORD before creating the first admin account.")
                 initial_password = BOOTSTRAP_PASSWORD or secrets.token_urlsafe(24)
                 if len(initial_password) < 8:
@@ -109,7 +116,7 @@ def ensure_admin_schema_and_account():
                              (ADMIN_USERNAME, hash_password(initial_password), "active", 0, now_iso()))
                 # Never print production admin credentials to hosted logs.
                 print("[MATH_WEB ADMIN SETUP] Initial username:", ADMIN_USERNAME, flush=True)
-                if os.getenv("MATHWEB_DATA_DIR"):
+                if os.getenv("RENDER"):
                     print("[MATH_WEB ADMIN SETUP] Admin credential loaded from Render secret setting; value is hidden.", flush=True)
                 elif not os.getenv("MATHWEB_QUIET_BOOTSTRAP"):
                     print("[MATH_WEB ADMIN SETUP] Local-only initial password:", initial_password, flush=True)
@@ -186,6 +193,19 @@ def admin_me(authorization: str | None = Header(default=None)):
 def admin_storage_status(authorization: str | None = Header(default=None)):
     require_admin(authorization)
     return get_storage_diagnostics()
+
+
+@router.post("/storage/snapshot")
+def admin_make_storage_snapshot(authorization: str | None = Header(default=None)):
+    admin = require_admin(authorization)
+    try:
+        result = create_snapshot(DATABASE_PATH, force=True, max_snapshots=4)
+    except (OSError, RuntimeError, sqlite3.Error) as exc:
+        raise HTTPException(status_code=503, detail=f"Không tạo được điểm khôi phục SQLite: {exc}") from exc
+    with get_connection() as conn:
+        audit(conn, admin["id"], "create_local_account_restore_point", details={"created": result.get("created"), "accounts": result.get("accounts_in_snapshot")})
+        conn.commit()
+    return {"ok": bool(result.get("created")), **result, "warning": "Bản snapshot này ở cùng ổ với database. Hãy tải bản .mwbackup mã hóa về máy riêng để phòng hỏng hoặc mất ổ Render."}
 
 
 @router.get("/dashboard")
@@ -911,11 +931,30 @@ def learning_overview(authorization: str | None = Header(default=None)):
         return {"totals":totals,"learners":[dict(r) for r in learners],"topic_insights":[dict(r) for r in topics],"assignments":[dict(r) for r in assignments]}
     finally: conn.close()
 
+@router.get("/learning/assignment-bank/status")
+def assignment_bank_status(grade:int=Query(...,ge=10,le=12),topic:str=Query(...,min_length=1),
+                           difficulty:str="medium",question_type:str="mixed",
+                           authorization:str|None=Header(default=None)):
+    """Admin inspection: eligible independently shaped originals, never generated filler."""
+    require_admin(authorization)
+    qs=eligible_assignment_questions(grade,topic,difficulty,question_type,cap=500)
+    return {"grade":grade,"topic":topic,"difficulty":difficulty,"question_type":question_type,
+            "eligible_distinct_count":len(qs),"source":"150_CHU_DE_WORD",
+            "note":"Lọc tính phù hợp, hiển thị và dạng lặp; không đồng nghĩa tất cả đáp án đã được chứng minh độc lập."}
+
 @router.post("/learning/assignments")
 def create_learning_assignment(data:AssignmentCreateRequest,authorization: str | None = Header(default=None)):
     admin=require_admin(authorization);topic=data.topic.strip()
     item=next((x for x in ai_service.topics(data.grade) if str(x.get('id','')).casefold()==topic.casefold() or str(x.get('name','')).casefold()==topic.casefold()),None)
     if not item: raise HTTPException(status_code=400,detail="Chủ đề không thuộc thư viện của khối đã chọn.")
+    # Validate BEFORE creating assignments. Never publish a 30-question task using
+    # three near-identical templates, fabricated options, or the wrong topic.
+    available=eligible_assignment_questions(data.grade,str(item['id']),data.difficulty,data.question_type,cap=500)
+    if len(available)<data.question_count:
+        raise HTTPException(status_code=422,detail=(
+            f"Không thể giao {data.question_count} câu thuộc {item['id']} mức {data.difficulty}. "
+            f"Kho Word hiện chỉ có {len(available)} câu/dạng khác nhau qua bộ lọc. "
+            "Hãy bổ sung câu Word hợp lệ hoặc giảm số câu/đổi mức độ; hệ thống sẽ không tự thay số hay tạo câu ngoài chủ đề."))
     conn=get_connection()
     try:
         if data.student_ids:
@@ -926,6 +965,45 @@ def create_learning_assignment(data:AssignmentCreateRequest,authorization: str |
         aid=cur.lastrowid;conn.executemany("INSERT INTO learning_assignment_targets(assignment_id,user_id) VALUES(?,?)",[(aid,i) for i in ids]);audit(conn,admin['id'],'create_learning_assignment',None,{"assignment_id":aid,"target_count":len(ids)});conn.commit()
         return {"success":True,"id":aid,"assigned_count":len(ids),"message":f"Đã giao bài cho {len(ids)} học sinh."}
     finally: conn.close()
+
+class AssignmentRepairRequest(BaseModel):
+    difficulty:str=Field(min_length=1,max_length=40)
+    question_type:str=Field(default='mixed',max_length=40)
+    question_count:int=Field(ge=1,le=30)
+
+@router.put("/learning/assignments/{assignment_id}/repair")
+def repair_learning_assignment(assignment_id:int,data:AssignmentRepairRequest,
+                               authorization:str|None=Header(default=None)):
+    """Change an unsubmitted assignment only after checking Word-source capacity."""
+    admin=require_admin(authorization);conn=get_connection()
+    try:
+        original=conn.execute('SELECT id,grade,topic FROM learning_assignments WHERE id=?',(assignment_id,)).fetchone()
+        if not original:raise HTTPException(404,'Không tìm thấy bài tập cần chỉnh sửa.')
+        if conn.execute("SELECT 1 FROM learning_assignment_targets WHERE assignment_id=? AND status='submitted' LIMIT 1",(assignment_id,)).fetchone():
+            raise HTTPException(409,'Bài tập đã có học sinh nộp; cần giao bài mới thay vì sửa đề đã chấm.')
+        pool=eligible_assignment_questions(original['grade'],original['topic'],data.difficulty,
+                                           data.question_type,cap=500)
+        if len(pool)<data.question_count:
+            raise HTTPException(422,(f"Nguồn Word có {len(pool)} câu/dạng hợp lệ nhưng cấu hình yêu cầu "
+                                     f"{data.question_count}. Vui lòng bổ sung Word hoặc chọn cấu hình khác."))
+        old=conn.execute("SELECT user_id,questions_json FROM learning_assignment_targets WHERE assignment_id=? AND questions_json!='[]'",(assignment_id,)).fetchall()
+        for r in old:
+            conn.execute("""INSERT INTO learning_assignment_quarantine
+                            (assignment_id,user_id,old_questions_json,reason,captured_at)
+                            VALUES(?,?,?,?,?)""",(assignment_id,r['user_id'],r['questions_json'],
+                            'Admin repaired assignment; old unsubmitted questions archived',now_iso()))
+        conn.execute("""UPDATE learning_assignments SET difficulty=?,question_type=?,question_count=?,updated_at=? WHERE id=?""",
+                     (data.difficulty,data.question_type,data.question_count,now_iso(),assignment_id))
+        conn.execute("""UPDATE learning_assignment_targets
+                        SET questions_json='[]',started_at=NULL,status='assigned'
+                        WHERE assignment_id=? AND status!='submitted'""",(assignment_id,))
+        audit(conn,admin['id'],'repair_learning_assignment',None,{'assignment_id':assignment_id,
+              'difficulty':data.difficulty,'question_type':data.question_type,'question_count':data.question_count,
+              'quarantined_count':len(old)})
+        conn.commit()
+        return {'success':True,'assignment_id':assignment_id,'available_distinct_questions':len(pool),
+                'message':'Đã cập nhật cấu hình; câu cũ chưa nộp được lưu riêng để rà soát.'}
+    finally:conn.close()
 
 @router.get("/learning/assignments")
 def list_learning_assignments(authorization: str | None = Header(default=None)):
@@ -962,54 +1040,53 @@ def my_learning_assignments(authorization: str | None = Header(default=None)):
     finally: conn.close()
 
 @router.post("/learning/assignments/{assignment_id}/start")
-def start_my_assignment(assignment_id:int,authorization: str | None = Header(default=None)):
+def start_my_assignment(assignment_id:int,authorization:str|None=Header(default=None)):
     uid=_student_id(authorization);conn=get_connection()
     try:
-        t=conn.execute("SELECT t.*,a.grade,a.topic,a.difficulty,a.question_type,a.question_count,a.title FROM learning_assignment_targets t JOIN learning_assignments a ON a.id=t.assignment_id WHERE t.assignment_id=? AND t.user_id=? AND a.status='published'",(assignment_id,uid)).fetchone()
-        if not t: raise HTTPException(status_code=404,detail="Không tìm thấy bài được giao.")
-        if t['status']=='submitted': raise HTTPException(status_code=409,detail="Bài này đã nộp.")
-        qs=json.loads(t['questions_json'] or '[]')
+        t=conn.execute("""SELECT t.*,a.grade,a.topic,a.difficulty,a.question_type,a.question_count,a.title
+                          FROM learning_assignment_targets t JOIN learning_assignments a
+                            ON a.id=t.assignment_id
+                          WHERE t.assignment_id=? AND t.user_id=? AND a.status='published'""",
+                       (assignment_id,uid)).fetchone()
+        if not t:raise HTTPException(status_code=404,detail="Không tìm thấy bài được giao.")
+        if t['status']=='submitted':raise HTTPException(status_code=409,detail="Bài này đã được nộp.")
+        try:qs=json.loads(t['questions_json'] or '[]')
+        except (ValueError,TypeError):qs=[]
+        grade=int(t['grade']);topic=str(t['topic']);difficulty=str(t['difficulty']);kind=str(t['question_type'])
+        if qs and not validate_cached_assignment(qs,grade,topic,difficulty,kind):
+            # Existing assignments generated by the broken AI fallback must not
+            # be shown again. Preserve the original payload for operator audit.
+            conn.execute("""INSERT INTO learning_assignment_quarantine
+                            (assignment_id,user_id,old_questions_json,reason,captured_at)
+                            VALUES(?,?,?,?,?)""",(assignment_id,uid,json.dumps(qs,ensure_ascii=False),
+                            'Old assignment failed topic/source/semantic duplicate check',now_iso()))
+            conn.execute("""UPDATE learning_assignment_targets
+                            SET questions_json='[]',status='assigned',started_at=NULL
+                            WHERE id=? AND status!='submitted'""",(t['id'],))
+            conn.commit()
+            qs=[]
         if not qs:
-            profile=conn.execute("SELECT preferred_difficulty,difficulty_adjustment,source_mode,question_count_scale FROM learner_personalization WHERE user_id=?",(uid,)).fetchone()
-            difficulty=str(t['difficulty']); count=int(t['question_count'])
-            bank_difficulty={'easy':'nền tảng','medium':'trung cấp','hard':'nâng cao','expert':'nâng cao'}.get(difficulty,difficulty)
-            if profile:
-                if profile['preferred_difficulty'] and profile['preferred_difficulty']!='auto': difficulty=profile['preferred_difficulty']
-                else:
-                    levels=['nền tảng','trung cấp','nâng cao']
-                    if difficulty in levels: difficulty=levels[max(0,min(2,levels.index(difficulty)+int(profile['difficulty_adjustment'] or 0)))]
-                count=max(1,min(30,round(count*float(profile['question_count_scale'] or 1.0))))
-            source_mode=profile['source_mode'] if profile else 'mixed'
-            try:
-                source_row=conn.execute("SELECT value FROM admin_system_settings WHERE key='question_sources'").fetchone()
-                enabled_sources=json.loads(source_row['value']) if source_row else ['AI runtime','MATHWEB_KNOWLEDGE_LIBRARY','admin_question_bank']
-            except Exception: enabled_sources=['AI runtime','MATHWEB_KNOWLEDGE_LIBRARY','admin_question_bank']
-            if not profile:
-                try:
-                    raw=conn.execute("SELECT value FROM admin_system_settings WHERE key='distribution_rules'").fetchone()
-                    rules=json.loads(raw['value']) if raw else {}
-                    homework_rule=str(rules.get('homework','mixed'))
-                    if homework_rule=='library_then_ai': source_mode='mixed'
-                    elif homework_rule in ('ai','library','admin_bank','mixed'): source_mode=homework_rule
-                except Exception: pass
-            if source_mode in ('admin_bank','mixed','library') and 'admin_question_bank' in enabled_sources:
-                rows=conn.execute("SELECT * FROM admin_question_bank WHERE grade=? AND (lower(topic)=lower(?) OR lower(topic)=lower(?)) AND (difficulty=? OR ?='auto') ORDER BY RANDOM() LIMIT ?",(int(t['grade']),str(t['topic']),str(t['topic']),bank_difficulty,bank_difficulty,count)).fetchall()
-                for r in rows:
-                    try: choices=json.loads(r['choices_json'] or '[]')
-                    except Exception: choices=[]
-                    qs.append({'question':r['question'],'options':choices,'answer':r['correct_answer'],'correct_answer':r['correct_answer'],'solution':r['explanation'],'question_type':r['question_type'],'difficulty':r['difficulty'],'source':r['source']})
-            if not qs and source_mode!='admin_bank' and any(x in enabled_sources for x in ('AI runtime','MATHWEB_KNOWLEDGE_LIBRARY')):
-                ai_difficulty={'nền tảng':'easy','trung cấp':'medium','nâng cao':'hard'}.get(str(difficulty).casefold(),difficulty)
-                try: result=ai_service.generate_set(int(t['grade']),[str(t['topic'])],count,ai_difficulty,str(t['question_type']),history=[],game_id='')
-                except Exception as e: raise HTTPException(status_code=422,detail=f"AI chưa tạo được câu hỏi: {e}")
-                qs=result.get('questions',[])
-            if not qs: raise HTTPException(status_code=422,detail="Chưa có câu hỏi phù hợp trong nguồn đã chọn; hãy bổ sung ngân hàng hoặc dùng nguồn AI.")
-            try: archive_questions(int(t['grade']), [str(t['topic'])], qs, source=f"assigned homework · {source_mode}")
-            except Exception: pass
-            conn.execute("UPDATE learning_assignment_targets SET questions_json=?,started_at=?,status='in_progress' WHERE id=?",(json.dumps(qs,ensure_ascii=False),now_iso(),t['id']));conn.commit()
-        safe=[{"id":str(i),"question":q.get('question',''),"options":q.get('options') or q.get('statements') or q.get('choices') or [],"question_type":q.get('question_type',t['question_type']),"difficulty":q.get('difficulty',t['difficulty'])} for i,q in enumerate(qs)]
-        return {"assignment_id":assignment_id,"title":t['title'],"questions":safe,"started_at":t['started_at'] or now_iso()}
-    finally: conn.close()
+            count=int(t['question_count'])
+            pool=eligible_assignment_questions(grade,topic,difficulty,kind,cap=500)
+            if len(pool)<count:
+                raise HTTPException(status_code=422,detail=(
+                    f"Bài tập cần {count} câu độc lập thuộc chủ đề {topic}, mức {difficulty}. "
+                    f"Nguồn Word chỉ có {len(pool)} câu/dạng đạt bộ lọc. "
+                    "Bài cũ sai chủ đề/trùng mẫu đã được cách ly nếu có; "
+                    "hãy báo Admin điều chỉnh bài hoặc bổ sung dữ liệu Word đúng. Không tự sinh câu thay số."))
+            import random
+            qs=random.SystemRandom().sample(pool,count)
+            conn.execute("""UPDATE learning_assignment_targets
+                            SET questions_json=?,started_at=?,status='in_progress'
+                            WHERE id=? AND status!='submitted'""",
+                         (json.dumps(qs,ensure_ascii=False),now_iso(),t['id']))
+            conn.commit()
+        safe=[{"id":str(i),"question":q['question'],"options":q.get('options') or [],
+               "question_type":q['question_type'],"difficulty":q['difficulty']}
+              for i,q in enumerate(qs)]
+        return {"assignment_id":assignment_id,"title":t['title'],"questions":safe,
+                "started_at":t['started_at'] or now_iso(),"source":"150_CHU_DE_WORD"}
+    finally:conn.close()
 
 @router.post("/learning/assignments/{assignment_id}/submit")
 def submit_my_assignment(assignment_id:int,data:AssignmentSubmitRequest,authorization: str | None = Header(default=None)):

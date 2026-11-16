@@ -14,6 +14,7 @@ from fastapi import APIRouter, Header, HTTPException
 from pydantic import BaseModel, Field
 
 from database.database import get_connection, DATABASE_PATH
+from database.persistence_guard import record_account_watermark
 
 
 router = APIRouter(
@@ -821,6 +822,9 @@ def get_current_user(
         )
 
         connection.commit()
+        # Persist high-watermark immediately after every real signup. A later
+        # missing/replaced SQLite DB must not silently appear as zero users.
+        record_account_watermark(DATABASE_PATH)
 
         cursor.execute(
             """

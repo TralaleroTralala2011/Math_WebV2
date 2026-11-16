@@ -12,6 +12,7 @@ from .feedback import feedback
 from .explanation import build_detailed_solution
 from .topic_expansion import geometry_diagram
 from .question_history import QuestionHistory
+from .question_distinctness import same_mathematical_type
 from .question_identity import question_key
 from .topic_relevance import is_question_on_topic
 from .mcq_quality_v68 import improve_mcq
@@ -232,7 +233,7 @@ class AIQuestionService:
             q["answer"] = ",".join("Đúng" if x else "Sai" for x in statement_answers)
         return q
 
-    def generate_one(self,grade,topic_id,difficulty="medium",question_type="multiple_choice",seen=None,game_id=None,recent_families=None,seen_structures=None,seen_variations=None,seen_archetypes=None,max_attempts_per_phase=150,seen_text_keys=None):
+    def generate_one(self,grade,topic_id,difficulty="medium",question_type="multiple_choice",seen=None,game_id=None,recent_families=None,seen_structures=None,seen_variations=None,seen_archetypes=None,max_attempts_per_phase=150,seen_text_keys=None,run_id=None,distinct_history=None):
         topic_info = self.knowledge.get(topic_id)
         if topic_info is None: raise ValueError("Unknown topic")
         if int(topic_info.get("grade",grade)) != int(grade):
@@ -249,6 +250,13 @@ class AIQuestionService:
         seen_variations.update(self.question_history.recent_variations(topic_id, limit=10))
         last=None
         recent_families = list(recent_families or self.recent_families.get(game_id, []))
+        distinct_history = [item for item in (distinct_history or []) if isinstance(item, dict)]
+
+        def reserve_unique_type(q):
+            if game_id and any(same_mathematical_type(q, old) for old in distinct_history):
+                return False
+            return not (game_id and run_id) or self.question_history.claim_topic_run(run_id, topic_id, q)
+
 
         # Admin-reviewed questions are a first-class source for the matching topic.
         # They pass the same validation and duplicate gates as generated questions.
@@ -268,6 +276,8 @@ class AIQuestionService:
                 continue
             if q.get("archetype") in seen_archetypes:
                 continue
+            if not reserve_unique_type(q):
+                continue
             self.store.put(q)
             self.question_history.record_question(q)
             if game_id:
@@ -280,7 +290,7 @@ class AIQuestionService:
         # not reject a different *question* solely because its mathematical
         # structure matches a previous one. Exact visible text is never reused.
         bank_items=self._v254_candidates(grade, topic_id, difficulty, question_type)
-        for strict_structure in (True,False):
+        for strict_structure in ((True,) if game_id else (True,False)):
             for item in bank_items:
                 try:
                     options=json.loads(item['options'])
@@ -320,13 +330,15 @@ class AIQuestionService:
                                          or variation in seen_variations
                                          or q.get('archetype') in seen_archetypes):
                     continue
+                if not reserve_unique_type(q):
+                    continue
                 self.store.put(q)
                 self.question_history.record_question(q)
                 return q
 
         # Phase 1: strict diversity. A question must not repeat the same
         # mathematical structure or the same bank variation already used.
-        for strict in (True, False):
+        for strict in ((True,) if game_id else (True, False)):
             for _ in range(max(1, min(150, int(max_attempts_per_phase)))):
                 q=self.generator.generate(grade,topic_id,normalize(difficulty),question_type,game_id,recent_families)
                 if not is_question_on_topic(topic_id, q.get('question', '')):
@@ -348,6 +360,8 @@ class AIQuestionService:
                     continue
 
                 q["variation_key"] = variation
+                if not reserve_unique_type(q):
+                    continue
                 self.store.put(q)
                 self.question_history.record_question(q)
                 if game_id:
@@ -381,7 +395,7 @@ class AIQuestionService:
         random.shuffle(kinds)
         return kinds
 
-    def generate_set(self,grade,topics,count,difficulty="medium",question_type="multiple_choice",history=None,game_id=None,max_attempts_per_phase=150,allow_partial=False):
+    def generate_set(self,grade,topics,count,difficulty="medium",question_type="multiple_choice",history=None,game_id=None,max_attempts_per_phase=150,allow_partial=False,run_id=None):
         if count<1 or count>MAX_COUNT: raise ValueError("count out of range")
         if question_type not in {"multiple_choice", "short_answer", "true_false", "mixed"}:
             raise ValueError("Unsupported question type")
@@ -394,6 +408,7 @@ class AIQuestionService:
         seen_variations=set()
         seen_archetypes=set()
         recent_families=[]
+        distinct_history=[h for h in (history or []) if isinstance(h,dict)]
         # A shuffled 10-item block sliced to 9 could randomly drop the only
         # true/false question. Allocate the exact quotas *before* shuffling.
         # For count >= 3 all three modes are guaranteed; longer sets stay near
@@ -420,7 +435,7 @@ class AIQuestionService:
             level=current
             item_type = mixed_types[i] if question_type == "mixed" else question_type
             try:
-                q=self.generate_one(grade,topic,level,item_type,seen,game_id,recent_families[-10:],seen_structures,seen_variations,seen_archetypes,max_attempts_per_phase,seen_text_keys)
+                q=self.generate_one(grade,topic,level,item_type,seen,game_id,recent_families[-10:],seen_structures,seen_variations,seen_archetypes,max_attempts_per_phase,seen_text_keys,run_id=run_id,distinct_history=distinct_history)
             except RuntimeError:
                 # Mini-games can use fewer *distinct* questions when a narrow
                 # topic/type is depleted. Never duplicate to fill the request.
@@ -444,6 +459,7 @@ class AIQuestionService:
             seen.add(q["fingerprint"]); seen_text_keys.add(question_key(q.get("question", ""))); seen_structures.add(q.get("structure_fingerprint")); seen_variations.add(q["variation_key"]);
             if q.get("archetype"): seen_archetypes.add(q["archetype"])
             out.append(q)
+            distinct_history.append(q)
             if q.get("template_family"): recent_families.append(q["template_family"])
         return {"set_id":uuid.uuid4().hex,"grade":grade,"topics":topics,"difficulty":current,"count":len(out),"game_id":game_id,"questions":out}
 

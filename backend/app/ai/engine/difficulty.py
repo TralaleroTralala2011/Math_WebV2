@@ -1,9 +1,9 @@
 DIFFICULTY_ORDER = {"easy": 1, "medium": 2, "hard": 3, "expert": 4, "hell": 5}
 
 ALIASES = {
-    "de": "easy", "dễ": "easy", "nền tảng": "easy", "nen tang": "easy", "easy": "easy",
-    "vừa": "medium", "vua": "medium", "trung cấp": "medium", "trung cap": "medium", "medium": "medium",
-    "khó": "hard", "kho": "hard", "nâng cao": "hard", "nang cao": "hard", "hard": "hard",
+    "foundation": "easy", "basic": "easy", "de": "easy", "dễ": "easy", "nền tảng": "easy", "nen tang": "easy", "easy": "easy",
+    "intermediate": "medium", "vừa": "medium", "vua": "medium", "trung cấp": "medium", "trung cap": "medium", "medium": "medium",
+    "advanced": "hard", "khó": "hard", "kho": "hard", "nâng cao": "hard", "nang cao": "hard", "hard": "hard",
     "chuyên": "expert", "chuyen": "expert", "học sinh giỏi": "expert", "hsg": "expert", "expert": "expert",
     "địa ngục": "hell", "dia nguc": "hell", "cực khó": "hell", "hell": "hell", "nightmare": "hell",
 }

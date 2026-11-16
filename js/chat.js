@@ -2538,6 +2538,7 @@ async function initChat() {
 
 window.MATHWEB_CHAT = {
     openConversation,
+    getSelectedFriend: () => selectedFriend,
     loadFriends,
     refreshChatData,
     sendMessage,

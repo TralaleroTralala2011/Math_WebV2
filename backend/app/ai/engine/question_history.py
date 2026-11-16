@@ -13,6 +13,7 @@ from contextlib import contextmanager
 from pathlib import Path
 
 from .validator import fingerprint
+from .question_distinctness import claim_keys, same_mathematical_type
 
 
 _SCHEMA_LOCK = threading.Lock()
@@ -92,6 +93,46 @@ class QuestionHistory:
             conn.commit()
         finally:
             conn.close()
+
+    def claim_topic_run(self, run_id: str, topic: str, q: dict) -> bool:
+        """Atomically reserve an exercise type across all three topic games.
+
+        Concurrent requests (or browser tabs) cannot both claim one structure.
+        If a type is exhausted the caller must obtain another or report this
+        honestly; never turn a new number into a supposedly new exercise.
+        """
+        keys = claim_keys(q)
+        if not keys or not run_id or len(run_id) > 100 or not topic:
+            return False
+        with self._session() as conn:
+            conn.execute("""CREATE TABLE IF NOT EXISTS ai_topic_run_claims (
+                run_id TEXT NOT NULL, topic TEXT NOT NULL,
+                claim_key TEXT NOT NULL, question_text TEXT NOT NULL,
+                created_at REAL NOT NULL,
+                PRIMARY KEY(run_id, topic, claim_key)
+            )""")
+            conn.execute("BEGIN IMMEDIATE")
+            marks = ','.join('?' for _ in keys)
+            exists = conn.execute(
+                f'SELECT 1 FROM ai_topic_run_claims WHERE run_id=? AND topic=? AND claim_key IN ({marks}) LIMIT 1',
+                (run_id, topic, *keys),
+            ).fetchone()
+            if exists:
+                conn.rollback()
+                return False
+            previous = conn.execute(
+                "SELECT question_text FROM ai_topic_run_claims WHERE run_id=? AND topic=? AND claim_key LIKE 'shape:%'",
+                (run_id, topic),
+            ).fetchall()
+            if any(same_mathematical_type(q, {'question': row[0]}) for row in previous):
+                conn.rollback()
+                return False
+            now = time.time()
+            conn.executemany(
+                'INSERT INTO ai_topic_run_claims(run_id,topic,claim_key,question_text,created_at) VALUES(?,?,?,?,?)',
+                [(run_id, topic, k, str(q.get('question') or ''), now) for k in keys],
+            )
+            return True
 
     def recent_fingerprints(self, limit: int = 25000) -> set[str]:
         """Exact questions seen recently, across topics and practice sessions."""

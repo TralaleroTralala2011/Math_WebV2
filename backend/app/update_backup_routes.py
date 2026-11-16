@@ -194,6 +194,16 @@ def restore_backup(upload: Path, passphrase: str) -> dict:
         _decrypt_backup(upload, passphrase, zip_path)
         manifest, snapshots = _validate_archive(zip_path, work)
         paths = _paths()
+        # A backup from an older deployment may contain fewer accounts than
+        # the live database. Never silently wipe surviving user registrations.
+        if 'accounts' in snapshots and paths['accounts'].is_file():
+            def user_count(db_file):
+                with closing(sqlite3.connect(f"file:{db_file.resolve().as_posix()}?mode=ro", uri=True)) as c:
+                    return c.execute("SELECT COUNT(*) FROM users WHERE username NOT LIKE 'trial_%' AND username NOT LIKE 'legacy_admin_archived_%'").fetchone()[0]
+            live_count = user_count(paths['accounts'])
+            backup_count = user_count(snapshots['accounts'])
+            if backup_count < live_count:
+                raise ValueError(f"DỪNG KHÔI PHỤC: bản sao lưu có {backup_count} tài khoản, nhưng hệ thống hiện có {live_count} tài khoản. Khôi phục đè sẽ làm mất người dùng đang có. Hãy liên hệ quản trị và xuất bản sao lưu hiện tại trước khi xử lý thủ công.")
         rollback = {}
         created = []
         # Validate all input before touching the live database. Make rollback snapshots.
@@ -223,6 +233,9 @@ def restore_backup(upload: Path, passphrase: str) -> dict:
                 elif name in created:
                     paths[name].unlink(missing_ok=True)
             raise
+        from database.persistence_guard import record_account_watermark
+        if 'accounts' in snapshots:
+            record_account_watermark(paths['accounts'])
         return {"restored": list(snapshots), "created_at": manifest["created_at"]}
 
 

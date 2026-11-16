@@ -31,8 +31,9 @@ def test_assignment_flow_and_personalized_path(learning_client, monkeypatch):
     admin_login = client.post("/api/auth/login", json={"username": "admin19022011", "password": "TestOnlyAdminPass2026"})
     assert admin_login.status_code == 200, admin_login.text
     admin_headers = {"Authorization": f"Bearer {admin_login.json()['token']}"}
-    monkeypatch.setattr(ai_service, "generate_set", lambda *args, **kwargs: {"questions": [{"question": "Tính 2 + 2", "options": ["A. 3", "B. 4", "C. 5", "D. 6"], "answer": "B", "solution": "2 + 2 = 4", "question_type": "multiple_choice"}]})
-    created = client.post("/api/admin/learning/assignments", headers=admin_headers, json={"title": "Ôn tập phép tính", "description": "Làm cẩn thận", "grade": 10, "topic": "menh_de_tap_hop", "difficulty": "easy", "question_type": "multiple_choice", "question_count": 1, "student_ids": [learner["id"]]})
+    # AI TAP HOC no longer falls back to unrelated synthetic questions.
+    monkeypatch.setattr(ai_service, "generate_set", lambda *args, **kwargs: (_ for _ in ()).throw(AssertionError("AI fallback forbidden")))
+    created = client.post("/api/admin/learning/assignments", headers=admin_headers, json={"title": "Ôn hệ bất phương trình", "description": "Làm cẩn thận", "grade": 10, "topic": "he_bat_phuong_trinh", "difficulty": "medium", "question_type": "short_answer", "question_count": 1, "student_ids": [learner["id"]]})
     assert created.status_code == 200, created.text
     assignment_id = created.json()["id"]
     mine = client.get("/api/admin/learning/assignments/mine", headers=learner_headers)
@@ -40,10 +41,12 @@ def test_assignment_flow_and_personalized_path(learning_client, monkeypatch):
     started = client.post(f"/api/admin/learning/assignments/{assignment_id}/start", headers=learner_headers, json={})
     assert started.status_code == 200, started.text
     assert "answer" not in started.json()["questions"][0]
-    archived = client.get("/api/admin/questions?limit=20", headers=admin_headers)
-    assert archived.status_code == 200, archived.text
-    assert any(q["question"] == "Tính 2 + 2" for q in archived.json()["questions"])
-    submitted = client.post(f"/api/admin/learning/assignments/{assignment_id}/submit", headers=learner_headers, json={"answers": {"0": "B. 4"}, "elapsed_seconds": 12})
+    with database_module.get_connection() as con:
+        record=con.execute("SELECT questions_json FROM learning_assignment_targets WHERE assignment_id=?",(assignment_id,)).fetchone()
+        original=__import__('json').loads(record['questions_json'])[0]
+    assert original['source']=='150_CHU_DE_WORD' and original['source_word'].endswith('.docx')
+    assert started.json()['questions'][0]['question']==original['question']
+    submitted = client.post(f"/api/admin/learning/assignments/{assignment_id}/submit", headers=learner_headers, json={"answers": {"0": original['answer']}, "elapsed_seconds": 12})
     assert submitted.status_code == 200, submitted.text
     assert submitted.json()["score"] == 100.0
     assert client.get("/api/admin/learning/path", headers=learner_headers).status_code == 200

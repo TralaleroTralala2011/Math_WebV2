@@ -12,10 +12,30 @@
      const risky=result.status==='risk';
      host.className='notice '+(risky?'error':'ok');
      host.textContent=(risky?'⚠ Nguy cơ mất dữ liệu: ':'ℹ Lưu trữ: ')+String(result.message||'')+
-       (Array.isArray(result.concerns)&&result.concerns.length?' '+result.concerns.join(' '):'')+
-       ' Cấu hình đường dẫn không xác nhận được ổ Disk bền vững; không khôi phục đè khi chưa sao lưu.';
+       (Array.isArray(result.concerns)&&result.concerns.length?' '+result.concerns.join(' '):'');
+     const facts=document.getElementById('mw-v79-safety-facts');
+     if(facts)facts.textContent='Tài khoản hiện có: '+(result.accounts_now??'chưa rõ')+
+       ' · Mốc cao nhất đã ghi: '+(result.accounts_high_watermark??'chưa rõ')+
+       ' · Điểm khôi phục trên máy chủ: '+(result.snapshot_count??0)+
+       ' · Disk gắn riêng: '+(result.disk_mount_verified?'Đã phát hiện':'Chưa xác nhận')+
+       ' · Bản sao lưu bên ngoài: CHƯA XÁC MINH';
    }catch(error){host.className='notice error';host.textContent='Không kiểm tra được nơi lưu dữ liệu: '+String(error.message||error)+'. Không thể kết luận tài khoản đã bị xóa.';}
  };
+ document.addEventListener('DOMContentLoaded',()=>{
+   const create=document.getElementById('mw-v79-snapshot');
+   const note=document.getElementById('mw-v79-snapshot-msg');
+   if(create&&note)create.addEventListener('click',async()=>{
+     create.disabled=true;note.className='notice';note.textContent='Đang chụp bản sao SQLite nhất quán...';
+     try{
+       const result=await api('/api/admin/storage/snapshot',{method:'POST'});
+       note.className='notice '+(result.ok?'ok':'error');
+       note.textContent=result.ok?'Đã tạo điểm khôi phục. '+result.warning:String(result.reason||'Không tạo được bản sao lưu.');
+       await window.MWLoadStorage();
+     }catch(e){note.className='notice error';note.textContent='Sao lưu thất bại: '+e.message;}
+     finally{create.disabled=false;}
+   });
+   document.getElementById('mw-v79-open-backup')?.addEventListener('click',()=>document.querySelector('.navbtn[data-page="update"]')?.click());
+ });
  window.MWRenderUserExtras=function(data,host){
    if(!host||!data)return;
    const section=document.createElement('section');section.className='panel';section.style.marginTop='16px';

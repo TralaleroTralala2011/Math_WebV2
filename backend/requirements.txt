@@ -8,3 +8,6 @@ sympy>=1.12,<2
 
 cryptography>=42
 python-multipart>=0.0.9
+
+# WebSocket signalling for friends-only audio/video calls.
+websockets>=12,<16

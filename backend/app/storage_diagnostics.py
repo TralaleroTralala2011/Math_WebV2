@@ -10,39 +10,39 @@ from database.database import DATABASE_PATH
 
 
 def get_storage_diagnostics() -> dict:
-    render = bool(os.getenv("RENDER") or os.getenv("RENDER_SERVICE_ID") or os.getenv("RENDER_EXTERNAL_HOSTNAME"))
-    account_path = Path(DATABASE_PATH).expanduser().resolve()
-    configured_dir = os.getenv("MATHWEB_DATA_DIR", "").strip()
-    data_dir = Path(configured_dir).expanduser().resolve() if configured_dir else None
-    path_matches = bool(data_dir and (account_path == data_dir or data_dir in account_path.parents))
-    concerns = []
-    if render and not configured_dir:
-        concerns.append("Render thiếu MATHWEB_DATA_DIR: dữ liệu có nguy cơ nằm trên ổ tạm.")
-    if render and not path_matches:
-        concerns.append("MATHWEB_DB_PATH không nằm trong MATHWEB_DATA_DIR đã cấu hình.")
-    if render and configured_dir and str(data_dir).startswith("/opt/render/project"):
-        concerns.append("Thư mục dữ liệu nằm trong vùng mã nguồn của Render.")
-    if render and configured_dir and str(data_dir).startswith("/tmp"):
-        concerns.append("Thư mục dữ liệu nằm trong /tmp.")
-    if render and data_dir and not data_dir.exists():
-        concerns.append("Thư mục dữ liệu chưa tồn tại.")
-    if render and not concerns:
-        status = "configured_not_verified"
-        message = "Đã cấu hình đường dẫn dữ liệu riêng. Phải xác nhận Render Disk thực sự đã gắn và có sao lưu ngoài máy chủ."
-    elif render:
-        status = "risk"
-        message = "Cấu hình lưu trữ có nguy cơ mất dữ liệu sau lần deploy. Không khôi phục đè khi chưa có sao lưu."
+    from database.persistence_guard import configured_storage, snapshot_status
+
+    safety = configured_storage(DATABASE_PATH)
+    rendered = safety['render_detected']
+    try:
+        statistics = snapshot_status(DATABASE_PATH)
+    except (OSError, RuntimeError) as exc:
+        statistics = {'snapshot_status_error': str(exc)}
+
+    if rendered and not safety['safe']:
+        status = 'risk'
+        message = ('NGUY HIỂM: Backend không được phép tạo tài khoản trên ổ tạm Render. '
+                   'Cần Render Disk thực sự được mount trước khi hoạt động.')
+    elif rendered:
+        status = 'mounted_disk_detected'
+        message = ('Đã xác nhận thư mục dữ liệu nằm trên một điểm mount riêng. '
+                   'Vẫn cần bản sao lưu mã hóa lưu NGOÀI Render Disk để chống mất toàn bộ ổ.')
     else:
-        status = "local"
-        message = "Chạy cục bộ. Cần sao lưu định kỳ nếu sử dụng dữ liệu thật."
+        status = 'local'
+        message = ('Chạy cục bộ. Cần sao lưu riêng file database; nâng cấp ZIP không được chứa '
+                   'hoặc ghi đè tài khoản người dùng.')
+
     return {
-        "status": status,
-        "render_detected": render,
-        "db_exists": account_path.is_file(),
-        "db_path": str(account_path),
-        "data_dir": str(data_dir) if data_dir else None,
-        "message": message,
-        "concerns": concerns,
-        "disk_durability_verified": False,
-        "scale_ready_for_millions": False,
+        'status': status,
+        'render_detected': rendered,
+        'db_exists': Path(DATABASE_PATH).is_file(),
+        'db_path': str(Path(DATABASE_PATH).resolve()),
+        'data_dir': safety['data_dir'],
+        'message': message,
+        'concerns': safety['concerns'],
+        'disk_mount_verified': safety['mount_verified'],
+        'disk_durability_verified': bool(rendered and safety['safe']),
+        'external_backup_verified': False,
+        'scale_ready_for_millions': False,
+        **statistics,
     }

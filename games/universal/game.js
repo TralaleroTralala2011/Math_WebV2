@@ -13,6 +13,9 @@
   const $ = id => document.getElementById(id);
   const state = { questions: [], index: 0, progress: 0, points: 0, correct: 0, wrong: 0, blank: 0, answered: 0, batch: 0, history: [], locked: false, finished: false, seconds: config.seconds, timer: null, pendingNext: false };
   const recordKey = `mathweb_game_records_v3::universal::${topic}::${mode}`;
+  const run = window.MathWebGameQuestions.openTopicRun(grade, topic);
+  const claim = q => run.claim(q);
+
   $('title').textContent = `${config.label} • ${name}`;
   $('subtitle').textContent = `Toán ${grade} • Đúng +5 điểm • Sai −1 điểm • Đạt 100 để hoàn thành`;
   $('hp').previousElementSibling.textContent = '📈 Tiến độ';
@@ -30,17 +33,24 @@
   function normalize(q) { const options = q.options || q.choices || []; return { ...q, text: q.question || q.text || 'Câu hỏi', question_type: q.question_type || (options.length ? 'multiple_choice' : 'short_answer'), options: options.map(o => typeof o === 'object' && o ? (o.value ?? o.label ?? String(o)) : o), statements: Array.isArray(q.statements) ? q.statements : [], statement_answers: Array.isArray(q.statement_answers) ? q.statement_answers : [], solution: q.solution || q.explanation || '', diagram: q.diagram || null }; }
   async function fetchBatch() {
     const found = [];
-    if (isGeometry()) {
-      try { const r = await fetch(`${API}/api/ai/practice/session`, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({grade,topics:[topic],count:3,problem_parts:4,difficulty:['easy','medium','hard'][state.batch%3],question_type:'multiple_choice',problem_mode:true,history:state.history.slice(-30),game_id:`universal_${mode}_${topic}`}) }); if (!r.ok) throw new Error(); const d = await r.json(); found.push(...(d.questions || []).map(normalize)); } catch {}
-    } else {
-      const types = ['multiple_choice','short_answer','true_false'];
-      for (let i=0;i<types.length;i++) {
-        const history = [...state.history.slice(-24), ...found.slice(-12).map(q=>({fingerprint:q.fingerprint,structure_fingerprint:q.structure_fingerprint,template_family:q.template_family,variation_key:q.variation_key,archetype:q.archetype}))].slice(-30);
-        try { const r = await fetch(`${API}/api/ai/practice/session`, { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({grade,topics:[topic],count:4,difficulty:['easy','medium','hard'][(state.batch+i)%3],question_type:types[(state.batch+i)%3],history,game_id:`universal_${mode}_${topic}`}) }); if (!r.ok) throw new Error(); const d = await r.json(); found.push(...(d.questions || []).map(normalize)); } catch {}
-      }
+    const types = isGeometry() ? ['multiple_choice','short_answer','mixed'] : ['multiple_choice','short_answer','true_false'];
+    for(let i=0;i<types.length;i++){
+      const request={grade,topics:[topic],count:4,
+        difficulty:['easy','medium','hard'][(state.batch+i)%3],
+        question_type:types[(state.batch+i)%3],history:run.history(),
+        game_id:`universal_${mode}_${topic}`,run_id:run.id};
+      try{
+        const r=await fetch(`${API}/api/ai/practice/session`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(request)});
+        if(!r.ok)continue;
+        const d=await r.json();
+        for(const raw of (d.questions||[])){
+          const q=normalize(raw);
+          if(claim(q))found.push(q);
+        }
+      }catch(error){console.warn('[MATH_WEB] Lỗi lấy câu hỏi không trùng',String(error));}
     }
     state.batch++;
-    for (let i=found.length-1;i>0;i--) { const j=Math.floor(Math.random()*(i+1)); [found[i],found[j]]=[found[j],found[i]]; }
+    for(let i=found.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[found[i],found[j]]=[found[j],found[i]];}
     return found;
   }
   function drawDiagram(q) {
@@ -56,7 +66,7 @@
   function render() {
     clearInterval(state.timer);
     if (state.progress >= 100) return finish();
-    if (state.index >= state.questions.length) { $('question').textContent='Đang chuẩn bị câu hỏi mới…'; fetchBatch().then(qs=>{state.questions.push(...qs); if(!qs.length) return finish(); render();}); return; }
+    if (state.index >= state.questions.length) { $('question').textContent='Đang chuẩn bị câu hỏi mới…'; fetchBatch().then(qs=>{state.questions.push(...qs); if(!qs.length) return exhausted(); render();}); return; }
     const q=state.questions[state.index]; state.locked=false; state.pendingNext=false; state.seconds=config.seconds;
     $('questionNo').textContent=`Câu ${state.answered+1}`; $('difficulty').textContent=`Tiến độ ${state.progress}/100`; $('hp').textContent=state.progress; $('combo').textContent=state.correct; $('score').textContent=state.points; $('timer').textContent=state.seconds; $('progressBar').style.width=`${state.progress}%`; $('question').textContent=q.text;
     context.hidden=!(q.problem_context||q.context); context.textContent=q.problem_context||q.context||''; drawDiagram(q); $('feedback').textContent=''; $('feedback').className='feedback'; $('next').hidden=true; const box=$('options'); box.replaceChildren();
@@ -72,7 +82,17 @@
     $('hp').textContent=state.progress;$('combo').textContent=state.correct;$('score').textContent=state.points;$('difficulty').textContent=`Tiến độ ${state.progress}/100`;$('progressBar').style.width=`${state.progress}%`;state.history.push({fingerprint:q.fingerprint,structure_fingerprint:q.structure_fingerprint,template_family:q.template_family,variation_key:q.variation_key,archetype:q.archetype});state.history=state.history.slice(-40);saveRecord();$('next').hidden=false;$('next').textContent=state.progress>=100?'🎉 Xem màn chúc mừng':'📘 Đọc xong, câu tiếp theo';state.pendingNext=true;if(state.progress>=100)setTimeout(finish,650);
   }
   $('next').onclick=()=>{if(!state.pendingNext)return;if(state.progress>=100)return finish();state.index++;state.pendingNext=false;render()};
-  function finish(){if(state.finished)return;state.finished=true;clearInterval(state.timer);saveRecord(true);$('arena').hidden=true;$('result').hidden=false;$('result').innerHTML=`<div class="celebration-overlay"><div class="confetti"></div><div class="celebration-card"><div class="celebration-art">🎊 🥳 🎉</div><div class="eyebrow">MATH WEB • CHALLENGE COMPLETE</div><h2>CONGRATULATIONS!</h2><h3>WELL DONE, YOU'RE THE BEST!</h3><p>Bạn đã hoàn thành tiến độ 100%. Thành tích đã được lưu trên thiết bị này.</p><div class="final-score">100/100</div><p>Đúng: ${state.correct} • Sai: ${state.wrong} • Điểm: ${state.points}</p><button onclick="location.reload()">🔄 Chơi lại</button><button onclick="location.href='../../practise.html'">← Về luyện tập</button></div></div>`;const host=$('result').querySelector('.confetti'),colors=['#38d9ff','#a970ff','#4ade80','#ffd166','#fb7185','#fff'];for(let i=0;i<90;i++){const b=document.createElement('i');b.style.left=Math.random()*100+'%';b.style.animationDelay=Math.random()*2+'s';b.style.background=colors[i%colors.length];host.append(b)}}
-  async function start(){try{state.questions=await fetchBatch()}catch{}if(!state.questions.length){$('question').textContent='Không tải được câu hỏi. Hãy kiểm tra backend ở cổng 8000.';$('feedback').textContent='Nếu backend chưa chạy, hãy khởi động bằng START_BACKEND.bat.';return}render()}
+  function finish(){if(state.finished)return;state.finished=true;clearInterval(state.timer);saveRecord(true);$('arena').hidden=true;$('result').hidden=false;$('result').innerHTML=`<div class="celebration-overlay"><div class="confetti"></div><div class="celebration-card"><div class="celebration-art">🎊 🥳 🎉</div><div class="eyebrow">MATH WEB • CHALLENGE COMPLETE</div><h2>CONGRATULATIONS!</h2><h3>WELL DONE, YOU'RE THE BEST!</h3><p>Bạn đã hoàn thành tiến độ 100%. Thành tích đã được lưu trên thiết bị này.</p><div class="final-score">100/100</div><p>Đúng: ${state.correct} • Sai: ${state.wrong} • Điểm: ${state.points}</p><button id="restartTopicRun">🔄 Lượt mới</button><button onclick="location.href='../../practise.html'">← Về luyện tập</button></div></div>`;$('restartTopicRun').onclick=()=>{run.reset();location.reload()};const host=$('result').querySelector('.confetti'),colors=['#38d9ff','#a970ff','#4ade80','#ffd166','#fb7185','#fff'];for(let i=0;i<90;i++){const b=document.createElement('i');b.style.left=Math.random()*100+'%';b.style.animationDelay=Math.random()*2+'s';b.style.background=colors[i%colors.length];host.append(b)}}
+  function exhausted(){
+    clearInterval(state.timer);
+    $('question').textContent='Hết dạng câu hỏi khác nhau trong lượt chơi của chủ đề này.';
+    $('options').replaceChildren();
+    $('feedback').textContent='Không thay số hoặc phát lại câu cũ để đạt đủ tiến độ. Bạn có thể bắt đầu lượt mới bằng nút bên dưới.';
+    $('next').hidden=false;
+    $('next').textContent='↻ Bắt đầu lượt mới';
+    $('next').onclick=()=>{run.reset();location.reload()};
+    saveRecord(false);
+  }
+  async function start(){try{state.questions=await fetchBatch()}catch{}if(!state.questions.length){exhausted();return}render()}
   window.addEventListener('beforeunload',()=>saveRecord()); start();
 })();
