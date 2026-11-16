@@ -73,13 +73,20 @@
   }
   function shouldReplaceHeader(header){
     if(!header) return false;
-    // MathGeo's first header contains live 2D/3D tools, not the site navbar.
-    // Replacing it removes the mode buttons and bar-fx-container, breaking switchMode.
-    if(header.querySelector('#view-mode-2d, #view-mode-3d, #bar-fx-container')) return false;
-    const txt = (header.textContent || '').replace(/\s+/g,' ').trim();
-    return /MATH|Trang chủ|Luyện tập|Battle|Tài khoản|Học tập|Đấu online|Bạn bè/i.test(txt);
+    // Only replace a pure site navigation header. A page heading, Battle
+    // status bar, or geometry toolbar must never be deleted by the navbar.
+    // Looking for the word "MATH" also matched MathGeo and roadmap titles.
+    if(header.matches('.battle-header') ||
+       header.querySelector('h1,h2,input,select,canvas,#view-mode-2d,#view-mode-3d,#bar-fx-container')) return false;
+    const anchors = Array.from(header.querySelectorAll('a[href]'));
+    const navigation = anchors.filter(link =>
+      /^(?:\.\/)?(?:index|practice|practise|learn|learning|learning-path|battle|account|chat|login|register)\.html(?:[?#]|$)/i
+        .test(link.getAttribute('href') || ''));
+    return navigation.length >= 2;
   }
   function mount(){
+    // Ignore duplicate inclusion of this script on multi-page layouts.
+    if(document.getElementById('mathwebUnifiedNavbar')) return;
     const replacement = document.createElement('div');
     replacement.innerHTML = buildNavbar();
     const navbar = replacement.firstElementChild;

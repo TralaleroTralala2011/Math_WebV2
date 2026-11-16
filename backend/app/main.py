@@ -1,9 +1,13 @@
 from contextlib import asynccontextmanager
 
-from fastapi import FastAPI
+from fastapi import Depends, FastAPI
+from threading import Lock
+import logging
+from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 
 from .auth.routes import router as auth_router
+from .learner_activity_routes import router as learner_activity_router
 from .users.routes import router as users_router
 from .friends.routes import router as friends_router
 from .notifications.routes import router as notifications_router
@@ -24,6 +28,9 @@ from .question_factory_v2_routes import router as qf2_router
 from .study_suite_routes import router as study_suite_router
 from .final_features_routes import router as final_features_router
 from .ai.maintenance_worker import start_worker, stop_worker
+from question_factory.api import make_router as make_question_factory_router
+from question_factory.bootstrap import database_path as question_factory_database_path
+from question_factory.bootstrap import initialize_factory
 
 
 # =========================================================
@@ -47,6 +54,17 @@ app = FastAPI(
     lifespan=lifespan
 )
 
+
+# Catch unexpected request failures INSIDE CORS middleware so that
+# GitHub Pages receives a readable 500 instead of an opaque CORS failure.
+# Never reveal tracebacks or credentials to the browser.
+@app.middleware("http")
+async def safe_unexpected_errors(request, call_next):
+    try:
+        return await call_next(request)
+    except Exception:
+        logging.getLogger("mathweb.api").exception("Unhandled API exception for %s", request.url.path)
+        return JSONResponse({"detail": "Backend gặp lỗi nội bộ. Kiểm tra Logs của Render."}, status_code=500)
 
 # =========================================================
 # CORS
@@ -106,6 +124,7 @@ app.add_middleware(
 # =========================================================
 
 app.include_router(auth_router)
+app.include_router(learner_activity_router)
 app.include_router(users_router)
 app.include_router(friends_router)
 app.include_router(notifications_router)
@@ -125,6 +144,31 @@ app.include_router(roadmap_v2_router)
 app.include_router(qf2_router)
 app.include_router(study_suite_router)
 app.include_router(final_features_router)
+# Keep the existing Question Factory API accessible without altering other routes.
+_factory_db_path = question_factory_database_path()
+_factory_bootstrap_lock = Lock()
+_factory_initialized = False
+
+
+def ensure_question_factory_ready():
+    """Initialize the factory's separate SQLite store only on first API use.
+
+    Do not make unrelated user endpoints depend on the optional factory DB.
+    A lock prevents two concurrent initial requests from racing initialization.
+    """
+    global _factory_initialized
+    if _factory_initialized:
+        return
+    with _factory_bootstrap_lock:
+        if not _factory_initialized:
+            initialize_factory(_factory_db_path)
+            _factory_initialized = True
+
+
+app.include_router(
+    make_question_factory_router(_factory_db_path),
+    dependencies=[Depends(ensure_question_factory_ready)],
+)
 
 # =========================================================
 # ROOT

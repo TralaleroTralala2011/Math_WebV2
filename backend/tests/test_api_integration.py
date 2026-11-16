@@ -7,6 +7,7 @@ import pytest
 from app.main import app
 from database import database as database_module
 from app.matchmaking.routes import init_matchmaking_tables
+from app.matchmaking import routes as matchmaking_routes
 
 
 @pytest.fixture
@@ -46,16 +47,57 @@ def test_cors_preflight_for_local_frontend(client: TestClient):
     assert response.headers.get("access-control-allow-origin") == origin
 
 
-def test_random_matchmaking_does_not_lock_when_ai_generates_questions(client: TestClient):
+def _mock_shared_battle_deck(monkeypatch):
+    """Isolate matchmaking timing/state from bank content availability.
+
+    Question validity and bank coverage are tested separately. This stub
+    lets these tests verify the same 10-question deck is created exactly once,
+    only AFTER both participants explicitly choose their topics.
+    """
+    generated = []
+
+    def generate(grade, topics, difficulty, question_type, *, existing=None, count=10):
+        assert 1 <= len(topics) <= 6
+        assert not existing
+        generated.append(tuple(topics))
+        return [
+            {
+                "id": f"ci_battle_question_{idx}",
+                "grade": grade,
+                "topic": topics[0],
+                "difficulty": difficulty,
+                "question_type": "multiple_choice",
+                "question": f"Trong bài thử Battle, {idx} + 2 bằng bao nhiêu?",
+                "answer": str(idx + 2),
+                "options": [str(idx + 1), str(idx + 2), str(idx + 3), str(idx + 4)],
+                "solution": f"Cộng số tự nhiên: {idx} + 2 = {idx + 2}."
+            }
+            for idx in range(min(count, 10))
+        ]
+
+    monkeypatch.setattr(matchmaking_routes, "generate_ai_battle_questions", generate)
+    return generated
+
+
+def _choose_valid_battle_topic(client, headers, grade):
+    response = client.get("/api/matchmaking/topic-catalog", params={"grade": grade}, headers=headers)
+    assert response.status_code == 200, response.text
+    topics = response.json().get("topics", [])
+    assert topics, "Battle topic catalog is unexpectedly empty"
+    return topics[0]["id"]
+
+
+def test_random_matchmaking_does_not_lock_when_ai_generates_questions(client: TestClient, monkeypatch):
+    generated = _mock_shared_battle_deck(monkeypatch)
     _, headers_a = register(client, "QueuePlayerA")
     _, headers_b = register(client, "QueuePlayerB")
+    topic = _choose_valid_battle_topic(client, headers_a, 10)
     settings = {
         "grade": 10,
-        "topics": ["menh_de_tap_hop"],
+        "topics": [topic],
         "difficulty": "easy",
         "question_type": "multiple_choice",
     }
-
     first = client.post("/api/matchmaking/random/join", headers=headers_a, json=settings)
     assert first.status_code == 200, first.text
     assert first.json()["status"] == "QUEUED"
@@ -63,19 +105,33 @@ def test_random_matchmaking_does_not_lock_when_ai_generates_questions(client: Te
     second = client.post("/api/matchmaking/random/join", headers=headers_b, json=settings)
     assert second.status_code == 200, second.text
     assert second.json()["status"] == "MATCHED"
-    assert second.json()["question_count"] == 10
-
+    assert second.json()["question_count"] == 0  # selection comes before generation
     match_id = second.json()["match_id"]
-    current_for_first = client.get("/api/matchmaking/current", headers=headers_a)
-    assert current_for_first.status_code == 200, current_for_first.text
-    assert current_for_first.json()["match_id"] == match_id
-    assert current_for_first.json()["status"] in {"STARTING", "PLAYING"}
+    current = client.get("/api/matchmaking/current", headers=headers_a)
+    assert current.status_code == 200, current.text
+    assert current.json()["match_id"] == match_id
+    assert current.json()["status"] == "SELECTING"
+    assert not generated
+
+    first_vote = client.post(f"/api/matchmaking/match/{match_id}/topics", headers=headers_a, json={"topics": [topic]})
+    assert first_vote.status_code == 200, first_vote.text
+    assert first_vote.json()["status"] == "SELECTING"
+    assert not generated
+    second_vote = client.post(f"/api/matchmaking/match/{match_id}/topics", headers=headers_b, json={"topics": [topic]})
+    assert second_vote.status_code == 200, second_vote.text
+    assert second_vote.json()["status"] == "PLAYING"
+    assert second_vote.json()["question_count"] == 10
+    assert generated == [(topic,)]
+
     match_details = client.get(f"/api/matchmaking/match/{match_id}", headers=headers_a)
     assert match_details.status_code == 200, match_details.text
-
-    started = client.post(f"/api/matchmaking/match/{match_id}/start", headers=headers_a)
-    assert started.status_code == 200, started.text
-    assert started.json()["status"] == "PLAYING"
+    assert match_details.json()["status"] == "PLAYING"
+    assert match_details.json()["question_count"] == 10
+    # Another player receives the SAME questions, not a fresh set.
+    opponent_details = client.get(f"/api/matchmaking/match/{match_id}", headers=headers_b)
+    assert opponent_details.status_code == 200, opponent_details.text
+    assert opponent_details.json()["questions"] == match_details.json()["questions"]
+    assert len(generated) == 1
 
     answer = client.post(
         f"/api/matchmaking/match/{match_id}/answer",
@@ -85,7 +141,6 @@ def test_random_matchmaking_does_not_lock_when_ai_generates_questions(client: Te
     assert answer.status_code == 200, answer.text
     assert answer.json()["correct"] is False
     assert answer.json()["correct_answer"] is not None
-
     progress = client.get(f"/api/matchmaking/match/{match_id}/progress", headers=headers_b)
     assert progress.status_code == 200, progress.text
     assert progress.json()["you"]["current"] == 0
@@ -123,11 +178,10 @@ def test_friend_request_and_chat_message_flow(client: TestClient):
     assert any(item["content"] == message for item in history.json())
 
 
-def test_direct_battle_invite_accept_and_start(client: TestClient):
-    user_a, headers_a = register(client, "BattleInviteA")
+def test_direct_battle_invite_accept_and_start(client: TestClient, monkeypatch):
+    generated = _mock_shared_battle_deck(monkeypatch)
+    _, headers_a = register(client, "BattleInviteA")
     user_b, headers_b = register(client, "BattleInviteB")
-
-    # Omitting optional topic settings must still use valid grade defaults.
     invite = client.post(
         "/api/matchmaking/invite",
         headers=headers_a,
@@ -136,8 +190,7 @@ def test_direct_battle_invite_accept_and_start(client: TestClient):
     assert invite.status_code == 200, invite.text
     invite_data = invite.json()
     assert invite_data["status"] == "INVITED"
-    assert invite_data["question_count"] == 10
-
+    assert invite_data["question_count"] == 0
     pending = client.get("/api/matchmaking/invites", headers=headers_b)
     assert pending.status_code == 200, pending.text
     assert any(int(item.get("match_id", -1)) == invite_data["match_id"] for item in pending.json().get("invites", []))
@@ -145,10 +198,25 @@ def test_direct_battle_invite_accept_and_start(client: TestClient):
     match_id = invite_data["match_id"]
     accepted = client.post(f"/api/matchmaking/match/{match_id}/accept", headers=headers_b)
     assert accepted.status_code == 200, accepted.text
+    assert accepted.json()["status"] == "SELECTING"
+    assert not generated
+    early_start = client.post(f"/api/matchmaking/match/{match_id}/start", headers=headers_a)
+    assert early_start.status_code == 400
 
+    # Omitted settings imply the server's default grade, not grade 10.
+    topic = _choose_valid_battle_topic(client, headers_a, matchmaking_routes.DEFAULT_GRADE)
+    first_vote = client.post(f"/api/matchmaking/match/{match_id}/topics", headers=headers_a, json={"topics": [topic]})
+    assert first_vote.status_code == 200, first_vote.text
+    assert first_vote.json()["status"] == "SELECTING"
+    assert not generated
+    second_vote = client.post(f"/api/matchmaking/match/{match_id}/topics", headers=headers_b, json={"topics": [topic]})
+    assert second_vote.status_code == 200, second_vote.text
+    assert second_vote.json()["status"] == "PLAYING"
+    assert second_vote.json()["question_count"] == 10
+    assert generated == [(topic,)]
     started = client.post(f"/api/matchmaking/match/{match_id}/start", headers=headers_a)
     assert started.status_code == 200, started.text
-    assert started.json()["status"] in {"STARTING", "PLAYING"}
+    assert started.json()["status"] == "PLAYING"
 
 
 def test_battle_page_includes_presence_heartbeat():

@@ -4,7 +4,7 @@
 <script src="js/protected-pages.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathGeo Studio V67 · Dựng hình 2D/3D</title>
+    <title>MathGeo Studio V73 · Dựng hình 2D/3D</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -62,7 +62,7 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
             <div>
                 <h1 class="text-xs font-bold tracking-wide text-white flex items-center gap-2">
                     MathGeo Studio Pro
-                    <span class="bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 text-[10px] px-2 py-0.5 rounded-full font-semibold">V67 · Dựng hình 2D/3D</span>
+                    <span class="bg-indigo-500/20 text-indigo-400 border border-indigo-500/30 text-[10px] px-2 py-0.5 rounded-full font-semibold">V73 · Dựng hình 2D/3D</span>
                 </h1>
             </div>
         </div>
@@ -475,6 +475,10 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
                             <button id="geo3d-measure" type="button">📏 Đo AB</button>
                         </div>
                         <div class="geo3d-row">
+                            <button id="geo3d-rotate-z-left" type="button" aria-label="Xoay hình quanh trục Oz sang trái 15 độ">↶ Xoay Oz −15°</button>
+                            <button id="geo3d-rotate-z-right" type="button" aria-label="Xoay hình quanh trục Oz sang phải 15 độ">↷ Xoay Oz +15°</button>
+                        </div>
+                        <div class="geo3d-row">
                             <button id="geo3d-reset" type="button">⟲ Trục Ox/Oy/Oz</button>
                             <button id="geo3d-fit" type="button">⌗ Căn vừa hình</button>
                         </div>
@@ -588,15 +592,15 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
             currentMode = mode;
             document.body.classList.toggle('geo-mode-3d',mode==='3D');
             const stateTag=document.getElementById('geo-draw-state');
-            if(stateTag){stateTag.dataset.mode=mode;document.getElementById('geo-draw-state-label').textContent=mode==='3D'?'Không gian Oxyz · xoay 3D':'Mặt phẳng Oxy · 2D';}
+            if(stateTag){stateTag.dataset.mode=mode;const label=document.getElementById('geo-draw-state-label');if(label)label.textContent=mode==='3D'?'Không gian Oxyz · xoay 3D':'Mặt phẳng Oxy · 2D';}
             if (mode === '2D') {
-                viewMode2dBtn.className = "px-3 py-1 bg-indigo-600 text-white rounded transition shadow";
-                viewMode3dBtn.className = "px-3 py-1 text-slate-400 hover:text-white rounded transition";
+                if(viewMode2dBtn)viewMode2dBtn.className = "px-3 py-1 bg-indigo-600 text-white rounded transition shadow";
+                if(viewMode3dBtn)viewMode3dBtn.className = "px-3 py-1 text-slate-400 hover:text-white rounded transition";
                 const functionBar = document.getElementById('bar-fx-container');
                  if (functionBar) functionBar.style.display = 'flex';
             } else {
-                viewMode3dBtn.className = "px-3 py-1 bg-cyan-600 text-white rounded transition shadow";
-                viewMode2dBtn.className = "px-3 py-1 text-slate-400 hover:text-white rounded transition";
+                if(viewMode3dBtn)viewMode3dBtn.className = "px-3 py-1 bg-cyan-600 text-white rounded transition shadow";
+                if(viewMode2dBtn)viewMode2dBtn.className = "px-3 py-1 text-slate-400 hover:text-white rounded transition";
                 const functionBar = document.getElementById('bar-fx-container');
                  if (functionBar) functionBar.style.display = 'none';
                 if (!mode3D.currentShape) init3DShape('pyramid_square');
@@ -605,8 +609,8 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
             draw(); updateStats();
         }
 
-        viewMode2dBtn.addEventListener('click', () => switchMode('2D'));
-        viewMode3dBtn.addEventListener('click', () => switchMode('3D'));
+        viewMode2dBtn?.addEventListener('click', () => switchMode('2D'));
+        viewMode3dBtn?.addEventListener('click', () => switchMode('3D'));
 
         document.querySelectorAll('.tool-btn').forEach(btn => {
             btn.addEventListener('click', () => {
@@ -654,6 +658,7 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
         let mode3D = {
             rotX: 0.35,
             rotY: -0.45,
+            rotZ: 0,
             isRotating: false,
             lastMouseX: 0,
             lastMouseY: 0,
@@ -673,7 +678,7 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
 
         function snapshotState() {
             return JSON.stringify({points,lines,circles,rightAngleSigns,measuredAngles,vectors,functionsData,ellipses,halfPlanes,showOxyAxis,lastCreatedPointName,currentMode,
-                mesh3D:{currentShape:mode3D.currentShape,nodes:mode3D.nodes,edges:mode3D.edges,rotX:mode3D.rotX,rotY:mode3D.rotY},zoom,panX,panY});
+                mesh3D:{currentShape:mode3D.currentShape,nodes:mode3D.nodes,edges:mode3D.edges,rotX:mode3D.rotX,rotY:mode3D.rotY,rotZ:mode3D.rotZ},zoom,panX,panY});
         }
         function restoreSnapshot(raw) {
             const st=JSON.parse(raw);
@@ -681,7 +686,7 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
             measuredAngles=st.measuredAngles||[];vectors=st.vectors||[];functionsData=st.functionsData||[];
             ellipses=st.ellipses||[];halfPlanes=st.halfPlanes||[];showOxyAxis=!!st.showOxyAxis;lastCreatedPointName=st.lastCreatedPointName||null;
             if(st.mesh3D){mode3D.currentShape=st.mesh3D.currentShape;mode3D.nodes=st.mesh3D.nodes||{};mode3D.edges=st.mesh3D.edges||[];
-                mode3D.rotX=st.mesh3D.rotX;mode3D.rotY=st.mesh3D.rotY;}
+                mode3D.rotX=st.mesh3D.rotX;mode3D.rotY=st.mesh3D.rotY;mode3D.rotZ=st.mesh3D.rotZ||0;}
             zoom=st.zoom||1;panX=st.panX||0;panY=st.panY||0;
             switchMode(st.currentMode||'2D');updateZoomDisplay();refresh3DControls();draw();updateStats();
         }
@@ -1031,6 +1036,7 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
             if(!knownPattern.test(text) && !Object.keys(parse3DCoordinates(text)).length)
                 return announceAI('Chưa nhận diện được hình. Hãy dùng từ khóa hình học hoặc dạng tọa độ A(1;2;3). Bản vẽ hiện tại được giữ nguyên.',true);
             saveState();
+            reset3DCamera(isRandomVariation);
             points = {}; lines = []; circles = []; rightAngleSigns = []; measuredAngles = []; functionsData = [];
             showOxyAxis = false;
             
@@ -1174,7 +1180,8 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
             else if (textLower.includes("hình chữ nhật") || textLower.includes("hinh chu nhat") || textLower.includes("hình vuông") || textLower.includes("hinh vuong")) {
                 switchMode('2D');
                 const [pA, pB, pC, pD] = vNames.length >= 4 ? vNames : ['A', 'B', 'C', 'D'];
-                const isSquare = textLower.includes("vuông");
+                // "góc vuông" in a rectangle description does not mean a square.
+                const isSquare = /hình vuông|hinh vuong/.test(textLower);
                 const w = (lengths[pA+pB] || 5) * 24;
                 const h = isSquare ? w : (ratios[pA+pD] ? w * ratios[pA+pD].factor : 90);
                 points[pA] = { x: cx - w/2, y: cy - h/2 };
@@ -1215,9 +1222,11 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
                     points[pC] = { x: cx + len, y: cy + len/2 };
                     rightAngleSigns.push({ vertex: pA, p1: pB, p2: pC });
                 } else if (textLower.includes("vuông")) {
-                    points[pA] = { x: cx - abLength/2 + rndX, y: cy - acLength/2 };
-                    points[pB] = { x: cx - abLength/2 + rndX, y: cy + acLength/2 };
-                    points[pC] = { x: cx + abLength/2 + rndX, y: cy + acLength/2 };
+                    // Draw the right angle at A. AB is horizontal and AC
+                    // vertical, matching the labels and the right-angle mark.
+                    points[pA] = { x: cx - abLength/2 + rndX, y: cy + acLength/2 };
+                    points[pB] = { x: cx + abLength/2 + rndX, y: cy + acLength/2 };
+                    points[pC] = { x: cx - abLength/2 + rndX, y: cy - acLength/2 };
                     rightAngleSigns.push({ vertex: pA, p1: pB, p2: pC });
                 } else if (textLower.includes("đều")) {
                     const side = 140; const h = side * Math.sqrt(3) / 2;
@@ -1278,6 +1287,18 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
         btnAiParse.addEventListener('click', () => runGenerativeAIEngine(false));
         btnAiRandomize.addEventListener('click', () => runGenerativeAIEngine(true));
 
+
+        // V73: A new library model gets a clean camera, not inherited zoom/pan.
+        // Never translate source coordinates: AI inputs must retain their values.
+        function reset3DCamera(randomize=false){
+            mode3D.rotX=randomize?0.22+Math.random()*0.3:0.35;
+            mode3D.rotY=randomize?-0.78+Math.random()*0.66:-0.45;
+            mode3D.rotZ=0;
+            mode3D.isRotating=false;
+            panX=0;panY=0;zoom=1;
+            updateZoomDisplay();
+        }
+
         function init3DShape(shape) {
             mode3D.currentShape = shape;
             if(shape==='pyramid_rhombus'||shape==='pyramid_parallelogram'){
@@ -1297,8 +1318,8 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
             } else if (shape === 'pyramid_square') {
                 mode3D.nodes = {
                     'S': {x: 0, y: 150, z: 0},
-                    'A': {x: -100, y: -80, z: -80}, 'B': {x: 100, y: -80, z: -80},
-                    'C': {x: 120, y: -80, z: 80}, 'D': {x: -80, y: -80, z: 80}
+                    'A': {x: -100, y: -80, z: -100}, 'B': {x: 100, y: -80, z: -100},
+                    'C': {x: 100, y: -80, z: 100}, 'D': {x: -100, y: -80, z: 100}
                 };
                 mode3D.edges = [
                     {p1:'S', p2:'A'}, {p1:'S', p2:'B'}, {p1:'S', p2:'C'}, {p1:'S', p2:'D'},
@@ -1353,18 +1374,38 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
                 for(let i=0;i<4;i++){const n='ABCD'[i],m='ABCD'[(i+1)%4];mode3D.edges.push({p1:n,p2:m},{p1:n+"'",p2:m+"'"},{p1:n,p2:n+"'"});}
             } else if (shape === 'cone' || shape === 'cylinder' || shape === 'sphere') {
                 mode3D.nodes={};mode3D.edges=[];
-                const addRing=(prefix,n,r,y)=>{for(let i=0;i<n;i++){
-                    const t=2*Math.PI*i/n,key=prefix+i;mode3D.nodes[key]={x:r*Math.cos(t),y,z:r*Math.sin(t)};
-                    mode3D.edges.push({p1:key,p2:prefix+((i+1)%n)});
-                }};
-                const n=32;
-                if(shape==='cone'){addRing('R',n,105,-95);mode3D.nodes.S={x:0,y:130,z:0};for(let i=0;i<n;i+=4)mode3D.edges.push({p1:'S',p2:'R'+i});}
-                else if(shape==='cylinder'){addRing('B',n,90,-105);addRing('T',n,90,105);for(let i=0;i<n;i+=4)mode3D.edges.push({p1:'B'+i,p2:'T'+i});}
-                else {for(let j=1;j<=5;j++){
-                    const phi=-Math.PI/2+j*Math.PI/6,rad=120*Math.cos(phi),y=120*Math.sin(phi);
-                    addRing('L'+j+'_',n,rad,y);
-                    if(j>1)for(let i=0;i<n;i+=4)mode3D.edges.push({p1:'L'+(j-1)+'_'+i,p2:'L'+j+'_'+i});
-                }mode3D.nodes.N={x:0,y:120,z:0};mode3D.nodes.S={x:0,y:-120,z:0};}
+                const n=64;
+                const addRing=(prefix,r,y)=>{
+                    for(let i=0;i<n;i++){
+                        const a=2*Math.PI*i/n,key=prefix+i;
+                        mode3D.nodes[key]={x:r*Math.cos(a),y:y,z:r*Math.sin(a)};
+                        mode3D.edges.push({p1:key,p2:prefix+((i+1)%n)});
+                    }
+                };
+                if(shape==='cone'){
+                    addRing('R',105,-105);
+                    mode3D.nodes.S={x:0,y:130,z:0};
+                    for(let i=0;i<n;i+=8)mode3D.edges.push({p1:'S',p2:'R'+i});
+                }else if(shape==='cylinder'){
+                    addRing('B',90,-105);addRing('T',90,105);
+                    for(let i=0;i<n;i+=8)mode3D.edges.push({p1:'B'+i,p2:'T'+i});
+                }else{
+                    const latBands=8, radius=120;
+                    for(let j=1;j<latBands;j++){
+                        const latitude=-Math.PI/2+j*Math.PI/latBands;
+                        addRing('L'+j+'_',radius*Math.cos(latitude),radius*Math.sin(latitude));
+                    }
+                    mode3D.nodes.N={x:0,y:radius,z:0};
+                    mode3D.nodes.S={x:0,y:-radius,z:0};
+                    // True meridians. Every step belongs to the same great circle;
+                    // no unsupported diagonal shortcuts across latitude rings.
+                    for(let i=0;i<n;i+=8){
+                        mode3D.edges.push({p1:'S',p2:'L1_'+i});
+                        for(let j=1;j<latBands-1;j++)
+                            mode3D.edges.push({p1:'L'+j+'_'+i,p2:'L'+(j+1)+'_'+i});
+                        mode3D.edges.push({p1:'L'+(latBands-1)+'_'+i,p2:'N'});
+                    }
+                }
             } else if (shape === 'prism_hexagonal') {
                 const r1 = 100, r2 = 100;
                 mode3D.nodes = {};
@@ -1385,7 +1426,7 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
                 }
             } else if (shape === 'octahedron') {
                 mode3D.nodes = {
-                    'S': {x: 0, y: 120, z: 0}, 'S\'': {x: 0, y: -120, z: 0},
+                    'S': {x: 0, y: 100, z: 0}, 'S\'': {x: 0, y: -100, z: 0},
                     'A': {x: -100, y: 0, z: 0}, 'B': {x: 0, y: 0, z: -100}, 'C': {x: 100, y: 0, z: 0}, 'D': {x: 0, y: 0, z: 100}
                 };
                 mode3D.edges = [
@@ -1400,7 +1441,7 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
 
         document.querySelectorAll('.draw-3d-btn').forEach(btn => {
             btn.addEventListener('click', () => {
-                saveState();switchMode('3D');init3DShape(btn.dataset.shape);
+                saveState();dragged3DNode=null;reset3DCamera();switchMode('3D');init3DShape(btn.dataset.shape);
                 draw();updateStats();set3DStatus('Đã dựng '+btn.textContent.trim()+'. Kéo vùng vẽ để xoay và chỉnh điểm bên dưới.');
                 document.querySelectorAll('.draw-3d-btn').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
                 revealDrawingOnPhone();
@@ -1453,7 +1494,14 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
             set3DStatus(`Độ dài ${a}${b} = ${Number(d.toPrecision(7))} ${getUnitScale().name} (tọa độ 3D).`);
         });
         geo3d('geo3d-reset').addEventListener('click',()=>{
-            saveState();mode3D.rotX=.35;mode3D.rotY=-.45;panX=panY=0;zoom=1;updateZoomDisplay();draw();set3DStatus('Đã đặt lại góc nhìn, hiện trục Ox/Oy/Oz.');
+            saveState();mode3D.rotX=.35;mode3D.rotY=-.45;mode3D.rotZ=0;panX=panY=0;zoom=1;updateZoomDisplay();fit3D();set3DStatus('Đã đặt lại góc nhìn, hiện trục Ox/Oy/Oz.');
+        });
+        [['geo3d-rotate-z-left',-1],['geo3d-rotate-z-right',1]].forEach(([id,sign])=>{
+            geo3d(id).addEventListener('click',()=>{
+                if(currentMode!=='3D')switchMode('3D');
+                saveState();mode3D.rotZ=(mode3D.rotZ||0)+sign*Math.PI/12;
+                draw();updateStats();set3DStatus('Đã xoay hình 15° quanh trục Oz.');
+            });
         });
         geo3d('geo3d-fit').addEventListener('click',fit3D);
         function fit3D(){
@@ -1462,6 +1510,7 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
             const xmin=Math.min(...proj.map(p=>p.x)),xmax=Math.max(...proj.map(p=>p.x));
             const ymin=Math.min(...proj.map(p=>p.y)),ymax=Math.max(...proj.map(p=>p.y));
             const w=canvas.clientWidth,h=canvas.clientHeight;
+            if(w<24||h<24){requestAnimationFrame(()=>{if(canvas.clientWidth>=24&&canvas.clientHeight>=24)fit3D();});return;}
             zoom=Math.max(MIN_ZOOM,Math.min(MAX_ZOOM,Math.min(Math.max(1,w-90)/Math.max(1,xmax-xmin),Math.max(1,h-115)/Math.max(1,ymax-ymin),2.15)));
             panX=w/2-zoom*(xmin+xmax)/2;panY=h/2-zoom*(ymin+ymax)/2;
             updateZoomDisplay();draw();set3DStatus('Đã căn vừa hình 3D.');
@@ -1478,7 +1527,9 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
         let dragged3DNode=null;
         function move3DNode(deltaX,deltaY){
             const p=mode3D.nodes[dragged3DNode];if(!p)return;
-            const sx=deltaX/zoom,sy=-deltaY/zoom,ry=mode3D.rotY,rx=mode3D.rotX;
+            const sx0=deltaX/zoom,sy0=-deltaY/zoom,ry=mode3D.rotY,rx=mode3D.rotX,rz=mode3D.rotZ||0;
+            const sx=sx0*Math.cos(rz)+sy0*Math.sin(rz);
+            const sy=-sx0*Math.sin(rz)+sy0*Math.cos(rz);
             const dy=sy*Math.cos(rx),dz1=-sy*Math.sin(rx);
             p.x+=sx*Math.cos(ry)-dz1*Math.sin(ry);
             p.y+=dy;p.z+=sx*Math.sin(ry)+dz1*Math.cos(ry);
@@ -1498,12 +1549,15 @@ body.mw-geometry-studio #geo3d-editor{scroll-margin-block:12px}
             let y2 = y1 * Math.cos(radX) - z1 * Math.sin(radX);
             let z2 = y1 * Math.sin(radX) + z1 * Math.cos(radX);
 
+            const rz=mode3D.rotZ||0;
+            const x3=x2*Math.cos(rz)-y2*Math.sin(rz);
+            const y3=x2*Math.sin(rz)+y2*Math.cos(rz);
             const displayW = canvas.clientWidth;
             const displayH = canvas.clientHeight;
 
             return {
-                x: displayW / 2 + x2,
-                y: displayH / 2 - y2,
+                x: displayW / 2 + x3,
+                y: displayH / 2 - y3,
                 z: z2
             };
         }
@@ -1639,31 +1693,33 @@ function drawGridDots(displayW, displayH) {
 function draw3DAxes() {
     const axisLen = 180;
     const origin = project3D(0,0,0);
-    const ox = project3D(axisLen,0,0);
-    const oy = project3D(0,axisLen,0);
-    const oz = project3D(0,0,axisLen);
     const axes = [
-        { to: ox, label: 'Ox', color: '#f59e0b' },
-        { to: oy, label: 'Oy', color: '#4ade80' },
-        { to: oz, label: 'Oz', color: '#38bdf8' }
+        { to: project3D(axisLen,0,0), label: 'Ox', color: '#f59e0b' },
+        { to: project3D(0,axisLen,0), label: 'Oy', color: '#4ade80' },
+        { to: project3D(0,0,axisLen), label: 'Oz', color: '#38bdf8' }
     ];
+    const W=canvas.clientWidth,H=canvas.clientHeight,margin=27;
+    const ox=origin.x*zoom+panX,oy=origin.y*zoom+panY;
     axes.forEach(axis => {
-        ctx.beginPath();
-        ctx.moveTo(origin.x, origin.y);
-        ctx.lineTo(axis.to.x, axis.to.y);
-        ctx.strokeStyle = axis.color;
-        ctx.lineWidth = 2.2 / zoom;
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.arc(axis.to.x, axis.to.y, 4.2 / zoom, 0, Math.PI*2);
-        ctx.fillStyle = axis.color;
-        ctx.fill();
-        ctx.font = `bold ${13 / zoom}px sans-serif`;
-        ctx.fillText(axis.label, axis.to.x + 7 / zoom, axis.to.y - 6 / zoom);
+        const dx=(axis.to.x-origin.x)*zoom,dy=(axis.to.y-origin.y)*zoom;
+        let t=1;
+        if(dx>0)t=Math.min(t,(W-margin-ox)/dx);
+        if(dx<0)t=Math.min(t,(margin-ox)/dx);
+        if(dy>0)t=Math.min(t,(H-margin-oy)/dy);
+        if(dy<0)t=Math.min(t,(margin-oy)/dy);
+        t=Math.max(0,Math.min(1,t));
+        const ex=origin.x+(axis.to.x-origin.x)*t;
+        const ey=origin.y+(axis.to.y-origin.y)*t;
+        if(t<0.05)return;
+        ctx.beginPath();ctx.moveTo(origin.x,origin.y);ctx.lineTo(ex,ey);
+        ctx.strokeStyle=axis.color;ctx.lineWidth=2.2/zoom;ctx.stroke();
+        ctx.beginPath();ctx.arc(ex,ey,3.5/zoom,0,Math.PI*2);
+        ctx.fillStyle=axis.color;ctx.fill();
+        ctx.font=`bold ${12/zoom}px sans-serif`;
+        ctx.fillText(axis.label,ex+(dx<0?-24:6)/zoom,ey-7/zoom);
     });
-    ctx.font = `bold ${12 / zoom}px sans-serif`;
-    ctx.fillStyle = '#e2e8f0';
-    ctx.fillText('O', origin.x + 6 / zoom, origin.y - 6 / zoom);
+    ctx.font=`bold ${12/zoom}px sans-serif`;
+    ctx.fillStyle='#e2e8f0';ctx.fillText('O',origin.x+6/zoom,origin.y-6/zoom);
 }
 
 function draw3D() {
@@ -1704,25 +1760,34 @@ function draw3D() {
                     ctx.closePath();ctx.fillStyle=i%2===0?'rgba(34,211,238,.10)':'rgba(129,140,248,.10)';ctx.fill();
                 });
 
-            mode3D.edges.forEach(e => {
-                const p1 = projNodes[e.p1], p2 = projNodes[e.p2];
-                if (!p1 || !p2) return;
-
-                const avgZ = (p1.z + p2.z) / 2;
-                const isDashed = avgZ < -20;
-
+            // Draw obscured wires first; the front hemisphere must remain solid.
+            // Depth 0 is the view-plane through the model's origin.
+            const curved=['sphere','cylinder','cone'].includes(shape);
+            const edges=mode3D.edges.filter(e=>projNodes[e.p1]&&projNodes[e.p2]);
+            const strokeWire=(e,back)=>{
+                const a=projNodes[e.p1],b=projNodes[e.p2];
                 ctx.beginPath();
-                ctx.setLineDash(isDashed ? [6 / zoom, 6 / zoom] : []);
-                ctx.moveTo(p1.x, p1.y);
-                ctx.lineTo(p2.x, p2.y);
-                ctx.strokeStyle = isDashed ? '#64748b' : '#38bdf8';
-                ctx.lineWidth = (isDashed ? 1.5 : 2.5) / zoom;
+                ctx.setLineDash(back?[5/zoom,5/zoom]:[]);
+                ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);
+                ctx.strokeStyle=back?'rgba(124,153,187,.50)':'#54d5ff';
+                ctx.lineWidth=(curved?(back?1.0:1.45):(back?1.4:2.4))/zoom;
                 ctx.stroke();
-                ctx.setLineDash([]);
-            });
+            };
+            edges.forEach(e=>{if((projNodes[e.p1].z+projNodes[e.p2].z)/2<0)strokeWire(e,true);});
+            edges.forEach(e=>{if((projNodes[e.p1].z+projNodes[e.p2].z)/2>=0)strokeWire(e,false);});
+            ctx.setLineDash([]);
+            if(shape==='sphere'){
+                // The orthographic silhouette of a sphere is a true circle,
+                // regardless of the camera's rotation. A sampled polyline
+                // alone would produce an inaccurate faceted silhouette.
+                const c=project3D(0,0,0);
+                ctx.beginPath();ctx.arc(c.x,c.y,120,0,Math.PI*2);
+                ctx.strokeStyle='#74e4ff';ctx.lineWidth=2.2/zoom;ctx.stroke();
+            }
 
             const nodeLabels=Object.keys(projNodes),dense=nodeLabels.length>22;
             for (let key in projNodes) {
+                if(curved && /^(?:R\d+|[BT]\d+|L\d+_\d+)$/.test(key))continue;
                 if(dense && /^(?:R\d+|[BT]\d+|L\d+_\d+)$/.test(key))continue;
                 const p = projNodes[key];
                 ctx.beginPath();
@@ -1847,11 +1912,15 @@ function draw3D() {
             if (currentMode === '3D') {
                 html = `<div class="text-cyan-400 font-bold">Khối 3D: ${mode3D.currentShape || 'Chưa chọn'}</div>`;
                 const entries=Object.entries(mode3D.nodes);
-                const fmt3D=v=>Number(v.toFixed(3));
-                for (const [k,n] of entries.slice(0,18)) {
+                const surface=['sphere','cone','cylinder'].includes(mode3D.currentShape);
+                if(surface)html+=`<div class="py-2 text-slate-300">Khung dây dạng mẫu, các điểm lưới là điểm dựng kỹ thuật (không phải dữ kiện đề bài). Tâm và kích thước ban đầu theo mẫu.</div>`;
+                const displayEntries=surface?entries.filter(([k])=>k==='N'||k==='S'):entries;
+                const fmt3D=v=>Number((v/24).toFixed(3));
+                html += `<div class="text-slate-400 text-xs">Tọa độ (x, y, z) theo đơn vị 3D, đã quy đổi từ lưới vẽ.</div>`;
+                for (const [k,n] of displayEntries.slice(0,18)) {
                     html += `<div class="flex justify-between border-b border-slate-800/60 py-0.5 text-slate-400"><span>Đỉnh ${k}:</span><span>(${fmt3D(n.x)}, ${fmt3D(n.y)}, ${fmt3D(n.z)})</span></div>`;
                 }
-                if(entries.length>18)html+=`<div class="text-cyan-400">… và ${entries.length-18} điểm khác; xem trực tiếp trên hình.</div>`;
+                if(!surface && entries.length>18)html+=`<div class="text-cyan-400">… và ${entries.length-18} điểm khác; xem trực tiếp trên hình.</div>`;
                 statsOutput.innerHTML = html;
                 return;
             }
@@ -2203,7 +2272,7 @@ function draw3D() {
             link.click();
         });
 
-        btnResetView.addEventListener('click', () => { panX = 0; panY = 0; zoom = 1; mode3D.rotX = 0.35; mode3D.rotY = -0.45; updateZoomDisplay(); resizeCanvas(); });
+        btnResetView.addEventListener('click', () => { panX = 0; panY = 0; zoom = 1; mode3D.rotX = 0.35; mode3D.rotY = -0.45; mode3D.rotZ = 0; updateZoomDisplay(); resizeCanvas(); });
 
         resizeCanvas();
         parseCommand('he_truc_oxy');

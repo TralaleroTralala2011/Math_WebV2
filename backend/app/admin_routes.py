@@ -16,6 +16,8 @@ from fastapi import APIRouter, Header, HTTPException, Query
 from pydantic import BaseModel, Field
 
 from database.database import get_connection
+from .learner_activity_routes import ensure_activity_table
+from .storage_diagnostics import get_storage_diagnostics
 from .auth.routes import extract_bearer_token, verify_token, hash_password, verify_password, create_admin_token
 from app.ai.routes import service as ai_service
 from app.ai.maintenance_worker import get_status as get_ai_worker_status, set_enabled as set_ai_worker_enabled, run_maintenance_once
@@ -180,6 +182,12 @@ def admin_me(authorization: str | None = Header(default=None)):
     return {"username": admin["username"], "role": "admin", "status": admin["status"]}
 
 
+@router.get("/storage-status")
+def admin_storage_status(authorization: str | None = Header(default=None)):
+    require_admin(authorization)
+    return get_storage_diagnostics()
+
+
 @router.get("/dashboard")
 def dashboard(authorization: str | None = Header(default=None)):
     admin = require_admin(authorization)
@@ -260,10 +268,27 @@ def user_detail(user_id: int, authorization: str | None = Header(default=None)):
             except Exception:
                 item["question_text"] = str(raw_question or "")
             sessions.append(item)
+        ensure_activity_table(conn)
+        recent_activity = [dict(row) for row in conn.execute("""SELECT id,event_type,game_id,topic,question_text,
+            selected_answer,client_is_correct,client_progress,source,created_at
+            FROM learner_activity_events WHERE user_id=? ORDER BY id DESC LIMIT 100""", (user_id,))]
+        activity_total = conn.execute("SELECT COUNT(*) FROM learner_activity_events WHERE user_id=?", (user_id,)).fetchone()[0]
+        battle_rows = []
+        if conn.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='matches'").fetchone():
+            battle_rows = [dict(row) for row in conn.execute("""SELECT m.id,m.status,m.started_at,m.finished_at,
+              m.grade,m.difficulty,m.topics,m.winner_id,
+              CASE WHEN m.player1_id=? THEN m.player1_correct ELSE m.player2_correct END AS own_correct,
+              CASE WHEN m.player1_id=? THEN m.player1_wrong ELSE m.player2_wrong END AS own_wrong,
+              CASE WHEN m.player1_id=? THEN u2.username ELSE u1.username END AS opponent_username
+              FROM matches m LEFT JOIN users u1 ON u1.id=m.player1_id
+              LEFT JOIN users u2 ON u2.id=m.player2_id
+              WHERE m.player1_id=? OR m.player2_id=? ORDER BY m.id DESC LIMIT 30""",
+              (user_id, user_id, user_id, user_id, user_id))]
         audit(conn, admin["id"], "view_user_learning_data", user_id, {"scope": "account_and_learning_summary"})
         conn.commit()
         return {"user": dict(user), "recent_games": [dict(r) for r in games],
-                "topic_stats": [dict(r) for r in topic_stats], "recent_question_sessions": sessions}
+                "topic_stats": [dict(r) for r in topic_stats], "recent_question_sessions": sessions, "recent_activity": recent_activity,
+                "activity_total": activity_total, "recent_battles": battle_rows}
     finally:
         conn.close()
 

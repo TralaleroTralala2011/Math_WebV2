@@ -74,5 +74,67 @@
     }
     return collected;
   }
+
+  // Optional authenticated activity sync; the server marks these as UNVERIFIED.
+  // Events are never used to calculate XP or alter authoritative test results.
+  const activityStorageKey = 'mw-activity-queue-v74';
+  const eventTypes = new Set(['question_answered','question_skipped','game_completed']);
+  function currentOwner(){
+    try { const u=JSON.parse(localStorage.getItem('mathweb_user')||'{}'); return String(u.id||u.player_id||''); }
+    catch(_){return '';}
+  }
+  function queueRead(){
+    try{const rows=JSON.parse(localStorage.getItem(activityStorageKey)||'[]');return Array.isArray(rows)?rows.slice(-100):[];}
+    catch(_){return [];}
+  }
+  function queueWrite(rows){try{localStorage.setItem(activityStorageKey,JSON.stringify(rows.slice(-100)));}catch(_){}}
+  let flushing=false;
+  async function flushActivity(){
+    if(flushing) return;
+    const token=(()=>{try{return localStorage.getItem('mathweb_token')||'';}catch(_){return '';}})();
+    const owner=currentOwner();
+    if(!token||!owner)return;
+    flushing=true;
+    try{
+      let pending=queueRead();
+      for(let i=0;i<100 && pending.length;i++){
+        const itemIndex=pending.findIndex(item=>item.owner===owner);
+        if(itemIndex<0) break; // Preserve events belonging to a different account.
+        const item=pending[itemIndex];
+        let res;
+        try{
+          res=await fetch((window.MATHWEB_API_URL||'').replace(/\/$/,'')+'/api/activity/events', {
+            method:'POST',headers:{'Authorization':'Bearer '+token,'Content-Type':'application/json'},
+            body:JSON.stringify(item.event),keepalive:true,
+          });
+        }catch(_){break;}
+        if(!res.ok) break;
+        pending.splice(itemIndex,1);queueWrite(pending);
+      }
+    }finally{flushing=false;}
+  }
+  function recordActivity(type,question,selected,correct,game,progress){
+    if(!eventTypes.has(type))return;
+    const owner=currentOwner();
+    let token='';try{token=localStorage.getItem('mathweb_token')||'';}catch(_){}
+    if(!owner||!token)return;
+    const g=game||{};
+    const event={
+      event_id:(typeof crypto!=='undefined' && crypto.randomUUID ? crypto.randomUUID() : 'ev'+Date.now()+Math.random().toString(36).slice(2)),
+      event_type:type,
+      game_id:String(g.title||g.engine||'').slice(0,120),
+      topic:String(g.topicId||g.knowledgeId||g.topic||'').slice(0,160),
+      question_text:String(question&&(question.text||question.question)||'').slice(0,3000),
+      selected_answer:String(selected??'').slice(0,1000),
+      is_correct:correct===null||correct===undefined?null:Boolean(correct),
+      progress:Number.isFinite(Number(progress))?Math.max(0,Math.min(100,Math.round(Number(progress)))):null,
+    };
+    const pending=queueRead();pending.push({owner,event});queueWrite(pending);void flushActivity();
+  }
+  window.MathWebActivity={recordActivity,flushActivity};
+  window.addEventListener('online',()=>void flushActivity());
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',()=>void flushActivity(),{once:true});
+  else void flushActivity();
+
   window.MathWebGameQuestions={requestBatch:getBatch,questionKey:key};
 })();

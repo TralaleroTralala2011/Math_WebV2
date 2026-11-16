@@ -48,7 +48,12 @@ def run():
                 failures.append(f'{page.name}: {key}={ref} not found')
             count+=1
     from app.main import app
-    routes={route.path for route in app.routes}
+    # Only actual endpoint routes expose .path. Auxiliary router/container
+    # objects may be present in app.routes and must not crash the release gate.
+    routes = {
+        route_path for route in app.routes
+        if isinstance((route_path := getattr(route, "path", None)), str)
+    }
     for route in REQUIRED_PATHS:
         if route not in routes: failures.append(f'API route missing: {route}')
     with sqlite3.connect(f'file:{(ROOT/"backend/app/ai/storage/v254_candidates.sqlite").as_posix()}?mode=ro',uri=True) as db:
