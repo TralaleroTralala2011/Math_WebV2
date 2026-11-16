@@ -16,6 +16,7 @@ from .question_distinctness import same_mathematical_type
 from .question_identity import question_key
 from .topic_relevance import is_question_on_topic
 from .mcq_quality_v68 import improve_mcq
+from .question_format_v82 import adapt_question
 
 class QuestionStore:
     def __init__(self): self.items={}
@@ -264,6 +265,9 @@ class AIQuestionService:
             q = self._build_curated_question(item, grade, topic_id, difficulty, question_type)
             if not q or not is_question_on_topic(topic_id, q.get('question', '')):
                 continue
+            q = adapt_question(q)
+            if q is None:
+                continue
             improve_mcq(q)
             try:
                 validate(q)
@@ -317,6 +321,9 @@ class AIQuestionService:
                 }
                 if not is_question_on_topic(topic_id, q.get('question', '')):
                     continue
+                q = adapt_question(q)
+                if q is None:
+                    continue
                 improve_mcq(q)
                 try:
                     validate(q)
@@ -342,6 +349,9 @@ class AIQuestionService:
             for _ in range(max(1, min(150, int(max_attempts_per_phase)))):
                 q=self.generator.generate(grade,topic_id,normalize(difficulty),question_type,game_id,recent_families)
                 if not is_question_on_topic(topic_id, q.get('question', '')):
+                    continue
+                q = adapt_question(q)
+                if q is None:
                     continue
                 improve_mcq(q)
                 try: validate(q)

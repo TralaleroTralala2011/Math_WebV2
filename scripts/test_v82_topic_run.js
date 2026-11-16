@@ -1,0 +1,24 @@
+// Offline regression: game 1, 2, 3 share the same topic-run deduplication.
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const vm = require('node:vm');
+const source = fs.readFileSync(require('node:path').join(__dirname,'../js/game-question-bridge-v60.js'),'utf8');
+const saved=new Map();
+const localStorage={getItem:k=>saved.get(k)||null,setItem:(k,v)=>saved.set(k,v)};
+localStorage.setItem('mathweb_user', JSON.stringify({id:'v82-regression-user'}));
+const window={addEventListener:()=>{}};
+const document={readyState:'loading',addEventListener:()=>{}};
+vm.runInNewContext(source,{window,localStorage,document,Date,JSON,Math,Set,Map,console,encodeURIComponent});
+const run1=window.MathWebGameQuestions.openTopicRun(10,'REMAINDER');
+const q1={question:'11680 có chia hết cho 40 không?',form_id:'v82-word-tf'};
+const q2={question:'11681 có chia hết cho 40 không?',form_id:'different-id'};
+assert.equal(run1.claim(q1),true);
+const run2=window.MathWebGameQuestions.openTopicRun(10,'REMAINDER');
+assert.equal(run2.id,run1.id,'games share the same run');
+assert.equal(run2.claim(q2),false,'number substitutions cannot count as distinct methods');
+const run3=window.MathWebGameQuestions.openTopicRun(10,'REMAINDER');
+assert.equal(run3.count(),1,'third game also sees claim');
+assert.equal(run3.claim(q1),false,'exact repeats blocked');
+run3.reset();
+assert.equal(window.MathWebGameQuestions.openTopicRun(10,'REMAINDER').claim(q2),true,'new run begins a new ledger');
+console.log('PASS: no exact or numeric-substitution repeats across three game pages');

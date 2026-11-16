@@ -23,7 +23,7 @@ from .auth.routes import extract_bearer_token, verify_token, hash_password, veri
 from app.ai.routes import service as ai_service
 from app.ai.maintenance_worker import get_status as get_ai_worker_status, set_enabled as set_ai_worker_enabled, run_maintenance_once
 from app.ai.archive import archive_questions
-from app.ai.engine.assignment_quality import eligible_assignment_questions, validate_cached_assignment
+from app.ai.engine.assignment_quality import eligible_assignment_questions, validate_cached_assignment, assignment_bank_matrix
 
 router = APIRouter(prefix="/api/admin", tags=["Administration"])
 ADMIN_USERNAME = "admin19022011"
@@ -930,6 +930,15 @@ def learning_overview(authorization: str | None = Header(default=None)):
         audit(conn,admin['id'],'view_learning_overview',None,{"scope":"personalization_and_assignments"});conn.commit()
         return {"totals":totals,"learners":[dict(r) for r in learners],"topic_insights":[dict(r) for r in topics],"assignments":[dict(r) for r in assignments]}
     finally: conn.close()
+
+@router.get("/learning/assignment-bank/matrix")
+def assignment_bank_matrix_admin(grade:int=Query(...,ge=10,le=12),
+                                 topic:str=Query(...,min_length=1),
+                                 authorization:str|None=Header(default=None)):
+    """Admin overview of usable question capacity by difficulty and format."""
+    require_admin(authorization)
+    return assignment_bank_matrix(grade, topic)
+
 
 @router.get("/learning/assignment-bank/status")
 def assignment_bank_status(grade:int=Query(...,ge=10,le=12),topic:str=Query(...,min_length=1),

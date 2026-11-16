@@ -224,3 +224,19 @@ def validate_cached_assignment(questions,grade,topic,difficulty,kind='mixed'):
         seen.add(sign)
         if q.get('question_type')=='multiple_choice' and (not isinstance(q.get('options'),list) or len(q['options'])!=4):return False
     return True
+
+
+def assignment_bank_matrix(grade, topic):
+    """Eligible source-backed question counts; not a mathematical certification."""
+    levels = {}
+    for level in ('easy', 'medium', 'hard', 'expert'):
+        by_type = {kind: eligible_assignment_questions(grade, topic, level, kind, cap=500)
+                   for kind in ('mixed', 'multiple_choice', 'short_answer')}
+        levels[level] = {'mixed_distinct': len(by_type['mixed']),
+                         'multiple_choice': len(by_type['multiple_choice']),
+                         'short_answer': len(by_type['short_answer']),
+                         'true_false': 0,
+                         'sample_source_ids': [q['source_id'] for q in by_type['mixed'][:5]]}
+    return {'grade': int(grade), 'topic': str(topic), 'levels': levels,
+            'source': '150_CHU_DE_WORD', 'verified_math_answers': False,
+            'policy': 'Never fill shortages with generated or number-substituted questions.'}

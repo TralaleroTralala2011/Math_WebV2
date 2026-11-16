@@ -123,7 +123,12 @@ def validate(q: dict) -> None:
                 if options_equivalent(left, right):
                     raise ValidationError("mcq_equivalent_options")
     elif q["question_type"] == "true_false":
-        if not isinstance(q.get("statements"), list) or len(q["statements"]) != 4:
+        if q.get("answer_mode") == "binary_boolean":
+            if q.get("answer") not in ("Đúng", "Sai") or q.get("options") != ["Đúng", "Sai"]:
+                raise ValidationError("tf_binary_options")
+            if q.get("statements") or q.get("statement_answers"):
+                raise ValidationError("tf_binary_mixed_with_statements")
+        elif not isinstance(q.get("statements"), list) or len(q["statements"]) != 4:
             raise ValidationError("tf_statements")
     q["fingerprint"] = fingerprint(q["question"])
     normalized = re.sub(r"(?<![A-Za-z])[-+]?\d+(?:[\.,/]\d+)?", "#", str(q["question"]).lower())
